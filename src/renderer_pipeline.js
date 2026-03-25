@@ -8,19 +8,22 @@ const clearLogButton = document.getElementById('clearLogButton');
 const outputFolderInput = document.getElementById('outputFolder');
 const outputFolderButton = document.querySelector('[data-select-folder="outputFolder"]');
 const outputPrefixInput = document.getElementById('outputPrefix');
-const initialDocumentJsonInput = document.getElementById('initialDocumentJson');
 const pdfDropTextEl = document.getElementById('pdfDropText');
-const lastPdfInfoEl = document.getElementById('lastPdfInfo');
 const legacyCard = document.querySelector('[data-legacy-card]');
 const defaultPdfDropText = 'Drop the source PDF document to extract the structured chapter JSON.';
 
 const checkboxIds = {
   docJson: 'optDocJson',
+  summary: 'optSummaryMd',
 };
 
-const apiDependentOutputs = ['docJson'];
+const apiDependentOutputs = ['docJson', 'summary'];
 const conversionStatusEl = document.getElementById('conversionStatus');
 const conversionProgressBar = document.getElementById('conversionProgressBar');
+const documentProgressWrap = document.getElementById('documentProgressWrap');
+const documentReadyBadge = document.getElementById('documentReadyBadge');
+const summaryReadyBadge = document.getElementById('summaryReadyBadge');
+const documentOutputCard = document.querySelector('[data-document-card]');
 const apiStatusEl = document.getElementById('apiStatus');
 
 const cardRegistry = new Map();
@@ -30,6 +33,7 @@ let lastUsedOutputFolder = '';
 let lastUsedOutputPrefix = '';
 let apiAvailable = false;
 let generationInProgress = false;
+let clearPrimaryPdf = async () => {};
 
 const getTimeStamp = () => new Date().toLocaleTimeString([], { hour12: false });
 
@@ -57,9 +61,12 @@ const showWarningPopup = async (message, detail = '') => {
 };
 
 const setConversionStatus = (message, percent = 0, state = 'idle') => {
-  if (conversionStatusEl) {
-    conversionStatusEl.textContent = message;
-    conversionStatusEl.dataset.state = state;
+  if (documentOutputCard) {
+    documentOutputCard.dataset.state = state;
+  }
+
+  if (documentProgressWrap) {
+    documentProgressWrap.hidden = state !== 'running';
   }
 
   if (conversionProgressBar?.parentElement) {
@@ -67,6 +74,20 @@ const setConversionStatus = (message, percent = 0, state = 'idle') => {
     conversionProgressBar.style.width = `${bounded}%`;
     conversionProgressBar.parentElement.setAttribute('aria-valuenow', String(bounded));
   }
+};
+
+const setOutputReadyState = (key, isReady) => {
+  const badge = key === 'summary' ? summaryReadyBadge : documentReadyBadge;
+  if (!badge) {
+    return;
+  }
+  badge.hidden = !isReady;
+};
+
+const resetDocumentOutputState = () => {
+  setOutputReadyState('docJson', false);
+  setOutputReadyState('summary', false);
+  setConversionStatus('', 0, 'idle');
 };
 
 const applyApiOutputAvailability = async (available, providers = []) => {
@@ -176,27 +197,12 @@ const getBaseName = (fullPath) => {
   return parts[parts.length - 1] || fullPath;
 };
 
-const refreshInitialDocumentPreview = () => {
-  if (!initialDocumentJsonInput) {
-    return;
-  }
-  const initialName = getInitialDocumentFileName();
-  initialDocumentJsonInput.textContent = `Initial JSON: ${initialName}`;
-};
-
 const setPdfDropText = (text, isLoaded = false) => {
   if (!pdfDropTextEl) {
     return;
   }
   pdfDropTextEl.textContent = text || defaultPdfDropText;
   pdfDropTextEl.classList.toggle('loaded-doc', Boolean(isLoaded));
-};
-
-const refreshLastPdfInfo = () => {
-  if (!lastPdfInfoEl) {
-    return;
-  }
-  lastPdfInfoEl.textContent = lastLoadedPdfName ? `Last used: ${lastLoadedPdfName}` : '';
 };
 
 const getSelectedOutputs = () => {
@@ -214,6 +220,7 @@ const getOutputFileNames = () => {
 
   return {
     docJson: getInitialDocumentFileName(),
+    summary: ensureMarkdownExtension(`${head}chapter_summary`, 'chapter_summary.md'),
   };
 };
 
@@ -338,8 +345,6 @@ const applySettings = (settings) => {
     });
   }
 
-  refreshInitialDocumentPreview();
-  refreshLastPdfInfo();
 };
 
 const loadSavedSettings = async () => {
@@ -388,7 +393,9 @@ if (card) {
     uploadButton.textContent = hasFile ? 'Clear' : 'Upload';
   };
 
-  const clearPrimaryPdf = async () => {
+  clearPrimaryPdf = async (options = {}) => {
+    const resetInputs = options.resetInputs !== false;
+
     if (selectedFiles.originalPdf?.name) {
       lastLoadedPdfName = selectedFiles.originalPdf.name;
     }
@@ -405,16 +412,16 @@ if (card) {
     delete card.dataset.selected;
     fileInput.value = '';
     selectedFiles.originalPdf = null;
+    setConversionStatus('Idle. Waiting for input.', 0, 'idle');
 
-    if (outputFolderInput) {
+    if (resetInputs && outputFolderInput) {
       outputFolderInput.value = 'No folder selected';
     }
-    if (outputPrefixInput) {
+    if (resetInputs && outputPrefixInput) {
       outputPrefixInput.value = '';
     }
 
-    refreshInitialDocumentPreview();
-    refreshLastPdfInfo();
+    resetDocumentOutputState();
     syncPrimaryButtonState();
     addLog('Original PDF cleared. Input fields reset.', 'info');
     await persistSettings();
@@ -437,6 +444,7 @@ if (card) {
       updateCardDisplay(key, `${file.name} (invalid type)`, { selected: false, invalid: true });
       selectedFiles.originalPdf = null;
       setPdfDropText(defaultPdfDropText, false);
+      resetDocumentOutputState();
       addLog('Only PDF files are allowed for Original PDF.', 'error');
       refreshGenerateState();
       return;
@@ -460,6 +468,7 @@ if (card) {
       addLog(`Warning: file path could not be resolved for ${file.name}. Use the Upload button to re-select.`, 'error');
     }
 
+    resetDocumentOutputState();
     lastLoadedPdfName = file.name;
     if (outputFolderInput && (outputFolderInput.value === '' || outputFolderInput.value === 'No folder selected') && lastUsedOutputFolder) {
       outputFolderInput.value = lastUsedOutputFolder;
@@ -468,7 +477,6 @@ if (card) {
       outputPrefixInput.value = lastUsedOutputPrefix;
     }
 
-    refreshLastPdfInfo();
     syncPrimaryButtonState();
     addLog(`Original PDF selected: ${file.name}`);
     await persistSettings();
@@ -618,7 +626,6 @@ outputFolderButton?.addEventListener('click', async () => {
   outputFolderInput.value = selectedPath;
   lastUsedOutputFolder = selectedPath;
   addLog(`Output folder selected: ${selectedPath}`);
-  refreshInitialDocumentPreview();
   await persistSettings();
   refreshGenerateState();
 });
@@ -627,7 +634,6 @@ outputPrefixInput?.addEventListener('change', () => {
   if (outputPrefixInput.value.trim() !== '') {
     lastUsedOutputPrefix = outputPrefixInput.value.trim();
   }
-  refreshInitialDocumentPreview();
   void persistSettings();
 });
 
@@ -635,7 +641,6 @@ outputPrefixInput?.addEventListener('blur', () => {
   if (outputPrefixInput.value.trim() !== '') {
     lastUsedOutputPrefix = outputPrefixInput.value.trim();
   }
-  refreshInitialDocumentPreview();
   void persistSettings();
 });
 
@@ -746,9 +751,13 @@ generateButton?.addEventListener('click', async () => {
 
   let allowOverwrite = false;
   let completed = false;
+  const sourcePdf = {
+    ...selectedFiles.originalPdf,
+  };
 
   try {
     generationInProgress = true;
+    await clearPrimaryPdf({ resetInputs: false });
     refreshGenerateState();
     while (!completed) {
       try {
@@ -756,7 +765,7 @@ generateButton?.addEventListener('click', async () => {
         addLog('Starting local PDF extraction (PDF to RAG, no API calls)...');
 
         const pdfPayload = {
-          pdfPath: selectedFiles.originalPdf.path,
+          pdfPath: sourcePdf.path,
           docType: 'auto',
           outputDir: outputFolder,
           outputFileName: outputFileNames.docJson,
@@ -767,12 +776,12 @@ generateButton?.addEventListener('click', async () => {
 
         setConversionStatus('Converting PDF to JSON...', 35, 'running');
         const extracted = await window.desktopApp.processPdf(pdfPayload);
-        if (initialDocumentJsonInput) {
-          initialDocumentJsonInput.textContent = `Initial JSON: ${getBaseName(extracted.outputPath)}`;
-        }
-        addLog(`Initial document JSON created locally: ${extracted.outputPath}`, 'success');
+        addLog(`Initial document JSON / MD created locally: ${extracted.outputPath}`, 'success');
         if (extracted?.markdownPath) {
           addLog(`Initial document Markdown created locally: ${extracted.markdownPath}`, 'success');
+        }
+        if (selectedOutputs.docJson) {
+          setOutputReadyState('docJson', true);
         }
 
         setConversionStatus('Writing selected output files...', 75, 'running');
@@ -790,8 +799,12 @@ generateButton?.addEventListener('click', async () => {
         if (Array.isArray(result?.written) && result.written.length > 0) {
           result.written.forEach((entry) => {
             if (entry?.key === 'docJson' && entry?.reused) {
-              addLog(`Document JSON already created: ${entry.path}`, 'info');
+              addLog(`Document JSON / MD already created: ${entry.path}`, 'info');
+              setOutputReadyState('docJson', true);
               return;
+            }
+            if (entry?.key === 'summary') {
+              setOutputReadyState('summary', true);
             }
             addLog(`Saved (${entry.key}): ${entry.path}`, 'success');
           });
@@ -804,7 +817,6 @@ generateButton?.addEventListener('click', async () => {
         if (outputPrefixInput) {
           outputPrefixInput.value = '';
           lastUsedOutputPrefix = '';
-          refreshInitialDocumentPreview();
         }
         await persistSettings();
         completed = true;
@@ -871,6 +883,5 @@ generateButton?.addEventListener('click', async () => {
 });
 
 refreshGenerateState();
-refreshInitialDocumentPreview();
-setConversionStatus('Idle. Waiting for input.', 0, 'idle');
+resetDocumentOutputState();
 void loadSavedSettings().then(() => refreshApiAvailability());

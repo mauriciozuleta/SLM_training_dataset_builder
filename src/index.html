@@ -28,6 +28,21 @@
           <button class="upload-button" type="button">Upload</button>
           <input class="file-input" type="file" accept=".pdf" />
         </article>
+
+        <article class="document-output-card output-option" data-document-card data-state="idle" aria-live="polite">
+          <div class="document-output-header">
+            <span class="document-output-tag">Output</span>
+          </div>
+          <div class="document-output-list">
+            <label class="document-output-toggle"><input id="optDocJson" type="checkbox" checked /><span id="documentReadyBadge" class="document-ready-badge" hidden aria-hidden="true">✓</span><span>Document JSON / MD</span></label>
+            <label class="document-output-toggle"><input id="optSummaryMd" type="checkbox" checked /><span id="summaryReadyBadge" class="document-ready-badge" hidden aria-hidden="true">✓</span><span>Summary MD</span></label>
+          </div>
+          <div id="documentProgressWrap" class="document-progress-wrap" hidden>
+            <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <div id="conversionProgressBar" class="progress-fill" style="width: 0%"></div>
+            </div>
+          </div>
+        </article>
       </section>
 
       <section class="destination-panel" aria-label="Output destination folders">
@@ -47,26 +62,12 @@
             <p class="prefix-hint">Example output name: AFH_1_document.json</p>
           </article>
         </div>
-
-        <div class="output-options" aria-label="Selectable outputs">
-          <article class="output-option">
-            <label><input id="optDocJson" type="checkbox" checked /> Document JSON</label>
-          </article>
-
-        </div>
-
         <div class="action-row">
           <button id="generateButton" class="generate-button" type="button" disabled>Generate</button>
           <p id="generateHint" class="generate-hint">Select the PDF, output folder, and at least one output type.</p>
         </div>
 
-        <div class="status-row" aria-live="polite">
-          <p id="conversionStatus" class="conversion-status" data-state="idle">Idle. Waiting for input.</p>
-          <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-            <div id="conversionProgressBar" class="progress-fill" style="width: 0%"></div>
-          </div>
-          <p id="apiStatus" class="api-status">Checking API availability...</p>
-        </div>
+        <p id="apiStatus" class="api-status">Checking API availability...</p>
       </section>
 
       <section class="legacy-panel" aria-label="Legacy files">

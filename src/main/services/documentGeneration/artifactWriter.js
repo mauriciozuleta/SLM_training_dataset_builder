@@ -1,4 +1,4 @@
-function createArtifactWriter({ fs, path, common }) {
+function createArtifactWriter({ fs, path, common, summaryGenerator }) {
   async function writeSelectedArtifacts(payload) {
     const outputDir = payload?.outputDir;
     if (!outputDir) {
@@ -13,12 +13,22 @@ function createArtifactWriter({ fs, path, common }) {
     await fs.mkdir(outputDir, { recursive: true });
 
     const written = [];
+    const needsSummary = Boolean(selectedOutputs.summary);
+    const summaryResult = needsSummary ? await summaryGenerator.buildSummary(documentJson) : null;
 
     const outputMap = [
       {
         key: 'docJson',
         fileName: common.normalizeJsonFileName(fileNames.docJson, 'chapter_rag.json'),
         data: documentJson,
+      },
+      {
+        key: 'summary',
+        fileName: common.normalizeMarkdownFileName(fileNames.summary, 'chapter_summary.md'),
+        data: typeof summaryResult?.markdown === 'string'
+          ? summaryResult.markdown
+          : '',
+        contentType: 'text/markdown',
       },
     ];
 
