@@ -1,6 +1,5 @@
 function createSummaryGenerator({ api }) {
-  const MAX_SECTIONS_FOR_PROMPT = 14;
-  const MAX_SECTION_CONTENT_CHARS = 1600;
+  const MAX_SECTION_CONTENT_CHARS = 2400;
 
   const cleanText = (value) => `${value || ''}`.replace(/\s+/g, ' ').trim();
 
@@ -19,58 +18,31 @@ function createSummaryGenerator({ api }) {
     .toLowerCase()
     .replace(/\b([a-z])/g, (match, chr) => chr.toUpperCase());
 
-  const normalizeSummaryModel = (candidate, fallback, totalSections) => {
-    const model = candidate && typeof candidate === 'object' ? candidate : {};
-    const fallbackModel = fallback && typeof fallback === 'object' ? fallback : {};
-
-    const overview = cleanText(model.overview) || cleanText(fallbackModel.overview);
-
-    const keyLearningObjectives = Array.isArray(model.keyLearningObjectives)
-      ? model.keyLearningObjectives.map(cleanText).filter(Boolean)
-      : [];
-
-    const mainConcepts = Array.isArray(model.mainConcepts)
-      ? model.mainConcepts
-        .map((entry) => ({
-          title: cleanText(entry?.title),
-          summary: cleanText(entry?.summary),
-        }))
-        .filter((entry) => entry.title && entry.summary)
-      : [];
-
-    const keyTerms = Array.isArray(model.keyTerms)
-      ? model.keyTerms
-        .map((entry) => ({
-          term: cleanText(entry?.term),
-          definition: cleanText(entry?.definition),
-        }))
-        .filter((entry) => entry.term && entry.definition)
-      : [];
-
-    const importantFacts = Array.isArray(model.importantFacts)
-      ? model.importantFacts.map(cleanText).filter(Boolean)
-      : [];
-
-    return {
-      chapterTitle: cleanText(model.chapterTitle) || cleanText(fallbackModel.chapterTitle),
-      totalSections: Number.isFinite(Number(model.totalSections)) && Number(model.totalSections) > 0
-        ? Number(model.totalSections)
-        : totalSections,
-      overview,
-      keyLearningObjectives: keyLearningObjectives.length > 0
-        ? keyLearningObjectives
-        : (fallbackModel.keyLearningObjectives || []),
-      mainConcepts: mainConcepts.length > 0
-        ? mainConcepts
-        : (fallbackModel.mainConcepts || []),
-      keyTerms: keyTerms.length > 0
-        ? keyTerms
-        : (fallbackModel.keyTerms || []),
-      importantFacts: importantFacts.length > 0
-        ? importantFacts
-        : (fallbackModel.importantFacts || []),
-    };
+  const countWords = (text) => {
+    const words = cleanText(text).match(/[A-Za-z0-9]+(?:['’-][A-Za-z0-9]+)*/g);
+    return Array.isArray(words) ? words.length : 0;
   };
+
+  const buildMetadata = ({
+    chapter,
+    totalSections,
+    sectionsSummarized,
+    summaryWordCount,
+    providers,
+    models,
+    usage,
+  }) => ({
+    generatedAtUtc: new Date().toISOString(),
+    chapter: Number(chapter) || 0,
+    totalSections: Number(totalSections) || 0,
+    sectionsSummarized: Number(sectionsSummarized) || 0,
+    summaryWordCount: Number(summaryWordCount) || 0,
+    providers: providers.length > 0 ? providers.join(', ') : 'fallback-only',
+    models: models.length > 0 ? models.join(', ') : 'fallback-only',
+    promptTokens: Number(usage?.prompt_tokens || 0),
+    completionTokens: Number(usage?.completion_tokens || 0),
+    totalTokens: Number((usage?.prompt_tokens || 0) + (usage?.completion_tokens || 0)),
+  });
 
   const buildFallbackSummaryModel = (documentJson) => {
     const sections = Array.isArray(documentJson?.sections) ? documentJson.sections : [];
@@ -81,19 +53,19 @@ function createSummaryGenerator({ api }) {
       ? Number(documentJson.totalWords)
       : sections.reduce((sum, sec) => sum + (Number(sec?.wordCount) || 0), 0);
 
-    const mainConcepts = sections.slice(0, 10).map((section) => ({
+    const mainConcepts = sections.map((section) => ({
       title: cleanText(section?.title) || `Section ${section?.id || ''}`.trim(),
-      summary: summarizeSectionContent(section?.content, 280),
+      summary: summarizeSectionContent(section?.content, 260),
     }));
 
     const keyLearningObjectives = sections
-      .slice(0, 8)
+      .slice(0, Math.min(12, sections.length))
       .map((section) => cleanText(section?.title))
       .filter(Boolean)
       .map((title) => `Understand and apply ${title.toLowerCase()} in practical training scenarios.`);
 
     const keyTerms = sections
-      .slice(0, 8)
+      .slice(0, Math.min(12, sections.length))
       .map((section) => cleanText(section?.title))
       .filter(Boolean)
       .map((term) => ({
@@ -112,19 +84,17 @@ function createSummaryGenerator({ api }) {
     return {
       chapterTitle: cleanText(documentJson?.title) || `Chapter ${documentJson?.chapter || '?'}`,
       totalSections,
-      overview: `Chapter ${documentJson?.chapter || '?'} covers ${totalSections} sections and focuses on pilot technique, control accuracy, risk awareness, and standards-based decision making.`,
+      overview: `Chapter ${documentJson?.chapter || '?'} covers ${totalSections} sections and provides section-by-section guidance focused on pilot technique, control accuracy, risk awareness, and standards-based decision making.`,
       keyLearningObjectives,
       mainConcepts,
       keyTerms,
       importantFacts,
+      metadata: null,
     };
   };
 
-  const buildSummaryMarkdown = (summaryModel) => {
+  const buildSummaryMarkdownBody = (summaryModel) => {
     const lines = [];
-
-    lines.push(`# Chapter Summary: ${summaryModel.chapterTitle || 'Unknown Chapter'}`);
-    lines.push('');
 
     lines.push('## Overview');
     lines.push(summaryModel.overview || 'No overview was generated.');
@@ -172,49 +142,163 @@ function createSummaryGenerator({ api }) {
     return `${lines.join('\n').trim()}\n`;
   };
 
+  const buildSummaryMarkdown = (summaryModel) => {
+    const lines = [];
+    const metadata = summaryModel?.metadata || {};
+
+    lines.push(`# Chapter Summary: ${summaryModel.chapterTitle || 'Unknown Chapter'}`);
+    lines.push('');
+    lines.push('## Summary Metadata');
+    lines.push(`- Generated At (UTC): ${metadata.generatedAtUtc || 'N/A'}`);
+    lines.push(`- Source Chapter: ${metadata.chapter || 0}`);
+    lines.push(`- Total Sections (from JSON): ${metadata.totalSections || 0}`);
+    lines.push(`- Sections Summarized: ${metadata.sectionsSummarized || 0}`);
+    lines.push(`- Summary Word Count: ${metadata.summaryWordCount || 0}`);
+    lines.push(`- API Provider(s): ${metadata.providers || 'fallback-only'}`);
+    lines.push(`- Model(s): ${metadata.models || 'fallback-only'}`);
+    lines.push(`- Prompt Tokens: ${metadata.promptTokens || 0}`);
+    lines.push(`- Completion Tokens: ${metadata.completionTokens || 0}`);
+    lines.push(`- Total Tokens: ${metadata.totalTokens || 0}`);
+    lines.push('');
+    lines.push(buildSummaryMarkdownBody(summaryModel).trim());
+
+    return `${lines.join('\n').trim()}\n`;
+  };
+
+  const buildSectionSummaryFromApi = async ({ documentJson, section, sectionIndex, totalSections }) => {
+    const sectionTitle = cleanText(section?.title) || `Section ${sectionIndex + 1}`;
+    const prompt = [
+      'You are an aviation training summarizer.',
+      'Create a concise summary for exactly one chapter section using only provided text.',
+      'Return strict JSON only with shape:',
+      '{"summary": string}',
+      'Constraints:',
+      '- 1-2 sentences.',
+      '- Mention the section topic explicitly.',
+      '- Stay factual and avoid adding outside information.',
+    ].join(' ');
+
+    const result = await api.callPreferredApiJson(prompt, {
+      chapter: Number(documentJson?.chapter) || 0,
+      chapterTitle: cleanText(documentJson?.title),
+      totalSections,
+      sectionIndex: sectionIndex + 1,
+      sectionId: cleanText(section?.id),
+      sectionTitle,
+      sectionWordCount: Number(section?.wordCount) || 0,
+      sectionContent: summarizeSectionContent(section?.content, MAX_SECTION_CONTENT_CHARS),
+    });
+
+    const summary = cleanText(result?.json?.summary);
+    return {
+      summary: summary || summarizeSectionContent(section?.content, 260),
+      modelUsed: cleanText(result?.modelUsed),
+      modelVersion: cleanText(result?.modelVersion),
+      usage: {
+        prompt_tokens: Number(result?.usage?.prompt_tokens || 0),
+        completion_tokens: Number(result?.usage?.completion_tokens || 0),
+      },
+    };
+  };
+
   const buildSummaryFromApi = async (documentJson, fallbackModel) => {
     const sections = Array.isArray(documentJson?.sections) ? documentJson.sections : [];
     const totalSections = Number(documentJson?.totalSections) > 0
       ? Number(documentJson.totalSections)
       : sections.length;
 
-    const sectionPayload = sections.slice(0, MAX_SECTIONS_FOR_PROMPT).map((section, index) => ({
-      index: index + 1,
-      id: cleanText(section?.id),
-      title: cleanText(section?.title),
-      wordCount: Number(section?.wordCount) || 0,
-      content: summarizeSectionContent(section?.content, MAX_SECTION_CONTENT_CHARS),
-    }));
+    const mainConcepts = [];
+    const providers = new Set();
+    const models = new Set();
+    const usage = {
+      prompt_tokens: 0,
+      completion_tokens: 0,
+    };
 
-    const systemPrompt = [
-      'You are an aviation curriculum summarization engine.',
-      'Build a structured chapter summary from the provided document JSON sections.',
-      'You must acknowledge the exact totalSections value and ensure section coverage in the output.',
-      'Return strict JSON only with this shape:',
-      '{',
-      '  "chapterTitle": string,',
-      '  "totalSections": number,',
-      '  "overview": string,',
-      '  "keyLearningObjectives": string[],',
-      '  "mainConcepts": [{"title": string, "summary": string}],',
-      '  "keyTerms": [{"term": string, "definition": string}],',
-      '  "importantFacts": string[]',
-      '}',
-      'Constraints:',
-      '- Mention the chapter and total section count in overview.',
-      '- Keep each main concept summary concise (1-2 sentences).',
-      '- Use clear training language and factual content from provided sections only.',
-    ].join(' ');
+    for (let index = 0; index < sections.length; index += 1) {
+      const section = sections[index];
+      const title = cleanText(section?.title) || `Section ${index + 1}`;
 
-    const result = await api.callPreferredApiJson(systemPrompt, {
-      chapter: Number(documentJson?.chapter) || 0,
-      chapterTitle: cleanText(documentJson?.title),
+      try {
+        const apiSection = await buildSectionSummaryFromApi({
+          documentJson,
+          section,
+          sectionIndex: index,
+          totalSections,
+        });
+
+        mainConcepts.push({
+          title,
+          summary: apiSection.summary,
+        });
+
+        if (apiSection.modelUsed) {
+          providers.add(apiSection.modelUsed);
+        }
+        if (apiSection.modelVersion) {
+          models.add(apiSection.modelVersion);
+        }
+
+        usage.prompt_tokens += Number(apiSection.usage?.prompt_tokens || 0);
+        usage.completion_tokens += Number(apiSection.usage?.completion_tokens || 0);
+      } catch (_error) {
+        mainConcepts.push({
+          title,
+          summary: summarizeSectionContent(section?.content, 260),
+        });
+      }
+    }
+
+    const keyLearningObjectives = sections
+      .slice(0, Math.min(12, sections.length))
+      .map((section) => cleanText(section?.title))
+      .filter(Boolean)
+      .map((title) => `Understand and apply ${title.toLowerCase()} in practical training scenarios.`);
+
+    const keyTerms = sections
+      .slice(0, Math.min(12, sections.length))
+      .map((section) => cleanText(section?.title))
+      .filter(Boolean)
+      .map((term) => ({
+        term: toTitleCase(term),
+        definition: 'A primary chapter concept that supports safe execution and consistent pilot performance.',
+      }));
+
+    const totalWords = Number(documentJson?.totalWords) > 0
+      ? Number(documentJson.totalWords)
+      : sections.reduce((sum, sec) => sum + (Number(sec?.wordCount) || 0), 0);
+
+    const importantFacts = [
+      `The chapter is organized into ${totalSections} section${totalSections === 1 ? '' : 's'} and all available sections were summarized.`,
+      totalWords > 0
+        ? `The extracted source content totals approximately ${totalWords.toLocaleString()} words.`
+        : 'The extracted source content provides full chapter coverage for review.',
+      'The section summaries are intended for fast review before deeper study of each section in the source chapter.',
+    ];
+
+    const summaryModel = {
+      chapterTitle: cleanText(documentJson?.title) || fallbackModel.chapterTitle,
       totalSections,
-      totalWords: Number(documentJson?.totalWords) || 0,
-      sections: sectionPayload,
+      overview: `Chapter ${documentJson?.chapter || '?'} covers ${totalSections} sections, and this summary includes section-by-section coverage built directly from the document JSON.`,
+      keyLearningObjectives,
+      mainConcepts,
+      keyTerms,
+      importantFacts,
+      metadata: null,
+    };
+
+    const body = buildSummaryMarkdownBody(summaryModel);
+    summaryModel.metadata = buildMetadata({
+      chapter: documentJson?.chapter,
+      totalSections,
+      sectionsSummarized: mainConcepts.length,
+      summaryWordCount: countWords(body),
+      providers: Array.from(providers),
+      models: Array.from(models),
+      usage,
     });
 
-    return normalizeSummaryModel(result?.json, fallbackModel, totalSections);
+    return summaryModel;
   };
 
   async function buildSummary(documentJson) {
@@ -227,9 +311,25 @@ function createSummaryGenerator({ api }) {
         markdown: buildSummaryMarkdown(apiModel),
       };
     } catch (_error) {
-      return {
+      const fallbackBody = buildSummaryMarkdownBody(fallbackModel);
+      const fallbackWithMetadata = {
         ...fallbackModel,
-        markdown: buildSummaryMarkdown(fallbackModel),
+        metadata: buildMetadata({
+          chapter: documentJson?.chapter,
+          totalSections: fallbackModel.totalSections,
+          sectionsSummarized: Array.isArray(fallbackModel.mainConcepts) ? fallbackModel.mainConcepts.length : 0,
+          summaryWordCount: countWords(fallbackBody),
+          providers: [],
+          models: [],
+          usage: {
+            prompt_tokens: 0,
+            completion_tokens: 0,
+          },
+        }),
+      };
+      return {
+        ...fallbackWithMetadata,
+        markdown: buildSummaryMarkdown(fallbackWithMetadata),
       };
     }
   }
