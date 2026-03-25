@@ -16,14 +16,9 @@ const defaultPdfDropText = 'Drop the source PDF document to extract the structur
 
 const checkboxIds = {
   docJson: 'optDocJson',
-  summary: 'optSummary',
-  blueprint: 'optBlueprint',
-  questionBank: 'optQuestionBank',
-  trainingRecord: 'optTrainingRecord',
-  deterministicTraining: 'optDeterministicTraining',
 };
 
-const apiDependentOutputs = ['docJson', 'summary', 'blueprint', 'questionBank', 'trainingRecord', 'deterministicTraining'];
+const apiDependentOutputs = ['docJson'];
 const conversionStatusEl = document.getElementById('conversionStatus');
 const conversionProgressBar = document.getElementById('conversionProgressBar');
 const apiStatusEl = document.getElementById('apiStatus');
@@ -154,6 +149,18 @@ const buildPrefix = () => {
   return safe;
 };
 
+const buildDocumentIdPrefix = () => {
+  const raw = (outputPrefixInput?.value || '').trim();
+  if (!raw) {
+    return '';
+  }
+
+  return raw
+    .replace(/\s+/g, '.')
+    .replace(/\.{2,}/g, '.')
+    .replace(/^\.+|\.+$/g, '');
+};
+
 const getInitialDocumentFileName = () => {
   const prefix = buildPrefix();
   const head = prefix ? `${prefix}_` : '';
@@ -207,11 +214,6 @@ const getOutputFileNames = () => {
 
   return {
     docJson: getInitialDocumentFileName(),
-    summary: ensureMarkdownExtension(`${head}chapter_summary`, 'chapter_summary.md'),
-    blueprint: ensureJsonExtension(`${head}chapter_blueprint`, 'chapter_blueprint.json'),
-    questionBank: ensureJsonExtension(`${head}question_bank`, 'question_bank.json'),
-    trainingRecord: ensureJsonExtension(`${head}balanced_training_record`, 'balanced_training_record.json'),
-    deterministicTraining: ensureJsonExtension(`${head}deterministic_training`, 'deterministic_training.json'),
   };
 };
 
@@ -669,6 +671,7 @@ generateButton?.addEventListener('click', async () => {
 
   const outputFolder = outputFolderInput?.value;
   const outputPrefix = (outputPrefixInput?.value || '').trim();
+  const documentIdPrefix = buildDocumentIdPrefix();
   const chapterNumberMatch = outputPrefix.match(/(\d{1,3})/);
   const chapterNumberOverride = chapterNumberMatch ? Number.parseInt(chapterNumberMatch[1], 10) : 0;
   const selectedOutputs = getSelectedOutputs();
@@ -757,6 +760,7 @@ generateButton?.addEventListener('click', async () => {
           docType: 'auto',
           outputDir: outputFolder,
           outputFileName: outputFileNames.docJson,
+          idPrefix: documentIdPrefix,
           chapterNumberOverride,
           allowOverwrite,
         };
@@ -780,7 +784,7 @@ generateButton?.addEventListener('click', async () => {
           documentJson: extracted.data,
           documentJsonPath: extracted.outputPath,
           allowOverwrite,
-          idPrefix: outputPrefix,
+          idPrefix: documentIdPrefix,
         });
 
         if (Array.isArray(result?.written) && result.written.length > 0) {

@@ -10,7 +10,6 @@ contextBridge.exposeInMainWorld('desktopApp', {
   getApiStatus: () => ipcRenderer.invoke('api:status'),
   processPdf: (payload) => ipcRenderer.invoke('rag:processPdf', payload),
   buildArtifacts: (payload) => ipcRenderer.invoke('generation:buildArtifacts', payload),
-  createPlaceholders: (payload) => ipcRenderer.invoke('generation:createPlaceholders', payload),
   showConfirm: (options) => ipcRenderer.invoke('dialog:showConfirm', options),
   showAlert: (options) => ipcRenderer.invoke('dialog:showAlert', options),
 });
