@@ -1,0 +1,24 @@
+﻿
+.\node_modules\electron\dist\electron.exe : 
+[6276:0324/140358.010:ERROR:cache_util_win.cc(20)] Unable to move the cache: 
+Access is denied. (0x5)
+At line:1 char:63
++ ... generation"; .\node_modules\electron\dist\electron.exe . 2>&1 | Out-F ...
++                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([6276:0324/1403...s denied. (0x5) 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[6276:0324/140358.010:ERROR:cache_util_win.cc(20)] Unable to move the cache: 
+Access is denied. (0x5)
+[6276:0324/140358.010:ERROR:cache_util_win.cc(20)] Unable to move the cache: 
+Access is denied. (0x5)
+[6276:0324/140358.014:ERROR:disk_cache.cc(216)] Unable to create cache
+[6276:0324/140358.014:ERROR:gpu_disk_cache.cc(711)] Gpu Cache Creation failed: 
+-2
+[6276:0324/140358.014:ERROR:disk_cache.cc(216)] Unable to create cache
+[6276:0324/140358.014:ERROR:gpu_disk_cache.cc(711)] Gpu Cache Creation failed: 
+-2
+[6276:0324/140358.014:ERROR:disk_cache.cc(216)] Unable to create cache
+[6276:0324/140358.014:ERROR:gpu_disk_cache.cc(711)] Gpu Cache Creation failed: 
+-2

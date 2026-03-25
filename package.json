@@ -1,0 +1,23 @@
+{
+  "name": "pair-generation-desktop",
+  "version": "0.1.0",
+  "description": "Desktop app for generating question banks and training pairs.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron ."
+  },
+  "keywords": [
+    "electron",
+    "question-bank",
+    "desktop"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "electron": "^35.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1"
+  }
+}

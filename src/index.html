@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question Pair Generator</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <p class="eyebrow">Desktop Workspace</p>
+        <h1>Document Reasoning Pipeline</h1>
+        <p class="subtitle">
+          Load the original PDF, choose which outputs you want, and generate all selected artifacts in one run.
+        </p>
+      </section>
+
+      <section class="upload-row" aria-label="Document uploads">
+        <article class="upload-card" data-file-card data-required="true">
+          <div class="drop-zone" tabindex="0">
+            <span class="field-tag required">Mandatory</span>
+            <span class="drop-icon">+</span>
+            <h2>Original PDF</h2>
+            <p id="pdfDropText">Drop the source PDF document to extract the structured chapter JSON.</p>
+            <button class="clear-card-button" type="button" aria-label="Clear file">×</button>
+          </div>
+          <button class="upload-button" type="button">Upload</button>
+          <input class="file-input" type="file" accept=".pdf" />
+        </article>
+      </section>
+
+      <section class="destination-panel" aria-label="Output destination folders">
+        <h3>Output Settings</h3>
+        <p class="destination-subtitle">Choose one destination folder, set one output prefix, then select the outputs you want.</p>
+        <div class="destination-grid">
+          <article class="destination-cell" data-destination-cell>
+            <label for="outputFolder">Output Folder</label>
+            <div class="destination-input-wrap">
+              <input id="outputFolder" class="destination-input" type="text" readonly value="No folder selected" />
+              <button class="destination-button" type="button" data-select-folder="outputFolder">Browse</button>
+            </div>
+          </article>
+          <article class="destination-cell" data-destination-cell>
+            <label for="outputPrefix">Add output documents prefix</label>
+            <input id="outputPrefix" class="filename-input" type="text" value="" placeholder="Example: AFH Chapter 1" spellcheck="false" />
+            <p class="prefix-hint">Example output name: AFH_1_document.json</p>
+          </article>
+        </div>
+
+        <div class="output-options" aria-label="Selectable outputs">
+          <article class="output-option">
+            <label><input id="optDocJson" type="checkbox" checked /> Document JSON</label>
+          </article>
+          <article class="output-option">
+            <label><input id="optSummary" type="checkbox" checked /> Document Summary</label>
+          </article>
+          <article class="output-option">
+            <label><input id="optBlueprint" type="checkbox" checked /> Document Analysis / Blueprint</label>
+          </article>
+          <article class="output-option">
+            <label><input id="optQuestionBank" type="checkbox" checked /> Question Bank</label>
+          </article>
+          <article class="output-option">
+            <label><input id="optTrainingRecord" type="checkbox" checked /> Balanced Training Record</label>
+          </article>
+          <article class="output-option">
+            <label><input id="optDeterministicTraining" type="checkbox" checked /> Deterministic Training Pairs</label>
+          </article>
+        </div>
+
+        <div class="action-row">
+          <button id="generateButton" class="generate-button" type="button" disabled>Generate</button>
+          <p id="generateHint" class="generate-hint">Select the PDF, output folder, and at least one output type.</p>
+        </div>
+
+        <div class="status-row" aria-live="polite">
+          <p id="conversionStatus" class="conversion-status" data-state="idle">Idle. Waiting for input.</p>
+          <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div id="conversionProgressBar" class="progress-fill" style="width: 0%"></div>
+          </div>
+          <p id="apiStatus" class="api-status">Checking API availability...</p>
+        </div>
+      </section>
+
+      <section class="legacy-panel" aria-label="Legacy files">
+        <details id="legacyDetails" class="legacy-details">
+          <summary class="legacy-toggle">Add Legacy Files (Optional)</summary>
+          <div class="legacy-content">
+            <article class="upload-card optional" data-legacy-card>
+              <div class="drop-zone" tabindex="0">
+                <span class="field-tag optional-tag">Optional</span>
+                <span class="drop-icon">+</span>
+                <h2>Legacy Doc or Image</h2>
+                <p>Drop a legacy JSON/document/image file for reference.</p>
+                <span class="file-name">No file selected</span>
+                <button class="clear-card-button" type="button" aria-label="Clear file">×</button>
+              </div>
+              <button class="upload-button" type="button">Upload</button>
+              <input class="legacy-file-input" type="file" accept=".json,.txt,.md,.doc,.docx,.pdf,.png,.jpg,.jpeg,.webp,.bmp,.gif,image/*" />
+            </article>
+          </div>
+        </details>
+      </section>
+
+      <section class="log-panel" aria-label="Generation progress log">
+        <div class="log-header">
+          <h3>Progress Log</h3>
+          <button id="clearLogButton" class="clear-log-button" type="button">Clear</button>
+        </div>
+        <div id="logWindow" class="log-window" role="log" aria-live="polite">
+          <p class="log-line">System ready.</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./renderer_pipeline.js"></script>
+  </body>
+</html>
