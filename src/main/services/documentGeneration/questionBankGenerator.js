@@ -163,6 +163,7 @@ function createQuestionBankGenerator({ api, common }) {
     chapterNumber,
     bookId,
     sectionWeightPercentage,
+    preferredProvider = null,
   }) => {
     const sectionTitle = cleanText(section?.title) || `Section ${sectionOrdinal}`;
 
@@ -177,7 +178,7 @@ function createQuestionBankGenerator({ api, common }) {
       'Use only the provided section content; do not invent outside facts.',
     ].join(' ');
 
-    const result = await api.callPreferredApiJson(prompt, {
+    const payload = {
       bookId,
       chapter: chapterNumber,
       chapterTitle: cleanText(documentJson?.title),
@@ -193,7 +194,11 @@ function createQuestionBankGenerator({ api, common }) {
         correct_answers: [REQUIRED_CORRECT_ANSWERS],
         wrong_answers: [REQUIRED_WRONG_ANSWERS],
       },
-    });
+    };
+
+    const result = preferredProvider
+      ? await api.callApiJson(preferredProvider, prompt, payload)
+      : await api.callPreferredApiJson(prompt, payload);
 
     const generated = Array.isArray(result?.json?.questions) ? result.json.questions : [];
     return {
@@ -238,10 +243,13 @@ function createQuestionBankGenerator({ api, common }) {
     return items;
   };
 
-  async function buildQuestionBank(documentJson) {
+  async function buildQuestionBank(documentJson, options = {}) {
     const sections = Array.isArray(documentJson?.sections) ? documentJson.sections : [];
     const idContext = common.parseIdContextFromPrefix(documentJson?.prefix || '', documentJson);
     const sectionBlueprintInfo = common.buildSectionBlueprintsFromDocument(documentJson, idContext);
+    const preferredProvider = typeof options?.preferredProvider === 'string'
+      ? options.preferredProvider.trim().toLowerCase()
+      : '';
 
     const bookId = `${sectionBlueprintInfo?.bookId || idContext?.bookId || 'DOC'}`.toUpperCase();
     const chapterNumber = Number(sectionBlueprintInfo?.chapterNumber || idContext?.chapterNumber || documentJson?.chapter || 0) || 0;
@@ -281,6 +289,7 @@ function createQuestionBankGenerator({ api, common }) {
           chapterNumber,
           bookId,
           sectionWeightPercentage,
+          preferredProvider,
         });
 
         rawQuestions = Array.isArray(apiResult.questions) ? apiResult.questions : [];

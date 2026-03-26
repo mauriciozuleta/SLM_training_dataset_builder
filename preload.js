@@ -10,6 +10,18 @@ contextBridge.exposeInMainWorld('desktopApp', {
   getApiStatus: () => ipcRenderer.invoke('api:status'),
   processPdf: (payload) => ipcRenderer.invoke('rag:processPdf', payload),
   buildArtifacts: (payload) => ipcRenderer.invoke('generation:buildArtifacts', payload),
+  onArtifactProgress: (callback) => {
+    if (typeof callback !== 'function') {
+      return () => {};
+    }
+
+    const handler = (_event, payload) => callback(payload);
+    ipcRenderer.on('generation:artifactProgress', handler);
+
+    return () => {
+      ipcRenderer.removeListener('generation:artifactProgress', handler);
+    };
+  },
   showConfirm: (options) => ipcRenderer.invoke('dialog:showConfirm', options),
   showAlert: (options) => ipcRenderer.invoke('dialog:showAlert', options),
 });

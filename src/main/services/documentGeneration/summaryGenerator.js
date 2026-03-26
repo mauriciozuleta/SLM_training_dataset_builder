@@ -165,7 +165,7 @@ function createSummaryGenerator({ api }) {
     return `${lines.join('\n').trim()}\n`;
   };
 
-  const buildSectionSummaryFromApi = async ({ documentJson, section, sectionIndex, totalSections }) => {
+  const buildSectionSummaryFromApi = async ({ documentJson, section, sectionIndex, totalSections, preferredProvider = null }) => {
     const sectionTitle = cleanText(section?.title) || `Section ${sectionIndex + 1}`;
     const prompt = [
       'You are an aviation training summarizer.',
@@ -178,7 +178,18 @@ function createSummaryGenerator({ api }) {
       '- Stay factual and avoid adding outside information.',
     ].join(' ');
 
-    const result = await api.callPreferredApiJson(prompt, {
+    const result = preferredProvider
+      ? await api.callApiJson(preferredProvider, prompt, {
+        chapter: Number(documentJson?.chapter) || 0,
+        chapterTitle: cleanText(documentJson?.title),
+        totalSections,
+        sectionIndex: sectionIndex + 1,
+        sectionId: cleanText(section?.id),
+        sectionTitle,
+        sectionWordCount: Number(section?.wordCount) || 0,
+        sectionContent: summarizeSectionContent(section?.content, MAX_SECTION_CONTENT_CHARS),
+      })
+      : await api.callPreferredApiJson(prompt, {
       chapter: Number(documentJson?.chapter) || 0,
       chapterTitle: cleanText(documentJson?.title),
       totalSections,
@@ -201,11 +212,14 @@ function createSummaryGenerator({ api }) {
     };
   };
 
-  const buildSummaryFromApi = async (documentJson, fallbackModel) => {
+  const buildSummaryFromApi = async (documentJson, fallbackModel, options = {}) => {
     const sections = Array.isArray(documentJson?.sections) ? documentJson.sections : [];
     const totalSections = Number(documentJson?.totalSections) > 0
       ? Number(documentJson.totalSections)
       : sections.length;
+    const preferredProvider = typeof options?.preferredProvider === 'string'
+      ? options.preferredProvider.trim().toLowerCase()
+      : '';
 
     const mainConcepts = [];
     const providers = new Set();
@@ -225,6 +239,7 @@ function createSummaryGenerator({ api }) {
           section,
           sectionIndex: index,
           totalSections,
+          preferredProvider,
         });
 
         mainConcepts.push({
@@ -301,11 +316,11 @@ function createSummaryGenerator({ api }) {
     return summaryModel;
   };
 
-  async function buildSummary(documentJson) {
+  async function buildSummary(documentJson, options = {}) {
     const fallbackModel = buildFallbackSummaryModel(documentJson);
 
     try {
-      const apiModel = await buildSummaryFromApi(documentJson, fallbackModel);
+      const apiModel = await buildSummaryFromApi(documentJson, fallbackModel, options);
       return {
         ...apiModel,
         markdown: buildSummaryMarkdown(apiModel),

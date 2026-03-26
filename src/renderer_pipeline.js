@@ -17,18 +17,26 @@ const checkboxIds = {
   summary: 'optSummaryMd',
   questions: 'optQuestionsJson',
   deterministicPairs: 'optDeterministicPairsJson',
+  conversationalPairs: 'optConversationalPairsJson',
 };
 
-const apiDependentOutputs = ['docJson', 'summary', 'questions', 'deterministicPairs'];
+const apiDependentOutputs = ['docJson', 'summary', 'questions', 'deterministicPairs', 'conversationalPairs'];
 const conversionStatusEl = document.getElementById('conversionStatus');
-const conversionProgressBar = document.getElementById('conversionProgressBar');
-const documentProgressWrap = document.getElementById('documentProgressWrap');
 const documentReadyBadge = document.getElementById('documentReadyBadge');
 const summaryReadyBadge = document.getElementById('summaryReadyBadge');
 const questionReadyBadge = document.getElementById('questionReadyBadge');
 const deterministicPairsReadyBadge = document.getElementById('deterministicPairsReadyBadge');
+const conversationalPairsReadyBadge = document.getElementById('conversationalPairsReadyBadge');
 const documentOutputCard = document.querySelector('[data-document-card]');
 const apiStatusEl = document.getElementById('apiStatus');
+
+const outputBadgesByKey = {
+  docJson: documentReadyBadge,
+  summary: summaryReadyBadge,
+  questions: questionReadyBadge,
+  deterministicPairs: deterministicPairsReadyBadge,
+  conversationalPairs: conversationalPairsReadyBadge,
+};
 
 const cardRegistry = new Map();
 const selectedFiles = { originalPdf: null, legacyFile: null };
@@ -37,6 +45,7 @@ let lastUsedOutputFolder = '';
 let lastUsedOutputPrefix = '';
 let apiAvailable = false;
 let apiProviderCount = 0;
+let apiProviders = [];
 let generationInProgress = false;
 let clearPrimaryPdf = async () => {};
 
@@ -70,45 +79,77 @@ const setConversionStatus = (message, percent = 0, state = 'idle') => {
     documentOutputCard.dataset.state = state;
   }
 
-  if (documentProgressWrap) {
-    documentProgressWrap.hidden = state !== 'running';
-  }
-
-  if (conversionProgressBar?.parentElement) {
-    const bounded = Math.max(0, Math.min(100, Number(percent) || 0));
-    conversionProgressBar.style.width = `${bounded}%`;
-    conversionProgressBar.parentElement.setAttribute('aria-valuenow', String(bounded));
-  }
+  // Keep message/percent parameters for compatibility with existing call sites.
+  void message;
+  void percent;
 };
 
-const setOutputReadyState = (key, isReady) => {
-  let badge = documentReadyBadge;
-  if (key === 'summary') {
-    badge = summaryReadyBadge;
-  }
-  if (key === 'questions') {
-    badge = questionReadyBadge;
-  }
-  if (key === 'deterministicPairs') {
-    badge = deterministicPairsReadyBadge;
-  }
+const setOutputBuildState = (key, state = 'idle') => {
+  const badge = outputBadgesByKey[key];
   if (!badge) {
     return;
   }
-  badge.hidden = !isReady;
+
+  if (state === 'idle') {
+    badge.hidden = true;
+    badge.setAttribute('aria-hidden', 'true');
+    delete badge.dataset.state;
+    badge.textContent = '';
+    return;
+  }
+
+  badge.hidden = false;
+  badge.setAttribute('aria-hidden', 'false');
+  badge.dataset.state = state;
+
+  if (state === 'success') {
+    badge.textContent = '✓';
+    return;
+  }
+  if (state === 'error') {
+    badge.textContent = '!';
+    return;
+  }
+
+  badge.textContent = '';
+};
+
+const setOutputReadyState = (key, isReady) => {
+  setOutputBuildState(key, isReady ? 'success' : 'idle');
 };
 
 const resetDocumentOutputState = () => {
-  setOutputReadyState('docJson', false);
-  setOutputReadyState('summary', false);
-  setOutputReadyState('questions', false);
-  setOutputReadyState('deterministicPairs', false);
+  setOutputBuildState('docJson', 'idle');
+  setOutputBuildState('summary', 'idle');
+  setOutputBuildState('questions', 'idle');
+  setOutputBuildState('deterministicPairs', 'idle');
+  setOutputBuildState('conversationalPairs', 'idle');
   setConversionStatus('', 0, 'idle');
+};
+
+const setSelectedOutputsRunning = (selectedOutputs, keys) => {
+  keys.forEach((key) => {
+    if (selectedOutputs[key]) {
+      setOutputBuildState(key, 'running');
+    }
+  });
+};
+
+const markRunningOutputsAsError = () => {
+  Object.entries(outputBadgesByKey).forEach(([key, badge]) => {
+    if (!badge || badge.hidden) {
+      return;
+    }
+    if (badge.dataset.state === 'running') {
+      setOutputBuildState(key, 'error');
+    }
+  });
 };
 
 const applyApiOutputAvailability = async (available, providers = []) => {
   apiAvailable = Boolean(available);
   apiProviderCount = Array.isArray(providers) ? providers.length : 0;
+  apiProviders = Array.isArray(providers) ? providers.slice() : [];
 
   if (apiStatusEl) {
     if (!apiAvailable) {
@@ -211,6 +252,19 @@ const getInitialDocumentFileName = () => {
   return ensureJsonExtension(`${head}document`, 'document.json');
 };
 
+const buildRunOutputFolderName = () => {
+  const prefix = buildPrefix();
+  return prefix ? `${prefix} output docs` : 'output docs';
+};
+
+const joinPath = (basePath, childName) => {
+  const safeBase = `${basePath || ''}`.trim().replace(/[\\/]+$/g, '');
+  if (!safeBase) {
+    return childName;
+  }
+  return `${safeBase}\\${childName}`;
+};
+
 const getBaseName = (fullPath) => {
   if (typeof fullPath !== 'string') {
     return '';
@@ -240,17 +294,19 @@ const getSelectedOutputs = () => {
 const enforceOutputDependencies = () => {
   const questionsInput = document.getElementById(checkboxIds.questions);
   const deterministicInput = document.getElementById(checkboxIds.deterministicPairs);
-  if (!questionsInput || !deterministicInput) {
+  const conversationalInput = document.getElementById(checkboxIds.conversationalPairs);
+  if (!questionsInput || !deterministicInput || !conversationalInput) {
     return;
   }
 
-  const canUseDeterministic = apiAvailable && questionsInput.checked;
-  if (!canUseDeterministic && deterministicInput.checked) {
+  const canUseDeterministicPairs = apiAvailable && questionsInput.checked;
+  if (!canUseDeterministicPairs && deterministicInput.checked) {
     deterministicInput.checked = false;
     setOutputReadyState('deterministicPairs', false);
   }
 
-  deterministicInput.disabled = !canUseDeterministic;
+  deterministicInput.disabled = !canUseDeterministicPairs;
+  conversationalInput.disabled = !apiAvailable;
 };
 
 const getOutputFileNames = () => {
@@ -262,6 +318,7 @@ const getOutputFileNames = () => {
     summary: ensureMarkdownExtension(`${head}chapter_summary`, 'chapter_summary.md'),
     questions: ensureJsonExtension(`${head}questions`, 'chapter_questions.json'),
     deterministicPairs: ensureJsonExtension(`${head}deterministic_training_pairs`, 'deterministic_training_pairs.json'),
+    conversationalPairs: ensureJsonExtension(`${head}conversational_training_pairs`, 'conversational_training_pairs.json'),
   };
 };
 
@@ -718,8 +775,10 @@ generateButton?.addEventListener('click', async () => {
     return;
   }
 
-  const outputFolder = outputFolderInput?.value;
+  const selectedOutputFolder = outputFolderInput?.value;
   const outputPrefix = (outputPrefixInput?.value || '').trim();
+  const runOutputFolderName = buildRunOutputFolderName();
+  const outputFolder = joinPath(selectedOutputFolder, runOutputFolderName);
   const documentIdPrefix = buildDocumentIdPrefix();
   const chapterNumberMatch = outputPrefix.match(/(\d{1,3})/);
   const chapterNumberOverride = chapterNumberMatch ? Number.parseInt(chapterNumberMatch[1], 10) : 0;
@@ -754,7 +813,7 @@ generateButton?.addEventListener('click', async () => {
     return;
   }
 
-  if (!outputFolder || outputFolder === 'No folder selected') {
+  if (!selectedOutputFolder || selectedOutputFolder === 'No folder selected') {
     await showWarningPopup('Output folder is required.', 'Select a destination folder before generating files.');
     addLog('Output folder is required.', 'error');
     setConversionStatus('Generation blocked: output folder is required.', 0, 'error');
@@ -778,7 +837,7 @@ generateButton?.addEventListener('click', async () => {
       type: 'question',
       title: 'Confirm Pipeline Run',
       message: 'Generate selected outputs from the loaded PDF?',
-      detail: `PDF: ${selectedFiles.originalPdf.name}\nOutput folder: ${outputFolder}\n\nSelected outputs:\n${chosen}`,
+      detail: `PDF: ${selectedFiles.originalPdf.name}\nSelected destination: ${selectedOutputFolder}\nRun folder: ${runOutputFolderName}\nFinal output path: ${outputFolder}\n\nSelected outputs:\n${chosen}`,
       buttons: ['Generate', 'Cancel'],
     });
 
@@ -806,6 +865,9 @@ generateButton?.addEventListener('click', async () => {
     while (!completed) {
       try {
         setConversionStatus('Preparing conversion...', 10, 'running');
+        resetDocumentOutputState();
+        setSelectedOutputsRunning(selectedOutputs, ['docJson']);
+        addLog(`Output folder for this run: ${outputFolder}`, 'info');
         addLog('Starting local PDF extraction (PDF to RAG, no API calls)...');
 
         const pdfPayload = {
@@ -830,16 +892,42 @@ generateButton?.addEventListener('click', async () => {
 
         setConversionStatus('Writing selected output files...', 75, 'running');
         addLog('Building selected artifacts...');
-        const result = await window.desktopApp.buildArtifacts({
-          outputDir: outputFolder,
-          selectedOutputs,
-          outputFileNames,
-          documentJson: extracted.data,
-          documentJsonPath: extracted.outputPath,
-          allowOverwrite,
-          idPrefix: documentIdPrefix,
-          apiProviderCount,
-        });
+        const unsubscribeArtifactProgress = window.desktopApp?.onArtifactProgress?.((update) => {
+          const key = update?.key;
+          const state = `${update?.state || ''}`.trim().toLowerCase();
+          if (!key || !outputBadgesByKey[key]) {
+            return;
+          }
+
+          if (state === 'running') {
+            setOutputBuildState(key, 'running');
+            return;
+          }
+          if (state === 'completed') {
+            setOutputReadyState(key, true);
+            return;
+          }
+          if (state === 'error') {
+            setOutputBuildState(key, 'error');
+          }
+        }) || (() => {});
+
+        let result;
+        try {
+          result = await window.desktopApp.buildArtifacts({
+            outputDir: outputFolder,
+            selectedOutputs,
+            outputFileNames,
+            documentJson: extracted.data,
+            documentJsonPath: extracted.outputPath,
+            allowOverwrite,
+            idPrefix: documentIdPrefix,
+            apiProviderCount,
+            apiProviders,
+          });
+        } finally {
+          unsubscribeArtifactProgress();
+        }
 
         if (Array.isArray(result?.written) && result.written.length > 0) {
           result.written.forEach((entry) => {
@@ -856,6 +944,9 @@ generateButton?.addEventListener('click', async () => {
             }
             if (entry?.key === 'deterministicPairs') {
               setOutputReadyState('deterministicPairs', true);
+            }
+            if (entry?.key === 'conversationalPairs') {
+              setOutputReadyState('conversationalPairs', true);
             }
             addLog(`Saved (${entry.key}): ${entry.path}`, 'success');
           });
@@ -887,6 +978,7 @@ generateButton?.addEventListener('click', async () => {
           if (continueOverwrite) {
             allowOverwrite = true;
             setConversionStatus('Continuing with overwrite...', 20, 'running');
+            markRunningOutputsAsError();
             addLog('User chose to continue and overwrite existing files.', 'info');
             continue;
           }
@@ -910,6 +1002,7 @@ generateButton?.addEventListener('click', async () => {
 
         const apiFailed = /api is required|api analysis failed/i.test(message);
         if (apiFailed) {
+          markRunningOutputsAsError();
           await showWarningPopup('API generation failed.', 'No files were generated. Check API key and try again.');
           setConversionStatus('Generation failed: API unavailable or analysis failed.', 0, 'error');
           return;
@@ -925,6 +1018,7 @@ generateButton?.addEventListener('click', async () => {
       }
     }
   } catch (error) {
+    markRunningOutputsAsError();
     setConversionStatus(`Conversion failed: ${error.message}`, 100, 'error');
     addLog(`Pipeline failed: ${error.message}`, 'error');
   } finally {

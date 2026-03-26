@@ -133,27 +133,56 @@ body {
   accent-color: #3c7cff;
 }
 
-.document-ready-badge {
+.document-status-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
   border-radius: 999px;
-  background: rgba(31, 126, 71, 0.2);
-  border: 1px solid rgba(98, 219, 141, 0.35);
-  color: #aef0c0;
-  font-size: 0.78rem;
+  background: rgba(69, 94, 150, 0.25);
+  border: 1px solid rgba(126, 156, 226, 0.35);
+  color: #d9e6ff;
+  font-size: 0.72rem;
   font-weight: 700;
   flex: 0 0 auto;
 }
 
-.document-ready-badge[hidden] {
+.document-status-badge[hidden] {
   display: none !important;
 }
 
-.document-progress-wrap {
-  margin-top: 16px;
+.document-status-badge[data-state='success'] {
+  background: rgba(31, 126, 71, 0.2);
+  border-color: rgba(98, 219, 141, 0.35);
+  color: #aef0c0;
+}
+
+.document-status-badge[data-state='error'] {
+  background: rgba(166, 51, 51, 0.24);
+  border-color: rgba(255, 126, 126, 0.5);
+  color: #ffd2d2;
+}
+
+.document-status-badge[data-state='running'] {
+  position: relative;
+  color: transparent;
+}
+
+.document-status-badge[data-state='running']::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid rgba(140, 178, 255, 0.25);
+  border-top-color: #9fbeff;
+  animation: outputSpin 0.8s linear infinite;
+}
+
+@keyframes outputSpin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .drop-zone {

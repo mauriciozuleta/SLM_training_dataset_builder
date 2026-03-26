@@ -1,0 +1,31 @@
+[
+    {
+    "questionBank": {
+    "chapterId": "afh.1",
+    "bookId": "AFH",
+    "chapterNumber": 1,
+    "chapterTitle": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1: Introduction to Flight Training Introduction",
+    "totalRequiredQuestions": 1}
+    },
+    {
+    "questionid": "AFH.1.1.1",
+    "question": "What is the primary purpose of flight training according to Chapter 1?",
+    "correct_answers": [
+      { "id": "AFH.1.1.1.c.1", "text": "To acquire and hone basic airmanship skills" },
+      { "id": "AFH.1.1.1.c.2", "text": "To develop judgment, coordination, and safe habits" },
+      { "id": "AFH.1.1.1.c.3", "text": "To build transferable skills applicable to any airplane" }
+    ],
+    "wrong_answers": [
+      { "id": "AFH.1.1.1.w.1", "text": "To prepare for aerobatic competition" },
+      { "id": "AFH.1.1.1.w.2", "text": "To master advanced avionics systems" },
+      { "id": "AFH.1.1.1.w.3", "text": "To learn airline-style crew procedures" },
+      { "id": "AFH.1.1.1.w.4", "text": "To focus on long-distance navigation" },
+      { "id": "AFH.1.1.1.w.5", "text": "To specialize in tailwheel operations" },
+      { "id": "AFH.1.1.1.w.6", "text": "To prepare for turbine aircraft" },
+      { "id": "AFH.1.1.1.w.7", "text": "To learn formation flying" },
+      { "id": "AFH.1.1.1.w.8", "text": "To train for mountain flying" }
+    ],
+    "source": "AFH Chapter 1 — Purpose of Flight Training",
+    "subjects": ["Airmanship", "Training Foundations"]
+    }
+]

@@ -3,6 +3,7 @@ const { createApiClient } = require('./documentGeneration/apiClient');
 const { createSummaryGenerator } = require('./documentGeneration/summaryGenerator');
 const { createQuestionBankGenerator } = require('./documentGeneration/questionBankGenerator');
 const { createDeterministicPairGenerator } = require('./documentGeneration/deterministicPairGenerator');
+const { createConversationalPairGenerator } = require('./documentGeneration/conversationalPairGenerator');
 const { createArtifactWriter } = require('./documentGeneration/artifactWriter');
 
 function createDocumentGenerationService({ fs, path, env, apiTimeoutMs, maxQuestionTarget }) {
@@ -11,6 +12,7 @@ function createDocumentGenerationService({ fs, path, env, apiTimeoutMs, maxQuest
   const summaryGenerator = createSummaryGenerator({ api });
   const questionBankGenerator = createQuestionBankGenerator({ api, common });
   const deterministicPairGenerator = createDeterministicPairGenerator();
+  const conversationalPairGenerator = createConversationalPairGenerator({ api });
   const artifactWriter = createArtifactWriter({
     fs,
     path,
@@ -18,6 +20,7 @@ function createDocumentGenerationService({ fs, path, env, apiTimeoutMs, maxQuest
     summaryGenerator,
     questionBankGenerator,
     deterministicPairGenerator,
+    conversationalPairGenerator,
   });
 
   return {

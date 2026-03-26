@@ -368,10 +368,35 @@ function createApiClient({ env, apiTimeoutMs }) {
     throw lastError || new Error('No API provider call succeeded.');
   }
 
+  async function callApiJson(provider, systemPrompt, payload, modelHint = null) {
+    const normalizedProvider = `${provider || ''}`.trim().toLowerCase();
+    if (!normalizedProvider) {
+      return callPreferredApiJson(systemPrompt, payload, modelHint);
+    }
+
+    const status = getApiStatus();
+    if (!status.providers.includes(normalizedProvider)) {
+      throw new Error(`Requested API provider is not available: ${normalizedProvider}`);
+    }
+
+    if (normalizedProvider === 'openai') {
+      return callOpenAiJson(systemPrompt, payload, modelHint);
+    }
+    if (normalizedProvider === 'anthropic') {
+      return callAnthropicJson(systemPrompt, payload, modelHint);
+    }
+    if (normalizedProvider === 'gemini') {
+      return callGeminiJson(systemPrompt, payload, modelHint);
+    }
+
+    throw new Error(`Unsupported API provider: ${normalizedProvider}`);
+  }
+
   return {
     callOpenAiBlueprintAnalysis,
     callAnthropicBlueprintAnalysis,
     callGeminiBlueprintAnalysis,
+    callApiJson,
     callPreferredApiJson,
     getApiStatus,
   };

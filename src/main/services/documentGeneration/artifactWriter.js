@@ -1,4 +1,4 @@
-function createArtifactWriter({ fs, path, common, summaryGenerator, questionBankGenerator, deterministicPairGenerator }) {
+function createArtifactWriter({ fs, path, common, summaryGenerator, questionBankGenerator, deterministicPairGenerator, conversationalPairGenerator }) {
   async function writeSelectedArtifacts(payload) {
     const outputDir = payload?.outputDir;
     if (!outputDir) {
@@ -11,27 +11,36 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
     const documentJson = payload?.documentJson || {};
     const documentJsonPath = typeof payload?.documentJsonPath === 'string' ? payload.documentJsonPath : '';
     const apiProviderCount = Math.max(0, Number(payload?.apiProviderCount || 0));
+    const apiProviders = Array.isArray(payload?.apiProviders)
+      ? payload.apiProviders.map((entry) => `${entry || ''}`.trim().toLowerCase()).filter(Boolean)
+      : [];
+    const onProgress = typeof payload?.onProgress === 'function' ? payload.onProgress : () => {};
     await fs.mkdir(outputDir, { recursive: true });
 
     const written = [];
     const needsSummary = Boolean(selectedOutputs.summary);
     const needsQuestions = Boolean(selectedOutputs.questions || selectedOutputs.deterministicPairs);
     const needsDeterministicPairs = Boolean(selectedOutputs.deterministicPairs);
-    const useParallelApiRequests = apiProviderCount >= 2 && needsSummary && needsQuestions;
+    const needsConversationalPairs = Boolean(selectedOutputs.conversationalPairs);
+    const primaryProvider = apiProviders.includes('openai')
+      ? 'openai'
+      : (apiProviders[0] || '');
+    const conversationalProvider = apiProviders.includes('gemini')
+      ? 'gemini'
+      : (apiProviders.find((provider) => provider !== primaryProvider) || primaryProvider || '');
+    const canRunConversationalInParallel = Boolean(
+      needsConversationalPairs
+      && primaryProvider
+      && conversationalProvider
+      && conversationalProvider !== primaryProvider
+      && apiProviderCount >= 2
+    );
 
     let summaryResult = null;
     let questionResult = null;
-    if (useParallelApiRequests) {
-      [summaryResult, questionResult] = await Promise.all([
-        summaryGenerator.buildSummary(documentJson),
-        questionBankGenerator.buildQuestionBank(documentJson),
-      ]);
-    } else {
-      summaryResult = needsSummary ? await summaryGenerator.buildSummary(documentJson) : null;
-      questionResult = needsQuestions ? await questionBankGenerator.buildQuestionBank(documentJson) : null;
-    }
-
-    const questionBank = Array.isArray(questionResult?.questionBank) ? questionResult.questionBank : [];
+    let conversationalResult = null;
+    let questionBank = [];
+    let writtenQuestionsPath = '';
 
     const outputMap = [
       {
@@ -55,6 +64,11 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
       {
         key: 'deterministicPairs',
         fileName: common.normalizeJsonFileName(fileNames.deterministicPairs, 'deterministic_training_pairs.json'),
+        data: {},
+      },
+      {
+        key: 'conversationalPairs',
+        fileName: common.normalizeJsonFileName(fileNames.conversationalPairs, 'conversational_training_pairs.json'),
         data: {},
       },
     ];
@@ -101,39 +115,103 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
       written.push({ key: 'docJson', path: path.join(outputDir, docJsonTarget.fileName), reused: true });
     }
 
-    let writtenQuestionsPath = '';
-    for (const entry of selectedEntries) {
-      const outPath = path.join(outputDir, entry.fileName);
-      let dataToWrite = entry.data;
+    const getOutputPath = (key) => {
+      const entry = outputMap.find((item) => item.key === key);
+      return entry ? path.join(outputDir, entry.fileName) : '';
+    };
 
-      if (entry.key === 'deterministicPairs') {
-        let deterministicQuestionBank = questionBank;
-        let sourceQuestionsFileName = fileNames.questions;
+    const writeJsonArtifact = async (key, data) => {
+      const outPath = getOutputPath(key);
+      await fs.writeFile(outPath, `${JSON.stringify(data, null, 2)}\n`, 'utf8');
+      written.push({ key, path: outPath });
+      return outPath;
+    };
 
-        // With a single available API provider, bind pair generation to written questions.json for deterministic sequencing.
-        if (apiProviderCount <= 1 && selectedOutputs.questions && writtenQuestionsPath) {
-          const rawQuestions = await fs.readFile(writtenQuestionsPath, 'utf8');
-          const parsedQuestions = JSON.parse(rawQuestions);
-          if (Array.isArray(parsedQuestions)) {
-            deterministicQuestionBank = parsedQuestions;
-          }
-          sourceQuestionsFileName = path.basename(writtenQuestionsPath);
+    const writeMarkdownArtifact = async (key, content) => {
+      const outPath = getOutputPath(key);
+      await fs.writeFile(outPath, content, 'utf8');
+      written.push({ key, path: outPath });
+      return outPath;
+    };
+
+    const buildSummaryArtifact = async () => {
+      if (!needsSummary) {
+        return;
+      }
+      onProgress({ key: 'summary', state: 'running' });
+      summaryResult = await summaryGenerator.buildSummary(documentJson, {
+        preferredProvider: primaryProvider,
+      });
+      await writeMarkdownArtifact('summary', typeof summaryResult?.markdown === 'string' ? summaryResult.markdown : '');
+      onProgress({ key: 'summary', state: 'completed' });
+    };
+
+    const buildQuestionsArtifact = async () => {
+      if (!needsQuestions) {
+        return;
+      }
+      if (selectedOutputs.questions) {
+        onProgress({ key: 'questions', state: 'running' });
+      }
+      questionResult = await questionBankGenerator.buildQuestionBank(documentJson, {
+        preferredProvider: primaryProvider,
+      });
+      questionBank = Array.isArray(questionResult?.questionBank) ? questionResult.questionBank : [];
+      if (selectedOutputs.questions) {
+        writtenQuestionsPath = await writeJsonArtifact('questions', questionBank);
+        onProgress({ key: 'questions', state: 'completed' });
+      }
+    };
+
+    const buildDeterministicArtifact = async () => {
+      if (!needsDeterministicPairs) {
+        return;
+      }
+      onProgress({ key: 'deterministicPairs', state: 'running' });
+      let pairQuestionBank = questionBank;
+      let sourceQuestionsFileName = fileNames.questions;
+      if (selectedOutputs.questions && writtenQuestionsPath) {
+        const rawQuestions = await fs.readFile(writtenQuestionsPath, 'utf8');
+        const parsedQuestions = JSON.parse(rawQuestions);
+        if (Array.isArray(parsedQuestions)) {
+          pairQuestionBank = parsedQuestions;
         }
+        sourceQuestionsFileName = path.basename(writtenQuestionsPath);
+      }
+      const deterministicResult = deterministicPairGenerator.buildDeterministicPairSet(pairQuestionBank, sourceQuestionsFileName);
+      await writeJsonArtifact('deterministicPairs', deterministicResult);
+      onProgress({ key: 'deterministicPairs', state: 'completed' });
+    };
 
-        dataToWrite = needsDeterministicPairs
-          ? deterministicPairGenerator.buildDeterministicPairSet(deterministicQuestionBank, sourceQuestionsFileName)
-          : {};
+    const buildConversationalArtifact = async () => {
+      if (!needsConversationalPairs) {
+        return;
       }
+      onProgress({ key: 'conversationalPairs', state: 'running' });
+      conversationalResult = await conversationalPairGenerator.buildConversationalPairSet(documentJson, {
+        preferredProvider: conversationalProvider,
+      });
+      await writeJsonArtifact('conversationalPairs', conversationalResult);
+      onProgress({ key: 'conversationalPairs', state: 'completed' });
+    };
 
-      if (entry.contentType === 'text/markdown') {
-        await fs.writeFile(outPath, dataToWrite, 'utf8');
-      } else {
-        await fs.writeFile(outPath, `${JSON.stringify(dataToWrite, null, 2)}\n`, 'utf8');
-      }
-      if (entry.key === 'questions') {
-        writtenQuestionsPath = outPath;
-      }
-      written.push({ key: entry.key, path: outPath });
+    if (canRunConversationalInParallel) {
+      await Promise.all([
+        (async () => {
+          await buildSummaryArtifact();
+          await buildQuestionsArtifact();
+        })(),
+        buildConversationalArtifact(),
+      ]);
+    } else {
+      await buildSummaryArtifact();
+      await buildQuestionsArtifact();
+    }
+
+    await buildDeterministicArtifact();
+
+    if (!canRunConversationalInParallel) {
+      await buildConversationalArtifact();
     }
 
     return {

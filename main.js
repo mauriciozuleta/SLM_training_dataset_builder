@@ -365,8 +365,13 @@ app.whenReady().then(() => {
     return processPdfToJson(payload);
   });
 
-  ipcMain.handle('generation:buildArtifacts', async (_event, payload) => {
-    return writeSelectedArtifacts(payload);
+  ipcMain.handle('generation:buildArtifacts', async (event, payload) => {
+    return writeSelectedArtifacts({
+      ...payload,
+      onProgress: (update) => {
+        event.sender.send('generation:artifactProgress', update);
+      },
+    });
   });
 
   createWindow();
