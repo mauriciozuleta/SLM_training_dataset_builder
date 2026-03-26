@@ -1,0 +1,3319 @@
+[
+  {
+    "questionBank": {
+      "chapterId": "afh.2",
+      "bookId": "AFH",
+      "chapterNumber": 2,
+      "chapterTitle": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+      "totalRequiredQuestions": 55,
+      "metadata": {
+        "generatedAtUtc": "2026-03-25T23:52:27.618Z",
+        "chapterId": "afh.2",
+        "chapterNumber": 2,
+        "totalSections": 30,
+        "totalRequiredQuestions": 55,
+        "providers": [
+          "openai"
+        ],
+        "models": [
+          "gpt-4-turbo-preview"
+        ],
+        "promptTokens": 16524,
+        "completionTokens": 7271,
+        "totalTokens": 23795,
+        "sectionQuestionSummary": [
+          {
+            "sectionId": "afh.2.1",
+            "sectionTitle": "Preflight Assessment of the Aircraft",
+            "sectionOrdinal": 1,
+            "sectionWeightPercentage": 5.69,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.2.2",
+            "sectionTitle": "Visual Preflight Assessment",
+            "sectionOrdinal": 2,
+            "sectionWeightPercentage": 6.05,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.2.3",
+            "sectionTitle": "Outer Wing Surfaces and Tail Section",
+            "sectionOrdinal": 3,
+            "sectionWeightPercentage": 3.83,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.2.4",
+            "sectionTitle": "Fuel and Oil",
+            "sectionOrdinal": 4,
+            "sectionWeightPercentage": 13.09,
+            "questionsGenerated": 7
+          },
+          {
+            "sectionId": "afh.2.5",
+            "sectionTitle": "Landing Gear, Tires, and Brakes",
+            "sectionOrdinal": 5,
+            "sectionWeightPercentage": 5.98,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.2.6",
+            "sectionTitle": "Engine and Propeller",
+            "sectionOrdinal": 6,
+            "sectionWeightPercentage": 5.53,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.2.7",
+            "sectionTitle": "Risk and Resource Management",
+            "sectionOrdinal": 7,
+            "sectionWeightPercentage": 1.16,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.2.8",
+            "sectionTitle": "Risk Management",
+            "sectionOrdinal": 8,
+            "sectionWeightPercentage": 0.66,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.2.9",
+            "sectionTitle": "Identifying the Hazard",
+            "sectionOrdinal": 9,
+            "sectionWeightPercentage": 1,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.2.10",
+            "sectionTitle": "Risk",
+            "sectionOrdinal": 10,
+            "sectionWeightPercentage": 0.67,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.2.11",
+            "sectionTitle": "Risk Assessment",
+            "sectionOrdinal": 11,
+            "sectionWeightPercentage": 1.8,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.2.12",
+            "sectionTitle": "Risk Identification",
+            "sectionOrdinal": 12,
+            "sectionWeightPercentage": 0.74,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.2.13",
+            "sectionTitle": "Risk Mitigation",
+            "sectionOrdinal": 13,
+            "sectionWeightPercentage": 0.71,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.2.14",
+            "sectionTitle": "Resource Management",
+            "sectionOrdinal": 14,
+            "sectionWeightPercentage": 0.54,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.2.15",
+            "sectionTitle": "Situational Awareness",
+            "sectionOrdinal": 15,
+            "sectionWeightPercentage": 0.35,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.2.16",
+            "sectionTitle": "Human Resource Management",
+            "sectionOrdinal": 16,
+            "sectionWeightPercentage": 2.48,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.2.17",
+            "sectionTitle": "Task Management",
+            "sectionOrdinal": 17,
+            "sectionWeightPercentage": 0.59,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.2.18",
+            "sectionTitle": "Aeronautical Decision-Making (ADM)",
+            "sectionOrdinal": 18,
+            "sectionWeightPercentage": 1.01,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.2.19",
+            "sectionTitle": "Ground Operations",
+            "sectionOrdinal": 19,
+            "sectionWeightPercentage": 3.58,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.2.20",
+            "sectionTitle": "Engine Starting",
+            "sectionOrdinal": 20,
+            "sectionWeightPercentage": 6.27,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.2.21",
+            "sectionTitle": "Hand Propping",
+            "sectionOrdinal": 21,
+            "sectionWeightPercentage": 9.17,
+            "questionsGenerated": 5
+          },
+          {
+            "sectionId": "afh.2.22",
+            "sectionTitle": "Taxiing",
+            "sectionOrdinal": 22,
+            "sectionWeightPercentage": 12.31,
+            "questionsGenerated": 7
+          },
+          {
+            "sectionId": "afh.2.23",
+            "sectionTitle": "Before-Takeoff Check",
+            "sectionOrdinal": 23,
+            "sectionWeightPercentage": 8.42,
+            "questionsGenerated": 5
+          },
+          {
+            "sectionId": "afh.2.24",
+            "sectionTitle": "Takeoff Checks",
+            "sectionOrdinal": 24,
+            "sectionWeightPercentage": 0.56,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.2.25",
+            "sectionTitle": "After-Landing",
+            "sectionOrdinal": 25,
+            "sectionWeightPercentage": 1.58,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.2.26",
+            "sectionTitle": "Clear of Runway and Stopped",
+            "sectionOrdinal": 26,
+            "sectionWeightPercentage": 0.8,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.2.27",
+            "sectionTitle": "Parking",
+            "sectionOrdinal": 27,
+            "sectionWeightPercentage": 0.78,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.2.28",
+            "sectionTitle": "Engine Shutdown",
+            "sectionOrdinal": 28,
+            "sectionWeightPercentage": 1.18,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.2.29",
+            "sectionTitle": "Securing and Servicing",
+            "sectionOrdinal": 29,
+            "sectionWeightPercentage": 2.48,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.2.30",
+            "sectionTitle": "Chapter Summary",
+            "sectionOrdinal": 30,
+            "sectionWeightPercentage": 0.99,
+            "questionsGenerated": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "questionid": "AFH.2.1.1",
+    "question": "Which of the following are required inspections or certifications for an aircraft to be considered airworthy according to the Preflight Assessment of the Aircraft section?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.1.1.c.1",
+        "text": "Annual inspection within the preceding 12 calendar months"
+      },
+      {
+        "id": "AFH.2.1.1.c.2",
+        "text": "Transponder certification within the preceding 24 calendar months"
+      },
+      {
+        "id": "AFH.2.1.1.c.3",
+        "text": "ELT inspection within the last 12 months"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.1.1.w.1",
+        "text": "Monthly engine performance test"
+      },
+      {
+        "id": "AFH.2.1.1.w.2",
+        "text": "Weekly fuel system check"
+      },
+      {
+        "id": "AFH.2.1.1.w.3",
+        "text": "Daily tire pressure check"
+      },
+      {
+        "id": "AFH.2.1.1.w.4",
+        "text": "Biennial paint inspection"
+      },
+      {
+        "id": "AFH.2.1.1.w.5",
+        "text": "Quarterly cockpit electronics review"
+      },
+      {
+        "id": "AFH.2.1.1.w.6",
+        "text": "Six-month pilot seat inspection"
+      },
+      {
+        "id": "AFH.2.1.1.w.7",
+        "text": "Yearly exterior wash"
+      },
+      {
+        "id": "AFH.2.1.1.w.8",
+        "text": "Eighteen-month navigation system update"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Preflight Assessment of the Aircraft"
+    ]
+  },
+  {
+    "questionid": "AFH.2.2.1",
+    "question": "What should be inspected regarding the cabin door during a visual preflight assessment?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.2.1.c.1",
+        "text": "Door latches engage or disengage smoothly"
+      },
+      {
+        "id": "AFH.2.2.1.c.2",
+        "text": "Door fits snugly"
+      },
+      {
+        "id": "AFH.2.2.1.c.3",
+        "text": "Door is easy to open or close"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.2.1.w.1",
+        "text": "Door color matches the aircraft"
+      },
+      {
+        "id": "AFH.2.2.1.w.2",
+        "text": "Door automatically locks when closed"
+      },
+      {
+        "id": "AFH.2.2.1.w.3",
+        "text": "Door has a viewing window"
+      },
+      {
+        "id": "AFH.2.2.1.w.4",
+        "text": "Door can be locked from the outside"
+      },
+      {
+        "id": "AFH.2.2.1.w.5",
+        "text": "Door has an emergency release handle"
+      },
+      {
+        "id": "AFH.2.2.1.w.6",
+        "text": "Door seals are visually appealing"
+      },
+      {
+        "id": "AFH.2.2.1.w.7",
+        "text": "Door opens automatically upon landing"
+      },
+      {
+        "id": "AFH.2.2.1.w.8",
+        "text": "Door has a manual slide mechanism"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2",
+    "subjects": [
+      "Visual Preflight Assessment"
+    ]
+  },
+  {
+    "questionid": "AFH.2.2.2",
+    "question": "Which items are included in the AFM/POH preflight inspection?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.2.2.c.1",
+        "text": "Fuel selectors checked for proper operation"
+      },
+      {
+        "id": "AFH.2.2.2.c.2",
+        "text": "Trim wheels set for takeoff position"
+      },
+      {
+        "id": "AFH.2.2.2.c.3",
+        "text": "Landing gear control is DOWN"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.2.2.w.1",
+        "text": "Flaps are fully extended"
+      },
+      {
+        "id": "AFH.2.2.2.w.2",
+        "text": "Pitot tube cover is displayed"
+      },
+      {
+        "id": "AFH.2.2.2.w.3",
+        "text": "Engine oil is checked for color"
+      },
+      {
+        "id": "AFH.2.2.2.w.4",
+        "text": "Cabin lights are dimmed for takeoff"
+      },
+      {
+        "id": "AFH.2.2.2.w.5",
+        "text": "Emergency exits are sealed"
+      },
+      {
+        "id": "AFH.2.2.2.w.6",
+        "text": "Brakes are tested at maximum pressure"
+      },
+      {
+        "id": "AFH.2.2.2.w.7",
+        "text": "Avionics are tested for GPS accuracy"
+      },
+      {
+        "id": "AFH.2.2.2.w.8",
+        "text": "Cockpit voice recorder is tested"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2",
+    "subjects": [
+      "Visual Preflight Assessment"
+    ]
+  },
+  {
+    "questionid": "AFH.2.2.3",
+    "question": "What should be verified regarding the windshield and windows during a visual preflight assessment?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.2.3.c.1",
+        "text": "Free from cracks"
+      },
+      {
+        "id": "AFH.2.2.3.c.2",
+        "text": "Clean"
+      },
+      {
+        "id": "AFH.2.2.3.c.3",
+        "text": "Free from crazing"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.2.3.w.1",
+        "text": "Tinted for sunlight protection"
+      },
+      {
+        "id": "AFH.2.2.3.w.2",
+        "text": "Equipped with windshield wipers"
+      },
+      {
+        "id": "AFH.2.2.3.w.3",
+        "text": "Heated for ice prevention"
+      },
+      {
+        "id": "AFH.2.2.3.w.4",
+        "text": "Can be opened in flight"
+      },
+      {
+        "id": "AFH.2.2.3.w.5",
+        "text": "Frosted for privacy"
+      },
+      {
+        "id": "AFH.2.2.3.w.6",
+        "text": "Laminated for bird strike protection"
+      },
+      {
+        "id": "AFH.2.2.3.w.7",
+        "text": "Coated with anti-reflective material"
+      },
+      {
+        "id": "AFH.2.2.3.w.8",
+        "text": "Embedded with UV protection"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2",
+    "subjects": [
+      "Visual Preflight Assessment"
+    ]
+  },
+  {
+    "questionid": "AFH.2.3.1",
+    "question": "What should a pilot inspect for on the outer wing surfaces and tail section during a preflight check?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.3.1.c.1",
+        "text": "Distortion or deformation along spar lines"
+      },
+      {
+        "id": "AFH.2.3.1.c.2",
+        "text": "Cracked paint or black-oxide film around rivet heads"
+      },
+      {
+        "id": "AFH.2.3.1.c.3",
+        "text": "Cracks radiating from screw holes in wingtips, fairings, and non-structural covers"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.3.1.w.1",
+        "text": "Uniform color of the airplane skin"
+      },
+      {
+        "id": "AFH.2.3.1.w.2",
+        "text": "Presence of fuel stains on the wingtips"
+      },
+      {
+        "id": "AFH.2.3.1.w.3",
+        "text": "Smoothness of the airplane's paint job"
+      },
+      {
+        "id": "AFH.2.3.1.w.4",
+        "text": "Condition of the aircraft's tires"
+      },
+      {
+        "id": "AFH.2.3.1.w.5",
+        "text": "Brightness of the navigation lights"
+      },
+      {
+        "id": "AFH.2.3.1.w.6",
+        "text": "Integrity of the cockpit windows"
+      },
+      {
+        "id": "AFH.2.3.1.w.7",
+        "text": "Operation of the aircraft's avionics"
+      },
+      {
+        "id": "AFH.2.3.1.w.8",
+        "text": "Cleanliness of the aircraft's exterior"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Outer Wing Surfaces and Tail Section Inspection"
+    ]
+  },
+  {
+    "questionid": "AFH.2.4.1",
+    "question": "What color is 100LL AVGAS dyed?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.4.1.c.1",
+        "text": "Blue"
+      },
+      {
+        "id": "AFH.2.4.1.c.2",
+        "text": "While there are various formulations of aviation gasoline (AVGAS), only three grades are conventional: 80/87, 100LL, and 100/130."
+      },
+      {
+        "id": "AFH.2.4.1.c.3",
+        "text": "100LL is the most widely available in the United States."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.4.1.w.1",
+        "text": "Red"
+      },
+      {
+        "id": "AFH.2.4.1.w.2",
+        "text": "Green"
+      },
+      {
+        "id": "AFH.2.4.1.w.3",
+        "text": "Yellow"
+      },
+      {
+        "id": "AFH.2.4.1.w.4",
+        "text": "Black"
+      },
+      {
+        "id": "AFH.2.4.1.w.5",
+        "text": "White"
+      },
+      {
+        "id": "AFH.2.4.1.w.6",
+        "text": "Orange"
+      },
+      {
+        "id": "AFH.2.4.1.w.7",
+        "text": "Purple"
+      },
+      {
+        "id": "AFH.2.4.1.w.8",
+        "text": "Clear"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Fuel and Oil"
+    ]
+  },
+  {
+    "questionid": "AFH.2.4.2",
+    "question": "What happens when a reciprocating engine is operated on jet fuel?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.4.2.c.1",
+        "text": "The engine may fail catastrophically after takeoff"
+      },
+      {
+        "id": "AFH.2.4.2.c.2",
+        "text": "While there are various formulations of aviation gasoline (AVGAS), only three grades are conventional: 80/87, 100LL, and 100/130."
+      },
+      {
+        "id": "AFH.2.4.2.c.3",
+        "text": "100LL is the most widely available in the United States."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.4.2.w.1",
+        "text": "The engine will operate more efficiently"
+      },
+      {
+        "id": "AFH.2.4.2.w.2",
+        "text": "Fuel consumption decreases"
+      },
+      {
+        "id": "AFH.2.4.2.w.3",
+        "text": "The engine will not start"
+      },
+      {
+        "id": "AFH.2.4.2.w.4",
+        "text": "No significant effect"
+      },
+      {
+        "id": "AFH.2.4.2.w.5",
+        "text": "Increased engine power"
+      },
+      {
+        "id": "AFH.2.4.2.w.6",
+        "text": "Reduced engine wear"
+      },
+      {
+        "id": "AFH.2.4.2.w.7",
+        "text": "Lower noise levels"
+      },
+      {
+        "id": "AFH.2.4.2.w.8",
+        "text": "Decreased vibration"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Fuel and Oil"
+    ]
+  },
+  {
+    "questionid": "AFH.2.4.3",
+    "question": "What is the consequence of using fuel of a lower grade than required?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.4.3.c.1",
+        "text": "Detonation can severely damage the engine"
+      },
+      {
+        "id": "AFH.2.4.3.c.2",
+        "text": "While there are various formulations of aviation gasoline (AVGAS), only three grades are conventional: 80/87, 100LL, and 100/130."
+      },
+      {
+        "id": "AFH.2.4.3.c.3",
+        "text": "100LL is the most widely available in the United States."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.4.3.w.1",
+        "text": "Increased fuel efficiency"
+      },
+      {
+        "id": "AFH.2.4.3.w.2",
+        "text": "Reduced engine wear"
+      },
+      {
+        "id": "AFH.2.4.3.w.3",
+        "text": "Enhanced engine performance"
+      },
+      {
+        "id": "AFH.2.4.3.w.4",
+        "text": "No significant effect"
+      },
+      {
+        "id": "AFH.2.4.3.w.5",
+        "text": "Lower fuel consumption"
+      },
+      {
+        "id": "AFH.2.4.3.w.6",
+        "text": "Decreased engine noise"
+      },
+      {
+        "id": "AFH.2.4.3.w.7",
+        "text": "Improved engine cooling"
+      },
+      {
+        "id": "AFH.2.4.3.w.8",
+        "text": "Reduced exhaust emissions"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Fuel and Oil"
+    ]
+  },
+  {
+    "questionid": "AFH.2.4.4",
+    "question": "How can 100LL AVGAS be identified?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.4.4.c.1",
+        "text": "By holding a fuel sample against a white background in reasonable white lighting"
+      },
+      {
+        "id": "AFH.2.4.4.c.2",
+        "text": "While there are various formulations of aviation gasoline (AVGAS), only three grades are conventional: 80/87, 100LL, and 100/130."
+      },
+      {
+        "id": "AFH.2.4.4.c.3",
+        "text": "100LL is the most widely available in the United States."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.4.4.w.1",
+        "text": "By its distinctive odor"
+      },
+      {
+        "id": "AFH.2.4.4.w.2",
+        "text": "By its texture"
+      },
+      {
+        "id": "AFH.2.4.4.w.3",
+        "text": "By its clear color"
+      },
+      {
+        "id": "AFH.2.4.4.w.4",
+        "text": "By its green dye"
+      },
+      {
+        "id": "AFH.2.4.4.w.5",
+        "text": "By its red dye"
+      },
+      {
+        "id": "AFH.2.4.4.w.6",
+        "text": "In any lighting condition"
+      },
+      {
+        "id": "AFH.2.4.4.w.7",
+        "text": "Without a background"
+      },
+      {
+        "id": "AFH.2.4.4.w.8",
+        "text": "By its viscosity"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Fuel and Oil"
+    ]
+  },
+  {
+    "questionid": "AFH.2.4.5",
+    "question": "What is the appearance of jet fuel?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.4.5.c.1",
+        "text": "Clear or straw-colored"
+      },
+      {
+        "id": "AFH.2.4.5.c.2",
+        "text": "While there are various formulations of aviation gasoline (AVGAS), only three grades are conventional: 80/87, 100LL, and 100/130."
+      },
+      {
+        "id": "AFH.2.4.5.c.3",
+        "text": "100LL is the most widely available in the United States."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.4.5.w.1",
+        "text": "Red"
+      },
+      {
+        "id": "AFH.2.4.5.w.2",
+        "text": "Blue"
+      },
+      {
+        "id": "AFH.2.4.5.w.3",
+        "text": "Green"
+      },
+      {
+        "id": "AFH.2.4.5.w.4",
+        "text": "Black"
+      },
+      {
+        "id": "AFH.2.4.5.w.5",
+        "text": "Orange"
+      },
+      {
+        "id": "AFH.2.4.5.w.6",
+        "text": "Purple"
+      },
+      {
+        "id": "AFH.2.4.5.w.7",
+        "text": "Pink"
+      },
+      {
+        "id": "AFH.2.4.5.w.8",
+        "text": "Brown"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Fuel and Oil"
+    ]
+  },
+  {
+    "questionid": "AFH.2.4.6",
+    "question": "What is the primary characteristic of detonation in an engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.4.6.c.1",
+        "text": "The fuel/air charge explodes rather than burns smoothly"
+      },
+      {
+        "id": "AFH.2.4.6.c.2",
+        "text": "While there are various formulations of aviation gasoline (AVGAS), only three grades are conventional: 80/87, 100LL, and 100/130."
+      },
+      {
+        "id": "AFH.2.4.6.c.3",
+        "text": "100LL is the most widely available in the United States."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.4.6.w.1",
+        "text": "The engine operates more quietly"
+      },
+      {
+        "id": "AFH.2.4.6.w.2",
+        "text": "Fuel efficiency increases"
+      },
+      {
+        "id": "AFH.2.4.6.w.3",
+        "text": "The engine cools down"
+      },
+      {
+        "id": "AFH.2.4.6.w.4",
+        "text": "Reduced engine vibration"
+      },
+      {
+        "id": "AFH.2.4.6.w.5",
+        "text": "Lower cylinder head temperatures"
+      },
+      {
+        "id": "AFH.2.4.6.w.6",
+        "text": "Increased power output"
+      },
+      {
+        "id": "AFH.2.4.6.w.7",
+        "text": "Smooth engine operation"
+      },
+      {
+        "id": "AFH.2.4.6.w.8",
+        "text": "Enhanced fuel/air mixture"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Fuel and Oil"
+    ]
+  },
+  {
+    "questionid": "AFH.2.4.7",
+    "question": "How are jet fuel filler nozzles designed to prevent misfueling?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.4.7.c.1",
+        "text": "Flared at the end"
+      },
+      {
+        "id": "AFH.2.4.7.c.2",
+        "text": "While there are various formulations of aviation gasoline (AVGAS), only three grades are conventional: 80/87, 100LL, and 100/130."
+      },
+      {
+        "id": "AFH.2.4.7.c.3",
+        "text": "100LL is the most widely available in the United States."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.4.7.w.1",
+        "text": "Straight with a constant diameter"
+      },
+      {
+        "id": "AFH.2.4.7.w.2",
+        "text": "Colored red"
+      },
+      {
+        "id": "AFH.2.4.7.w.3",
+        "text": "Equipped with a locking mechanism"
+      },
+      {
+        "id": "AFH.2.4.7.w.4",
+        "text": "Shorter than AVGAS nozzles"
+      },
+      {
+        "id": "AFH.2.4.7.w.5",
+        "text": "Longer than AVGAS nozzles"
+      },
+      {
+        "id": "AFH.2.4.7.w.6",
+        "text": "Marked with JET-A in red"
+      },
+      {
+        "id": "AFH.2.4.7.w.7",
+        "text": "Equipped with a digital display"
+      },
+      {
+        "id": "AFH.2.4.7.w.8",
+        "text": "Made from lightweight material"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Fuel and Oil"
+    ]
+  },
+  {
+    "questionid": "AFH.2.5.1",
+    "question": "What should a pilot inspect on the landing gear struts to ensure they are ready for operation?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.5.1.c.1",
+        "text": "Proper inflation"
+      },
+      {
+        "id": "AFH.2.5.1.c.2",
+        "text": "Cleanliness"
+      },
+      {
+        "id": "AFH.2.5.1.c.3",
+        "text": "Free from hydraulic fluid"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.5.1.w.1",
+        "text": "Paint condition"
+      },
+      {
+        "id": "AFH.2.5.1.w.2",
+        "text": "Color consistency"
+      },
+      {
+        "id": "AFH.2.5.1.w.3",
+        "text": "Lubrication level"
+      },
+      {
+        "id": "AFH.2.5.1.w.4",
+        "text": "Temperature"
+      },
+      {
+        "id": "AFH.2.5.1.w.5",
+        "text": "Electrical wiring condition"
+      },
+      {
+        "id": "AFH.2.5.1.w.6",
+        "text": "Presence of decals"
+      },
+      {
+        "id": "AFH.2.5.1.w.7",
+        "text": "Structural modifications"
+      },
+      {
+        "id": "AFH.2.5.1.w.8",
+        "text": "Adjustment of lighting"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Landing Gear, Tires, and Brakes"
+    ]
+  },
+  {
+    "questionid": "AFH.2.5.2",
+    "question": "What are indicators of an unairworthy tire during an inspection?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.5.2.c.1",
+        "text": "Sidewall cracks"
+      },
+      {
+        "id": "AFH.2.5.2.c.2",
+        "text": "Cuts"
+      },
+      {
+        "id": "AFH.2.5.2.c.3",
+        "text": "Visible cords"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.5.2.w.1",
+        "text": "Tire brand"
+      },
+      {
+        "id": "AFH.2.5.2.w.2",
+        "text": "Color fading"
+      },
+      {
+        "id": "AFH.2.5.2.w.3",
+        "text": "Surface temperature"
+      },
+      {
+        "id": "AFH.2.5.2.w.4",
+        "text": "Tread design"
+      },
+      {
+        "id": "AFH.2.5.2.w.5",
+        "text": "Manufacture date"
+      },
+      {
+        "id": "AFH.2.5.2.w.6",
+        "text": "Tire pressure slightly above recommendation"
+      },
+      {
+        "id": "AFH.2.5.2.w.7",
+        "text": "Presence of wheel pants"
+      },
+      {
+        "id": "AFH.2.5.2.w.8",
+        "text": "Tire size"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Landing Gear, Tires, and Brakes"
+    ]
+  },
+  {
+    "questionid": "AFH.2.6.1",
+    "question": "What should a pilot inspect on the propeller during pre-flight checks?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.6.1.c.1",
+        "text": "Blade erosion"
+      },
+      {
+        "id": "AFH.2.6.1.c.2",
+        "text": "Nicks and cracks"
+      },
+      {
+        "id": "AFH.2.6.1.c.3",
+        "text": "Security of the propeller"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.6.1.w.1",
+        "text": "Tire pressure"
+      },
+      {
+        "id": "AFH.2.6.1.w.2",
+        "text": "Fuel gauge accuracy"
+      },
+      {
+        "id": "AFH.2.6.1.w.3",
+        "text": "Cockpit lighting functionality"
+      },
+      {
+        "id": "AFH.2.6.1.w.4",
+        "text": "Seatbelt condition"
+      },
+      {
+        "id": "AFH.2.6.1.w.5",
+        "text": "Windshield clarity"
+      },
+      {
+        "id": "AFH.2.6.1.w.6",
+        "text": "Aileron responsiveness"
+      },
+      {
+        "id": "AFH.2.6.1.w.7",
+        "text": "Flap extension range"
+      },
+      {
+        "id": "AFH.2.6.1.w.8",
+        "text": "Elevator trim setting"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Engine and Propeller"
+    ]
+  },
+  {
+    "questionid": "AFH.2.7.1",
+    "question": "What is the fundamental cornerstone to risk and resource management in aviation according to the National Transportation Safety Board (NTSB)?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.7.1.c.1",
+        "text": "Reduction of pilot failures"
+      },
+      {
+        "id": "AFH.2.7.1.c.2",
+        "text": "Conscious effort in managing risks"
+      },
+      {
+        "id": "AFH.2.7.1.c.3",
+        "text": "Leveraging resources to maximize flight success"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.7.1.w.1",
+        "text": "Improving stick and rudder skills"
+      },
+      {
+        "id": "AFH.2.7.1.w.2",
+        "text": "Routine maintenance checks"
+      },
+      {
+        "id": "AFH.2.7.1.w.3",
+        "text": "Adhering strictly to flight schedules"
+      },
+      {
+        "id": "AFH.2.7.1.w.4",
+        "text": "Avoiding adverse weather conditions"
+      },
+      {
+        "id": "AFH.2.7.1.w.5",
+        "text": "Relying on autopilot systems"
+      },
+      {
+        "id": "AFH.2.7.1.w.6",
+        "text": "Frequent pilot training programs"
+      },
+      {
+        "id": "AFH.2.7.1.w.7",
+        "text": "Using advanced navigation equipment"
+      },
+      {
+        "id": "AFH.2.7.1.w.8",
+        "text": "Implementing stricter aviation laws"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Risk and Resource Management"
+    ]
+  },
+  {
+    "questionid": "AFH.2.8.1",
+    "question": "Which of the following are examples of hazards in aviation risk management?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.8.1.c.1",
+        "text": "Marginal weather or environmental conditions"
+      },
+      {
+        "id": "AFH.2.8.1.c.2",
+        "text": "Lack of pilot qualification"
+      },
+      {
+        "id": "AFH.2.8.1.c.3",
+        "text": "Lack of pilot currency or proficiency for the intended flight"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.8.1.w.1",
+        "text": "Aircraft color"
+      },
+      {
+        "id": "AFH.2.8.1.w.2",
+        "text": "Flight duration"
+      },
+      {
+        "id": "AFH.2.8.1.w.3",
+        "text": "Type of airspace"
+      },
+      {
+        "id": "AFH.2.8.1.w.4",
+        "text": "Aircraft manufacturer"
+      },
+      {
+        "id": "AFH.2.8.1.w.5",
+        "text": "Pilot's age"
+      },
+      {
+        "id": "AFH.2.8.1.w.6",
+        "text": "Time of day"
+      },
+      {
+        "id": "AFH.2.8.1.w.7",
+        "text": "Airport elevation"
+      },
+      {
+        "id": "AFH.2.8.1.w.8",
+        "text": "Number of passengers"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction, Risk Management",
+    "subjects": [
+      "Risk Management"
+    ]
+  },
+  {
+    "questionid": "AFH.2.9.1",
+    "question": "Which of the following are identified hazards in the risk management process according to the Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.9.1.c.1",
+        "text": "Marginal weather or environmental conditions"
+      },
+      {
+        "id": "AFH.2.9.1.c.2",
+        "text": "Lack of pilot training"
+      },
+      {
+        "id": "AFH.2.9.1.c.3",
+        "text": "Requiring airplane performance that is unavailable"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.9.1.w.1",
+        "text": "Inadequate fuel supply"
+      },
+      {
+        "id": "AFH.2.9.1.w.2",
+        "text": "Faulty navigation equipment"
+      },
+      {
+        "id": "AFH.2.9.1.w.3",
+        "text": "Overloaded aircraft"
+      },
+      {
+        "id": "AFH.2.9.1.w.4",
+        "text": "Poor runway conditions"
+      },
+      {
+        "id": "AFH.2.9.1.w.5",
+        "text": "Mechanical failures"
+      },
+      {
+        "id": "AFH.2.9.1.w.6",
+        "text": "Distractions in the cockpit"
+      },
+      {
+        "id": "AFH.2.9.1.w.7",
+        "text": "Inadequate pre-flight inspection"
+      },
+      {
+        "id": "AFH.2.9.1.w.8",
+        "text": "Unfamiliarity with the airspace"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Identifying the Hazard"
+    ]
+  },
+  {
+    "questionid": "AFH.2.10.1",
+    "question": "What are potential risks during ground operations if hazards are not properly controlled or eliminated?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.10.1.c.1",
+        "text": "Inadvertent instrument conditions due to unassessed weather or environmental conditions"
+      },
+      {
+        "id": "AFH.2.10.1.c.2",
+        "text": "Loss of airplane control"
+      },
+      {
+        "id": "AFH.2.10.1.c.3",
+        "text": "Exceeding the pilot’s stick-and-rudder capability due to lack of training"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.10.1.w.1",
+        "text": "Increased fuel efficiency"
+      },
+      {
+        "id": "AFH.2.10.1.w.2",
+        "text": "Automatic deployment of landing gear"
+      },
+      {
+        "id": "AFH.2.10.1.w.3",
+        "text": "Enhanced communication with air traffic control"
+      },
+      {
+        "id": "AFH.2.10.1.w.4",
+        "text": "Decreased runway usage time"
+      },
+      {
+        "id": "AFH.2.10.1.w.5",
+        "text": "Improved visibility in adverse conditions"
+      },
+      {
+        "id": "AFH.2.10.1.w.6",
+        "text": "Automatic adjustment of flight controls"
+      },
+      {
+        "id": "AFH.2.10.1.w.7",
+        "text": "Reduction in air traffic"
+      },
+      {
+        "id": "AFH.2.10.1.w.8",
+        "text": "Increased aircraft durability"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Risk"
+    ]
+  },
+  {
+    "questionid": "AFH.2.11.1",
+    "question": "What are the two defining elements of risk management in aviation according to the Airplane Flying Handbook?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.11.1.c.1",
+        "text": "Hazard"
+      },
+      {
+        "id": "AFH.2.11.1.c.2",
+        "text": "Risk"
+      },
+      {
+        "id": "AFH.2.11.1.c.3",
+        "text": "Risk assessment"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.11.1.w.1",
+        "text": "Weather conditions"
+      },
+      {
+        "id": "AFH.2.11.1.w.2",
+        "text": "Flight plan"
+      },
+      {
+        "id": "AFH.2.11.1.w.3",
+        "text": "Pilot experience"
+      },
+      {
+        "id": "AFH.2.11.1.w.4",
+        "text": "Aircraft condition"
+      },
+      {
+        "id": "AFH.2.11.1.w.5",
+        "text": "Flight duration"
+      },
+      {
+        "id": "AFH.2.11.1.w.6",
+        "text": "Air traffic"
+      },
+      {
+        "id": "AFH.2.11.1.w.7",
+        "text": "Fuel quantity"
+      },
+      {
+        "id": "AFH.2.11.1.w.8",
+        "text": "Maintenance status"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction, Risk Assessment",
+    "subjects": [
+      "Risk Management"
+    ]
+  },
+  {
+    "questionid": "AFH.2.12.1",
+    "question": "What is key to preventing risk and accidents in aviation according to the Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.12.1.c.1",
+        "text": "Identifying hazards and associated risk"
+      },
+      {
+        "id": "AFH.2.12.1.c.2",
+        "text": "Use of standard procedures"
+      },
+      {
+        "id": "AFH.2.12.1.c.3",
+        "text": "Searching for risk"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.12.1.w.1",
+        "text": "Relying solely on experience"
+      },
+      {
+        "id": "AFH.2.12.1.w.2",
+        "text": "Ignoring small errors in judgment"
+      },
+      {
+        "id": "AFH.2.12.1.w.3",
+        "text": "Assuming risks are negligible"
+      },
+      {
+        "id": "AFH.2.12.1.w.4",
+        "text": "Learning from fatal mistakes only"
+      },
+      {
+        "id": "AFH.2.12.1.w.5",
+        "text": "Avoiding the use of checklists"
+      },
+      {
+        "id": "AFH.2.12.1.w.6",
+        "text": "Not consulting the Risk Management Handbook"
+      },
+      {
+        "id": "AFH.2.12.1.w.7",
+        "text": "Assuming all risks are visible"
+      },
+      {
+        "id": "AFH.2.12.1.w.8",
+        "text": "Depending on technology to identify risks"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Risk Identification"
+    ]
+  },
+  {
+    "questionid": "AFH.2.13.1",
+    "question": "Which of the following are valid ways for a VFR pilot to mitigate risk when flying from point A to point B (50 miles) in marginal flight conditions according to the Airplane Flying Handbook?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.13.1.c.1",
+        "text": "Wait for the weather to improve to good VFR conditions."
+      },
+      {
+        "id": "AFH.2.13.1.c.2",
+        "text": "Take a pilot who is more experienced or who is certified as an IFR pilot."
+      },
+      {
+        "id": "AFH.2.13.1.c.3",
+        "text": "Cancel the flight."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.13.1.w.1",
+        "text": "Increase altitude to avoid weather."
+      },
+      {
+        "id": "AFH.2.13.1.w.2",
+        "text": "Fly at night to avoid traffic."
+      },
+      {
+        "id": "AFH.2.13.1.w.3",
+        "text": "Use autopilot for better control."
+      },
+      {
+        "id": "AFH.2.13.1.w.4",
+        "text": "Rely solely on GPS navigation for the route."
+      },
+      {
+        "id": "AFH.2.13.1.w.5",
+        "text": "Fly below the clouds to maintain visual contact with the ground."
+      },
+      {
+        "id": "AFH.2.13.1.w.6",
+        "text": "Contact ATC for a direct route."
+      },
+      {
+        "id": "AFH.2.13.1.w.7",
+        "text": "Use a larger aircraft for more stability."
+      },
+      {
+        "id": "AFH.2.13.1.w.8",
+        "text": "Plan a route with more airports along the way."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction, Risk Mitigation",
+    "subjects": [
+      "Risk Mitigation"
+    ]
+  },
+  {
+    "questionid": "AFH.2.14.1",
+    "question": "Which of the following are integrated components of Single-Pilot Resource Management (SRM)?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.14.1.c.1",
+        "text": "Situational Awareness"
+      },
+      {
+        "id": "AFH.2.14.1.c.2",
+        "text": "Human Resource Management"
+      },
+      {
+        "id": "AFH.2.14.1.c.3",
+        "text": "Aeronautical Decision-making (ADM)"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.14.1.w.1",
+        "text": "Cockpit Resource Management"
+      },
+      {
+        "id": "AFH.2.14.1.w.2",
+        "text": "Weather Prediction Techniques"
+      },
+      {
+        "id": "AFH.2.14.1.w.3",
+        "text": "Advanced Navigation Systems"
+      },
+      {
+        "id": "AFH.2.14.1.w.4",
+        "text": "Flight Control Automation"
+      },
+      {
+        "id": "AFH.2.14.1.w.5",
+        "text": "Emergency Response Planning"
+      },
+      {
+        "id": "AFH.2.14.1.w.6",
+        "text": "Fuel Economy Strategies"
+      },
+      {
+        "id": "AFH.2.14.1.w.7",
+        "text": "Crosswind Landing Techniques"
+      },
+      {
+        "id": "AFH.2.14.1.w.8",
+        "text": "Aircraft Maintenance Scheduling"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Resource Management"
+    ]
+  },
+  {
+    "questionid": "AFH.2.15.1",
+    "question": "What are the key factors that affect situational awareness during flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.15.1.c.1",
+        "text": "Operational factors"
+      },
+      {
+        "id": "AFH.2.15.1.c.2",
+        "text": "Environmental factors"
+      },
+      {
+        "id": "AFH.2.15.1.c.3",
+        "text": "Pilot's awareness"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.15.1.w.1",
+        "text": "Aircraft color"
+      },
+      {
+        "id": "AFH.2.15.1.w.2",
+        "text": "Time of day"
+      },
+      {
+        "id": "AFH.2.15.1.w.3",
+        "text": "Type of airspace"
+      },
+      {
+        "id": "AFH.2.15.1.w.4",
+        "text": "Flight duration"
+      },
+      {
+        "id": "AFH.2.15.1.w.5",
+        "text": "Aircraft size"
+      },
+      {
+        "id": "AFH.2.15.1.w.6",
+        "text": "Number of passengers"
+      },
+      {
+        "id": "AFH.2.15.1.w.7",
+        "text": "Fuel quantity"
+      },
+      {
+        "id": "AFH.2.15.1.w.8",
+        "text": "Engine type"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction, Situational Awareness",
+    "subjects": [
+      "Situational Awareness"
+    ]
+  },
+  {
+    "questionid": "AFH.2.16.1",
+    "question": "Which of the following are key components of the communication process as outlined in the Airplane Flying Handbook for effective human resource management during ground operations?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.16.1.c.1",
+        "text": "Inquiry"
+      },
+      {
+        "id": "AFH.2.16.1.c.2",
+        "text": "Advocacy"
+      },
+      {
+        "id": "AFH.2.16.1.c.3",
+        "text": "Assertion"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.16.1.w.1",
+        "text": "Delegation"
+      },
+      {
+        "id": "AFH.2.16.1.w.2",
+        "text": "Feedback"
+      },
+      {
+        "id": "AFH.2.16.1.w.3",
+        "text": "Negotiation"
+      },
+      {
+        "id": "AFH.2.16.1.w.4",
+        "text": "Confirmation"
+      },
+      {
+        "id": "AFH.2.16.1.w.5",
+        "text": "Simplification"
+      },
+      {
+        "id": "AFH.2.16.1.w.6",
+        "text": "Evaluation"
+      },
+      {
+        "id": "AFH.2.16.1.w.7",
+        "text": "Interrogation"
+      },
+      {
+        "id": "AFH.2.16.1.w.8",
+        "text": "Documentation"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Human Resource Management"
+    ]
+  },
+  {
+    "questionid": "AFH.2.17.1",
+    "question": "What factors can impede a pilot's ability to process information according to the Airplane Flying Handbook?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.17.1.c.1",
+        "text": "Distraction"
+      },
+      {
+        "id": "AFH.2.17.1.c.2",
+        "text": "Fixation"
+      },
+      {
+        "id": "AFH.2.17.1.c.3",
+        "text": "Exceeding information processing capacity"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.17.1.w.1",
+        "text": "Fatigue"
+      },
+      {
+        "id": "AFH.2.17.1.w.2",
+        "text": "Weather conditions"
+      },
+      {
+        "id": "AFH.2.17.1.w.3",
+        "text": "Mechanical failure"
+      },
+      {
+        "id": "AFH.2.17.1.w.4",
+        "text": "Altitude"
+      },
+      {
+        "id": "AFH.2.17.1.w.5",
+        "text": "Speed"
+      },
+      {
+        "id": "AFH.2.17.1.w.6",
+        "text": "Visual illusions"
+      },
+      {
+        "id": "AFH.2.17.1.w.7",
+        "text": "Lack of experience"
+      },
+      {
+        "id": "AFH.2.17.1.w.8",
+        "text": "Over-reliance on automation"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction, Task Management",
+    "subjects": [
+      "Human Factors"
+    ]
+  },
+  {
+    "questionid": "AFH.2.18.1",
+    "question": "Which of the following are steps involved in the Aeronautical Decision-Making (ADM) process?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.18.1.c.1",
+        "text": "Identifying personal attitudes hazardous to safe flight"
+      },
+      {
+        "id": "AFH.2.18.1.c.2",
+        "text": "Developing risk assessment skills"
+      },
+      {
+        "id": "AFH.2.18.1.c.3",
+        "text": "Using all resources"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.18.1.w.1",
+        "text": "Memorizing all aircraft system manuals"
+      },
+      {
+        "id": "AFH.2.18.1.w.2",
+        "text": "Following air traffic control instructions without question"
+      },
+      {
+        "id": "AFH.2.18.1.w.3",
+        "text": "Ignoring weather reports to maintain schedule"
+      },
+      {
+        "id": "AFH.2.18.1.w.4",
+        "text": "Relying solely on autopilot for navigation"
+      },
+      {
+        "id": "AFH.2.18.1.w.5",
+        "text": "Skipping pre-flight checks to save time"
+      },
+      {
+        "id": "AFH.2.18.1.w.6",
+        "text": "Assuming all airport facilities operate identically"
+      },
+      {
+        "id": "AFH.2.18.1.w.7",
+        "text": "Disregarding minor mechanical issues"
+      },
+      {
+        "id": "AFH.2.18.1.w.8",
+        "text": "Not consulting with co-pilots or crew on decisions"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction, Aeronautical Decision-Making (ADM)",
+    "subjects": [
+      "Aeronautical Decision-Making"
+    ]
+  },
+  {
+    "questionid": "AFH.2.19.1",
+    "question": "What are key considerations for a pilot during ground operations at an airport?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.19.1.c.1",
+        "text": "Refueling operations"
+      },
+      {
+        "id": "AFH.2.19.1.c.2",
+        "text": "Passenger and baggage security and loading"
+      },
+      {
+        "id": "AFH.2.19.1.c.3",
+        "text": "Ramp and taxi operations"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.19.1.w.1",
+        "text": "Aircraft maintenance scheduling"
+      },
+      {
+        "id": "AFH.2.19.1.w.2",
+        "text": "In-flight meal preparation"
+      },
+      {
+        "id": "AFH.2.19.1.w.3",
+        "text": "Weather forecasting for the entire route"
+      },
+      {
+        "id": "AFH.2.19.1.w.4",
+        "text": "Pilot rest periods before flight"
+      },
+      {
+        "id": "AFH.2.19.1.w.5",
+        "text": "Aircraft painting and branding"
+      },
+      {
+        "id": "AFH.2.19.1.w.6",
+        "text": "Flight plan filing with ATC"
+      },
+      {
+        "id": "AFH.2.19.1.w.7",
+        "text": "Cabin crew briefing"
+      },
+      {
+        "id": "AFH.2.19.1.w.8",
+        "text": "Aircraft de-icing procedures"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Ground Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.2.20.1",
+    "question": "What should a pilot do before engaging the starter to start the engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.20.1.c.1",
+        "text": "Turn on the anti-collision lights"
+      },
+      {
+        "id": "AFH.2.20.1.c.2",
+        "text": "Depress the wheel brakes"
+      },
+      {
+        "id": "AFH.2.20.1.c.3",
+        "text": "Call \"CLEAR\" out of the side window and wait for a response"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.20.1.w.1",
+        "text": "Turn on the cabin lights"
+      },
+      {
+        "id": "AFH.2.20.1.w.2",
+        "text": "Increase throttle to full"
+      },
+      {
+        "id": "AFH.2.20.1.w.3",
+        "text": "Check the fuel gauge for quantity"
+      },
+      {
+        "id": "AFH.2.20.1.w.4",
+        "text": "Adjust the seat and seatbelts"
+      },
+      {
+        "id": "AFH.2.20.1.w.5",
+        "text": "Set the flaps to takeoff position"
+      },
+      {
+        "id": "AFH.2.20.1.w.6",
+        "text": "Engage the autopilot"
+      },
+      {
+        "id": "AFH.2.20.1.w.7",
+        "text": "Turn on the transponder"
+      },
+      {
+        "id": "AFH.2.20.1.w.8",
+        "text": "Activate the pitot heat"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Engine Starting"
+    ]
+  },
+  {
+    "questionid": "AFH.2.20.2",
+    "question": "What are the recommended actions immediately after starting the engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.20.2.c.1",
+        "text": "Manipulate the throttle to set the engine rpm"
+      },
+      {
+        "id": "AFH.2.20.2.c.2",
+        "text": "Monitor the oil pressure"
+      },
+      {
+        "id": "AFH.2.20.2.c.3",
+        "text": "Service the engine with the proper grade of oil"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.20.2.w.1",
+        "text": "Turn off the anti-collision lights"
+      },
+      {
+        "id": "AFH.2.20.2.w.2",
+        "text": "Set the transponder to standby"
+      },
+      {
+        "id": "AFH.2.20.2.w.3",
+        "text": "Engage the autopilot for taxi"
+      },
+      {
+        "id": "AFH.2.20.2.w.4",
+        "text": "Check the GPS for the route"
+      },
+      {
+        "id": "AFH.2.20.2.w.5",
+        "text": "Adjust the cockpit lighting"
+      },
+      {
+        "id": "AFH.2.20.2.w.6",
+        "text": "Select the desired radio frequency"
+      },
+      {
+        "id": "AFH.2.20.2.w.7",
+        "text": "Program the flight management system"
+      },
+      {
+        "id": "AFH.2.20.2.w.8",
+        "text": "Activate the de-icing system"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Engine Starting"
+    ]
+  },
+  {
+    "questionid": "AFH.2.20.3",
+    "question": "What hazards should be mitigated before starting the engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.20.3.c.1",
+        "text": "Ensure the ramp area is clear of persons and equipment"
+      },
+      {
+        "id": "AFH.2.20.3.c.2",
+        "text": "Check what is behind the airplane"
+      },
+      {
+        "id": "AFH.2.20.3.c.3",
+        "text": "Mitigate the hazard of debris being blown into persons or property"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.20.3.w.1",
+        "text": "Ensure all passengers are seated with seatbelts fastened"
+      },
+      {
+        "id": "AFH.2.20.3.w.2",
+        "text": "Check the weather forecast for the departure area"
+      },
+      {
+        "id": "AFH.2.20.3.w.3",
+        "text": "Verify the flight plan with air traffic control"
+      },
+      {
+        "id": "AFH.2.20.3.w.4",
+        "text": "Confirm the emergency equipment is on board"
+      },
+      {
+        "id": "AFH.2.20.3.w.5",
+        "text": "Ensure the cabin door is locked"
+      },
+      {
+        "id": "AFH.2.20.3.w.6",
+        "text": "Check the fuel quality"
+      },
+      {
+        "id": "AFH.2.20.3.w.7",
+        "text": "Verify the aircraft's weight and balance"
+      },
+      {
+        "id": "AFH.2.20.3.w.8",
+        "text": "Inspect the cockpit for loose items"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Engine Starting"
+    ]
+  },
+  {
+    "questionid": "AFH.2.21.1",
+    "question": "What should always be assumed about the ignition when touching a propeller during hand propping?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.21.1.c.1",
+        "text": "Always assume the ignition is on"
+      },
+      {
+        "id": "AFH.2.21.1.c.2",
+        "text": "The ignition could be faulty and still allow current to flow"
+      },
+      {
+        "id": "AFH.2.21.1.c.3",
+        "text": "The ignition switch might not properly short-circuit the current"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.21.1.w.1",
+        "text": "The ignition is safe to touch if the switch is off"
+      },
+      {
+        "id": "AFH.2.21.1.w.2",
+        "text": "The ignition automatically turns off when the propeller is touched"
+      },
+      {
+        "id": "AFH.2.21.1.w.3",
+        "text": "Assume the ignition is off for safety"
+      },
+      {
+        "id": "AFH.2.21.1.w.4",
+        "text": "The ignition can only be activated from the cockpit"
+      },
+      {
+        "id": "AFH.2.21.1.w.5",
+        "text": "The ignition switch is fail-proof"
+      },
+      {
+        "id": "AFH.2.21.1.w.6",
+        "text": "The magneto circuit is disconnected when the engine is off"
+      },
+      {
+        "id": "AFH.2.21.1.w.7",
+        "text": "The ignition system is not connected to the propeller"
+      },
+      {
+        "id": "AFH.2.21.1.w.8",
+        "text": "Assuming the ignition is on is only for vintage airplanes"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Hand Propping"
+    ]
+  },
+  {
+    "questionid": "AFH.2.21.2",
+    "question": "Who should never occupy the pilot’s seat during hand propping?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.21.2.c.1",
+        "text": "A person unfamiliar with the controls"
+      },
+      {
+        "id": "AFH.2.21.2.c.2",
+        "text": "Someone not trained in hand propping techniques"
+      },
+      {
+        "id": "AFH.2.21.2.c.3",
+        "text": "An individual who does not understand the procedure"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.21.2.w.1",
+        "text": "A certified Aviation Maintenance Technician"
+      },
+      {
+        "id": "AFH.2.21.2.w.2",
+        "text": "The person directing the hand propping procedure"
+      },
+      {
+        "id": "AFH.2.21.2.w.3",
+        "text": "A bystander"
+      },
+      {
+        "id": "AFH.2.21.2.w.4",
+        "text": "Someone familiar with the airplane"
+      },
+      {
+        "id": "AFH.2.21.2.w.5",
+        "text": "A person who has read the AFM/POH"
+      },
+      {
+        "id": "AFH.2.21.2.w.6",
+        "text": "An experienced pilot"
+      },
+      {
+        "id": "AFH.2.21.2.w.7",
+        "text": "The owner of the airplane"
+      },
+      {
+        "id": "AFH.2.21.2.w.8",
+        "text": "A person wearing protective gear"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Hand Propping"
+    ]
+  },
+  {
+    "questionid": "AFH.2.21.3",
+    "question": "What conditions should the ground surface near the propeller meet for safe hand propping?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.21.3.c.1",
+        "text": "Stable"
+      },
+      {
+        "id": "AFH.2.21.3.c.2",
+        "text": "Free of debris"
+      },
+      {
+        "id": "AFH.2.21.3.c.3",
+        "text": "Firm footing available"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.21.3.w.1",
+        "text": "Slightly inclined for drainage"
+      },
+      {
+        "id": "AFH.2.21.3.w.2",
+        "text": "Covered in soft grass to cushion falls"
+      },
+      {
+        "id": "AFH.2.21.3.w.3",
+        "text": "Wet to cool the engine faster"
+      },
+      {
+        "id": "AFH.2.21.3.w.4",
+        "text": "Covered in loose gravel for traction"
+      },
+      {
+        "id": "AFH.2.21.3.w.5",
+        "text": "Icy for quick engine cool down"
+      },
+      {
+        "id": "AFH.2.21.3.w.6",
+        "text": "Muddy for historical authenticity"
+      },
+      {
+        "id": "AFH.2.21.3.w.7",
+        "text": "Greasy for mechanical realism"
+      },
+      {
+        "id": "AFH.2.21.3.w.8",
+        "text": "Snowy for emergency situations"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Hand Propping"
+    ]
+  },
+  {
+    "questionid": "AFH.2.21.4",
+    "question": "What is the role of the second person during the hand propping procedure?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.21.4.c.1",
+        "text": "Ensure that the brakes are set"
+      },
+      {
+        "id": "AFH.2.21.4.c.2",
+        "text": "Exercise controls as directed"
+      },
+      {
+        "id": "AFH.2.21.4.c.3",
+        "text": "Sit in the airplane"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.21.4.w.1",
+        "text": "Pull the propeller blades through"
+      },
+      {
+        "id": "AFH.2.21.4.w.2",
+        "text": "Direct the procedure"
+      },
+      {
+        "id": "AFH.2.21.4.w.3",
+        "text": "Stand outside to observe"
+      },
+      {
+        "id": "AFH.2.21.4.w.4",
+        "text": "Operate the fuel system controls"
+      },
+      {
+        "id": "AFH.2.21.4.w.5",
+        "text": "Check the ignition/magneto switch"
+      },
+      {
+        "id": "AFH.2.21.4.w.6",
+        "text": "Adjust the throttle"
+      },
+      {
+        "id": "AFH.2.21.4.w.7",
+        "text": "Select the appropriate tank"
+      },
+      {
+        "id": "AFH.2.21.4.w.8",
+        "text": "Monitor engine temperature"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Hand Propping"
+    ]
+  },
+  {
+    "questionid": "AFH.2.21.5",
+    "question": "What preliminary actions should be taken before beginning the hand propping procedure?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.21.5.c.1",
+        "text": "Set the fuel system and engine controls for normal start"
+      },
+      {
+        "id": "AFH.2.21.5.c.2",
+        "text": "Check the ignition/magneto switch is OFF"
+      },
+      {
+        "id": "AFH.2.21.5.c.3",
+        "text": "Agree on voice commands and expected actions"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.21.5.w.1",
+        "text": "Ensure the propeller is in the vertical position"
+      },
+      {
+        "id": "AFH.2.21.5.w.2",
+        "text": "Disconnect the battery"
+      },
+      {
+        "id": "AFH.2.21.5.w.3",
+        "text": "Remove all debris from the propeller"
+      },
+      {
+        "id": "AFH.2.21.5.w.4",
+        "text": "Warm up the engine using an external heater"
+      },
+      {
+        "id": "AFH.2.21.5.w.5",
+        "text": "Lubricate the propeller blades"
+      },
+      {
+        "id": "AFH.2.21.5.w.6",
+        "text": "Secure the airplane with wheel chocks"
+      },
+      {
+        "id": "AFH.2.21.5.w.7",
+        "text": "Open the cockpit windows for ventilation"
+      },
+      {
+        "id": "AFH.2.21.5.w.8",
+        "text": "Turn on the aircraft's navigation lights"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Hand Propping"
+    ]
+  },
+  {
+    "questionid": "AFH.2.22.1",
+    "question": "What is the primary purpose of taxiing an airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.22.1.c.1",
+        "text": "Controlled movement of the airplane under its own power while on the surface."
+      },
+      {
+        "id": "AFH.2.22.1.c.2",
+        "text": "Taxiing is the controlled movement of the airplane under its own power while on the surface."
+      },
+      {
+        "id": "AFH.2.22.1.c.3",
+        "text": "Since an airplane is moved under its own power between a parking area and the runway, the pilot needs to understand and be proficient in taxi procedures."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.22.1.w.1",
+        "text": "Transporting passengers from the terminal to the airplane."
+      },
+      {
+        "id": "AFH.2.22.1.w.2",
+        "text": "Refueling the airplane."
+      },
+      {
+        "id": "AFH.2.22.1.w.3",
+        "text": "Conducting pre-flight checks."
+      },
+      {
+        "id": "AFH.2.22.1.w.4",
+        "text": "Loading or unloading cargo."
+      },
+      {
+        "id": "AFH.2.22.1.w.5",
+        "text": "Aerial maneuvers close to the ground."
+      },
+      {
+        "id": "AFH.2.22.1.w.6",
+        "text": "Emergency evacuation procedures."
+      },
+      {
+        "id": "AFH.2.22.1.w.7",
+        "text": "Flight training exercises."
+      },
+      {
+        "id": "AFH.2.22.1.w.8",
+        "text": "Performing maintenance checks."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Taxiing"
+    ]
+  },
+  {
+    "questionid": "AFH.2.22.2",
+    "question": "What should a pilot do if unsure about clearance from an object while taxiing?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.22.2.c.1",
+        "text": "Stop the airplane and check the clearance."
+      },
+      {
+        "id": "AFH.2.22.2.c.2",
+        "text": "Taxiing is the controlled movement of the airplane under its own power while on the surface."
+      },
+      {
+        "id": "AFH.2.22.2.c.3",
+        "text": "Since an airplane is moved under its own power between a parking area and the runway, the pilot needs to understand and be proficient in taxi procedures."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.22.2.w.1",
+        "text": "Continue taxiing at a reduced speed."
+      },
+      {
+        "id": "AFH.2.22.2.w.2",
+        "text": "Increase speed to minimize time near the object."
+      },
+      {
+        "id": "AFH.2.22.2.w.3",
+        "text": "Turn off the engine and wait for instructions."
+      },
+      {
+        "id": "AFH.2.22.2.w.4",
+        "text": "Use the airplane's instruments to gauge distance."
+      },
+      {
+        "id": "AFH.2.22.2.w.5",
+        "text": "Ask passengers for guidance."
+      },
+      {
+        "id": "AFH.2.22.2.w.6",
+        "text": "Perform a quick takeoff."
+      },
+      {
+        "id": "AFH.2.22.2.w.7",
+        "text": "Rely solely on ATC instructions."
+      },
+      {
+        "id": "AFH.2.22.2.w.8",
+        "text": "Ignore the object if it seems small."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Taxiing"
+    ]
+  },
+  {
+    "questionid": "AFH.2.22.3",
+    "question": "What is a key factor in maintaining safe taxiing speed?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.22.3.c.1",
+        "text": "Ability to stop or turn where and when desired, without undue reliance on the brakes."
+      },
+      {
+        "id": "AFH.2.22.3.c.2",
+        "text": "Taxiing is the controlled movement of the airplane under its own power while on the surface."
+      },
+      {
+        "id": "AFH.2.22.3.c.3",
+        "text": "Since an airplane is moved under its own power between a parking area and the runway, the pilot needs to understand and be proficient in taxi procedures."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.22.3.w.1",
+        "text": "Maximizing speed to reduce ground time."
+      },
+      {
+        "id": "AFH.2.22.3.w.2",
+        "text": "Minimizing fuel consumption."
+      },
+      {
+        "id": "AFH.2.22.3.w.3",
+        "text": "Following closely behind another airplane."
+      },
+      {
+        "id": "AFH.2.22.3.w.4",
+        "text": "Ignoring weather conditions."
+      },
+      {
+        "id": "AFH.2.22.3.w.5",
+        "text": "Taxiing as fast as possible on empty taxiways."
+      },
+      {
+        "id": "AFH.2.22.3.w.6",
+        "text": "Using brakes frequently to control speed."
+      },
+      {
+        "id": "AFH.2.22.3.w.7",
+        "text": "Taxiing without using the throttle."
+      },
+      {
+        "id": "AFH.2.22.3.w.8",
+        "text": "Relying on visual signals only."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Taxiing"
+    ]
+  },
+  {
+    "questionid": "AFH.2.22.4",
+    "question": "How should a pilot position the aircraft on the taxiway?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.22.4.c.1",
+        "text": "Place the aircraft so the taxiway centerline stripe is under the center of the airplane fuselage."
+      },
+      {
+        "id": "AFH.2.22.4.c.2",
+        "text": "Taxiing is the controlled movement of the airplane under its own power while on the surface."
+      },
+      {
+        "id": "AFH.2.22.4.c.3",
+        "text": "Since an airplane is moved under its own power between a parking area and the runway, the pilot needs to understand and be proficient in taxi procedures."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.22.4.w.1",
+        "text": "Align the aircraft's left wing with the taxiway edge."
+      },
+      {
+        "id": "AFH.2.22.4.w.2",
+        "text": "Keep the aircraft to the right of the taxiway centerline."
+      },
+      {
+        "id": "AFH.2.22.4.w.3",
+        "text": "Taxi with the aircraft's nose wheel directly on the taxiway edge."
+      },
+      {
+        "id": "AFH.2.22.4.w.4",
+        "text": "Position the aircraft as far from the taxiway center as possible."
+      },
+      {
+        "id": "AFH.2.22.4.w.5",
+        "text": "Ignore taxiway markings when taxiing."
+      },
+      {
+        "id": "AFH.2.22.4.w.6",
+        "text": "Follow directly behind another aircraft without regard to centerline."
+      },
+      {
+        "id": "AFH.2.22.4.w.7",
+        "text": "Allow the aircraft to drift freely."
+      },
+      {
+        "id": "AFH.2.22.4.w.8",
+        "text": "Rely on ground crew for positioning."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Taxiing"
+    ]
+  },
+  {
+    "questionid": "AFH.2.22.5",
+    "question": "What should a pilot do before attempting a turn while taxiing?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.22.5.c.1",
+        "text": "Slow down."
+      },
+      {
+        "id": "AFH.2.22.5.c.2",
+        "text": "Taxiing is the controlled movement of the airplane under its own power while on the surface."
+      },
+      {
+        "id": "AFH.2.22.5.c.3",
+        "text": "Since an airplane is moved under its own power between a parking area and the runway, the pilot needs to understand and be proficient in taxi procedures."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.22.5.w.1",
+        "text": "Increase throttle."
+      },
+      {
+        "id": "AFH.2.22.5.w.2",
+        "text": "Extend flaps."
+      },
+      {
+        "id": "AFH.2.22.5.w.3",
+        "text": "Activate the aircraft's emergency lights."
+      },
+      {
+        "id": "AFH.2.22.5.w.4",
+        "text": "Turn on the landing lights."
+      },
+      {
+        "id": "AFH.2.22.5.w.5",
+        "text": "Signal to ground crew."
+      },
+      {
+        "id": "AFH.2.22.5.w.6",
+        "text": "Make a radio announcement."
+      },
+      {
+        "id": "AFH.2.22.5.w.7",
+        "text": "Ignore wind conditions."
+      },
+      {
+        "id": "AFH.2.22.5.w.8",
+        "text": "Continue at current speed."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Taxiing"
+    ]
+  },
+  {
+    "questionid": "AFH.2.22.6",
+    "question": "Why is it important for a pilot to have an airport diagram out and in view at all times during taxiing?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.22.6.c.1",
+        "text": "To be familiar with the parking, ramp, and taxi environment."
+      },
+      {
+        "id": "AFH.2.22.6.c.2",
+        "text": "Taxiing is the controlled movement of the airplane under its own power while on the surface."
+      },
+      {
+        "id": "AFH.2.22.6.c.3",
+        "text": "Since an airplane is moved under its own power between a parking area and the runway, the pilot needs to understand and be proficient in taxi procedures."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.22.6.w.1",
+        "text": "To communicate with passengers about the route."
+      },
+      {
+        "id": "AFH.2.22.6.w.2",
+        "text": "To calculate fuel consumption during taxi."
+      },
+      {
+        "id": "AFH.2.22.6.w.3",
+        "text": "For entertainment purposes."
+      },
+      {
+        "id": "AFH.2.22.6.w.4",
+        "text": "To monitor weather changes."
+      },
+      {
+        "id": "AFH.2.22.6.w.5",
+        "text": "To record taxi times for maintenance."
+      },
+      {
+        "id": "AFH.2.22.6.w.6",
+        "text": "As a requirement by air traffic control."
+      },
+      {
+        "id": "AFH.2.22.6.w.7",
+        "text": "To use as a reference in case of radio failure."
+      },
+      {
+        "id": "AFH.2.22.6.w.8",
+        "text": "To plan emergency evacuation routes."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Taxiing"
+    ]
+  },
+  {
+    "questionid": "AFH.2.22.7",
+    "question": "What is a consequence of not carefully considering and evaluating taxi instructions?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.22.7.c.1",
+        "text": "Missing one instruction or turn could generate an accident."
+      },
+      {
+        "id": "AFH.2.22.7.c.2",
+        "text": "Taxiing is the controlled movement of the airplane under its own power while on the surface."
+      },
+      {
+        "id": "AFH.2.22.7.c.3",
+        "text": "Since an airplane is moved under its own power between a parking area and the runway, the pilot needs to understand and be proficient in taxi procedures."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.22.7.w.1",
+        "text": "Increased fuel efficiency."
+      },
+      {
+        "id": "AFH.2.22.7.w.2",
+        "text": "Faster taxi times."
+      },
+      {
+        "id": "AFH.2.22.7.w.3",
+        "text": "Improved communication with ATC."
+      },
+      {
+        "id": "AFH.2.22.7.w.4",
+        "text": "Decreased wear on the aircraft's tires."
+      },
+      {
+        "id": "AFH.2.22.7.w.5",
+        "text": "Enhanced situational awareness."
+      },
+      {
+        "id": "AFH.2.22.7.w.6",
+        "text": "Reduced risk of runway incursions."
+      },
+      {
+        "id": "AFH.2.22.7.w.7",
+        "text": "Greater appreciation of airport layout."
+      },
+      {
+        "id": "AFH.2.22.7.w.8",
+        "text": "Smoother passenger experience."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Taxiing"
+    ]
+  },
+  {
+    "questionid": "AFH.2.23.1",
+    "question": "Why is it important to ensure the oil temperature reaches a minimum value before takeoff power is applied?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.23.1.c.1",
+        "text": "To avoid engine damage"
+      },
+      {
+        "id": "AFH.2.23.1.c.2",
+        "text": "To ensure proper engine lubrication"
+      },
+      {
+        "id": "AFH.2.23.1.c.3",
+        "text": "To meet AFM/POH requirements"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.23.1.w.1",
+        "text": "To increase fuel efficiency"
+      },
+      {
+        "id": "AFH.2.23.1.w.2",
+        "text": "For noise reduction"
+      },
+      {
+        "id": "AFH.2.23.1.w.3",
+        "text": "To reduce oil consumption"
+      },
+      {
+        "id": "AFH.2.23.1.w.4",
+        "text": "To improve airspeed"
+      },
+      {
+        "id": "AFH.2.23.1.w.5",
+        "text": "To decrease engine warm-up time"
+      },
+      {
+        "id": "AFH.2.23.1.w.6",
+        "text": "To enhance propeller efficiency"
+      },
+      {
+        "id": "AFH.2.23.1.w.7",
+        "text": "For environmental reasons"
+      },
+      {
+        "id": "AFH.2.23.1.w.8",
+        "text": "To reduce cockpit workload"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2",
+    "subjects": [
+      "Before-Takeoff Check"
+    ]
+  },
+  {
+    "questionid": "AFH.2.23.2",
+    "question": "What is the purpose of allowing the airplane to roll forward slightly before starting the before-takeoff check?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.23.2.c.1",
+        "text": "To ensure the nosewheel or tailwheel is aligned"
+      },
+      {
+        "id": "AFH.2.23.2.c.2",
+        "text": "To prevent undue stress on the landing gear"
+      },
+      {
+        "id": "AFH.2.23.2.c.3",
+        "text": "To verify that the brakes are functioning"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.23.2.w.1",
+        "text": "To check for flat tires"
+      },
+      {
+        "id": "AFH.2.23.2.w.2",
+        "text": "To test the ground friction"
+      },
+      {
+        "id": "AFH.2.23.2.w.3",
+        "text": "To cool down the brakes"
+      },
+      {
+        "id": "AFH.2.23.2.w.4",
+        "text": "To adjust the flaps for takeoff"
+      },
+      {
+        "id": "AFH.2.23.2.w.5",
+        "text": "To signal to ground crew"
+      },
+      {
+        "id": "AFH.2.23.2.w.6",
+        "text": "To check for runway debris"
+      },
+      {
+        "id": "AFH.2.23.2.w.7",
+        "text": "To align with the runway centerline"
+      },
+      {
+        "id": "AFH.2.23.2.w.8",
+        "text": "To prepare for a quick takeoff"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2",
+    "subjects": [
+      "Before-Takeoff Check"
+    ]
+  },
+  {
+    "questionid": "AFH.2.23.3",
+    "question": "What should be the position of the airplane during the engine run-up to minimize overheating?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.23.3.c.1",
+        "text": "Headed into the wind"
+      },
+      {
+        "id": "AFH.2.23.3.c.2",
+        "text": "On a firm surface"
+      },
+      {
+        "id": "AFH.2.23.3.c.3",
+        "text": "Clear of debris"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.23.3.w.1",
+        "text": "In a shaded area"
+      },
+      {
+        "id": "AFH.2.23.3.w.2",
+        "text": "With the tail towards the wind"
+      },
+      {
+        "id": "AFH.2.23.3.w.3",
+        "text": "On a sloped surface"
+      },
+      {
+        "id": "AFH.2.23.3.w.4",
+        "text": "Next to other aircraft"
+      },
+      {
+        "id": "AFH.2.23.3.w.5",
+        "text": "Behind buildings for windbreak"
+      },
+      {
+        "id": "AFH.2.23.3.w.6",
+        "text": "With the nosewheel elevated"
+      },
+      {
+        "id": "AFH.2.23.3.w.7",
+        "text": "In a hangar"
+      },
+      {
+        "id": "AFH.2.23.3.w.8",
+        "text": "On a wet surface"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2",
+    "subjects": [
+      "Before-Takeoff Check"
+    ]
+  },
+  {
+    "questionid": "AFH.2.23.4",
+    "question": "Which systems are checked and set during the before-takeoff check according to the AFM/POH?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.23.4.c.1",
+        "text": "Fuel System"
+      },
+      {
+        "id": "AFH.2.23.4.c.2",
+        "text": "Trim"
+      },
+      {
+        "id": "AFH.2.23.4.c.3",
+        "text": "Cowl flaps"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.23.4.w.1",
+        "text": "Landing gear position"
+      },
+      {
+        "id": "AFH.2.23.4.w.2",
+        "text": "Cabin pressure"
+      },
+      {
+        "id": "AFH.2.23.4.w.3",
+        "text": "Battery charge level"
+      },
+      {
+        "id": "AFH.2.23.4.w.4",
+        "text": "Air conditioning system"
+      },
+      {
+        "id": "AFH.2.23.4.w.5",
+        "text": "Passenger seat belts"
+      },
+      {
+        "id": "AFH.2.23.4.w.6",
+        "text": "Flight data recorder"
+      },
+      {
+        "id": "AFH.2.23.4.w.7",
+        "text": "Cockpit voice recorder"
+      },
+      {
+        "id": "AFH.2.23.4.w.8",
+        "text": "External lights"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2",
+    "subjects": [
+      "Before-Takeoff Check"
+    ]
+  },
+  {
+    "questionid": "AFH.2.23.5",
+    "question": "Why is it recommended to split attention between the inside and outside of the airplane during the before-takeoff check?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.23.5.c.1",
+        "text": "To notice if the airplane moves forward unexpectedly"
+      },
+      {
+        "id": "AFH.2.23.5.c.2",
+        "text": "To ensure the parking brake or toe brakes are holding"
+      },
+      {
+        "id": "AFH.2.23.5.c.3",
+        "text": "To maintain situational awareness"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.23.5.w.1",
+        "text": "To communicate with ground crew"
+      },
+      {
+        "id": "AFH.2.23.5.w.2",
+        "text": "To adjust for wind changes"
+      },
+      {
+        "id": "AFH.2.23.5.w.3",
+        "text": "To monitor air traffic"
+      },
+      {
+        "id": "AFH.2.23.5.w.4",
+        "text": "To check for runway incursions"
+      },
+      {
+        "id": "AFH.2.23.5.w.5",
+        "text": "To prepare for immediate takeoff"
+      },
+      {
+        "id": "AFH.2.23.5.w.6",
+        "text": "To observe weather conditions"
+      },
+      {
+        "id": "AFH.2.23.5.w.7",
+        "text": "To signal to other pilots"
+      },
+      {
+        "id": "AFH.2.23.5.w.8",
+        "text": "To watch for wildlife on the runway"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2",
+    "subjects": [
+      "Before-Takeoff Check"
+    ]
+  },
+  {
+    "questionid": "AFH.2.24.1",
+    "question": "What should a pilot verify as part of the last check before bringing the power to full takeoff power?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.24.1.c.1",
+        "text": "Doors latched and windows closed as required"
+      },
+      {
+        "id": "AFH.2.24.1.c.2",
+        "text": "Controls positioned to account for any crosswind"
+      },
+      {
+        "id": "AFH.2.24.1.c.3",
+        "text": "Engine instruments normal and in green ranges"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.24.1.w.1",
+        "text": "Fuel quantity check"
+      },
+      {
+        "id": "AFH.2.24.1.w.2",
+        "text": "Landing gear down"
+      },
+      {
+        "id": "AFH.2.24.1.w.3",
+        "text": "Autopilot engaged"
+      },
+      {
+        "id": "AFH.2.24.1.w.4",
+        "text": "Flaps fully retracted"
+      },
+      {
+        "id": "AFH.2.24.1.w.5",
+        "text": "Aircraft aligned with taxiway"
+      },
+      {
+        "id": "AFH.2.24.1.w.6",
+        "text": "Brake pressure checked"
+      },
+      {
+        "id": "AFH.2.24.1.w.7",
+        "text": "External lights off"
+      },
+      {
+        "id": "AFH.2.24.1.w.8",
+        "text": "Cabin pressure set"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Takeoff Checks"
+    ]
+  },
+  {
+    "questionid": "AFH.2.25.1",
+    "question": "What are the recommended actions during the after-landing roll according to the Airplane Flying Handbook?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.25.1.c.1",
+        "text": "Maintain airplane track over runway centerline with ailerons"
+      },
+      {
+        "id": "AFH.2.25.1.c.2",
+        "text": "Gradually slow to normal taxi speed with normal brake pressure"
+      },
+      {
+        "id": "AFH.2.25.1.c.3",
+        "text": "Perform the after-landing checklist after coming to a complete stop"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.25.1.w.1",
+        "text": "Immediately retract the flaps upon touchdown"
+      },
+      {
+        "id": "AFH.2.25.1.w.2",
+        "text": "Perform the after-landing checklist while still moving"
+      },
+      {
+        "id": "AFH.2.25.1.w.3",
+        "text": "Turn off the landing runway at high speed"
+      },
+      {
+        "id": "AFH.2.25.1.w.4",
+        "text": "Use maximum brake pressure immediately after landing"
+      },
+      {
+        "id": "AFH.2.25.1.w.5",
+        "text": "Retract the landing gear instead of the flaps"
+      },
+      {
+        "id": "AFH.2.25.1.w.6",
+        "text": "Increase speed on the runway to clear it quickly"
+      },
+      {
+        "id": "AFH.2.25.1.w.7",
+        "text": "Ignore runway centerline to expedite exit from the runway"
+      },
+      {
+        "id": "AFH.2.25.1.w.8",
+        "text": "Perform sharp turns immediately after landing to exit the runway"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "After-Landing"
+    ]
+  },
+  {
+    "questionid": "AFH.2.26.1",
+    "question": "Which of the following items should be included in the after-landing checklist according to the AFM/POH?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.26.1.c.1",
+        "text": "Flaps set to the retracted position"
+      },
+      {
+        "id": "AFH.2.26.1.c.2",
+        "text": "Fuel tanks may require switching and fuel pumps switched off"
+      },
+      {
+        "id": "AFH.2.26.1.c.3",
+        "text": "Trim reset to neutral or takeoff position"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.26.1.w.1",
+        "text": "Landing gear retracted"
+      },
+      {
+        "id": "AFH.2.26.1.w.2",
+        "text": "Autopilot engaged for taxi"
+      },
+      {
+        "id": "AFH.2.26.1.w.3",
+        "text": "Cabin pressure set for next flight"
+      },
+      {
+        "id": "AFH.2.26.1.w.4",
+        "text": "Oxygen masks stowed"
+      },
+      {
+        "id": "AFH.2.26.1.w.5",
+        "text": "Emergency lights activated"
+      },
+      {
+        "id": "AFH.2.26.1.w.6",
+        "text": "Flight plan closed with ATC"
+      },
+      {
+        "id": "AFH.2.26.1.w.7",
+        "text": "Passenger seat belts unlocked"
+      },
+      {
+        "id": "AFH.2.26.1.w.8",
+        "text": "Cockpit voice recorder turned off"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction, Clear of Runway and Stopped",
+    "subjects": [
+      "Ground Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.2.27.1",
+    "question": "What are the recommended practices for parking an airplane to minimize the impact of propeller or jet blast from other airplanes?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.27.1.c.1",
+        "text": "Park headed into the existing or forecast wind"
+      },
+      {
+        "id": "AFH.2.27.1.c.2",
+        "text": "Select a location away from the direct path of propeller or jet blast"
+      },
+      {
+        "id": "AFH.2.27.1.c.3",
+        "text": "Allow the airplane to roll straight ahead to straighten the nosewheel or tailwheel after stopping"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.27.1.w.1",
+        "text": "Park with the tail facing into the wind"
+      },
+      {
+        "id": "AFH.2.27.1.w.2",
+        "text": "Always park in the first available space"
+      },
+      {
+        "id": "AFH.2.27.1.w.3",
+        "text": "Ignore wind direction when parking"
+      },
+      {
+        "id": "AFH.2.27.1.w.4",
+        "text": "Park parallel to other airplanes regardless of wind direction"
+      },
+      {
+        "id": "AFH.2.27.1.w.5",
+        "text": "Use only designated tie downs, regardless of wind direction"
+      },
+      {
+        "id": "AFH.2.27.1.w.6",
+        "text": "Park with the nose directly towards other airplanes"
+      },
+      {
+        "id": "AFH.2.27.1.w.7",
+        "text": "Always park in a supervised area to avoid propeller or jet blast"
+      },
+      {
+        "id": "AFH.2.27.1.w.8",
+        "text": "Rely solely on airport personnel for parking direction"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction, Section: Parking",
+    "subjects": [
+      "Parking"
+    ]
+  },
+  {
+    "questionid": "AFH.2.28.1",
+    "question": "Which of the following are correct procedures for engine shutdown and securing the airplane according to the Airplane Flying Handbook?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.28.1.c.1",
+        "text": "Mixture—set to IDLE CUTOFF."
+      },
+      {
+        "id": "AFH.2.28.1.c.2",
+        "text": "Master Switch—turn OFF."
+      },
+      {
+        "id": "AFH.2.28.1.c.3",
+        "text": "Magneto Switch—turn ignition switch to OFF when engine stops."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.28.1.w.1",
+        "text": "Fuel Pump—set to HIGH."
+      },
+      {
+        "id": "AFH.2.28.1.w.2",
+        "text": "Landing Lights—turn ON."
+      },
+      {
+        "id": "AFH.2.28.1.w.3",
+        "text": "Flaps—set to FULL DOWN."
+      },
+      {
+        "id": "AFH.2.28.1.w.4",
+        "text": "Aileron Control—set to NEUTRAL."
+      },
+      {
+        "id": "AFH.2.28.1.w.5",
+        "text": "Elevator Trim—set to TAKEOFF position."
+      },
+      {
+        "id": "AFH.2.28.1.w.6",
+        "text": "GPS—set to NAV mode."
+      },
+      {
+        "id": "AFH.2.28.1.w.7",
+        "text": "Cabin Lights—leave ON for security."
+      },
+      {
+        "id": "AFH.2.28.1.w.8",
+        "text": "Engine Oil—check level."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction, Engine Shutdown",
+    "subjects": [
+      "Engine Shutdown"
+    ]
+  },
+  {
+    "questionid": "AFH.2.29.1",
+    "question": "Which of the following are recommended practices for securing and servicing an aircraft after flight according to the Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.29.1.c.1",
+        "text": "Fill fuel tanks to prevent water condensation if the airplane will be inactive"
+      },
+      {
+        "id": "AFH.2.29.1.c.2",
+        "text": "Use tie down ropes that may be reasonably cinched to the airplane’s tie down rings"
+      },
+      {
+        "id": "AFH.2.29.1.c.3",
+        "text": "Inspect the aircraft for damage after hangaring"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.29.1.w.1",
+        "text": "Tighten chains as much as possible when using them as tie downs"
+      },
+      {
+        "id": "AFH.2.29.1.w.2",
+        "text": "Leave fuel tanks half full to reduce weight if the airplane will be inactive"
+      },
+      {
+        "id": "AFH.2.29.1.w.3",
+        "text": "Ignore minor oil streaks around the cowling after flight"
+      },
+      {
+        "id": "AFH.2.29.1.w.4",
+        "text": "Do not check oil levels if the flight was short"
+      },
+      {
+        "id": "AFH.2.29.1.w.5",
+        "text": "Assume no hangar hazards exist when storing the airplane"
+      },
+      {
+        "id": "AFH.2.29.1.w.6",
+        "text": "Use any available material for tie downs, regardless of its condition"
+      },
+      {
+        "id": "AFH.2.29.1.w.7",
+        "text": "Avoid using pitot tube covers to maintain airflow"
+      },
+      {
+        "id": "AFH.2.29.1.w.8",
+        "text": "Do not inspect landing gear if no issues were noted during flight"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Securing and Servicing"
+    ]
+  },
+  {
+    "questionid": "AFH.2.30.1",
+    "question": "What are key aspects of ground operations as highlighted in Chapter 2 of the Airplane Flying Handbook?",
+    "correct_answers": [
+      {
+        "id": "AFH.2.30.1.c.1",
+        "text": "Determining the airworthiness of the airplane"
+      },
+      {
+        "id": "AFH.2.30.1.c.2",
+        "text": "Preflight visual inspection"
+      },
+      {
+        "id": "AFH.2.30.1.c.3",
+        "text": "Adherence to the AFM/POH and checklists"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.2.30.1.w.1",
+        "text": "In-flight entertainment management"
+      },
+      {
+        "id": "AFH.2.30.1.w.2",
+        "text": "Advanced aerobatic maneuvers"
+      },
+      {
+        "id": "AFH.2.30.1.w.3",
+        "text": "High-altitude flight planning"
+      },
+      {
+        "id": "AFH.2.30.1.w.4",
+        "text": "Use of autopilot for takeoff"
+      },
+      {
+        "id": "AFH.2.30.1.w.5",
+        "text": "Night vision equipment usage"
+      },
+      {
+        "id": "AFH.2.30.1.w.6",
+        "text": "Emergency water landing procedures"
+      },
+      {
+        "id": "AFH.2.30.1.w.7",
+        "text": "Fuel management for multi-engine aircraft"
+      },
+      {
+        "id": "AFH.2.30.1.w.8",
+        "text": "Designing flight paths for unmanned aerial vehicles"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 2: Ground Operations Introduction",
+    "subjects": [
+      "Ground Operations"
+    ]
+  }
+]

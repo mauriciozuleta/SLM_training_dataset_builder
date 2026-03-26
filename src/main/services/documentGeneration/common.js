@@ -1,5 +1,6 @@
 function createCommonHelpers({ path, maxQuestionTarget }) {
-  const MAX_QUESTION_TARGET = Math.max(20, Number.parseInt(maxQuestionTarget || '80', 10) || 80);
+  const MIN_QUESTION_TARGET = 50;
+  const MAX_QUESTION_TARGET = Math.max(MIN_QUESTION_TARGET, Number.parseInt(maxQuestionTarget || '150', 10) || 150);
 
   function normalizeJsonFileName(fileName, fallback) {
     const raw = typeof fileName === 'string' ? fileName.trim() : '';
@@ -120,7 +121,7 @@ function createCommonHelpers({ path, maxQuestionTarget }) {
       requiredQuestions: Math.max(1, Number.parseInt(section?.requiredQuestions, 10) || 0),
     }));
 
-    const hasProvided = weighted.some((section) => Number.parseInt(section?.requiredQuestions, 10) > 0);
+    const hasProvided = sections.some((section) => Number.parseInt(section?.requiredQuestions, 10) > 0);
     if (!hasProvided) {
       weighted.forEach((section) => {
         const weight = Math.max(0.01, Number(section?.weightPercentage) || 0.01);
@@ -226,6 +227,7 @@ function createCommonHelpers({ path, maxQuestionTarget }) {
     const targetTotalQuestions = Math.min(
       MAX_QUESTION_TARGET,
       Math.max(
+        MIN_QUESTION_TARGET,
         weightedSections.length || 1,
         Math.ceil((totalWords || safeTotalWords) / 220)
       )

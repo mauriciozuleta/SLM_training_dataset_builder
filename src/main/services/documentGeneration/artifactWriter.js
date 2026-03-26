@@ -1,4 +1,4 @@
-function createArtifactWriter({ fs, path, common, summaryGenerator }) {
+function createArtifactWriter({ fs, path, common, summaryGenerator, questionBankGenerator }) {
   async function writeSelectedArtifacts(payload) {
     const outputDir = payload?.outputDir;
     if (!outputDir) {
@@ -14,7 +14,9 @@ function createArtifactWriter({ fs, path, common, summaryGenerator }) {
 
     const written = [];
     const needsSummary = Boolean(selectedOutputs.summary);
+    const needsQuestions = Boolean(selectedOutputs.questions);
     const summaryResult = needsSummary ? await summaryGenerator.buildSummary(documentJson) : null;
+    const questionResult = needsQuestions ? await questionBankGenerator.buildQuestionBank(documentJson) : null;
 
     const outputMap = [
       {
@@ -29,6 +31,11 @@ function createArtifactWriter({ fs, path, common, summaryGenerator }) {
           ? summaryResult.markdown
           : '',
         contentType: 'text/markdown',
+      },
+      {
+        key: 'questions',
+        fileName: common.normalizeJsonFileName(fileNames.questions, 'chapter_questions.json'),
+        data: Array.isArray(questionResult?.questionBank) ? questionResult.questionBank : [],
       },
     ];
 

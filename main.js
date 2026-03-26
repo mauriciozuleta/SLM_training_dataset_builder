@@ -7,7 +7,7 @@ const { createDocumentGenerationService } = require('./src/main/services/documen
 require('dotenv').config({ path: path.join(__dirname, '.env') });
 
 const API_TIMEOUT_MS = Math.max(15000, Number.parseInt(process.env.API_TIMEOUT_MS || '90000', 10) || 90000);
-const MAX_QUESTION_TARGET = Math.max(20, Number.parseInt(process.env.MAX_QUESTION_TARGET || '80', 10) || 80);
+const MAX_QUESTION_TARGET = Math.max(50, Number.parseInt(process.env.MAX_QUESTION_TARGET || '150', 10) || 150);
 
 const documentGenerationService = createDocumentGenerationService({
   fs,

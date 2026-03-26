@@ -15,14 +15,16 @@ const defaultPdfDropText = 'Drop the source PDF document to extract the structur
 const checkboxIds = {
   docJson: 'optDocJson',
   summary: 'optSummaryMd',
+  questions: 'optQuestionsJson',
 };
 
-const apiDependentOutputs = ['docJson', 'summary'];
+const apiDependentOutputs = ['docJson', 'summary', 'questions'];
 const conversionStatusEl = document.getElementById('conversionStatus');
 const conversionProgressBar = document.getElementById('conversionProgressBar');
 const documentProgressWrap = document.getElementById('documentProgressWrap');
 const documentReadyBadge = document.getElementById('documentReadyBadge');
 const summaryReadyBadge = document.getElementById('summaryReadyBadge');
+const questionReadyBadge = document.getElementById('questionReadyBadge');
 const documentOutputCard = document.querySelector('[data-document-card]');
 const apiStatusEl = document.getElementById('apiStatus');
 
@@ -77,7 +79,13 @@ const setConversionStatus = (message, percent = 0, state = 'idle') => {
 };
 
 const setOutputReadyState = (key, isReady) => {
-  const badge = key === 'summary' ? summaryReadyBadge : documentReadyBadge;
+  let badge = documentReadyBadge;
+  if (key === 'summary') {
+    badge = summaryReadyBadge;
+  }
+  if (key === 'questions') {
+    badge = questionReadyBadge;
+  }
   if (!badge) {
     return;
   }
@@ -87,6 +95,7 @@ const setOutputReadyState = (key, isReady) => {
 const resetDocumentOutputState = () => {
   setOutputReadyState('docJson', false);
   setOutputReadyState('summary', false);
+  setOutputReadyState('questions', false);
   setConversionStatus('', 0, 'idle');
 };
 
@@ -221,6 +230,7 @@ const getOutputFileNames = () => {
   return {
     docJson: getInitialDocumentFileName(),
     summary: ensureMarkdownExtension(`${head}chapter_summary`, 'chapter_summary.md'),
+    questions: ensureJsonExtension(`${head}questions`, 'chapter_questions.json'),
   };
 };
 
@@ -805,6 +815,9 @@ generateButton?.addEventListener('click', async () => {
             }
             if (entry?.key === 'summary') {
               setOutputReadyState('summary', true);
+            }
+            if (entry?.key === 'questions') {
+              setOutputReadyState('questions', true);
             }
             addLog(`Saved (${entry.key}): ${entry.path}`, 'success');
           });
