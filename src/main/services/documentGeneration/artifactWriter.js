@@ -1,4 +1,4 @@
-function createArtifactWriter({ fs, path, common, summaryGenerator, questionBankGenerator }) {
+function createArtifactWriter({ fs, path, common, summaryGenerator, questionBankGenerator, deterministicPairGenerator }) {
   async function writeSelectedArtifacts(payload) {
     const outputDir = payload?.outputDir;
     if (!outputDir) {
@@ -10,13 +10,28 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
     const fileNames = payload?.outputFileNames || {};
     const documentJson = payload?.documentJson || {};
     const documentJsonPath = typeof payload?.documentJsonPath === 'string' ? payload.documentJsonPath : '';
+    const apiProviderCount = Math.max(0, Number(payload?.apiProviderCount || 0));
     await fs.mkdir(outputDir, { recursive: true });
 
     const written = [];
     const needsSummary = Boolean(selectedOutputs.summary);
-    const needsQuestions = Boolean(selectedOutputs.questions);
-    const summaryResult = needsSummary ? await summaryGenerator.buildSummary(documentJson) : null;
-    const questionResult = needsQuestions ? await questionBankGenerator.buildQuestionBank(documentJson) : null;
+    const needsQuestions = Boolean(selectedOutputs.questions || selectedOutputs.deterministicPairs);
+    const needsDeterministicPairs = Boolean(selectedOutputs.deterministicPairs);
+    const useParallelApiRequests = apiProviderCount >= 2 && needsSummary && needsQuestions;
+
+    let summaryResult = null;
+    let questionResult = null;
+    if (useParallelApiRequests) {
+      [summaryResult, questionResult] = await Promise.all([
+        summaryGenerator.buildSummary(documentJson),
+        questionBankGenerator.buildQuestionBank(documentJson),
+      ]);
+    } else {
+      summaryResult = needsSummary ? await summaryGenerator.buildSummary(documentJson) : null;
+      questionResult = needsQuestions ? await questionBankGenerator.buildQuestionBank(documentJson) : null;
+    }
+
+    const questionBank = Array.isArray(questionResult?.questionBank) ? questionResult.questionBank : [];
 
     const outputMap = [
       {
@@ -35,7 +50,12 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
       {
         key: 'questions',
         fileName: common.normalizeJsonFileName(fileNames.questions, 'chapter_questions.json'),
-        data: Array.isArray(questionResult?.questionBank) ? questionResult.questionBank : [],
+        data: questionBank,
+      },
+      {
+        key: 'deterministicPairs',
+        fileName: common.normalizeJsonFileName(fileNames.deterministicPairs, 'deterministic_training_pairs.json'),
+        data: {},
       },
     ];
 
@@ -81,12 +101,37 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
       written.push({ key: 'docJson', path: path.join(outputDir, docJsonTarget.fileName), reused: true });
     }
 
+    let writtenQuestionsPath = '';
     for (const entry of selectedEntries) {
       const outPath = path.join(outputDir, entry.fileName);
+      let dataToWrite = entry.data;
+
+      if (entry.key === 'deterministicPairs') {
+        let deterministicQuestionBank = questionBank;
+        let sourceQuestionsFileName = fileNames.questions;
+
+        // With a single available API provider, bind pair generation to written questions.json for deterministic sequencing.
+        if (apiProviderCount <= 1 && selectedOutputs.questions && writtenQuestionsPath) {
+          const rawQuestions = await fs.readFile(writtenQuestionsPath, 'utf8');
+          const parsedQuestions = JSON.parse(rawQuestions);
+          if (Array.isArray(parsedQuestions)) {
+            deterministicQuestionBank = parsedQuestions;
+          }
+          sourceQuestionsFileName = path.basename(writtenQuestionsPath);
+        }
+
+        dataToWrite = needsDeterministicPairs
+          ? deterministicPairGenerator.buildDeterministicPairSet(deterministicQuestionBank, sourceQuestionsFileName)
+          : {};
+      }
+
       if (entry.contentType === 'text/markdown') {
-        await fs.writeFile(outPath, entry.data, 'utf8');
+        await fs.writeFile(outPath, dataToWrite, 'utf8');
       } else {
-        await fs.writeFile(outPath, `${JSON.stringify(entry.data, null, 2)}\n`, 'utf8');
+        await fs.writeFile(outPath, `${JSON.stringify(dataToWrite, null, 2)}\n`, 'utf8');
+      }
+      if (entry.key === 'questions') {
+        writtenQuestionsPath = outPath;
       }
       written.push({ key: entry.key, path: outPath });
     }

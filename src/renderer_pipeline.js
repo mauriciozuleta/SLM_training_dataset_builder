@@ -16,15 +16,17 @@ const checkboxIds = {
   docJson: 'optDocJson',
   summary: 'optSummaryMd',
   questions: 'optQuestionsJson',
+  deterministicPairs: 'optDeterministicPairsJson',
 };
 
-const apiDependentOutputs = ['docJson', 'summary', 'questions'];
+const apiDependentOutputs = ['docJson', 'summary', 'questions', 'deterministicPairs'];
 const conversionStatusEl = document.getElementById('conversionStatus');
 const conversionProgressBar = document.getElementById('conversionProgressBar');
 const documentProgressWrap = document.getElementById('documentProgressWrap');
 const documentReadyBadge = document.getElementById('documentReadyBadge');
 const summaryReadyBadge = document.getElementById('summaryReadyBadge');
 const questionReadyBadge = document.getElementById('questionReadyBadge');
+const deterministicPairsReadyBadge = document.getElementById('deterministicPairsReadyBadge');
 const documentOutputCard = document.querySelector('[data-document-card]');
 const apiStatusEl = document.getElementById('apiStatus');
 
@@ -34,6 +36,7 @@ let lastLoadedPdfName = '';
 let lastUsedOutputFolder = '';
 let lastUsedOutputPrefix = '';
 let apiAvailable = false;
+let apiProviderCount = 0;
 let generationInProgress = false;
 let clearPrimaryPdf = async () => {};
 
@@ -86,6 +89,9 @@ const setOutputReadyState = (key, isReady) => {
   if (key === 'questions') {
     badge = questionReadyBadge;
   }
+  if (key === 'deterministicPairs') {
+    badge = deterministicPairsReadyBadge;
+  }
   if (!badge) {
     return;
   }
@@ -96,16 +102,22 @@ const resetDocumentOutputState = () => {
   setOutputReadyState('docJson', false);
   setOutputReadyState('summary', false);
   setOutputReadyState('questions', false);
+  setOutputReadyState('deterministicPairs', false);
   setConversionStatus('', 0, 'idle');
 };
 
 const applyApiOutputAvailability = async (available, providers = []) => {
   apiAvailable = Boolean(available);
+  apiProviderCount = Array.isArray(providers) ? providers.length : 0;
 
   if (apiStatusEl) {
-    apiStatusEl.textContent = apiAvailable
-      ? `API available (${providers.join(', ') || 'configured'}). All output selections enabled.`
-      : 'API unavailable. Generation is disabled until API credentials are available.';
+    if (!apiAvailable) {
+      apiStatusEl.textContent = 'API unavailable. Generation is disabled until API credentials are available. Performance reduced due API availability.';
+    } else if (apiProviderCount < 2) {
+      apiStatusEl.textContent = `API available (${providers.join(', ') || 'configured'}). Performance reduced due API availability.`;
+    } else {
+      apiStatusEl.textContent = `APIs available (${providers.join(', ')}). Parallel API execution enabled.`;
+    }
   }
 
   for (const outputKey of apiDependentOutputs) {
@@ -132,6 +144,8 @@ const applyApiOutputAvailability = async (available, providers = []) => {
       docJsonInput.checked = true;
     }
   }
+
+  enforceOutputDependencies();
 
   await persistSettings();
   refreshGenerateState();
@@ -223,6 +237,22 @@ const getSelectedOutputs = () => {
   return result;
 };
 
+const enforceOutputDependencies = () => {
+  const questionsInput = document.getElementById(checkboxIds.questions);
+  const deterministicInput = document.getElementById(checkboxIds.deterministicPairs);
+  if (!questionsInput || !deterministicInput) {
+    return;
+  }
+
+  const canUseDeterministic = apiAvailable && questionsInput.checked;
+  if (!canUseDeterministic && deterministicInput.checked) {
+    deterministicInput.checked = false;
+    setOutputReadyState('deterministicPairs', false);
+  }
+
+  deterministicInput.disabled = !canUseDeterministic;
+};
+
 const getOutputFileNames = () => {
   const prefix = buildPrefix();
   const head = prefix ? `${prefix}_` : '';
@@ -231,6 +261,7 @@ const getOutputFileNames = () => {
     docJson: getInitialDocumentFileName(),
     summary: ensureMarkdownExtension(`${head}chapter_summary`, 'chapter_summary.md'),
     questions: ensureJsonExtension(`${head}questions`, 'chapter_questions.json'),
+    deterministicPairs: ensureJsonExtension(`${head}deterministic_training_pairs`, 'deterministic_training_pairs.json'),
   };
 };
 
@@ -354,6 +385,8 @@ const applySettings = (settings) => {
       }
     });
   }
+
+  enforceOutputDependencies();
 
 };
 
@@ -660,6 +693,7 @@ Object.values(checkboxIds).forEach((id) => {
     return;
   }
   input.addEventListener('change', () => {
+    enforceOutputDependencies();
     void persistSettings();
     refreshGenerateState();
   });
@@ -804,6 +838,7 @@ generateButton?.addEventListener('click', async () => {
           documentJsonPath: extracted.outputPath,
           allowOverwrite,
           idPrefix: documentIdPrefix,
+          apiProviderCount,
         });
 
         if (Array.isArray(result?.written) && result.written.length > 0) {
@@ -818,6 +853,9 @@ generateButton?.addEventListener('click', async () => {
             }
             if (entry?.key === 'questions') {
               setOutputReadyState('questions', true);
+            }
+            if (entry?.key === 'deterministicPairs') {
+              setOutputReadyState('deterministicPairs', true);
             }
             addLog(`Saved (${entry.key}): ${entry.path}`, 'success');
           });

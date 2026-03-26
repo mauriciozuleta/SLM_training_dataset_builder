@@ -1,0 +1,24 @@
+[
+  {
+    "questionBank": { "chapterId": "afh.2" }
+  },
+  {
+    "questionid": "AFH.2.1.1",
+    "question": "Sample?",
+    "correct_answers": [
+      { "id": "AFH.2.1.1.c.1", "text": "C1" },
+      { "id": "AFH.2.1.1.c.2", "text": "C2" },
+      { "id": "AFH.2.1.1.c.3", "text": "C3" }
+    ],
+    "wrong_answers": [
+      { "id": "AFH.2.1.1.w.1", "text": "W1" },
+      { "id": "AFH.2.1.1.w.2", "text": "W2" },
+      { "id": "AFH.2.1.1.w.3", "text": "W3" },
+      { "id": "AFH.2.1.1.w.4", "text": "W4" },
+      { "id": "AFH.2.1.1.w.5", "text": "W5" },
+      { "id": "AFH.2.1.1.w.6", "text": "W6" },
+      { "id": "AFH.2.1.1.w.7", "text": "W7" },
+      { "id": "AFH.2.1.1.w.8", "text": "W8" }
+    ]
+  }
+]

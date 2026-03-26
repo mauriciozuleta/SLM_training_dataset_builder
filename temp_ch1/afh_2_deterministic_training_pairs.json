@@ -1,0 +1,135 @@
+{
+  "deterministicTrainingPairSet": {
+    "generatedAtUtc": "2026-03-26T02:09:39.064876+00:00",
+    "chapterId": "afh.2",
+    "sourceQuestionsFile": "afh_2_questions.json",
+    "expectedPairsPerQuestion": 11,
+    "validQuestionCount": 1,
+    "invalidQuestionCount": 0,
+    "totalPairs": 11
+  },
+  "invalidQuestions": [],
+  "pairs": [
+    {
+      "pairId": "AFH.2.1.1.p.1",
+      "questionid": "AFH.2.1.1",
+      "answerId": "AFH.2.1.1.c.1",
+      "label": 1,
+      "labelText": "correct",
+      "question": "Sample?",
+      "answer": "C1",
+      "source": "",
+      "subjects": []
+    },
+    {
+      "pairId": "AFH.2.1.1.p.2",
+      "questionid": "AFH.2.1.1",
+      "answerId": "AFH.2.1.1.c.2",
+      "label": 1,
+      "labelText": "correct",
+      "question": "Sample?",
+      "answer": "C2",
+      "source": "",
+      "subjects": []
+    },
+    {
+      "pairId": "AFH.2.1.1.p.3",
+      "questionid": "AFH.2.1.1",
+      "answerId": "AFH.2.1.1.c.3",
+      "label": 1,
+      "labelText": "correct",
+      "question": "Sample?",
+      "answer": "C3",
+      "source": "",
+      "subjects": []
+    },
+    {
+      "pairId": "AFH.2.1.1.p.4",
+      "questionid": "AFH.2.1.1",
+      "answerId": "AFH.2.1.1.w.1",
+      "label": 0,
+      "labelText": "incorrect",
+      "question": "Sample?",
+      "answer": "W1",
+      "source": "",
+      "subjects": []
+    },
+    {
+      "pairId": "AFH.2.1.1.p.5",
+      "questionid": "AFH.2.1.1",
+      "answerId": "AFH.2.1.1.w.2",
+      "label": 0,
+      "labelText": "incorrect",
+      "question": "Sample?",
+      "answer": "W2",
+      "source": "",
+      "subjects": []
+    },
+    {
+      "pairId": "AFH.2.1.1.p.6",
+      "questionid": "AFH.2.1.1",
+      "answerId": "AFH.2.1.1.w.3",
+      "label": 0,
+      "labelText": "incorrect",
+      "question": "Sample?",
+      "answer": "W3",
+      "source": "",
+      "subjects": []
+    },
+    {
+      "pairId": "AFH.2.1.1.p.7",
+      "questionid": "AFH.2.1.1",
+      "answerId": "AFH.2.1.1.w.4",
+      "label": 0,
+      "labelText": "incorrect",
+      "question": "Sample?",
+      "answer": "W4",
+      "source": "",
+      "subjects": []
+    },
+    {
+      "pairId": "AFH.2.1.1.p.8",
+      "questionid": "AFH.2.1.1",
+      "answerId": "AFH.2.1.1.w.5",
+      "label": 0,
+      "labelText": "incorrect",
+      "question": "Sample?",
+      "answer": "W5",
+      "source": "",
+      "subjects": []
+    },
+    {
+      "pairId": "AFH.2.1.1.p.9",
+      "questionid": "AFH.2.1.1",
+      "answerId": "AFH.2.1.1.w.6",
+      "label": 0,
+      "labelText": "incorrect",
+      "question": "Sample?",
+      "answer": "W6",
+      "source": "",
+      "subjects": []
+    },
+    {
+      "pairId": "AFH.2.1.1.p.10",
+      "questionid": "AFH.2.1.1",
+      "answerId": "AFH.2.1.1.w.7",
+      "label": 0,
+      "labelText": "incorrect",
+      "question": "Sample?",
+      "answer": "W7",
+      "source": "",
+      "subjects": []
+    },
+    {
+      "pairId": "AFH.2.1.1.p.11",
+      "questionid": "AFH.2.1.1",
+      "answerId": "AFH.2.1.1.w.8",
+      "label": 0,
+      "labelText": "incorrect",
+      "question": "Sample?",
+      "answer": "W8",
+      "source": "",
+      "subjects": []
+    }
+  ]
+}
