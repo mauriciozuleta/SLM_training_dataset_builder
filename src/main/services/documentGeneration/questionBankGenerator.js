@@ -2,6 +2,7 @@ function createQuestionBankGenerator({ api, common }) {
   const REQUIRED_CORRECT_ANSWERS = 3;
   const REQUIRED_WRONG_ANSWERS = 8;
   const MAX_SECTION_CONTENT_CHARS = 3200;
+  const MAX_GUIDANCE_CHARS = 900;
 
   const cleanText = (value) => `${value || ''}`.replace(/\s+/g, ' ').trim();
 
@@ -167,6 +168,7 @@ function createQuestionBankGenerator({ api, common }) {
     requestOptions = {},
   }) => {
     const sectionTitle = cleanText(section?.title) || `Section ${sectionOrdinal}`;
+    const guidance = cleanText(requestOptions?.generationGuidance).slice(0, MAX_GUIDANCE_CHARS);
 
     const prompt = [
       'You are an aviation exam item generator.',
@@ -177,6 +179,7 @@ function createQuestionBankGenerator({ api, common }) {
       `Each question MUST have exactly ${REQUIRED_CORRECT_ANSWERS} correct answers and ${REQUIRED_WRONG_ANSWERS} wrong answers.`,
       'All answers must be concise, factual, and non-duplicated.',
       'Use only the provided section content; do not invent outside facts.',
+      guidance ? `Regeneration guidance from prior audit findings: ${guidance}` : '',
     ].join(' ');
 
     const payload = {
@@ -255,6 +258,7 @@ function createQuestionBankGenerator({ api, common }) {
       ? options.secondaryProvider.trim().toLowerCase()
       : '';
     const allowLocalFallback = Boolean(options?.allowLocalFallback);
+    const generationGuidance = cleanText(options?.generationGuidance).slice(0, MAX_GUIDANCE_CHARS);
     const onLog = typeof options?.onLog === 'function' ? options.onLog : () => {};
     const abortSignal = options?.abortSignal || null;
     const PRIMARY_TIMEOUT_MS = 30000;
@@ -330,6 +334,7 @@ function createQuestionBankGenerator({ api, common }) {
             requestOptions: {
               signal: abortSignal,
               timeoutMs: firstProvider === preferredProvider ? PRIMARY_TIMEOUT_MS : SECONDARY_TIMEOUT_MS,
+              generationGuidance,
             },
           });
           if (firstProvider === preferredProvider) {
@@ -365,6 +370,7 @@ function createQuestionBankGenerator({ api, common }) {
             requestOptions: {
               signal: abortSignal,
               timeoutMs: SECONDARY_TIMEOUT_MS,
+              generationGuidance,
             },
           });
         } catch (error) {

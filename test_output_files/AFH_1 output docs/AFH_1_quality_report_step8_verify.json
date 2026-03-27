@@ -1,0 +1,91 @@
+{
+  "generatedAtUtc": "2026-03-27T04:10:52.755Z",
+  "root": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files",
+  "fileCount": 1,
+  "totalPairs": 243,
+  "overallRating": {
+    "level": "optimum",
+    "weightedIssueRate": 0,
+    "weightedIssuePercent": 0,
+    "weightedIssueCount": 0,
+    "thresholds": {
+      "optimumMaxPercent": 0.5,
+      "acceptableMaxPercent": 2,
+      "criticalMaxPercent": 7.000000000000001
+    },
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "fatalIssueCount": 0
+  },
+  "results": [
+    {
+      "type": "conversational",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\AFH_1 output docs\\AFH_1_conversational_training_pairs.json",
+      "pairCount": 243,
+      "subjectDistributionTop": [
+        {
+          "key": "Visual Scanning",
+          "count": 15
+        },
+        {
+          "key": "Checklists",
+          "count": 12
+        },
+        {
+          "key": "Flight Controls",
+          "count": 11
+        },
+        {
+          "key": "Safety",
+          "count": 10
+        },
+        {
+          "key": "Regulations",
+          "count": 8
+        },
+        {
+          "key": "Stalls",
+          "count": 8
+        },
+        {
+          "key": "Angle of Attack",
+          "count": 8
+        },
+        {
+          "key": "FAA WINGS Program",
+          "count": 8
+        },
+        {
+          "key": "Communication",
+          "count": 7
+        },
+        {
+          "key": "14 CFR part 91",
+          "count": 6
+        },
+        {
+          "key": "FSDO",
+          "count": 6
+        },
+        {
+          "key": "Clearing Procedures",
+          "count": 6
+        },
+        {
+          "key": "Procedure",
+          "count": 6
+        },
+        {
+          "key": "Aviation Safety Inspectors",
+          "count": 5
+        },
+        {
+          "key": "Habit Patterns",
+          "count": 5
+        }
+      ],
+      "issues": []
+    }
+  ]
+}

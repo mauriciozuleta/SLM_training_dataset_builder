@@ -7,7 +7,11 @@
     "start": "electron .",
     "dev": "electron .",
     "audit:pairs": "node scripts/audit_training_pairs.js",
-    "audit:pairs:strict": "node scripts/audit_training_pairs.js --fail-on-warning"
+    "audit:pairs:strict": "node scripts/audit_training_pairs.js --fail-on-warning",
+    "check:training-ready": "node scripts/check_training_readiness.js",
+    "check:training-ready:block": "node scripts/check_training_readiness.js --block-on-unresolved",
+    "check:quality-stability": "node scripts/check_quality_stability.js",
+    "check:quality-stability:require": "node scripts/check_quality_stability.js --require-stable"
   },
   "keywords": [
     "electron",

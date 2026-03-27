@@ -62,6 +62,11 @@ function getRepairGuidance(code) {
       scope: 'file',
       instruction: 'Record metadata mismatch and repair in a later pass if content is otherwise acceptable.',
     },
+    DEFERRED_REPAIRS_PENDING: {
+      action: 'metadata-flag',
+      scope: 'file',
+      instruction: 'Dataset has unresolved deferred repairs; block training in strict readiness mode until resolved.',
+    },
     COUNT_MISMATCH: {
       action: 'metadata-flag',
       scope: 'file',
@@ -223,10 +228,41 @@ function detectTruncatedText(text) {
   return false;
 }
 
+function detectDeferredQualityFlag(payload, issues, filePath) {
+  const flag = Boolean(payload?.qualityFeedback?.unresolvedQualityIssues);
+  if (!flag) {
+    return;
+  }
+
+  const deferredIssueCount = Number(payload?.qualityFeedback?.deferredIssueCount || 0);
+  const deferredAtUtc = `${payload?.qualityFeedback?.deferredAtUtc || ''}`.trim();
+  const detail = deferredIssueCount > 0
+    ? ` (${deferredIssueCount} pending issue(s))`
+    : '';
+
+  addIssue(
+    issues,
+    'warning',
+    'DEFERRED_REPAIRS_PENDING',
+    `Dataset is flagged with unresolved deferred quality issues${detail}.`,
+    {
+      filePath,
+      deferredIssueCount,
+      deferredAtUtc,
+    },
+    {
+      type: 'file',
+      id: filePath,
+    }
+  );
+}
+
 function analyzeConversationalPayload(payload, filePath) {
   const issues = [];
   const pairs = Array.isArray(payload?.pairs) ? payload.pairs : [];
   const meta = payload?.conversationalTrainingPairSet || {};
+
+  detectDeferredQualityFlag(payload, issues, filePath);
 
   if (!Array.isArray(payload?.pairs)) {
     addIssue(issues, 'error', 'PAIRS_MISSING', 'Missing pairs array.', { filePath });
@@ -416,6 +452,8 @@ function analyzeDeterministicPayload(payload, filePath) {
   const issues = [];
   const pairs = Array.isArray(payload?.pairs) ? payload.pairs : [];
   const meta = payload?.deterministicTrainingPairSet || {};
+
+  detectDeferredQualityFlag(payload, issues, filePath);
 
   if (!Array.isArray(payload?.pairs)) {
     addIssue(issues, 'error', 'PAIRS_MISSING', 'Missing pairs array.', { filePath });
@@ -735,9 +773,156 @@ function resolveAuditTargets(options = {}) {
   };
 }
 
+function toNumber(value, fallback = 0) {
+  const num = Number(value);
+  return Number.isFinite(num) ? num : fallback;
+}
+
+function aggregateIssueStats(results = []) {
+  const issueBuckets = new Map();
+  const actionBuckets = new Map();
+  const targetBuckets = new Map();
+
+  results.forEach((result) => {
+    const issues = Array.isArray(result?.issues) ? result.issues : [];
+    issues.forEach((issue) => {
+      const code = `${issue?.code || 'UNKNOWN_ISSUE'}`;
+      issueBuckets.set(code, (issueBuckets.get(code) || 0) + 1);
+
+      const action = `${issue?.repairGuidance?.action || 'review'}`;
+      actionBuckets.set(action, (actionBuckets.get(action) || 0) + 1);
+
+      const targetType = `${issue?.target?.type || ''}`.trim();
+      const targetId = `${issue?.target?.id || ''}`.trim();
+      if (targetId) {
+        const key = targetType ? `${targetType}:${targetId}` : targetId;
+        targetBuckets.set(key, (targetBuckets.get(key) || 0) + 1);
+      }
+    });
+  });
+
+  const toTopList = (bucket, limit = 8) => Array.from(bucket.entries())
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, limit)
+    .map(([key, count]) => ({ key, count }));
+
+  return {
+    topIssues: toTopList(issueBuckets, 10),
+    recommendedActions: toTopList(actionBuckets, 6),
+    affectedTargets: toTopList(targetBuckets, 10),
+  };
+}
+
+function getTrendLabel(previousPayload, currentPayload) {
+  if (!previousPayload || typeof previousPayload !== 'object') {
+    return 'N/A (no previous run)';
+  }
+
+  const previousPct = toNumber(previousPayload?.overallRating?.weightedIssuePercent, 0);
+  const currentPct = toNumber(currentPayload?.overallRating?.weightedIssuePercent, 0);
+
+  if (currentPct < previousPct) {
+    return `improved (${previousPct}% -> ${currentPct}%)`;
+  }
+  if (currentPct > previousPct) {
+    return `worse (${previousPct}% -> ${currentPct}%)`;
+  }
+  return `stable (${currentPct}%)`;
+}
+
+function buildMarkdownReport(payload, previousPayload = null) {
+  const stats = aggregateIssueStats(payload?.results || []);
+  const overall = payload?.overallRating || {};
+  const trend = getTrendLabel(previousPayload, payload);
+
+  const lines = [];
+  lines.push('# Training Pair Quality Report');
+  lines.push('');
+  lines.push('## Run Metadata');
+  lines.push(`- Generated At (UTC): ${payload?.generatedAtUtc || 'N/A'}`);
+  lines.push(`- Root: ${payload?.root || 'N/A'}`);
+  lines.push(`- File Count: ${toNumber(payload?.fileCount, 0)}`);
+  lines.push(`- Total Pairs: ${toNumber(payload?.totalPairs, 0)}`);
+  lines.push('');
+
+  lines.push('## Quality Rating');
+  lines.push(`- Level: ${`${overall?.level || 'unknown'}`.toUpperCase()}`);
+  lines.push(`- Weighted Issue Percent: ${toNumber(overall?.weightedIssuePercent, 0)}%`);
+  lines.push(`- Errors: ${toNumber(overall?.errorCount, 0)}`);
+  lines.push(`- Warnings: ${toNumber(overall?.warningCount, 0)}`);
+  lines.push('');
+
+  lines.push('## Top Issues');
+  if (stats.topIssues.length === 0) {
+    lines.push('- None');
+  } else {
+    stats.topIssues.forEach((entry) => {
+      lines.push(`- ${entry.key}: ${entry.count}`);
+    });
+  }
+  lines.push('');
+
+  lines.push('## Affected Sections/Targets');
+  if (stats.affectedTargets.length === 0) {
+    lines.push('- None');
+  } else {
+    stats.affectedTargets.forEach((entry) => {
+      lines.push(`- ${entry.key}: ${entry.count}`);
+    });
+  }
+  lines.push('');
+
+  lines.push('## Recommended Actions');
+  if (stats.recommendedActions.length === 0) {
+    lines.push('- None');
+  } else {
+    stats.recommendedActions.forEach((entry) => {
+      lines.push(`- ${entry.key}: ${entry.count}`);
+    });
+  }
+  lines.push('');
+
+  lines.push('## Change vs Previous Run');
+  lines.push(`- Trend: ${trend}`);
+  lines.push('');
+
+  lines.push('## Per-File Summary');
+  const results = Array.isArray(payload?.results) ? payload.results : [];
+  if (results.length === 0) {
+    lines.push('- No files analyzed.');
+  } else {
+    results.forEach((result) => {
+      const issues = Array.isArray(result?.issues) ? result.issues : [];
+      const errors = issues.filter((issue) => issue?.severity === 'error').length;
+      const warnings = issues.filter((issue) => issue?.severity === 'warning').length;
+      const rating = computeQualityRating({
+        pairCount: Number(result?.pairCount || 0),
+        issues,
+      });
+      lines.push(`- ${result?.filePath || 'unknown file'}`);
+      lines.push(`  - Type: ${result?.type || 'unknown'}`);
+      lines.push(`  - Pairs: ${toNumber(result?.pairCount, 0)}`);
+      lines.push(`  - Errors: ${errors}`);
+      lines.push(`  - Warnings: ${warnings}`);
+      lines.push(`  - Rating: ${`${rating?.level || 'unknown'}`.toUpperCase()} (${toNumber(rating?.weightedIssuePercent, 0)}%)`);
+    });
+  }
+
+  return `${lines.join('\n').trim()}\n`;
+}
+
 function performAudit(options = {}) {
   const resolved = resolveAuditTargets(options);
   const files = resolved.files;
+
+  let previousPayload = null;
+  if (resolved.reportPath && fs.existsSync(resolved.reportPath)) {
+    try {
+      previousPayload = JSON.parse(fs.readFileSync(resolved.reportPath, 'utf8'));
+    } catch {
+      previousPayload = null;
+    }
+  }
 
   if (files.length === 0) {
     return {
@@ -774,6 +959,12 @@ function performAudit(options = {}) {
 
   if (resolved.reportPath) {
     fs.writeFileSync(resolved.reportPath, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
+
+    const markdownPath = resolved.reportPath.toLowerCase().endsWith('.json')
+      ? resolved.reportPath.replace(/\.json$/i, '.md')
+      : `${resolved.reportPath}.md`;
+    const markdownReport = buildMarkdownReport(payload, previousPayload);
+    fs.writeFileSync(markdownPath, markdownReport, 'utf8');
   }
 
   return {
@@ -785,6 +976,11 @@ function performAudit(options = {}) {
     overallRating,
     results,
     reportPath: resolved.reportPath || '',
+    markdownReportPath: resolved.reportPath
+      ? (resolved.reportPath.toLowerCase().endsWith('.json')
+        ? resolved.reportPath.replace(/\.json$/i, '.md')
+        : `${resolved.reportPath}.md`)
+      : '',
     payload,
   };
 }
@@ -803,6 +999,9 @@ function run() {
 
   if (auditResult.reportPath) {
     console.log(`Report saved to: ${auditResult.reportPath}`);
+  }
+  if (auditResult.markdownReportPath) {
+    console.log(`Markdown report saved to: ${auditResult.markdownReportPath}`);
   }
 
   process.exitCode = auditResult.exitCode;

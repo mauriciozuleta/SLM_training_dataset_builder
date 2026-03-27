@@ -1,0 +1,252 @@
+{
+  "generatedAtUtc": "2026-03-27T03:59:09.869Z",
+  "root": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files",
+  "fileCount": 2,
+  "totalPairs": 1177,
+  "overallRating": {
+    "level": "optimum",
+    "weightedIssueRate": 0.0004248088360237893,
+    "weightedIssuePercent": 0.042,
+    "weightedIssueCount": 0.5,
+    "thresholds": {
+      "optimumMaxPercent": 0.5,
+      "acceptableMaxPercent": 2,
+      "criticalMaxPercent": 7.000000000000001
+    },
+    "errorCount": 0,
+    "warningCount": 2,
+    "infoCount": 0,
+    "fatalIssueCount": 0
+  },
+  "results": [
+    {
+      "type": "deterministic",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_2 output docs\\afh_2_deterministic_training_pairs.json",
+      "pairCount": 605,
+      "questionCount": 55,
+      "subjectDistributionTop": [
+        {
+          "key": "Aviation Safety",
+          "count": 176
+        },
+        {
+          "key": "Fuel and Oil",
+          "count": 77
+        },
+        {
+          "key": "Risk Management",
+          "count": 77
+        },
+        {
+          "key": "Taxiing",
+          "count": 77
+        },
+        {
+          "key": "Aircraft Maintenance",
+          "count": 66
+        },
+        {
+          "key": "Pre-flight Procedures",
+          "count": 66
+        },
+        {
+          "key": "Ground Operations",
+          "count": 55
+        },
+        {
+          "key": "Hand Propping",
+          "count": 55
+        },
+        {
+          "key": "Aircraft Systems",
+          "count": 33
+        },
+        {
+          "key": "Aviation",
+          "count": 33
+        },
+        {
+          "key": "Engine Starting",
+          "count": 33
+        },
+        {
+          "key": "Preflight Procedures",
+          "count": 22
+        },
+        {
+          "key": "Pilot Training",
+          "count": 22
+        },
+        {
+          "key": "Engine Management",
+          "count": 22
+        },
+        {
+          "key": "Aircraft Operations",
+          "count": 22
+        }
+      ],
+      "issues": [
+        {
+          "severity": "warning",
+          "code": "REPEATED_SUBJECTS",
+          "message": "Subject distribution is highly concentrated; consider balancing section/topic coverage.",
+          "target": {
+            "type": "subject-group",
+            "id": "repeated-subjects"
+          },
+          "repairGuidance": {
+            "action": "targeted-repair",
+            "scope": "section",
+            "instruction": "Regenerate over-concentrated sections with subject balancing constraints."
+          },
+          "context": {
+            "repeatedSubjects": [
+              {
+                "key": "Aviation Safety",
+                "count": 176,
+                "targets": [
+                  "AFH.2.2.1",
+                  "AFH.2.2.1",
+                  "AFH.2.2.1",
+                  "AFH.2.2.1",
+                  "AFH.2.2.1",
+                  "AFH.2.2.1",
+                  "AFH.2.2.1",
+                  "AFH.2.2.1"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "conversational",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_2 output docs\\afh_2_conversational_training_pairs.json",
+      "pairCount": 572,
+      "subjectDistributionTop": [
+        {
+          "key": "Preflight Inspection",
+          "count": 71
+        },
+        {
+          "key": "taxiing",
+          "count": 67
+        },
+        {
+          "key": "Hand Propping",
+          "count": 33
+        },
+        {
+          "key": "safety",
+          "count": 32
+        },
+        {
+          "key": "Safety",
+          "count": 30
+        },
+        {
+          "key": "Regulations",
+          "count": 19
+        },
+        {
+          "key": "Engine Oil",
+          "count": 18
+        },
+        {
+          "key": "landing gear",
+          "count": 18
+        },
+        {
+          "key": "Fuel Contamination",
+          "count": 15
+        },
+        {
+          "key": "Ground Operations",
+          "count": 15
+        },
+        {
+          "key": "checkride",
+          "count": 15
+        },
+        {
+          "key": "brakes",
+          "count": 14
+        },
+        {
+          "key": "Maintenance",
+          "count": 10
+        },
+        {
+          "key": "AFM/POH",
+          "count": 10
+        },
+        {
+          "key": "Fuel System",
+          "count": 10
+        }
+      ],
+      "issues": [
+        {
+          "severity": "warning",
+          "code": "DUPLICATE_CONVERSATIONS",
+          "message": "Found 19 duplicated user+assistant exchanges.",
+          "target": {
+            "type": "pair-group",
+            "id": "duplicate-conversations"
+          },
+          "repairGuidance": {
+            "action": "targeted-repair",
+            "scope": "pair",
+            "instruction": "Regenerate only duplicated conversational pairs with variation constraints."
+          },
+          "context": {
+            "topDuplicates": [
+              {
+                "key": "what should i do if i find sediment in my fuel sample? ||| continue sampling until no sediment appears. significant contamination requires maintenance investigation.",
+                "count": 2,
+                "targets": [
+                  "AFH.2.4.1.z.44",
+                  "AFH.2.4.1.z.66"
+                ]
+              },
+              {
+                "key": "how do i handle taxiing with a quartering headwind? ||| hold the upwind aileron up to reduce the lifting action of the wind on that wing, minimizing the tendency for the wing to rise.",
+                "count": 2,
+                "targets": [
+                  "AFH.2.22.1.z.34",
+                  "AFH.2.22.1.z.52"
+                ]
+              },
+              {
+                "key": "why is it important to use rudder pedals for steering during taxiing? ||| rudder pedals provide precise control for steering the airplane on the ground, allowing for safe and efficient navigation.",
+                "count": 2,
+                "targets": [
+                  "AFH.2.22.1.z.35",
+                  "AFH.2.22.1.z.53"
+                ]
+              },
+              {
+                "key": "how should i position the elevator in a tailwheel airplane during taxiing with a headwind? ||| hold the elevator in the full aft position to keep the tail down, unless the headwind is very strong, then move closer to neutral.",
+                "count": 2,
+                "targets": [
+                  "AFH.2.22.1.z.36",
+                  "AFH.2.22.1.z.54"
+                ]
+              },
+              {
+                "key": "what should i do if i encounter a potential hazard while taxiing? ||| stop the airplane and assess the situation. ensure safe clearance and proceed cautiously or seek assistance if needed.",
+                "count": 2,
+                "targets": [
+                  "AFH.2.22.1.z.37",
+                  "AFH.2.22.1.z.55"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

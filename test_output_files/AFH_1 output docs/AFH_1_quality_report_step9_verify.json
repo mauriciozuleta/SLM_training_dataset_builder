@@ -1,0 +1,125 @@
+{
+  "generatedAtUtc": "2026-03-27T04:30:45.621Z",
+  "root": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files",
+  "fileCount": 1,
+  "totalPairs": 550,
+  "overallRating": {
+    "level": "optimum",
+    "weightedIssueRate": 0.00045454545454545455,
+    "weightedIssuePercent": 0.045,
+    "weightedIssueCount": 0.25,
+    "thresholds": {
+      "optimumMaxPercent": 0.5,
+      "acceptableMaxPercent": 2,
+      "criticalMaxPercent": 7.000000000000001
+    },
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "fatalIssueCount": 0
+  },
+  "results": [
+    {
+      "type": "deterministic",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\AFH_1 output docs\\AFH_1_deterministic_training_pairs.json",
+      "pairCount": 550,
+      "questionCount": 50,
+      "subjectDistributionTop": [
+        {
+          "key": "Flight Training",
+          "count": 165
+        },
+        {
+          "key": "Collision Avoidance",
+          "count": 99
+        },
+        {
+          "key": "Aviation Regulations",
+          "count": 88
+        },
+        {
+          "key": "Pilot Certification",
+          "count": 55
+        },
+        {
+          "key": "FAA Regulations",
+          "count": 44
+        },
+        {
+          "key": "Checklist Usage",
+          "count": 44
+        },
+        {
+          "key": "Aviation Safety",
+          "count": 33
+        },
+        {
+          "key": "Runway Incursion Avoidance",
+          "count": 33
+        },
+        {
+          "key": "Stall Awareness",
+          "count": 33
+        },
+        {
+          "key": "Flight Instructor Certification",
+          "count": 22
+        },
+        {
+          "key": "Aviation Training",
+          "count": 22
+        },
+        {
+          "key": "Aviation Standards",
+          "count": 11
+        },
+        {
+          "key": "Flight Operations",
+          "count": 11
+        },
+        {
+          "key": "General Aviation",
+          "count": 11
+        },
+        {
+          "key": "Instructional Techniques",
+          "count": 11
+        }
+      ],
+      "issues": [
+        {
+          "severity": "warning",
+          "code": "REPEATED_SUBJECTS",
+          "message": "Subject distribution is highly concentrated; consider balancing section/topic coverage.",
+          "target": {
+            "type": "subject-group",
+            "id": "repeated-subjects"
+          },
+          "repairGuidance": {
+            "action": "targeted-repair",
+            "scope": "section",
+            "instruction": "Regenerate over-concentrated sections with subject balancing constraints."
+          },
+          "context": {
+            "repeatedSubjects": [
+              {
+                "key": "Flight Training",
+                "count": 165,
+                "targets": [
+                  "AFH.1.4.1",
+                  "AFH.1.4.1",
+                  "AFH.1.4.1",
+                  "AFH.1.4.1",
+                  "AFH.1.4.1",
+                  "AFH.1.4.1",
+                  "AFH.1.4.1",
+                  "AFH.1.4.1"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

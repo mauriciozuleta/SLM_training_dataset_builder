@@ -1,5 +1,6 @@
 function createSummaryGenerator({ api }) {
   const MAX_SECTION_CONTENT_CHARS = 2400;
+  const MAX_GUIDANCE_CHARS = 900;
 
   const cleanText = (value) => `${value || ''}`.replace(/\s+/g, ' ').trim();
 
@@ -167,6 +168,7 @@ function createSummaryGenerator({ api }) {
 
   const buildSectionSummaryFromApi = async ({ documentJson, section, sectionIndex, totalSections, preferredProvider = null, requestOptions = {} }) => {
     const sectionTitle = cleanText(section?.title) || `Section ${sectionIndex + 1}`;
+    const guidance = cleanText(requestOptions?.generationGuidance).slice(0, MAX_GUIDANCE_CHARS);
     const prompt = [
       'You are an aviation training summarizer.',
       'Create a concise summary for exactly one chapter section using only provided text.',
@@ -176,6 +178,7 @@ function createSummaryGenerator({ api }) {
       '- 1-2 sentences.',
       '- Mention the section topic explicitly.',
       '- Stay factual and avoid adding outside information.',
+      guidance ? `Regeneration guidance from prior audit findings: ${guidance}` : '',
     ].join(' ');
 
     const result = preferredProvider
@@ -224,6 +227,7 @@ function createSummaryGenerator({ api }) {
       ? options.secondaryProvider.trim().toLowerCase()
       : '';
     const allowLocalFallback = Boolean(options?.allowLocalFallback);
+    const generationGuidance = cleanText(options?.generationGuidance).slice(0, MAX_GUIDANCE_CHARS);
     const onLog = typeof options?.onLog === 'function' ? options.onLog : () => {};
     const abortSignal = options?.abortSignal || null;
     const PRIMARY_TIMEOUT_MS = 30000;
@@ -280,6 +284,7 @@ function createSummaryGenerator({ api }) {
             requestOptions: {
               signal: abortSignal,
               timeoutMs: firstProvider === preferredProvider ? PRIMARY_TIMEOUT_MS : SECONDARY_TIMEOUT_MS,
+              generationGuidance,
             },
           });
           if (firstProvider === preferredProvider) {
@@ -312,6 +317,7 @@ function createSummaryGenerator({ api }) {
             requestOptions: {
               signal: abortSignal,
               timeoutMs: SECONDARY_TIMEOUT_MS,
+              generationGuidance,
             },
           });
         } catch (error) {

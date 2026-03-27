@@ -30,6 +30,9 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
     const onProgress = typeof payload?.onProgress === 'function' ? payload.onProgress : () => {};
     const onLog = typeof payload?.onLog === 'function' ? payload.onLog : () => {};
     const abortSignal = payload?.abortSignal || null;
+    const generationGuidance = typeof payload?.generationGuidance === 'string'
+      ? payload.generationGuidance.trim()
+      : '';
     await fs.mkdir(outputDir, { recursive: true });
 
     const written = [];
@@ -155,6 +158,7 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
         preferredProvider: summaryProvider,
         secondaryProvider: summaryFailoverProvider,
         allowLocalFallback,
+        generationGuidance,
         onLog,
         abortSignal,
       });
@@ -173,6 +177,7 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
         preferredProvider: questionProvider,
         secondaryProvider: questionFailoverProvider,
         allowLocalFallback,
+        generationGuidance,
         onLog,
         abortSignal,
       });
@@ -212,6 +217,7 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
         preferredProvider: conversationalProvider,
         secondaryProvider: conversationalFailoverProvider,
         allowLocalFallback,
+        generationGuidance,
         onLog,
         abortSignal,
       });

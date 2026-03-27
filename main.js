@@ -4,6 +4,9 @@ const path = require('path');
 const fs = require('fs/promises');
 const { createDocumentGenerationService } = require('./src/main/services/documentGenerationService');
 const { performAudit } = require('./scripts/audit_training_pairs');
+const { repairAffectedPairs } = require('./src/main/services/documentGeneration/pairRepairService');
+const { persistDeferredQualityLog } = require('./src/main/services/documentGeneration/deferredQualityLogService');
+const { getQualityGuardrails, getQualityStabilityStatus, updateQualityMemoryFromAudit } = require('./src/main/services/documentGeneration/qualityMemoryService');
 
 require('dotenv').config({ path: path.join(__dirname, '.env') });
 
@@ -376,6 +379,48 @@ app.whenReady().then(() => {
 
   ipcMain.handle('audit:pairs', async (_event, payload) => {
     return runPairAudit(payload);
+  });
+
+  ipcMain.handle('pairs:repair', async (_event, payload) => {
+    try {
+      const result = await repairAffectedPairs(payload);
+      return result;
+    } catch (error) {
+      throw new Error(`Pair repair failed: ${error.message}`);
+    }
+  });
+
+  ipcMain.handle('pairs:deferLog', async (_event, payload) => {
+    try {
+      const result = await persistDeferredQualityLog(payload || {});
+      return result;
+    } catch (error) {
+      throw new Error(`Deferred quality log failed: ${error.message}`);
+    }
+  });
+
+  ipcMain.handle('quality-memory:getGuardrails', async (_event, payload) => {
+    try {
+      return await getQualityGuardrails(payload || {});
+    } catch (error) {
+      throw new Error(`Quality memory read failed: ${error.message}`);
+    }
+  });
+
+  ipcMain.handle('quality-memory:updateFromAudit', async (_event, payload) => {
+    try {
+      return await updateQualityMemoryFromAudit(payload || {});
+    } catch (error) {
+      throw new Error(`Quality memory update failed: ${error.message}`);
+    }
+  });
+
+  ipcMain.handle('quality-memory:getStability', async (_event, payload) => {
+    try {
+      return await getQualityStabilityStatus(payload || {});
+    } catch (error) {
+      throw new Error(`Quality stability check failed: ${error.message}`);
+    }
   });
 
   ipcMain.handle('dialog:openPdf', async () => {

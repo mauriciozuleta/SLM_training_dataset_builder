@@ -105,8 +105,18 @@ const getQualityExplanation = (level) => {
   return explanations[levelLower] || 'Quality audit completed.';
 };
 
+const getAuditIssues = (auditResult) => {
+  const issues = [];
+  const results = Array.isArray(auditResult?.results) ? auditResult.results : [];
+  results.forEach((result) => {
+    const bucket = Array.isArray(result?.issues) ? result.issues : [];
+    bucket.forEach((entry) => issues.push(entry));
+  });
+  return issues;
+};
+
 const getIssuesSummaryText = (auditResult) => {
-  const issues = auditResult?.findings || [];
+  const issues = getAuditIssues(auditResult);
   if (issues.length === 0) {
     return '';
   }
@@ -125,6 +135,37 @@ const getIssuesSummaryText = (auditResult) => {
 
   return topIssues ? `Top issues: ${topIssues}` : '';
 };
+
+const buildRedoGuidanceFromAudit = (auditResult) => {
+  const issues = getAuditIssues(auditResult);
+  if (issues.length === 0) {
+    return '';
+  }
+
+  const prioritized = issues
+    .slice(0, 8)
+    .map((issue) => {
+      const code = `${issue?.code || 'UNKNOWN_ISSUE'}`.trim();
+      const instruction = `${issue?.repairGuidance?.instruction || issue?.message || ''}`.trim();
+      return instruction ? `${code}: ${instruction}` : code;
+    })
+    .filter(Boolean);
+
+  if (prioritized.length === 0) {
+    return '';
+  }
+
+  return [
+    'Previous audit findings to avoid in this redo run:',
+    ...prioritized,
+    'Ensure outputs remain structurally valid and increase diversity where repetition was flagged.',
+  ].join(' ');
+};
+
+const buildCombinedGuidance = (...parts) => parts
+  .map((entry) => `${entry || ''}`.trim())
+  .filter(Boolean)
+  .join(' ');
 
 let qualityDecision = null;
 
@@ -1122,21 +1163,37 @@ generateButton?.addEventListener('click', async () => {
 
         let result;
         try {
-          const runBuildArtifacts = (allowLocalFallback) => window.desktopApp.buildArtifacts({
+          const guardrailSnapshot = await window.desktopApp?.getQualityGuardrails?.({ maxItems: 8 });
+          const memoryGuardrails = `${guardrailSnapshot?.guardrails || ''}`.trim();
+          if (memoryGuardrails) {
+            addLog('Loaded persistent quality guardrails from previous runs.', 'info');
+          }
+          if (guardrailSnapshot?.stability) {
+            const stability = guardrailSnapshot.stability;
+            addLog(
+              stability.isStableOptimum
+                ? `Stable optimum reached (${Number(stability.consecutiveOptimumRuns || 0)} consecutive optimum run(s)).`
+                : `Stable optimum not yet reached. ${Array.isArray(stability.reasons) && stability.reasons.length > 0 ? stability.reasons[0] : 'More clean runs are required.'}`,
+              stability.isStableOptimum ? 'success' : 'info'
+            );
+          }
+
+          const runBuildArtifacts = ({ allowLocalFallback = false, overwrite = allowOverwrite, generationGuidance = '' } = {}) => window.desktopApp.buildArtifacts({
             outputDir: outputFolder,
             selectedOutputs,
             outputFileNames,
             documentJson: extracted.data,
             documentJsonPath: extracted.outputPath,
-            allowOverwrite,
+            allowOverwrite: overwrite,
             allowLocalFallback,
+            generationGuidance: buildCombinedGuidance(memoryGuardrails, generationGuidance),
             idPrefix: documentIdPrefix,
             apiProviderCount,
             apiProviders,
           });
 
           try {
-            result = await runBuildArtifacts(false);
+            result = await runBuildArtifacts({ allowLocalFallback: false });
           } catch (firstBuildError) {
             const firstMessage = `${firstBuildError?.message || firstBuildError || ''}`;
             const cancelled = /generation cancelled by user/i.test(firstMessage);
@@ -1169,7 +1226,7 @@ generateButton?.addEventListener('click', async () => {
               throw firstBuildError;
             }
 
-            result = await runBuildArtifacts(true);
+            result = await runBuildArtifacts({ allowLocalFallback: true });
           }
         } finally {
           unsubscribeArtifactProgress();
@@ -1256,12 +1313,181 @@ generateButton?.addEventListener('click', async () => {
 
             // Handle user decision
             if (userDecision === 'repair') {
-              addLog('Repair action selected. (Step 5 implementation required)', 'warning');
+              addLog('Repair action selected. Regenerating affected pairs...', 'info');
+
+              // Extract pair file paths from result
+              const pairFilePaths = {};
+              if (Array.isArray(result?.written)) {
+                result.written.forEach((entry) => {
+                  if (entry?.key === 'deterministicPairs' && entry?.path) {
+                    pairFilePaths.deterministic = entry.path;
+                  }
+                  if (entry?.key === 'conversationalPairs' && entry?.path) {
+                    pairFilePaths.conversational = entry.path;
+                  }
+                });
+              }
+
+              try {
+                const repairResult = await window.desktopApp?.repairPairs?.({
+                  auditResult,
+                  deterministicPairPath: pairFilePaths.deterministic,
+                  conversationalPairPath: pairFilePaths.conversational,
+                  outputFolder,
+                });
+
+                if (repairResult?.success) {
+                  const totalRepaired = (repairResult?.repairs?.deterministic?.merged || 0) +
+                                       (repairResult?.repairs?.conversational?.merged || 0);
+                  addLog(`Repair complete: ${totalRepaired} pairs regenerated.`, 'success');
+
+                  // Re-run audit after repair
+                  addLog('Running quality audit after repair...', 'info');
+                  const postRepairAudit = await window.desktopApp.auditPairs({
+                    files: auditCandidates,
+                    reportPath: qualityReportPath,
+                  });
+
+                  addLog('Post-repair audit complete. Displaying updated results...', 'info');
+                  const newDecision = await getQualityDecision(postRepairAudit);
+
+                  const memoryUpdate = await window.desktopApp?.updateQualityMemoryFromAudit?.({
+                    decision: 'repair',
+                    auditResult,
+                    postAuditResult: postRepairAudit,
+                    maxGuardrails: 8,
+                  });
+                  if (memoryUpdate?.stability) {
+                    addLog(
+                      memoryUpdate.stability.isStableOptimum
+                        ? 'Stable optimum criteria satisfied after repair.'
+                        : `Stability check after repair: ${memoryUpdate.stability.reasons?.[0] || 'not yet stable.'}`,
+                      memoryUpdate.stability.isStableOptimum ? 'success' : 'info'
+                    );
+                  }
+
+                  if (newDecision !== 'close') {
+                    addLog(`Follow-up action selected: ${newDecision}`, 'info');
+                  } else {
+                    addLog('Updated quality results reviewed.', 'info');
+                  }
+                } else {
+                  addLog(`Repair encountered issues: ${repairResult?.message || 'Unknown error'}`, 'warning');
+                }
+              } catch (repairError) {
+                const message = `${repairError?.message || repairError || 'Unknown repair error.'}`;
+                addLog(`Pair repair failed: ${message}`, 'error');
+              }
             } else if (userDecision === 'defer-log') {
-              addLog('Deferred fixes logged. (Step 6 implementation required)', 'warning');
+              const deferredLogPath = joinPath(outputFolder, `${documentIdPrefix || 'output'}_pending_repairs.json`);
+              addLog('Defer-log selected. Recording unresolved issues for later repair...', 'warning');
+
+              try {
+                const deferResult = await window.desktopApp?.deferQualityLog?.({
+                  auditResult,
+                  files: auditCandidates,
+                  deferredLogPath,
+                });
+
+                if (deferResult?.ok) {
+                  const memoryUpdate = await window.desktopApp?.updateQualityMemoryFromAudit?.({
+                    decision: 'defer-log',
+                    auditResult,
+                    maxGuardrails: 8,
+                  });
+                  if (memoryUpdate?.stability) {
+                    addLog(`Stability check after defer-log: ${memoryUpdate.stability.reasons?.[0] || 'not yet stable.'}`, 'info');
+                  }
+
+                  addLog(
+                    `Deferred quality log saved. Pending issues: ${deferResult.totalPendingIssues}. Files flagged: ${deferResult.filesAnnotated}.`,
+                    'warning'
+                  );
+                  addLog(`Deferred log path: ${deferredLogPath}`, 'info');
+                } else {
+                  addLog('Deferred quality log completed with some file annotation errors.', 'warning');
+                }
+              } catch (deferError) {
+                const message = `${deferError?.message || deferError || 'Unknown defer-log error.'}`;
+                addLog(`Deferred log failed: ${message}`, 'error');
+              }
             } else if (userDecision === 'redo') {
-              addLog('Regeneration selected. (Step 7 implementation required)', 'warning');
+              addLog('Regeneration selected. Rebuilding artifacts with audit-informed guidance...', 'warning');
+              const redoGuidance = buildRedoGuidanceFromAudit(auditResult);
+              if (redoGuidance) {
+                addLog('Applying previous audit findings as regeneration guidance.', 'info');
+              }
+
+              try {
+                const redoResult = await runBuildArtifacts({
+                  allowLocalFallback: true,
+                  overwrite: true,
+                  generationGuidance: redoGuidance,
+                });
+
+                if (Array.isArray(redoResult?.written) && redoResult.written.length > 0) {
+                  redoResult.written.forEach((entry) => {
+                    addLog(`Redo saved (${entry.key}): ${entry.path}`, 'success');
+                  });
+                }
+
+                const redoAuditCandidates = Array.isArray(redoResult?.written)
+                  ? redoResult.written
+                    .filter((entry) => ['conversationalPairs', 'deterministicPairs'].includes(`${entry?.key || ''}`))
+                    .map((entry) => `${entry?.path || ''}`)
+                    .filter(Boolean)
+                  : [];
+
+                const postRedoCandidates = redoAuditCandidates.length > 0 ? redoAuditCandidates : auditCandidates;
+                if (postRedoCandidates.length > 0) {
+                  addLog('Running quality audit after redo...', 'info');
+                  const postRedoAudit = await window.desktopApp.auditPairs({
+                    files: postRedoCandidates,
+                    reportPath: qualityReportPath,
+                  });
+
+                  const memoryUpdate = await window.desktopApp?.updateQualityMemoryFromAudit?.({
+                    decision: 'redo',
+                    auditResult,
+                    postAuditResult: postRedoAudit,
+                    maxGuardrails: 8,
+                  });
+                  if (memoryUpdate?.stability) {
+                    addLog(
+                      memoryUpdate.stability.isStableOptimum
+                        ? 'Stable optimum criteria satisfied after redo.'
+                        : `Stability check after redo: ${memoryUpdate.stability.reasons?.[0] || 'not yet stable.'}`,
+                      memoryUpdate.stability.isStableOptimum ? 'success' : 'info'
+                    );
+                  }
+
+                  const postRedoRating = postRedoAudit?.overallRating || {};
+                  addLog(
+                    `Post-redo quality: ${`${postRedoRating?.level || 'unknown'}`.toUpperCase()} (${Number(postRedoRating?.weightedIssuePercent || 0)}%).`,
+                    'info'
+                  );
+
+                  const followUpDecision = await getQualityDecision(postRedoAudit);
+                  addLog(`Post-redo action selected: ${followUpDecision}`, 'info');
+                }
+              } catch (redoError) {
+                const message = `${redoError?.message || redoError || 'Unknown redo error.'}`;
+                addLog(`Redo failed: ${message}`, 'error');
+              }
             } else if (userDecision === 'close') {
+              const memoryUpdate = await window.desktopApp?.updateQualityMemoryFromAudit?.({
+                decision: 'close',
+                auditResult,
+                maxGuardrails: 8,
+              });
+              if (memoryUpdate?.stability) {
+                addLog(
+                  memoryUpdate.stability.isStableOptimum
+                    ? 'Stable optimum criteria satisfied.'
+                    : `Stability check: ${memoryUpdate.stability.reasons?.[0] || 'not yet stable.'}`,
+                  memoryUpdate.stability.isStableOptimum ? 'success' : 'info'
+                );
+              }
               addLog('Audit results reviewed.', 'info');
             }
           } catch (auditError) {

@@ -181,6 +181,7 @@ function buildFallbackPair(section, documentJson, sectionOrdinal, pairIndex, per
  */
 async function buildSectionPairsFromApi(api, documentJson, section, sectionOrdinal, pairCount, preferredProvider, requestOptions = {}) {
   const sectionTitle = normalizeText(section?.title) || `Section ${sectionOrdinal}`;
+  const guidance = normalizeText(requestOptions?.generationGuidance).slice(0, 900);
   const prompt = [
     'You are generating aviation tutoring conversations for small language model training.',
     'Return strict JSON only with shape:',
@@ -191,6 +192,7 @@ async function buildSectionPairsFromApi(api, documentJson, section, sectionOrdin
     '- Vary the student opening across confident, confused, and checkride-prep styles.',
     '- Keep the assistant answer concise, instructional, and useful for training.',
     '- Do not use markdown or code fences.',
+    guidance ? `Regeneration guidance from prior audit findings: ${guidance}` : '',
   ].join(' ');
 
   const payload = {
@@ -264,6 +266,7 @@ function createConversationalPairGenerator({ api }) {
       ? options.secondaryProvider.trim().toLowerCase()
       : '';
     const allowLocalFallback = Boolean(options?.allowLocalFallback);
+    const generationGuidance = normalizeText(options?.generationGuidance).slice(0, 900);
     const onLog = typeof options?.onLog === 'function' ? options.onLog : () => {};
     const abortSignal = options?.abortSignal || null;
     const PRIMARY_TIMEOUT_MS = 30000;
@@ -328,6 +331,7 @@ function createConversationalPairGenerator({ api }) {
             {
               signal: abortSignal,
               timeoutMs: firstProvider === preferredProvider ? PRIMARY_TIMEOUT_MS : SECONDARY_TIMEOUT_MS,
+              generationGuidance,
             }
           );
           rawPairs = Array.isArray(result?.pairs) ? result.pairs.slice(0, pairCount) : [];
@@ -369,6 +373,7 @@ function createConversationalPairGenerator({ api }) {
             {
               signal: abortSignal,
               timeoutMs: SECONDARY_TIMEOUT_MS,
+              generationGuidance,
             }
           );
           rawPairs = Array.isArray(result?.pairs) ? result.pairs.slice(0, pairCount) : [];

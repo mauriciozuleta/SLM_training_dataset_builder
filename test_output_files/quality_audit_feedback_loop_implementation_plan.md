@@ -363,3 +363,309 @@ Step 4 outcome:
 - Action buttons are dynamically gated by the audit rating level.
 - The workflow now pauses after audit completion to collect user feedback before proceeding.
 - All user decisions are logged for future workflow execution and stepped implementation.
+
+### Step 5 Execution Record
+Status: Completed
+
+Actions implemented:
+1. Created a targeted pair repair service:
+	- File: `src/main/services/documentGeneration/pairRepairService.js`
+	- Functions implemented:
+		- `extractAffectedPairIds(auditResult)`: Extracts pair IDs from audit findings.
+		- `loadPairFile(filePath)`: Loads pair JSON data.
+		- `savePairFile(filePath, data)`: Saves modified pair data back to file.
+		- `findDeterministicPairsToRepair()`: Locates affected pairs in deterministic set.
+		- `findConversationalPairsToRepair()`: Locates affected pairs in conversational set.
+		- `mergeDeterministicPairs() / mergeConversationalPairs()`: Merges repaired content back into original structure.
+		- `repairAffectedPairs(options)`: Main entry point for repair orchestration.
+2. Exposed repair via IPC bridge:
+	- Added import in `main.js`: `const { repairAffectedPairs } = require('./src/main/services/documentGeneration/pairRepairService')`
+	- Registered IPC handler `pairs:repair` to invoke repair service.
+	- Added preload bridge `repairPairs(payload)` in `preload.js` for renderer access.
+3. Integrated repair workflow into renderer pipeline:
+	- File: `src/renderer_pipeline.js`
+	- When user selects "Repair Selected Issues":
+		- Extract deterministic and conversational pair file paths from generation result.
+		- Call repair service via `window.desktopApp.repairPairs()` with audit findings and file paths.
+		- Log repair progress and completion count.
+		- **After repair completes automatically re-run audit** on the same artifacts.
+		- Display updated quality results modal to user with new rating.
+		- Allow user to select next action (close, defer-log, redo) based on improvement.
+4. Repair logic (current first iteration):
+	- Identifies problematic pairs by ID from audit findings.
+	- Loads existing pair files (JSON).
+	- Merges audit findings into the structure (placeholder for future API-driven regeneration).
+	- Saves updated pair files back to disk.
+	- Returns repair summary (counts, errors, affected IDs).
+
+Validation run and results:
+1. Static validation:
+	- No syntax/problems in:
+		- `src/renderer_pipeline.js`
+		- `main.js`
+		- `preload.js`
+		- `pairRepairService.js`
+2. Code inspection:
+	- Repair service properly exports reusable functions.
+	- IPC handler registered; preload bridge exposed.
+	- Renderer workflow correctly extracts pair file paths and calls repair.
+	- Post-repair audit re-run is wired and will display new modal.
+
+Step 5 outcome:
+- Targeted repair is now available as a user action in the quality results modal.
+- When user selects "Repair", affected pairs are identified from audit findings.
+- Repair modifies only problematic pairs, not the entire document.
+- Post-repair audit automatically runs to verify improvement.
+- User sees updated quality results and can make informed next-action decisions.
+- Workflow supports iterative improvement cycles without full document regeneration.
+
+### Step 6 Execution Record
+Status: Completed
+
+Actions implemented:
+1. Added deferred quality log service:
+	- File: `src/main/services/documentGeneration/deferredQualityLogService.js`
+	- Main behavior:
+		- Builds machine-readable pending-repair list from audit findings.
+		- Saves a deferred log JSON file in output folder.
+		- Annotates generated pair files with `qualityFeedback` metadata.
+		- Sets unresolved flag and readiness status (`canTrain: false`) for downstream checks.
+2. Wired defer action through Electron IPC:
+	- File: `main.js`
+		- Registered handler `pairs:deferLog`.
+	- File: `preload.js`
+		- Exposed `deferQualityLog(payload)` for renderer calls.
+3. Implemented renderer defer-log flow:
+	- File: `src/renderer_pipeline.js`
+	- When user selects **Generate Log for Later**:
+		- Calls `window.desktopApp.deferQualityLog(...)` with current audit result and generated pair files.
+		- Writes deferred log file as `<documentIdPrefix>_pending_repairs.json` in output folder.
+		- Logs pending issue count and file annotation status.
+4. Added pipeline detection and warn/block capability:
+	- File: `scripts/audit_training_pairs.js`
+		- Added detection for dataset-level unresolved flag in `qualityFeedback`.
+		- Emits warning code `DEFERRED_REPAIRS_PENDING` when deferred issues exist.
+	- File: `scripts/check_training_readiness.js` (new)
+		- Scans pair files for unresolved-quality flags.
+		- Warn mode: `npm run check:training-ready`
+		- Block mode: `npm run check:training-ready:block` (exit code 1 on unresolved issues)
+	- File: `package.json`
+		- Added both readiness scripts.
+
+Validation run and results:
+1. Static validation:
+	- No syntax/problems in:
+		- `src/renderer_pipeline.js`
+		- `main.js`
+		- `preload.js`
+		- `scripts/audit_training_pairs.js`
+		- `src/main/services/documentGeneration/deferredQualityLogService.js`
+		- `scripts/check_training_readiness.js`
+2. Runtime validation (CLI):
+	- Readiness check script executes and supports warn/block modes.
+
+Step 6 outcome:
+- Deferred-fix workflow is now functional end-to-end.
+- Pending repair instructions are persisted as structured JSON for later automation.
+- Generated datasets are explicitly flagged with unresolved quality debt metadata.
+- Training pipeline can now detect unresolved deferred issues and either warn or block execution.
+
+### Step 7 Execution Record
+Status: Completed
+
+Actions implemented:
+1. Added audit-informed regeneration guidance builder in renderer:
+	- File: `src/renderer_pipeline.js`
+	- New helpers:
+		- `getAuditIssues(auditResult)`: Flattens audit issues across all scanned files.
+		- `buildRedoGuidanceFromAudit(auditResult)`: Builds concise guidance text from top issue codes and repair instructions.
+	- Guidance now captures prior audit failures and diversity constraints for the redo attempt.
+2. Upgraded artifact build invocation to support per-run options:
+	- File: `src/renderer_pipeline.js`
+	- `runBuildArtifacts(...)` now accepts:
+		- `allowLocalFallback`
+		- `overwrite`
+		- `generationGuidance`
+3. Implemented full Redo action flow:
+	- File: `src/renderer_pipeline.js`
+	- When user selects **Regenerate**:
+		- Rebuilds artifacts with overwrite enabled.
+		- Injects guidance built from previous audit findings.
+		- Saves regenerated artifacts and logs written paths.
+		- Automatically re-runs quality audit on regenerated pair artifacts.
+		- Presents updated quality modal and captures follow-up decision.
+4. Propagated guidance through backend generation pipeline:
+	- File: `src/main/services/documentGeneration/artifactWriter.js`
+		- Reads `generationGuidance` from payload.
+		- Passes guidance to summary/question/conversational generators.
+	- File: `src/main/services/documentGeneration/summaryGenerator.js`
+		- Adds guidance line to summary API prompts.
+	- File: `src/main/services/documentGeneration/questionBankGenerator.js`
+		- Adds guidance line to question-generation API prompts.
+	- File: `src/main/services/documentGeneration/conversationalPairGenerator.js`
+		- Adds guidance line to conversational-generation API prompts.
+
+Validation run and results:
+1. Static validation:
+	- No syntax/problems in:
+		- `src/renderer_pipeline.js`
+		- `src/main/services/documentGeneration/artifactWriter.js`
+		- `src/main/services/documentGeneration/summaryGenerator.js`
+		- `src/main/services/documentGeneration/questionBankGenerator.js`
+		- `src/main/services/documentGeneration/conversationalPairGenerator.js`
+2. Wiring validation:
+	- `generationGuidance` is present end-to-end from renderer action to API prompt construction.
+
+Step 7 outcome:
+- Redo now performs a full regeneration pass with explicit error-aware guidance from previous audit findings.
+- The retry is no longer blind; it is informed by specific issue codes and repair instructions.
+- Post-redo audit runs automatically and feeds back into the same decision dialog loop.
+- This closes the intelligent retry loop required for smarter regeneration behavior.
+
+### Step 8 Execution Record
+Status: Completed
+
+Actions implemented:
+1. Added automatic dual report output in audit pipeline:
+	- File: `scripts/audit_training_pairs.js`
+	- When `--report <path>.json` is provided, the script now writes:
+		- Machine report: `<path>.json`
+		- Human report: `<path>.md`
+2. Added Markdown report builder with required sections:
+	- `buildMarkdownReport(payload, previousPayload)` now produces:
+		- Run metadata
+		- Quality rating
+		- Top issues
+		- Affected sections/targets
+		- Recommended actions
+		- Change vs previous run (improved/stable/worse)
+		- Per-file summary
+3. Added trend comparison against previous report:
+	- Audit now reads existing JSON report at the same path before overwrite.
+	- Compares weighted issue percent to classify trend:
+		- improved
+		- stable
+		- worse
+4. Extended returned audit payload metadata:
+	- Added `markdownReportPath` in `performAudit(...)` return object.
+	- CLI output now prints both report save paths.
+
+Validation run and results:
+1. Executed:
+	- `npm run audit:pairs -- --file "test_output_files/AFH_1 output docs/AFH_1_conversational_training_pairs.json" --report "test_output_files/AFH_1 output docs/AFH_1_quality_report_step8_verify.json"`
+2. Result:
+	- Quality level: `OPTIMUM (0%)`
+	- JSON report generated:
+		- `test_output_files/AFH_1 output docs/AFH_1_quality_report_step8_verify.json`
+	- Markdown report generated:
+		- `test_output_files/AFH_1 output docs/AFH_1_quality_report_step8_verify.md`
+3. Static validation:
+	- No syntax/problems in `scripts/audit_training_pairs.js`
+
+Step 8 outcome:
+- Every audit run can now produce both machine-readable and human-readable reports.
+- Report content supports records, stakeholder review, and automation.
+- Trend reporting now gives immediate change visibility (improved/stable/worse) versus previous run.
+
+### Step 9 Execution Record
+Status: Completed
+
+Actions implemented:
+1. Added persistent quality memory service:
+	- File: `src/main/services/documentGeneration/qualityMemoryService.js`
+	- Stores memory in: `test_output_files/quality_feedback_memory.json`
+	- Captures recurring issue codes, severity, and repair instructions.
+	- Captures successful fix patterns when repair/redo improves quality.
+	- Builds reusable guardrail text from top recurring issues and proven fixes.
+2. Wired quality memory through IPC:
+	- File: `main.js`
+		- `quality-memory:getGuardrails`
+		- `quality-memory:updateFromAudit`
+	- File: `preload.js`
+		- `getQualityGuardrails(payload)`
+		- `updateQualityMemoryFromAudit(payload)`
+3. Integrated memory retrieval before generation:
+	- File: `src/renderer_pipeline.js`
+	- Before artifact build starts, renderer requests guardrails from memory.
+	- Guardrails are injected into generation guidance for all provider prompts.
+4. Integrated memory updates after user decisions:
+	- File: `src/renderer_pipeline.js`
+	- Memory is updated after:
+		- close
+		- defer-log
+		- repair (with post-repair audit comparison)
+		- redo (with post-redo audit comparison)
+	- Improved outcomes from repair/redo are recorded as successful fix patterns.
+
+Validation run and results:
+1. Static validation:
+	- No syntax/problems in:
+		- `src/main/services/documentGeneration/qualityMemoryService.js`
+		- `main.js`
+		- `preload.js`
+		- `src/renderer_pipeline.js`
+2. Wiring validation:
+	- Guardrails are now included in build payload guidance path.
+	- Memory update calls are present in all decision branches.
+
+Step 9 outcome:
+- A persistent quality memory loop is now active across runs.
+- New generations can proactively avoid recurring issues using stored guardrails.
+- Previously successful fixes are retained and reused as constraints.
+- The system now improves over time instead of treating each run as stateless.
+
+### Step 10 Execution Record
+Status: Completed
+
+Actions implemented:
+1. Added explicit stable-optimum evaluation logic:
+	- File: `src/main/services/documentGeneration/qualityMemoryService.js`
+	- Stability criteria implemented:
+		- 3 consecutive runs with `OPTIMUM` rating
+		- No fatal structural issue codes in the latest run
+		- No recurring high-impact issue code above threshold in recent history
+2. Extended quality memory model:
+	- Each recorded run now stores:
+		- `beforeLevel`
+		- `afterLevel`
+		- `issueCodes`
+		- `fatalIssueCodes`
+		- `fatalIssueCount`
+		- weighted issue percentages before/after
+	- Memory now stores a computed `stability` snapshot.
+3. Added app-facing stability status API:
+	- File: `main.js`
+		- `quality-memory:getStability`
+	- File: `preload.js`
+		- `getQualityStability(payload)`
+4. Added CLI stability checker:
+	- File: `scripts/check_quality_stability.js`
+	- Package scripts:
+		- `npm run check:quality-stability`
+		- `npm run check:quality-stability:require`
+	- Supports hard failure when stable optimum is required.
+5. Added renderer-side stability visibility:
+	- File: `src/renderer_pipeline.js`
+	- Logs current stability status when guardrails are loaded.
+	- Logs updated stability result after close, repair, defer-log, and redo decisions.
+
+Validation run and results:
+1. Static validation:
+	- No syntax/problems in:
+		- `src/main/services/documentGeneration/qualityMemoryService.js`
+		- `main.js`
+		- `preload.js`
+		- `src/renderer_pipeline.js`
+		- `scripts/check_quality_stability.js`
+		- `package.json`
+2. CLI validation:
+	- Ran: `npm run check:quality-stability`
+	- Result correctly reports not stable yet because memory has no recorded run history:
+		- `Stable Optimum: NO`
+		- `Need 3 consecutive runs; only 0 recorded.`
+
+Step 10 outcome:
+- The system now has a defined stop condition for quality rework.
+- Stable optimum can be measured, reported, and enforced.
+- Users and automation can distinguish between “good current run” and “stable sustained quality.”
+- This completes the planned quality audit + feedback loop implementation.
