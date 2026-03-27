@@ -268,6 +268,7 @@ function createConversationalPairGenerator({ api }) {
     const allowLocalFallback = Boolean(options?.allowLocalFallback);
     const generationGuidance = normalizeText(options?.generationGuidance).slice(0, 900);
     const onLog = typeof options?.onLog === 'function' ? options.onLog : () => {};
+    const onProgress = typeof options?.onProgress === 'function' ? options.onProgress : () => {};
     const abortSignal = options?.abortSignal || null;
     const PRIMARY_TIMEOUT_MS = 30000;
     const SECONDARY_TIMEOUT_MS = 60000;
@@ -296,6 +297,12 @@ function createConversationalPairGenerator({ api }) {
     let primaryRecoveryPending = false;
     let forceSecondaryForRemainder = false;
 
+    onProgress({
+      completed: 0,
+      total: targetPairCount,
+      progressText: `0/${targetPairCount}`,
+    });
+
     const buildSectionResult = async (target, index) => {
       assertNotAborted();
       const section = target.section;
@@ -317,7 +324,20 @@ function createConversationalPairGenerator({ api }) {
       }
       const preferSecondary = canUseSecondary && (forceSecondaryForRemainder || now < switchedToSecondaryUntil);
       const firstProvider = preferSecondary ? secondaryProvider : preferredProvider;
-      const secondProvider = canUseSecondary && firstProvider === preferredProvider ? secondaryProvider : '';
+      const secondProvider = canUseSecondary
+        ? (firstProvider === preferredProvider ? secondaryProvider : preferredProvider)
+        : '';
+      const windowRemainingMs = Math.max(0, switchedToSecondaryUntil - now);
+      const routingMode = forceSecondaryForRemainder
+        ? 'secondary-locked'
+        : (preferSecondary ? 'secondary-window' : 'primary');
+      let resolvedProvider = '';
+      let resolvedVia = 'none';
+
+      log(
+        `Failover timeline [conversational s${sectionOrdinal}]: start mode=${routingMode} first=${firstProvider || 'none'} alt=${secondProvider || 'none'} windowMs=${windowRemainingMs}`,
+        'info'
+      );
 
       if (firstProvider) {
         try {
@@ -341,6 +361,8 @@ function createConversationalPairGenerator({ api }) {
             prompt_tokens: Number(result?.usage?.prompt_tokens || 0),
             completion_tokens: Number(result?.usage?.completion_tokens || 0),
           };
+          resolvedProvider = firstProvider;
+          resolvedVia = 'first';
 
           if (firstProvider === preferredProvider) {
             primaryRecoveryPending = false;
@@ -362,7 +384,7 @@ function createConversationalPairGenerator({ api }) {
 
       if ((!Array.isArray(rawPairs) || rawPairs.length === 0) && secondProvider) {
         try {
-          log(`Retrying conversational section ${sectionOrdinal} with backup API (${secondProvider}).`, 'warning');
+          log(`Retrying conversational section ${sectionOrdinal} with alternate API (${secondProvider}).`, 'warning');
           const result = await buildSectionPairsFromApi(
             api,
             safeDocumentJson,
@@ -383,6 +405,8 @@ function createConversationalPairGenerator({ api }) {
             prompt_tokens: Number(result?.usage?.prompt_tokens || 0),
             completion_tokens: Number(result?.usage?.completion_tokens || 0),
           };
+          resolvedProvider = secondProvider;
+          resolvedVia = 'alternate';
         } catch (error) {
           lastError = error;
           rawPairs = [];
@@ -393,6 +417,7 @@ function createConversationalPairGenerator({ api }) {
         if (!allowLocalFallback) {
           const sectionRef = normalizeText(section?.id) || `${sectionOrdinal}`;
           const errorMsg = `${lastError?.message || lastError || 'Unknown API error.'}`;
+          log(`Failover timeline [conversational s${sectionOrdinal}]: outcome=failed error=${errorMsg}`, 'error');
           throw new Error(`Conversational generation failed for section ${sectionRef}. ${errorMsg}`);
         }
         rawPairs = [];
@@ -400,6 +425,18 @@ function createConversationalPairGenerator({ api }) {
 
       while (allowLocalFallback && rawPairs.length < pairCount) {
         rawPairs.push(buildFallbackPair(section, safeDocumentJson, sectionOrdinal, rawPairs.length, rawPairs.length));
+      }
+
+      if (resolvedProvider) {
+        log(
+          `Failover timeline [conversational s${sectionOrdinal}]: outcome=success via=${resolvedVia} provider=${resolvedProvider} pairs=${Math.min(pairCount, rawPairs.length)}`,
+          'info'
+        );
+      } else if (allowLocalFallback) {
+        log(
+          `Failover timeline [conversational s${sectionOrdinal}]: outcome=fallback pairs=${Math.min(pairCount, rawPairs.length)}`,
+          'warning'
+        );
       }
 
       return {
@@ -415,9 +452,16 @@ function createConversationalPairGenerator({ api }) {
     };
 
     const sectionResults = [];
+    let generatedPairCount = 0;
     for (let index = 0; index < sectionTargets.length; index += 1) {
       const sectionResult = await buildSectionResult(sectionTargets[index], index);
       sectionResults.push(sectionResult);
+      generatedPairCount += Array.isArray(sectionResult?.rawPairs) ? sectionResult.rawPairs.length : 0;
+      onProgress({
+        completed: generatedPairCount,
+        total: targetPairCount,
+        progressText: `${generatedPairCount}/${targetPairCount}`,
+      });
     }
 
     sectionResults

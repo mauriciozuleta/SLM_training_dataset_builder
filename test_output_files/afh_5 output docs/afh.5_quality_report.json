@@ -1,0 +1,193 @@
+{
+  "generatedAtUtc": "2026-03-27T17:32:54.538Z",
+  "root": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files",
+  "fileCount": 2,
+  "totalPairs": 1492,
+  "overallRating": {
+    "level": "optimum",
+    "weightedIssueRate": 0.0001675603217158177,
+    "weightedIssuePercent": 0.017,
+    "weightedIssueCount": 0.25,
+    "thresholds": {
+      "optimumMaxPercent": 0.5,
+      "acceptableMaxPercent": 2,
+      "criticalMaxPercent": 7.000000000000001
+    },
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "fatalIssueCount": 0
+  },
+  "results": [
+    {
+      "type": "deterministic",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_5 output docs\\afh_5_deterministic_training_pairs.json",
+      "pairCount": 748,
+      "questionCount": 68,
+      "subjectDistributionTop": [
+        {
+          "key": "Aviation Safety",
+          "count": 264
+        },
+        {
+          "key": "Aerodynamics",
+          "count": 143
+        },
+        {
+          "key": "Flight Maneuvers",
+          "count": 143
+        },
+        {
+          "key": "Stall Recovery",
+          "count": 121
+        },
+        {
+          "key": "Pilot Training",
+          "count": 99
+        },
+        {
+          "key": "Aviation",
+          "count": 88
+        },
+        {
+          "key": "Flight Training",
+          "count": 77
+        },
+        {
+          "key": "Accelerated Stalls",
+          "count": 44
+        },
+        {
+          "key": "Flight Operations",
+          "count": 33
+        },
+        {
+          "key": "Aircraft Systems",
+          "count": 33
+        },
+        {
+          "key": "Flight Safety",
+          "count": 33
+        },
+        {
+          "key": "Human Factors",
+          "count": 22
+        },
+        {
+          "key": "UPRT",
+          "count": 22
+        },
+        {
+          "key": "Risk Management",
+          "count": 22
+        },
+        {
+          "key": "Upset Prevention and Recovery Training",
+          "count": 22
+        }
+      ],
+      "issues": [
+        {
+          "severity": "warning",
+          "code": "REPEATED_SUBJECTS",
+          "message": "Subject distribution is highly concentrated; consider balancing section/topic coverage.",
+          "target": {
+            "type": "subject-group",
+            "id": "repeated-subjects"
+          },
+          "repairGuidance": {
+            "action": "targeted-repair",
+            "scope": "section",
+            "instruction": "Regenerate over-concentrated sections with subject balancing constraints."
+          },
+          "context": {
+            "repeatedSubjects": [
+              {
+                "key": "Aviation Safety",
+                "count": 264,
+                "targets": [
+                  "AFH.5.1.1",
+                  "AFH.5.1.1",
+                  "AFH.5.1.1",
+                  "AFH.5.1.1",
+                  "AFH.5.1.1",
+                  "AFH.5.1.1",
+                  "AFH.5.1.1",
+                  "AFH.5.1.1"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "conversational",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_5 output docs\\afh_5_conversational_training_pairs.json",
+      "pairCount": 744,
+      "subjectDistributionTop": [
+        {
+          "key": "Stall Recovery",
+          "count": 64
+        },
+        {
+          "key": "AOA Indicators",
+          "count": 31
+        },
+        {
+          "key": "Accelerated Stalls",
+          "count": 31
+        },
+        {
+          "key": "Power-Off Stalls",
+          "count": 29
+        },
+        {
+          "key": "Cross-Control Stall",
+          "count": 26
+        },
+        {
+          "key": "Recovery",
+          "count": 25
+        },
+        {
+          "key": "spiral dive",
+          "count": 25
+        },
+        {
+          "key": "AOA",
+          "count": 20
+        },
+        {
+          "key": "Aerodynamics",
+          "count": 19
+        },
+        {
+          "key": "Slow Flight",
+          "count": 19
+        },
+        {
+          "key": "recovery",
+          "count": 18
+        },
+        {
+          "key": "Flight Controls",
+          "count": 18
+        },
+        {
+          "key": "Spin Recovery",
+          "count": 17
+        },
+        {
+          "key": "Spatial Disorientation",
+          "count": 16
+        },
+        {
+          "key": "Elevator Trim Stall",
+          "count": 16
+        }
+      ],
+      "issues": []
+    }
+  ]
+}

@@ -272,7 +272,7 @@ const setConversionStatus = (message, percent = 0, state = 'idle') => {
   void percent;
 };
 
-const setOutputBuildState = (key, state = 'idle') => {
+const setOutputBuildState = (key, state = 'idle', progressText = '') => {
   const badge = outputBadgesByKey[key];
   if (!badge) {
     return;
@@ -282,6 +282,8 @@ const setOutputBuildState = (key, state = 'idle') => {
     badge.hidden = true;
     badge.setAttribute('aria-hidden', 'true');
     delete badge.dataset.state;
+    delete badge.dataset.hasText;
+    badge.title = '';
     badge.textContent = '';
     return;
   }
@@ -291,15 +293,22 @@ const setOutputBuildState = (key, state = 'idle') => {
   badge.dataset.state = state;
 
   if (state === 'success') {
+    badge.dataset.hasText = 'false';
+    badge.title = '';
     badge.textContent = '✓';
     return;
   }
   if (state === 'error') {
+    badge.dataset.hasText = 'false';
+    badge.title = '';
     badge.textContent = '!';
     return;
   }
 
-  badge.textContent = '';
+  const safeProgressText = `${progressText || ''}`.trim();
+  badge.dataset.hasText = safeProgressText ? 'true' : 'false';
+  badge.title = safeProgressText;
+  badge.textContent = safeProgressText;
 };
 
 const setOutputReadyState = (key, isReady) => {
@@ -1149,7 +1158,8 @@ generateButton?.addEventListener('click', async () => {
           }
 
           if (state === 'running') {
-            setOutputBuildState(key, 'running');
+              const progressText = `${update?.progressText || ''}`.trim();
+              setOutputBuildState(key, 'running', progressText);
             return;
           }
           if (state === 'completed') {

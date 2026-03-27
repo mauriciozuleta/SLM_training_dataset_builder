@@ -1,0 +1,3045 @@
+[
+  {
+    "questionBank": {
+      "chapterId": "afh.3",
+      "bookId": "AFH",
+      "chapterNumber": 3,
+      "chapterTitle": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3: Basic Flight Maneuvers Introduction",
+      "totalRequiredQuestions": 51,
+      "metadata": {
+        "generatedAtUtc": "2026-03-27T15:27:32.113Z",
+        "chapterId": "afh.3",
+        "chapterNumber": 3,
+        "totalSections": 20,
+        "totalRequiredQuestions": 51,
+        "providers": [
+          "openai"
+        ],
+        "models": [
+          "gpt-4o"
+        ],
+        "promptTokens": 14277,
+        "completionTokens": 6501,
+        "totalTokens": 20778,
+        "sectionQuestionSummary": [
+          {
+            "sectionId": "afh.3.1",
+            "sectionTitle": "The Four Fundamentals",
+            "sectionOrdinal": 1,
+            "sectionWeightPercentage": 1.83,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.3.2",
+            "sectionTitle": "Effect and Use of Flight Controls",
+            "sectionOrdinal": 2,
+            "sectionWeightPercentage": 6.76,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.3.3",
+            "sectionTitle": "Feel of the Airplane",
+            "sectionOrdinal": 3,
+            "sectionWeightPercentage": 4.65,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.3.4",
+            "sectionTitle": "Attitude Flying",
+            "sectionOrdinal": 4,
+            "sectionWeightPercentage": 3.9,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.3.5",
+            "sectionTitle": "Integrated Flight Instruction",
+            "sectionOrdinal": 5,
+            "sectionWeightPercentage": 6.27,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.3.6",
+            "sectionTitle": "Straight-and-Level Flight",
+            "sectionOrdinal": 6,
+            "sectionWeightPercentage": 2.81,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.3.7",
+            "sectionTitle": "Straight Flight",
+            "sectionOrdinal": 7,
+            "sectionWeightPercentage": 4.44,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.3.8",
+            "sectionTitle": "Level Flight",
+            "sectionOrdinal": 8,
+            "sectionWeightPercentage": 3.24,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.3.9",
+            "sectionTitle": "Common Errors",
+            "sectionOrdinal": 9,
+            "sectionWeightPercentage": 2.43,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.3.10",
+            "sectionTitle": "Trim Control",
+            "sectionOrdinal": 10,
+            "sectionWeightPercentage": 3.32,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.3.11",
+            "sectionTitle": "Level Turns",
+            "sectionOrdinal": 11,
+            "sectionWeightPercentage": 9.13,
+            "questionsGenerated": 5
+          },
+          {
+            "sectionId": "afh.3.12",
+            "sectionTitle": "Turn Radius",
+            "sectionOrdinal": 12,
+            "sectionWeightPercentage": 2.3,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.3.13",
+            "sectionTitle": "Establishing a Turn",
+            "sectionOrdinal": 13,
+            "sectionWeightPercentage": 11.48,
+            "questionsGenerated": 6
+          },
+          {
+            "sectionId": "afh.3.14",
+            "sectionTitle": "Climbs and Climbing Turns",
+            "sectionOrdinal": 14,
+            "sectionWeightPercentage": 3.2,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.3.15",
+            "sectionTitle": "Establishing a Climb",
+            "sectionOrdinal": 15,
+            "sectionWeightPercentage": 7.8,
+            "questionsGenerated": 4
+          },
+          {
+            "sectionId": "afh.3.16",
+            "sectionTitle": "Climbing Turns",
+            "sectionOrdinal": 16,
+            "sectionWeightPercentage": 4.03,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.3.17",
+            "sectionTitle": "Descents and Descending Turns",
+            "sectionOrdinal": 17,
+            "sectionWeightPercentage": 2.73,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.3.18",
+            "sectionTitle": "Glides",
+            "sectionOrdinal": 18,
+            "sectionWeightPercentage": 11.27,
+            "questionsGenerated": 6
+          },
+          {
+            "sectionId": "afh.3.19",
+            "sectionTitle": "Gliding Turns",
+            "sectionOrdinal": 19,
+            "sectionWeightPercentage": 7.33,
+            "questionsGenerated": 4
+          },
+          {
+            "sectionId": "afh.3.20",
+            "sectionTitle": "Chapter Summary",
+            "sectionOrdinal": 20,
+            "sectionWeightPercentage": 1.08,
+            "questionsGenerated": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "questionid": "AFH.3.1.1",
+    "question": "What are the four fundamental flight maneuvers that must be mastered in flying?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.1.1.c.1",
+        "text": "Straight-and-level flight"
+      },
+      {
+        "id": "AFH.3.1.1.c.2",
+        "text": "Turns"
+      },
+      {
+        "id": "AFH.3.1.1.c.3",
+        "text": "Climbs"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.1.1.w.1",
+        "text": "Spins"
+      },
+      {
+        "id": "AFH.3.1.1.w.2",
+        "text": "Loops"
+      },
+      {
+        "id": "AFH.3.1.1.w.3",
+        "text": "Barrel rolls"
+      },
+      {
+        "id": "AFH.3.1.1.w.4",
+        "text": "Immelmann turns"
+      },
+      {
+        "id": "AFH.3.1.1.w.5",
+        "text": "Hammerhead stalls"
+      },
+      {
+        "id": "AFH.3.1.1.w.6",
+        "text": "Inverted flight"
+      },
+      {
+        "id": "AFH.3.1.1.w.7",
+        "text": "Snap rolls"
+      },
+      {
+        "id": "AFH.3.1.1.w.8",
+        "text": "Cuban eights"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3: Basic Flight Maneuvers Introduction",
+    "subjects": [
+      "Aviation",
+      "Flight Training"
+    ]
+  },
+  {
+    "questionid": "AFH.3.2.1",
+    "question": "What happens when the elevator pitch control is pulled toward the pilot?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.2.1.c.1",
+        "text": "The airplane's nose rotates backwards relative to the pilot"
+      },
+      {
+        "id": "AFH.3.2.1.c.2",
+        "text": "The airplane rotates around the pitch axis"
+      },
+      {
+        "id": "AFH.3.2.1.c.3",
+        "text": "The movement is from the pilot's feet to the pilot's head"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.2.1.w.1",
+        "text": "The airplane's nose rotates forward relative to the pilot"
+      },
+      {
+        "id": "AFH.3.2.1.w.2",
+        "text": "The airplane rotates around the yaw axis"
+      },
+      {
+        "id": "AFH.3.2.1.w.3",
+        "text": "The movement is from the pilot's head to the pilot's feet"
+      },
+      {
+        "id": "AFH.3.2.1.w.4",
+        "text": "The airplane's right wing banks lower"
+      },
+      {
+        "id": "AFH.3.2.1.w.5",
+        "text": "The airplane's left wing banks lower"
+      },
+      {
+        "id": "AFH.3.2.1.w.6",
+        "text": "The airplane's nose yaws to the right"
+      },
+      {
+        "id": "AFH.3.2.1.w.7",
+        "text": "The airplane's nose yaws to the left"
+      },
+      {
+        "id": "AFH.3.2.1.w.8",
+        "text": "The airplane gains altitude when right-side up"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3, Section 2",
+    "subjects": [
+      "Flight Controls"
+    ]
+  },
+  {
+    "questionid": "AFH.3.2.2",
+    "question": "What is the effect of applying right pressure to the aileron control?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.2.2.c.1",
+        "text": "The airplane's right wing banks lower"
+      },
+      {
+        "id": "AFH.3.2.2.c.2",
+        "text": "The control wheel rotates clockwise"
+      },
+      {
+        "id": "AFH.3.2.2.c.3",
+        "text": "The movement is from the pilot's head to the pilot's right hip"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.2.2.w.1",
+        "text": "The airplane's left wing banks lower"
+      },
+      {
+        "id": "AFH.3.2.2.w.2",
+        "text": "The control wheel rotates counterclockwise"
+      },
+      {
+        "id": "AFH.3.2.2.w.3",
+        "text": "The movement is from the pilot's head to the pilot's left hip"
+      },
+      {
+        "id": "AFH.3.2.2.w.4",
+        "text": "The airplane's nose yaws to the right"
+      },
+      {
+        "id": "AFH.3.2.2.w.5",
+        "text": "The airplane's nose yaws to the left"
+      },
+      {
+        "id": "AFH.3.2.2.w.6",
+        "text": "The airplane's nose rotates backwards"
+      },
+      {
+        "id": "AFH.3.2.2.w.7",
+        "text": "The airplane's nose rotates forward"
+      },
+      {
+        "id": "AFH.3.2.2.w.8",
+        "text": "The airplane gains altitude when upside-down"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3, Section 2",
+    "subjects": [
+      "Flight Controls"
+    ]
+  },
+  {
+    "questionid": "AFH.3.2.3",
+    "question": "What occurs when forward pressure is applied to the right rudder pedal?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.2.3.c.1",
+        "text": "The airplane's nose yaws to the right"
+      },
+      {
+        "id": "AFH.3.2.3.c.2",
+        "text": "The movement is from the pilot's left shoulder to the right shoulder"
+      },
+      {
+        "id": "AFH.3.2.3.c.3",
+        "text": "The airplane rotates around the yaw axis"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.2.3.w.1",
+        "text": "The airplane's nose yaws to the left"
+      },
+      {
+        "id": "AFH.3.2.3.w.2",
+        "text": "The movement is from the pilot's right shoulder to the left shoulder"
+      },
+      {
+        "id": "AFH.3.2.3.w.3",
+        "text": "The airplane rotates around the pitch axis"
+      },
+      {
+        "id": "AFH.3.2.3.w.4",
+        "text": "The airplane's right wing banks lower"
+      },
+      {
+        "id": "AFH.3.2.3.w.5",
+        "text": "The airplane's left wing banks lower"
+      },
+      {
+        "id": "AFH.3.2.3.w.6",
+        "text": "The airplane's nose rotates backwards"
+      },
+      {
+        "id": "AFH.3.2.3.w.7",
+        "text": "The airplane's nose rotates forward"
+      },
+      {
+        "id": "AFH.3.2.3.w.8",
+        "text": "The airplane loses altitude when right-side up"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3, Section 2",
+    "subjects": [
+      "Flight Controls"
+    ]
+  },
+  {
+    "questionid": "AFH.3.3.1",
+    "question": "What are some examples of how a pilot can develop a 'feel' for the airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.3.1.c.1",
+        "text": "Sounds of airflow across the airframe"
+      },
+      {
+        "id": "AFH.3.3.1.c.2",
+        "text": "Vibrations felt through the controls"
+      },
+      {
+        "id": "AFH.3.3.1.c.3",
+        "text": "Engine and propeller sounds at various flight attitudes"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.3.1.w.1",
+        "text": "Visual cues from the cockpit instruments"
+      },
+      {
+        "id": "AFH.3.3.1.w.2",
+        "text": "Checking the altimeter frequently"
+      },
+      {
+        "id": "AFH.3.3.1.w.3",
+        "text": "Using GPS for navigation"
+      },
+      {
+        "id": "AFH.3.3.1.w.4",
+        "text": "Consulting the flight manual"
+      },
+      {
+        "id": "AFH.3.3.1.w.5",
+        "text": "Listening to air traffic control instructions"
+      },
+      {
+        "id": "AFH.3.3.1.w.6",
+        "text": "Monitoring fuel levels"
+      },
+      {
+        "id": "AFH.3.3.1.w.7",
+        "text": "Adjusting the seat position"
+      },
+      {
+        "id": "AFH.3.3.1.w.8",
+        "text": "Reading the weather forecast"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3: Basic Flight Maneuvers Introduction, Section: Feel of the Airplane",
+    "subjects": [
+      "Aviation",
+      "Flight Training"
+    ]
+  },
+  {
+    "questionid": "AFH.3.3.2",
+    "question": "What sensory perceptions contribute to a pilot's ability to 'feel' the airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.3.2.c.1",
+        "text": "Kinesthesis"
+      },
+      {
+        "id": "AFH.3.3.2.c.2",
+        "text": "Proprioception"
+      },
+      {
+        "id": "AFH.3.3.2.c.3",
+        "text": "Semicircular canals of the inner ear"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.3.2.w.1",
+        "text": "Visual acuity"
+      },
+      {
+        "id": "AFH.3.3.2.w.2",
+        "text": "Auditory perception"
+      },
+      {
+        "id": "AFH.3.3.2.w.3",
+        "text": "Olfactory senses"
+      },
+      {
+        "id": "AFH.3.3.2.w.4",
+        "text": "Taste"
+      },
+      {
+        "id": "AFH.3.3.2.w.5",
+        "text": "Tactile feedback from the seat"
+      },
+      {
+        "id": "AFH.3.3.2.w.6",
+        "text": "Peripheral vision"
+      },
+      {
+        "id": "AFH.3.3.2.w.7",
+        "text": "Thermal sensation"
+      },
+      {
+        "id": "AFH.3.3.2.w.8",
+        "text": "Haptic feedback from the controls"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3: Basic Flight Maneuvers Introduction, Section: Feel of the Airplane",
+    "subjects": [
+      "Aviation",
+      "Human Factors"
+    ]
+  },
+  {
+    "questionid": "AFH.3.4.1",
+    "question": "What are the components of airplane attitude control?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.4.1.c.1",
+        "text": "Pitch control"
+      },
+      {
+        "id": "AFH.3.4.1.c.2",
+        "text": "Bank control"
+      },
+      {
+        "id": "AFH.3.4.1.c.3",
+        "text": "Power control"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.4.1.w.1",
+        "text": "Yaw control"
+      },
+      {
+        "id": "AFH.3.4.1.w.2",
+        "text": "Flap control"
+      },
+      {
+        "id": "AFH.3.4.1.w.3",
+        "text": "Rudder control"
+      },
+      {
+        "id": "AFH.3.4.1.w.4",
+        "text": "Spoiler control"
+      },
+      {
+        "id": "AFH.3.4.1.w.5",
+        "text": "Speed brake control"
+      },
+      {
+        "id": "AFH.3.4.1.w.6",
+        "text": "Gear control"
+      },
+      {
+        "id": "AFH.3.4.1.w.7",
+        "text": "Flap trim control"
+      },
+      {
+        "id": "AFH.3.4.1.w.8",
+        "text": "Aileron trim control"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3, Section 4: Attitude Flying",
+    "subjects": [
+      "Aviation",
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.3.4.2",
+    "question": "How is pitch attitude determined in an airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.4.2.c.1",
+        "text": "By the angle between the longitudinal axis and the natural horizon"
+      },
+      {
+        "id": "AFH.3.4.2.c.2",
+        "text": "Using the elevator to adjust the nose position"
+      },
+      {
+        "id": "AFH.3.4.2.c.3",
+        "text": "By visual reference to the natural horizon or flight instruments"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.4.2.w.1",
+        "text": "By the angle between the lateral axis and the natural horizon"
+      },
+      {
+        "id": "AFH.3.4.2.w.2",
+        "text": "Using the ailerons to adjust wing position"
+      },
+      {
+        "id": "AFH.3.4.2.w.3",
+        "text": "By the angle between the vertical axis and the natural horizon"
+      },
+      {
+        "id": "AFH.3.4.2.w.4",
+        "text": "Using the throttle to adjust speed"
+      },
+      {
+        "id": "AFH.3.4.2.w.5",
+        "text": "By the angle between the rudder and the vertical stabilizer"
+      },
+      {
+        "id": "AFH.3.4.2.w.6",
+        "text": "Using the trim to relieve control pressures"
+      },
+      {
+        "id": "AFH.3.4.2.w.7",
+        "text": "By the angle between the wings and the fuselage"
+      },
+      {
+        "id": "AFH.3.4.2.w.8",
+        "text": "Using the flaps to adjust lift"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3, Section 4: Attitude Flying",
+    "subjects": [
+      "Aviation",
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.3.5.1",
+    "question": "What is the recommended method of flight instruction for introducing basic flight maneuvers to a beginning pilot?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.5.1.c.1",
+        "text": "Integrated method"
+      },
+      {
+        "id": "AFH.3.5.1.c.2",
+        "text": "Composite method"
+      },
+      {
+        "id": "AFH.3.5.1.c.3",
+        "text": "Use of outside references and flight instruments"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.5.1.w.1",
+        "text": "Instrument-only method"
+      },
+      {
+        "id": "AFH.3.5.1.w.2",
+        "text": "Visual-only method"
+      },
+      {
+        "id": "AFH.3.5.1.w.3",
+        "text": "Simulator-based method"
+      },
+      {
+        "id": "AFH.3.5.1.w.4",
+        "text": "Autopilot training method"
+      },
+      {
+        "id": "AFH.3.5.1.w.5",
+        "text": "Ground-based instruction"
+      },
+      {
+        "id": "AFH.3.5.1.w.6",
+        "text": "Verbal instruction only"
+      },
+      {
+        "id": "AFH.3.5.1.w.7",
+        "text": "Checklist method"
+      },
+      {
+        "id": "AFH.3.5.1.w.8",
+        "text": "Computer-based training"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3, Section 5",
+    "subjects": [
+      "Flight Instruction"
+    ]
+  },
+  {
+    "questionid": "AFH.3.5.2",
+    "question": "What percentage of a pilot's attention should be devoted to outside visual references during integrated flight instruction?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.5.2.c.1",
+        "text": "90 percent"
+      },
+      {
+        "id": "AFH.3.5.2.c.2",
+        "text": "Ninety percent"
+      },
+      {
+        "id": "AFH.3.5.2.c.3",
+        "text": "Majority of attention"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.5.2.w.1",
+        "text": "50 percent"
+      },
+      {
+        "id": "AFH.3.5.2.w.2",
+        "text": "70 percent"
+      },
+      {
+        "id": "AFH.3.5.2.w.3",
+        "text": "30 percent"
+      },
+      {
+        "id": "AFH.3.5.2.w.4",
+        "text": "100 percent"
+      },
+      {
+        "id": "AFH.3.5.2.w.5",
+        "text": "60 percent"
+      },
+      {
+        "id": "AFH.3.5.2.w.6",
+        "text": "80 percent"
+      },
+      {
+        "id": "AFH.3.5.2.w.7",
+        "text": "40 percent"
+      },
+      {
+        "id": "AFH.3.5.2.w.8",
+        "text": "10 percent"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3, Section 5",
+    "subjects": [
+      "Flight Instruction"
+    ]
+  },
+  {
+    "questionid": "AFH.3.5.3",
+    "question": "What should a pilot do if flight instruments indicate that the airplane's performance needs correction?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.5.3.c.1",
+        "text": "Determine required correction"
+      },
+      {
+        "id": "AFH.3.5.3.c.2",
+        "text": "Apply correction smoothly"
+      },
+      {
+        "id": "AFH.3.5.3.c.3",
+        "text": "Recheck performance with instruments"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.5.3.w.1",
+        "text": "Ignore the instruments"
+      },
+      {
+        "id": "AFH.3.5.3.w.2",
+        "text": "Rely solely on autopilot"
+      },
+      {
+        "id": "AFH.3.5.3.w.3",
+        "text": "Wait for further deviation"
+      },
+      {
+        "id": "AFH.3.5.3.w.4",
+        "text": "Consult a co-pilot"
+      },
+      {
+        "id": "AFH.3.5.3.w.5",
+        "text": "Perform a full system reset"
+      },
+      {
+        "id": "AFH.3.5.3.w.6",
+        "text": "Land immediately"
+      },
+      {
+        "id": "AFH.3.5.3.w.7",
+        "text": "Use only visual references"
+      },
+      {
+        "id": "AFH.3.5.3.w.8",
+        "text": "Continue without changes"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3, Section 5",
+    "subjects": [
+      "Flight Instruction"
+    ]
+  },
+  {
+    "questionid": "AFH.3.6.1",
+    "question": "What are key elements in performing straight-and-level flight effectively?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.6.1.c.1",
+        "text": "Perceiving outside references"
+      },
+      {
+        "id": "AFH.3.6.1.c.2",
+        "text": "Making timely corrections"
+      },
+      {
+        "id": "AFH.3.6.1.c.3",
+        "text": "Establishing reference points"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.6.1.w.1",
+        "text": "Using autopilot exclusively"
+      },
+      {
+        "id": "AFH.3.6.1.w.2",
+        "text": "Ignoring flight instruments"
+      },
+      {
+        "id": "AFH.3.6.1.w.3",
+        "text": "Relying solely on GPS"
+      },
+      {
+        "id": "AFH.3.6.1.w.4",
+        "text": "Focusing only on altitude"
+      },
+      {
+        "id": "AFH.3.6.1.w.5",
+        "text": "Adjusting seat during flight"
+      },
+      {
+        "id": "AFH.3.6.1.w.6",
+        "text": "Changing reference points frequently"
+      },
+      {
+        "id": "AFH.3.6.1.w.7",
+        "text": "Avoiding use of rudder pedals"
+      },
+      {
+        "id": "AFH.3.6.1.w.8",
+        "text": "Practicing only in simulators"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3, Section 6: Straight-and-Level Flight",
+    "subjects": [
+      "Aviation",
+      "Flight Training"
+    ]
+  },
+  {
+    "questionid": "AFH.3.7.1",
+    "question": "What is the correct method for maintaining straight flight in an airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.7.1.c.1",
+        "text": "Use coordinated ailerons and rudder"
+      },
+      {
+        "id": "AFH.3.7.1.c.2",
+        "text": "Visually check wingtips against the horizon"
+      },
+      {
+        "id": "AFH.3.7.1.c.3",
+        "text": "Scan attitude and heading indicators"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.7.1.w.1",
+        "text": "Use ailerons independently"
+      },
+      {
+        "id": "AFH.3.7.1.w.2",
+        "text": "Use rudder independently"
+      },
+      {
+        "id": "AFH.3.7.1.w.3",
+        "text": "Rely solely on magnetic heading"
+      },
+      {
+        "id": "AFH.3.7.1.w.4",
+        "text": "Fixate on one direction"
+      },
+      {
+        "id": "AFH.3.7.1.w.5",
+        "text": "Ignore attitude indicator"
+      },
+      {
+        "id": "AFH.3.7.1.w.6",
+        "text": "Rely only on surface points over water"
+      },
+      {
+        "id": "AFH.3.7.1.w.7",
+        "text": "Focus only on left wingtip"
+      },
+      {
+        "id": "AFH.3.7.1.w.8",
+        "text": "Move controls unnecessarily"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3, Section 7",
+    "subjects": [
+      "Basic Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.3.7.2",
+    "question": "What should a pilot do to ensure proper straight flight when flying over water or flat snow-covered surfaces?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.7.2.c.1",
+        "text": "Rely on magnetic heading indication"
+      },
+      {
+        "id": "AFH.3.7.2.c.2",
+        "text": "Use coordinated flight controls"
+      },
+      {
+        "id": "AFH.3.7.2.c.3",
+        "text": "Scan instruments periodically"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.7.2.w.1",
+        "text": "Rely on surface points"
+      },
+      {
+        "id": "AFH.3.7.2.w.2",
+        "text": "Ignore heading indicator"
+      },
+      {
+        "id": "AFH.3.7.2.w.3",
+        "text": "Fixate on one point"
+      },
+      {
+        "id": "AFH.3.7.2.w.4",
+        "text": "Use rudder only"
+      },
+      {
+        "id": "AFH.3.7.2.w.5",
+        "text": "Use ailerons only"
+      },
+      {
+        "id": "AFH.3.7.2.w.6",
+        "text": "Focus solely on outside references"
+      },
+      {
+        "id": "AFH.3.7.2.w.7",
+        "text": "Ignore wingtips"
+      },
+      {
+        "id": "AFH.3.7.2.w.8",
+        "text": "Depend on visual horizon only"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3, Section 7",
+    "subjects": [
+      "Basic Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.3.8.1",
+    "question": "What is essential for a pilot to maintain during level flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.8.1.c.1",
+        "text": "A light touch on the flight controls"
+      },
+      {
+        "id": "AFH.3.8.1.c.2",
+        "text": "Proper seating to select a reference point"
+      },
+      {
+        "id": "AFH.3.8.1.c.3",
+        "text": "Cross-checking the natural horizon with flight instruments"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.8.1.w.1",
+        "text": "A tight grip on the flight controls"
+      },
+      {
+        "id": "AFH.3.8.1.w.2",
+        "text": "Constantly adjusting the power setting"
+      },
+      {
+        "id": "AFH.3.8.1.w.3",
+        "text": "Ignoring the natural horizon"
+      },
+      {
+        "id": "AFH.3.8.1.w.4",
+        "text": "Focusing solely on the airspeed indicator"
+      },
+      {
+        "id": "AFH.3.8.1.w.5",
+        "text": "Using only the altimeter for reference"
+      },
+      {
+        "id": "AFH.3.8.1.w.6",
+        "text": "Relying on autopilot for corrections"
+      },
+      {
+        "id": "AFH.3.8.1.w.7",
+        "text": "Avoiding any changes in pitch attitude"
+      },
+      {
+        "id": "AFH.3.8.1.w.8",
+        "text": "Maintaining a fixed airspeed regardless of power changes"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3, Section 8",
+    "subjects": [
+      "Level Flight"
+    ]
+  },
+  {
+    "questionid": "AFH.3.8.2",
+    "question": "Which actions can affect the airplane's pitch attitude during level flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.8.2.c.1",
+        "text": "Increasing back pressure"
+      },
+      {
+        "id": "AFH.3.8.2.c.2",
+        "text": "Extension of flaps"
+      },
+      {
+        "id": "AFH.3.8.2.c.3",
+        "text": "Retraction of landing gear"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.8.2.w.1",
+        "text": "Maintaining a constant power setting"
+      },
+      {
+        "id": "AFH.3.8.2.w.2",
+        "text": "Ignoring the natural horizon"
+      },
+      {
+        "id": "AFH.3.8.2.w.3",
+        "text": "Using only the altimeter for adjustments"
+      },
+      {
+        "id": "AFH.3.8.2.w.4",
+        "text": "Keeping the airspeed constant"
+      },
+      {
+        "id": "AFH.3.8.2.w.5",
+        "text": "Avoiding any changes in pitch attitude"
+      },
+      {
+        "id": "AFH.3.8.2.w.6",
+        "text": "Relying solely on visual references"
+      },
+      {
+        "id": "AFH.3.8.2.w.7",
+        "text": "Maintaining a tight grip on the controls"
+      },
+      {
+        "id": "AFH.3.8.2.w.8",
+        "text": "Focusing only on the airspeed indicator"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3, Section 8",
+    "subjects": [
+      "Level Flight"
+    ]
+  },
+  {
+    "questionid": "AFH.3.9.1",
+    "question": "What are some common errors beginner pilots make when maintaining level flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.9.1.c.1",
+        "text": "Using the airplane's nose as the primary reference for level flight"
+      },
+      {
+        "id": "AFH.3.9.1.c.2",
+        "text": "Chasing the flight instruments instead of using the natural horizon"
+      },
+      {
+        "id": "AFH.3.9.1.c.3",
+        "text": "Flying with one wing low and correcting with opposite rudder pressure"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.9.1.w.1",
+        "text": "Using the wingtips as the primary reference for level flight"
+      },
+      {
+        "id": "AFH.3.9.1.w.2",
+        "text": "Maintaining a relaxed grip on the flight controls"
+      },
+      {
+        "id": "AFH.3.9.1.w.3",
+        "text": "Scanning outside the aircraft for other traffic"
+      },
+      {
+        "id": "AFH.3.9.1.w.4",
+        "text": "Making timely and measured control inputs"
+      },
+      {
+        "id": "AFH.3.9.1.w.5",
+        "text": "Using smooth pressure on the flight controls"
+      },
+      {
+        "id": "AFH.3.9.1.w.6",
+        "text": "Remembering preselected reference points"
+      },
+      {
+        "id": "AFH.3.9.1.w.7",
+        "text": "Paying attention to sensory inputs"
+      },
+      {
+        "id": "AFH.3.9.1.w.8",
+        "text": "Establishing attitude using the natural horizon"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3, Section 9: Common Errors",
+    "subjects": [
+      "Basic Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.3.10.1",
+    "question": "What is the primary purpose of trim control surfaces in an airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.10.1.c.1",
+        "text": "To offset constant flight control pressure inputs"
+      },
+      {
+        "id": "AFH.3.10.1.c.2",
+        "text": "To maintain a particular pitch attitude"
+      },
+      {
+        "id": "AFH.3.10.1.c.3",
+        "text": "To allow the pilot to focus on other tasks"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.10.1.w.1",
+        "text": "To increase the airplane's speed"
+      },
+      {
+        "id": "AFH.3.10.1.w.2",
+        "text": "To decrease fuel consumption"
+      },
+      {
+        "id": "AFH.3.10.1.w.3",
+        "text": "To enhance the airplane's maneuverability"
+      },
+      {
+        "id": "AFH.3.10.1.w.4",
+        "text": "To improve the airplane's aerodynamics"
+      },
+      {
+        "id": "AFH.3.10.1.w.5",
+        "text": "To reduce the airplane's weight"
+      },
+      {
+        "id": "AFH.3.10.1.w.6",
+        "text": "To increase the airplane's power"
+      },
+      {
+        "id": "AFH.3.10.1.w.7",
+        "text": "To change the airplane's altitude"
+      },
+      {
+        "id": "AFH.3.10.1.w.8",
+        "text": "To adjust the airplane's heading"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3: Basic Flight Maneuvers Introduction, Section: Trim Control",
+    "subjects": [
+      "Trim Control"
+    ]
+  },
+  {
+    "questionid": "AFH.3.10.2",
+    "question": "In what sequence should trim controls be adjusted in airplanes with multiple trim axes?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.10.2.c.1",
+        "text": "Rudder first, then elevator, then aileron"
+      },
+      {
+        "id": "AFH.3.10.2.c.2",
+        "text": "Rudder should be trimmed at constant airspeed"
+      },
+      {
+        "id": "AFH.3.10.2.c.3",
+        "text": "Aileron trim should relieve any aileron flight control pressure"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.10.2.w.1",
+        "text": "Elevator first, then rudder, then aileron"
+      },
+      {
+        "id": "AFH.3.10.2.w.2",
+        "text": "Aileron first, then elevator, then rudder"
+      },
+      {
+        "id": "AFH.3.10.2.w.3",
+        "text": "Trim all axes simultaneously"
+      },
+      {
+        "id": "AFH.3.10.2.w.4",
+        "text": "Trim rudder at varying airspeeds"
+      },
+      {
+        "id": "AFH.3.10.2.w.5",
+        "text": "Trim aileron before establishing constant airspeed"
+      },
+      {
+        "id": "AFH.3.10.2.w.6",
+        "text": "Trim elevator only when changing altitude"
+      },
+      {
+        "id": "AFH.3.10.2.w.7",
+        "text": "Trim controls are adjusted randomly"
+      },
+      {
+        "id": "AFH.3.10.2.w.8",
+        "text": "Trim controls are not necessary in light airplanes"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3: Basic Flight Maneuvers Introduction, Section: Trim Control",
+    "subjects": [
+      "Trim Control"
+    ]
+  },
+  {
+    "questionid": "AFH.3.11.1",
+    "question": "What is the primary role of ailerons during a turn?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.11.1.c.1",
+        "text": "Bank the wings"
+      },
+      {
+        "id": "AFH.3.11.1.c.2",
+        "text": "Determine the rate of turn"
+      },
+      {
+        "id": "AFH.3.11.1.c.3",
+        "text": "Control the direction of the turn"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.11.1.w.1",
+        "text": "Increase airspeed"
+      },
+      {
+        "id": "AFH.3.11.1.w.2",
+        "text": "Stabilize the airplane"
+      },
+      {
+        "id": "AFH.3.11.1.w.3",
+        "text": "Provide vertical lift"
+      },
+      {
+        "id": "AFH.3.11.1.w.4",
+        "text": "Control pitch"
+      },
+      {
+        "id": "AFH.3.11.1.w.5",
+        "text": "Control yaw"
+      },
+      {
+        "id": "AFH.3.11.1.w.6",
+        "text": "Provide thrust"
+      },
+      {
+        "id": "AFH.3.11.1.w.7",
+        "text": "Reduce drag"
+      },
+      {
+        "id": "AFH.3.11.1.w.8",
+        "text": "Increase altitude"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3: Basic Flight Maneuvers Introduction, Section: Level Turns",
+    "subjects": [
+      "Ailerons",
+      "Flight Controls"
+    ]
+  },
+  {
+    "questionid": "AFH.3.11.2",
+    "question": "How does the elevator contribute to maintaining altitude during a turn?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.11.2.c.1",
+        "text": "Pitches the nose up"
+      },
+      {
+        "id": "AFH.3.11.2.c.2",
+        "text": "Increases wing lift"
+      },
+      {
+        "id": "AFH.3.11.2.c.3",
+        "text": "Compensates for lift loss"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.11.2.w.1",
+        "text": "Controls bank angle"
+      },
+      {
+        "id": "AFH.3.11.2.w.2",
+        "text": "Increases thrust"
+      },
+      {
+        "id": "AFH.3.11.2.w.3",
+        "text": "Reduces drag"
+      },
+      {
+        "id": "AFH.3.11.2.w.4",
+        "text": "Stabilizes yaw"
+      },
+      {
+        "id": "AFH.3.11.2.w.5",
+        "text": "Controls airspeed"
+      },
+      {
+        "id": "AFH.3.11.2.w.6",
+        "text": "Provides horizontal lift"
+      },
+      {
+        "id": "AFH.3.11.2.w.7",
+        "text": "Neutralizes ailerons"
+      },
+      {
+        "id": "AFH.3.11.2.w.8",
+        "text": "Stabilizes roll"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3: Basic Flight Maneuvers Introduction, Section: Level Turns",
+    "subjects": [
+      "Elevator",
+      "Altitude Control"
+    ]
+  },
+  {
+    "questionid": "AFH.3.11.3",
+    "question": "What is the purpose of the rudder during a turn?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.11.3.c.1",
+        "text": "Offset adverse yaw"
+      },
+      {
+        "id": "AFH.3.11.3.c.2",
+        "text": "Maintain coordinated flight"
+      },
+      {
+        "id": "AFH.3.11.3.c.3",
+        "text": "Counteract differential lift"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.11.3.w.1",
+        "text": "Increase airspeed"
+      },
+      {
+        "id": "AFH.3.11.3.w.2",
+        "text": "Control bank angle"
+      },
+      {
+        "id": "AFH.3.11.3.w.3",
+        "text": "Provide vertical lift"
+      },
+      {
+        "id": "AFH.3.11.3.w.4",
+        "text": "Stabilize pitch"
+      },
+      {
+        "id": "AFH.3.11.3.w.5",
+        "text": "Provide thrust"
+      },
+      {
+        "id": "AFH.3.11.3.w.6",
+        "text": "Increase altitude"
+      },
+      {
+        "id": "AFH.3.11.3.w.7",
+        "text": "Control roll"
+      },
+      {
+        "id": "AFH.3.11.3.w.8",
+        "text": "Reduce drag"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3: Basic Flight Maneuvers Introduction, Section: Level Turns",
+    "subjects": [
+      "Rudder",
+      "Yaw Control"
+    ]
+  },
+  {
+    "questionid": "AFH.3.11.4",
+    "question": "What characterizes a shallow turn?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.11.4.c.1",
+        "text": "Bank angle of 20° or less"
+      },
+      {
+        "id": "AFH.3.11.4.c.2",
+        "text": "Requires aileron pressure to maintain bank"
+      },
+      {
+        "id": "AFH.3.11.4.c.3",
+        "text": "Inherent lateral stability levels wings"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.11.4.w.1",
+        "text": "Bank angle of 45° or more"
+      },
+      {
+        "id": "AFH.3.11.4.w.2",
+        "text": "No aileron pressure needed"
+      },
+      {
+        "id": "AFH.3.11.4.w.3",
+        "text": "Inherent stability maintains bank"
+      },
+      {
+        "id": "AFH.3.11.4.w.4",
+        "text": "Requires rudder input"
+      },
+      {
+        "id": "AFH.3.11.4.w.5",
+        "text": "Increases airspeed"
+      },
+      {
+        "id": "AFH.3.11.4.w.6",
+        "text": "Decreases altitude"
+      },
+      {
+        "id": "AFH.3.11.4.w.7",
+        "text": "Requires increased thrust"
+      },
+      {
+        "id": "AFH.3.11.4.w.8",
+        "text": "Increases vertical lift"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3: Basic Flight Maneuvers Introduction, Section: Level Turns",
+    "subjects": [
+      "Shallow Turns",
+      "Bank Angle"
+    ]
+  },
+  {
+    "questionid": "AFH.3.11.5",
+    "question": "What happens during a steep turn?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.11.5.c.1",
+        "text": "Bank angle of 45° or more"
+      },
+      {
+        "id": "AFH.3.11.5.c.2",
+        "text": "Continues in direction of bank"
+      },
+      {
+        "id": "AFH.3.11.5.c.3",
+        "text": "Requires pilot input to level wings"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.11.5.w.1",
+        "text": "Bank angle of 20° or less"
+      },
+      {
+        "id": "AFH.3.11.5.w.2",
+        "text": "Inherent stability levels wings"
+      },
+      {
+        "id": "AFH.3.11.5.w.3",
+        "text": "No pilot input needed"
+      },
+      {
+        "id": "AFH.3.11.5.w.4",
+        "text": "Decreases airspeed"
+      },
+      {
+        "id": "AFH.3.11.5.w.5",
+        "text": "Increases altitude"
+      },
+      {
+        "id": "AFH.3.11.5.w.6",
+        "text": "Requires rudder input"
+      },
+      {
+        "id": "AFH.3.11.5.w.7",
+        "text": "Increases vertical lift"
+      },
+      {
+        "id": "AFH.3.11.5.w.8",
+        "text": "Reduces drag"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3: Basic Flight Maneuvers Introduction, Section: Level Turns",
+    "subjects": [
+      "Steep Turns",
+      "Bank Angle"
+    ]
+  },
+  {
+    "questionid": "AFH.3.12.1",
+    "question": "What factors affect the radius of turn in an airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.12.1.c.1",
+        "text": "Airspeed"
+      },
+      {
+        "id": "AFH.3.12.1.c.2",
+        "text": "Bank angle"
+      },
+      {
+        "id": "AFH.3.12.1.c.3",
+        "text": "Horizontal lift component"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.12.1.w.1",
+        "text": "Altitude"
+      },
+      {
+        "id": "AFH.3.12.1.w.2",
+        "text": "Vertical lift component"
+      },
+      {
+        "id": "AFH.3.12.1.w.3",
+        "text": "Engine power"
+      },
+      {
+        "id": "AFH.3.12.1.w.4",
+        "text": "Temperature"
+      },
+      {
+        "id": "AFH.3.12.1.w.5",
+        "text": "Humidity"
+      },
+      {
+        "id": "AFH.3.12.1.w.6",
+        "text": "Aircraft weight"
+      },
+      {
+        "id": "AFH.3.12.1.w.7",
+        "text": "Pilot skill"
+      },
+      {
+        "id": "AFH.3.12.1.w.8",
+        "text": "Wind direction"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3: Basic Flight Maneuvers Introduction, Section: Turn Radius",
+    "subjects": [
+      "Aviation",
+      "Flight Dynamics"
+    ]
+  },
+  {
+    "questionid": "AFH.3.13.1",
+    "question": "What is a common visual reference for setting the initial bank angle in light single-engine airplanes?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.13.1.c.1",
+        "text": "Top surface of the engine cowling"
+      },
+      {
+        "id": "AFH.3.13.1.c.2",
+        "text": "Horizontal surface to the natural horizon"
+      },
+      {
+        "id": "AFH.3.13.1.c.3",
+        "text": "Attitude indicator"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.13.1.w.1",
+        "text": "Vertical speed indicator"
+      },
+      {
+        "id": "AFH.3.13.1.w.2",
+        "text": "Altimeter"
+      },
+      {
+        "id": "AFH.3.13.1.w.3",
+        "text": "Airspeed indicator"
+      },
+      {
+        "id": "AFH.3.13.1.w.4",
+        "text": "Turn coordinator"
+      },
+      {
+        "id": "AFH.3.13.1.w.5",
+        "text": "Heading indicator"
+      },
+      {
+        "id": "AFH.3.13.1.w.6",
+        "text": "Magnetic compass"
+      },
+      {
+        "id": "AFH.3.13.1.w.7",
+        "text": "Artificial horizon"
+      },
+      {
+        "id": "AFH.3.13.1.w.8",
+        "text": "Fuel gauge"
+      }
+    ],
+    "source": "AFH Chapter 3, Section 13",
+    "subjects": [
+      "Basic Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.3.13.2",
+    "question": "What effect does the pilot's seating position have on interpreting visual references during a turn?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.13.2.c.1",
+        "text": "Affects interpretation of outside visual references"
+      },
+      {
+        "id": "AFH.3.13.2.c.2",
+        "text": "Causes parallax error"
+      },
+      {
+        "id": "AFH.3.13.2.c.3",
+        "text": "Makes nose appear to rise or descend"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.13.2.w.1",
+        "text": "Improves visibility"
+      },
+      {
+        "id": "AFH.3.13.2.w.2",
+        "text": "Reduces parallax error"
+      },
+      {
+        "id": "AFH.3.13.2.w.3",
+        "text": "Enhances instrument reading"
+      },
+      {
+        "id": "AFH.3.13.2.w.4",
+        "text": "Increases comfort"
+      },
+      {
+        "id": "AFH.3.13.2.w.5",
+        "text": "Decreases fatigue"
+      },
+      {
+        "id": "AFH.3.13.2.w.6",
+        "text": "Improves communication"
+      },
+      {
+        "id": "AFH.3.13.2.w.7",
+        "text": "Reduces workload"
+      },
+      {
+        "id": "AFH.3.13.2.w.8",
+        "text": "Enhances stability"
+      }
+    ],
+    "source": "AFH Chapter 3, Section 13",
+    "subjects": [
+      "Basic Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.3.13.3",
+    "question": "What should a pilot do if the airplane's nose moves before the bank starts during a turn?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.13.3.c.1",
+        "text": "Reduce rudder input"
+      },
+      {
+        "id": "AFH.3.13.3.c.2",
+        "text": "Delay rudder application"
+      },
+      {
+        "id": "AFH.3.13.3.c.3",
+        "text": "Check rudder timing"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.13.3.w.1",
+        "text": "Increase aileron input"
+      },
+      {
+        "id": "AFH.3.13.3.w.2",
+        "text": "Apply more elevator pressure"
+      },
+      {
+        "id": "AFH.3.13.3.w.3",
+        "text": "Increase throttle"
+      },
+      {
+        "id": "AFH.3.13.3.w.4",
+        "text": "Use opposite rudder"
+      },
+      {
+        "id": "AFH.3.13.3.w.5",
+        "text": "Adjust trim"
+      },
+      {
+        "id": "AFH.3.13.3.w.6",
+        "text": "Increase bank angle"
+      },
+      {
+        "id": "AFH.3.13.3.w.7",
+        "text": "Decrease bank angle"
+      },
+      {
+        "id": "AFH.3.13.3.w.8",
+        "text": "Apply more back pressure"
+      }
+    ],
+    "source": "AFH Chapter 3, Section 13",
+    "subjects": [
+      "Basic Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.3.13.4",
+    "question": "What is the recommended control input for shallow bank angles?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.13.4.c.1",
+        "text": "Maintain small aileron pressure into the direction of bank"
+      },
+      {
+        "id": "AFH.3.13.4.c.2",
+        "text": "Use rudder to compensate for yaw effects"
+      },
+      {
+        "id": "AFH.3.13.4.c.3",
+        "text": "Relax aileron pressure if needed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.13.4.w.1",
+        "text": "Neutralize ailerons and rudder"
+      },
+      {
+        "id": "AFH.3.13.4.w.2",
+        "text": "Apply opposite aileron pressure"
+      },
+      {
+        "id": "AFH.3.13.4.w.3",
+        "text": "Increase elevator back pressure"
+      },
+      {
+        "id": "AFH.3.13.4.w.4",
+        "text": "Use full rudder input"
+      },
+      {
+        "id": "AFH.3.13.4.w.5",
+        "text": "Increase throttle"
+      },
+      {
+        "id": "AFH.3.13.4.w.6",
+        "text": "Decrease throttle"
+      },
+      {
+        "id": "AFH.3.13.4.w.7",
+        "text": "Apply more back pressure"
+      },
+      {
+        "id": "AFH.3.13.4.w.8",
+        "text": "Use trim to adjust bank"
+      }
+    ],
+    "source": "AFH Chapter 3, Section 13",
+    "subjects": [
+      "Basic Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.3.13.5",
+    "question": "What should a pilot do to maintain altitude during a turn?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.13.5.c.1",
+        "text": "Maintain back pressure on the elevator"
+      },
+      {
+        "id": "AFH.3.13.5.c.2",
+        "text": "Monitor vertical component of lift"
+      },
+      {
+        "id": "AFH.3.13.5.c.3",
+        "text": "Crosscheck flight instruments"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.13.5.w.1",
+        "text": "Relax back pressure"
+      },
+      {
+        "id": "AFH.3.13.5.w.2",
+        "text": "Increase throttle"
+      },
+      {
+        "id": "AFH.3.13.5.w.3",
+        "text": "Use opposite aileron"
+      },
+      {
+        "id": "AFH.3.13.5.w.4",
+        "text": "Neutralize rudder"
+      },
+      {
+        "id": "AFH.3.13.5.w.5",
+        "text": "Decrease throttle"
+      },
+      {
+        "id": "AFH.3.13.5.w.6",
+        "text": "Apply more rudder"
+      },
+      {
+        "id": "AFH.3.13.5.w.7",
+        "text": "Use trim to adjust altitude"
+      },
+      {
+        "id": "AFH.3.13.5.w.8",
+        "text": "Ignore flight instruments"
+      }
+    ],
+    "source": "AFH Chapter 3, Section 13",
+    "subjects": [
+      "Basic Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.3.13.6",
+    "question": "What is the effect of large aileron and rudder control inputs during a turn?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.13.6.c.1",
+        "text": "Produce rapid roll rates"
+      },
+      {
+        "id": "AFH.3.13.6.c.2",
+        "text": "Allow little time for corrections"
+      },
+      {
+        "id": "AFH.3.13.6.c.3",
+        "text": "Can lead to overbanking"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.13.6.w.1",
+        "text": "Improve stability"
+      },
+      {
+        "id": "AFH.3.13.6.w.2",
+        "text": "Enhance control precision"
+      },
+      {
+        "id": "AFH.3.13.6.w.3",
+        "text": "Reduce roll rates"
+      },
+      {
+        "id": "AFH.3.13.6.w.4",
+        "text": "Increase comfort"
+      },
+      {
+        "id": "AFH.3.13.6.w.5",
+        "text": "Improve visibility"
+      },
+      {
+        "id": "AFH.3.13.6.w.6",
+        "text": "Enhance fuel efficiency"
+      },
+      {
+        "id": "AFH.3.13.6.w.7",
+        "text": "Reduce workload"
+      },
+      {
+        "id": "AFH.3.13.6.w.8",
+        "text": "Increase altitude"
+      }
+    ],
+    "source": "AFH Chapter 3, Section 13",
+    "subjects": [
+      "Basic Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.3.14.1",
+    "question": "What factors limit an airplane's climb rate?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.14.1.c.1",
+        "text": "Excess thrust available"
+      },
+      {
+        "id": "AFH.3.14.1.c.2",
+        "text": "Increased drag"
+      },
+      {
+        "id": "AFH.3.14.1.c.3",
+        "text": "Engine power settings"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.14.1.w.1",
+        "text": "Pilot's experience"
+      },
+      {
+        "id": "AFH.3.14.1.w.2",
+        "text": "Weather conditions"
+      },
+      {
+        "id": "AFH.3.14.1.w.3",
+        "text": "Runway length"
+      },
+      {
+        "id": "AFH.3.14.1.w.4",
+        "text": "Airplane color"
+      },
+      {
+        "id": "AFH.3.14.1.w.5",
+        "text": "Wing shape"
+      },
+      {
+        "id": "AFH.3.14.1.w.6",
+        "text": "Fuel type"
+      },
+      {
+        "id": "AFH.3.14.1.w.7",
+        "text": "Passenger weight"
+      },
+      {
+        "id": "AFH.3.14.1.w.8",
+        "text": "Altitude"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3: Climbs and Climbing Turns",
+    "subjects": [
+      "Aviation",
+      "Flight Mechanics"
+    ]
+  },
+  {
+    "questionid": "AFH.3.14.2",
+    "question": "What is the best angle of climb (VX) used for?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.14.2.c.1",
+        "text": "Clearing obstacles"
+      },
+      {
+        "id": "AFH.3.14.2.c.2",
+        "text": "Steeper climb"
+      },
+      {
+        "id": "AFH.3.14.2.c.3",
+        "text": "Gaining altitude over distance"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.14.2.w.1",
+        "text": "Faster airspeed"
+      },
+      {
+        "id": "AFH.3.14.2.w.2",
+        "text": "Better engine cooling"
+      },
+      {
+        "id": "AFH.3.14.2.w.3",
+        "text": "Greater control authority"
+      },
+      {
+        "id": "AFH.3.14.2.w.4",
+        "text": "Improved visibility"
+      },
+      {
+        "id": "AFH.3.14.2.w.5",
+        "text": "Longer flight duration"
+      },
+      {
+        "id": "AFH.3.14.2.w.6",
+        "text": "Lower fuel consumption"
+      },
+      {
+        "id": "AFH.3.14.2.w.7",
+        "text": "Higher cruising altitude"
+      },
+      {
+        "id": "AFH.3.14.2.w.8",
+        "text": "Increased passenger comfort"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3: Climbs and Climbing Turns",
+    "subjects": [
+      "Aviation",
+      "Flight Mechanics"
+    ]
+  },
+  {
+    "questionid": "AFH.3.15.1",
+    "question": "What should a pilot do to enter a straight climb?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.15.1.c.1",
+        "text": "Increase back pressure on the elevator flight control"
+      },
+      {
+        "id": "AFH.3.15.1.c.2",
+        "text": "Increase engine power to the climb power setting"
+      },
+      {
+        "id": "AFH.3.15.1.c.3",
+        "text": "Reference the airplane’s nose to the natural horizon"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.15.1.w.1",
+        "text": "Decrease engine power"
+      },
+      {
+        "id": "AFH.3.15.1.w.2",
+        "text": "Reduce back pressure on the elevator"
+      },
+      {
+        "id": "AFH.3.15.1.w.3",
+        "text": "Ignore slipstream effects"
+      },
+      {
+        "id": "AFH.3.15.1.w.4",
+        "text": "Maintain cruise airspeed"
+      },
+      {
+        "id": "AFH.3.15.1.w.5",
+        "text": "Use ailerons to initiate climb"
+      },
+      {
+        "id": "AFH.3.15.1.w.6",
+        "text": "Ignore flight instruments"
+      },
+      {
+        "id": "AFH.3.15.1.w.7",
+        "text": "Decrease pitch attitude"
+      },
+      {
+        "id": "AFH.3.15.1.w.8",
+        "text": "Rely solely on autopilot"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3, Section 15",
+    "subjects": [
+      "Basic Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.3.15.2",
+    "question": "Why is more power needed during a climb compared to level flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.15.2.c.1",
+        "text": "Increased lift generates more induced drag"
+      },
+      {
+        "id": "AFH.3.15.2.c.2",
+        "text": "Climbing requires an excess of thrust"
+      },
+      {
+        "id": "AFH.3.15.2.c.3",
+        "text": "Vertical component of lift adds to drag"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.15.2.w.1",
+        "text": "Gravity decreases during a climb"
+      },
+      {
+        "id": "AFH.3.15.2.w.2",
+        "text": "Less lift is required in a climb"
+      },
+      {
+        "id": "AFH.3.15.2.w.3",
+        "text": "Air density increases with altitude"
+      },
+      {
+        "id": "AFH.3.15.2.w.4",
+        "text": "Propeller efficiency increases"
+      },
+      {
+        "id": "AFH.3.15.2.w.5",
+        "text": "Engine power naturally increases"
+      },
+      {
+        "id": "AFH.3.15.2.w.6",
+        "text": "Drag decreases in a climb"
+      },
+      {
+        "id": "AFH.3.15.2.w.7",
+        "text": "Lift requirements decrease"
+      },
+      {
+        "id": "AFH.3.15.2.w.8",
+        "text": "Thrust is constant"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3, Section 15",
+    "subjects": [
+      "Basic Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.3.15.3",
+    "question": "What happens to engine power as altitude increases in a normally aspirated engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.15.3.c.1",
+        "text": "Power decreases"
+      },
+      {
+        "id": "AFH.3.15.3.c.2",
+        "text": "Air density decreases"
+      },
+      {
+        "id": "AFH.3.15.3.c.3",
+        "text": "RPM reduces with fixed pitch propellers"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.15.3.w.1",
+        "text": "Power increases"
+      },
+      {
+        "id": "AFH.3.15.3.w.2",
+        "text": "Air density increases"
+      },
+      {
+        "id": "AFH.3.15.3.w.3",
+        "text": "RPM increases with fixed pitch propellers"
+      },
+      {
+        "id": "AFH.3.15.3.w.4",
+        "text": "Manifold pressure increases"
+      },
+      {
+        "id": "AFH.3.15.3.w.5",
+        "text": "Engine efficiency improves"
+      },
+      {
+        "id": "AFH.3.15.3.w.6",
+        "text": "Propeller thrust increases"
+      },
+      {
+        "id": "AFH.3.15.3.w.7",
+        "text": "Cylinder head temperature decreases"
+      },
+      {
+        "id": "AFH.3.15.3.w.8",
+        "text": "Throttle setting remains constant"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3, Section 15",
+    "subjects": [
+      "Basic Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.3.15.4",
+    "question": "What is the effect of P-factor during a climb?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.15.4.c.1",
+        "text": "Center of thrust moves to the right"
+      },
+      {
+        "id": "AFH.3.15.4.c.2",
+        "text": "Propeller becomes asymmetrical"
+      },
+      {
+        "id": "AFH.3.15.4.c.3",
+        "text": "Occurs with high power settings"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.15.4.w.1",
+        "text": "Center of thrust moves to the left"
+      },
+      {
+        "id": "AFH.3.15.4.w.2",
+        "text": "Propeller becomes symmetrical"
+      },
+      {
+        "id": "AFH.3.15.4.w.3",
+        "text": "Occurs with low power settings"
+      },
+      {
+        "id": "AFH.3.15.4.w.4",
+        "text": "Reduces engine power"
+      },
+      {
+        "id": "AFH.3.15.4.w.5",
+        "text": "Increases lift on the left wing"
+      },
+      {
+        "id": "AFH.3.15.4.w.6",
+        "text": "Decreases drag"
+      },
+      {
+        "id": "AFH.3.15.4.w.7",
+        "text": "Improves fuel efficiency"
+      },
+      {
+        "id": "AFH.3.15.4.w.8",
+        "text": "Stabilizes pitch attitude"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3, Section 15",
+    "subjects": [
+      "Basic Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.3.16.1",
+    "question": "What factors should be considered when performing climbing turns?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.16.1.c.1",
+        "text": "Constant power setting affects pitch and airspeed in a bank"
+      },
+      {
+        "id": "AFH.3.16.1.c.2",
+        "text": "Steep bank angles decrease the rate of climb"
+      },
+      {
+        "id": "AFH.3.16.1.c.3",
+        "text": "Coordination of all flight controls is essential"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.16.1.w.1",
+        "text": "Climbing turns require no adjustment in pitch"
+      },
+      {
+        "id": "AFH.3.16.1.w.2",
+        "text": "Bank angle does not affect climb performance"
+      },
+      {
+        "id": "AFH.3.16.1.w.3",
+        "text": "Airspeed is irrelevant in climbing turns"
+      },
+      {
+        "id": "AFH.3.16.1.w.4",
+        "text": "Only right turns affect climb rate"
+      },
+      {
+        "id": "AFH.3.16.1.w.5",
+        "text": "Climbing turns are unaffected by propeller effects"
+      },
+      {
+        "id": "AFH.3.16.1.w.6",
+        "text": "Vertical lift is not reduced in climbing turns"
+      },
+      {
+        "id": "AFH.3.16.1.w.7",
+        "text": "Drag does not increase in climbing turns"
+      },
+      {
+        "id": "AFH.3.16.1.w.8",
+        "text": "Overbanking tendencies are not a concern"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3, Section 16",
+    "subjects": [
+      "Climbing Turns"
+    ]
+  },
+  {
+    "questionid": "AFH.3.16.2",
+    "question": "What are common errors in performing climbs and climbing turns?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.16.2.c.1",
+        "text": "Inadequate rudder pressure during climbing turns"
+      },
+      {
+        "id": "AFH.3.16.2.c.2",
+        "text": "Fixation on the airplane’s nose during straight climbs"
+      },
+      {
+        "id": "AFH.3.16.2.c.3",
+        "text": "Improper coordination resulting in a slip"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.16.2.w.1",
+        "text": "Excessive use of ailerons"
+      },
+      {
+        "id": "AFH.3.16.2.w.2",
+        "text": "Ignoring airspeed indicators"
+      },
+      {
+        "id": "AFH.3.16.2.w.3",
+        "text": "Using too much throttle"
+      },
+      {
+        "id": "AFH.3.16.2.w.4",
+        "text": "Maintaining a constant bank angle"
+      },
+      {
+        "id": "AFH.3.16.2.w.5",
+        "text": "Applying too little elevator pressure"
+      },
+      {
+        "id": "AFH.3.16.2.w.6",
+        "text": "Overusing rudder pressure"
+      },
+      {
+        "id": "AFH.3.16.2.w.7",
+        "text": "Ignoring the airplane's inherent stability"
+      },
+      {
+        "id": "AFH.3.16.2.w.8",
+        "text": "Using shallow bank angles for all climbs"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3, Section 16",
+    "subjects": [
+      "Climbing Turns"
+    ]
+  },
+  {
+    "questionid": "AFH.3.17.1",
+    "question": "What are the characteristics of a partial power descent?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.17.1.c.1",
+        "text": "Normal method of losing altitude"
+      },
+      {
+        "id": "AFH.3.17.1.c.2",
+        "text": "Cruise or en route descent"
+      },
+      {
+        "id": "AFH.3.17.1.c.3",
+        "text": "500 fpm target descent rate"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.17.1.w.1",
+        "text": "Nose-high, power-assisted descent"
+      },
+      {
+        "id": "AFH.3.17.1.w.2",
+        "text": "Used for clearing obstacles"
+      },
+      {
+        "id": "AFH.3.17.1.w.3",
+        "text": "Steeper-than-normal descent angle"
+      },
+      {
+        "id": "AFH.3.17.1.w.4",
+        "text": "High drag, high airspeed procedure"
+      },
+      {
+        "id": "AFH.3.17.1.w.5",
+        "text": "Specific airplane configuration required"
+      },
+      {
+        "id": "AFH.3.17.1.w.6",
+        "text": "Power to idle, propellers forward"
+      },
+      {
+        "id": "AFH.3.17.1.w.7",
+        "text": "Landing gear extended, flaps retracted"
+      },
+      {
+        "id": "AFH.3.17.1.w.8",
+        "text": "Specific emergency descent airspeed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3, Section 17",
+    "subjects": [
+      "Aviation",
+      "Flight Maneuvers",
+      "Descent Techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.3.18.1",
+    "question": "What is the primary purpose of a glide in aviation?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.18.1.c.1",
+        "text": "Controlled descent with little or no engine power"
+      },
+      {
+        "id": "AFH.3.18.1.c.2",
+        "text": "Used in normal landing approaches"
+      },
+      {
+        "id": "AFH.3.18.1.c.3",
+        "text": "Essential for forced landings after engine failure"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.18.1.w.1",
+        "text": "To increase altitude"
+      },
+      {
+        "id": "AFH.3.18.1.w.2",
+        "text": "To perform aerobatic maneuvers"
+      },
+      {
+        "id": "AFH.3.18.1.w.3",
+        "text": "To reduce airspeed quickly"
+      },
+      {
+        "id": "AFH.3.18.1.w.4",
+        "text": "To increase engine efficiency"
+      },
+      {
+        "id": "AFH.3.18.1.w.5",
+        "text": "To test aircraft stability"
+      },
+      {
+        "id": "AFH.3.18.1.w.6",
+        "text": "To practice emergency takeoffs"
+      },
+      {
+        "id": "AFH.3.18.1.w.7",
+        "text": "To enhance fuel consumption"
+      },
+      {
+        "id": "AFH.3.18.1.w.8",
+        "text": "To improve passenger comfort"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3: Basic Flight Maneuvers Introduction",
+    "subjects": [
+      "Glides"
+    ]
+  },
+  {
+    "questionid": "AFH.3.18.2",
+    "question": "What factors determine the glide ratio of an airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.18.2.c.1",
+        "text": "Distance traveled relative to altitude lost"
+      },
+      {
+        "id": "AFH.3.18.2.c.2",
+        "text": "Lift-to-drag ratio"
+      },
+      {
+        "id": "AFH.3.18.2.c.3",
+        "text": "Best glide airspeed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.18.2.w.1",
+        "text": "Engine power output"
+      },
+      {
+        "id": "AFH.3.18.2.w.2",
+        "text": "Pilot skill level"
+      },
+      {
+        "id": "AFH.3.18.2.w.3",
+        "text": "Aircraft color"
+      },
+      {
+        "id": "AFH.3.18.2.w.4",
+        "text": "Altitude at takeoff"
+      },
+      {
+        "id": "AFH.3.18.2.w.5",
+        "text": "Number of passengers"
+      },
+      {
+        "id": "AFH.3.18.2.w.6",
+        "text": "Fuel type used"
+      },
+      {
+        "id": "AFH.3.18.2.w.7",
+        "text": "Wing shape"
+      },
+      {
+        "id": "AFH.3.18.2.w.8",
+        "text": "Weather conditions"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3: Basic Flight Maneuvers Introduction",
+    "subjects": [
+      "Glides"
+    ]
+  },
+  {
+    "questionid": "AFH.3.18.3",
+    "question": "How does weight affect the glide angle of an airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.18.3.c.1",
+        "text": "Weight does not affect the glide angle"
+      },
+      {
+        "id": "AFH.3.18.3.c.2",
+        "text": "Heavier airplane needs higher airspeed for same glide ratio"
+      },
+      {
+        "id": "AFH.3.18.3.c.3",
+        "text": "Both heavy and light airplanes cover the same distance"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.18.3.w.1",
+        "text": "Heavier airplanes have a steeper glide angle"
+      },
+      {
+        "id": "AFH.3.18.3.w.2",
+        "text": "Lighter airplanes have a steeper glide angle"
+      },
+      {
+        "id": "AFH.3.18.3.w.3",
+        "text": "Weight affects glide angle only at high altitudes"
+      },
+      {
+        "id": "AFH.3.18.3.w.4",
+        "text": "Weight affects glide angle only in windy conditions"
+      },
+      {
+        "id": "AFH.3.18.3.w.5",
+        "text": "Heavier airplanes glide further"
+      },
+      {
+        "id": "AFH.3.18.3.w.6",
+        "text": "Lighter airplanes glide further"
+      },
+      {
+        "id": "AFH.3.18.3.w.7",
+        "text": "Weight affects glide angle only during takeoff"
+      },
+      {
+        "id": "AFH.3.18.3.w.8",
+        "text": "Weight affects glide angle only during landing"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3: Basic Flight Maneuvers Introduction",
+    "subjects": [
+      "Glides"
+    ]
+  },
+  {
+    "questionid": "AFH.3.18.4",
+    "question": "What happens when the glide airspeed is above or below the best glide airspeed?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.18.4.c.1",
+        "text": "Drag increases"
+      },
+      {
+        "id": "AFH.3.18.4.c.2",
+        "text": "Glide ratio is lessened"
+      },
+      {
+        "id": "AFH.3.18.4.c.3",
+        "text": "Distance flown changes proportionally"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.18.4.w.1",
+        "text": "Lift increases"
+      },
+      {
+        "id": "AFH.3.18.4.w.2",
+        "text": "Glide ratio improves"
+      },
+      {
+        "id": "AFH.3.18.4.w.3",
+        "text": "Distance flown remains constant"
+      },
+      {
+        "id": "AFH.3.18.4.w.4",
+        "text": "Aircraft stability improves"
+      },
+      {
+        "id": "AFH.3.18.4.w.5",
+        "text": "Fuel efficiency increases"
+      },
+      {
+        "id": "AFH.3.18.4.w.6",
+        "text": "Engine performance improves"
+      },
+      {
+        "id": "AFH.3.18.4.w.7",
+        "text": "Pilot workload decreases"
+      },
+      {
+        "id": "AFH.3.18.4.w.8",
+        "text": "Altitude loss decreases"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3: Basic Flight Maneuvers Introduction",
+    "subjects": [
+      "Glides"
+    ]
+  },
+  {
+    "questionid": "AFH.3.18.5",
+    "question": "What should a pilot do to maximize the distance traveled during a glide?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.18.5.c.1",
+        "text": "Eliminate drag-producing components"
+      },
+      {
+        "id": "AFH.3.18.5.c.2",
+        "text": "Maintain best glide airspeed"
+      },
+      {
+        "id": "AFH.3.18.5.c.3",
+        "text": "Avoid using flaps and landing gear"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.18.5.w.1",
+        "text": "Increase engine power"
+      },
+      {
+        "id": "AFH.3.18.5.w.2",
+        "text": "Use full flaps"
+      },
+      {
+        "id": "AFH.3.18.5.w.3",
+        "text": "Deploy landing gear"
+      },
+      {
+        "id": "AFH.3.18.5.w.4",
+        "text": "Increase pitch attitude"
+      },
+      {
+        "id": "AFH.3.18.5.w.5",
+        "text": "Decrease airspeed"
+      },
+      {
+        "id": "AFH.3.18.5.w.6",
+        "text": "Use cowl flaps"
+      },
+      {
+        "id": "AFH.3.18.5.w.7",
+        "text": "Fly at maximum altitude"
+      },
+      {
+        "id": "AFH.3.18.5.w.8",
+        "text": "Engage autopilot"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3: Basic Flight Maneuvers Introduction",
+    "subjects": [
+      "Glides"
+    ]
+  },
+  {
+    "questionid": "AFH.3.18.6",
+    "question": "What is the best glide airspeed used for?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.18.6.c.1",
+        "text": "Maximizing distance flown"
+      },
+      {
+        "id": "AFH.3.18.6.c.2",
+        "text": "Achieving highest lift-to-drag ratio"
+      },
+      {
+        "id": "AFH.3.18.6.c.3",
+        "text": "Flying during engine failure"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.18.6.w.1",
+        "text": "Increasing altitude"
+      },
+      {
+        "id": "AFH.3.18.6.w.2",
+        "text": "Reducing airspeed quickly"
+      },
+      {
+        "id": "AFH.3.18.6.w.3",
+        "text": "Performing aerobatic maneuvers"
+      },
+      {
+        "id": "AFH.3.18.6.w.4",
+        "text": "Enhancing passenger comfort"
+      },
+      {
+        "id": "AFH.3.18.6.w.5",
+        "text": "Improving fuel efficiency"
+      },
+      {
+        "id": "AFH.3.18.6.w.6",
+        "text": "Testing aircraft stability"
+      },
+      {
+        "id": "AFH.3.18.6.w.7",
+        "text": "Practicing emergency takeoffs"
+      },
+      {
+        "id": "AFH.3.18.6.w.8",
+        "text": "Increasing engine power"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3: Basic Flight Maneuvers Introduction",
+    "subjects": [
+      "Glides"
+    ]
+  },
+  {
+    "questionid": "AFH.3.19.1",
+    "question": "What are three elements in gliding turns that tend to force the nose down and increase glide speed?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.19.1.c.1",
+        "text": "Decrease in lift due to the direction of the lifting force"
+      },
+      {
+        "id": "AFH.3.19.1.c.2",
+        "text": "Excessive rudder inputs as a result of reduced flight control pressures"
+      },
+      {
+        "id": "AFH.3.19.1.c.3",
+        "text": "Normal stability and inherent characteristics of the airplane to nose-down with the power off"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.19.1.w.1",
+        "text": "Increased lift due to higher airspeed"
+      },
+      {
+        "id": "AFH.3.19.1.w.2",
+        "text": "Excessive aileron inputs"
+      },
+      {
+        "id": "AFH.3.19.1.w.3",
+        "text": "Increased propeller slipstream"
+      },
+      {
+        "id": "AFH.3.19.1.w.4",
+        "text": "Higher engine power settings"
+      },
+      {
+        "id": "AFH.3.19.1.w.5",
+        "text": "Increased effectiveness of flight control surfaces"
+      },
+      {
+        "id": "AFH.3.19.1.w.6",
+        "text": "Reduced yawing tendencies"
+      },
+      {
+        "id": "AFH.3.19.1.w.7",
+        "text": "Higher altitude stability"
+      },
+      {
+        "id": "AFH.3.19.1.w.8",
+        "text": "Increased elevator back pressure"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3: Basic Flight Maneuvers Introduction, Section: Gliding Turns",
+    "subjects": [
+      "Aerodynamics",
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.3.19.2",
+    "question": "What can excessive rudder pedal pressure during a gliding turn lead to?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.19.2.c.1",
+        "text": "Slips and skids"
+      },
+      {
+        "id": "AFH.3.19.2.c.2",
+        "text": "Potentially hazardous flight control conditions"
+      },
+      {
+        "id": "AFH.3.19.2.c.3",
+        "text": "Unrecoverable spin"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.19.2.w.1",
+        "text": "Increased lift"
+      },
+      {
+        "id": "AFH.3.19.2.w.2",
+        "text": "Stable flight"
+      },
+      {
+        "id": "AFH.3.19.2.w.3",
+        "text": "Controlled descent"
+      },
+      {
+        "id": "AFH.3.19.2.w.4",
+        "text": "Higher airspeed"
+      },
+      {
+        "id": "AFH.3.19.2.w.5",
+        "text": "Reduced yaw"
+      },
+      {
+        "id": "AFH.3.19.2.w.6",
+        "text": "Improved glide ratio"
+      },
+      {
+        "id": "AFH.3.19.2.w.7",
+        "text": "Smooth landing"
+      },
+      {
+        "id": "AFH.3.19.2.w.8",
+        "text": "Enhanced control coordination"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3: Basic Flight Maneuvers Introduction, Section: Gliding Turns",
+    "subjects": [
+      "Flight Safety",
+      "Pilot Training"
+    ]
+  },
+  {
+    "questionid": "AFH.3.19.3",
+    "question": "What should a pilot do during a level-off from a glide with a complete power failure?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.19.3.c.1",
+        "text": "Hold the best glide speed until necessary to reconfigure for landing"
+      },
+      {
+        "id": "AFH.3.19.3.c.2",
+        "text": "Plan for a steeper approach than usual"
+      },
+      {
+        "id": "AFH.3.19.3.c.3",
+        "text": "Use a 10 percent lead factor to slow the descent before landing"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.19.3.w.1",
+        "text": "Apply full power immediately"
+      },
+      {
+        "id": "AFH.3.19.3.w.2",
+        "text": "Maintain level flight throughout"
+      },
+      {
+        "id": "AFH.3.19.3.w.3",
+        "text": "Use a shallow approach"
+      },
+      {
+        "id": "AFH.3.19.3.w.4",
+        "text": "Ignore glide speed"
+      },
+      {
+        "id": "AFH.3.19.3.w.5",
+        "text": "Apply opposite rudder"
+      },
+      {
+        "id": "AFH.3.19.3.w.6",
+        "text": "Increase descent rate"
+      },
+      {
+        "id": "AFH.3.19.3.w.7",
+        "text": "Use a 20 percent lead factor"
+      },
+      {
+        "id": "AFH.3.19.3.w.8",
+        "text": "Maintain current airspeed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3: Basic Flight Maneuvers Introduction, Section: Gliding Turns",
+    "subjects": [
+      "Emergency Procedures",
+      "Flight Planning"
+    ]
+  },
+  {
+    "questionid": "AFH.3.19.4",
+    "question": "What should be done during simulated power failure training to level off from a glide?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.19.4.c.1",
+        "text": "Apply power as the 10 percent lead value appears on the altimeter"
+      },
+      {
+        "id": "AFH.3.19.4.c.2",
+        "text": "Raise the nose to stop the descent"
+      },
+      {
+        "id": "AFH.3.19.4.c.3",
+        "text": "Re-trim the airplane as necessary"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.19.4.w.1",
+        "text": "Maintain current descent rate"
+      },
+      {
+        "id": "AFH.3.19.4.w.2",
+        "text": "Keep power off until landing"
+      },
+      {
+        "id": "AFH.3.19.4.w.3",
+        "text": "Ignore altimeter readings"
+      },
+      {
+        "id": "AFH.3.19.4.w.4",
+        "text": "Apply full rudder deflection"
+      },
+      {
+        "id": "AFH.3.19.4.w.5",
+        "text": "Use a 20 percent lead value"
+      },
+      {
+        "id": "AFH.3.19.4.w.6",
+        "text": "Lower the nose"
+      },
+      {
+        "id": "AFH.3.19.4.w.7",
+        "text": "Increase descent rate"
+      },
+      {
+        "id": "AFH.3.19.4.w.8",
+        "text": "Apply opposite aileron"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3: Basic Flight Maneuvers Introduction, Section: Gliding Turns",
+    "subjects": [
+      "Pilot Training",
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.3.20.1",
+    "question": "What are the four fundamental maneuvers that form the foundation of basic airmanship?",
+    "correct_answers": [
+      {
+        "id": "AFH.3.20.1.c.1",
+        "text": "Straight-and-level flight"
+      },
+      {
+        "id": "AFH.3.20.1.c.2",
+        "text": "Turns"
+      },
+      {
+        "id": "AFH.3.20.1.c.3",
+        "text": "Climbs"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.3.20.1.w.1",
+        "text": "Rolls"
+      },
+      {
+        "id": "AFH.3.20.1.w.2",
+        "text": "Spins"
+      },
+      {
+        "id": "AFH.3.20.1.w.3",
+        "text": "Loops"
+      },
+      {
+        "id": "AFH.3.20.1.w.4",
+        "text": "Inverted flight"
+      },
+      {
+        "id": "AFH.3.20.1.w.5",
+        "text": "Barrel rolls"
+      },
+      {
+        "id": "AFH.3.20.1.w.6",
+        "text": "Hammerheads"
+      },
+      {
+        "id": "AFH.3.20.1.w.7",
+        "text": "Stalls"
+      },
+      {
+        "id": "AFH.3.20.1.w.8",
+        "text": "Immelmann turns"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 3: Basic Flight Maneuvers Introduction, Chapter Summary",
+    "subjects": [
+      "Basic Flight Maneuvers"
+    ]
+  }
+]

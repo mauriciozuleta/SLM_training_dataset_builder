@@ -160,6 +160,13 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
         allowLocalFallback,
         generationGuidance,
         onLog,
+        onProgress: (progress) => {
+          onProgress({
+            key: 'summary',
+            state: 'running',
+            ...progress,
+          });
+        },
         abortSignal,
       });
       await writeMarkdownArtifact('summary', typeof summaryResult?.markdown === 'string' ? summaryResult.markdown : '');
@@ -179,6 +186,16 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
         allowLocalFallback,
         generationGuidance,
         onLog,
+        onProgress: (progress) => {
+          if (!selectedOutputs.questions) {
+            return;
+          }
+          onProgress({
+            key: 'questions',
+            state: 'running',
+            ...progress,
+          });
+        },
         abortSignal,
       });
       questionBank = Array.isArray(questionResult?.questionBank) ? questionResult.questionBank : [];
@@ -204,6 +221,16 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
         sourceQuestionsFileName = path.basename(writtenQuestionsPath);
       }
       const deterministicResult = deterministicPairGenerator.buildDeterministicPairSet(pairQuestionBank, sourceQuestionsFileName);
+      const totalPairs = Number(deterministicResult?.deterministicTrainingPairSet?.totalPairs || 0);
+      if (totalPairs > 0) {
+        onProgress({
+          key: 'deterministicPairs',
+          state: 'running',
+          completed: totalPairs,
+          total: totalPairs,
+          progressText: `${totalPairs}/${totalPairs}`,
+        });
+      }
       await writeJsonArtifact('deterministicPairs', deterministicResult);
       onProgress({ key: 'deterministicPairs', state: 'completed' });
     };
@@ -219,6 +246,13 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
         allowLocalFallback,
         generationGuidance,
         onLog,
+        onProgress: (progress) => {
+          onProgress({
+            key: 'conversationalPairs',
+            state: 'running',
+            ...progress,
+          });
+        },
         abortSignal,
       });
       await writeJsonArtifact('conversationalPairs', conversationalResult);

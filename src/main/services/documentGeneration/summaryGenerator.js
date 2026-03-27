@@ -229,6 +229,7 @@ function createSummaryGenerator({ api }) {
     const allowLocalFallback = Boolean(options?.allowLocalFallback);
     const generationGuidance = cleanText(options?.generationGuidance).slice(0, MAX_GUIDANCE_CHARS);
     const onLog = typeof options?.onLog === 'function' ? options.onLog : () => {};
+    const onProgress = typeof options?.onProgress === 'function' ? options.onProgress : () => {};
     const abortSignal = options?.abortSignal || null;
     const PRIMARY_TIMEOUT_MS = 30000;
     const SECONDARY_TIMEOUT_MS = 60000;
@@ -256,6 +257,12 @@ function createSummaryGenerator({ api }) {
     let primaryRecoveryPending = false;
     let forceSecondaryForRemainder = false;
 
+    onProgress({
+      completed: 0,
+      total: totalSections,
+      progressText: `0/${totalSections}`,
+    });
+
     for (let index = 0; index < sections.length; index += 1) {
       assertNotAborted();
       const section = sections[index];
@@ -271,7 +278,20 @@ function createSummaryGenerator({ api }) {
       }
       const preferSecondary = canUseSecondary && (forceSecondaryForRemainder || now < switchedToSecondaryUntil);
       const firstProvider = preferSecondary ? secondaryProvider : preferredProvider;
-      const secondProvider = canUseSecondary && firstProvider === preferredProvider ? secondaryProvider : '';
+      const secondProvider = canUseSecondary
+        ? (firstProvider === preferredProvider ? secondaryProvider : preferredProvider)
+        : '';
+      const windowRemainingMs = Math.max(0, switchedToSecondaryUntil - now);
+      const routingMode = forceSecondaryForRemainder
+        ? 'secondary-locked'
+        : (preferSecondary ? 'secondary-window' : 'primary');
+      let resolvedProvider = '';
+      let resolvedVia = 'none';
+
+      log(
+        `Failover timeline [summary s${index + 1}]: start mode=${routingMode} first=${firstProvider || 'none'} alt=${secondProvider || 'none'} windowMs=${windowRemainingMs}`,
+        'info'
+      );
 
       if (firstProvider) {
         try {
@@ -287,6 +307,8 @@ function createSummaryGenerator({ api }) {
               generationGuidance,
             },
           });
+          resolvedProvider = firstProvider;
+          resolvedVia = 'first';
           if (firstProvider === preferredProvider) {
             primaryRecoveryPending = false;
           }
@@ -307,7 +329,7 @@ function createSummaryGenerator({ api }) {
 
       if (!apiSection && secondProvider) {
         try {
-          log(`Retrying summary section ${index + 1} with backup API (${secondProvider}).`, 'warning');
+          log(`Retrying summary section ${index + 1} with alternate API (${secondProvider}).`, 'warning');
           apiSection = await buildSectionSummaryFromApi({
             documentJson,
             section,
@@ -320,6 +342,8 @@ function createSummaryGenerator({ api }) {
               generationGuidance,
             },
           });
+          resolvedProvider = secondProvider;
+          resolvedVia = 'alternate';
         } catch (error) {
           lastError = error;
         }
@@ -341,16 +365,28 @@ function createSummaryGenerator({ api }) {
 
         usage.prompt_tokens += Number(apiSection.usage?.prompt_tokens || 0);
         usage.completion_tokens += Number(apiSection.usage?.completion_tokens || 0);
+        log(
+          `Failover timeline [summary s${index + 1}]: outcome=success via=${resolvedVia} provider=${resolvedProvider || 'unknown'}`,
+          'info'
+        );
       } else if (allowLocalFallback) {
         mainConcepts.push({
           title,
           summary: summarizeSectionContent(section?.content, 260),
         });
+        log(`Failover timeline [summary s${index + 1}]: outcome=fallback`, 'warning');
       } else {
         const sectionRef = cleanText(section?.id) || `${index + 1}`;
         const errorMsg = `${lastError?.message || lastError || 'Unknown API error.'}`;
+        log(`Failover timeline [summary s${index + 1}]: outcome=failed error=${errorMsg}`, 'error');
         throw new Error(`Summary generation failed for section ${sectionRef}. ${errorMsg}`);
       }
+
+      onProgress({
+        completed: index + 1,
+        total: totalSections,
+        progressText: `${index + 1}/${totalSections}`,
+      });
     }
 
     const keyLearningObjectives = sections

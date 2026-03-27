@@ -260,6 +260,7 @@ function createQuestionBankGenerator({ api, common }) {
     const allowLocalFallback = Boolean(options?.allowLocalFallback);
     const generationGuidance = cleanText(options?.generationGuidance).slice(0, MAX_GUIDANCE_CHARS);
     const onLog = typeof options?.onLog === 'function' ? options.onLog : () => {};
+    const onProgress = typeof options?.onProgress === 'function' ? options.onProgress : () => {};
     const abortSignal = options?.abortSignal || null;
     const PRIMARY_TIMEOUT_MS = 30000;
     const SECONDARY_TIMEOUT_MS = 60000;
@@ -293,6 +294,13 @@ function createQuestionBankGenerator({ api, common }) {
     let primaryRecoveryPending = false;
     let forceSecondaryForRemainder = false;
 
+    const totalRequiredQuestions = Math.max(1, Number(sectionBlueprintInfo?.totalRequiredQuestions || 0));
+    onProgress({
+      completed: 0,
+      total: totalRequiredQuestions,
+      progressText: `0/${totalRequiredQuestions}`,
+    });
+
     for (let sectionIndex = 0; sectionIndex < sections.length; sectionIndex += 1) {
       assertNotAborted();
       const section = sections[sectionIndex];
@@ -318,7 +326,20 @@ function createQuestionBankGenerator({ api, common }) {
       }
       const preferSecondary = canUseSecondary && (forceSecondaryForRemainder || now < switchedToSecondaryUntil);
       const firstProvider = preferSecondary ? secondaryProvider : preferredProvider;
-      const secondProvider = canUseSecondary && firstProvider === preferredProvider ? secondaryProvider : '';
+      const secondProvider = canUseSecondary
+        ? (firstProvider === preferredProvider ? secondaryProvider : preferredProvider)
+        : '';
+      const windowRemainingMs = Math.max(0, switchedToSecondaryUntil - now);
+      const routingMode = forceSecondaryForRemainder
+        ? 'secondary-locked'
+        : (preferSecondary ? 'secondary-window' : 'primary');
+      let resolvedProvider = '';
+      let resolvedVia = 'none';
+
+      log(
+        `Failover timeline [questions s${sectionOrdinal}]: start mode=${routingMode} first=${firstProvider || 'none'} alt=${secondProvider || 'none'} windowMs=${windowRemainingMs}`,
+        'info'
+      );
 
       if (firstProvider) {
         try {
@@ -337,6 +358,8 @@ function createQuestionBankGenerator({ api, common }) {
               generationGuidance,
             },
           });
+          resolvedProvider = firstProvider;
+          resolvedVia = 'first';
           if (firstProvider === preferredProvider) {
             primaryRecoveryPending = false;
           }
@@ -357,7 +380,7 @@ function createQuestionBankGenerator({ api, common }) {
 
       if (!apiResult && secondProvider) {
         try {
-          log(`Retrying question section ${sectionOrdinal} with backup API (${secondProvider}).`, 'warning');
+          log(`Retrying question section ${sectionOrdinal} with alternate API (${secondProvider}).`, 'warning');
           apiResult = await buildSectionQuestionsFromApi({
             documentJson,
             section,
@@ -373,6 +396,8 @@ function createQuestionBankGenerator({ api, common }) {
               generationGuidance,
             },
           });
+          resolvedProvider = secondProvider;
+          resolvedVia = 'alternate';
         } catch (error) {
           lastError = error;
         }
@@ -396,10 +421,21 @@ function createQuestionBankGenerator({ api, common }) {
           sectionContent: section?.content,
           count: plannedCount,
         });
+        if (!resolvedProvider) {
+          log(`Failover timeline [questions s${sectionOrdinal}]: outcome=fallback questions=${plannedCount}`, 'warning');
+        }
       } else if (!Array.isArray(rawQuestions) || rawQuestions.length === 0) {
         const sectionRef = cleanText(section?.id) || `${sectionOrdinal}`;
         const errorMsg = `${lastError?.message || lastError || 'Unknown API error.'}`;
+        log(`Failover timeline [questions s${sectionOrdinal}]: outcome=failed error=${errorMsg}`, 'error');
         throw new Error(`Question generation failed for section ${sectionRef}. ${errorMsg}`);
+      }
+
+      if (resolvedProvider) {
+        log(
+          `Failover timeline [questions s${sectionOrdinal}]: outcome=success via=${resolvedVia} provider=${resolvedProvider} questions=${Math.min(plannedCount, rawQuestions.length)}`,
+          'info'
+        );
       }
 
       const normalizedQuestions = [];
@@ -426,6 +462,11 @@ function createQuestionBankGenerator({ api, common }) {
         sectionOrdinal,
         sectionWeightPercentage: Number(sectionWeightPercentage.toFixed(2)),
         questionsGenerated: normalizedQuestions.length,
+      });
+      onProgress({
+        completed: allQuestions.length,
+        total: totalRequiredQuestions,
+        progressText: `${allQuestions.length}/${totalRequiredQuestions}`,
       });
     }
 

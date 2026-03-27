@@ -1,0 +1,79 @@
+{
+  "updatedAtUtc": "2026-03-27T17:32:59.249Z",
+  "runs": [
+    {
+      "atUtc": "2026-03-27T16:36:56.944Z",
+      "decision": "close",
+      "totalIssues": 1,
+      "issueCodes": [
+        "DUPLICATE_CONVERSATIONS"
+      ],
+      "fatalIssueCodes": [],
+      "fatalIssueCount": 0,
+      "beforeWeightedIssuePercent": 0.046,
+      "afterWeightedIssuePercent": 0.046,
+      "beforeLevel": "optimum",
+      "afterLevel": "optimum",
+      "improved": false
+    },
+    {
+      "atUtc": "2026-03-27T17:32:59.249Z",
+      "decision": "close",
+      "totalIssues": 1,
+      "issueCodes": [
+        "REPEATED_SUBJECTS"
+      ],
+      "fatalIssueCodes": [],
+      "fatalIssueCount": 0,
+      "beforeWeightedIssuePercent": 0.017,
+      "afterWeightedIssuePercent": 0.017,
+      "beforeLevel": "optimum",
+      "afterLevel": "optimum",
+      "improved": false
+    }
+  ],
+  "issueStats": {
+    "DUPLICATE_CONVERSATIONS": {
+      "count": 1,
+      "severity": "warning",
+      "instruction": "Regenerate only duplicated conversational pairs with variation constraints.",
+      "lastSeenUtc": "2026-03-27T16:36:56.944Z"
+    },
+    "REPEATED_SUBJECTS": {
+      "count": 1,
+      "severity": "warning",
+      "instruction": "Regenerate over-concentrated sections with subject balancing constraints.",
+      "lastSeenUtc": "2026-03-27T17:32:59.249Z"
+    }
+  },
+  "successfulFixes": {},
+  "stability": {
+    "isStableOptimum": false,
+    "checkedAtUtc": "2026-03-27T17:32:59.249Z",
+    "rules": {
+      "consecutiveOptimumRuns": 3,
+      "recurringHighImpactThreshold": 2,
+      "highImpactWindow": 5
+    },
+    "consecutiveOptimumRuns": 2,
+    "recurringHighImpact": [],
+    "latestRun": {
+      "atUtc": "2026-03-27T17:32:59.249Z",
+      "decision": "close",
+      "totalIssues": 1,
+      "issueCodes": [
+        "REPEATED_SUBJECTS"
+      ],
+      "fatalIssueCodes": [],
+      "fatalIssueCount": 0,
+      "beforeWeightedIssuePercent": 0.017,
+      "afterWeightedIssuePercent": 0.017,
+      "beforeLevel": "optimum",
+      "afterLevel": "optimum",
+      "improved": false
+    },
+    "reasons": [
+      "Need 3 consecutive runs; only 2 recorded."
+    ]
+  }
+}
