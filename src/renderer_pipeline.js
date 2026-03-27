@@ -1,6 +1,7 @@
 const card = document.querySelector('[data-file-card]');
 const requiredCards = document.querySelectorAll('[data-file-card][data-required="true"]');
 const generateButton = document.getElementById('generateButton');
+const cancelButton = document.getElementById('cancelButton');
 const generateHint = document.getElementById('generateHint');
 const logWindow = document.getElementById('logWindow');
 const clearLogButton = document.getElementById('clearLogButton');
@@ -28,7 +29,17 @@ const questionReadyBadge = document.getElementById('questionReadyBadge');
 const deterministicPairsReadyBadge = document.getElementById('deterministicPairsReadyBadge');
 const conversationalPairsReadyBadge = document.getElementById('conversationalPairsReadyBadge');
 const documentOutputCard = document.querySelector('[data-document-card]');
-const apiStatusEl = document.getElementById('apiStatus');
+const openAiStatusButton = document.getElementById('openAiStatusButton');
+const geminiStatusButton = document.getElementById('geminiStatusButton');
+
+const qualityResultsModal = document.getElementById('qualityResultsModal');
+const qualityRatingDisplay = document.getElementById('qualityRatingDisplay');
+const qualityExplanation = document.getElementById('qualityExplanation');
+const errorCountEl = document.getElementById('errorCount');
+const warningCountEl = document.getElementById('warningCount');
+const weightedPercentEl = document.getElementById('weightedPercent');
+const issuesSummary = document.getElementById('issuesSummary');
+const qualityActionsContainer = document.getElementById('qualityActionsContainer');
 
 const outputBadgesByKey = {
   docJson: documentReadyBadge,
@@ -47,6 +58,7 @@ let apiAvailable = false;
 let apiProviderCount = 0;
 let apiProviders = [];
 let generationInProgress = false;
+let generationCancelRequested = false;
 let clearPrimaryPdf = async () => {};
 
 const getTimeStamp = () => new Date().toLocaleTimeString([], { hour12: false });
@@ -62,6 +74,14 @@ const addLog = (message, level = 'info') => {
   logWindow.scrollTop = logWindow.scrollHeight;
 };
 
+const unsubscribeGenerationLog = window.desktopApp?.onGenerationLog?.((entry) => {
+  const message = `${entry?.message || ''}`.trim();
+  if (!message) {
+    return;
+  }
+  addLog(message, `${entry?.level || 'info'}`.toLowerCase());
+}) || (() => {});
+
 const showWarningPopup = async (message, detail = '') => {
   if (!window.desktopApp?.showAlert) {
     return;
@@ -71,6 +91,133 @@ const showWarningPopup = async (message, detail = '') => {
     title: 'Attention Required',
     message,
     detail,
+  });
+};
+
+const getQualityExplanation = (level) => {
+  const levelLower = `${level || ''}`.toLowerCase();
+  const explanations = {
+    optimum: 'Excellent quality. Safe for production use. Minimal issues detected.',
+    acceptable: 'Good quality. Usable with minor review. Some non-critical issues present.',
+    critical: 'Moderate quality concerns. Recommended to review and address issues before use.',
+    catastrophic: 'Severe quality issues. Regeneration is strongly recommended.',
+  };
+  return explanations[levelLower] || 'Quality audit completed.';
+};
+
+const getIssuesSummaryText = (auditResult) => {
+  const issues = auditResult?.findings || [];
+  if (issues.length === 0) {
+    return '';
+  }
+
+  const issueCounts = {};
+  issues.forEach((issue) => {
+    const code = `${issue?.code || 'unknown'}`;
+    issueCounts[code] = (issueCounts[code] || 0) + 1;
+  });
+
+  const topIssues = Object.entries(issueCounts)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 3)
+    .map(([code, count]) => `${count}× ${code}`)
+    .join(', ');
+
+  return topIssues ? `Top issues: ${topIssues}` : '';
+};
+
+let qualityDecision = null;
+
+const showQualityResultsModal = async (auditResult) => {
+  if (!qualityResultsModal) {
+    return;
+  }
+
+  qualityDecision = null;
+  const rating = auditResult?.overallRating || {};
+  const level = `${rating.level || 'unknown'}`.toLowerCase();
+  const errors = Number(rating?.errorCount || 0);
+  const warnings = Number(rating?.warningCount || 0);
+  const weightedPct = Number(rating?.weightedIssuePercent || 0);
+
+  // Update modal header
+  if (qualityRatingDisplay) {
+    qualityRatingDisplay.textContent = `${level.charAt(0).toUpperCase() + level.slice(1)} (${weightedPct}%)`;
+    qualityRatingDisplay.className = `quality-rating ${level}`;
+  }
+
+  // Update explanation
+  if (qualityExplanation) {
+    qualityExplanation.textContent = getQualityExplanation(level);
+  }
+
+  // Update stats
+  if (errorCountEl) errorCountEl.textContent = String(errors);
+  if (warningCountEl) warningCountEl.textContent = String(warnings);
+  if (weightedPercentEl) weightedPercentEl.textContent = `${weightedPct}%`;
+
+  // Update issues summary
+  if (issuesSummary) {
+    const summary = getIssuesSummaryText(auditResult);
+    issuesSummary.textContent = summary;
+  }
+
+  // Create action buttons based on quality level
+  if (qualityActionsContainer) {
+    qualityActionsContainer.innerHTML = '';
+
+    const buttons = [];
+    if (level === 'optimum') {
+      buttons.push({ label: 'Close', action: 'close', style: 'neutral' });
+    } else if (level === 'catastrophic') {
+      buttons.push({ label: 'Regenerate', action: 'redo', style: 'danger' });
+    } else {
+      // Acceptable or Critical
+      buttons.push({ label: 'Repair Selected Issues', action: 'repair', style: 'primary' });
+      buttons.push({ label: 'Generate Log for Later', action: 'defer-log', style: 'secondary' });
+      buttons.push({ label: 'Regenerate', action: 'redo', style: 'danger' });
+    }
+
+    buttons.forEach(({ label, action, style }) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.textContent = label;
+      btn.className = `quality-action-${style}`;
+      btn.addEventListener('click', () => {
+        qualityDecision = action;
+        hideQualityResultsModal();
+      });
+      qualityActionsContainer.appendChild(btn);
+    });
+  }
+
+  // Show modal
+  qualityResultsModal.hidden = false;
+  addLog(`Quality results: ${level.toUpperCase()} - waiting for user action...`, 'info');
+};
+
+const hideQualityResultsModal = () => {
+  if (qualityResultsModal) {
+    qualityResultsModal.hidden = true;
+  }
+};
+
+const getQualityDecision = async (auditResult) => {
+  return new Promise((resolve) => {
+    showQualityResultsModal(auditResult);
+
+    // Poll for decision
+    const checkDecision = () => {
+      if (qualityDecision !== null) {
+        const decision = qualityDecision;
+        qualityDecision = null;
+        resolve(decision);
+        return;
+      }
+      setTimeout(checkDecision, 100);
+    };
+
+    checkDecision();
   });
 };
 
@@ -146,18 +293,63 @@ const markRunningOutputsAsError = () => {
   });
 };
 
-const applyApiOutputAvailability = async (available, providers = []) => {
-  apiAvailable = Boolean(available);
-  apiProviderCount = Array.isArray(providers) ? providers.length : 0;
-  apiProviders = Array.isArray(providers) ? providers.slice() : [];
+const applyApiOutputAvailability = async (status = {}) => {
+  const configuredProviders = Array.isArray(status?.providers) ? status.providers : [];
+  const verifiedProviders = Array.isArray(status?.verifiedProviders)
+    ? status.verifiedProviders
+    : configuredProviders;
 
-  if (apiStatusEl) {
-    if (!apiAvailable) {
-      apiStatusEl.textContent = 'API unavailable. Generation is disabled until API credentials are available. Performance reduced due API availability.';
-    } else if (apiProviderCount < 2) {
-      apiStatusEl.textContent = `API available (${providers.join(', ') || 'configured'}). Performance reduced due API availability.`;
+  apiAvailable = Boolean(status?.verifiedAvailable ?? status?.available);
+  apiProviderCount = configuredProviders.length;
+  apiProviders = configuredProviders.slice();
+
+  const setProviderState = (button, providerName, check) => {
+    if (!button) {
+      return;
+    }
+    button.classList.remove('provider-status--connecting', 'provider-status--connected', 'provider-status--failed');
+    if (!check?.configured) {
+      button.classList.add('provider-status--failed');
+      button.title = `${providerName}: not configured`;
+      return;
+    }
+    if (check?.verified) {
+      button.classList.add('provider-status--connected');
+      button.title = `${providerName}: connected${check?.model ? ` (${check.model})` : ''}`;
+      return;
+    }
+    button.classList.add('provider-status--failed');
+    button.title = `${providerName}: failed (${check?.error || 'unreachable'})`;
+  };
+
+  const checks = status?.checks && typeof status.checks === 'object' ? status.checks : {};
+  setProviderState(openAiStatusButton, 'OpenAI', checks.openai || { configured: configuredProviders.includes('openai'), verified: false, error: 'unreachable' });
+  setProviderState(geminiStatusButton, 'Gemini', checks.gemini || { configured: configuredProviders.includes('gemini'), verified: false, error: 'unreachable' });
+
+  if (!configuredProviders.length) {
+    addLog('API unavailable. Configure OpenAI and/or Gemini keys in .env, then restart the app.', 'error');
+  } else {
+    const details = ['openai', 'gemini']
+      .filter((provider) => checks[provider]?.configured)
+      .map((provider) => {
+        const check = checks[provider];
+        if (check?.verified) {
+          return `${provider}: OK${check.model ? ` (${check.model})` : ''}`;
+        }
+        const reason = `${check?.error || 'unreachable'}`.trim();
+        return `${provider}: FAIL (${reason})`;
+      });
+
+    if (details.length > 0) {
+      if (apiAvailable) {
+        addLog(`Connected — ${details.join(' | ')}`, 'info');
+      } else {
+        addLog(`Connection failed — ${details.join(' | ')}`, 'error');
+      }
+    } else if (apiAvailable) {
+      addLog(`Connected (${verifiedProviders.join(', ') || 'configured'}).`, 'info');
     } else {
-      apiStatusEl.textContent = `APIs available (${providers.join(', ')}). Parallel API execution enabled.`;
+      addLog('API unavailable.', 'error');
     }
   }
 
@@ -193,17 +385,28 @@ const applyApiOutputAvailability = async (available, providers = []) => {
 };
 
 const refreshApiAvailability = async () => {
+  [openAiStatusButton, geminiStatusButton].forEach((button) => {
+    if (!button) {
+      return;
+    }
+    button.classList.remove('provider-status--connected', 'provider-status--failed');
+    button.classList.add('provider-status--connecting');
+    button.title = `${button.textContent}: connecting...`;
+  });
+  addLog('Connecting to API providers...', 'info');
   if (!window.desktopApp?.getApiStatus) {
-    await applyApiOutputAvailability(false, []);
+    await applyApiOutputAvailability({ available: false, providers: [] });
     return;
   }
 
   try {
-    const status = await window.desktopApp.getApiStatus();
-    await applyApiOutputAvailability(status?.available, status?.providers || []);
+    const status = window.desktopApp?.verifyApiProviders
+      ? await window.desktopApp.verifyApiProviders()
+      : await window.desktopApp.getApiStatus();
+    await applyApiOutputAvailability(status || { available: false, providers: [] });
   } catch (error) {
     addLog(`Could not verify API availability: ${error.message}`, 'error');
-    await applyApiOutputAvailability(false, []);
+    await applyApiOutputAvailability({ available: false, providers: [] });
   }
 };
 
@@ -360,6 +563,10 @@ const refreshGenerateState = () => {
   const ready = !generationInProgress && getRequiredUploadsReady() && getDestinationsReady() && hasSelectedOutput();
   generateButton.disabled = !ready;
   generateButton.textContent = generationInProgress ? 'Generating...' : 'Generate';
+  if (cancelButton) {
+    cancelButton.disabled = !generationInProgress;
+    cancelButton.textContent = generationCancelRequested ? 'Cancelling...' : 'Cancel';
+  }
 
   if (generationInProgress) {
     generateHint.textContent = 'Generation in progress. Please wait.';
@@ -860,6 +1067,7 @@ generateButton?.addEventListener('click', async () => {
 
   try {
     generationInProgress = true;
+    generationCancelRequested = false;
     await clearPrimaryPdf({ resetInputs: false });
     refreshGenerateState();
     while (!completed) {
@@ -914,17 +1122,55 @@ generateButton?.addEventListener('click', async () => {
 
         let result;
         try {
-          result = await window.desktopApp.buildArtifacts({
+          const runBuildArtifacts = (allowLocalFallback) => window.desktopApp.buildArtifacts({
             outputDir: outputFolder,
             selectedOutputs,
             outputFileNames,
             documentJson: extracted.data,
             documentJsonPath: extracted.outputPath,
             allowOverwrite,
+            allowLocalFallback,
             idPrefix: documentIdPrefix,
             apiProviderCount,
             apiProviders,
           });
+
+          try {
+            result = await runBuildArtifacts(false);
+          } catch (firstBuildError) {
+            const firstMessage = `${firstBuildError?.message || firstBuildError || ''}`;
+            const cancelled = /generation cancelled by user/i.test(firstMessage);
+            const bothApisFailed = /failed for section|no api provider call succeeded|request timed out|openai request failed|gemini request failed/i.test(firstMessage.toLowerCase());
+
+            if (cancelled) {
+              throw firstBuildError;
+            }
+
+            if (!bothApisFailed || !window.desktopApp?.showConfirm) {
+              throw firstBuildError;
+            }
+
+            const allowLocalFallback = await window.desktopApp.showConfirm({
+              type: 'question',
+              title: 'Both APIs Failed',
+              message: 'Both APIs failed for at least one section. Allow local fallback for remaining output?',
+              detail: 'Choosing Disallow will stop generation and preserve API-only behavior.',
+              buttons: ['Allow Fallback', 'Disallow Fallback'],
+            });
+
+            addLog(
+              allowLocalFallback
+                ? 'User approved local fallback after both APIs failed. Retrying artifact generation.'
+                : 'User disallowed local fallback after both APIs failed.',
+              allowLocalFallback ? 'warning' : 'warning'
+            );
+
+            if (!allowLocalFallback) {
+              throw firstBuildError;
+            }
+
+            result = await runBuildArtifacts(true);
+          }
         } finally {
           unsubscribeArtifactProgress();
         }
@@ -950,8 +1196,79 @@ generateButton?.addEventListener('click', async () => {
             }
             addLog(`Saved (${entry.key}): ${entry.path}`, 'success');
           });
+
+          if (result?.summary?.routingMode) {
+            const configured = Array.isArray(result?.summary?.providersConfigured)
+              ? result.summary.providersConfigured.join(', ')
+              : 'none';
+            const assigned = result?.summary?.providersAssigned || {};
+            const observedProviders = result?.summary?.providersObserved || {};
+            const observedModels = result?.summary?.modelsObserved || {};
+            const providerSummary = (key) => {
+              const list = Array.isArray(observedProviders?.[key]) ? observedProviders[key] : [];
+              return list.length > 0 ? list.join(', ') : 'none';
+            };
+            const modelSummary = (key) => {
+              const list = Array.isArray(observedModels?.[key]) ? observedModels[key] : [];
+              return list.length > 0 ? list.join(', ') : 'none';
+            };
+            addLog(
+              `API routing: ${result.summary.routingMode} | configured: ${configured} | assigned summary/questions/conversational: ${assigned.summary || 'auto'}/${assigned.questions || 'auto'}/${assigned.conversational || 'auto'} | observed providers: ${providerSummary('summary')}/${providerSummary('questions')}/${providerSummary('conversational')} | observed models: ${modelSummary('summary')}/${modelSummary('questions')}/${modelSummary('conversational')}`,
+              'info'
+            );
+          }
         } else {
           addLog('No selected artifacts were written.', 'info');
+        }
+
+        const auditCandidates = Array.isArray(result?.written)
+          ? result.written
+            .filter((entry) => ['conversationalPairs', 'deterministicPairs'].includes(`${entry?.key || ''}`))
+            .map((entry) => `${entry?.path || ''}`)
+            .filter(Boolean)
+          : [];
+
+        if (auditCandidates.length > 0 && window.desktopApp?.auditPairs) {
+          const qualityReportPath = joinPath(outputFolder, `${documentIdPrefix || 'output'}_quality_report.json`);
+          addLog(`Running quality audit on ${auditCandidates.length} pair artifact(s)...`, 'info');
+          try {
+            const auditResult = await window.desktopApp.auditPairs({
+              files: auditCandidates,
+              reportPath: qualityReportPath,
+            });
+
+            const rating = auditResult?.overallRating || {};
+            const level = `${rating.level || 'unknown'}`.toUpperCase();
+            const weightedPct = Number(rating?.weightedIssuePercent || 0);
+            const errors = Number(rating?.errorCount || 0);
+            const warnings = Number(rating?.warningCount || 0);
+
+            const auditLogLevel = errors > 0 ? 'error' : (warnings > 0 ? 'warning' : 'success');
+            addLog(
+              `Quality audit complete: ${level} (${weightedPct}%). Errors: ${errors}, Warnings: ${warnings}.`,
+              auditLogLevel
+            );
+            addLog(`Quality report saved: ${qualityReportPath}`, 'info');
+
+            // Show quality results modal and wait for user decision
+            const userDecision = await getQualityDecision(auditResult);
+            addLog(`User action selected: ${userDecision}`, 'info');
+
+            // Handle user decision
+            if (userDecision === 'repair') {
+              addLog('Repair action selected. (Step 5 implementation required)', 'warning');
+            } else if (userDecision === 'defer-log') {
+              addLog('Deferred fixes logged. (Step 6 implementation required)', 'warning');
+            } else if (userDecision === 'redo') {
+              addLog('Regeneration selected. (Step 7 implementation required)', 'warning');
+            } else if (userDecision === 'close') {
+              addLog('Audit results reviewed.', 'info');
+            }
+          } catch (auditError) {
+            const message = `${auditError?.message || auditError || 'Unknown audit error.'}`;
+            addLog(`Quality audit failed: ${message}`, 'warning');
+            hideQualityResultsModal();
+          }
         }
 
         setConversionStatus('Conversion completed successfully.', 100, 'success');
@@ -1000,6 +1317,10 @@ generateButton?.addEventListener('click', async () => {
           return;
         }
 
+        if (/generation cancelled by user/i.test(message)) {
+          throw new Error('Generation cancelled by user.');
+        }
+
         const apiFailed = /api is required|api analysis failed/i.test(message);
         if (apiFailed) {
           markRunningOutputsAsError();
@@ -1018,14 +1339,36 @@ generateButton?.addEventListener('click', async () => {
       }
     }
   } catch (error) {
-    markRunningOutputsAsError();
-    setConversionStatus(`Conversion failed: ${error.message}`, 100, 'error');
-    addLog(`Pipeline failed: ${error.message}`, 'error');
+    const message = `${error?.message || error || 'Unknown generation error.'}`;
+    if (/generation cancelled by user/i.test(message)) {
+      setConversionStatus('Generation cancelled by user.', 0, 'idle');
+      addLog('Pipeline cancelled by user.', 'warning');
+    } else {
+      markRunningOutputsAsError();
+      setConversionStatus(`Conversion failed: ${message}`, 100, 'error');
+      addLog(`Pipeline failed: ${message}`, 'error');
+    }
   } finally {
     generationInProgress = false;
+    generationCancelRequested = false;
     refreshGenerateState();
   }
 });
+  cancelButton?.addEventListener('click', async () => {
+    if (!generationInProgress || generationCancelRequested) {
+      return;
+    }
+
+    generationCancelRequested = true;
+    refreshGenerateState();
+    addLog('Cancellation requested by user...', 'warning');
+
+    try {
+      await window.desktopApp?.cancelGeneration?.();
+    } catch (error) {
+      addLog(`Cancellation request failed: ${error.message}`, 'error');
+    }
+  });
 
 refreshGenerateState();
 resetDocumentOutputState();

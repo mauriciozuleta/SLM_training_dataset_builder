@@ -26,6 +26,7 @@ function createDocumentGenerationService({ fs, path, env, apiTimeoutMs, maxQuest
   return {
     writeSelectedArtifacts: artifactWriter.writeSelectedArtifacts,
     getApiStatus: api.getApiStatus,
+    verifyApiProviders: api.verifyApiProviders,
     buildStructuredQuestionId: common.buildStructuredQuestionId,
     extractSectionOrdinal: common.extractSectionOrdinal,
     normalizeJsonFileName: common.normalizeJsonFileName,

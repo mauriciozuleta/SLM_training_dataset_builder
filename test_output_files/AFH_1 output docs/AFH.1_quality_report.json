@@ -1,0 +1,193 @@
+{
+  "generatedAtUtc": "2026-03-27T03:00:28.715Z",
+  "root": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files",
+  "fileCount": 2,
+  "totalPairs": 793,
+  "overallRating": {
+    "level": "optimum",
+    "weightedIssueRate": 0.00031525851197982345,
+    "weightedIssuePercent": 0.032,
+    "weightedIssueCount": 0.25,
+    "thresholds": {
+      "optimumMaxPercent": 0.5,
+      "acceptableMaxPercent": 2,
+      "criticalMaxPercent": 7.000000000000001
+    },
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "fatalIssueCount": 0
+  },
+  "results": [
+    {
+      "type": "deterministic",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\AFH_1 output docs\\AFH_1_deterministic_training_pairs.json",
+      "pairCount": 550,
+      "questionCount": 50,
+      "subjectDistributionTop": [
+        {
+          "key": "Flight Training",
+          "count": 165
+        },
+        {
+          "key": "Collision Avoidance",
+          "count": 99
+        },
+        {
+          "key": "Aviation Regulations",
+          "count": 88
+        },
+        {
+          "key": "Pilot Certification",
+          "count": 55
+        },
+        {
+          "key": "FAA Regulations",
+          "count": 44
+        },
+        {
+          "key": "Checklist Usage",
+          "count": 44
+        },
+        {
+          "key": "Aviation Safety",
+          "count": 33
+        },
+        {
+          "key": "Runway Incursion Avoidance",
+          "count": 33
+        },
+        {
+          "key": "Stall Awareness",
+          "count": 33
+        },
+        {
+          "key": "Flight Instructor Certification",
+          "count": 22
+        },
+        {
+          "key": "Aviation Training",
+          "count": 22
+        },
+        {
+          "key": "Aviation Standards",
+          "count": 11
+        },
+        {
+          "key": "Flight Operations",
+          "count": 11
+        },
+        {
+          "key": "General Aviation",
+          "count": 11
+        },
+        {
+          "key": "Instructional Techniques",
+          "count": 11
+        }
+      ],
+      "issues": [
+        {
+          "severity": "warning",
+          "code": "REPEATED_SUBJECTS",
+          "message": "Subject distribution is highly concentrated; consider balancing section/topic coverage.",
+          "target": {
+            "type": "subject-group",
+            "id": "repeated-subjects"
+          },
+          "repairGuidance": {
+            "action": "targeted-repair",
+            "scope": "section",
+            "instruction": "Regenerate over-concentrated sections with subject balancing constraints."
+          },
+          "context": {
+            "repeatedSubjects": [
+              {
+                "key": "Flight Training",
+                "count": 165,
+                "targets": [
+                  "AFH.1.4.1",
+                  "AFH.1.4.1",
+                  "AFH.1.4.1",
+                  "AFH.1.4.1",
+                  "AFH.1.4.1",
+                  "AFH.1.4.1",
+                  "AFH.1.4.1",
+                  "AFH.1.4.1"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "conversational",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\AFH_1 output docs\\AFH_1_conversational_training_pairs.json",
+      "pairCount": 243,
+      "subjectDistributionTop": [
+        {
+          "key": "Visual Scanning",
+          "count": 15
+        },
+        {
+          "key": "Checklists",
+          "count": 12
+        },
+        {
+          "key": "Flight Controls",
+          "count": 11
+        },
+        {
+          "key": "Safety",
+          "count": 10
+        },
+        {
+          "key": "Regulations",
+          "count": 8
+        },
+        {
+          "key": "Stalls",
+          "count": 8
+        },
+        {
+          "key": "Angle of Attack",
+          "count": 8
+        },
+        {
+          "key": "FAA WINGS Program",
+          "count": 8
+        },
+        {
+          "key": "Communication",
+          "count": 7
+        },
+        {
+          "key": "14 CFR part 91",
+          "count": 6
+        },
+        {
+          "key": "FSDO",
+          "count": 6
+        },
+        {
+          "key": "Clearing Procedures",
+          "count": 6
+        },
+        {
+          "key": "Procedure",
+          "count": 6
+        },
+        {
+          "key": "Aviation Safety Inspectors",
+          "count": 5
+        },
+        {
+          "key": "Habit Patterns",
+          "count": 5
+        }
+      ],
+      "issues": []
+    }
+  ]
+}

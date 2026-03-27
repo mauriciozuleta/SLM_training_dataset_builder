@@ -179,7 +179,7 @@ function buildFallbackPair(section, documentJson, sectionOrdinal, pairIndex, per
 /**
  * Request conversational pairs for a single document section.
  */
-async function buildSectionPairsFromApi(api, documentJson, section, sectionOrdinal, pairCount, preferredProvider) {
+async function buildSectionPairsFromApi(api, documentJson, section, sectionOrdinal, pairCount, preferredProvider, requestOptions = {}) {
   const sectionTitle = normalizeText(section?.title) || `Section ${sectionOrdinal}`;
   const prompt = [
     'You are generating aviation tutoring conversations for small language model training.',
@@ -206,8 +206,8 @@ async function buildSectionPairsFromApi(api, documentJson, section, sectionOrdin
   };
 
   const result = preferredProvider
-    ? await api.callApiJson(preferredProvider, prompt, payload)
-    : await api.callPreferredApiJson(prompt, payload);
+    ? await api.callApiJson(preferredProvider, prompt, payload, null, requestOptions)
+    : await api.callPreferredApiJson(prompt, payload, null, requestOptions);
 
   return {
     modelUsed: normalizeText(result?.modelUsed),
@@ -260,6 +260,24 @@ function createConversationalPairGenerator({ api }) {
     const preferredProvider = typeof options?.preferredProvider === 'string'
       ? options.preferredProvider.trim().toLowerCase()
       : '';
+    const secondaryProvider = typeof options?.secondaryProvider === 'string'
+      ? options.secondaryProvider.trim().toLowerCase()
+      : '';
+    const allowLocalFallback = Boolean(options?.allowLocalFallback);
+    const onLog = typeof options?.onLog === 'function' ? options.onLog : () => {};
+    const abortSignal = options?.abortSignal || null;
+    const PRIMARY_TIMEOUT_MS = 30000;
+    const SECONDARY_TIMEOUT_MS = 60000;
+    const SWITCH_WINDOW_MS = 60000;
+    const isAborted = () => Boolean(abortSignal?.aborted);
+    const assertNotAborted = () => {
+      if (isAborted()) {
+        throw new Error('Generation cancelled by user.');
+      }
+    };
+    const log = (message, level = 'info') => {
+      onLog({ scope: 'conversational', level, message });
+    };
     const totalWords = Number(safeDocumentJson?.totalWords) || 0;
     const targetPairCount = Math.max(1, Math.floor(totalWords / 20));
     const sections = Array.isArray(safeDocumentJson?.sections) ? safeDocumentJson.sections : [];
@@ -271,37 +289,148 @@ function createConversationalPairGenerator({ api }) {
       prompt_tokens: 0,
       completion_tokens: 0,
     };
+    let switchedToSecondaryUntil = 0;
+    let primaryRecoveryPending = false;
+    let forceSecondaryForRemainder = false;
 
-    for (let index = 0; index < sectionTargets.length; index += 1) {
-      const target = sectionTargets[index];
+    const buildSectionResult = async (target, index) => {
+      assertNotAborted();
       const section = target.section;
       const pairCount = Math.max(1, Number(target?.pairCount) || 1);
       const sectionOrdinal = index + 1;
       let rawPairs = [];
+      let modelUsed = '';
+      let modelVersion = '';
+      let sectionUsage = {
+        prompt_tokens: 0,
+        completion_tokens: 0,
+      };
+      let lastError = null;
 
-      try {
-        const result = await buildSectionPairsFromApi(api, safeDocumentJson, section, sectionOrdinal, pairCount, preferredProvider);
-        rawPairs = Array.isArray(result?.pairs) ? result.pairs.slice(0, pairCount) : [];
-        if (result.modelUsed) {
-          providers.add(result.modelUsed);
+      const canUseSecondary = Boolean(secondaryProvider && secondaryProvider !== preferredProvider);
+      const now = Date.now();
+      if (canUseSecondary && primaryRecoveryPending && !forceSecondaryForRemainder && now >= switchedToSecondaryUntil) {
+        log('Backup window elapsed. Retrying primary API for conversational generation.', 'info');
+      }
+      const preferSecondary = canUseSecondary && (forceSecondaryForRemainder || now < switchedToSecondaryUntil);
+      const firstProvider = preferSecondary ? secondaryProvider : preferredProvider;
+      const secondProvider = canUseSecondary && firstProvider === preferredProvider ? secondaryProvider : '';
+
+      if (firstProvider) {
+        try {
+          const result = await buildSectionPairsFromApi(
+            api,
+            safeDocumentJson,
+            section,
+            sectionOrdinal,
+            pairCount,
+            firstProvider,
+            {
+              signal: abortSignal,
+              timeoutMs: firstProvider === preferredProvider ? PRIMARY_TIMEOUT_MS : SECONDARY_TIMEOUT_MS,
+            }
+          );
+          rawPairs = Array.isArray(result?.pairs) ? result.pairs.slice(0, pairCount) : [];
+          modelUsed = normalizeText(result?.modelUsed);
+          modelVersion = normalizeText(result?.modelVersion);
+          sectionUsage = {
+            prompt_tokens: Number(result?.usage?.prompt_tokens || 0),
+            completion_tokens: Number(result?.usage?.completion_tokens || 0),
+          };
+
+          if (firstProvider === preferredProvider) {
+            primaryRecoveryPending = false;
+          }
+        } catch (error) {
+          lastError = error;
+          if (firstProvider === preferredProvider && canUseSecondary) {
+            if (primaryRecoveryPending) {
+              forceSecondaryForRemainder = true;
+              log('Primary API failed again after recovery attempt. Remaining conversational sections will use backup API.', 'warning');
+            } else {
+              switchedToSecondaryUntil = Date.now() + SWITCH_WINDOW_MS;
+              primaryRecoveryPending = true;
+              log('Primary API was unresponsive for 30s. Switching conversational generation to backup API for 1 minute.', 'warning');
+            }
+          }
         }
-        if (result.modelVersion) {
-          models.add(result.modelVersion);
+      }
+
+      if ((!Array.isArray(rawPairs) || rawPairs.length === 0) && secondProvider) {
+        try {
+          log(`Retrying conversational section ${sectionOrdinal} with backup API (${secondProvider}).`, 'warning');
+          const result = await buildSectionPairsFromApi(
+            api,
+            safeDocumentJson,
+            section,
+            sectionOrdinal,
+            pairCount,
+            secondProvider,
+            {
+              signal: abortSignal,
+              timeoutMs: SECONDARY_TIMEOUT_MS,
+            }
+          );
+          rawPairs = Array.isArray(result?.pairs) ? result.pairs.slice(0, pairCount) : [];
+          modelUsed = normalizeText(result?.modelUsed);
+          modelVersion = normalizeText(result?.modelVersion);
+          sectionUsage = {
+            prompt_tokens: Number(result?.usage?.prompt_tokens || 0),
+            completion_tokens: Number(result?.usage?.completion_tokens || 0),
+          };
+        } catch (error) {
+          lastError = error;
+          rawPairs = [];
         }
-        usage.prompt_tokens += Number(result?.usage?.prompt_tokens || 0);
-        usage.completion_tokens += Number(result?.usage?.completion_tokens || 0);
-      } catch (_error) {
+      }
+
+      if (!Array.isArray(rawPairs) || rawPairs.length === 0) {
+        if (!allowLocalFallback) {
+          const sectionRef = normalizeText(section?.id) || `${sectionOrdinal}`;
+          const errorMsg = `${lastError?.message || lastError || 'Unknown API error.'}`;
+          throw new Error(`Conversational generation failed for section ${sectionRef}. ${errorMsg}`);
+        }
         rawPairs = [];
       }
 
-      while (rawPairs.length < pairCount) {
+      while (allowLocalFallback && rawPairs.length < pairCount) {
         rawPairs.push(buildFallbackPair(section, safeDocumentJson, sectionOrdinal, rawPairs.length, rawPairs.length));
       }
 
-      rawPairs.slice(0, pairCount).forEach((rawPair, pairIndex) => {
-        pairs.push(toConversationPair(safeDocumentJson, section, sectionOrdinal, pairIndex + 1, rawPair));
-      });
+      return {
+        index,
+        section,
+        sectionOrdinal,
+        pairCount,
+        rawPairs: rawPairs.slice(0, pairCount),
+        modelUsed,
+        modelVersion,
+        sectionUsage,
+      };
+    };
+
+    const sectionResults = [];
+    for (let index = 0; index < sectionTargets.length; index += 1) {
+      const sectionResult = await buildSectionResult(sectionTargets[index], index);
+      sectionResults.push(sectionResult);
     }
+
+    sectionResults
+      .sort((left, right) => left.index - right.index)
+      .forEach((entry) => {
+        if (entry.modelUsed) {
+          providers.add(entry.modelUsed);
+        }
+        if (entry.modelVersion) {
+          models.add(entry.modelVersion);
+        }
+        usage.prompt_tokens += Number(entry?.sectionUsage?.prompt_tokens || 0);
+        usage.completion_tokens += Number(entry?.sectionUsage?.completion_tokens || 0);
+
+        entry.rawPairs.forEach((rawPair, pairIndex) => {
+          pairs.push(toConversationPair(safeDocumentJson, entry.section, entry.sectionOrdinal, pairIndex + 1, rawPair));
+        });
+      });
 
     return {
       conversationalTrainingPairSet: {

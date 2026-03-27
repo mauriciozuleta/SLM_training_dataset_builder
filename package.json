@@ -5,7 +5,9 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "dev": "electron ."
+    "dev": "electron .",
+    "audit:pairs": "node scripts/audit_training_pairs.js",
+    "audit:pairs:strict": "node scripts/audit_training_pairs.js --fail-on-warning"
   },
   "keywords": [
     "electron",

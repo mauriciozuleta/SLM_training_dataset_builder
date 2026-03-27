@@ -3,6 +3,7 @@ const { spawn } = require('child_process');
 const path = require('path');
 const fs = require('fs/promises');
 const { createDocumentGenerationService } = require('./src/main/services/documentGenerationService');
+const { performAudit } = require('./scripts/audit_training_pairs');
 
 require('dotenv').config({ path: path.join(__dirname, '.env') });
 
@@ -16,6 +17,8 @@ const documentGenerationService = createDocumentGenerationService({
   apiTimeoutMs: API_TIMEOUT_MS,
   maxQuestionTarget: MAX_QUESTION_TARGET,
 });
+
+let activeGenerationAbortController = null;
 
 function normalizeJsonFileName(fileName, fallback) {
   const raw = typeof fileName === 'string' ? fileName.trim() : '';
@@ -282,6 +285,26 @@ function getApiStatus() {
   return documentGenerationService.getApiStatus();
 }
 
+async function verifyApiProviders() {
+  return documentGenerationService.verifyApiProviders();
+}
+
+async function runPairAudit(payload = {}) {
+  const result = performAudit({
+    root: payload?.root,
+    file: payload?.file,
+    files: payload?.files,
+    reportPath: payload?.reportPath,
+    failOnWarning: Boolean(payload?.failOnWarning),
+  });
+
+  if (!result.ok && result.exitCode === 2) {
+    throw new Error(result.message || 'No pair files found for audit.');
+  }
+
+  return result;
+}
+
 function createWindow() {
   const mainWindow = new BrowserWindow({
     width: 1180,
@@ -347,6 +370,14 @@ app.whenReady().then(() => {
     return getApiStatus();
   });
 
+  ipcMain.handle('api:verify', async () => {
+    return verifyApiProviders();
+  });
+
+  ipcMain.handle('audit:pairs', async (_event, payload) => {
+    return runPairAudit(payload);
+  });
+
   ipcMain.handle('dialog:openPdf', async () => {
     const result = await dialog.showOpenDialog({
       properties: ['openFile'],
@@ -366,12 +397,38 @@ app.whenReady().then(() => {
   });
 
   ipcMain.handle('generation:buildArtifacts', async (event, payload) => {
-    return writeSelectedArtifacts({
-      ...payload,
-      onProgress: (update) => {
-        event.sender.send('generation:artifactProgress', update);
-      },
-    });
+    if (activeGenerationAbortController) {
+      throw new Error('A generation process is already running.');
+    }
+
+    activeGenerationAbortController = new AbortController();
+    const runtimeApiStatus = getApiStatus();
+    const runtimeProviders = Array.isArray(runtimeApiStatus?.providers)
+      ? runtimeApiStatus.providers
+      : [];
+    try {
+      return await writeSelectedArtifacts({
+        ...payload,
+        apiProviders: runtimeProviders,
+        abortSignal: activeGenerationAbortController.signal,
+        onProgress: (update) => {
+          event.sender.send('generation:artifactProgress', update);
+        },
+        onLog: (logEvent) => {
+          event.sender.send('generation:statusLog', logEvent);
+        },
+      });
+    } finally {
+      activeGenerationAbortController = null;
+    }
+  });
+
+  ipcMain.handle('generation:cancel', async () => {
+    if (!activeGenerationAbortController) {
+      return { cancelled: false, reason: 'No active generation.' };
+    }
+    activeGenerationAbortController.abort();
+    return { cancelled: true };
   });
 
   createWindow();

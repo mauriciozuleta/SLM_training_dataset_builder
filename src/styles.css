@@ -551,10 +551,34 @@ body {
   transition: width 220ms ease;
 }
 
-.api-status {
-  margin: 14px 0 0;
-  font-size: 0.8rem;
-  color: #a8bddf;
+.provider-status-button {
+  border: 1px solid rgba(118, 140, 176, 0.45);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #f2f7ff;
+  background: rgba(53, 66, 89, 0.9);
+  cursor: default;
+}
+
+.provider-status--connecting {
+  background: linear-gradient(180deg, #945216, #7b3f0a);
+  border-color: rgba(245, 177, 78, 0.55);
+  color: #fff6e7;
+}
+
+.provider-status--connected {
+  background: linear-gradient(180deg, #2ab568, #1a904f);
+  border-color: rgba(110, 236, 164, 0.6);
+  color: #effff6;
+}
+
+.provider-status--failed {
+  background: linear-gradient(180deg, #c25555, #9e3e3e);
+  border-color: rgba(245, 139, 139, 0.55);
+  color: #fff3f3;
 }
 
 .output-option.api-disabled {
@@ -696,4 +720,212 @@ body {
 .legacy-content {
   margin-top: 12px;
   max-width: 420px;
+}
+
+.cancel-button {
+  border: 0;
+  border-radius: 12px;
+  padding: 11px 20px;
+  background: linear-gradient(180deg, #d85b5b, #b73c3c);
+  color: #fff6f6;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: filter 120ms ease, transform 120ms ease;
+}
+
+.cancel-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.cancel-button:disabled {
+  cursor: not-allowed;
+  background: linear-gradient(180deg, #6f5961, #57464d);
+  color: #d9c8cd;
+}
+
+/* Modal Dialog Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+}
+
+.modal-overlay[hidden] {
+  display: none;
+}
+
+.modal-dialog {
+  width: 90%;
+  max-width: 540px;
+  border-radius: 20px;
+  border: 1px solid rgba(110, 168, 255, 0.4);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.98), rgba(8, 13, 26, 0.96));
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.8), 0 0 40px rgba(27, 102, 255, 0.2);
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  padding: 28px 24px 20px;
+  border-bottom: 1px solid rgba(110, 168, 255, 0.2);
+}
+
+.modal-header h2 {
+  margin: 0 0 12px;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  color: #e5efff;
+}
+
+.quality-rating {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(110, 168, 255, 0.12);
+  color: #6ea8ff;
+}
+
+.quality-rating.optimum {
+  background: rgba(84, 196, 126, 0.15);
+  color: #54c47e;
+  border: 1px solid rgba(84, 196, 126, 0.3);
+}
+
+.quality-rating.acceptable {
+  background: rgba(255, 193, 7, 0.15);
+  color: #ffc107;
+  border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.quality-rating.critical {
+  background: rgba(255, 152, 0, 0.15);
+  color: #ff9800;
+  border: 1px solid rgba(255, 152, 0, 0.3);
+}
+
+.quality-rating.catastrophic {
+  background: rgba(255, 76, 76, 0.15);
+  color: #ff4c4c;
+  border: 1px solid rgba(255, 76, 76, 0.3);
+}
+
+.modal-body {
+  padding: 24px;
+}
+
+.quality-explanation {
+  margin: 0 0 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #c7d8fd;
+}
+
+.quality-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 16px;
+  background: rgba(70, 100, 170, 0.08);
+  border-radius: 12px;
+  border: 1px solid rgba(110, 168, 255, 0.15);
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #9fb2d4;
+}
+
+.stat-value {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #6ea8ff;
+}
+
+.issues-summary {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: rgba(52, 60, 100, 0.3);
+  border-left: 3px solid #6ea8ff;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #d1dff5;
+}
+
+.issues-summary:empty {
+  display: none;
+}
+
+.modal-actions {
+  display: grid;
+  gap: 10px;
+  padding: 20px 24px;
+  border-top: 1px solid rgba(110, 168, 255, 0.2);
+}
+
+.modal-actions button {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.modal-actions button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.08);
+}
+
+.quality-action-primary {
+  background: linear-gradient(180deg, #36c46b, #209f55);
+  color: #f4fff8;
+}
+
+.quality-action-secondary {
+  background: linear-gradient(180deg, #3c7cff, #1b66ff);
+  color: #f5f9ff;
+}
+
+.quality-action-danger {
+  background: linear-gradient(180deg, #d85b5b, #b73c3c);
+  color: #fff6f6;
+}
+
+.quality-action-neutral {
+  background: linear-gradient(180deg, #5a6b8a, #3f4b67);
+  color: #e1eaff;
 }

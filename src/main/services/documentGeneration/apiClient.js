@@ -1,8 +1,17 @@
 function createApiClient({ env, apiTimeoutMs }) {
   const API_TIMEOUT_MS = Math.max(15000, Number.parseInt(apiTimeoutMs || '90000', 10) || 90000);
 
-  async function fetchWithTimeout(url, options = {}, timeoutMs = API_TIMEOUT_MS) {
+  async function fetchWithTimeout(url, options = {}, timeoutMs = API_TIMEOUT_MS, externalSignal = null) {
+    if (externalSignal?.aborted) {
+      throw new Error('Generation cancelled by user.');
+    }
+
     const controller = new AbortController();
+    const forwardAbort = () => controller.abort();
+    if (externalSignal) {
+      externalSignal.addEventListener('abort', forwardAbort, { once: true });
+    }
+
     const timer = setTimeout(() => controller.abort(), timeoutMs);
     try {
       return await fetch(url, {
@@ -10,12 +19,18 @@ function createApiClient({ env, apiTimeoutMs }) {
         signal: controller.signal,
       });
     } catch (error) {
+      if (externalSignal?.aborted) {
+        throw new Error('Generation cancelled by user.');
+      }
       if (error?.name === 'AbortError') {
         throw new Error(`API request timed out after ${timeoutMs}ms.`);
       }
       throw error;
     } finally {
       clearTimeout(timer);
+      if (externalSignal) {
+        externalSignal.removeEventListener('abort', forwardAbort);
+      }
     }
   }
 
@@ -37,7 +52,7 @@ function createApiClient({ env, apiTimeoutMs }) {
   }
 
   async function callOpenAiBlueprintAnalysis(payload) {
-    const model = env.OPENAI_MODEL || 'gpt-4-turbo-preview';
+    const model = env.OPENAI_MODEL || 'gpt-4o';
     const response = await fetchWithTimeout('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
@@ -127,8 +142,10 @@ function createApiClient({ env, apiTimeoutMs }) {
     };
   }
 
-  async function callGeminiJson(systemPrompt, payload, modelHint = null) {
-    const model = modelHint || env.GEMINI_MODEL || 'gemini-1.5-flash';
+  async function callGeminiJson(systemPrompt, payload, modelHint = null, requestOptions = {}) {
+    const model = modelHint || env.GEMINI_MODEL || 'gemini-2.5-flash';
+    const timeoutMs = Math.max(1000, Number(requestOptions?.timeoutMs) || API_TIMEOUT_MS);
+    const signal = requestOptions?.signal || null;
     const promptText = [
       `${systemPrompt || ''}`.trim(),
       '',
@@ -139,7 +156,7 @@ function createApiClient({ env, apiTimeoutMs }) {
     ].join('\n');
 
     const response = await fetchWithTimeout(
-      `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(env.GEMINI_API_KEY || '')}`,
+      `https://generativelanguage.googleapis.com/v1/models/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(env.GEMINI_API_KEY || '')}`,
       {
         method: 'POST',
         headers: {
@@ -148,7 +165,6 @@ function createApiClient({ env, apiTimeoutMs }) {
         body: JSON.stringify({
           generationConfig: {
             temperature: 0.2,
-            responseMimeType: 'application/json',
           },
           contents: [
             {
@@ -157,7 +173,9 @@ function createApiClient({ env, apiTimeoutMs }) {
             },
           ],
         }),
-      }
+      },
+      timeoutMs,
+      signal
     );
 
     if (!response.ok) {
@@ -206,8 +224,10 @@ function createApiClient({ env, apiTimeoutMs }) {
     };
   }
 
-  async function callOpenAiJson(systemPrompt, payload, modelHint = null) {
-    const model = modelHint || env.OPENAI_MODEL || 'gpt-4-turbo-preview';
+  async function callOpenAiJson(systemPrompt, payload, modelHint = null, requestOptions = {}) {
+    const model = modelHint || env.OPENAI_MODEL || 'gpt-4o';
+    const timeoutMs = Math.max(1000, Number(requestOptions?.timeoutMs) || API_TIMEOUT_MS);
+    const signal = requestOptions?.signal || null;
     const promptText = `${systemPrompt || ''}`;
     const enforcedSystemPrompt = /json/i.test(promptText)
       ? promptText
@@ -227,7 +247,7 @@ function createApiClient({ env, apiTimeoutMs }) {
         ],
         temperature: 0.2,
       }),
-    });
+    }, timeoutMs, signal);
 
     if (!response.ok) {
       const body = await response.text();
@@ -248,8 +268,10 @@ function createApiClient({ env, apiTimeoutMs }) {
     };
   }
 
-  async function callAnthropicJson(systemPrompt, payload, modelHint = null) {
+  async function callAnthropicJson(systemPrompt, payload, modelHint = null, requestOptions = {}) {
     const model = modelHint || env.ANTHROPIC_MODEL || 'claude-3-5-sonnet-20241022';
+    const timeoutMs = Math.max(1000, Number(requestOptions?.timeoutMs) || API_TIMEOUT_MS);
+    const signal = requestOptions?.signal || null;
     const response = await fetchWithTimeout('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {
@@ -264,7 +286,7 @@ function createApiClient({ env, apiTimeoutMs }) {
         system: systemPrompt,
         messages: [{ role: 'user', content: JSON.stringify(payload) }],
       }),
-    });
+    }, timeoutMs, signal);
 
     if (!response.ok) {
       const body = await response.text();
@@ -339,7 +361,63 @@ function createApiClient({ env, apiTimeoutMs }) {
     };
   }
 
-  async function callPreferredApiJson(systemPrompt, payload, modelHint = null) {
+  async function verifyApiProviders() {
+    const status = getApiStatus();
+    const checks = {
+      openai: {
+        configured: status.providers.includes('openai'),
+        verified: false,
+        model: '',
+        error: '',
+      },
+      gemini: {
+        configured: status.providers.includes('gemini'),
+        verified: false,
+        model: '',
+        error: '',
+      },
+    };
+
+    const verifyOne = async (provider) => {
+      if (!checks[provider]?.configured) {
+        return;
+      }
+
+      try {
+        const result = await callApiJson(
+          provider,
+          'Return strict JSON only with shape: {"ok": true}.',
+          { ping: 'healthcheck' }
+        );
+        checks[provider].verified = true;
+        checks[provider].model = `${result?.modelVersion || ''}`.trim();
+      } catch (error) {
+        checks[provider].verified = false;
+        checks[provider].error = `${error?.message || error || 'Unknown error.'}`
+          .replace(/\s+/g, ' ')
+          .trim();
+      }
+    };
+
+    await Promise.all([
+      verifyOne('openai'),
+      verifyOne('gemini'),
+    ]);
+
+    const verifiedProviders = Object.entries(checks)
+      .filter(([, value]) => value.configured && value.verified)
+      .map(([provider]) => provider);
+
+    return {
+      available: status.available,
+      providers: status.providers,
+      verifiedAvailable: verifiedProviders.length > 0,
+      verifiedProviders,
+      checks,
+    };
+  }
+
+  async function callPreferredApiJson(systemPrompt, payload, modelHint = null, requestOptions = {}) {
     const status = getApiStatus();
     if (!status.available) {
       throw new Error('API is not available.');
@@ -348,13 +426,13 @@ function createApiClient({ env, apiTimeoutMs }) {
     const orderedProviders = getProviderOrder(status.providers);
     const attempts = [];
     if (orderedProviders.includes('openai')) {
-      attempts.push(() => callOpenAiJson(systemPrompt, payload, modelHint));
+      attempts.push(() => callOpenAiJson(systemPrompt, payload, modelHint, requestOptions));
     }
     if (orderedProviders.includes('anthropic')) {
-      attempts.push(() => callAnthropicJson(systemPrompt, payload, modelHint));
+      attempts.push(() => callAnthropicJson(systemPrompt, payload, modelHint, requestOptions));
     }
     if (orderedProviders.includes('gemini')) {
-      attempts.push(() => callGeminiJson(systemPrompt, payload, modelHint));
+      attempts.push(() => callGeminiJson(systemPrompt, payload, modelHint, requestOptions));
     }
 
     let lastError = null;
@@ -368,10 +446,10 @@ function createApiClient({ env, apiTimeoutMs }) {
     throw lastError || new Error('No API provider call succeeded.');
   }
 
-  async function callApiJson(provider, systemPrompt, payload, modelHint = null) {
+  async function callApiJson(provider, systemPrompt, payload, modelHint = null, requestOptions = {}) {
     const normalizedProvider = `${provider || ''}`.trim().toLowerCase();
     if (!normalizedProvider) {
-      return callPreferredApiJson(systemPrompt, payload, modelHint);
+      return callPreferredApiJson(systemPrompt, payload, modelHint, requestOptions);
     }
 
     const status = getApiStatus();
@@ -380,13 +458,13 @@ function createApiClient({ env, apiTimeoutMs }) {
     }
 
     if (normalizedProvider === 'openai') {
-      return callOpenAiJson(systemPrompt, payload, modelHint);
+      return callOpenAiJson(systemPrompt, payload, modelHint, requestOptions);
     }
     if (normalizedProvider === 'anthropic') {
-      return callAnthropicJson(systemPrompt, payload, modelHint);
+      return callAnthropicJson(systemPrompt, payload, modelHint, requestOptions);
     }
     if (normalizedProvider === 'gemini') {
-      return callGeminiJson(systemPrompt, payload, modelHint);
+      return callGeminiJson(systemPrompt, payload, modelHint, requestOptions);
     }
 
     throw new Error(`Unsupported API provider: ${normalizedProvider}`);
@@ -399,6 +477,7 @@ function createApiClient({ env, apiTimeoutMs }) {
     callApiJson,
     callPreferredApiJson,
     getApiStatus,
+    verifyApiProviders,
   };
 }
 

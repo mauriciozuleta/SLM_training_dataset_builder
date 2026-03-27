@@ -62,10 +62,11 @@
         </div>
         <div class="action-row">
           <button id="generateButton" class="generate-button" type="button" disabled>Generate</button>
+          <button id="cancelButton" class="cancel-button" type="button" disabled>Cancel</button>
+          <button id="openAiStatusButton" class="provider-status-button provider-status--connecting" type="button" title="OpenAI: connecting" disabled>OpenAI</button>
+          <button id="geminiStatusButton" class="provider-status-button provider-status--connecting" type="button" title="Gemini: connecting" disabled>Gemini</button>
           <p id="generateHint" class="generate-hint">Select the PDF, output folder, and at least one output type.</p>
         </div>
-
-        <p id="apiStatus" class="api-status">Checking API availability...</p>
       </section>
 
       <section class="legacy-panel" aria-label="Legacy files">
@@ -97,6 +98,34 @@
           <p class="log-line">System ready.</p>
         </div>
       </section>
+
+      <div id="qualityResultsModal" class="modal-overlay" hidden>
+        <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="qualityResultsTitle">
+          <div class="modal-header">
+            <h2 id="qualityResultsTitle">Quality Audit Results</h2>
+            <p class="quality-rating" id="qualityRatingDisplay"></p>
+          </div>
+          <div class="modal-body">
+            <p id="qualityExplanation" class="quality-explanation"></p>
+            <div class="quality-stats">
+              <div class="stat-item">
+                <span class="stat-label">Errors:</span>
+                <span class="stat-value" id="errorCount">0</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Warnings:</span>
+                <span class="stat-value" id="warningCount">0</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Weighted Issue %:</span>
+                <span class="stat-value" id="weightedPercent">0%</span>
+              </div>
+            </div>
+            <div id="issuesSummary" class="issues-summary"></div>
+          </div>
+          <div class="modal-actions" id="qualityActionsContainer"></div>
+        </div>
+      </div>
     </main>
 
     <script src="./renderer_pipeline.js"></script>

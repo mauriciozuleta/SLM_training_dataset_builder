@@ -164,6 +164,7 @@ function createQuestionBankGenerator({ api, common }) {
     bookId,
     sectionWeightPercentage,
     preferredProvider = null,
+    requestOptions = {},
   }) => {
     const sectionTitle = cleanText(section?.title) || `Section ${sectionOrdinal}`;
 
@@ -197,8 +198,8 @@ function createQuestionBankGenerator({ api, common }) {
     };
 
     const result = preferredProvider
-      ? await api.callApiJson(preferredProvider, prompt, payload)
-      : await api.callPreferredApiJson(prompt, payload);
+      ? await api.callApiJson(preferredProvider, prompt, payload, null, requestOptions)
+      : await api.callPreferredApiJson(prompt, payload, null, requestOptions);
 
     const generated = Array.isArray(result?.json?.questions) ? result.json.questions : [];
     return {
@@ -250,6 +251,25 @@ function createQuestionBankGenerator({ api, common }) {
     const preferredProvider = typeof options?.preferredProvider === 'string'
       ? options.preferredProvider.trim().toLowerCase()
       : '';
+    const secondaryProvider = typeof options?.secondaryProvider === 'string'
+      ? options.secondaryProvider.trim().toLowerCase()
+      : '';
+    const allowLocalFallback = Boolean(options?.allowLocalFallback);
+    const onLog = typeof options?.onLog === 'function' ? options.onLog : () => {};
+    const abortSignal = options?.abortSignal || null;
+    const PRIMARY_TIMEOUT_MS = 30000;
+    const SECONDARY_TIMEOUT_MS = 60000;
+    const SWITCH_WINDOW_MS = 60000;
+
+    const isAborted = () => Boolean(abortSignal?.aborted);
+    const assertNotAborted = () => {
+      if (isAborted()) {
+        throw new Error('Generation cancelled by user.');
+      }
+    };
+    const log = (message, level = 'info') => {
+      onLog({ scope: 'questions', level, message });
+    };
 
     const bookId = `${sectionBlueprintInfo?.bookId || idContext?.bookId || 'DOC'}`.toUpperCase();
     const chapterNumber = Number(sectionBlueprintInfo?.chapterNumber || idContext?.chapterNumber || documentJson?.chapter || 0) || 0;
@@ -265,8 +285,12 @@ function createQuestionBankGenerator({ api, common }) {
 
     const allQuestions = [];
     const sectionQuestionSummary = [];
+    let switchedToSecondaryUntil = 0;
+    let primaryRecoveryPending = false;
+    let forceSecondaryForRemainder = false;
 
     for (let sectionIndex = 0; sectionIndex < sections.length; sectionIndex += 1) {
+      assertNotAborted();
       const section = sections[sectionIndex];
       const sectionOrdinal = common.extractSectionOrdinal(section?.id, sectionIndex + 1) || (sectionIndex + 1);
       const sectionTitle = cleanText(section?.title) || `Section ${sectionOrdinal}`;
@@ -280,18 +304,75 @@ function createQuestionBankGenerator({ api, common }) {
       ) || 0;
 
       let rawQuestions = [];
-      try {
-        const apiResult = await buildSectionQuestionsFromApi({
-          documentJson,
-          section,
-          sectionOrdinal,
-          questionCount: plannedCount,
-          chapterNumber,
-          bookId,
-          sectionWeightPercentage,
-          preferredProvider,
-        });
+      let apiResult = null;
+      let lastError = null;
 
+      const canUseSecondary = Boolean(secondaryProvider && secondaryProvider !== preferredProvider);
+      const now = Date.now();
+      if (canUseSecondary && primaryRecoveryPending && !forceSecondaryForRemainder && now >= switchedToSecondaryUntil) {
+        log('Backup window elapsed. Retrying primary API for question generation.', 'info');
+      }
+      const preferSecondary = canUseSecondary && (forceSecondaryForRemainder || now < switchedToSecondaryUntil);
+      const firstProvider = preferSecondary ? secondaryProvider : preferredProvider;
+      const secondProvider = canUseSecondary && firstProvider === preferredProvider ? secondaryProvider : '';
+
+      if (firstProvider) {
+        try {
+          apiResult = await buildSectionQuestionsFromApi({
+            documentJson,
+            section,
+            sectionOrdinal,
+            questionCount: plannedCount,
+            chapterNumber,
+            bookId,
+            sectionWeightPercentage,
+            preferredProvider: firstProvider,
+            requestOptions: {
+              signal: abortSignal,
+              timeoutMs: firstProvider === preferredProvider ? PRIMARY_TIMEOUT_MS : SECONDARY_TIMEOUT_MS,
+            },
+          });
+          if (firstProvider === preferredProvider) {
+            primaryRecoveryPending = false;
+          }
+        } catch (error) {
+          lastError = error;
+          if (firstProvider === preferredProvider && canUseSecondary) {
+            if (primaryRecoveryPending) {
+              forceSecondaryForRemainder = true;
+              log('Primary API failed again after recovery attempt. Remaining question sections will use backup API.', 'warning');
+            } else {
+              switchedToSecondaryUntil = Date.now() + SWITCH_WINDOW_MS;
+              primaryRecoveryPending = true;
+              log('Primary API was unresponsive for 30s. Switching question generation to backup API for 1 minute.', 'warning');
+            }
+          }
+        }
+      }
+
+      if (!apiResult && secondProvider) {
+        try {
+          log(`Retrying question section ${sectionOrdinal} with backup API (${secondProvider}).`, 'warning');
+          apiResult = await buildSectionQuestionsFromApi({
+            documentJson,
+            section,
+            sectionOrdinal,
+            questionCount: plannedCount,
+            chapterNumber,
+            bookId,
+            sectionWeightPercentage,
+            preferredProvider: secondProvider,
+            requestOptions: {
+              signal: abortSignal,
+              timeoutMs: SECONDARY_TIMEOUT_MS,
+            },
+          });
+        } catch (error) {
+          lastError = error;
+        }
+      }
+
+      if (apiResult) {
         rawQuestions = Array.isArray(apiResult.questions) ? apiResult.questions : [];
         if (apiResult.modelUsed) {
           providers.add(apiResult.modelUsed);
@@ -301,16 +382,18 @@ function createQuestionBankGenerator({ api, common }) {
         }
         usage.prompt_tokens += Number(apiResult?.usage?.prompt_tokens || 0);
         usage.completion_tokens += Number(apiResult?.usage?.completion_tokens || 0);
-      } catch (_error) {
-        rawQuestions = [];
       }
 
-      if (!Array.isArray(rawQuestions) || rawQuestions.length === 0) {
+      if ((!Array.isArray(rawQuestions) || rawQuestions.length === 0) && allowLocalFallback) {
         rawQuestions = buildFallbackSectionQuestions({
           sectionTitle,
           sectionContent: section?.content,
           count: plannedCount,
         });
+      } else if (!Array.isArray(rawQuestions) || rawQuestions.length === 0) {
+        const sectionRef = cleanText(section?.id) || `${sectionOrdinal}`;
+        const errorMsg = `${lastError?.message || lastError || 'Unknown API error.'}`;
+        throw new Error(`Question generation failed for section ${sectionRef}. ${errorMsg}`);
       }
 
       const normalizedQuestions = [];

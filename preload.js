@@ -8,8 +8,11 @@ contextBridge.exposeInMainWorld('desktopApp', {
   selectFolder: () => ipcRenderer.invoke('dialog:selectFolder'),
   openPdfDialog: () => ipcRenderer.invoke('dialog:openPdf'),
   getApiStatus: () => ipcRenderer.invoke('api:status'),
+  verifyApiProviders: () => ipcRenderer.invoke('api:verify'),
+  auditPairs: (payload) => ipcRenderer.invoke('audit:pairs', payload),
   processPdf: (payload) => ipcRenderer.invoke('rag:processPdf', payload),
   buildArtifacts: (payload) => ipcRenderer.invoke('generation:buildArtifacts', payload),
+  cancelGeneration: () => ipcRenderer.invoke('generation:cancel'),
   onArtifactProgress: (callback) => {
     if (typeof callback !== 'function') {
       return () => {};
@@ -20,6 +23,18 @@ contextBridge.exposeInMainWorld('desktopApp', {
 
     return () => {
       ipcRenderer.removeListener('generation:artifactProgress', handler);
+    };
+  },
+  onGenerationLog: (callback) => {
+    if (typeof callback !== 'function') {
+      return () => {};
+    }
+
+    const handler = (_event, payload) => callback(payload);
+    ipcRenderer.on('generation:statusLog', handler);
+
+    return () => {
+      ipcRenderer.removeListener('generation:statusLog', handler);
     };
   },
   showConfirm: (options) => ipcRenderer.invoke('dialog:showConfirm', options),

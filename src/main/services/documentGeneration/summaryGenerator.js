@@ -165,7 +165,7 @@ function createSummaryGenerator({ api }) {
     return `${lines.join('\n').trim()}\n`;
   };
 
-  const buildSectionSummaryFromApi = async ({ documentJson, section, sectionIndex, totalSections, preferredProvider = null }) => {
+  const buildSectionSummaryFromApi = async ({ documentJson, section, sectionIndex, totalSections, preferredProvider = null, requestOptions = {} }) => {
     const sectionTitle = cleanText(section?.title) || `Section ${sectionIndex + 1}`;
     const prompt = [
       'You are an aviation training summarizer.',
@@ -188,7 +188,7 @@ function createSummaryGenerator({ api }) {
         sectionTitle,
         sectionWordCount: Number(section?.wordCount) || 0,
         sectionContent: summarizeSectionContent(section?.content, MAX_SECTION_CONTENT_CHARS),
-      })
+      }, null, requestOptions)
       : await api.callPreferredApiJson(prompt, {
       chapter: Number(documentJson?.chapter) || 0,
       chapterTitle: cleanText(documentJson?.title),
@@ -198,7 +198,7 @@ function createSummaryGenerator({ api }) {
       sectionTitle,
       sectionWordCount: Number(section?.wordCount) || 0,
       sectionContent: summarizeSectionContent(section?.content, MAX_SECTION_CONTENT_CHARS),
-    });
+    }, null, requestOptions);
 
     const summary = cleanText(result?.json?.summary);
     return {
@@ -220,6 +220,25 @@ function createSummaryGenerator({ api }) {
     const preferredProvider = typeof options?.preferredProvider === 'string'
       ? options.preferredProvider.trim().toLowerCase()
       : '';
+    const secondaryProvider = typeof options?.secondaryProvider === 'string'
+      ? options.secondaryProvider.trim().toLowerCase()
+      : '';
+    const allowLocalFallback = Boolean(options?.allowLocalFallback);
+    const onLog = typeof options?.onLog === 'function' ? options.onLog : () => {};
+    const abortSignal = options?.abortSignal || null;
+    const PRIMARY_TIMEOUT_MS = 30000;
+    const SECONDARY_TIMEOUT_MS = 60000;
+    const SWITCH_WINDOW_MS = 60000;
+
+    const isAborted = () => Boolean(abortSignal?.aborted);
+    const assertNotAborted = () => {
+      if (isAborted()) {
+        throw new Error('Generation cancelled by user.');
+      }
+    };
+    const log = (message, level = 'info') => {
+      onLog({ scope: 'summary', level, message });
+    };
 
     const mainConcepts = [];
     const providers = new Set();
@@ -229,18 +248,78 @@ function createSummaryGenerator({ api }) {
       completion_tokens: 0,
     };
 
+    let switchedToSecondaryUntil = 0;
+    let primaryRecoveryPending = false;
+    let forceSecondaryForRemainder = false;
+
     for (let index = 0; index < sections.length; index += 1) {
+      assertNotAborted();
       const section = sections[index];
       const title = cleanText(section?.title) || `Section ${index + 1}`;
 
-      try {
-        const apiSection = await buildSectionSummaryFromApi({
-          documentJson,
-          section,
-          sectionIndex: index,
-          totalSections,
-          preferredProvider,
-        });
+      let apiSection = null;
+      let lastError = null;
+
+      const canUseSecondary = Boolean(secondaryProvider && secondaryProvider !== preferredProvider);
+      const now = Date.now();
+      if (canUseSecondary && primaryRecoveryPending && !forceSecondaryForRemainder && now >= switchedToSecondaryUntil) {
+        log('Backup window elapsed. Retrying primary API for summary generation.', 'info');
+      }
+      const preferSecondary = canUseSecondary && (forceSecondaryForRemainder || now < switchedToSecondaryUntil);
+      const firstProvider = preferSecondary ? secondaryProvider : preferredProvider;
+      const secondProvider = canUseSecondary && firstProvider === preferredProvider ? secondaryProvider : '';
+
+      if (firstProvider) {
+        try {
+          apiSection = await buildSectionSummaryFromApi({
+            documentJson,
+            section,
+            sectionIndex: index,
+            totalSections,
+            preferredProvider: firstProvider,
+            requestOptions: {
+              signal: abortSignal,
+              timeoutMs: firstProvider === preferredProvider ? PRIMARY_TIMEOUT_MS : SECONDARY_TIMEOUT_MS,
+            },
+          });
+          if (firstProvider === preferredProvider) {
+            primaryRecoveryPending = false;
+          }
+        } catch (error) {
+          lastError = error;
+          if (firstProvider === preferredProvider && canUseSecondary) {
+            if (primaryRecoveryPending) {
+              forceSecondaryForRemainder = true;
+              log('Primary API failed again after recovery attempt. Remaining summary sections will use backup API.', 'warning');
+            } else {
+              switchedToSecondaryUntil = Date.now() + SWITCH_WINDOW_MS;
+              primaryRecoveryPending = true;
+              log('Primary API was unresponsive for 30s. Switching summary generation to backup API for 1 minute.', 'warning');
+            }
+          }
+        }
+      }
+
+      if (!apiSection && secondProvider) {
+        try {
+          log(`Retrying summary section ${index + 1} with backup API (${secondProvider}).`, 'warning');
+          apiSection = await buildSectionSummaryFromApi({
+            documentJson,
+            section,
+            sectionIndex: index,
+            totalSections,
+            preferredProvider: secondProvider,
+            requestOptions: {
+              signal: abortSignal,
+              timeoutMs: SECONDARY_TIMEOUT_MS,
+            },
+          });
+        } catch (error) {
+          lastError = error;
+        }
+      }
+
+      if (apiSection) {
 
         mainConcepts.push({
           title,
@@ -256,11 +335,15 @@ function createSummaryGenerator({ api }) {
 
         usage.prompt_tokens += Number(apiSection.usage?.prompt_tokens || 0);
         usage.completion_tokens += Number(apiSection.usage?.completion_tokens || 0);
-      } catch (_error) {
+      } else if (allowLocalFallback) {
         mainConcepts.push({
           title,
           summary: summarizeSectionContent(section?.content, 260),
         });
+      } else {
+        const sectionRef = cleanText(section?.id) || `${index + 1}`;
+        const errorMsg = `${lastError?.message || lastError || 'Unknown API error.'}`;
+        throw new Error(`Summary generation failed for section ${sectionRef}. ${errorMsg}`);
       }
     }
 
@@ -318,6 +401,7 @@ function createSummaryGenerator({ api }) {
 
   async function buildSummary(documentJson, options = {}) {
     const fallbackModel = buildFallbackSummaryModel(documentJson);
+    const allowLocalFallback = Boolean(options?.allowLocalFallback);
 
     try {
       const apiModel = await buildSummaryFromApi(documentJson, fallbackModel, options);
@@ -325,7 +409,10 @@ function createSummaryGenerator({ api }) {
         ...apiModel,
         markdown: buildSummaryMarkdown(apiModel),
       };
-    } catch (_error) {
+    } catch (error) {
+      if (!allowLocalFallback) {
+        throw error;
+      }
       const fallbackBody = buildSummaryMarkdownBody(fallbackModel);
       const fallbackWithMetadata = {
         ...fallbackModel,

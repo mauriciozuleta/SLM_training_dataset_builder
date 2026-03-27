@@ -1,0 +1,4 @@
+START 2026-03-27T00:15:01.096Z
+DOC D:\OneDrive\0. software Lab\pair generation\test_output_files\afh_7 output docs\afh_7_document.json sections= 16
+SUMMARY_OK providers= gemini models= gemini-2.5-flash
+CONVO_ERR Conversational generation failed for section afh.7.14. API request timed out after 60000ms.

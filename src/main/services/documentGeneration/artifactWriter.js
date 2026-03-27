@@ -1,4 +1,17 @@
 function createArtifactWriter({ fs, path, common, summaryGenerator, questionBankGenerator, deterministicPairGenerator, conversationalPairGenerator }) {
+  const normalizeList = (value) => {
+    if (Array.isArray(value)) {
+      return value.map((item) => `${item || ''}`.trim()).filter(Boolean);
+    }
+    if (typeof value === 'string') {
+      return value
+        .split(',')
+        .map((item) => item.trim())
+        .filter(Boolean);
+    }
+    return [];
+  };
+
   async function writeSelectedArtifacts(payload) {
     const outputDir = payload?.outputDir;
     if (!outputDir) {
@@ -6,15 +19,17 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
     }
 
     const allowOverwrite = Boolean(payload?.allowOverwrite);
+    const allowLocalFallback = Boolean(payload?.allowLocalFallback);
     const selectedOutputs = payload?.selectedOutputs || {};
     const fileNames = payload?.outputFileNames || {};
     const documentJson = payload?.documentJson || {};
     const documentJsonPath = typeof payload?.documentJsonPath === 'string' ? payload.documentJsonPath : '';
-    const apiProviderCount = Math.max(0, Number(payload?.apiProviderCount || 0));
     const apiProviders = Array.isArray(payload?.apiProviders)
       ? payload.apiProviders.map((entry) => `${entry || ''}`.trim().toLowerCase()).filter(Boolean)
       : [];
     const onProgress = typeof payload?.onProgress === 'function' ? payload.onProgress : () => {};
+    const onLog = typeof payload?.onLog === 'function' ? payload.onLog : () => {};
+    const abortSignal = payload?.abortSignal || null;
     await fs.mkdir(outputDir, { recursive: true });
 
     const written = [];
@@ -22,19 +37,16 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
     const needsQuestions = Boolean(selectedOutputs.questions || selectedOutputs.deterministicPairs);
     const needsDeterministicPairs = Boolean(selectedOutputs.deterministicPairs);
     const needsConversationalPairs = Boolean(selectedOutputs.conversationalPairs);
-    const primaryProvider = apiProviders.includes('openai')
-      ? 'openai'
-      : (apiProviders[0] || '');
-    const conversationalProvider = apiProviders.includes('gemini')
-      ? 'gemini'
-      : (apiProviders.find((provider) => provider !== primaryProvider) || primaryProvider || '');
-    const canRunConversationalInParallel = Boolean(
-      needsConversationalPairs
-      && primaryProvider
-      && conversationalProvider
-      && conversationalProvider !== primaryProvider
-      && apiProviderCount >= 2
-    );
+    const hasGemini = apiProviders.includes('gemini');
+    const hasOpenAi = apiProviders.includes('openai');
+    const primaryProvider = apiProviders[0] || '';
+    const isDualProviderMode = hasGemini && hasOpenAi;
+    const summaryProvider = isDualProviderMode ? 'gemini' : primaryProvider;
+    const questionProvider = isDualProviderMode ? 'openai' : primaryProvider;
+    const conversationalProvider = isDualProviderMode ? 'gemini' : primaryProvider;
+    const summaryFailoverProvider = isDualProviderMode ? 'openai' : '';
+    const questionFailoverProvider = isDualProviderMode ? 'gemini' : '';
+    const conversationalFailoverProvider = isDualProviderMode ? 'openai' : '';
 
     let summaryResult = null;
     let questionResult = null;
@@ -140,7 +152,11 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
       }
       onProgress({ key: 'summary', state: 'running' });
       summaryResult = await summaryGenerator.buildSummary(documentJson, {
-        preferredProvider: primaryProvider,
+        preferredProvider: summaryProvider,
+        secondaryProvider: summaryFailoverProvider,
+        allowLocalFallback,
+        onLog,
+        abortSignal,
       });
       await writeMarkdownArtifact('summary', typeof summaryResult?.markdown === 'string' ? summaryResult.markdown : '');
       onProgress({ key: 'summary', state: 'completed' });
@@ -154,7 +170,11 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
         onProgress({ key: 'questions', state: 'running' });
       }
       questionResult = await questionBankGenerator.buildQuestionBank(documentJson, {
-        preferredProvider: primaryProvider,
+        preferredProvider: questionProvider,
+        secondaryProvider: questionFailoverProvider,
+        allowLocalFallback,
+        onLog,
+        abortSignal,
       });
       questionBank = Array.isArray(questionResult?.questionBank) ? questionResult.questionBank : [];
       if (selectedOutputs.questions) {
@@ -190,34 +210,69 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
       onProgress({ key: 'conversationalPairs', state: 'running' });
       conversationalResult = await conversationalPairGenerator.buildConversationalPairSet(documentJson, {
         preferredProvider: conversationalProvider,
+        secondaryProvider: conversationalFailoverProvider,
+        allowLocalFallback,
+        onLog,
+        abortSignal,
       });
       await writeJsonArtifact('conversationalPairs', conversationalResult);
       onProgress({ key: 'conversationalPairs', state: 'completed' });
     };
 
-    if (canRunConversationalInParallel) {
+    if (isDualProviderMode) {
+      const summaryJob = buildSummaryArtifact();
+      const questionsJob = buildQuestionsArtifact();
+      const dependentJobs = [];
+
+      if (needsConversationalPairs) {
+        dependentJobs.push((async () => {
+          if (needsSummary) {
+            await summaryJob;
+          }
+          await buildConversationalArtifact();
+        })());
+      }
+
+      if (needsDeterministicPairs) {
+        dependentJobs.push((async () => {
+          await questionsJob;
+          await buildDeterministicArtifact();
+        })());
+      }
+
       await Promise.all([
-        (async () => {
-          await buildSummaryArtifact();
-          await buildQuestionsArtifact();
-        })(),
-        buildConversationalArtifact(),
+        summaryJob,
+        questionsJob,
+        ...dependentJobs,
       ]);
     } else {
       await buildSummaryArtifact();
       await buildQuestionsArtifact();
-    }
-
-    await buildDeterministicArtifact();
-
-    if (!canRunConversationalInParallel) {
       await buildConversationalArtifact();
+      await buildDeterministicArtifact();
     }
 
     return {
       written,
       summary: {
         selectedCount: written.length,
+        routingMode: isDualProviderMode ? 'dual-provider-parallel' : 'single-provider-sequential',
+        providersConfigured: apiProviders,
+        providersAssigned: {
+          summary: summaryProvider || 'auto',
+          questions: questionProvider || 'auto',
+          conversational: conversationalProvider || 'auto',
+        },
+        providersObserved: {
+          summary: normalizeList(summaryResult?.metadata?.providers),
+          questions: normalizeList(questionResult?.metadata?.providers),
+          conversational: normalizeList(conversationalResult?.conversationalTrainingPairSet?.providers),
+        },
+        modelsObserved: {
+          summary: normalizeList(summaryResult?.metadata?.models),
+          questions: normalizeList(questionResult?.metadata?.models),
+          conversational: normalizeList(conversationalResult?.conversationalTrainingPairSet?.models),
+        },
       },
     };
   }
