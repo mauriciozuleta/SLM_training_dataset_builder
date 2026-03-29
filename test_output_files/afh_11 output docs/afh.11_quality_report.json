@@ -1,0 +1,226 @@
+{
+  "generatedAtUtc": "2026-03-29T14:13:51.445Z",
+  "root": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files",
+  "fileCount": 2,
+  "totalPairs": 863,
+  "overallRating": {
+    "level": "optimum",
+    "weightedIssueRate": 0.0005793742757821553,
+    "weightedIssuePercent": 0.058,
+    "weightedIssueCount": 0.5,
+    "thresholds": {
+      "optimumMaxPercent": 0.5,
+      "acceptableMaxPercent": 2,
+      "criticalMaxPercent": 7.000000000000001
+    },
+    "errorCount": 0,
+    "warningCount": 2,
+    "infoCount": 0,
+    "fatalIssueCount": 0
+  },
+  "results": [
+    {
+      "type": "deterministic",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_11 output docs\\afh_11_deterministic_training_pairs.json",
+      "pairCount": 550,
+      "questionCount": 50,
+      "subjectDistributionTop": [
+        {
+          "key": "Night Operations",
+          "count": 330
+        },
+        {
+          "key": "Vision Impairment",
+          "count": 44
+        },
+        {
+          "key": "Night Vision",
+          "count": 33
+        },
+        {
+          "key": "Pilot Perception",
+          "count": 33
+        },
+        {
+          "key": "Visual Illusions",
+          "count": 33
+        },
+        {
+          "key": "Eye anatomy",
+          "count": 22
+        },
+        {
+          "key": "Retina",
+          "count": 22
+        },
+        {
+          "key": "Pilot Safety",
+          "count": 22
+        },
+        {
+          "key": "Flight Deck Lighting",
+          "count": 22
+        },
+        {
+          "key": "Spatial Disorientation",
+          "count": 22
+        },
+        {
+          "key": "Night Flying",
+          "count": 22
+        },
+        {
+          "key": "Approach Techniques",
+          "count": 22
+        },
+        {
+          "key": "Aircraft Lighting",
+          "count": 22
+        },
+        {
+          "key": "Navigation",
+          "count": 22
+        },
+        {
+          "key": "Airport Lighting",
+          "count": 22
+        }
+      ],
+      "issues": [
+        {
+          "severity": "warning",
+          "code": "REPEATED_SUBJECTS",
+          "message": "Subject distribution is highly concentrated; consider balancing section/topic coverage.",
+          "target": {
+            "type": "subject-group",
+            "id": "repeated-subjects"
+          },
+          "repairGuidance": {
+            "action": "targeted-repair",
+            "scope": "section",
+            "instruction": "Regenerate over-concentrated sections with subject balancing constraints."
+          },
+          "context": {
+            "repeatedSubjects": [
+              {
+                "key": "Night Operations",
+                "count": 330,
+                "targets": [
+                  "AFH.11.3.1",
+                  "AFH.11.3.1",
+                  "AFH.11.3.1",
+                  "AFH.11.3.1",
+                  "AFH.11.3.1",
+                  "AFH.11.3.1",
+                  "AFH.11.3.1",
+                  "AFH.11.3.1"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "conversational",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_11 output docs\\afh_11_conversational_training_pairs.json",
+      "pairCount": 313,
+      "subjectDistributionTop": [
+        {
+          "key": "night operations",
+          "count": 74
+        },
+        {
+          "key": "night flying",
+          "count": 27
+        },
+        {
+          "key": "eye anatomy",
+          "count": 18
+        },
+        {
+          "key": "Taxi procedures",
+          "count": 18
+        },
+        {
+          "key": "runway lighting",
+          "count": 17
+        },
+        {
+          "key": "Night operations",
+          "count": 16
+        },
+        {
+          "key": "takeoff",
+          "count": 14
+        },
+        {
+          "key": "airport lighting",
+          "count": 11
+        },
+        {
+          "key": "climb",
+          "count": 9
+        },
+        {
+          "key": "position lights",
+          "count": 8
+        },
+        {
+          "key": "Situational awareness",
+          "count": 8
+        },
+        {
+          "key": "radio control",
+          "count": 7
+        },
+        {
+          "key": "Safety",
+          "count": 7
+        },
+        {
+          "key": "forced landing",
+          "count": 7
+        },
+        {
+          "key": "night vision",
+          "count": 6
+        }
+      ],
+      "issues": [
+        {
+          "severity": "warning",
+          "code": "REPEATED_SUBJECTS",
+          "message": "Subject distribution is highly concentrated; consider balancing sections/topics.",
+          "target": {
+            "type": "subject-group",
+            "id": "repeated-subjects"
+          },
+          "repairGuidance": {
+            "action": "targeted-repair",
+            "scope": "section",
+            "instruction": "Regenerate over-concentrated sections with subject balancing constraints."
+          },
+          "context": {
+            "repeatedSubjects": [
+              {
+                "key": "night operations",
+                "count": 74,
+                "targets": [
+                  "AFH.11.1.1.z.2",
+                  "AFH.11.8.1.z.3",
+                  "AFH.11.9.1.z.1",
+                  "AFH.11.9.1.z.2",
+                  "AFH.11.13.1.z.2",
+                  "AFH.11.13.1.z.12",
+                  "AFH.11.14.1.z.1",
+                  "AFH.11.14.1.z.3"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

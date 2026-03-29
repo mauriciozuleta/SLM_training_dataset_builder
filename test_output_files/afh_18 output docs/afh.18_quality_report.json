@@ -1,0 +1,193 @@
+{
+  "generatedAtUtc": "2026-03-29T14:45:00.761Z",
+  "root": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files",
+  "fileCount": 2,
+  "totalPairs": 1104,
+  "overallRating": {
+    "level": "optimum",
+    "weightedIssueRate": 0.00022644927536231884,
+    "weightedIssuePercent": 0.023,
+    "weightedIssueCount": 0.25,
+    "thresholds": {
+      "optimumMaxPercent": 0.5,
+      "acceptableMaxPercent": 2,
+      "criticalMaxPercent": 7.000000000000001
+    },
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "fatalIssueCount": 0
+  },
+  "results": [
+    {
+      "type": "deterministic",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_18 output docs\\afh_18_deterministic_training_pairs.json",
+      "pairCount": 561,
+      "questionCount": 51,
+      "subjectDistributionTop": [
+        {
+          "key": "Emergency Procedures",
+          "count": 374
+        },
+        {
+          "key": "Engine Failure",
+          "count": 44
+        },
+        {
+          "key": "Pilot Training",
+          "count": 44
+        },
+        {
+          "key": "Emergency Landing",
+          "count": 33
+        },
+        {
+          "key": "Pilot Decision-Making",
+          "count": 33
+        },
+        {
+          "key": "Aviation Safety",
+          "count": 33
+        },
+        {
+          "key": "Flight Controls",
+          "count": 33
+        },
+        {
+          "key": "Pilot Safety",
+          "count": 22
+        },
+        {
+          "key": "Pilot Decision Making",
+          "count": 22
+        },
+        {
+          "key": "Landing Techniques",
+          "count": 22
+        },
+        {
+          "key": "Landing Gear Malfunction",
+          "count": 22
+        },
+        {
+          "key": "Electrical System Malfunctions",
+          "count": 22
+        },
+        {
+          "key": "VFR Flight",
+          "count": 22
+        },
+        {
+          "key": "IMC Conditions",
+          "count": 22
+        },
+        {
+          "key": "Instrument Flight",
+          "count": 22
+        }
+      ],
+      "issues": [
+        {
+          "severity": "warning",
+          "code": "REPEATED_SUBJECTS",
+          "message": "Subject distribution is highly concentrated; consider balancing section/topic coverage.",
+          "target": {
+            "type": "subject-group",
+            "id": "repeated-subjects"
+          },
+          "repairGuidance": {
+            "action": "targeted-repair",
+            "scope": "section",
+            "instruction": "Regenerate over-concentrated sections with subject balancing constraints."
+          },
+          "context": {
+            "repeatedSubjects": [
+              {
+                "key": "Emergency Procedures",
+                "count": 374,
+                "targets": [
+                  "AFH.18.2.1",
+                  "AFH.18.2.1",
+                  "AFH.18.2.1",
+                  "AFH.18.2.1",
+                  "AFH.18.2.1",
+                  "AFH.18.2.1",
+                  "AFH.18.2.1",
+                  "AFH.18.2.1"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "conversational",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_18 output docs\\afh_18_conversational_training_pairs.json",
+      "pairCount": 543,
+      "subjectDistributionTop": [
+        {
+          "key": "emergency procedures",
+          "count": 48
+        },
+        {
+          "key": "emergency landing",
+          "count": 36
+        },
+        {
+          "key": "turn back",
+          "count": 34
+        },
+        {
+          "key": "landing gear malfunction",
+          "count": 32
+        },
+        {
+          "key": "engine fire",
+          "count": 29
+        },
+        {
+          "key": "IMC",
+          "count": 28
+        },
+        {
+          "key": "emergency descent",
+          "count": 23
+        },
+        {
+          "key": "elevator control",
+          "count": 22
+        },
+        {
+          "key": "checkride",
+          "count": 21
+        },
+        {
+          "key": "checkride preparation",
+          "count": 20
+        },
+        {
+          "key": "VFR",
+          "count": 20
+        },
+        {
+          "key": "door opening",
+          "count": 17
+        },
+        {
+          "key": "electrical system failure",
+          "count": 16
+        },
+        {
+          "key": "cabin fires",
+          "count": 14
+        },
+        {
+          "key": "attitude control",
+          "count": 14
+        }
+      ],
+      "issues": []
+    }
+  ]
+}

@@ -12,6 +12,45 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
     return [];
   };
 
+  const normalizeProviders = (providers) => {
+    const normalized = [];
+    (Array.isArray(providers) ? providers : []).forEach((entry) => {
+      const value = `${entry || ''}`.trim().toLowerCase();
+      if (value && !normalized.includes(value)) {
+        normalized.push(value);
+      }
+    });
+    return normalized;
+  };
+
+  const pickProvider = (availableProviders, preferenceOrder, excludedProviders = []) => {
+    const available = normalizeProviders(availableProviders);
+    const excluded = new Set(normalizeProviders(excludedProviders));
+    const preferred = normalizeProviders(preferenceOrder);
+
+    const fromPreferred = preferred.find((provider) => available.includes(provider) && !excluded.has(provider));
+    if (fromPreferred) {
+      return fromPreferred;
+    }
+
+    return available.find((provider) => !excluded.has(provider)) || '';
+  };
+
+  const buildWorkerProviderOrder = (primaryProvider, fallbackProvider, allProviders) => {
+    const ordered = [];
+    const push = (provider) => {
+      const value = `${provider || ''}`.trim().toLowerCase();
+      if (value && !ordered.includes(value)) {
+        ordered.push(value);
+      }
+    };
+
+    push(primaryProvider);
+    push(fallbackProvider);
+    normalizeProviders(allProviders).forEach((provider) => push(provider));
+    return ordered;
+  };
+
   async function writeSelectedArtifacts(payload) {
     const outputDir = payload?.outputDir;
     if (!outputDir) {
@@ -33,6 +72,16 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
     const generationGuidance = typeof payload?.generationGuidance === 'string'
       ? payload.generationGuidance.trim()
       : '';
+    const runAbortController = new AbortController();
+    const runAbortSignal = runAbortController.signal;
+    const forwardExternalAbort = () => runAbortController.abort();
+    if (abortSignal) {
+      if (abortSignal.aborted) {
+        runAbortController.abort();
+      } else {
+        abortSignal.addEventListener('abort', forwardExternalAbort, { once: true });
+      }
+    }
     await fs.mkdir(outputDir, { recursive: true });
 
     const written = [];
@@ -40,22 +89,82 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
     const needsQuestions = Boolean(selectedOutputs.questions || selectedOutputs.deterministicPairs);
     const needsDeterministicPairs = Boolean(selectedOutputs.deterministicPairs);
     const needsConversationalPairs = Boolean(selectedOutputs.conversationalPairs);
-    const hasGemini = apiProviders.includes('gemini');
-    const hasOpenAi = apiProviders.includes('openai');
-    const primaryProvider = apiProviders[0] || '';
-    const isDualProviderMode = hasGemini && hasOpenAi;
-    const summaryProvider = isDualProviderMode ? 'gemini' : primaryProvider;
-    const questionProvider = isDualProviderMode ? 'openai' : primaryProvider;
-    const conversationalProvider = isDualProviderMode ? 'gemini' : primaryProvider;
-    const summaryFailoverProvider = isDualProviderMode ? 'openai' : '';
-    const questionFailoverProvider = isDualProviderMode ? 'gemini' : '';
-    const conversationalFailoverProvider = isDualProviderMode ? 'openai' : '';
+    const configuredProviders = normalizeProviders(apiProviders);
+    const isMultiProviderMode = configuredProviders.length >= 2;
+    const primaryProvider = configuredProviders[0] || '';
+    const assignedProviders = {};
+    const reserveProvider = (key, isNeeded, preferenceOrder) => {
+      if (!isNeeded) {
+        return '';
+      }
+
+      const alreadyAssigned = Object.values(assignedProviders).filter(Boolean);
+      const selected = pickProvider(configuredProviders, preferenceOrder, alreadyAssigned);
+      assignedProviders[key] = selected;
+      return selected;
+    };
+
+    const summaryProvider = reserveProvider('summary', needsSummary, ['gemini', 'openai', 'anthropic']);
+    const questionProvider = reserveProvider('questions', needsQuestions, ['openai', 'anthropic', 'gemini']);
+    const conversationalProvider = reserveProvider('conversational', needsConversationalPairs, ['gemini', 'anthropic', 'openai']);
+    const summaryFailoverProvider = pickProvider(configuredProviders, configuredProviders, [summaryProvider]);
+    const questionFailoverProvider = pickProvider(configuredProviders, configuredProviders, [questionProvider]);
+    const conversationalFailoverProvider = pickProvider(configuredProviders, configuredProviders, [conversationalProvider]);
+    const summaryWorkerProviders = buildWorkerProviderOrder(summaryProvider, summaryFailoverProvider, configuredProviders);
+    const questionWorkerProviders = buildWorkerProviderOrder(questionProvider, questionFailoverProvider, configuredProviders);
+    const conversationalWorkerProviders = buildWorkerProviderOrder(conversationalProvider, conversationalFailoverProvider, configuredProviders);
+    const questionUnlockProviders = normalizeProviders(configuredProviders.filter((provider) => provider !== questionProvider));
+    const conversationalUnlockProviders = normalizeProviders(configuredProviders.filter((provider) => provider !== conversationalProvider));
 
     let summaryResult = null;
     let questionResult = null;
     let conversationalResult = null;
     let questionBank = [];
     let writtenQuestionsPath = '';
+    const artifactStatuses = {
+      summary: {
+        buildStatus: 'not-selected',
+        buildStage: 'summary',
+        incompleteSections: [],
+        failureReason: '',
+      },
+      questions: {
+        buildStatus: 'not-selected',
+        buildStage: 'questions',
+        incompleteSections: [],
+        failureReason: '',
+      },
+      deterministicPairs: {
+        buildStatus: 'not-selected',
+        buildStage: 'deterministicPairs',
+        incompleteSections: [],
+        failureReason: '',
+      },
+      conversationalPairs: {
+        buildStatus: 'not-selected',
+        buildStage: 'conversationalPairs',
+        incompleteSections: [],
+        failureReason: '',
+      },
+    };
+
+    const updateArtifactStatus = (key, metadata, defaults = {}) => {
+      const buildStatus = `${metadata?.buildStatus || defaults.buildStatus || 'complete'}`.trim() || 'complete';
+      const buildStage = `${metadata?.buildStage || defaults.buildStage || key}`.trim() || key;
+      const incompleteSections = Array.isArray(metadata?.incompleteSections)
+        ? metadata.incompleteSections
+        : (Array.isArray(defaults.incompleteSections) ? defaults.incompleteSections : []);
+      const failureReason = `${metadata?.failureReason || defaults.failureReason || ''}`.trim();
+
+      artifactStatuses[key] = {
+        buildStatus,
+        buildStage,
+        incompleteSections,
+        failureReason,
+      };
+
+      return artifactStatuses[key];
+    };
 
     const outputMap = [
       {
@@ -157,6 +266,7 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
       summaryResult = await summaryGenerator.buildSummary(documentJson, {
         preferredProvider: summaryProvider,
         secondaryProvider: summaryFailoverProvider,
+        workerProviders: summaryWorkerProviders,
         allowLocalFallback,
         generationGuidance,
         onLog,
@@ -167,13 +277,19 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
             ...progress,
           });
         },
-        abortSignal,
+        abortSignal: runAbortSignal,
       });
+      updateArtifactStatus('summary', summaryResult?.metadata, { buildStage: 'summary' });
       await writeMarkdownArtifact('summary', typeof summaryResult?.markdown === 'string' ? summaryResult.markdown : '');
-      onProgress({ key: 'summary', state: 'completed' });
+      onProgress({
+        key: 'summary',
+        state: artifactStatuses.summary.buildStatus === 'incomplete' ? 'incomplete' : 'completed',
+        buildStatus: artifactStatuses.summary.buildStatus,
+        failureReason: artifactStatuses.summary.failureReason,
+      });
     };
 
-    const buildQuestionsArtifact = async () => {
+    const buildQuestionsArtifact = async (options = {}) => {
       if (!needsQuestions) {
         return;
       }
@@ -183,6 +299,7 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
       questionResult = await questionBankGenerator.buildQuestionBank(documentJson, {
         preferredProvider: questionProvider,
         secondaryProvider: questionFailoverProvider,
+        workerProviders: questionWorkerProviders,
         allowLocalFallback,
         generationGuidance,
         onLog,
@@ -196,12 +313,20 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
             ...progress,
           });
         },
-        abortSignal,
+        unlockSecondaryProviderPromise: options?.unlockSecondaryProviderPromise || null,
+        unlockWorkerProvidersPromise: options?.unlockWorkerProvidersPromise || null,
+        abortSignal: runAbortSignal,
       });
       questionBank = Array.isArray(questionResult?.questionBank) ? questionResult.questionBank : [];
+      updateArtifactStatus('questions', questionResult?.metadata, { buildStage: 'questions' });
       if (selectedOutputs.questions) {
         writtenQuestionsPath = await writeJsonArtifact('questions', questionBank);
-        onProgress({ key: 'questions', state: 'completed' });
+        onProgress({
+          key: 'questions',
+          state: artifactStatuses.questions.buildStatus === 'incomplete' ? 'incomplete' : 'completed',
+          buildStatus: artifactStatuses.questions.buildStatus,
+          failureReason: artifactStatuses.questions.failureReason,
+        });
       }
     };
 
@@ -210,6 +335,20 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
         return;
       }
       onProgress({ key: 'deterministicPairs', state: 'running' });
+      if (artifactStatuses.questions.buildStatus === 'incomplete') {
+        updateArtifactStatus('deterministicPairs', null, {
+          buildStatus: 'skipped',
+          buildStage: 'deterministicPairs',
+          failureReason: 'Skipped because the question bank is incomplete.',
+        });
+        onProgress({
+          key: 'deterministicPairs',
+          state: 'skipped',
+          buildStatus: artifactStatuses.deterministicPairs.buildStatus,
+          failureReason: artifactStatuses.deterministicPairs.failureReason,
+        });
+        return;
+      }
       let pairQuestionBank = questionBank;
       let sourceQuestionsFileName = fileNames.questions;
       if (selectedOutputs.questions && writtenQuestionsPath) {
@@ -232,10 +371,15 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
         });
       }
       await writeJsonArtifact('deterministicPairs', deterministicResult);
-      onProgress({ key: 'deterministicPairs', state: 'completed' });
+      updateArtifactStatus('deterministicPairs', null, { buildStatus: 'complete', buildStage: 'deterministicPairs' });
+      onProgress({
+        key: 'deterministicPairs',
+        state: 'completed',
+        buildStatus: artifactStatuses.deterministicPairs.buildStatus,
+      });
     };
 
-    const buildConversationalArtifact = async () => {
+    const buildConversationalArtifact = async (options = {}) => {
       if (!needsConversationalPairs) {
         return;
       }
@@ -243,6 +387,7 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
       conversationalResult = await conversationalPairGenerator.buildConversationalPairSet(documentJson, {
         preferredProvider: conversationalProvider,
         secondaryProvider: conversationalFailoverProvider,
+        workerProviders: conversationalWorkerProviders,
         allowLocalFallback,
         generationGuidance,
         onLog,
@@ -253,51 +398,79 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
             ...progress,
           });
         },
-        abortSignal,
+        unlockSecondaryProviderPromise: options?.unlockSecondaryProviderPromise || null,
+        unlockWorkerProvidersPromise: options?.unlockWorkerProvidersPromise || null,
+        abortSignal: runAbortSignal,
+      });
+      updateArtifactStatus('conversationalPairs', conversationalResult?.conversationalTrainingPairSet, {
+        buildStage: 'conversationalPairs',
       });
       await writeJsonArtifact('conversationalPairs', conversationalResult);
-      onProgress({ key: 'conversationalPairs', state: 'completed' });
+      onProgress({
+        key: 'conversationalPairs',
+        state: artifactStatuses.conversationalPairs.buildStatus === 'incomplete' ? 'incomplete' : 'completed',
+        buildStatus: artifactStatuses.conversationalPairs.buildStatus,
+        failureReason: artifactStatuses.conversationalPairs.failureReason,
+      });
     };
 
-    if (isDualProviderMode) {
-      const summaryJob = buildSummaryArtifact();
-      const questionsJob = buildQuestionsArtifact();
-      const dependentJobs = [];
+    try {
+      if (isMultiProviderMode) {
+        const summaryJob = buildSummaryArtifact();
+        const questionUnlockPromise = needsSummary
+          ? summaryJob.then(() => questionUnlockProviders).catch(() => [])
+          : null;
+        const questionsJob = buildQuestionsArtifact({
+          unlockWorkerProvidersPromise: questionUnlockPromise,
+        });
+        const dependentJobs = [];
 
-      if (needsConversationalPairs) {
-        dependentJobs.push((async () => {
-          if (needsSummary) {
-            await summaryJob;
-          }
-          await buildConversationalArtifact();
-        })());
+        if (needsConversationalPairs) {
+          const conversationalUnlockPromise = needsQuestions
+            ? questionsJob.then(() => conversationalUnlockProviders).catch(() => [])
+            : (needsSummary ? summaryJob.then(() => conversationalUnlockProviders).catch(() => []) : null);
+          dependentJobs.push((async () => {
+            await buildConversationalArtifact({
+              unlockWorkerProvidersPromise: conversationalUnlockPromise,
+            });
+          })());
+        }
+
+        if (needsDeterministicPairs) {
+          dependentJobs.push((async () => {
+            await questionsJob;
+            await buildDeterministicArtifact();
+          })());
+        }
+
+        await Promise.all([
+          summaryJob,
+          questionsJob,
+          ...dependentJobs,
+        ]);
+      } else {
+        await buildSummaryArtifact();
+        await buildQuestionsArtifact();
+        await buildConversationalArtifact();
+        await buildDeterministicArtifact();
       }
-
-      if (needsDeterministicPairs) {
-        dependentJobs.push((async () => {
-          await questionsJob;
-          await buildDeterministicArtifact();
-        })());
+    } catch (error) {
+      if (!runAbortSignal.aborted) {
+        runAbortController.abort();
       }
-
-      await Promise.all([
-        summaryJob,
-        questionsJob,
-        ...dependentJobs,
-      ]);
-    } else {
-      await buildSummaryArtifact();
-      await buildQuestionsArtifact();
-      await buildConversationalArtifact();
-      await buildDeterministicArtifact();
+      throw error;
+    } finally {
+      if (abortSignal) {
+        abortSignal.removeEventListener('abort', forwardExternalAbort);
+      }
     }
 
     return {
       written,
       summary: {
         selectedCount: written.length,
-        routingMode: isDualProviderMode ? 'dual-provider-parallel' : 'single-provider-sequential',
-        providersConfigured: apiProviders,
+        routingMode: isMultiProviderMode ? 'multi-provider-parallel' : 'single-provider-sequential',
+        providersConfigured: configuredProviders,
         providersAssigned: {
           summary: summaryProvider || 'auto',
           questions: questionProvider || 'auto',
@@ -313,6 +486,7 @@ function createArtifactWriter({ fs, path, common, summaryGenerator, questionBank
           questions: normalizeList(questionResult?.metadata?.models),
           conversational: normalizeList(conversationalResult?.conversationalTrainingPairSet?.models),
         },
+        artifactStatuses,
       },
     };
   }

@@ -1,0 +1,160 @@
+{
+  "generatedAtUtc": "2026-03-29T14:38:30.515Z",
+  "root": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files",
+  "fileCount": 2,
+  "totalPairs": 1273,
+  "overallRating": {
+    "level": "optimum",
+    "weightedIssueRate": 0,
+    "weightedIssuePercent": 0,
+    "weightedIssueCount": 0,
+    "thresholds": {
+      "optimumMaxPercent": 0.5,
+      "acceptableMaxPercent": 2,
+      "criticalMaxPercent": 7.000000000000001
+    },
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "fatalIssueCount": 0
+  },
+  "results": [
+    {
+      "type": "deterministic",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_16 output docs\\afh_16_deterministic_training_pairs.json",
+      "pairCount": 649,
+      "questionCount": 59,
+      "subjectDistributionTop": [
+        {
+          "key": "Aerodynamics",
+          "count": 55
+        },
+        {
+          "key": "Jet Airplanes",
+          "count": 33
+        },
+        {
+          "key": "Jet Engines",
+          "count": 33
+        },
+        {
+          "key": "Descent Planning",
+          "count": 33
+        },
+        {
+          "key": "Touchdown and Rollout",
+          "count": 33
+        },
+        {
+          "key": "Thrust Management",
+          "count": 22
+        },
+        {
+          "key": "Jet Transition",
+          "count": 22
+        },
+        {
+          "key": "Pilot Training",
+          "count": 22
+        },
+        {
+          "key": "Thrust Reversers",
+          "count": 22
+        },
+        {
+          "key": "Jet Airplane Operations",
+          "count": 22
+        },
+        {
+          "key": "Aviation",
+          "count": 22
+        },
+        {
+          "key": "Jet Airplane Takeoff",
+          "count": 22
+        },
+        {
+          "key": "Jet Airplane Characteristics",
+          "count": 22
+        },
+        {
+          "key": "Approach Techniques",
+          "count": 22
+        },
+        {
+          "key": "Landing Techniques",
+          "count": 22
+        }
+      ],
+      "issues": []
+    },
+    {
+      "type": "conversational",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_16 output docs\\afh_16_conversational_training_pairs.json",
+      "pairCount": 624,
+      "subjectDistributionTop": [
+        {
+          "key": "MEL",
+          "count": 36
+        },
+        {
+          "key": "descent energy management",
+          "count": 35
+        },
+        {
+          "key": "rejected takeoff",
+          "count": 31
+        },
+        {
+          "key": "Thrust Reversers",
+          "count": 30
+        },
+        {
+          "key": "flare",
+          "count": 27
+        },
+        {
+          "key": "checkride",
+          "count": 20
+        },
+        {
+          "key": "initial climb",
+          "count": 17
+        },
+        {
+          "key": "descent planning",
+          "count": 17
+        },
+        {
+          "key": "jet airplanes",
+          "count": 14
+        },
+        {
+          "key": "stabilized approach",
+          "count": 14
+        },
+        {
+          "key": "jets",
+          "count": 12
+        },
+        {
+          "key": "swept wing",
+          "count": 11
+        },
+        {
+          "key": "stall recovery",
+          "count": 11
+        },
+        {
+          "key": "Spoilers",
+          "count": 11
+        },
+        {
+          "key": "takeoff",
+          "count": 11
+        }
+      ],
+      "issues": []
+    }
+  ]
+}

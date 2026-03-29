@@ -1,0 +1,5364 @@
+[
+  {
+    "questionBank": {
+      "chapterId": "afh.9",
+      "bookId": "AFH",
+      "chapterNumber": 9,
+      "chapterTitle": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction",
+      "totalRequiredQuestions": 88,
+      "metadata": {
+        "generatedAtUtc": "2026-03-27T18:40:57.874Z",
+        "chapterId": "afh.9",
+        "chapterNumber": 9,
+        "totalSections": 43,
+        "totalRequiredQuestions": 88,
+        "providers": [
+          "openai",
+          "gemini",
+          "anthropic"
+        ],
+        "models": [
+          "gpt-4o",
+          "gemini-2.5-flash",
+          "claude-sonnet-4-6"
+        ],
+        "promptTokens": 54774,
+        "completionTokens": 24730,
+        "totalTokens": 79504,
+        "sectionQuestionSummary": [
+          {
+            "sectionId": "afh.9.1",
+            "sectionTitle": "Use of Flaps",
+            "sectionOrdinal": 1,
+            "sectionWeightPercentage": 1.86,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.9.2",
+            "sectionTitle": "Normal Approach and Landing",
+            "sectionOrdinal": 2,
+            "sectionWeightPercentage": 0.87,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.9.3",
+            "sectionTitle": "Base Leg",
+            "sectionOrdinal": 3,
+            "sectionWeightPercentage": 1.38,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.9.4",
+            "sectionTitle": "Final Approach",
+            "sectionOrdinal": 4,
+            "sectionWeightPercentage": 2.33,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.9.5",
+            "sectionTitle": "Wrong Surface Landing Avoidance",
+            "sectionOrdinal": 5,
+            "sectionWeightPercentage": 0.82,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.9.6",
+            "sectionTitle": "Stabilized Approach Concept",
+            "sectionOrdinal": 6,
+            "sectionWeightPercentage": 6.87,
+            "questionsGenerated": 6
+          },
+          {
+            "sectionId": "afh.9.7",
+            "sectionTitle": "Estimating Airplane Movement and Height",
+            "sectionOrdinal": 7,
+            "sectionWeightPercentage": 3.24,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.9.8",
+            "sectionTitle": "Round Out (Flare)",
+            "sectionOrdinal": 8,
+            "sectionWeightPercentage": 2.57,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.9.9",
+            "sectionTitle": "Touchdown",
+            "sectionOrdinal": 9,
+            "sectionWeightPercentage": 2.27,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.9.10",
+            "sectionTitle": "After-Landing Roll",
+            "sectionOrdinal": 10,
+            "sectionWeightPercentage": 4.71,
+            "questionsGenerated": 4
+          },
+          {
+            "sectionId": "afh.9.11",
+            "sectionTitle": "Go-Arounds (Rejected Landings)",
+            "sectionOrdinal": 11,
+            "sectionWeightPercentage": 1.28,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.9.12",
+            "sectionTitle": "Power",
+            "sectionOrdinal": 12,
+            "sectionWeightPercentage": 0.48,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.9.13",
+            "sectionTitle": "Attitude",
+            "sectionOrdinal": 13,
+            "sectionWeightPercentage": 1.25,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.9.14",
+            "sectionTitle": "Configuration",
+            "sectionOrdinal": 14,
+            "sectionWeightPercentage": 1.35,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.9.15",
+            "sectionTitle": "Ground Effect",
+            "sectionOrdinal": 15,
+            "sectionWeightPercentage": 1.26,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.9.16",
+            "sectionTitle": "Intentional Slips",
+            "sectionOrdinal": 16,
+            "sectionWeightPercentage": 5.78,
+            "questionsGenerated": 5
+          },
+          {
+            "sectionId": "afh.9.17",
+            "sectionTitle": "Forward Slip to a Landing",
+            "sectionOrdinal": 17,
+            "sectionWeightPercentage": 1.4,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.9.18",
+            "sectionTitle": "Crosswind Approach and Landing",
+            "sectionOrdinal": 18,
+            "sectionWeightPercentage": 1.01,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.9.19",
+            "sectionTitle": "Crosswind Final Approach",
+            "sectionOrdinal": 19,
+            "sectionWeightPercentage": 2.95,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.9.20",
+            "sectionTitle": "Crosswind Round Out (Flare)",
+            "sectionOrdinal": 20,
+            "sectionWeightPercentage": 0.64,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.9.21",
+            "sectionTitle": "Crosswind Touchdown",
+            "sectionOrdinal": 21,
+            "sectionWeightPercentage": 0.9,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.9.22",
+            "sectionTitle": "Crosswind After-Landing Roll",
+            "sectionOrdinal": 22,
+            "sectionWeightPercentage": 3.15,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.9.23",
+            "sectionTitle": "Maximum Safe Crosswind Velocities",
+            "sectionOrdinal": 23,
+            "sectionWeightPercentage": 1.61,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.9.24",
+            "sectionTitle": "Turbulent Air Approach and Landing",
+            "sectionOrdinal": 24,
+            "sectionWeightPercentage": 1.95,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.9.25",
+            "sectionTitle": "Short-Field Approach and Landing",
+            "sectionOrdinal": 25,
+            "sectionWeightPercentage": 5.73,
+            "questionsGenerated": 5
+          },
+          {
+            "sectionId": "afh.9.26",
+            "sectionTitle": "Soft-Field Approach and Landing",
+            "sectionOrdinal": 26,
+            "sectionWeightPercentage": 3.55,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.9.27",
+            "sectionTitle": "Power-Off Accuracy Approaches",
+            "sectionOrdinal": 27,
+            "sectionWeightPercentage": 10.71,
+            "questionsGenerated": 9
+          },
+          {
+            "sectionId": "afh.9.28",
+            "sectionTitle": "Emergency Approaches and Landings (Simulated)",
+            "sectionOrdinal": 28,
+            "sectionWeightPercentage": 10.26,
+            "questionsGenerated": 9
+          },
+          {
+            "sectionId": "afh.9.29",
+            "sectionTitle": "Late or Rapid Round Out",
+            "sectionOrdinal": 29,
+            "sectionWeightPercentage": 0.89,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.9.30",
+            "sectionTitle": "Floating During Round Out",
+            "sectionOrdinal": 30,
+            "sectionWeightPercentage": 1.1,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.9.31",
+            "sectionTitle": "Ballooning During Round Out",
+            "sectionOrdinal": 31,
+            "sectionWeightPercentage": 1.53,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.9.32",
+            "sectionTitle": "Bouncing During Touchdown",
+            "sectionOrdinal": 32,
+            "sectionWeightPercentage": 2.38,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.9.33",
+            "sectionTitle": "Porpoising",
+            "sectionOrdinal": 33,
+            "sectionWeightPercentage": 1.51,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.9.34",
+            "sectionTitle": "Wheelbarrowing",
+            "sectionOrdinal": 34,
+            "sectionWeightPercentage": 0.97,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.9.35",
+            "sectionTitle": "Hard Landing",
+            "sectionOrdinal": 35,
+            "sectionWeightPercentage": 1.18,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.9.36",
+            "sectionTitle": "Touchdown in a Drift or Crab",
+            "sectionOrdinal": 36,
+            "sectionWeightPercentage": 1.38,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.9.37",
+            "sectionTitle": "Ground Loop",
+            "sectionOrdinal": 37,
+            "sectionWeightPercentage": 1.56,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.9.38",
+            "sectionTitle": "Wing Rising After Touchdown",
+            "sectionOrdinal": 38,
+            "sectionWeightPercentage": 1.12,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.9.39",
+            "sectionTitle": "Hydroplaning",
+            "sectionOrdinal": 39,
+            "sectionWeightPercentage": 0.36,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.9.40",
+            "sectionTitle": "Dynamic Hydroplaning",
+            "sectionOrdinal": 40,
+            "sectionWeightPercentage": 1.05,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.9.41",
+            "sectionTitle": "Reverted Rubber Hydroplaning",
+            "sectionOrdinal": 41,
+            "sectionWeightPercentage": 0.98,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.9.42",
+            "sectionTitle": "Viscous Hydroplaning",
+            "sectionOrdinal": 42,
+            "sectionWeightPercentage": 1.18,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.9.43",
+            "sectionTitle": "Chapter Summary",
+            "sectionOrdinal": 43,
+            "sectionWeightPercentage": 0.63,
+            "questionsGenerated": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "questionid": "AFH.9.1.1",
+    "question": "What are some advantages of using flaps during approaches and landings?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.1.1.c.1",
+        "text": "Producing greater lift and permitting lower approach and landing speeds"
+      },
+      {
+        "id": "AFH.9.1.1.c.2",
+        "text": "Producing greater drag and permitting a steeper descent angle"
+      },
+      {
+        "id": "AFH.9.1.1.c.3",
+        "text": "Increasing forward visibility by allowing a lower pitch"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.1.1.w.1",
+        "text": "Increasing the length of the landing roll"
+      },
+      {
+        "id": "AFH.9.1.1.w.2",
+        "text": "Decreasing forward visibility"
+      },
+      {
+        "id": "AFH.9.1.1.w.3",
+        "text": "Reducing lift during descent"
+      },
+      {
+        "id": "AFH.9.1.1.w.4",
+        "text": "Causing a nose-up pitching moment in all airplanes"
+      },
+      {
+        "id": "AFH.9.1.1.w.5",
+        "text": "Eliminating the need for re-trimming"
+      },
+      {
+        "id": "AFH.9.1.1.w.6",
+        "text": "Reducing drag significantly at all deflections"
+      },
+      {
+        "id": "AFH.9.1.1.w.7",
+        "text": "Allowing for higher approach speeds"
+      },
+      {
+        "id": "AFH.9.1.1.w.8",
+        "text": "Negating the need for pitch adjustments"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: Use of Flaps",
+    "subjects": [
+      "Aerodynamics",
+      "Flight Operations",
+      "Aircraft Systems"
+    ]
+  },
+  {
+    "questionid": "AFH.9.2.1",
+    "question": "What are the conditions suitable for a normal approach and landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.2.1.c.1",
+        "text": "Engine power is available"
+      },
+      {
+        "id": "AFH.9.2.1.c.2",
+        "text": "Wind is light or directly into the wind"
+      },
+      {
+        "id": "AFH.9.2.1.c.3",
+        "text": "Landing surface is firm and of ample length"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.2.1.w.1",
+        "text": "Engine power is unavailable"
+      },
+      {
+        "id": "AFH.9.2.1.w.2",
+        "text": "Wind is strong and gusty"
+      },
+      {
+        "id": "AFH.9.2.1.w.3",
+        "text": "Final approach path has obstacles"
+      },
+      {
+        "id": "AFH.9.2.1.w.4",
+        "text": "Landing surface is soft and short"
+      },
+      {
+        "id": "AFH.9.2.1.w.5",
+        "text": "Landing point is beyond the first 1/3 of the runway"
+      },
+      {
+        "id": "AFH.9.2.1.w.6",
+        "text": "Approach is made with a tailwind"
+      },
+      {
+        "id": "AFH.9.2.1.w.7",
+        "text": "Runway is wet and slippery"
+      },
+      {
+        "id": "AFH.9.2.1.w.8",
+        "text": "Landing is attempted in crosswind conditions"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: Normal Approach and Landing",
+    "subjects": [
+      "Aviation",
+      "Flight Operations",
+      "Landing Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.9.3.1",
+    "question": "What are key considerations for positioning the base leg during an approach?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.3.1.c.1",
+        "text": "Judging height and distance from the runway"
+      },
+      {
+        "id": "AFH.9.3.1.c.2",
+        "text": "Adjusting for wind conditions"
+      },
+      {
+        "id": "AFH.9.3.1.c.3",
+        "text": "Using appropriate wing flaps"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.3.1.w.1",
+        "text": "Ignoring wind conditions"
+      },
+      {
+        "id": "AFH.9.3.1.w.2",
+        "text": "Using full flaps immediately"
+      },
+      {
+        "id": "AFH.9.3.1.w.3",
+        "text": "Maintaining constant altitude"
+      },
+      {
+        "id": "AFH.9.3.1.w.4",
+        "text": "Disregarding airspeed"
+      },
+      {
+        "id": "AFH.9.3.1.w.5",
+        "text": "Positioning far from the runway"
+      },
+      {
+        "id": "AFH.9.3.1.w.6",
+        "text": "Completing before-landing check on final approach"
+      },
+      {
+        "id": "AFH.9.3.1.w.7",
+        "text": "Using maximum power"
+      },
+      {
+        "id": "AFH.9.3.1.w.8",
+        "text": "Ignoring drift correction"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: Base Leg",
+    "subjects": [
+      "Aviation",
+      "Approach Techniques",
+      "Landing Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.9.4.1",
+    "question": "What should a pilot do after completing the base-to-final approach turn?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.4.1.c.1",
+        "text": "Align the longitudinal axis with the runway centerline"
+      },
+      {
+        "id": "AFH.9.4.1.c.2",
+        "text": "Complete the final flap setting"
+      },
+      {
+        "id": "AFH.9.4.1.c.3",
+        "text": "Adjust pitch attitude as required"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.4.1.w.1",
+        "text": "Apply full power"
+      },
+      {
+        "id": "AFH.9.4.1.w.2",
+        "text": "Increase airspeed to maximum"
+      },
+      {
+        "id": "AFH.9.4.1.w.3",
+        "text": "Ignore wind conditions"
+      },
+      {
+        "id": "AFH.9.4.1.w.4",
+        "text": "Use only pitch to control descent"
+      },
+      {
+        "id": "AFH.9.4.1.w.5",
+        "text": "Disregard runway alignment"
+      },
+      {
+        "id": "AFH.9.4.1.w.6",
+        "text": "Rely solely on visual cues"
+      },
+      {
+        "id": "AFH.9.4.1.w.7",
+        "text": "Maintain a constant altitude"
+      },
+      {
+        "id": "AFH.9.4.1.w.8",
+        "text": "Focus only on airspeed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: Final Approach",
+    "subjects": [
+      "Final Approach"
+    ]
+  },
+  {
+    "questionid": "AFH.9.4.2",
+    "question": "How can a pilot maintain the desired descent angle during a final approach?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.4.2.c.1",
+        "text": "Adjust airspeed, attitude, power, and drag"
+      },
+      {
+        "id": "AFH.9.4.2.c.2",
+        "text": "Use partial power to control descent"
+      },
+      {
+        "id": "AFH.9.4.2.c.3",
+        "text": "Correct for wind effects by adjusting pitch and power"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.4.2.w.1",
+        "text": "Ignore the effects of wind"
+      },
+      {
+        "id": "AFH.9.4.2.w.2",
+        "text": "Rely solely on elevator pressure"
+      },
+      {
+        "id": "AFH.9.4.2.w.3",
+        "text": "Maintain a fixed power setting"
+      },
+      {
+        "id": "AFH.9.4.2.w.4",
+        "text": "Use only flaps for control"
+      },
+      {
+        "id": "AFH.9.4.2.w.5",
+        "text": "Focus only on pitch attitude"
+      },
+      {
+        "id": "AFH.9.4.2.w.6",
+        "text": "Disregard airspeed changes"
+      },
+      {
+        "id": "AFH.9.4.2.w.7",
+        "text": "Apply full flaps immediately"
+      },
+      {
+        "id": "AFH.9.4.2.w.8",
+        "text": "Rely on autopilot adjustments"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: Final Approach",
+    "subjects": [
+      "Final Approach"
+    ]
+  },
+  {
+    "questionid": "AFH.9.5.1",
+    "question": "What are effective strategies to avoid wrong surface landings?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.5.1.c.1",
+        "text": "Verify correct runway alignment and runway number on final approach"
+      },
+      {
+        "id": "AFH.9.5.1.c.2",
+        "text": "Study airport diagrams and lighting ahead of time"
+      },
+      {
+        "id": "AFH.9.5.1.c.3",
+        "text": "Use moving map displays driven by GPS for situational awareness"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.5.1.w.1",
+        "text": "Rely solely on visual cues without verification"
+      },
+      {
+        "id": "AFH.9.5.1.w.2",
+        "text": "Ignore fatigue and complacency"
+      },
+      {
+        "id": "AFH.9.5.1.w.3",
+        "text": "Trust instinct over instruments"
+      },
+      {
+        "id": "AFH.9.5.1.w.4",
+        "text": "Land without confirming the airport identity"
+      },
+      {
+        "id": "AFH.9.5.1.w.5",
+        "text": "Depend on ATC for all landing decisions"
+      },
+      {
+        "id": "AFH.9.5.1.w.6",
+        "text": "Use only past experience without current checks"
+      },
+      {
+        "id": "AFH.9.5.1.w.7",
+        "text": "Assume all runways are the same"
+      },
+      {
+        "id": "AFH.9.5.1.w.8",
+        "text": "Disregard the need for a go-around if uncertain"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9, Section 5",
+    "subjects": [
+      "Aviation Safety",
+      "Pilot Procedures",
+      "Navigation"
+    ]
+  },
+  {
+    "questionid": "AFH.9.6.1",
+    "question": "What is a key characteristic of a stabilized approach?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.6.1.c.1",
+        "text": "Constant-angle glide path"
+      },
+      {
+        "id": "AFH.9.6.1.c.2",
+        "text": "Constant final descent airspeed"
+      },
+      {
+        "id": "AFH.9.6.1.c.3",
+        "text": "Constant configuration"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.6.1.w.1",
+        "text": "Variable glide path"
+      },
+      {
+        "id": "AFH.9.6.1.w.2",
+        "text": "Increasing airspeed"
+      },
+      {
+        "id": "AFH.9.6.1.w.3",
+        "text": "Decreasing airspeed"
+      },
+      {
+        "id": "AFH.9.6.1.w.4",
+        "text": "Changing configuration"
+      },
+      {
+        "id": "AFH.9.6.1.w.5",
+        "text": "Erratic descent rate"
+      },
+      {
+        "id": "AFH.9.6.1.w.6",
+        "text": "Unstable aiming point"
+      },
+      {
+        "id": "AFH.9.6.1.w.7",
+        "text": "Moving aiming point"
+      },
+      {
+        "id": "AFH.9.6.1.w.8",
+        "text": "Fluctuating altitude"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction",
+    "subjects": [
+      "Stabilized Approach"
+    ]
+  },
+  {
+    "questionid": "AFH.9.6.2",
+    "question": "How does the aiming point appear to the pilot during a stabilized approach?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.6.2.c.1",
+        "text": "Stationary"
+      },
+      {
+        "id": "AFH.9.6.2.c.2",
+        "text": "Does not move under the nose"
+      },
+      {
+        "id": "AFH.9.6.2.c.3",
+        "text": "Does not move forward"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.6.2.w.1",
+        "text": "Moves under the nose"
+      },
+      {
+        "id": "AFH.9.6.2.w.2",
+        "text": "Moves forward"
+      },
+      {
+        "id": "AFH.9.6.2.w.3",
+        "text": "Appears to drift"
+      },
+      {
+        "id": "AFH.9.6.2.w.4",
+        "text": "Shifts left"
+      },
+      {
+        "id": "AFH.9.6.2.w.5",
+        "text": "Shifts right"
+      },
+      {
+        "id": "AFH.9.6.2.w.6",
+        "text": "Rises above horizon"
+      },
+      {
+        "id": "AFH.9.6.2.w.7",
+        "text": "Sinks below horizon"
+      },
+      {
+        "id": "AFH.9.6.2.w.8",
+        "text": "Expands"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction",
+    "subjects": [
+      "Visual Cues"
+    ]
+  },
+  {
+    "questionid": "AFH.9.6.3",
+    "question": "What happens to the runway image if the approach becomes shallow?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.6.3.c.1",
+        "text": "Appears shorter"
+      },
+      {
+        "id": "AFH.9.6.3.c.2",
+        "text": "Appears wider"
+      },
+      {
+        "id": "AFH.9.6.3.c.3",
+        "text": "Runway edges diverge"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.6.3.w.1",
+        "text": "Appears longer"
+      },
+      {
+        "id": "AFH.9.6.3.w.2",
+        "text": "Appears narrower"
+      },
+      {
+        "id": "AFH.9.6.3.w.3",
+        "text": "Runway edges converge"
+      },
+      {
+        "id": "AFH.9.6.3.w.4",
+        "text": "Runway disappears"
+      },
+      {
+        "id": "AFH.9.6.3.w.5",
+        "text": "Runway tilts"
+      },
+      {
+        "id": "AFH.9.6.3.w.6",
+        "text": "Runway rotates"
+      },
+      {
+        "id": "AFH.9.6.3.w.7",
+        "text": "Runway blurs"
+      },
+      {
+        "id": "AFH.9.6.3.w.8",
+        "text": "Runway splits"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction",
+    "subjects": [
+      "Visual Cues"
+    ]
+  },
+  {
+    "questionid": "AFH.9.6.4",
+    "question": "What visual cue indicates that the true aiming point is farther down the runway?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.6.4.c.1",
+        "text": "Aiming point moves down"
+      },
+      {
+        "id": "AFH.9.6.4.c.2",
+        "text": "Distance to horizon increases"
+      },
+      {
+        "id": "AFH.9.6.4.c.3",
+        "text": "Aiming point moves away from horizon"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.6.4.w.1",
+        "text": "Aiming point moves up"
+      },
+      {
+        "id": "AFH.9.6.4.w.2",
+        "text": "Distance to horizon decreases"
+      },
+      {
+        "id": "AFH.9.6.4.w.3",
+        "text": "Aiming point moves toward horizon"
+      },
+      {
+        "id": "AFH.9.6.4.w.4",
+        "text": "Aiming point disappears"
+      },
+      {
+        "id": "AFH.9.6.4.w.5",
+        "text": "Aiming point shifts left"
+      },
+      {
+        "id": "AFH.9.6.4.w.6",
+        "text": "Aiming point shifts right"
+      },
+      {
+        "id": "AFH.9.6.4.w.7",
+        "text": "Aiming point enlarges"
+      },
+      {
+        "id": "AFH.9.6.4.w.8",
+        "text": "Aiming point shrinks"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction",
+    "subjects": [
+      "Visual Cues"
+    ]
+  },
+  {
+    "questionid": "AFH.9.6.5",
+    "question": "What does the pilot adjust immediately after rolling out on final approach?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.6.5.c.1",
+        "text": "Pitch attitude"
+      },
+      {
+        "id": "AFH.9.6.5.c.2",
+        "text": "Power"
+      },
+      {
+        "id": "AFH.9.6.5.c.3",
+        "text": "Trim"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.6.5.w.1",
+        "text": "Flaps"
+      },
+      {
+        "id": "AFH.9.6.5.w.2",
+        "text": "Landing gear"
+      },
+      {
+        "id": "AFH.9.6.5.w.3",
+        "text": "Airspeed"
+      },
+      {
+        "id": "AFH.9.6.5.w.4",
+        "text": "Altitude"
+      },
+      {
+        "id": "AFH.9.6.5.w.5",
+        "text": "Heading"
+      },
+      {
+        "id": "AFH.9.6.5.w.6",
+        "text": "Yaw"
+      },
+      {
+        "id": "AFH.9.6.5.w.7",
+        "text": "Bank angle"
+      },
+      {
+        "id": "AFH.9.6.5.w.8",
+        "text": "Throttle"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction",
+    "subjects": [
+      "Final Approach"
+    ]
+  },
+  {
+    "questionid": "AFH.9.6.6",
+    "question": "What happens to the runway image if the approach is steepened?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.6.6.c.1",
+        "text": "Appears longer"
+      },
+      {
+        "id": "AFH.9.6.6.c.2",
+        "text": "Appears narrower"
+      },
+      {
+        "id": "AFH.9.6.6.c.3",
+        "text": "Runway edges converge"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.6.6.w.1",
+        "text": "Appears shorter"
+      },
+      {
+        "id": "AFH.9.6.6.w.2",
+        "text": "Appears wider"
+      },
+      {
+        "id": "AFH.9.6.6.w.3",
+        "text": "Runway edges diverge"
+      },
+      {
+        "id": "AFH.9.6.6.w.4",
+        "text": "Runway disappears"
+      },
+      {
+        "id": "AFH.9.6.6.w.5",
+        "text": "Runway tilts"
+      },
+      {
+        "id": "AFH.9.6.6.w.6",
+        "text": "Runway rotates"
+      },
+      {
+        "id": "AFH.9.6.6.w.7",
+        "text": "Runway blurs"
+      },
+      {
+        "id": "AFH.9.6.6.w.8",
+        "text": "Runway splits"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction",
+    "subjects": [
+      "Visual Cues"
+    ]
+  },
+  {
+    "questionid": "AFH.9.7.1",
+    "question": "What is the primary importance of vision during short final, round out, and touchdown?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.7.1.c.1",
+        "text": "To provide a wide scope of vision"
+      },
+      {
+        "id": "AFH.9.7.1.c.2",
+        "text": "To foster good judgment of height and movement"
+      },
+      {
+        "id": "AFH.9.7.1.c.3",
+        "text": "To maintain awareness of distance from the runway"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.7.1.w.1",
+        "text": "To focus solely on the airplane's nose"
+      },
+      {
+        "id": "AFH.9.7.1.w.2",
+        "text": "To fixate on a single spot ahead"
+      },
+      {
+        "id": "AFH.9.7.1.w.3",
+        "text": "To ignore peripheral vision"
+      },
+      {
+        "id": "AFH.9.7.1.w.4",
+        "text": "To focus on objects at close range"
+      },
+      {
+        "id": "AFH.9.7.1.w.5",
+        "text": "To maintain a narrow field of view"
+      },
+      {
+        "id": "AFH.9.7.1.w.6",
+        "text": "To rely solely on instruments"
+      },
+      {
+        "id": "AFH.9.7.1.w.7",
+        "text": "To focus directly down"
+      },
+      {
+        "id": "AFH.9.7.1.w.8",
+        "text": "To ignore changes in runway perspective"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section 9.7",
+    "subjects": [
+      "Vision in Landing",
+      "Pilot Judgment",
+      "Peripheral Awareness"
+    ]
+  },
+  {
+    "questionid": "AFH.9.7.2",
+    "question": "What happens if a pilot focuses too far ahead during landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.7.2.c.1",
+        "text": "Accuracy in judging ground closeness is lost"
+      },
+      {
+        "id": "AFH.9.7.2.c.2",
+        "text": "Reaction is too slow"
+      },
+      {
+        "id": "AFH.9.7.2.c.3",
+        "text": "Airplane may fly into the ground nose first"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.7.2.w.1",
+        "text": "Pilot over-controls and rounds out high"
+      },
+      {
+        "id": "AFH.9.7.2.w.2",
+        "text": "Pilot makes full-stall, drop-in landings"
+      },
+      {
+        "id": "AFH.9.7.2.w.3",
+        "text": "Pilot reacts too abruptly"
+      },
+      {
+        "id": "AFH.9.7.2.w.4",
+        "text": "Pilot maintains perfect altitude"
+      },
+      {
+        "id": "AFH.9.7.2.w.5",
+        "text": "Pilot achieves smooth touchdown"
+      },
+      {
+        "id": "AFH.9.7.2.w.6",
+        "text": "Pilot's reaction is too quick"
+      },
+      {
+        "id": "AFH.9.7.2.w.7",
+        "text": "Pilot maintains ideal speed"
+      },
+      {
+        "id": "AFH.9.7.2.w.8",
+        "text": "Pilot's depth perception improves"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section 9.7",
+    "subjects": [
+      "Visual Focus",
+      "Landing Techniques",
+      "Pilot Reaction"
+    ]
+  },
+  {
+    "questionid": "AFH.9.7.3",
+    "question": "What visual cues are important for a successful flare during landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.7.3.c.1",
+        "text": "Angle of central vision relative to the runway"
+      },
+      {
+        "id": "AFH.9.7.3.c.2",
+        "text": "Changes in runway perspective"
+      },
+      {
+        "id": "AFH.9.7.3.c.3",
+        "text": "Changes in size and texture of familiar objects"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.7.3.w.1",
+        "text": "Focusing on a single point on the runway"
+      },
+      {
+        "id": "AFH.9.7.3.w.2",
+        "text": "Ignoring peripheral vision"
+      },
+      {
+        "id": "AFH.9.7.3.w.3",
+        "text": "Relying solely on instruments"
+      },
+      {
+        "id": "AFH.9.7.3.w.4",
+        "text": "Focusing on distant objects"
+      },
+      {
+        "id": "AFH.9.7.3.w.5",
+        "text": "Ignoring changes in terrain perspective"
+      },
+      {
+        "id": "AFH.9.7.3.w.6",
+        "text": "Maintaining a fixed viewing angle"
+      },
+      {
+        "id": "AFH.9.7.3.w.7",
+        "text": "Focusing directly down"
+      },
+      {
+        "id": "AFH.9.7.3.w.8",
+        "text": "Ignoring the rate of altitude loss"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section 9.7",
+    "subjects": [
+      "Visual Cues",
+      "Landing Flare",
+      "Depth Perception"
+    ]
+  },
+  {
+    "questionid": "AFH.9.8.1",
+    "question": "What is the purpose of the round out or flare during landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.8.1.c.1",
+        "text": "To transition from a normal approach attitude to a landing attitude"
+      },
+      {
+        "id": "AFH.9.8.1.c.2",
+        "text": "To gradually round out the flightpath parallel to the runway"
+      },
+      {
+        "id": "AFH.9.8.1.c.3",
+        "text": "To decrease the rate of descent by increasing the angle of attack"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.8.1.w.1",
+        "text": "To increase the airplane's speed"
+      },
+      {
+        "id": "AFH.9.8.1.w.2",
+        "text": "To initiate a climb"
+      },
+      {
+        "id": "AFH.9.8.1.w.3",
+        "text": "To deploy landing gear"
+      },
+      {
+        "id": "AFH.9.8.1.w.4",
+        "text": "To engage autopilot"
+      },
+      {
+        "id": "AFH.9.8.1.w.5",
+        "text": "To perform a go-around"
+      },
+      {
+        "id": "AFH.9.8.1.w.6",
+        "text": "To increase engine power"
+      },
+      {
+        "id": "AFH.9.8.1.w.7",
+        "text": "To retract flaps"
+      },
+      {
+        "id": "AFH.9.8.1.w.8",
+        "text": "To decrease pitch attitude"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section 8: Round Out (Flare)",
+    "subjects": [
+      "Landing Techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.9.8.2",
+    "question": "What factors influence the rate at which the round out is executed?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.8.2.c.1",
+        "text": "Airplane’s height above the ground"
+      },
+      {
+        "id": "AFH.9.8.2.c.2",
+        "text": "Rate of descent"
+      },
+      {
+        "id": "AFH.9.8.2.c.3",
+        "text": "Pitch attitude"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.8.2.w.1",
+        "text": "Wind speed"
+      },
+      {
+        "id": "AFH.9.8.2.w.2",
+        "text": "Engine power"
+      },
+      {
+        "id": "AFH.9.8.2.w.3",
+        "text": "Flap position"
+      },
+      {
+        "id": "AFH.9.8.2.w.4",
+        "text": "Runway length"
+      },
+      {
+        "id": "AFH.9.8.2.w.5",
+        "text": "Pilot's experience"
+      },
+      {
+        "id": "AFH.9.8.2.w.6",
+        "text": "Weather conditions"
+      },
+      {
+        "id": "AFH.9.8.2.w.7",
+        "text": "Visibility"
+      },
+      {
+        "id": "AFH.9.8.2.w.8",
+        "text": "Aircraft weight"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section 8: Round Out (Flare)",
+    "subjects": [
+      "Landing Techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.9.9.1",
+    "question": "What is a common technique for making a smooth touchdown?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.9.1.c.1",
+        "text": "Focus on holding the wheels a few inches off the ground"
+      },
+      {
+        "id": "AFH.9.9.1.c.2",
+        "text": "Use elevators while reducing power to idle"
+      },
+      {
+        "id": "AFH.9.9.1.c.3",
+        "text": "Increase back-elevator pressure to slow settling"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.9.1.w.1",
+        "text": "Apply brake pressure during touchdown"
+      },
+      {
+        "id": "AFH.9.9.1.w.2",
+        "text": "Fly the airplane onto the runway with excessive speed"
+      },
+      {
+        "id": "AFH.9.9.1.w.3",
+        "text": "Touch down with the nose-wheel first"
+      },
+      {
+        "id": "AFH.9.9.1.w.4",
+        "text": "Maintain high airspeed during touchdown"
+      },
+      {
+        "id": "AFH.9.9.1.w.5",
+        "text": "Ignore the airplane's stalling speed"
+      },
+      {
+        "id": "AFH.9.9.1.w.6",
+        "text": "Allow the airplane to drift during touchdown"
+      },
+      {
+        "id": "AFH.9.9.1.w.7",
+        "text": "Touch down with the airplane's axis not parallel to runway direction"
+      },
+      {
+        "id": "AFH.9.9.1.w.8",
+        "text": "Use full power during touchdown"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction",
+    "subjects": [
+      "Touchdown Techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.9.9.2",
+    "question": "Why is it important for the airplane's longitudinal axis to be parallel to the runway during touchdown?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.9.2.c.1",
+        "text": "To avoid severe side loads on the landing gear"
+      },
+      {
+        "id": "AFH.9.9.2.c.2",
+        "text": "To ensure proper alignment with the runway"
+      },
+      {
+        "id": "AFH.9.9.2.c.3",
+        "text": "To prevent drifting during touchdown"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.9.2.w.1",
+        "text": "To increase aerodynamic braking"
+      },
+      {
+        "id": "AFH.9.9.2.w.2",
+        "text": "To allow for immediate use of brakes"
+      },
+      {
+        "id": "AFH.9.9.2.w.3",
+        "text": "To maintain high airspeed"
+      },
+      {
+        "id": "AFH.9.9.2.w.4",
+        "text": "To ensure the nose-wheel touches down first"
+      },
+      {
+        "id": "AFH.9.9.2.w.5",
+        "text": "To allow for a faster touchdown"
+      },
+      {
+        "id": "AFH.9.9.2.w.6",
+        "text": "To increase lift on the wings"
+      },
+      {
+        "id": "AFH.9.9.2.w.7",
+        "text": "To allow the airplane to float or skip"
+      },
+      {
+        "id": "AFH.9.9.2.w.8",
+        "text": "To ensure the airplane is turned into the wind"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction",
+    "subjects": [
+      "Landing Alignment"
+    ]
+  },
+  {
+    "questionid": "AFH.9.10.1",
+    "question": "What should a pilot be alert for immediately upon and after touchdown?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.10.1.c.1",
+        "text": "Directional control difficulties"
+      },
+      {
+        "id": "AFH.9.10.1.c.2",
+        "text": "Ground friction on the wheels"
+      },
+      {
+        "id": "AFH.9.10.1.c.3",
+        "text": "Potential for a ground loop"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.10.1.w.1",
+        "text": "Engine overheating"
+      },
+      {
+        "id": "AFH.9.10.1.w.2",
+        "text": "Fuel leakage"
+      },
+      {
+        "id": "AFH.9.10.1.w.3",
+        "text": "Instrument failure"
+      },
+      {
+        "id": "AFH.9.10.1.w.4",
+        "text": "Radio communication loss"
+      },
+      {
+        "id": "AFH.9.10.1.w.5",
+        "text": "Passenger discomfort"
+      },
+      {
+        "id": "AFH.9.10.1.w.6",
+        "text": "Cabin pressure issues"
+      },
+      {
+        "id": "AFH.9.10.1.w.7",
+        "text": "Electrical system failure"
+      },
+      {
+        "id": "AFH.9.10.1.w.8",
+        "text": "Autopilot malfunction"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: After-Landing Roll",
+    "subjects": [
+      "Landing procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.9.10.2",
+    "question": "What is the primary purpose of brakes on an airplane during landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.10.2.c.1",
+        "text": "Reduce speed on the ground"
+      },
+      {
+        "id": "AFH.9.10.2.c.2",
+        "text": "Aid in directional control"
+      },
+      {
+        "id": "AFH.9.10.2.c.3",
+        "text": "Prevent skidding"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.10.2.w.1",
+        "text": "Increase lift"
+      },
+      {
+        "id": "AFH.9.10.2.w.2",
+        "text": "Enhance engine performance"
+      },
+      {
+        "id": "AFH.9.10.2.w.3",
+        "text": "Improve fuel efficiency"
+      },
+      {
+        "id": "AFH.9.10.2.w.4",
+        "text": "Stabilize altitude"
+      },
+      {
+        "id": "AFH.9.10.2.w.5",
+        "text": "Reduce noise"
+      },
+      {
+        "id": "AFH.9.10.2.w.6",
+        "text": "Enhance visibility"
+      },
+      {
+        "id": "AFH.9.10.2.w.7",
+        "text": "Increase thrust"
+      },
+      {
+        "id": "AFH.9.10.2.w.8",
+        "text": "Improve cabin comfort"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: After-Landing Roll",
+    "subjects": [
+      "Landing procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.9.10.3",
+    "question": "How can a pilot maintain directional control during the after-landing roll?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.10.3.c.1",
+        "text": "Use rudder for yaw control"
+      },
+      {
+        "id": "AFH.9.10.3.c.2",
+        "text": "Apply brakes smoothly"
+      },
+      {
+        "id": "AFH.9.10.3.c.3",
+        "text": "Lower nose-wheel to the runway"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.10.3.w.1",
+        "text": "Increase throttle"
+      },
+      {
+        "id": "AFH.9.10.3.w.2",
+        "text": "Deploy flaps"
+      },
+      {
+        "id": "AFH.9.10.3.w.3",
+        "text": "Adjust ailerons"
+      },
+      {
+        "id": "AFH.9.10.3.w.4",
+        "text": "Engage autopilot"
+      },
+      {
+        "id": "AFH.9.10.3.w.5",
+        "text": "Activate spoilers"
+      },
+      {
+        "id": "AFH.9.10.3.w.6",
+        "text": "Use reverse thrust"
+      },
+      {
+        "id": "AFH.9.10.3.w.7",
+        "text": "Adjust elevator trim"
+      },
+      {
+        "id": "AFH.9.10.3.w.8",
+        "text": "Increase altitude"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: After-Landing Roll",
+    "subjects": [
+      "Landing procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.9.10.4",
+    "question": "What happens if brakes are applied too hard during the after-landing roll?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.10.4.c.1",
+        "text": "Skidding occurs"
+      },
+      {
+        "id": "AFH.9.10.4.c.2",
+        "text": "Braking becomes ineffective"
+      },
+      {
+        "id": "AFH.9.10.4.c.3",
+        "text": "Control may be lost"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.10.4.w.1",
+        "text": "Increased lift"
+      },
+      {
+        "id": "AFH.9.10.4.w.2",
+        "text": "Improved fuel efficiency"
+      },
+      {
+        "id": "AFH.9.10.4.w.3",
+        "text": "Enhanced engine performance"
+      },
+      {
+        "id": "AFH.9.10.4.w.4",
+        "text": "Stabilized altitude"
+      },
+      {
+        "id": "AFH.9.10.4.w.5",
+        "text": "Reduced noise"
+      },
+      {
+        "id": "AFH.9.10.4.w.6",
+        "text": "Enhanced visibility"
+      },
+      {
+        "id": "AFH.9.10.4.w.7",
+        "text": "Increased thrust"
+      },
+      {
+        "id": "AFH.9.10.4.w.8",
+        "text": "Improved cabin comfort"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: After-Landing Roll",
+    "subjects": [
+      "Landing procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.9.11.1",
+    "question": "What are some reasons a pilot might need to perform a go-around during landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.11.1.c.1",
+        "text": "Air traffic control requirements"
+      },
+      {
+        "id": "AFH.9.11.1.c.2",
+        "text": "Unexpected hazards on the runway"
+      },
+      {
+        "id": "AFH.9.11.1.c.3",
+        "text": "Wind shear"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.11.1.w.1",
+        "text": "Low fuel levels"
+      },
+      {
+        "id": "AFH.9.11.1.w.2",
+        "text": "Passenger discomfort"
+      },
+      {
+        "id": "AFH.9.11.1.w.3",
+        "text": "Engine overheating"
+      },
+      {
+        "id": "AFH.9.11.1.w.4",
+        "text": "Pilot fatigue"
+      },
+      {
+        "id": "AFH.9.11.1.w.5",
+        "text": "Navigation system failure"
+      },
+      {
+        "id": "AFH.9.11.1.w.6",
+        "text": "Radio communication failure"
+      },
+      {
+        "id": "AFH.9.11.1.w.7",
+        "text": "Landing gear malfunction"
+      },
+      {
+        "id": "AFH.9.11.1.w.8",
+        "text": "Cabin pressure issues"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Go-Arounds (Rejected Landings)",
+    "subjects": [
+      "Go-Arounds",
+      "Landing Procedures",
+      "Flight Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.9.12.1",
+    "question": "What actions should a pilot take when deciding to go around during an approach?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.12.1.c.1",
+        "text": "Apply full or maximum allowable takeoff power smoothly"
+      },
+      {
+        "id": "AFH.9.12.1.c.2",
+        "text": "Turn off carburetor heat to obtain maximum power"
+      },
+      {
+        "id": "AFH.9.12.1.c.3",
+        "text": "Hold power until flying speed and controllability are restored"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.12.1.w.1",
+        "text": "Apply power abruptly"
+      },
+      {
+        "id": "AFH.9.12.1.w.2",
+        "text": "Ignore carburetor heat settings"
+      },
+      {
+        "id": "AFH.9.12.1.w.3",
+        "text": "Reduce power to descend faster"
+      },
+      {
+        "id": "AFH.9.12.1.w.4",
+        "text": "Apply partial power only"
+      },
+      {
+        "id": "AFH.9.12.1.w.5",
+        "text": "Wait for the airplane to settle before applying power"
+      },
+      {
+        "id": "AFH.9.12.1.w.6",
+        "text": "Use minimum power to conserve fuel"
+      },
+      {
+        "id": "AFH.9.12.1.w.7",
+        "text": "Apply power only after reaching the ground"
+      },
+      {
+        "id": "AFH.9.12.1.w.8",
+        "text": "Maintain current power settings"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9, Section 12",
+    "subjects": [
+      "Approaches and Landings",
+      "Power Management",
+      "Go-Around Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.9.13.1",
+    "question": "What actions should a pilot take during a go-around to ensure safe flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.13.1.c.1",
+        "text": "Apply sufficient right rudder pressure to counteract torque and P-factor."
+      },
+      {
+        "id": "AFH.9.13.1.c.2",
+        "text": "Use forward elevator pressure to maintain a safe climb attitude."
+      },
+      {
+        "id": "AFH.9.13.1.c.3",
+        "text": "Lower the nose briefly to gain airspeed if necessary."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.13.1.w.1",
+        "text": "Pitch-up immediately for a climb regardless of airspeed."
+      },
+      {
+        "id": "AFH.9.13.1.w.2",
+        "text": "Ignore trim adjustments during the go-around."
+      },
+      {
+        "id": "AFH.9.13.1.w.3",
+        "text": "Rely solely on autopilot to manage control pressures."
+      },
+      {
+        "id": "AFH.9.13.1.w.4",
+        "text": "Reduce power to decrease nose rise."
+      },
+      {
+        "id": "AFH.9.13.1.w.5",
+        "text": "Apply left rudder pressure to counteract yaw."
+      },
+      {
+        "id": "AFH.9.13.1.w.6",
+        "text": "Raise the nose to increase altitude quickly."
+      },
+      {
+        "id": "AFH.9.13.1.w.7",
+        "text": "Ignore airspeed indicators during the maneuver."
+      },
+      {
+        "id": "AFH.9.13.1.w.8",
+        "text": "Focus on reaching for the flap handle before stabilizing flight."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: Attitude",
+    "subjects": [
+      "Go-around procedures",
+      "Aircraft control",
+      "Pilot techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.9.14.1",
+    "question": "What are the recommended steps for flap retraction during a go-around?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.14.1.c.1",
+        "text": "Retract flaps intermittently in small increments"
+      },
+      {
+        "id": "AFH.9.14.1.c.2",
+        "text": "Retract flaps before landing gear if not specified otherwise"
+      },
+      {
+        "id": "AFH.9.14.1.c.3",
+        "text": "Ensure positive rate of climb before retracting landing gear"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.14.1.w.1",
+        "text": "Retract flaps completely and suddenly"
+      },
+      {
+        "id": "AFH.9.14.1.w.2",
+        "text": "Retract landing gear before flaps"
+      },
+      {
+        "id": "AFH.9.14.1.w.3",
+        "text": "Ignore manufacturer's recommendations"
+      },
+      {
+        "id": "AFH.9.14.1.w.4",
+        "text": "Retract flaps only after landing gear"
+      },
+      {
+        "id": "AFH.9.14.1.w.5",
+        "text": "Retract flaps only at high altitude"
+      },
+      {
+        "id": "AFH.9.14.1.w.6",
+        "text": "Retract flaps only at high airspeed"
+      },
+      {
+        "id": "AFH.9.14.1.w.7",
+        "text": "Retract flaps only after full trim"
+      },
+      {
+        "id": "AFH.9.14.1.w.8",
+        "text": "Retract flaps only during descent"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: Configuration",
+    "subjects": [
+      "Flap Retraction",
+      "Go-Around Procedures",
+      "Aircraft Configuration"
+    ]
+  },
+  {
+    "questionid": "AFH.9.15.1",
+    "question": "What are common errors in the performance of go-arounds (rejected landings)?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.15.1.c.1",
+        "text": "Failure to recognize a condition that warrants a rejected landing"
+      },
+      {
+        "id": "AFH.9.15.1.c.2",
+        "text": "Delay in initiating a go-around"
+      },
+      {
+        "id": "AFH.9.15.1.c.3",
+        "text": "Attempting to climb out of ground effect prematurely"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.15.1.w.1",
+        "text": "Applying power too gradually"
+      },
+      {
+        "id": "AFH.9.15.1.w.2",
+        "text": "Maintaining a steady pitch attitude"
+      },
+      {
+        "id": "AFH.9.15.1.w.3",
+        "text": "Configuring the airplane correctly"
+      },
+      {
+        "id": "AFH.9.15.1.w.4",
+        "text": "Compensating for torque/P factor adequately"
+      },
+      {
+        "id": "AFH.9.15.1.w.5",
+        "text": "Recognizing the need for a go-around promptly"
+      },
+      {
+        "id": "AFH.9.15.1.w.6",
+        "text": "Initiating a go-around without delay"
+      },
+      {
+        "id": "AFH.9.15.1.w.7",
+        "text": "Applying maximum allowable power correctly"
+      },
+      {
+        "id": "AFH.9.15.1.w.8",
+        "text": "Maintaining control of the aircraft"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: Ground Effect",
+    "subjects": [
+      "Aviation",
+      "Flight Training",
+      "Aircraft Performance"
+    ]
+  },
+  {
+    "questionid": "AFH.9.16.1",
+    "question": "What is the primary purpose of an intentional slip in aviation?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.16.1.c.1",
+        "text": "To dissipate altitude without increasing airspeed"
+      },
+      {
+        "id": "AFH.9.16.1.c.2",
+        "text": "To adjust airplane ground track during a crosswind"
+      },
+      {
+        "id": "AFH.9.16.1.c.3",
+        "text": "To clear obstacles during approaches to confined areas"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.16.1.w.1",
+        "text": "To increase airspeed rapidly"
+      },
+      {
+        "id": "AFH.9.16.1.w.2",
+        "text": "To enhance climb performance"
+      },
+      {
+        "id": "AFH.9.16.1.w.3",
+        "text": "To improve cruise efficiency"
+      },
+      {
+        "id": "AFH.9.16.1.w.4",
+        "text": "To stabilize the airplane in turbulence"
+      },
+      {
+        "id": "AFH.9.16.1.w.5",
+        "text": "To increase glide distance"
+      },
+      {
+        "id": "AFH.9.16.1.w.6",
+        "text": "To reduce drag"
+      },
+      {
+        "id": "AFH.9.16.1.w.7",
+        "text": "To align with the runway centerline"
+      },
+      {
+        "id": "AFH.9.16.1.w.8",
+        "text": "To maintain altitude"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: Intentional Slips",
+    "subjects": [
+      "Aviation Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.9.16.2",
+    "question": "What are the two types of intentional slips?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.16.2.c.1",
+        "text": "Sideslip"
+      },
+      {
+        "id": "AFH.9.16.2.c.2",
+        "text": "Forward slip"
+      },
+      {
+        "id": "AFH.9.16.2.c.3",
+        "text": "A slip occurs when the bank angle of an airplane is too steep for the existing rate of turn."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.16.2.w.1",
+        "text": "Backward slip"
+      },
+      {
+        "id": "AFH.9.16.2.w.2",
+        "text": "Inverted slip"
+      },
+      {
+        "id": "AFH.9.16.2.w.3",
+        "text": "Vertical slip"
+      },
+      {
+        "id": "AFH.9.16.2.w.4",
+        "text": "Horizontal slip"
+      },
+      {
+        "id": "AFH.9.16.2.w.5",
+        "text": "Diagonal slip"
+      },
+      {
+        "id": "AFH.9.16.2.w.6",
+        "text": "Rotational slip"
+      },
+      {
+        "id": "AFH.9.16.2.w.7",
+        "text": "Lateral slip"
+      },
+      {
+        "id": "AFH.9.16.2.w.8",
+        "text": "Reverse slip"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: Intentional Slips",
+    "subjects": [
+      "Aviation Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.9.16.3",
+    "question": "How does a sideslip help during a crosswind landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.16.3.c.1",
+        "text": "Keeps the aircraft aligned with the runway centerline"
+      },
+      {
+        "id": "AFH.9.16.3.c.2",
+        "text": "Prevents the airplane from turning"
+      },
+      {
+        "id": "AFH.9.16.3.c.3",
+        "text": "Allows for sideward movement toward the low wing"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.16.3.w.1",
+        "text": "Increases airspeed"
+      },
+      {
+        "id": "AFH.9.16.3.w.2",
+        "text": "Enhances climb performance"
+      },
+      {
+        "id": "AFH.9.16.3.w.3",
+        "text": "Reduces drag"
+      },
+      {
+        "id": "AFH.9.16.3.w.4",
+        "text": "Improves glide efficiency"
+      },
+      {
+        "id": "AFH.9.16.3.w.5",
+        "text": "Stabilizes the airplane in turbulence"
+      },
+      {
+        "id": "AFH.9.16.3.w.6",
+        "text": "Increases altitude"
+      },
+      {
+        "id": "AFH.9.16.3.w.7",
+        "text": "Aligns the nose with the flight path"
+      },
+      {
+        "id": "AFH.9.16.3.w.8",
+        "text": "Reduces descent rate"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: Intentional Slips",
+    "subjects": [
+      "Aviation Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.9.16.4",
+    "question": "What is the effect of increasing the bank angle during a slip?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.16.4.c.1",
+        "text": "Increases the degree of slip"
+      },
+      {
+        "id": "AFH.9.16.4.c.2",
+        "text": "Requires additional opposite rudder"
+      },
+      {
+        "id": "AFH.9.16.4.c.3",
+        "text": "Increases the descent rate"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.16.4.w.1",
+        "text": "Decreases the degree of slip"
+      },
+      {
+        "id": "AFH.9.16.4.w.2",
+        "text": "Reduces the need for opposite rudder"
+      },
+      {
+        "id": "AFH.9.16.4.w.3",
+        "text": "Decreases the descent rate"
+      },
+      {
+        "id": "AFH.9.16.4.w.4",
+        "text": "Increases airspeed"
+      },
+      {
+        "id": "AFH.9.16.4.w.5",
+        "text": "Improves climb performance"
+      },
+      {
+        "id": "AFH.9.16.4.w.6",
+        "text": "Enhances cruise efficiency"
+      },
+      {
+        "id": "AFH.9.16.4.w.7",
+        "text": "Stabilizes the airplane"
+      },
+      {
+        "id": "AFH.9.16.4.w.8",
+        "text": "Reduces drag"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: Intentional Slips",
+    "subjects": [
+      "Aviation Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.9.16.5",
+    "question": "What characterizes a forward slip?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.16.5.c.1",
+        "text": "Dissipates altitude without increasing airspeed"
+      },
+      {
+        "id": "AFH.9.16.5.c.2",
+        "text": "Nose of the airplane no longer points in the direction of flightpath"
+      },
+      {
+        "id": "AFH.9.16.5.c.3",
+        "text": "Requires cross-controlling of ailerons and rudder"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.16.5.w.1",
+        "text": "Increases airspeed"
+      },
+      {
+        "id": "AFH.9.16.5.w.2",
+        "text": "Enhances climb performance"
+      },
+      {
+        "id": "AFH.9.16.5.w.3",
+        "text": "Improves cruise efficiency"
+      },
+      {
+        "id": "AFH.9.16.5.w.4",
+        "text": "Aligns the nose with the flight path"
+      },
+      {
+        "id": "AFH.9.16.5.w.5",
+        "text": "Reduces descent rate"
+      },
+      {
+        "id": "AFH.9.16.5.w.6",
+        "text": "Stabilizes the airplane"
+      },
+      {
+        "id": "AFH.9.16.5.w.7",
+        "text": "Reduces drag"
+      },
+      {
+        "id": "AFH.9.16.5.w.8",
+        "text": "Increases glide distance"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: Intentional Slips",
+    "subjects": [
+      "Aviation Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.9.17.1",
+    "question": "What are common errors when performing a forward slip to a landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.17.1.c.1",
+        "text": "Incorrect pitch adjustments that result in poor airspeed control."
+      },
+      {
+        "id": "AFH.9.17.1.c.2",
+        "text": "Reacting to erroneous airspeed indications."
+      },
+      {
+        "id": "AFH.9.17.1.c.3",
+        "text": "Using excess power while trying to lose altitude."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.17.1.w.1",
+        "text": "Using flaps during a forward slip."
+      },
+      {
+        "id": "AFH.9.17.1.w.2",
+        "text": "Initiating a forward slip too early on final approach."
+      },
+      {
+        "id": "AFH.9.17.1.w.3",
+        "text": "Failing to make a coordinated turn to base."
+      },
+      {
+        "id": "AFH.9.17.1.w.4",
+        "text": "Not evaluating height during the approach."
+      },
+      {
+        "id": "AFH.9.17.1.w.5",
+        "text": "Using a forward slip in calm wind conditions."
+      },
+      {
+        "id": "AFH.9.17.1.w.6",
+        "text": "Transitioning to a sideslip too early during landing."
+      },
+      {
+        "id": "AFH.9.17.1.w.7",
+        "text": "Landing with the aircraft nose too high."
+      },
+      {
+        "id": "AFH.9.17.1.w.8",
+        "text": "Landing with excessive speed."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings",
+    "subjects": [
+      "Forward Slip to a Landing"
+    ]
+  },
+  {
+    "questionid": "AFH.9.18.1",
+    "question": "What are the methods used for a crosswind approach and landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.18.1.c.1",
+        "text": "Crab method"
+      },
+      {
+        "id": "AFH.9.18.1.c.2",
+        "text": "Wing-low method"
+      },
+      {
+        "id": "AFH.9.18.1.c.3",
+        "text": "Combination of both methods"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.18.1.w.1",
+        "text": "Parallel method"
+      },
+      {
+        "id": "AFH.9.18.1.w.2",
+        "text": "Vertical method"
+      },
+      {
+        "id": "AFH.9.18.1.w.3",
+        "text": "Reverse method"
+      },
+      {
+        "id": "AFH.9.18.1.w.4",
+        "text": "Hover method"
+      },
+      {
+        "id": "AFH.9.18.1.w.5",
+        "text": "Glide method"
+      },
+      {
+        "id": "AFH.9.18.1.w.6",
+        "text": "Spiral method"
+      },
+      {
+        "id": "AFH.9.18.1.w.7",
+        "text": "Direct method"
+      },
+      {
+        "id": "AFH.9.18.1.w.8",
+        "text": "Side method"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: Crosswind Approach and Landing",
+    "subjects": [
+      "Aviation",
+      "Flight Techniques",
+      "Crosswind Landings"
+    ]
+  },
+  {
+    "questionid": "AFH.9.19.1",
+    "question": "What is the primary purpose of using the crab method during a crosswind final approach?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.19.1.c.1",
+        "text": "To align the airplane's wings-level ground track with the runway centerline"
+      },
+      {
+        "id": "AFH.9.19.1.c.2",
+        "text": "To maintain the airplane's heading with the runway direction"
+      },
+      {
+        "id": "AFH.9.19.1.c.3",
+        "text": "To avoid sideward contact of the wheels with the runway"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.19.1.w.1",
+        "text": "To increase the airplane's speed"
+      },
+      {
+        "id": "AFH.9.19.1.w.2",
+        "text": "To decrease the airplane's altitude rapidly"
+      },
+      {
+        "id": "AFH.9.19.1.w.3",
+        "text": "To perform a steep bank turn"
+      },
+      {
+        "id": "AFH.9.19.1.w.4",
+        "text": "To align the airplane's nose with the wind direction"
+      },
+      {
+        "id": "AFH.9.19.1.w.5",
+        "text": "To use full opposite rudder throughout the approach"
+      },
+      {
+        "id": "AFH.9.19.1.w.6",
+        "text": "To ensure the airplane touches down with a side load"
+      },
+      {
+        "id": "AFH.9.19.1.w.7",
+        "text": "To maintain a constant rate of descent"
+      },
+      {
+        "id": "AFH.9.19.1.w.8",
+        "text": "To perform a go-around maneuver"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings",
+    "subjects": [
+      "Crosswind Final Approach"
+    ]
+  },
+  {
+    "questionid": "AFH.9.19.2",
+    "question": "What is a key characteristic of the wing-low method during a crosswind landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.19.2.c.1",
+        "text": "It keeps the airplane's ground track aligned with the runway centerline"
+      },
+      {
+        "id": "AFH.9.19.2.c.2",
+        "text": "It prevents the airplane from touching down in a sideward motion"
+      },
+      {
+        "id": "AFH.9.19.2.c.3",
+        "text": "It allows for smooth and continuous control"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.19.2.w.1",
+        "text": "It requires a heading change at the moment before touchdown"
+      },
+      {
+        "id": "AFH.9.19.2.w.2",
+        "text": "It eliminates the need for rudder control"
+      },
+      {
+        "id": "AFH.9.19.2.w.3",
+        "text": "It increases the risk of the upwind wingtip striking the ground"
+      },
+      {
+        "id": "AFH.9.19.2.w.4",
+        "text": "It mandates a steep bank angle throughout the approach"
+      },
+      {
+        "id": "AFH.9.19.2.w.5",
+        "text": "It is only used in calm wind conditions"
+      },
+      {
+        "id": "AFH.9.19.2.w.6",
+        "text": "It requires the use of full flaps"
+      },
+      {
+        "id": "AFH.9.19.2.w.7",
+        "text": "It involves a rapid descent"
+      },
+      {
+        "id": "AFH.9.19.2.w.8",
+        "text": "It is only suitable for short runways"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings",
+    "subjects": [
+      "Crosswind Final Approach"
+    ]
+  },
+  {
+    "questionid": "AFH.9.19.3",
+    "question": "What should a pilot do if the crosswind is too strong for a safe landing using the wing-low method?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.19.3.c.1",
+        "text": "Consider landing on a more favorable runway"
+      },
+      {
+        "id": "AFH.9.19.3.c.2",
+        "text": "Use an alternate airport"
+      },
+      {
+        "id": "AFH.9.19.3.c.3",
+        "text": "Abort the landing attempt"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.19.3.w.1",
+        "text": "Increase the bank angle beyond safe limits"
+      },
+      {
+        "id": "AFH.9.19.3.w.2",
+        "text": "Use full opposite rudder regardless of effectiveness"
+      },
+      {
+        "id": "AFH.9.19.3.w.3",
+        "text": "Ignore the crosswind and proceed with landing"
+      },
+      {
+        "id": "AFH.9.19.3.w.4",
+        "text": "Attempt to land with a side load"
+      },
+      {
+        "id": "AFH.9.19.3.w.5",
+        "text": "Reduce airspeed significantly"
+      },
+      {
+        "id": "AFH.9.19.3.w.6",
+        "text": "Perform a steep descent"
+      },
+      {
+        "id": "AFH.9.19.3.w.7",
+        "text": "Use full flaps to counteract the wind"
+      },
+      {
+        "id": "AFH.9.19.3.w.8",
+        "text": "Rely solely on ailerons for correction"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings",
+    "subjects": [
+      "Crosswind Final Approach"
+    ]
+  },
+  {
+    "questionid": "AFH.9.20.1",
+    "question": "What are key considerations during a crosswind round out (flare) to prevent drifting?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.20.1.c.1",
+        "text": "Gradually increase rudder deflection"
+      },
+      {
+        "id": "AFH.9.20.1.c.2",
+        "text": "Gradually increase aileron deflection"
+      },
+      {
+        "id": "AFH.9.20.1.c.3",
+        "text": "Keep the upwind wing down"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.20.1.w.1",
+        "text": "Level the wings immediately"
+      },
+      {
+        "id": "AFH.9.20.1.w.2",
+        "text": "Decrease rudder deflection"
+      },
+      {
+        "id": "AFH.9.20.1.w.3",
+        "text": "Decrease aileron deflection"
+      },
+      {
+        "id": "AFH.9.20.1.w.4",
+        "text": "Ignore crosswind correction"
+      },
+      {
+        "id": "AFH.9.20.1.w.5",
+        "text": "Touch down while drifting"
+      },
+      {
+        "id": "AFH.9.20.1.w.6",
+        "text": "Maintain constant airspeed"
+      },
+      {
+        "id": "AFH.9.20.1.w.7",
+        "text": "Use only rudder for correction"
+      },
+      {
+        "id": "AFH.9.20.1.w.8",
+        "text": "Apply brakes during round out"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction",
+    "subjects": [
+      "Crosswind Landing",
+      "Flight Controls",
+      "Landing Techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.9.21.1",
+    "question": "What actions are necessary when using the crab method of drift correction during a crosswind touchdown?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.21.1.c.1",
+        "text": "Remove the crab by applying rudder before touchdown"
+      },
+      {
+        "id": "AFH.9.21.1.c.2",
+        "text": "Align the airplane’s longitudinal axis with its direction of movement"
+      },
+      {
+        "id": "AFH.9.21.1.c.3",
+        "text": "Relax corrective rudder pressure as the nose-wheel touches down"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.21.1.w.1",
+        "text": "Maintain the crab throughout touchdown"
+      },
+      {
+        "id": "AFH.9.21.1.w.2",
+        "text": "Touch down on the downwind main wheel first"
+      },
+      {
+        "id": "AFH.9.21.1.w.3",
+        "text": "Use opposite aileron to align with the runway"
+      },
+      {
+        "id": "AFH.9.21.1.w.4",
+        "text": "Increase forward momentum during touchdown"
+      },
+      {
+        "id": "AFH.9.21.1.w.5",
+        "text": "Keep the nose-wheel aligned with the runway at all times"
+      },
+      {
+        "id": "AFH.9.21.1.w.6",
+        "text": "Apply brakes immediately upon touchdown"
+      },
+      {
+        "id": "AFH.9.21.1.w.7",
+        "text": "Use flaps to correct drift"
+      },
+      {
+        "id": "AFH.9.21.1.w.8",
+        "text": "Ignore wind conditions during touchdown"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: Crosswind Touchdown",
+    "subjects": [
+      "Crosswind Landing",
+      "Drift Correction",
+      "Rudder Application"
+    ]
+  },
+  {
+    "questionid": "AFH.9.22.1",
+    "question": "What techniques should be used to maintain directional control during the after-landing roll in a crosswind?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.22.1.c.1",
+        "text": "Use of rudder or nose-wheel steering"
+      },
+      {
+        "id": "AFH.9.22.1.c.2",
+        "text": "Use of aileron to keep the upwind wing from rising"
+      },
+      {
+        "id": "AFH.9.22.1.c.3",
+        "text": "Maintain control to prevent weathervaning"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.22.1.w.1",
+        "text": "Increase throttle to gain speed"
+      },
+      {
+        "id": "AFH.9.22.1.w.2",
+        "text": "Use flaps to increase lift"
+      },
+      {
+        "id": "AFH.9.22.1.w.3",
+        "text": "Apply brakes aggressively"
+      },
+      {
+        "id": "AFH.9.22.1.w.4",
+        "text": "Ignore crosswind components"
+      },
+      {
+        "id": "AFH.9.22.1.w.5",
+        "text": "Rely solely on autopilot"
+      },
+      {
+        "id": "AFH.9.22.1.w.6",
+        "text": "Use only elevator control"
+      },
+      {
+        "id": "AFH.9.22.1.w.7",
+        "text": "Focus on airspeed indicators"
+      },
+      {
+        "id": "AFH.9.22.1.w.8",
+        "text": "Disregard ground friction"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9, Section 22",
+    "subjects": [
+      "Crosswind Landing",
+      "Directional Control",
+      "After-Landing Roll"
+    ]
+  },
+  {
+    "questionid": "AFH.9.22.2",
+    "question": "What factors contribute to the relative wind acting on an airplane during the after-landing roll?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.22.2.c.1",
+        "text": "Natural wind direction"
+      },
+      {
+        "id": "AFH.9.22.2.c.2",
+        "text": "Headwind component"
+      },
+      {
+        "id": "AFH.9.22.2.c.3",
+        "text": "Crosswind component"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.22.2.w.1",
+        "text": "Engine thrust"
+      },
+      {
+        "id": "AFH.9.22.2.w.2",
+        "text": "Flap position"
+      },
+      {
+        "id": "AFH.9.22.2.w.3",
+        "text": "Altitude changes"
+      },
+      {
+        "id": "AFH.9.22.2.w.4",
+        "text": "Pilot's weight"
+      },
+      {
+        "id": "AFH.9.22.2.w.5",
+        "text": "Fuel load"
+      },
+      {
+        "id": "AFH.9.22.2.w.6",
+        "text": "Passenger distribution"
+      },
+      {
+        "id": "AFH.9.22.2.w.7",
+        "text": "Aircraft color"
+      },
+      {
+        "id": "AFH.9.22.2.w.8",
+        "text": "Landing gear type"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9, Section 22",
+    "subjects": [
+      "Relative Wind",
+      "Crosswind Effects",
+      "After-Landing Roll"
+    ]
+  },
+  {
+    "questionid": "AFH.9.22.3",
+    "question": "What is the effect of a cornering angle on a tire during the after-landing roll?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.22.3.c.1",
+        "text": "Creates a side load"
+      },
+      {
+        "id": "AFH.9.22.3.c.2",
+        "text": "Causes tire distortion"
+      },
+      {
+        "id": "AFH.9.22.3.c.3",
+        "text": "Independent of speed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.22.3.w.1",
+        "text": "Increases lift"
+      },
+      {
+        "id": "AFH.9.22.3.w.2",
+        "text": "Reduces drag"
+      },
+      {
+        "id": "AFH.9.22.3.w.3",
+        "text": "Improves fuel efficiency"
+      },
+      {
+        "id": "AFH.9.22.3.w.4",
+        "text": "Enhances braking"
+      },
+      {
+        "id": "AFH.9.22.3.w.5",
+        "text": "Stabilizes the aircraft"
+      },
+      {
+        "id": "AFH.9.22.3.w.6",
+        "text": "Increases tire lifespan"
+      },
+      {
+        "id": "AFH.9.22.3.w.7",
+        "text": "Reduces noise"
+      },
+      {
+        "id": "AFH.9.22.3.w.8",
+        "text": "Improves steering precision"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9, Section 22",
+    "subjects": [
+      "Tire Dynamics",
+      "Cornering Angle",
+      "After-Landing Roll"
+    ]
+  },
+  {
+    "questionid": "AFH.9.23.1",
+    "question": "What are some common errors in performing crosswind approaches and landings?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.23.1.c.1",
+        "text": "Attempted landing in crosswinds that exceed the airplane’s maximum demonstrated crosswind component."
+      },
+      {
+        "id": "AFH.9.23.1.c.2",
+        "text": "Undershooting or overshooting the turn from base leg to final approach."
+      },
+      {
+        "id": "AFH.9.23.1.c.3",
+        "text": "Inadequate compensation for wind drift on final approach."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.23.1.w.1",
+        "text": "Landing with excessive airspeed on touchdown."
+      },
+      {
+        "id": "AFH.9.23.1.w.2",
+        "text": "Failure to apply appropriate flight control inputs during rollout."
+      },
+      {
+        "id": "AFH.9.23.1.w.3",
+        "text": "Failure to maintain direction control on rollout."
+      },
+      {
+        "id": "AFH.9.23.1.w.4",
+        "text": "Excessive braking."
+      },
+      {
+        "id": "AFH.9.23.1.w.5",
+        "text": "Loss of aircraft control."
+      },
+      {
+        "id": "AFH.9.23.1.w.6",
+        "text": "Unstable approach."
+      },
+      {
+        "id": "AFH.9.23.1.w.7",
+        "text": "Excessive sink rate or too low an airspeed from increased drag and reduced vertical lift during sideslip."
+      },
+      {
+        "id": "AFH.9.23.1.w.8",
+        "text": "Failure to touch down with the longitudinal axis aligned with the runway."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: Maximum Safe Crosswind Velocities",
+    "subjects": [
+      "Crosswind Landings",
+      "Pilot Errors",
+      "Flight Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.9.24.1",
+    "question": "What are the recommended techniques for landing in turbulent air conditions?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.24.1.c.1",
+        "text": "Use a power-on approach at an airspeed slightly above normal"
+      },
+      {
+        "id": "AFH.9.24.1.c.2",
+        "text": "Employ partial wing flaps for better control"
+      },
+      {
+        "id": "AFH.9.24.1.c.3",
+        "text": "Maintain proper airspeed and descent path with adequate power"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.24.1.w.1",
+        "text": "Use full wing flaps for maximum lift"
+      },
+      {
+        "id": "AFH.9.24.1.w.2",
+        "text": "Decrease airspeed below normal approach speed"
+      },
+      {
+        "id": "AFH.9.24.1.w.3",
+        "text": "Close the throttle immediately upon touchdown"
+      },
+      {
+        "id": "AFH.9.24.1.w.4",
+        "text": "Apply full forward pressure on the yoke after touchdown"
+      },
+      {
+        "id": "AFH.9.24.1.w.5",
+        "text": "Use heavy braking immediately after landing"
+      },
+      {
+        "id": "AFH.9.24.1.w.6",
+        "text": "Touchdown with nose-wheel first"
+      },
+      {
+        "id": "AFH.9.24.1.w.7",
+        "text": "Ignore manufacturer's recommendations in AFM/POH"
+      },
+      {
+        "id": "AFH.9.24.1.w.8",
+        "text": "Rely solely on pitch adjustments without power changes"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: Turbulent Air Approach and Landing",
+    "subjects": [
+      "Aviation",
+      "Landing Techniques",
+      "Turbulent Air"
+    ]
+  },
+  {
+    "questionid": "AFH.9.24.2",
+    "question": "How should a pilot adjust airspeed and flap settings during a turbulent air approach?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.24.2.c.1",
+        "text": "Increase airspeed by half the wind gust factor"
+      },
+      {
+        "id": "AFH.9.24.2.c.2",
+        "text": "Use partial wing flaps for a higher pitch attitude"
+      },
+      {
+        "id": "AFH.9.24.2.c.3",
+        "text": "Conform to manufacturer's recommendations in AFM/POH"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.24.2.w.1",
+        "text": "Maintain normal approach speed regardless of conditions"
+      },
+      {
+        "id": "AFH.9.24.2.w.2",
+        "text": "Use full flaps for maximum lift"
+      },
+      {
+        "id": "AFH.9.24.2.w.3",
+        "text": "Ignore wind gust factors when adjusting airspeed"
+      },
+      {
+        "id": "AFH.9.24.2.w.4",
+        "text": "Decrease airspeed to reduce turbulence impact"
+      },
+      {
+        "id": "AFH.9.24.2.w.5",
+        "text": "Use full throttle throughout the approach"
+      },
+      {
+        "id": "AFH.9.24.2.w.6",
+        "text": "Rely on visual cues alone for speed adjustments"
+      },
+      {
+        "id": "AFH.9.24.2.w.7",
+        "text": "Disregard AFM/POH recommendations"
+      },
+      {
+        "id": "AFH.9.24.2.w.8",
+        "text": "Touchdown at minimum airspeed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: Turbulent Air Approach and Landing",
+    "subjects": [
+      "Aviation",
+      "Airspeed Management",
+      "Flap Settings"
+    ]
+  },
+  {
+    "questionid": "AFH.9.25.1",
+    "question": "What is essential for a short-field approach and landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.25.1.c.1",
+        "text": "Precise control of descent rate"
+      },
+      {
+        "id": "AFH.9.25.1.c.2",
+        "text": "Precise control of airspeed"
+      },
+      {
+        "id": "AFH.9.25.1.c.3",
+        "text": "Stabilized approach"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.25.1.w.1",
+        "text": "High-speed approach"
+      },
+      {
+        "id": "AFH.9.25.1.w.2",
+        "text": "No flaps used"
+      },
+      {
+        "id": "AFH.9.25.1.w.3",
+        "text": "Random descent angle"
+      },
+      {
+        "id": "AFH.9.25.1.w.4",
+        "text": "Ignoring obstacles"
+      },
+      {
+        "id": "AFH.9.25.1.w.5",
+        "text": "Using half flaps"
+      },
+      {
+        "id": "AFH.9.25.1.w.6",
+        "text": "Touchdown far from threshold"
+      },
+      {
+        "id": "AFH.9.25.1.w.7",
+        "text": "Excessive airspeed"
+      },
+      {
+        "id": "AFH.9.25.1.w.8",
+        "text": "No pattern adjustment"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9",
+    "subjects": [
+      "Short-Field Approach",
+      "Landing Techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.9.25.2",
+    "question": "What should a pilot do when approaching a short field with obstacles?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.25.2.c.1",
+        "text": "Use full flaps at the correct point"
+      },
+      {
+        "id": "AFH.9.25.2.c.2",
+        "text": "Maintain airspeed"
+      },
+      {
+        "id": "AFH.9.25.2.c.3",
+        "text": "Keep aiming point stationary"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.25.2.w.1",
+        "text": "Ignore obstacle clearance"
+      },
+      {
+        "id": "AFH.9.25.2.w.2",
+        "text": "Use no flaps"
+      },
+      {
+        "id": "AFH.9.25.2.w.3",
+        "text": "Increase airspeed excessively"
+      },
+      {
+        "id": "AFH.9.25.2.w.4",
+        "text": "Touchdown far from obstacles"
+      },
+      {
+        "id": "AFH.9.25.2.w.5",
+        "text": "Use half flaps"
+      },
+      {
+        "id": "AFH.9.25.2.w.6",
+        "text": "Ignore windscreen aiming"
+      },
+      {
+        "id": "AFH.9.25.2.w.7",
+        "text": "Reduce power too early"
+      },
+      {
+        "id": "AFH.9.25.2.w.8",
+        "text": "Use random descent angle"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9",
+    "subjects": [
+      "Obstacle Clearance",
+      "Short-Field Landing"
+    ]
+  },
+  {
+    "questionid": "AFH.9.25.3",
+    "question": "What is the recommended speed when no manufacturer's approach speed is available for short-field landings?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.25.3.c.1",
+        "text": "Not more than 1.3 VSO"
+      },
+      {
+        "id": "AFH.9.25.3.c.2",
+        "text": "Add half the gust factor in gusty air"
+      },
+      {
+        "id": "AFH.9.25.3.c.3",
+        "text": "Maintain proper descent angle"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.25.3.w.1",
+        "text": "Use full throttle"
+      },
+      {
+        "id": "AFH.9.25.3.w.2",
+        "text": "Ignore gust factor"
+      },
+      {
+        "id": "AFH.9.25.3.w.3",
+        "text": "Use 1.5 VSO"
+      },
+      {
+        "id": "AFH.9.25.3.w.4",
+        "text": "Use random speed"
+      },
+      {
+        "id": "AFH.9.25.3.w.5",
+        "text": "Ignore descent angle"
+      },
+      {
+        "id": "AFH.9.25.3.w.6",
+        "text": "Use no gust factor"
+      },
+      {
+        "id": "AFH.9.25.3.w.7",
+        "text": "Use 1.0 VSO"
+      },
+      {
+        "id": "AFH.9.25.3.w.8",
+        "text": "Use maximum speed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9",
+    "subjects": [
+      "Approach Speed",
+      "Short-Field Techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.9.25.4",
+    "question": "How should a pilot adjust when the descent angle does not ensure safe clearance of obstacles?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.25.4.c.1",
+        "text": "Reduce power"
+      },
+      {
+        "id": "AFH.9.25.4.c.2",
+        "text": "Lower pitch attitude"
+      },
+      {
+        "id": "AFH.9.25.4.c.3",
+        "text": "Steepen descent path"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.25.4.w.1",
+        "text": "Increase power"
+      },
+      {
+        "id": "AFH.9.25.4.w.2",
+        "text": "Raise pitch attitude"
+      },
+      {
+        "id": "AFH.9.25.4.w.3",
+        "text": "Flatten descent path"
+      },
+      {
+        "id": "AFH.9.25.4.w.4",
+        "text": "Ignore obstacle clearance"
+      },
+      {
+        "id": "AFH.9.25.4.w.5",
+        "text": "Maintain current settings"
+      },
+      {
+        "id": "AFH.9.25.4.w.6",
+        "text": "Use full throttle"
+      },
+      {
+        "id": "AFH.9.25.4.w.7",
+        "text": "Ignore pitch adjustments"
+      },
+      {
+        "id": "AFH.9.25.4.w.8",
+        "text": "Use random adjustments"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9",
+    "subjects": [
+      "Descent Angle Adjustment",
+      "Obstacle Clearance"
+    ]
+  },
+  {
+    "questionid": "AFH.9.25.5",
+    "question": "What is the purpose of using a wider-than-normal pattern in short-field approaches?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.25.5.c.1",
+        "text": "Allows ample opportunity to stabilize descent"
+      },
+      {
+        "id": "AFH.9.25.5.c.2",
+        "text": "Permits adjustment of descent angle"
+      },
+      {
+        "id": "AFH.9.25.5.c.3",
+        "text": "Facilitates configuration and trimming"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.25.5.w.1",
+        "text": "Reduces time for adjustments"
+      },
+      {
+        "id": "AFH.9.25.5.w.2",
+        "text": "Increases approach speed"
+      },
+      {
+        "id": "AFH.9.25.5.w.3",
+        "text": "Ignores descent stabilization"
+      },
+      {
+        "id": "AFH.9.25.5.w.4",
+        "text": "Uses narrow pattern"
+      },
+      {
+        "id": "AFH.9.25.5.w.5",
+        "text": "Avoids configuration"
+      },
+      {
+        "id": "AFH.9.25.5.w.6",
+        "text": "Increases floating"
+      },
+      {
+        "id": "AFH.9.25.5.w.7",
+        "text": "Reduces control"
+      },
+      {
+        "id": "AFH.9.25.5.w.8",
+        "text": "Ignores trimming"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9",
+    "subjects": [
+      "Approach Pattern",
+      "Descent Stabilization"
+    ]
+  },
+  {
+    "questionid": "AFH.9.26.1",
+    "question": "What is the primary objective when landing on soft surfaces like snow, sand, or mud?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.26.1.c.1",
+        "text": "Touch down as smoothly as possible"
+      },
+      {
+        "id": "AFH.9.26.1.c.2",
+        "text": "Land at the slowest possible speed"
+      },
+      {
+        "id": "AFH.9.26.1.c.3",
+        "text": "Minimize stress on the landing gear"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.26.1.w.1",
+        "text": "Use maximum braking"
+      },
+      {
+        "id": "AFH.9.26.1.w.2",
+        "text": "Maintain high approach speed"
+      },
+      {
+        "id": "AFH.9.26.1.w.3",
+        "text": "Retract flaps immediately after landing"
+      },
+      {
+        "id": "AFH.9.26.1.w.4",
+        "text": "Perform a steep angle descent"
+      },
+      {
+        "id": "AFH.9.26.1.w.5",
+        "text": "Keep nose-wheel on the ground"
+      },
+      {
+        "id": "AFH.9.26.1.w.6",
+        "text": "Use no flaps"
+      },
+      {
+        "id": "AFH.9.26.1.w.7",
+        "text": "Land with a nose-low attitude"
+      },
+      {
+        "id": "AFH.9.26.1.w.8",
+        "text": "Apply full power immediately after touchdown"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9, Section 26",
+    "subjects": [
+      "Soft-Field Landing Techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.9.26.2",
+    "question": "Which technique is recommended to minimize nose-over forces during a soft-field landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.26.2.c.1",
+        "text": "Use power throughout level-off and touchdown"
+      },
+      {
+        "id": "AFH.9.26.2.c.2",
+        "text": "Fly 1 to 2 feet off the surface in ground effect"
+      },
+      {
+        "id": "AFH.9.26.2.c.3",
+        "text": "Keep wings supporting the airplane's weight"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.26.2.w.1",
+        "text": "Retract flaps during after-landing roll"
+      },
+      {
+        "id": "AFH.9.26.2.w.2",
+        "text": "Use brakes immediately upon touchdown"
+      },
+      {
+        "id": "AFH.9.26.2.w.3",
+        "text": "Perform a steep descent"
+      },
+      {
+        "id": "AFH.9.26.2.w.4",
+        "text": "Maintain high airspeed on approach"
+      },
+      {
+        "id": "AFH.9.26.2.w.5",
+        "text": "Touch down with nose-wheel first"
+      },
+      {
+        "id": "AFH.9.26.2.w.6",
+        "text": "Use no flaps"
+      },
+      {
+        "id": "AFH.9.26.2.w.7",
+        "text": "Apply full power immediately after touchdown"
+      },
+      {
+        "id": "AFH.9.26.2.w.8",
+        "text": "Land with a nose-low attitude"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9, Section 26",
+    "subjects": [
+      "Soft-Field Landing Techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.9.26.3",
+    "question": "What should a pilot do after the main wheels touch the surface during a soft-field landing in a nose-wheel type airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.26.3.c.1",
+        "text": "Hold back-elevator pressure"
+      },
+      {
+        "id": "AFH.9.26.3.c.2",
+        "text": "Keep the nose-wheel off the surface"
+      },
+      {
+        "id": "AFH.9.26.3.c.3",
+        "text": "Control weight transfer from wings to wheels"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.26.3.w.1",
+        "text": "Retract flaps immediately"
+      },
+      {
+        "id": "AFH.9.26.3.w.2",
+        "text": "Apply brakes heavily"
+      },
+      {
+        "id": "AFH.9.26.3.w.3",
+        "text": "Perform a steep descent"
+      },
+      {
+        "id": "AFH.9.26.3.w.4",
+        "text": "Use no power during touchdown"
+      },
+      {
+        "id": "AFH.9.26.3.w.5",
+        "text": "Touch down with nose-wheel first"
+      },
+      {
+        "id": "AFH.9.26.3.w.6",
+        "text": "Use high approach speed"
+      },
+      {
+        "id": "AFH.9.26.3.w.7",
+        "text": "Apply full power immediately after touchdown"
+      },
+      {
+        "id": "AFH.9.26.3.w.8",
+        "text": "Land with a nose-low attitude"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9, Section 26",
+    "subjects": [
+      "Soft-Field Landing Techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.9.27.1",
+    "question": "What are the primary objectives of power-off accuracy approaches and landings?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.27.1.c.1",
+        "text": "Gliding to a touchdown at a given point with the engine idling"
+      },
+      {
+        "id": "AFH.9.27.1.c.2",
+        "text": "Instilling judgment and procedures for flying without power to a safe landing"
+      },
+      {
+        "id": "AFH.9.27.1.c.3",
+        "text": "Developing the pilot's ability to estimate gliding distance accurately"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.27.1.w.1",
+        "text": "Practicing engine restart procedures during final approach"
+      },
+      {
+        "id": "AFH.9.27.1.w.2",
+        "text": "Maintaining a constant power setting throughout the approach"
+      },
+      {
+        "id": "AFH.9.27.1.w.3",
+        "text": "Developing proficiency in crosswind correction techniques"
+      },
+      {
+        "id": "AFH.9.27.1.w.4",
+        "text": "Training pilots to use autopilot during engine-out scenarios"
+      },
+      {
+        "id": "AFH.9.27.1.w.5",
+        "text": "Practicing short-field takeoff and landing procedures"
+      },
+      {
+        "id": "AFH.9.27.1.w.6",
+        "text": "Developing instrument scan habits during low-visibility approaches"
+      },
+      {
+        "id": "AFH.9.27.1.w.7",
+        "text": "Training pilots to perform go-arounds from low altitudes"
+      },
+      {
+        "id": "AFH.9.27.1.w.8",
+        "text": "Improving radio communication skills during emergencies"
+      }
+    ],
+    "source": "AFH Chapter 9, Section 9.27 - Power-Off Accuracy Approaches",
+    "subjects": [
+      "Power-Off Approaches",
+      "Gliding",
+      "Pilot Judgment"
+    ]
+  },
+  {
+    "questionid": "AFH.9.27.2",
+    "question": "Which statements are true regarding altitude estimation during power-off accuracy approaches?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.27.2.c.1",
+        "text": "Altitudes up to approximately 1,000 feet can be estimated with fair accuracy"
+      },
+      {
+        "id": "AFH.9.27.2.c.2",
+        "text": "Above 1,000 feet, accuracy in judging height above ground decreases"
+      },
+      {
+        "id": "AFH.9.27.2.c.3",
+        "text": "The altimeter is the best aid for perfecting height judgment above 1,000 feet"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.27.2.w.1",
+        "text": "Pilots can accurately estimate altitude at any height without instruments"
+      },
+      {
+        "id": "AFH.9.27.2.w.2",
+        "text": "Altitude estimation is most accurate above 2,000 feet AGL"
+      },
+      {
+        "id": "AFH.9.27.2.w.3",
+        "text": "Visual cues remain distinct and reliable at all altitudes"
+      },
+      {
+        "id": "AFH.9.27.2.w.4",
+        "text": "The VSI is the best aid for estimating height above 1,000 feet"
+      },
+      {
+        "id": "AFH.9.27.2.w.5",
+        "text": "Altitude estimation in feet is the most critical skill in power-off approaches"
+      },
+      {
+        "id": "AFH.9.27.2.w.6",
+        "text": "Ground features become more distinct as altitude increases"
+      },
+      {
+        "id": "AFH.9.27.2.w.7",
+        "text": "Pilots should rely solely on GPS for altitude awareness above 1,000 feet"
+      },
+      {
+        "id": "AFH.9.27.2.w.8",
+        "text": "Height estimation accuracy improves significantly above 1,500 feet"
+      }
+    ],
+    "source": "AFH Chapter 9, Section 9.27 - Power-Off Accuracy Approaches",
+    "subjects": [
+      "Altitude Estimation",
+      "Pilot Judgment",
+      "Power-Off Approaches"
+    ]
+  },
+  {
+    "questionid": "AFH.9.27.3",
+    "question": "On a power-off approach, what control inputs are used to manage airspeed and descent angle?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.27.3.c.1",
+        "text": "Power is fixed at idle and pitch attitude is adjusted to control airspeed"
+      },
+      {
+        "id": "AFH.9.27.3.c.2",
+        "text": "Raising the nose reduces airspeed and shallows the descent angle when above best glide"
+      },
+      {
+        "id": "AFH.9.27.3.c.3",
+        "text": "Lowering the nose increases airspeed and steepens the descent angle when above best glide"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.27.3.w.1",
+        "text": "Throttle is used to control airspeed while pitch controls descent angle"
+      },
+      {
+        "id": "AFH.9.27.3.w.2",
+        "text": "Flaps are the primary means of controlling airspeed on a power-off approach"
+      },
+      {
+        "id": "AFH.9.27.3.w.3",
+        "text": "Rudder inputs are used to adjust the glide angle during power-off approaches"
+      },
+      {
+        "id": "AFH.9.27.3.w.4",
+        "text": "Raising the nose always shallows the descent angle regardless of airspeed"
+      },
+      {
+        "id": "AFH.9.27.3.w.5",
+        "text": "Lowering the nose always steepens the descent angle regardless of airspeed"
+      },
+      {
+        "id": "AFH.9.27.3.w.6",
+        "text": "Power is varied between idle and cruise to control the descent angle"
+      },
+      {
+        "id": "AFH.9.27.3.w.7",
+        "text": "Aileron trim is used to manage airspeed during power-off glides"
+      },
+      {
+        "id": "AFH.9.27.3.w.8",
+        "text": "Pitch attitude has no effect on descent angle when power is at idle"
+      }
+    ],
+    "source": "AFH Chapter 9, Section 9.27 - Power-Off Accuracy Approaches",
+    "subjects": [
+      "Airspeed Control",
+      "Pitch Attitude",
+      "Power-Off Approaches"
+    ]
+  },
+  {
+    "questionid": "AFH.9.27.4",
+    "question": "What happens when a pilot raises the pitch attitude too high during a power-off approach?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.27.4.c.1",
+        "text": "The airplane settles rapidly due to slow airspeed and insufficient lift"
+      },
+      {
+        "id": "AFH.9.27.4.c.2",
+        "text": "The pilot risks failing to reach the desired landing spot"
+      },
+      {
+        "id": "AFH.9.27.4.c.3",
+        "text": "Attempting to stretch a glide by raising the nose is a dangerous technique"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.27.4.w.1",
+        "text": "The airplane gains altitude and overshoots the intended landing point"
+      },
+      {
+        "id": "AFH.9.27.4.w.2",
+        "text": "Airspeed increases rapidly, causing the airplane to float excessively"
+      },
+      {
+        "id": "AFH.9.27.4.w.3",
+        "text": "The descent angle shallows safely, allowing the pilot to extend the glide indefinitely"
+      },
+      {
+        "id": "AFH.9.27.4.w.4",
+        "text": "Engine restart is automatically triggered by the low airspeed condition"
+      },
+      {
+        "id": "AFH.9.27.4.w.5",
+        "text": "The stall warning system prevents the nose from being raised too high"
+      },
+      {
+        "id": "AFH.9.27.4.w.6",
+        "text": "Lift increases significantly, allowing the pilot to reach a more distant landing spot"
+      },
+      {
+        "id": "AFH.9.27.4.w.7",
+        "text": "The airplane enters a stable glide at a lower airspeed with no adverse effects"
+      },
+      {
+        "id": "AFH.9.27.4.w.8",
+        "text": "Raising the nose has no significant effect on glide distance during idle power"
+      }
+    ],
+    "source": "AFH Chapter 9, Section 9.27 - Power-Off Accuracy Approaches",
+    "subjects": [
+      "Pitch Attitude",
+      "Glide Performance",
+      "Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.9.27.5",
+    "question": "What is the real basis of all power-off accuracy approaches and landings?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.27.5.c.1",
+        "text": "The ability to estimate the distance an airplane glides to a landing"
+      },
+      {
+        "id": "AFH.9.27.5.c.2",
+        "text": "Knowing the normal glide angle of the airplane"
+      },
+      {
+        "id": "AFH.9.27.5.c.3",
+        "text": "Estimating the approximate spot along a ground path where the airplane will land"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.27.5.w.1",
+        "text": "Maintaining a constant airspeed throughout the entire approach"
+      },
+      {
+        "id": "AFH.9.27.5.w.2",
+        "text": "Using engine power to fine-tune the touchdown point"
+      },
+      {
+        "id": "AFH.9.27.5.w.3",
+        "text": "Relying on ATC guidance to determine the correct glide path"
+      },
+      {
+        "id": "AFH.9.27.5.w.4",
+        "text": "Memorizing specific altitudes for each segment of the approach"
+      },
+      {
+        "id": "AFH.9.27.5.w.5",
+        "text": "Calculating fuel burn to determine glide range"
+      },
+      {
+        "id": "AFH.9.27.5.w.6",
+        "text": "Using the VASI or PAPI to maintain the correct descent angle"
+      },
+      {
+        "id": "AFH.9.27.5.w.7",
+        "text": "Applying maximum flaps as early as possible to steepen the descent"
+      },
+      {
+        "id": "AFH.9.27.5.w.8",
+        "text": "Maintaining a fixed pitch attitude regardless of airspeed changes"
+      }
+    ],
+    "source": "AFH Chapter 9, Section 9.27 - Power-Off Accuracy Approaches",
+    "subjects": [
+      "Gliding",
+      "Pilot Judgment",
+      "Power-Off Approaches"
+    ]
+  },
+  {
+    "questionid": "AFH.9.27.6",
+    "question": "What are the requirements for a good final approach in a power-off accuracy landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.27.6.c.1",
+        "text": "Descending at an angle that permits reaching the aiming point at a predictable airspeed"
+      },
+      {
+        "id": "AFH.9.27.6.c.2",
+        "text": "Accurately controlling both the descent angle and the airspeed"
+      },
+      {
+        "id": "AFH.9.27.6.c.3",
+        "text": "Achieving a predictable float where touchdown occurs at or within a specified distance beyond a designated point"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.27.6.w.1",
+        "text": "Maintaining full flaps throughout the entire final approach segment"
+      },
+      {
+        "id": "AFH.9.27.6.w.2",
+        "text": "Keeping the throttle at a fixed mid-range power setting"
+      },
+      {
+        "id": "AFH.9.27.6.w.3",
+        "text": "Touching down as short as possible regardless of airspeed"
+      },
+      {
+        "id": "AFH.9.27.6.w.4",
+        "text": "Using only rudder inputs to adjust the glide path on final"
+      },
+      {
+        "id": "AFH.9.27.6.w.5",
+        "text": "Ensuring the airplane crosses the threshold at maximum gross weight"
+      },
+      {
+        "id": "AFH.9.27.6.w.6",
+        "text": "Maintaining a constant rate of descent regardless of airspeed changes"
+      },
+      {
+        "id": "AFH.9.27.6.w.7",
+        "text": "Touching down at the slowest possible airspeed to minimize float"
+      },
+      {
+        "id": "AFH.9.27.6.w.8",
+        "text": "Applying back pressure continuously throughout the final approach"
+      }
+    ],
+    "source": "AFH Chapter 9, Section 9.27 - Power-Off Accuracy Approaches",
+    "subjects": [
+      "Final Approach",
+      "Airspeed Control",
+      "Power-Off Approaches"
+    ]
+  },
+  {
+    "questionid": "AFH.9.27.7",
+    "question": "When airspeed is below best glide on a power-off approach, what are the effects of pitch changes?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.27.7.c.1",
+        "text": "Pitching down will increase airspeed and shallow the descent angle"
+      },
+      {
+        "id": "AFH.9.27.7.c.2",
+        "text": "Pitching up will reduce airspeed and greatly steepen the descent angle"
+      },
+      {
+        "id": "AFH.9.27.7.c.3",
+        "text": "Lowering the nose is the correct response when airspeed is too low"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.27.7.w.1",
+        "text": "Pitching up will increase airspeed and shallow the descent angle"
+      },
+      {
+        "id": "AFH.9.27.7.w.2",
+        "text": "Pitching down will steepen the descent angle and reduce airspeed"
+      },
+      {
+        "id": "AFH.9.27.7.w.3",
+        "text": "Pitch changes have no effect on airspeed when power is at idle"
+      },
+      {
+        "id": "AFH.9.27.7.w.4",
+        "text": "Pitching up will shallow the descent angle when below best glide speed"
+      },
+      {
+        "id": "AFH.9.27.7.w.5",
+        "text": "Pitching down will reduce airspeed and steepen the descent angle"
+      },
+      {
+        "id": "AFH.9.27.7.w.6",
+        "text": "The pilot should add power rather than adjust pitch when below best glide"
+      },
+      {
+        "id": "AFH.9.27.7.w.7",
+        "text": "Pitching down will cause the airplane to stall when below best glide"
+      },
+      {
+        "id": "AFH.9.27.7.w.8",
+        "text": "Airspeed below best glide has no effect on the glide angle"
+      }
+    ],
+    "source": "AFH Chapter 9, Section 9.27 - Power-Off Accuracy Approaches",
+    "subjects": [
+      "Airspeed Control",
+      "Glide Performance",
+      "Pitch Attitude"
+    ]
+  },
+  {
+    "questionid": "AFH.9.27.8",
+    "question": "Why is the ability to estimate gliding angle more important than judging exact altitude in feet during power-off approaches?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.27.8.c.1",
+        "text": "A pilot who knows the glide angle can estimate where the airplane will land along a ground path"
+      },
+      {
+        "id": "AFH.9.27.8.c.2",
+        "text": "Glide angle estimation allows the pilot to judge how much maneuvering is safe during the glide"
+      },
+      {
+        "id": "AFH.9.27.8.c.3",
+        "text": "Glide angle knowledge is important for choosing landing areas in an actual emergency"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.27.8.w.1",
+        "text": "Exact altitude in feet is the most critical factor in determining landing distance"
+      },
+      {
+        "id": "AFH.9.27.8.w.2",
+        "text": "Glide angle estimation is only useful above 5,000 feet AGL"
+      },
+      {
+        "id": "AFH.9.27.8.w.3",
+        "text": "Knowing the exact altitude in feet is more useful than understanding glide angle"
+      },
+      {
+        "id": "AFH.9.27.8.w.4",
+        "text": "Glide angle estimation is irrelevant when an altimeter is available"
+      },
+      {
+        "id": "AFH.9.27.8.w.5",
+        "text": "Maneuvering during a glide is always unsafe regardless of altitude"
+      },
+      {
+        "id": "AFH.9.27.8.w.6",
+        "text": "Glide angle only matters during instrument approaches, not visual ones"
+      },
+      {
+        "id": "AFH.9.27.8.w.7",
+        "text": "Altitude estimation in hundreds of feet is sufficient for all emergency landings"
+      },
+      {
+        "id": "AFH.9.27.8.w.8",
+        "text": "Glide angle estimation applies only to multi-engine aircraft emergencies"
+      }
+    ],
+    "source": "AFH Chapter 9, Section 9.27 - Power-Off Accuracy Approaches",
+    "subjects": [
+      "Glide Performance",
+      "Pilot Judgment",
+      "Emergency Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.9.27.9",
+    "question": "How does the distance to be covered affect a power-off accuracy approach from a given altitude?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.27.9.c.1",
+        "text": "The distance to be covered largely determines the amount of maneuvering needed"
+      },
+      {
+        "id": "AFH.9.27.9.c.2",
+        "text": "A specific pattern is used to manage the glide from altitude to the touchdown point"
+      },
+      {
+        "id": "AFH.9.27.9.c.3",
+        "text": "Estimating gliding distance is the basis for determining approach technique"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.27.9.w.1",
+        "text": "Distance has no effect on the amount of maneuvering required during the approach"
+      },
+      {
+        "id": "AFH.9.27.9.w.2",
+        "text": "The pilot should always fly a straight-in approach regardless of distance"
+      },
+      {
+        "id": "AFH.9.27.9.w.3",
+        "text": "Maneuvering is never permitted during a power-off accuracy approach"
+      },
+      {
+        "id": "AFH.9.27.9.w.4",
+        "text": "The amount of fuel remaining determines the maneuvering needed, not distance"
+      },
+      {
+        "id": "AFH.9.27.9.w.5",
+        "text": "A longer distance always requires a steeper descent angle"
+      },
+      {
+        "id": "AFH.9.27.9.w.6",
+        "text": "Distance from the field is irrelevant when the altimeter is functioning"
+      },
+      {
+        "id": "AFH.9.27.9.w.7",
+        "text": "The pilot should always use maximum flaps to cover any distance"
+      },
+      {
+        "id": "AFH.9.27.9.w.8",
+        "text": "Wind direction alone determines the amount of maneuvering needed on approach"
+      }
+    ],
+    "source": "AFH Chapter 9, Section 9.27 - Power-Off Accuracy Approaches",
+    "subjects": [
+      "Power-Off Approaches",
+      "Gliding",
+      "Approach Planning"
+    ]
+  },
+  {
+    "questionid": "AFH.9.28.1",
+    "question": "What are the primary objectives of simulated emergency landings during dual training flights?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.28.1.c.1",
+        "text": "To develop a pilot’s accuracy"
+      },
+      {
+        "id": "AFH.9.28.1.c.2",
+        "text": "To develop a pilot’s judgment and planning"
+      },
+      {
+        "id": "AFH.9.28.1.c.3",
+        "text": "To develop a pilot’s confidence when little or no power is available"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.28.1.w.1",
+        "text": "To increase the aircraft's maximum speed"
+      },
+      {
+        "id": "AFH.9.28.1.w.2",
+        "text": "To practice engine restart procedures"
+      },
+      {
+        "id": "AFH.9.28.1.w.3",
+        "text": "To test the aircraft's structural limits"
+      },
+      {
+        "id": "AFH.9.28.1.w.4",
+        "text": "To learn new aerobatic maneuvers"
+      },
+      {
+        "id": "AFH.9.28.1.w.5",
+        "text": "To reduce fuel consumption during flight"
+      },
+      {
+        "id": "AFH.9.28.1.w.6",
+        "text": "To improve radio communication skills"
+      },
+      {
+        "id": "AFH.9.28.1.w.7",
+        "text": "To demonstrate aircraft structural integrity"
+      },
+      {
+        "id": "AFH.9.28.1.w.8",
+        "text": "To practice instrument flight rules"
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Simulated Emergency Landings",
+      "Pilot Training"
+    ]
+  },
+  {
+    "questionid": "AFH.9.28.2",
+    "question": "When a simulated power failure occurs above best glide speed, what actions should the pilot take?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.28.2.c.1",
+        "text": "Allow the airplane to slow down"
+      },
+      {
+        "id": "AFH.9.28.2.c.2",
+        "text": "Bleed off speed by climbing"
+      },
+      {
+        "id": "AFH.9.28.2.c.3",
+        "text": "Lower the nose and trim to maintain best glide speed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.28.2.w.1",
+        "text": "Immediately deploy full flaps"
+      },
+      {
+        "id": "AFH.9.28.2.w.2",
+        "text": "Increase throttle to maximum power"
+      },
+      {
+        "id": "AFH.9.28.2.w.3",
+        "text": "Raise the landing gear"
+      },
+      {
+        "id": "AFH.9.28.2.w.4",
+        "text": "Initiate a steep turn"
+      },
+      {
+        "id": "AFH.9.28.2.w.5",
+        "text": "Perform a go-around"
+      },
+      {
+        "id": "AFH.9.28.2.w.6",
+        "text": "Accelerate to maximum airspeed"
+      },
+      {
+        "id": "AFH.9.28.2.w.7",
+        "text": "Land straight ahead without adjusting speed"
+      },
+      {
+        "id": "AFH.9.28.2.w.8",
+        "text": "Climb to a higher altitude without bleeding speed"
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Emergency Procedures",
+      "Airspeed Control"
+    ]
+  },
+  {
+    "questionid": "AFH.9.28.3",
+    "question": "If a simulated power failure occurs at or below best glide speed, what immediate actions should the pilot take?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.28.3.c.1",
+        "text": "Lower the nose immediately"
+      },
+      {
+        "id": "AFH.9.28.3.c.2",
+        "text": "Maintain best glide speed"
+      },
+      {
+        "id": "AFH.9.28.3.c.3",
+        "text": "Accelerate to best glide speed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.28.3.w.1",
+        "text": "Raise the nose to gain altitude"
+      },
+      {
+        "id": "AFH.9.28.3.w.2",
+        "text": "Deploy full flaps immediately"
+      },
+      {
+        "id": "AFH.9.28.3.w.3",
+        "text": "Increase engine RPM"
+      },
+      {
+        "id": "AFH.9.28.3.w.4",
+        "text": "Climb to a higher altitude"
+      },
+      {
+        "id": "AFH.9.28.3.w.5",
+        "text": "Initiate a sharp turn"
+      },
+      {
+        "id": "AFH.9.28.3.w.6",
+        "text": "Land straight ahead without adjusting speed"
+      },
+      {
+        "id": "AFH.9.28.3.w.7",
+        "text": "Reduce airspeed further"
+      },
+      {
+        "id": "AFH.9.28.3.w.8",
+        "text": "Activate the emergency fuel pump"
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Emergency Procedures",
+      "Airspeed Management"
+    ]
+  },
+  {
+    "questionid": "AFH.9.28.4",
+    "question": "Why is a constant gliding speed usually maintained during an emergency approach?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.28.4.c.1",
+        "text": "Variations of gliding speed nullify all attempts at accuracy"
+      },
+      {
+        "id": "AFH.9.28.4.c.2",
+        "text": "Variations of gliding speed nullify judgment of gliding distance"
+      },
+      {
+        "id": "AFH.9.28.4.c.3",
+        "text": "Variations of gliding speed nullify judgment of the landing spot"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.28.4.w.1",
+        "text": "To conserve fuel"
+      },
+      {
+        "id": "AFH.9.28.4.w.2",
+        "text": "To increase maneuverability"
+      },
+      {
+        "id": "AFH.9.28.4.w.3",
+        "text": "To reduce drag"
+      },
+      {
+        "id": "AFH.9.28.4.w.4",
+        "text": "To cool the engine"
+      },
+      {
+        "id": "AFH.9.28.4.w.5",
+        "text": "To prepare for a go-around"
+      },
+      {
+        "id": "AFH.9.28.4.w.6",
+        "text": "To maintain radio contact"
+      },
+      {
+        "id": "AFH.9.28.4.w.7",
+        "text": "To avoid turbulence"
+      },
+      {
+        "id": "AFH.9.28.4.w.8",
+        "text": "To practice instrument procedures"
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Emergency Procedures",
+      "Glide Path Management"
+    ]
+  },
+  {
+    "questionid": "AFH.9.28.5",
+    "question": "Which of the following variables determine the pattern and approach procedures to use for an emergency landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.28.5.c.1",
+        "text": "Wind direction"
+      },
+      {
+        "id": "AFH.9.28.5.c.2",
+        "text": "Landing surface and gradient"
+      },
+      {
+        "id": "AFH.9.28.5.c.3",
+        "text": "Landing distance requirements of the airplane"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.28.5.w.1",
+        "text": "Aircraft weight"
+      },
+      {
+        "id": "AFH.9.28.5.w.2",
+        "text": "Pilot's experience level"
+      },
+      {
+        "id": "AFH.9.28.5.w.3",
+        "text": "Time of day"
+      },
+      {
+        "id": "AFH.9.28.5.w.4",
+        "text": "Air traffic control instructions"
+      },
+      {
+        "id": "AFH.9.28.5.w.5",
+        "text": "Passenger count"
+      },
+      {
+        "id": "AFH.9.28.5.w.6",
+        "text": "Fuel quantity remaining"
+      },
+      {
+        "id": "AFH.9.28.5.w.7",
+        "text": "Engine type"
+      },
+      {
+        "id": "AFH.9.28.5.w.8",
+        "text": "Aircraft registration number"
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Emergency Procedures",
+      "Landing Variables"
+    ]
+  },
+  {
+    "questionid": "AFH.9.28.6",
+    "question": "How can pilots determine wind direction and estimate its speed during an emergency?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.28.6.c.1",
+        "text": "From the windsock at the airport"
+      },
+      {
+        "id": "AFH.9.28.6.c.2",
+        "text": "From smoke from factories or houses"
+      },
+      {
+        "id": "AFH.9.28.6.c.3",
+        "text": "From patterns displayed on nearby bodies of water"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.28.6.w.1",
+        "text": "Using the aircraft compass"
+      },
+      {
+        "id": "AFH.9.28.6.w.2",
+        "text": "By observing the GPS ground track"
+      },
+      {
+        "id": "AFH.9.28.6.w.3",
+        "text": "From the altimeter setting"
+      },
+      {
+        "id": "AFH.9.28.6.w.4",
+        "text": "By monitoring engine RPM"
+      },
+      {
+        "id": "AFH.9.28.6.w.5",
+        "text": "By contacting air traffic control"
+      },
+      {
+        "id": "AFH.9.28.6.w.6",
+        "text": "From the aircraft attitude indicator"
+      },
+      {
+        "id": "AFH.9.28.6.w.7",
+        "text": "By checking the fuel gauge"
+      },
+      {
+        "id": "AFH.9.28.6.w.8",
+        "text": "Using radio navigation aids"
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Emergency Procedures",
+      "Environmental Assessment"
+    ]
+  },
+  {
+    "questionid": "AFH.9.28.7",
+    "question": "After selecting a field for a simulated emergency landing, what actions should the pilot take?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.28.7.c.1",
+        "text": "Indicate the proposed landing area to the instructor"
+      },
+      {
+        "id": "AFH.9.28.7.c.2",
+        "text": "Plan and fly a pattern for the field first elected"
+      },
+      {
+        "id": "AFH.9.28.7.c.3",
+        "text": "Continue until the instructor terminates the simulated emergency landing"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.28.7.w.1",
+        "text": "Immediately deploy full flaps"
+      },
+      {
+        "id": "AFH.9.28.7.w.2",
+        "text": "Climb to a higher altitude"
+      },
+      {
+        "id": "AFH.9.28.7.w.3",
+        "text": "Contact air traffic control for permission"
+      },
+      {
+        "id": "AFH.9.28.7.w.4",
+        "text": "Perform a steep spiral"
+      },
+      {
+        "id": "AFH.9.28.7.w.5",
+        "text": "Increase engine power"
+      },
+      {
+        "id": "AFH.9.28.7.w.6",
+        "text": "Activate the emergency beacon"
+      },
+      {
+        "id": "AFH.9.28.7.w.7",
+        "text": "Land straight ahead without a pattern"
+      },
+      {
+        "id": "AFH.9.28.7.w.8",
+        "text": "Change fields without instructor approval"
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Emergency Procedures",
+      "Decision Making"
+    ]
+  },
+  {
+    "questionid": "AFH.9.28.8",
+    "question": "Under what circumstances is a change to a better field permitted during a simulated emergency landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.28.8.c.1",
+        "text": "If the pilot realizes a poor field has been selected"
+      },
+      {
+        "id": "AFH.9.28.8.c.2",
+        "text": "If the first field would obviously result in disaster if a landing were to be made"
+      },
+      {
+        "id": "AFH.9.28.8.c.3",
+        "text": "If a more advantageous field is within gliding distance"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.28.8.w.1",
+        "text": "If the instructor requests it"
+      },
+      {
+        "id": "AFH.9.28.8.w.2",
+        "text": "If the pilot is bored with the first field"
+      },
+      {
+        "id": "AFH.9.28.8.w.3",
+        "text": "If the aircraft is running low on fuel"
+      },
+      {
+        "id": "AFH.9.28.8.w.4",
+        "text": "If the sun is in the pilot's eyes"
+      },
+      {
+        "id": "AFH.9.28.8.w.5",
+        "text": "If the pilot wants to practice a different approach"
+      },
+      {
+        "id": "AFH.9.28.8.w.6",
+        "text": "If the aircraft is too high"
+      },
+      {
+        "id": "AFH.9.28.8.w.7",
+        "text": "If the pilot sees a friend's house nearby"
+      },
+      {
+        "id": "AFH.9.28.8.w.8",
+        "text": "If the pilot wants to avoid a specific obstacle not related to the landing"
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Emergency Procedures",
+      "Field Selection"
+    ]
+  },
+  {
+    "questionid": "AFH.9.28.9",
+    "question": "What methods can instructors stress to correct for misjudgment of altitude and glide angle during an emergency approach?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.28.9.c.1",
+        "text": "Slipping the airplane"
+      },
+      {
+        "id": "AFH.9.28.9.c.2",
+        "text": "Using flaps"
+      },
+      {
+        "id": "AFH.9.28.9.c.3",
+        "text": "Varying the position of the base leg"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.28.9.w.1",
+        "text": "Increasing engine power"
+      },
+      {
+        "id": "AFH.9.28.9.w.2",
+        "text": "Climbing to a higher altitude"
+      },
+      {
+        "id": "AFH.9.28.9.w.3",
+        "text": "Performing a go-around"
+      },
+      {
+        "id": "AFH.9.28.9.w.4",
+        "text": "Reducing airspeed below best glide"
+      },
+      {
+        "id": "AFH.9.28.9.w.5",
+        "text": "Activating the emergency fuel pump"
+      },
+      {
+        "id": "AFH.9.28.9.w.6",
+        "text": "Contacting air traffic control"
+      },
+      {
+        "id": "AFH.9.28.9.w.7",
+        "text": "Deploying the landing gear early"
+      },
+      {
+        "id": "AFH.9.28.9.w.8",
+        "text": "Initiating a steep climb"
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Emergency Procedures",
+      "Approach Correction"
+    ]
+  },
+  {
+    "questionid": "AFH.9.29.1",
+    "question": "What are the potential consequences of starting the round out too late or pulling the elevator control back too rapidly during landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.29.1.c.1",
+        "text": "Accelerated stall"
+      },
+      {
+        "id": "AFH.9.29.1.c.2",
+        "text": "Hard landing on main gear"
+      },
+      {
+        "id": "AFH.9.29.1.c.3",
+        "text": "Bouncing back into the air"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.29.1.w.1",
+        "text": "Smooth touchdown"
+      },
+      {
+        "id": "AFH.9.29.1.w.2",
+        "text": "Increased lift"
+      },
+      {
+        "id": "AFH.9.29.1.w.3",
+        "text": "Reduced drag"
+      },
+      {
+        "id": "AFH.9.29.1.w.4",
+        "text": "Improved control"
+      },
+      {
+        "id": "AFH.9.29.1.w.5",
+        "text": "Stable descent"
+      },
+      {
+        "id": "AFH.9.29.1.w.6",
+        "text": "Decreased angle of attack"
+      },
+      {
+        "id": "AFH.9.29.1.w.7",
+        "text": "Extended runway use"
+      },
+      {
+        "id": "AFH.9.29.1.w.8",
+        "text": "Immediate stop"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: Late or Rapid Round Out",
+    "subjects": [
+      "Aerodynamics",
+      "Landing Techniques",
+      "Flight Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.9.30.1",
+    "question": "What are the consequences of excessive airspeed on final approach?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.30.1.c.1",
+        "text": "Floating during round out"
+      },
+      {
+        "id": "AFH.9.30.1.c.2",
+        "text": "Insufficient runway for landing"
+      },
+      {
+        "id": "AFH.9.30.1.c.3",
+        "text": "Ballooning or bouncing"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.30.1.w.1",
+        "text": "Increased fuel efficiency"
+      },
+      {
+        "id": "AFH.9.30.1.w.2",
+        "text": "Improved landing precision"
+      },
+      {
+        "id": "AFH.9.30.1.w.3",
+        "text": "Reduced landing distance"
+      },
+      {
+        "id": "AFH.9.30.1.w.4",
+        "text": "Enhanced lift control"
+      },
+      {
+        "id": "AFH.9.30.1.w.5",
+        "text": "Decreased approach angle"
+      },
+      {
+        "id": "AFH.9.30.1.w.6",
+        "text": "Better crosswind handling"
+      },
+      {
+        "id": "AFH.9.30.1.w.7",
+        "text": "Shorter landing roll"
+      },
+      {
+        "id": "AFH.9.30.1.w.8",
+        "text": "Improved touchdown accuracy"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: Floating During Round Out",
+    "subjects": [
+      "Airspeed management",
+      "Landing techniques",
+      "Approach procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.9.31.1",
+    "question": "What actions should a pilot take to manage ballooning during a landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.31.1.c.1",
+        "text": "Apply throttle to cushion the landing"
+      },
+      {
+        "id": "AFH.9.31.1.c.2",
+        "text": "Use rudder pressure to maintain directional control"
+      },
+      {
+        "id": "AFH.9.31.1.c.3",
+        "text": "Execute a go-around if ballooning is excessive"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.31.1.w.1",
+        "text": "Increase pitch attitude further"
+      },
+      {
+        "id": "AFH.9.31.1.w.2",
+        "text": "Ignore crosswind corrections"
+      },
+      {
+        "id": "AFH.9.31.1.w.3",
+        "text": "Reduce throttle immediately upon ballooning"
+      },
+      {
+        "id": "AFH.9.31.1.w.4",
+        "text": "Attempt to salvage the landing at all costs"
+      },
+      {
+        "id": "AFH.9.31.1.w.5",
+        "text": "Rely solely on ailerons for drift correction"
+      },
+      {
+        "id": "AFH.9.31.1.w.6",
+        "text": "Maintain current airspeed without adjustment"
+      },
+      {
+        "id": "AFH.9.31.1.w.7",
+        "text": "Disregard altitude changes"
+      },
+      {
+        "id": "AFH.9.31.1.w.8",
+        "text": "Continue descent without adjustments"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings",
+    "subjects": [
+      "Ballooning",
+      "Landing Techniques",
+      "Pilot Actions"
+    ]
+  },
+  {
+    "questionid": "AFH.9.32.1",
+    "question": "What causes an airplane to bounce during touchdown?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.32.1.c.1",
+        "text": "Improper attitude"
+      },
+      {
+        "id": "AFH.9.32.1.c.2",
+        "text": "Excessive rate of sink"
+      },
+      {
+        "id": "AFH.9.32.1.c.3",
+        "text": "Abrupt increase in AOA"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.32.1.w.1",
+        "text": "Low tire pressure"
+      },
+      {
+        "id": "AFH.9.32.1.w.2",
+        "text": "High altitude landing"
+      },
+      {
+        "id": "AFH.9.32.1.w.3",
+        "text": "Excessive fuel weight"
+      },
+      {
+        "id": "AFH.9.32.1.w.4",
+        "text": "Tailwind landing"
+      },
+      {
+        "id": "AFH.9.32.1.w.5",
+        "text": "Flaps not deployed"
+      },
+      {
+        "id": "AFH.9.32.1.w.6",
+        "text": "Incorrect runway alignment"
+      },
+      {
+        "id": "AFH.9.32.1.w.7",
+        "text": "Engine failure"
+      },
+      {
+        "id": "AFH.9.32.1.w.8",
+        "text": "Pilot distraction"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: Bouncing During Touchdown",
+    "subjects": [
+      "Aerodynamics",
+      "Landing Techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.9.32.2",
+    "question": "What is the recommended action if a severe bounce occurs during landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.32.2.c.1",
+        "text": "Execute a go-around"
+      },
+      {
+        "id": "AFH.9.32.2.c.2",
+        "text": "Apply full power"
+      },
+      {
+        "id": "AFH.9.32.2.c.3",
+        "text": "Maintain directional control"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.32.2.w.1",
+        "text": "Increase back-elevator pressure"
+      },
+      {
+        "id": "AFH.9.32.2.w.2",
+        "text": "Reduce power immediately"
+      },
+      {
+        "id": "AFH.9.32.2.w.3",
+        "text": "Attempt to land again"
+      },
+      {
+        "id": "AFH.9.32.2.w.4",
+        "text": "Ignore the bounce"
+      },
+      {
+        "id": "AFH.9.32.2.w.5",
+        "text": "Apply brakes heavily"
+      },
+      {
+        "id": "AFH.9.32.2.w.6",
+        "text": "Raise the nose further"
+      },
+      {
+        "id": "AFH.9.32.2.w.7",
+        "text": "Deploy spoilers"
+      },
+      {
+        "id": "AFH.9.32.2.w.8",
+        "text": "Engage autopilot"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: Bouncing During Touchdown",
+    "subjects": [
+      "Emergency Procedures",
+      "Landing Techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.9.33.1",
+    "question": "What are some causes of porpoising during landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.33.1.c.1",
+        "text": "Improper airspeed control"
+      },
+      {
+        "id": "AFH.9.33.1.c.2",
+        "text": "Miss-trimming"
+      },
+      {
+        "id": "AFH.9.33.1.c.3",
+        "text": "Forcing the airplane onto the runway"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.33.1.w.1",
+        "text": "Correct elevator trim"
+      },
+      {
+        "id": "AFH.9.33.1.w.2",
+        "text": "Proper airspeed control"
+      },
+      {
+        "id": "AFH.9.33.1.w.3",
+        "text": "Smooth runway surface"
+      },
+      {
+        "id": "AFH.9.33.1.w.4",
+        "text": "Calm wind conditions"
+      },
+      {
+        "id": "AFH.9.33.1.w.5",
+        "text": "Correct airplane attitude"
+      },
+      {
+        "id": "AFH.9.33.1.w.6",
+        "text": "Properly timed control inputs"
+      },
+      {
+        "id": "AFH.9.33.1.w.7",
+        "text": "Executing a go-around immediately"
+      },
+      {
+        "id": "AFH.9.33.1.w.8",
+        "text": "Maintaining a safe climb attitude"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: Porpoising",
+    "subjects": [
+      "Landing Techniques",
+      "Flight Control",
+      "Airspeed Management"
+    ]
+  },
+  {
+    "questionid": "AFH.9.34.1",
+    "question": "What are effective methods to prevent wheelbarrowing during landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.34.1.c.1",
+        "text": "Achieve and maintain the correct landing attitude"
+      },
+      {
+        "id": "AFH.9.34.1.c.2",
+        "text": "Touch down at the proper speed"
+      },
+      {
+        "id": "AFH.9.34.1.c.3",
+        "text": "Gently lower the nose-wheel while losing speed on rollout"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.34.1.w.1",
+        "text": "Apply forward pressure on the elevator control"
+      },
+      {
+        "id": "AFH.9.34.1.w.2",
+        "text": "Simultaneously touchdown of the main and nose-wheel with excessive speed"
+      },
+      {
+        "id": "AFH.9.34.1.w.3",
+        "text": "Ignore crosswind conditions"
+      },
+      {
+        "id": "AFH.9.34.1.w.4",
+        "text": "Use excessive braking action"
+      },
+      {
+        "id": "AFH.9.34.1.w.5",
+        "text": "Keep the nose-wheel on the ground throughout the landing roll"
+      },
+      {
+        "id": "AFH.9.34.1.w.6",
+        "text": "Initiate a go-around without assessing conditions"
+      },
+      {
+        "id": "AFH.9.34.1.w.7",
+        "text": "Maintain high speed during rollout"
+      },
+      {
+        "id": "AFH.9.34.1.w.8",
+        "text": "Rely solely on nose-wheel steering"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction",
+    "subjects": [
+      "Aviation Safety",
+      "Landing Techniques",
+      "Aircraft Control"
+    ]
+  },
+  {
+    "questionid": "AFH.9.35.1",
+    "question": "What are the primary purposes of pneumatic tires and shock absorbing landing gear during a landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.35.1.c.1",
+        "text": "To cushion the impact of touchdown"
+      },
+      {
+        "id": "AFH.9.35.1.c.2",
+        "text": "To increase the time for vertical descent to stop"
+      },
+      {
+        "id": "AFH.9.35.1.c.3",
+        "text": "To prevent structural damage to the airplane"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.35.1.w.1",
+        "text": "To increase the airplane's forward speed"
+      },
+      {
+        "id": "AFH.9.35.1.w.2",
+        "text": "To decrease the airplane's weight"
+      },
+      {
+        "id": "AFH.9.35.1.w.3",
+        "text": "To enhance the airplane's lift during landing"
+      },
+      {
+        "id": "AFH.9.35.1.w.4",
+        "text": "To reduce the airplane's inertia"
+      },
+      {
+        "id": "AFH.9.35.1.w.5",
+        "text": "To improve the airplane's fuel efficiency"
+      },
+      {
+        "id": "AFH.9.35.1.w.6",
+        "text": "To increase the airplane's vertical speed"
+      },
+      {
+        "id": "AFH.9.35.1.w.7",
+        "text": "To decrease the airplane's descent rate"
+      },
+      {
+        "id": "AFH.9.35.1.w.8",
+        "text": "To enhance the airplane's aerodynamic stability"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9, Section: Hard Landing",
+    "subjects": [
+      "Aviation Safety",
+      "Aircraft Landing Systems",
+      "Aerodynamics"
+    ]
+  },
+  {
+    "questionid": "AFH.9.36.1",
+    "question": "What are the consequences of landing an airplane while drifting or in a crab during a crosswind landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.36.1.c.1",
+        "text": "Extreme side loads on the landing gear"
+      },
+      {
+        "id": "AFH.9.36.1.c.2",
+        "text": "Potential structural failure"
+      },
+      {
+        "id": "AFH.9.36.1.c.3",
+        "text": "Abrupt deceleration of sideward velocity"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.36.1.w.1",
+        "text": "Increased lift during touchdown"
+      },
+      {
+        "id": "AFH.9.36.1.w.2",
+        "text": "Improved fuel efficiency"
+      },
+      {
+        "id": "AFH.9.36.1.w.3",
+        "text": "Enhanced passenger comfort"
+      },
+      {
+        "id": "AFH.9.36.1.w.4",
+        "text": "Reduced landing distance"
+      },
+      {
+        "id": "AFH.9.36.1.w.5",
+        "text": "Increased tire lifespan"
+      },
+      {
+        "id": "AFH.9.36.1.w.6",
+        "text": "Improved runway alignment"
+      },
+      {
+        "id": "AFH.9.36.1.w.7",
+        "text": "Decreased risk of ground loop"
+      },
+      {
+        "id": "AFH.9.36.1.w.8",
+        "text": "Enhanced braking performance"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9, Section 36",
+    "subjects": [
+      "Crosswind landings",
+      "Aircraft control",
+      "Landing techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.9.37.1",
+    "question": "What factors are identified as potential causes for an airplane to experience an initial swerve that may lead to a ground loop?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.37.1.c.1",
+        "text": "Drift or weathervaning."
+      },
+      {
+        "id": "AFH.9.37.1.c.2",
+        "text": "Careless use of the rudder."
+      },
+      {
+        "id": "AFH.9.37.1.c.3",
+        "text": "An uneven ground surface or a soft spot that retards one main wheel."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.37.1.w.1",
+        "text": "Applying full nose-down elevator immediately after touchdown."
+      },
+      {
+        "id": "AFH.9.37.1.w.2",
+        "text": "Maintaining a constant high airspeed during the entire ground roll."
+      },
+      {
+        "id": "AFH.9.37.1.w.3",
+        "text": "Applying aileron away from the high wing when correcting a swerve."
+      },
+      {
+        "id": "AFH.9.37.1.w.4",
+        "text": "Using differential engine power as the primary method to correct a swerve."
+      },
+      {
+        "id": "AFH.9.37.1.w.5",
+        "text": "Applying brake on the high-wing wheel to stop a swerve."
+      },
+      {
+        "id": "AFH.9.37.1.w.6",
+        "text": "Failure to extend flaps during the approach."
+      },
+      {
+        "id": "AFH.9.37.1.w.7",
+        "text": "Excessive use of nose-up trim during the landing roll."
+      },
+      {
+        "id": "AFH.9.37.1.w.8",
+        "text": "Operating the aircraft at an altitude above 10,000 feet MSL."
+      }
+    ],
+    "source": "AFH Chapter 9: Approaches and Landings Introduction",
+    "subjects": [
+      "Ground Loop",
+      "Landing Operations",
+      "Aircraft Control"
+    ]
+  },
+  {
+    "questionid": "AFH.9.38.1",
+    "question": "What actions should a pilot take if a wing starts to rise during a crosswind landing roll?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.38.1.c.1",
+        "text": "Apply more aileron pressure toward the high wing"
+      },
+      {
+        "id": "AFH.9.38.1.c.2",
+        "text": "Maintain directional control"
+      },
+      {
+        "id": "AFH.9.38.1.c.3",
+        "text": "Act quickly to apply aileron control"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.38.1.w.1",
+        "text": "Increase throttle"
+      },
+      {
+        "id": "AFH.9.38.1.w.2",
+        "text": "Apply rudder pressure toward the low wing"
+      },
+      {
+        "id": "AFH.9.38.1.w.3",
+        "text": "Decrease speed rapidly"
+      },
+      {
+        "id": "AFH.9.38.1.w.4",
+        "text": "Ignore the rising wing"
+      },
+      {
+        "id": "AFH.9.38.1.w.5",
+        "text": "Apply brakes immediately"
+      },
+      {
+        "id": "AFH.9.38.1.w.6",
+        "text": "Use elevator to lower the wing"
+      },
+      {
+        "id": "AFH.9.38.1.w.7",
+        "text": "Increase flaps"
+      },
+      {
+        "id": "AFH.9.38.1.w.8",
+        "text": "Reduce aileron pressure"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9, Section: Wing Rising After Touchdown",
+    "subjects": [
+      "Crosswind Landing",
+      "Aileron Control",
+      "Directional Control"
+    ]
+  },
+  {
+    "questionid": "AFH.9.39.1",
+    "question": "What are the three basic types of hydroplaning that can affect an airplane during landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.39.1.c.1",
+        "text": "Dynamic hydroplaning"
+      },
+      {
+        "id": "AFH.9.39.1.c.2",
+        "text": "Reverted rubber hydroplaning"
+      },
+      {
+        "id": "AFH.9.39.1.c.3",
+        "text": "Viscous hydroplaning"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.39.1.w.1",
+        "text": "Static hydroplaning"
+      },
+      {
+        "id": "AFH.9.39.1.w.2",
+        "text": "Thermal hydroplaning"
+      },
+      {
+        "id": "AFH.9.39.1.w.3",
+        "text": "Frictional hydroplaning"
+      },
+      {
+        "id": "AFH.9.39.1.w.4",
+        "text": "Surface hydroplaning"
+      },
+      {
+        "id": "AFH.9.39.1.w.5",
+        "text": "Pressure hydroplaning"
+      },
+      {
+        "id": "AFH.9.39.1.w.6",
+        "text": "Mechanical hydroplaning"
+      },
+      {
+        "id": "AFH.9.39.1.w.7",
+        "text": "Chemical hydroplaning"
+      },
+      {
+        "id": "AFH.9.39.1.w.8",
+        "text": "Aerodynamic hydroplaning"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: Hydroplaning",
+    "subjects": [
+      "Hydroplaning",
+      "Landing",
+      "Ground controllability"
+    ]
+  },
+  {
+    "questionid": "AFH.9.40.1",
+    "question": "What factors contribute to dynamic hydroplaning during landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.40.1.c.1",
+        "text": "Film of water at least one-tenth of an inch deep"
+      },
+      {
+        "id": "AFH.9.40.1.c.2",
+        "text": "Speed of the airplane"
+      },
+      {
+        "id": "AFH.9.40.1.c.3",
+        "text": "Tire inflation pressure"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.40.1.w.1",
+        "text": "Runway surface temperature"
+      },
+      {
+        "id": "AFH.9.40.1.w.2",
+        "text": "Airplane weight alone"
+      },
+      {
+        "id": "AFH.9.40.1.w.3",
+        "text": "Wind direction"
+      },
+      {
+        "id": "AFH.9.40.1.w.4",
+        "text": "Altitude of the airplane"
+      },
+      {
+        "id": "AFH.9.40.1.w.5",
+        "text": "Pilot's experience level"
+      },
+      {
+        "id": "AFH.9.40.1.w.6",
+        "text": "Type of aircraft engine"
+      },
+      {
+        "id": "AFH.9.40.1.w.7",
+        "text": "Humidity levels"
+      },
+      {
+        "id": "AFH.9.40.1.w.8",
+        "text": "Runway length"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction, Section: Dynamic Hydroplaning",
+    "subjects": [
+      "Aviation Safety",
+      "Landing Techniques",
+      "Hydroplaning"
+    ]
+  },
+  {
+    "questionid": "AFH.9.41.1",
+    "question": "What conditions contribute to reverted rubber hydroplaning during landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.41.1.c.1",
+        "text": "Prolonged locked-wheel skid"
+      },
+      {
+        "id": "AFH.9.41.1.c.2",
+        "text": "Thin film of water on the runway"
+      },
+      {
+        "id": "AFH.9.41.1.c.3",
+        "text": "Heat causing rubber to revert to uncured state"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.41.1.w.1",
+        "text": "Excessive crosswind"
+      },
+      {
+        "id": "AFH.9.41.1.w.2",
+        "text": "High altitude landing"
+      },
+      {
+        "id": "AFH.9.41.1.w.3",
+        "text": "Cold runway temperatures"
+      },
+      {
+        "id": "AFH.9.41.1.w.4",
+        "text": "Use of reverse thrust"
+      },
+      {
+        "id": "AFH.9.41.1.w.5",
+        "text": "Dry runway conditions"
+      },
+      {
+        "id": "AFH.9.41.1.w.6",
+        "text": "High tire pressure"
+      },
+      {
+        "id": "AFH.9.41.1.w.7",
+        "text": "Low tire tread depth"
+      },
+      {
+        "id": "AFH.9.41.1.w.8",
+        "text": "Sudden acceleration"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction",
+    "subjects": [
+      "Hydroplaning",
+      "Landing Techniques",
+      "Aviation Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.9.42.1",
+    "question": "What are effective strategies to mitigate viscous hydroplaning during landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.42.1.c.1",
+        "text": "Land on a grooved runway if available"
+      },
+      {
+        "id": "AFH.9.42.1.c.2",
+        "text": "Touchdown speed should be as slow as possible consistent with safety"
+      },
+      {
+        "id": "AFH.9.42.1.c.3",
+        "text": "Use aerodynamic drag by raising the nose if hydroplaning is suspected"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.42.1.w.1",
+        "text": "Increase touchdown speed"
+      },
+      {
+        "id": "AFH.9.42.1.w.2",
+        "text": "Apply maximum braking immediately"
+      },
+      {
+        "id": "AFH.9.42.1.w.3",
+        "text": "Land on a smooth runway"
+      },
+      {
+        "id": "AFH.9.42.1.w.4",
+        "text": "Ignore crosswind effects"
+      },
+      {
+        "id": "AFH.9.42.1.w.5",
+        "text": "Use only rudder for directional control"
+      },
+      {
+        "id": "AFH.9.42.1.w.6",
+        "text": "Rely solely on brakes for deceleration"
+      },
+      {
+        "id": "AFH.9.42.1.w.7",
+        "text": "Maintain high nose attitude throughout landing"
+      },
+      {
+        "id": "AFH.9.42.1.w.8",
+        "text": "Avoid using aerodynamic drag"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C), Chapter 9, Section 42",
+    "subjects": [
+      "Viscous Hydroplaning"
+    ]
+  },
+  {
+    "questionid": "AFH.9.43.1",
+    "question": "What are some key resources for improving pilot proficiency in approaches and landings?",
+    "correct_answers": [
+      {
+        "id": "AFH.9.43.1.c.1",
+        "text": "Pilot’s Handbook of Aeronautical Knowledge (FAA-H-8083-25)"
+      },
+      {
+        "id": "AFH.9.43.1.c.2",
+        "text": "Risk Management Handbook (FAA-H-8083-2)"
+      },
+      {
+        "id": "AFH.9.43.1.c.3",
+        "text": "Airplane Flying Handbook (FAA-H-8083-3C)"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.9.43.1.w.1",
+        "text": "Aeronautical Information Manual"
+      },
+      {
+        "id": "AFH.9.43.1.w.2",
+        "text": "Federal Aviation Regulations"
+      },
+      {
+        "id": "AFH.9.43.1.w.3",
+        "text": "Aircraft Weight and Balance Handbook"
+      },
+      {
+        "id": "AFH.9.43.1.w.4",
+        "text": "Instrument Procedures Handbook"
+      },
+      {
+        "id": "AFH.9.43.1.w.5",
+        "text": "Pilot's Handbook of Weather"
+      },
+      {
+        "id": "AFH.9.43.1.w.6",
+        "text": "Helicopter Flying Handbook"
+      },
+      {
+        "id": "AFH.9.43.1.w.7",
+        "text": "Glider Flying Handbook"
+      },
+      {
+        "id": "AFH.9.43.1.w.8",
+        "text": "Seaplane Operations Handbook"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 9: Approaches and Landings Introduction",
+    "subjects": [
+      "Approaches and Landings",
+      "Pilot Proficiency",
+      "Aviation Safety"
+    ]
+  }
+]

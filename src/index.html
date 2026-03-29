@@ -16,36 +16,31 @@
         </p>
       </section>
 
-      <section class="upload-row" aria-label="Document uploads">
-        <article class="upload-card" data-file-card data-required="true">
-          <div class="drop-zone" tabindex="0">
-            <span class="field-tag required">Mandatory</span>
-            <span class="drop-icon">+</span>
-            <h2>Original PDF</h2>
-            <p id="pdfDropText">Drop the source PDF document to extract the structured chapter JSON.</p>
-            <button class="clear-card-button" type="button" aria-label="Clear file">×</button>
-          </div>
-          <button class="upload-button" type="button">Upload</button>
-          <input class="file-input" type="file" accept=".pdf" />
-        </article>
-
-        <article class="document-output-card output-option" data-document-card data-state="idle" aria-live="polite">
-          <div class="document-output-header">
-            <span class="document-output-tag">Output</span>
-          </div>
-          <div class="document-output-list">
-            <label class="document-output-toggle"><input id="optDocJson" type="checkbox" checked /><span id="documentReadyBadge" class="document-status-badge" hidden aria-hidden="true"></span><span>Document JSON / MD</span></label>
-            <label class="document-output-toggle"><input id="optSummaryMd" type="checkbox" checked /><span id="summaryReadyBadge" class="document-status-badge" hidden aria-hidden="true"></span><span>Summary MD</span></label>
-            <label class="document-output-toggle"><input id="optQuestionsJson" type="checkbox" checked /><span id="questionReadyBadge" class="document-status-badge" hidden aria-hidden="true"></span><span>Question Bank JSON</span></label>
-            <label class="document-output-toggle"><input id="optDeterministicPairsJson" type="checkbox" checked /><span id="deterministicPairsReadyBadge" class="document-status-badge" hidden aria-hidden="true"></span><span>Deterministic Training Pairs JSON</span></label>
-            <label class="document-output-toggle"><input id="optConversationalPairsJson" type="checkbox" checked /><span id="conversationalPairsReadyBadge" class="document-status-badge" hidden aria-hidden="true"></span><span>Conversational Training Pairs JSON</span></label>
-          </div>
-        </article>
+      <section class="mode-panel" aria-label="Choose today task">
+        <div class="mode-panel-header">
+          <p class="mode-kicker">What Are We Going To Do Today?</p>
+          <h2>Choose a task</h2>
+          <p class="mode-subtitle">Pick one path to expand the right tools. You can switch tasks at any time when the app is idle.</p>
+        </div>
+        <div class="mode-grid">
+          <button id="modeGenerateButton" class="mode-button" type="button" data-mode-trigger="generate" aria-pressed="false">
+            <span class="mode-button-label">Generate a dataset</span>
+            <span class="mode-button-copy">Load a PDF and build outputs for one chapter.</span>
+          </button>
+          <button id="modeRepairButton" class="mode-button" type="button" data-mode-trigger="repair" aria-pressed="false">
+            <span class="mode-button-label">Repair a file</span>
+            <span class="mode-button-copy">Resume incomplete sections in a partial questions or conversational file.</span>
+          </button>
+          <button id="modeExportButton" class="mode-button" type="button" data-mode-trigger="export" aria-pressed="false">
+            <span class="mode-button-label">Export dataset</span>
+            <span class="mode-button-copy">Scan a folder tree and copy only questions and conversational training files.</span>
+          </button>
+        </div>
       </section>
 
-      <section class="destination-panel" aria-label="Output destination folders">
+      <section class="destination-panel" aria-label="Common output options">
         <h3>Output Settings</h3>
-        <p class="destination-subtitle">Choose one destination folder, set one output prefix, then select the outputs you want.</p>
+        <p id="sharedOutputSubtitle" class="destination-subtitle">Shared for all tasks: choose a destination folder and output prefix/file name base.</p>
         <div class="destination-grid">
           <article class="destination-cell" data-destination-cell>
             <label for="outputFolder">Output Folder</label>
@@ -54,39 +49,151 @@
               <button class="destination-button" type="button" data-select-folder="outputFolder">Browse</button>
             </div>
           </article>
-          <article class="destination-cell" data-destination-cell>
-            <label for="outputPrefix">Add output documents prefix</label>
+          <article class="destination-cell" data-destination-cell data-common-prefix-cell>
+            <label for="outputPrefix">Add output documents prefix (Generate only)</label>
             <input id="outputPrefix" class="filename-input" type="text" value="" placeholder="Example: AFH Chapter 1" spellcheck="false" />
             <p class="prefix-hint">Example output name: AFH_1_document.json</p>
           </article>
         </div>
-        <div class="action-row">
-          <button id="generateButton" class="generate-button" type="button" disabled>Generate</button>
-          <button id="cancelButton" class="cancel-button" type="button" disabled>Cancel</button>
-          <button id="openAiStatusButton" class="provider-status-button provider-status--connecting" type="button" title="OpenAI: connecting" disabled>OpenAI</button>
-          <button id="geminiStatusButton" class="provider-status-button provider-status--connecting" type="button" title="Gemini: connecting" disabled>Gemini</button>
-          <p id="generateHint" class="generate-hint">Select the PDF, output folder, and at least one output type.</p>
-        </div>
       </section>
 
-      <section class="legacy-panel" aria-label="Legacy files">
-        <details id="legacyDetails" class="legacy-details">
-          <summary class="legacy-toggle">Add Legacy Files (Optional)</summary>
-          <div class="legacy-content">
-            <article class="upload-card optional" data-legacy-card>
+      <section class="workflow-panel" data-mode-panel="generate" aria-label="Generate dataset workflow" hidden>
+        <section class="upload-row" aria-label="Document uploads">
+          <article class="upload-card" data-file-card data-required="true">
+            <div class="drop-zone" tabindex="0">
+              <span class="field-tag required">Mandatory</span>
+              <span class="drop-icon">+</span>
+              <h2>Original PDF</h2>
+              <p id="pdfDropText">Drop the source PDF document to extract the structured chapter JSON.</p>
+              <button class="clear-card-button" type="button" aria-label="Clear file">×</button>
+            </div>
+            <button class="upload-button" type="button">Upload</button>
+            <input class="file-input" type="file" accept=".pdf" />
+          </article>
+
+          <article class="document-output-card output-option" data-document-card data-state="idle" aria-live="polite">
+            <div class="document-output-header">
+              <span class="document-output-tag">Output</span>
+            </div>
+            <div class="document-output-list">
+              <label class="document-output-toggle"><input id="optDocJson" type="checkbox" checked /><span id="documentReadyBadge" class="document-status-badge" hidden aria-hidden="true"></span><span>Document JSON / MD</span></label>
+              <label class="document-output-toggle"><input id="optSummaryMd" type="checkbox" checked /><span id="summaryReadyBadge" class="document-status-badge" hidden aria-hidden="true"></span><span id="summaryProviderIndicators" class="output-provider-indicators" hidden aria-hidden="true"></span><span>Summary MD</span></label>
+              <label class="document-output-toggle"><input id="optQuestionsJson" type="checkbox" checked /><span id="questionReadyBadge" class="document-status-badge" hidden aria-hidden="true"></span><span id="questionsProviderIndicators" class="output-provider-indicators" hidden aria-hidden="true"></span><span>Question Bank JSON</span></label>
+              <label class="document-output-toggle"><input id="optDeterministicPairsJson" type="checkbox" checked /><span id="deterministicPairsReadyBadge" class="document-status-badge" hidden aria-hidden="true"></span><span>Deterministic Training Pairs JSON</span></label>
+              <label class="document-output-toggle"><input id="optConversationalPairsJson" type="checkbox" checked /><span id="conversationalPairsReadyBadge" class="document-status-badge" hidden aria-hidden="true"></span><span id="conversationalProviderIndicators" class="output-provider-indicators" hidden aria-hidden="true"></span><span>Conversational Training Pairs JSON</span></label>
+            </div>
+          </article>
+        </section>
+
+        <section class="destination-panel" aria-label="Generate actions">
+          <div class="action-row">
+            <button id="generateButton" class="generate-button" type="button" disabled>Generate</button>
+            <button id="cancelButton" class="cancel-button" type="button" disabled>Cancel</button>
+            <button id="openAiStatusButton" class="provider-status-button provider-status--connecting" type="button" title="OpenAI: connecting" disabled>OpenAI</button>
+            <button id="anthropicStatusButton" class="provider-status-button provider-status--connecting" type="button" title="Claude: connecting" disabled>Claude</button>
+            <button id="geminiStatusButton" class="provider-status-button provider-status--connecting" type="button" title="Gemini: connecting" disabled>Gemini</button>
+            <p id="generateHint" class="generate-hint">Select the PDF, output folder, and at least one output type.</p>
+          </div>
+        </section>
+
+        <section class="legacy-panel" aria-label="Legacy files">
+          <details id="legacyDetails" class="legacy-details">
+            <summary class="legacy-toggle">Add Legacy Files (Optional)</summary>
+            <div class="legacy-content">
+              <article class="upload-card optional" data-legacy-card>
+                <div class="drop-zone" tabindex="0">
+                  <span class="field-tag optional-tag">Optional</span>
+                  <span class="drop-icon">+</span>
+                  <h2>Legacy Doc or Image</h2>
+                  <p>Drop a legacy JSON/document/image file for reference.</p>
+                  <span class="file-name">No file selected</span>
+                  <button class="clear-card-button" type="button" aria-label="Clear file">×</button>
+                </div>
+                <button class="upload-button" type="button">Upload</button>
+                <input class="legacy-file-input" type="file" accept=".json,.txt,.md,.doc,.docx,.pdf,.png,.jpg,.jpeg,.webp,.bmp,.gif,image/*" />
+              </article>
+            </div>
+          </details>
+        </section>
+      </section>
+
+      <section class="workflow-panel" data-mode-panel="repair" aria-label="Repair partial artifacts workflow" hidden>
+        <section class="repair-panel" aria-label="Repair partial artifacts">
+          <div class="repair-panel-header">
+            <h3>Repair Partial Artifact</h3>
+            <p class="repair-subtitle">Load the structured source document JSON and a partial questions or conversational pairs JSON. Repair resumes only the incomplete sections and overwrites the selected target file.</p>
+          </div>
+          <div class="upload-row repair-upload-row">
+            <article class="upload-card repair-card" data-repair-card="sourceDocumentJson">
               <div class="drop-zone" tabindex="0">
-                <span class="field-tag optional-tag">Optional</span>
-                <span class="drop-icon">+</span>
-                <h2>Legacy Doc or Image</h2>
-                <p>Drop a legacy JSON/document/image file for reference.</p>
+                <span class="field-tag required">Mandatory</span>
+                <span class="drop-icon">{ }</span>
+                <h2>Source Document JSON</h2>
+                <p>Drop the structured document JSON produced from the source PDF.</p>
                 <span class="file-name">No file selected</span>
-                <button class="clear-card-button" type="button" aria-label="Clear file">×</button>
+                <button class="clear-card-button" type="button" aria-label="Clear source document">×</button>
               </div>
               <button class="upload-button" type="button">Upload</button>
-              <input class="legacy-file-input" type="file" accept=".json,.txt,.md,.doc,.docx,.pdf,.png,.jpg,.jpeg,.webp,.bmp,.gif,image/*" />
+              <input class="repair-file-input" type="file" accept=".json,application/json" />
+            </article>
+
+            <article class="upload-card repair-card" data-repair-card="repairArtifactJson">
+              <div class="drop-zone" tabindex="0">
+                <span class="field-tag required">Mandatory</span>
+                <span class="drop-icon">+</span>
+                <h2>Partial Artifact JSON</h2>
+                <p>Drop a partial question bank or conversational pairs JSON to repair in place.</p>
+                <span class="file-name">No file selected</span>
+                <button class="clear-card-button" type="button" aria-label="Clear repair target">×</button>
+              </div>
+              <button class="upload-button" type="button">Upload</button>
+              <input class="repair-file-input" type="file" accept=".json,application/json" />
+            </article>
+
+            <article class="document-output-card output-option repair-status-card" data-repair-status-card data-state="idle" aria-live="polite">
+              <div class="document-output-header">
+                <span class="document-output-tag">Repair Progress</span>
+              </div>
+              <div class="repair-status-meta">
+                <p class="repair-status-line"><strong>Source:</strong> <span id="repairSourceFileName">No source document selected</span></p>
+                <p class="repair-status-line"><strong>Target:</strong> <span id="repairTargetFileName">No partial artifact selected</span></p>
+              </div>
+              <div id="repairAnalysis" class="repair-analysis" hidden>
+                <p id="repairAnalysisSummary" class="repair-status-line"></p>
+                <p id="repairAnalysisDetails" class="repair-status-line"></p>
+              </div>
+              <div class="document-output-list">
+                <label class="document-output-toggle"><span id="repairQuestionsBadge" class="document-status-badge" hidden aria-hidden="true"></span><span id="repairQuestionsProviderIndicators" class="output-provider-indicators" hidden aria-hidden="true"></span></label>
+                <label class="document-output-toggle"><span id="repairConversationalBadge" class="document-status-badge" hidden aria-hidden="true"></span><span id="repairConversationalProviderIndicators" class="output-provider-indicators" hidden aria-hidden="true"></span></label>
+              </div>
             </article>
           </div>
-        </details>
+          <div class="action-row repair-action-row">
+            <button id="repairButton" class="repair-button" type="button" disabled>Repair Partial Artifact</button>
+            <p id="repairHint" class="repair-hint">Select the source document JSON and a partial questions or conversational pairs JSON.</p>
+          </div>
+        </section>
+      </section>
+
+      <section class="workflow-panel" data-mode-panel="export" aria-label="Export dataset workflow" hidden>
+        <section class="destination-panel export-panel" aria-label="Export training files">
+          <h3>Export Dataset</h3>
+          <p class="destination-subtitle">Pick a folder to scan recursively. The app will create a fresh export folder there and copy only question bank JSON files and conversational training pair JSON files.</p>
+          <div class="destination-grid export-grid">
+            <article class="destination-cell" data-destination-cell>
+              <label for="exportSourceFolder">Folder To Scan</label>
+              <div class="destination-input-wrap">
+                <input id="exportSourceFolder" class="destination-input" type="text" readonly value="No folder selected" />
+                <button id="exportSourceFolderButton" class="destination-button" type="button">Browse</button>
+              </div>
+              <p class="prefix-hint">Example: test_output_files</p>
+            </article>
+          </div>
+          <div class="action-row export-action-row">
+            <button id="exportButton" class="export-button" type="button" disabled>Export Training Files</button>
+            <p id="exportHint" class="repair-hint">Select a root folder that contains generated output folders.</p>
+          </div>
+        </section>
       </section>
 
       <section class="log-panel" aria-label="Generation progress log">

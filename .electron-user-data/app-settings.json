@@ -1,0 +1,18 @@
+{
+  "outputFolder": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files",
+  "outputPrefix": "",
+  "exportSourceFolder": "No folder selected",
+  "currentTaskMode": "generate",
+  "selectedOutputs": {
+    "docJson": true,
+    "summary": true,
+    "questions": true,
+    "deterministicPairs": true,
+    "conversationalPairs": true
+  },
+  "lastLoadedPdfName": "19_afh_ch18 EMERGENCY PROCEDURES.pdf",
+  "lastUsed": {
+    "outputFolder": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files",
+    "outputPrefix": ""
+  }
+}

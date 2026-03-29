@@ -1,0 +1,383 @@
+# Chapter 11: Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction
+
+## Conversion Metadata
+- Chapter Number: 11
+- Section Count: 23
+
+## afh.11.1 - Night Vision
+
+Due to the physiology of the eye [Figure 11-1], humans experience diminished vision in low-light conditions. Because vision
+involves the eyes and brain working together, understanding eye function leads to pilot behaviors that can improve night vision
+significantly.
+
+## afh.11.2 - Anatomy of the Eye
+
+⦁ Light from an object enters the eye through the cornea and then continues through the pupil.
+⦁ The opening (dilation) and closing (constriction) of the pupil is controlled by the iris, which is the colored part of the eye. The function of the pupil is similar to that of the diaphragm of a photographic camera: to control the amount of light.
+
+⦁ The lens is located behind the pupil and its function is to focus light on the surface of the retina.
+
+⦁ The retina is the inner layer of the eyeball that contains photosensitive cells called rods and cones. The function of the retina is similar to that of the film in a photographic camera: to record an image.
+
+⦁ The cones are located in higher concentrations than rods in the central area of the retina known as the macula, which measures about 4.5 mm in diameter. The exact center of the macula has a very small depression called the fovea, which contains cones only. The cones are used for day or high-intensity light vision. They are involved with central vision to detect detail, perceive color, and identify far-away objects.
+
+⦁ The rods are located mainly in the periphery of the retina—an area that is about 10,000 times more
+
+sensitive to light than the fovea. Rods are used for low light intensity or night vision and are involved with peripheral vision to detect position references, including objects (fixed and moving) in shades of gray, but cannot be used to detect detail or to perceive color.
+
+⦁ Although there is not a clear-cut division of function, the rods make night vision possible. The rods and cones function in daylight and in moonlight, but in the absence of normal light, the process of night vision is placed almost entirely on the rods.
+
+⦁ Light energy (an image) enters the eyes and is transformed by the cones and rods into electrical signals that are carried by the optic nerve to the posterior area of the brain (occipital lobes). This part of the brain interprets the electrical signals and creates a mental image of the actual object that was seen by the person.
+
+## afh.11.3 - Types of Vision
+
+Photopic Vision. During daytime or high-intensity artificial illumination conditions, the eyes rely on central vision (foveal cones) to perceive and interpret sharp images and color of objects. [Figure 11-2]
+
+Mesopic Vision. Occurs at dawn, dusk, or under full moonlight levels and is characterized by decreasing visual acuity and color
+vision. Under these conditions, a combination of central (foveal cones) and peripheral (rods)vision is required to maintain appropriate visual performance.
+
+Scotopic Vision. During nighttime, partial moonlight, or low intensity artificial illumination conditions, central vision (foveal cones)
+becomes ineffective to maintain visual acuity and color perception. Under these conditions, if looking directly at an object for more
+than a few seconds, the image of the object fades away completely (night blind spot). Peripheral vision (off center scanning) provides the only means of seeing very dim objects in the dark.
+
+## afh.11.4 - Night Blind Spot
+
+The “Night Blind Spot” appears under conditions of low ambient illumination due to the absence of rods in the fovea. [Figure 11-3]
+This absence of rods affects the central 5 to 10 degrees of the visual field. If an object is viewed directly at night, it may go
+undetected or it may fade away after initial detection. The night blind spot can hide larger objects as the distance between the pilot and an object increases.
+
+## afh.11.5 - Vision Under Dim and Bright Illumination
+
+The eye’s adaptation to darkness is another important aspect of night vision. When a dark room is entered, it is difficult to see
+anything until the eyes become adjusted to the darkness. Almost everyone experiences this when entering a darkened movie theater.
+
+In darkness, vision gradually becomes more sensitive to light. Maximum dark adaptation can take up to 30 minutes. Exposure to
+aircraft anti-collision lights does not impair night vision adaptation because the intermittent flashes have a very short duration (less
+than 1 second). However, if dark-adapted eyes are exposed to a bright light source (searchlights, landing lights, flares, etc.) for a
+period of 1 second or more, night vision is temporarily impaired. If it is safe to do so, pilots may close one eye when bright exposure begins in order to preserve dark adaptation for that eye.
+
+## afh.11.6 - Factors Affecting Vision
+
+⦁ During the day, identification of objects at a distance is aided by good resolution. At night, the identification range of dim objects is limited and the detail resolution is poor.
+
+⦁ Surface references or the horizon may become obscured by smoke, fog, smog, haze, dust, ice particles, or other phenomena, even when visibility meets Visual Flight Rule (VFR) minimums. This is especially true at airports located adjacent to large bodies of water or sparsely populated areas where few, if any, surface references are available. Lack of horizon or surface reference is common on over-water flights, at night, and in low-visibility conditions.
+
+⦁ Presence of uncorrected refractive eye disorders such as myopia (nearsightedness–impaired focusing of distant objects), hyperopia (farsightedness–impaired focusing of near objects), astigmatism (impaired focusing of objects in different meridians), or presbyopia (impaired focusing of near objects) affect day and night vision.
+
+⦁ Self-imposed stresses such as self-medication, alcohol consumption (including hangover effects), tobacco use (including withdrawal), hypoglycemia, sleep deprivation/fatigue, and extreme emotional upset can seriously impair vision.
+
+⦁ Inflight exposure to low barometric pressure without the use of supplemental oxygen (above 10,000 feet during the day and above 5,000 feet at night) can result in hypoxia, which impairs visual performance.
+
+⦁ Due to the effects of carbon monoxide on the blood, smokers may experience a physiological altitude that is much higher than actual altitude. The smoker is thus more susceptible to hypoxia at lower altitudes than the nonsmoker.
+
+⦁ Other factors that may have an adverse effect on visual performance include windscreen haze, improper illumination of the flight deck and/or instruments, scratched and/or dirty instrumentation, use of flight deck red lighting, inadequate flight deck environmental control (temperature and humidity), inappropriate sunglasses and/or prescription glasses/contact lenses, and sustained visual workload during flight. Red light illumination distorts colors (magenta and yellow pigments both appear as red, and cyan pigment appears black) on aeronautical charts. Pilots should use it only where optimum outside night vision capability is necessary. Dim white flight deck lighting should be available when needed for map and instrument reading.
+
+⦁ Monovision contact lenses (one contact lens for distant vision and the other lens for near vision) make the pilot alternate his/her vision; that is, a person uses one eye at a time, suppressing the other, and consequently impairs binocular vision and depth perception. The FAA recommends not using these lenses when piloting an aircraft..
+
+⦁ A flickering light in the flight deck, anti-collision lights, or other aircraft lights, may cause interference with brain function. Although rare, this may occur at a frequencies from 1 to 20 hertz. If continuous, the possible physical reactions can be nausea, dizziness, grogginess, unconsciousness, headaches, or confusion.
+Pilots should try to eliminate or screen out any light source that might cause an unwanted reaction to blinking or flickering lights.
+
+⦁ Sunglasses can aid the dark adaptation process, which is delayed by prolonged exposure to bright sunlight.
+
+## afh.11.7 - Night Illusions
+
+Visual illusions are especially hazardous because pilots rely on their eyes for correct information. Darkness or low visibility increases
+pilot susceptibility to error. Two illusions that lead to spatial disorientation, false horizon and autokinesis, concern the visual system
+only.
+
+## afh.11.8 - False Horizon
+
+Flying at night under clear skies with ground lights below can result in situations where it is difficult to distinguish the ground lights
+from the stars. A dark scene spread with ground lights and stars, and certain geometric patterns of ground lights can provide
+inaccurate visual information, making it difficult to align the aircraft correctly with the actual horizon. An aurora borealis display at
+night or a visible sloping cloud formation can also affect a pilot's sense of the horizon. A similar problem is encountered during
+certain daylight operations over large bodies of water. Various atmospheric and water conditions can create a visual scene without a discernible horizon.
+
+## afh.11.9 - Autokinesis
+
+In the dark, a stationary light will appear to move about when stared at for many seconds. The disoriented pilot could lose control of the aircraft in attempting to align it with the false movements of this light.
+
+## afh.11.10 - Featureless Terrain Illusion
+
+A black-hole approach occurs when the landing is made from over water or non-lighted terrain where the runway lights are the only source of light. Without peripheral visual cues to help, orientation is difficult. The runway can seem out of position (down-sloping or up-sloping) and in the worst case, results in landing short of the runway. If an electronic glide slope or visual approach slope indicator
+(VASI) is available, it should be used. If navigation aids (NAVAIDs) are unavailable, the flight instruments assist in maintaining
+orientation and a normal approach. Anytime position in relation to the runway or altitude is in doubt, the pilot should execute a goaround.
+
+Bright runway and approach lighting systems, especially where few lights illuminate the surrounding terrain, may create the illusion
+of being lower or having less distance to the runway. In this situation, the tendency is to fly a higher approach. Also, flying over
+terrain with only a few lights makes the runway recede or appear farther away. With this situation, the tendency is to fly a lower-thannormal approach. If the runway has a city in the distance on higher terrain, the tendency is to fly a lower-than-normal approach. A good review of the airfield layout and boundaries before initiating any approach helps maintain a safe approach angle.
+
+## afh.11.11 - Ground Lighting Illusions
+
+Lights along a straight path, such as a road or lights on moving trains, can be mistaken for runway and approach lights. Bright runway and approach lighting systems, especially where few lights illuminate the surrounding terrain, may create the illusion of less distance to the runway. The pilot who does not recognize this illusion will often fly a higher approach.
+
+Illusions created by runway lights result in a variety of problems. Bright lights or bold colors advance the runway, making it appear
+closer. Night landings are further complicated by the difficulty of judging distance and the possibility of confusing approach and
+runway lights. For example, when a double row of approach lights joins the boundary lights of the runway, there can be confusion as to where the approach lights terminate and runway lights begin. Under certain conditions, approach lights can make the aircraft seem higher in a turn to final, than when its wings are level.
+
+## afh.11.12 - Pilot Equipment
+
+As part of preflight preparation, pilots should carefully consider the personal equipment that should be readily available during the flight to include a flashlight, aeronautical charts, pertinent data for the flight, and a flight deck checklist containing procedures for the following tasks:
+
+1. Before starting engines
+2. Before takeoff
+3. Cruise
+4. Before landing
+5. After landing
+6. Stopping engines
+7. Emergencies
+
+At least one reliable flashlight is recommended as standard equipment on all night flights. A reliable incandescent or light-emitting
+diode (LED) dimmable flashlight able to produce white/red light is preferable. The flashlight should be large enough to be easily
+located in the event it is needed. It is also recommended to have a spare set of batteries for the flashlight readily available. The white
+light is used while performing the preflight visual inspection of the airplane, the red light is used when performing flight deck
+operations, and the dim white light may be used for chart reading. Many charts can be displayed on a EFB, which does not require a flashlight. However, its brightness should be set so as not to seriously impair night vision.
+
+Since the red light is non-glaring, it will not impair night vision. Some pilots prefer two flashlights, one with a white light for preflight
+and the other a penlight type with a red light. The latter can be suspended by a string from around the neck to ensure the light is
+always readily available. As mentioned earlier, red light distorts color perception of pigments other than red on charts.
+
+Aeronautical charts are essential for night cross-country flight and, if the intended course is near the edge of the chart, the adjacent chart should also be available. The lights of cities and towns can be seen at surprising distances at night, and if this adjacent chart is not available to identify those landmarks, confusion could result. Regardless of the equipment used, organization of the flight deck eases the burden and enhances safety. Organize equipment and charts and place them within easy reach prior to taxiing.
+
+## afh.11.13 - Airplane Equipment and Lighting
+
+14 CFR part 91, section 91.205(c) specifies the basic minimum airplane equipment that is required for VFR flight at night. This equipment includes basic instruments, lights, electrical energy source, and spare fuses if applicable.
+
+The standard instruments required by 14 CFR part 91, section 91.205(d) for IFR flight are valuable assets for aircraft control at night.
+14 CFR part 91, section 91.205(c)(3) specifies that during VFR flight at night, operating aircraft are required to have an approved
+anti-collision light system, which can include a flashing or rotating beacon and position lights. However, 14 CFR part 91, section
+91.209(b) gives the pilot-in-command leeway to turn off the anti-collision lights in the interest of safety. Airplane position lights are
+arranged similar to those of boats and ships. A red light is positioned on the left wingtip, a green light on the right wingtip, and a
+
+white light on the tail. [Figure 11-4]
+
+This arrangement provides a means to determine the general direction of movement of other airplanes in flight. If both a red and
+green light of another aircraft are observed, and the red light is on the left and the green to the right, the airplane is flying the same direction. Care must be taken to maintain clearance. If red were on the right and green to the left, the airplane could be on a collision course.
+
+Landing lights are not only useful for taxi, takeoffs, and landings, but also provide a means by which airplanes can be seen at night by other pilots. Pilots are encouraged to turn on their landing lights when operating within 10 miles of an airport and below 10,000 feet.
+Operation with landing lights on applies to both day and night or in conditions of reduced visibility. This should also be done in areas where flocks of birds may be expected.
+
+Although turning on aircraft lights supports the “see and be seen” concept, pilots should continue to keep a sharp lookout for other
+aircraft. Aircraft lights may blend in with the stars or the lights of the cities at night and go unnoticed unless a conscious effort is
+made to distinguish them from other lights.
+
+## afh.11.14 - Airport and Navigation Lighting Aids
+
+The lighting systems used for airports, runways, obstructions, and other visual aids at night are other important aspects of night flying.
+Lighted airports located away from congested areas are identified readily at night by the lights outlining the runways. Airports located near or within large cities are often difficult to identify as the airport lights tend to blend with the city lights. It is important to not only know the exact location of an airport relative to the city, but also to be able to identify these airports by the characteristics of their lighting patterns.
+
+Aeronautical lights are designed and installed in a variety of colors and configurations, each having its own purpose. Although some lights are used only during low ceiling and visibility conditions, this discussion includes only the lights that are fundamental to visual flight rules (VFR) night operation.
+
+It is recommended that prior to a night flight, and particularly a cross-country night flight, that a check of the availability and status of
+lighting systems at the destination airport is made. This information can be found on aeronautical charts and in the Chart
+Supplements. The status of each facility can be determined by reviewing pertinent Notices to Airmen (NOTAMs).
+
+Most airports have rotating beacons. The beacon rotates at a constant speed, thus producing a series of light flashes at regular
+intervals. These flashes may consist of a white flash and one or two different colors that are used to identify various types of landing areas. For example:
+
+⦁ Lighted civilian land airports—alternating white and green lights
+
+⦁ Lighted civilian water airports—alternating white and yellow lights
+
+⦁ Lighted military airports—alternating white and green lights, but are differentiated from civil airports by
+
+dual peaked (two quick) white flashes, then green
+
+Beacons producing red flashes indicate obstructions or areas considered hazardous to aerial navigation. Steady-burning red lights are used to mark obstructions on or near airports and sometimes to supplement flashing lights on en route obstructions. High-intensity,
+flashing white lights are used to mark some supporting structures of overhead transmission lines that stretch across rivers, chasms,
+and gorges. These high-intensity lights are also used to identify tall structures, such as chimneys and towers.
+
+As a result of technological advancements, runway lighting systems have become quite sophisticated to accommodate takeoffs and landings in various weather conditions. However, if flying is limited to VFR only, it is important to be familiar with the basic lighting of runways and taxiways.
+
+The basic runway lighting system consists of two straight parallel lines of runway edge lights defining the lateral limits of the runway.
+These lights are aviation white, although aviation yellow may be substituted for a distance of 2,000 feet from the far end of the
+runway to indicate a caution zone. At some airports, the intensity of the runway edge lights can be activated and adjusted by radio
+control. The control system consists of a 3-step control responsive to 7, 5, and/or 3 microphone clicks. This 3-step control turns on
+lighting facilities capable of either 3-step, 2-step, or 1-step operation. The 3-step and 2-step lighting facilities can be altered in
+intensity, while the 1-step cannot. All lighting is illuminated for a period of 15 minutes from the most recent time of activation and may not be extinguished prior to end of the 15-minute period. Suggested use is to always initially key the mike 7 times; this assures
+that all controlled lights are turned on to the maximum available intensity. If desired, adjustment can then be made, where the
+capability is provided, to a lower intensity by keying 5 and/or 3 times. Due to the close proximity of airports using the same
+frequency, radio-controlled lighting receivers may be set at a low sensitivity requiring the aircraft to be relatively close to activate the
+system. Consequently, even when lights are on, the pilot should always key the mike as directed when overflying an airport of
+intended landing or just prior to entering the final segment of an approach. This assures the aircraft is close enough to activate the system and a full 15-minute lighting duration is available.
+
+The length limits of the runway are defined by straight lines of lights across the runway ends. At some airports, the runway threshold lights are aviation green, and the runway end lights are aviation red. At many airports, the taxiways are also lighted. A taxiway edge lighting system consists of blue lights that outline the usable limits of taxi paths.
+
+## afh.11.15 - Training for Night Flight
+
+Learning to fly safely at night takes time and experience. Pilot’s should practice maneuvers at night including straight-and-level flight,
+climbs and descents, level turns, climbing and descending turns, and steep turns. Practicing recovery from unusual attitudes should
+only be done with a flight instructor. Pilots may practice these maneuvers with all the flight deck lights turned OFF, as well as ON.
+This blackout training simulates an electrical or instrument light failure. Pilots should also use the navigation equipment and local
+NAVAIDs during the training. In spite of fewer references or checkpoints, night cross-country flights do not present particular
+problems if pre-planning is adequate. Just as during the day, the pilot continuously monitors position, time estimates, fuel consumed, and uses NAVAIDs, if available, to assist in monitoring en route progress.
+
+## afh.11.16 - Preparation and Preflight
+
+Night flying requires that pilots are aware of, and operate within, their abilities and limitations. Although careful planning of any
+flight is essential, night flying demands more attention to the details of preflight preparation and planning.
+
+Preparation for a night flight includes a thorough review of the available weather reports and forecasts with particular attention given to temperature/dew point spread. A narrow temperature/dew point spread may indicate the possibility of fog. Emphasis should also be placed on wind direction and speed, since its effect on the airplane cannot be as easily detected at night as during the day.
+
+On night cross-country flights, pilots should select and use appropriate aeronautical charts to include the appropriate adjacent charts.
+Course lines should be drawn in black to be more distinguishable in low-light conditions. Rotating beacons at airports, lighted
+obstructions, lights of cities or towns, and lights from major highway traffic all provide excellent visual checkpoints. If using a global
+positioning system (GPS) for navigation, the pilot should ensure that it works properly. All necessary waypoints should be loaded
+before the flight, and the database should be checked for accuracy prior to taking off and again once in flight. The use of radio
+navigation aids and communication facilities add significantly to the safety and efficiency of night flying.
+
+Check all personal equipment prior to flight to ensure proper functioning and operation. All airplane lights should be checked for
+operation by turning them on momentarily during the preflight inspection. Position lights can be checked for loose connections
+by tapping the light fixture. If the lights blink while being tapped, determine the cause prior to flight. Parking ramps should be
+
+checked with a flashlight prior to entering the airplane. During the day, it is quite easy to see stepladders, chuckholes, wheel chocks, and other obstructions, but at night, it is more difficult and a check of the area can prevent taxiing mishaps.
+
+## afh.11.17 - Starting, Taxiing, and Run-up
+
+Once seated in the airplane and prior to starting the engine, a careful pilot will organize and arrange all items and materials to be used during the flight. The pilot should also take extra care at night to clear the propeller area. While turning the rotating beacon ON or
+flashing the airplane position lights helps alert persons nearby to remain clear of the propeller, the pilot should carefully and
+methodically scan the area around the aircraft. To avoid excessive drain of electrical current from the battery, the pilot may turn off unnecessary electrical equipment until after the engine has been started.
+
+Table columns: After starting the engine and when ready to taxi, the pilot turns the taxi or landing light ON. In some airplanes, continuous | use of the
+- After starting the engine and when ready to taxi, the pilot turns the taxi or landing light ON. In some airplanes, continuous: landing; use of the: light; col_3: while; col_4: taxiing; col_5: may; col_6: place; col_7: an; col_8: excessive; col_9: drain; col_10: on; col_11: the; col_12: airplane’s; col_13: electrical; col_14: system.; col_15: Also,; col_16: overheating; col_17: of; col_18: some; col_19: types
+- After starting the engine and when ready to taxi, the pilot turns the taxi or landing light ON. In some airplanes, continuous: of landing; use of the: lights; col_3: is; col_4: possible; col_5: because; col_6: of; col_7: inadequate; col_8: airflow; col_9: to; col_10: carry; col_11: the; col_12: heat; col_13: away.; col_14: If; col_15: overheating; col_16: or; col_17: electrical; col_18: power; col_19: is; col_20: an; col_21: issue,
+- After starting the engine and when ready to taxi, the pilot turns the taxi or landing light ON. In some airplanes, continuous: the landing; use of the: light; col_3: may; col_4: be; col_5: used; col_6: only; col_7: if; col_8: necessary.; col_9: When; col_10: using; col_11: lights,; col_12: consideration; col_13: should; col_14: be; col_15: given; col_16: to; col_17: not; col_18: blinding; col_19: other; col_20: pilots.
+- After starting the engine and when ready to taxi, the pilot turns the taxi or landing light ON. In some airplanes, continuous: Pilots should; use of the: taxi; col_3: slowly,; col_4: particularly; col_5: in; col_6: congested; col_7: areas.; col_8: If; col_9: taxi; col_10: lines; col_11: are; col_12: painted; col_13: on; col_14: the; col_15: ramp; col_16: or; col_17: taxiway,; col_18: following; col_19: the; col_20: lines
+- After starting the engine and when ready to taxi, the pilot turns the taxi or landing light ON. In some airplanes, continuous: ensures; use of the: a; col_3: proper; col_4: path; col_5: along; col_6: the; col_7: route.; col_8: An; col_9: instrument; col_10: check; col_11: should; col_12: be; col_13: done; col_14: while; col_15: taxiing; col_16: to; col_17: check; col_18: for; col_19: proper; col_20: and; col_21: correct
+- After starting the engine and when ready to taxi, the pilot turns the taxi or landing light ON. In some airplanes, continuous: operation; use of the: prior; col_3: to takeoff.
+
+While taxiing for any takeoff, the pilot should verify that the aircraft position, taxi route, and runway for the departure all appear as expected. The taxi diagram, signage, pavement markings, and instruments should all reinforce the pilot's situational awareness. If any conflicting information or doubt exists, the pilot should not proceed with the taxi or the takeoff. A wrong turn, wrong-surface takeoff,
+or takeoff on a closed runway can have catastrophic results, and preventing any of these depends on maintaining situational
+awareness while the aircraft moves on the ground.
+
+When using the checklist for the before-takeoff and run-up checks during the day, any forward movement of the airplane can
+be detected easily. However, at night, the airplane could creep forward without being noticed unless the pilot takes steps to prevent this possibility. Pilots should hold or lock the brakes during the run-up and be alert for any forward movement.
+
+## afh.11.18 - Takeoff and Climb
+
+The most noticeable difference between daylight and nighttime flying is the limited availability of outside visual references at night.
+Therefore, flight instruments should be used to a greater degree in controlling the airplane. This is particularly true on night takeoffs
+and climbs. The pilot should adjust the flight deck lights to a minimum brightness that will allow for reading the instruments
+and switches but not hinder outside vision. Dimming the lights also eliminates reflections on the windshield and windows.
+
+After ensuring that the final approach and runway are clear of other air traffic, or when cleared for takeoff by the air traffic controller, the pilot turns the landing and taxi lights ON and lines the airplane up with the centerline of the runway. If the runway does not have centerline lighting, the painted centerline and the distance from the runway edge lights on each side indicate the center. The heading indicator should be noted and correspond or set to the known runway direction. To begin the takeoff, the pilot releases the brakes and
+advances the throttle smoothly to maximum allowable power. As it accelerates, the airplane should be kept moving straight
+ahead between and parallel to the runway edge lights.
+
+The procedure for night takeoffs is the same as for normal daytime takeoffs except that many of the runway visual cues are
+not available. The pilot should check the flight instruments frequently during the takeoff to ensure proper airspeed, attitude, and
+heading. As the airspeed reaches the normal lift-off speed, the pilot adjusts the pitch attitude to establish a normal climb by referring
+to both outside visual references, such as lights, and to the flight instruments. [Figure 11-5] Without visual references ahead,
+
+inexperienced pilots may relax right rudder pressure after takeoff and veer off to the left.
+
+After becoming airborne, the darkness of night often makes it difficult to note whether the airplane is getting closer to or farther from
+the surface. The attitude indicator, vertical speed indicator (VSI), and altimeter should all indicate a positive climb. It is also
+important to ensure the airspeed is at best climb speed.
+
+The pilot makes necessary pitch and bank adjustments by referencing the attitude and heading indicators. It is recommended that
+turns not be made until reaching a safe maneuvering altitude. Although the use of the landing lights is helpful during the takeoff, they become ineffective after the airplane has climbed to an altitude where the light beam no longer extends to the surface. The light can cause distortion when it is reflected by haze, smoke, or clouds that might exist in the climb. Therefore, when the landing light is used for the takeoff, it should be turned off after the climb is well established provided it is not being used for collision avoidance.
+
+## afh.11.19 - Orientation and Navigation
+
+Generally, at night, it is difficult to see clouds and restrictions to visibility, particularly on dark nights or under an overcast. When
+flying under VFR, pilots should exercise caution to avoid flying into clouds. Usually, the first indication of flying into restricted
+visibility conditions is the gradual disappearance of lights on the ground. If the lights begin to appear surrounded by a halo or glow, further flight in the same direction calls for caution. Such a halo or glow around lights on the ground is indicative of ground fog. If a descent occurs through clouds, smoke, or haze in order to land, the horizontal visibility is considerably less when looking through the restriction than it is when looking straight down through it from above. Pilots should avoid a VFR night flight if expecting conditions
+below VFR minimums. If encountering IMC, risk increases dramatically unless both the pilot and aircraft are equipped for flight
+under IFR, and the pilot has prepared and filed an IFR flight plan that can be activated, if needed.
+
+Crossing large bodies of water at night in single-engine airplanes could be potentially hazardous, because in the event of an
+engine failure, the pilot may be forced to land (ditch) the airplane in the water. Another hazard faced by pilots of all aircraft, due to limited or no lighting, is that the horizon blends with the water. During poor visibility conditions over water, the horizon becomes
+obscure and may result in a loss of orientation. Even on clear nights, the stars may be reflected on the water surface, which
+could appear as a continuous array of lights, thus making the horizon difficult to identify.
+
+Lighted runways, buildings, or other objects may cause illusions when seen from different altitudes. At an altitude of 2,000 feet,
+a group of lights on an object may be seen individually, while at 5,000 feet or higher, the same lights could appear to be one solid
+light mass. These illusions may become quite acute with altitude changes and, if not overcome, could present problems when
+
+making approaches to lighted runways.
+
+## afh.11.20 - Approaches and Landings
+
+When approaching the airport to enter the traffic pattern and land, it is important that the runway lights and other airport lighting be
+identified as early as possible. If the airport layout is unfamiliar, sighting of the runway may be difficult until very close-in due to the maze of lights observed in the area. [Figure 11-6] A pilot should normally fly toward the rotating beacon until the lights outlining the runway are distinguishable. To fly a traffic pattern of proper size and direction, the runway threshold and runway-edge lights need to be positively identified. Once the airport lights are seen, these lights should be kept in sight throughout the approach.
+
+Distance may be deceptive at night due to limited lighting conditions. A lack of intervening references on the ground and the inability
+to compare the size and location of different ground objects cause this. This also applies to the estimation of altitude and speed.
+Consequently, more dependence should be placed on flight instruments, particularly the altimeter and the airspeed indicator.
+Monitoring the altimeter prevents flying too low for the distance from the airport. When entering the traffic pattern, the pilot should allow adequate time to complete the before-landing checklist. If the heading indicator contains a heading bug, setting it to the runway heading is an excellent reference for the pattern legs.
+
+The pilot maintains the recommended airspeeds and executes the approach and landing in the same manner as during the day. A low,
+shallow approach is definitely inappropriate during a night operation. The altimeter and VSI should be constantly cross-checked
+against the airplane’s position along the base leg and final approach. A visual approach slope indicator (VASI) is an indispensable aid in establishing and maintaining a proper glide path. [Figure 11-7]
+
+After turning onto the final approach and aligning the airplane midway between the two rows of runway-edge lights, the pilot should
+note and correct for any wind drift. Throughout the final approach, proper use of pitch and power helps to maintain a stabilized
+approach. Flaps are used as in a normal approach. Usually, halfway through the final approach, the landing light is turned on. The
+landing light is sometimes ineffective since the light beam will usually not reach the ground from higher altitudes. The light may even be reflected back into the pilot’s eyes by any existing haze, smoke, or fog. Safety considerations regarding local traffic and collision avoidance may overshadow these disadvantages.
+
+The round out and touchdown is made in the same manner as in day landings. At night, the judgment of height, speed, and sink rate is impaired by the scarcity of observable objects in the landing area. An inexperienced pilot may have a tendency to round out too high.
+Continuing a constant approach descent until the landing lights reflect on the runway and tire marks on the runway can be seen clearly helps identify the point to begin the round out. At this point, the round out is started smoothly and the throttle gradually reduced to idle as the airplane is touching down. [Figure 11-8] During landings without the use of landing lights, the round out may be started
+when the runway lights at the far end of the runway first appear to be rising higher than the nose of the airplane. This demands a
+smooth and very timely round out and requires that the pilot feel for the runway surface using power and pitch changes, as necessary, for the airplane to settle slowly to the runway. Blackout landings should always be included in night pilot training as an emergency procedure.
+
+## afh.11.21 - How to Prevent Landing Errors Due to Optical Illusions
+
+To prevent these illusions and their potentially hazardous consequences, pilots can:
+
+1. Anticipate the possibility of visual illusions during approaches to unfamiliar airports, particularly at night
+
+or in adverse weather conditions.
+
+2. Consult airport diagrams and the Chart Supplements for information on runway slope, terrain, and lighting.
+
+3. Make frequent reference to the altimeter, especially during all approaches, day and night.
+
+4. If possible, conduct aerial visual inspection of unfamiliar airports before landing.
+
+5. Use Visual Approach Slope Indicator (VASI) or Precision Approach Path Indicator (PAPI) systems for a
+
+visual reference or an electronic glideslope, whenever they are available.
+
+6. Utilize the visual descent point (VDP) found on many nonprecision instrument approach procedure charts.
+
+7. Recognize that the chances of being involved in an approach accident increase when some emergency or
+
+other activity distracts from usual procedures.
+
+8. Maintain optimum proficiency in landing procedures.
+
+## afh.11.22 - Night Emergencies
+
+Perhaps the greatest concern about flying a single-engine airplane at night is the possibility of a complete engine failure and the
+subsequent emergency landing. This is a legitimate concern, even though continuing flight into adverse weather and poor pilot
+judgment account for most serious accidents.
+
+If the engine fails at night, there are several important procedures and considerations to keep in mind. They are as follows:
+
+⦁ Maintain positive control of the airplane and establish the best glide configuration and airspeed. Turn the airplane towards an airport or away from congested areas.
+
+⦁ Check to determine the cause of the engine malfunction, such as the position of fuel selectors, magneto switch, or primer. If possible, the cause of the malfunction should be corrected immediately and the engine restarted.
+
+⦁ Announce the emergency situation to air traffic control (ATC) or Universal Communications (UNICOM).
+If already in radio contact with a facility, do not change frequencies unless instructed to change.
+
+⦁ If the condition of the nearby terrain is known and is suitable for a forced landing, turn towards an unlighted portion of the area and plan an emergency forced landing to an unlighted portion.
+
+⦁ Consider an emergency landing area close to public access if possible. This may facilitate rescue or help, if needed.
+
+⦁ Maintain orientation with the wind to avoid a downwind landing.
+
+⦁ Complete the before-landing checklist, and check the landing lights for operation at altitude and turn ON in sufficient time to illuminate the terrain or obstacles along the flightpath. The landing should be completed in the normal landing attitude at the slowest possible airspeed. If the landing lights are unusable and outside visual references are not available, the airplane should be held in level-landing attitude until the ground is contacted.
+
+⦁ After landing, turn off all switches and evacuate the airplane as quickly as possible.
+
+## afh.11.23 - Chapter Summary
+
+Night operations present additional risks that pilots should identify and assess. Night flying operations should not be encouraged or
+attempted, except by pilots that are certificated, current, and proficient in night flying. Prior to attempting night operations, pilots
+should receive training and be familiar with the risks associated with night flight and how they differ from daylight operations. Even for experienced pilots, night VFR operations should only be conducted in unrestricted visibility, favorable winds, both on the surface
+and aloft, and no turbulence. Additional information on pilot vision and illusions can be found in FAA brochure AM-400-98/2 at
+www.faa.gov/pilots/safety/pilotsafetybrochures/ and also in Chapters 2 and 17 of the Pilot’s Handbook of Aeronautical Knowledge
+(FAA-H-8083-25) at www.faa.gov. Additional information on lighting aids can be found in Chapter 2 of the Aeronautical
+Information Manual (AIM), which can be accessed at www.faa.gov.

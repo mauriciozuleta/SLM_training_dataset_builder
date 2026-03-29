@@ -1,0 +1,160 @@
+{
+  "generatedAtUtc": "2026-03-29T14:16:51.077Z",
+  "root": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files",
+  "fileCount": 2,
+  "totalPairs": 935,
+  "overallRating": {
+    "level": "optimum",
+    "weightedIssueRate": 0,
+    "weightedIssuePercent": 0,
+    "weightedIssueCount": 0,
+    "thresholds": {
+      "optimumMaxPercent": 0.5,
+      "acceptableMaxPercent": 2,
+      "criticalMaxPercent": 7.000000000000001
+    },
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "fatalIssueCount": 0
+  },
+  "results": [
+    {
+      "type": "deterministic",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_12 output docs\\afh_12_deterministic_training_pairs.json",
+      "pairCount": 550,
+      "questionCount": 50,
+      "subjectDistributionTop": [
+        {
+          "key": "Aircraft Systems",
+          "count": 77
+        },
+        {
+          "key": "Aerodynamics",
+          "count": 55
+        },
+        {
+          "key": "Flaps",
+          "count": 55
+        },
+        {
+          "key": "Propeller Mechanics",
+          "count": 55
+        },
+        {
+          "key": "Engine Management",
+          "count": 55
+        },
+        {
+          "key": "Turbocharging",
+          "count": 44
+        },
+        {
+          "key": "Flight Safety",
+          "count": 44
+        },
+        {
+          "key": "Aircraft Performance",
+          "count": 33
+        },
+        {
+          "key": "Power Management",
+          "count": 33
+        },
+        {
+          "key": "Aviation",
+          "count": 33
+        },
+        {
+          "key": "Complex Airplanes",
+          "count": 33
+        },
+        {
+          "key": "Turbocharged Engines",
+          "count": 33
+        },
+        {
+          "key": "Aviation Safety",
+          "count": 33
+        },
+        {
+          "key": "Landing gear",
+          "count": 33
+        },
+        {
+          "key": "Landing Gear Operation",
+          "count": 33
+        }
+      ],
+      "issues": []
+    },
+    {
+      "type": "conversational",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_12 output docs\\afh_12_conversational_training_pairs.json",
+      "pairCount": 385,
+      "subjectDistributionTop": [
+        {
+          "key": "takeoff",
+          "count": 36
+        },
+        {
+          "key": "landing gear",
+          "count": 24
+        },
+        {
+          "key": "Turbocharging",
+          "count": 20
+        },
+        {
+          "key": "landing gear retraction",
+          "count": 19
+        },
+        {
+          "key": "manifold pressure",
+          "count": 17
+        },
+        {
+          "key": "constant-speed propeller",
+          "count": 15
+        },
+        {
+          "key": "propeller control",
+          "count": 14
+        },
+        {
+          "key": "position indicators",
+          "count": 11
+        },
+        {
+          "key": "hydraulic landing gear system",
+          "count": 10
+        },
+        {
+          "key": "climb",
+          "count": 9
+        },
+        {
+          "key": "emergency gear extension",
+          "count": 9
+        },
+        {
+          "key": "cruise",
+          "count": 8
+        },
+        {
+          "key": "checkride preparation",
+          "count": 8
+        },
+        {
+          "key": "airspeed",
+          "count": 7
+        },
+        {
+          "key": "flap usage",
+          "count": 7
+        }
+      ],
+      "issues": []
+    }
+  ]
+}

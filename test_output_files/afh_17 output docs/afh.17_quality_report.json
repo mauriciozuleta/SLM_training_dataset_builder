@@ -1,0 +1,160 @@
+{
+  "generatedAtUtc": "2026-03-29T14:40:28.672Z",
+  "root": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files",
+  "fileCount": 2,
+  "totalPairs": 842,
+  "overallRating": {
+    "level": "optimum",
+    "weightedIssueRate": 0,
+    "weightedIssuePercent": 0,
+    "weightedIssueCount": 0,
+    "thresholds": {
+      "optimumMaxPercent": 0.5,
+      "acceptableMaxPercent": 2,
+      "criticalMaxPercent": 7.000000000000001
+    },
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "fatalIssueCount": 0
+  },
+  "results": [
+    {
+      "type": "deterministic",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_17 output docs\\afh_17_deterministic_training_pairs.json",
+      "pairCount": 550,
+      "questionCount": 50,
+      "subjectDistributionTop": [
+        {
+          "key": "Light Sport Airplanes",
+          "count": 44
+        },
+        {
+          "key": "Preflight Inspection",
+          "count": 44
+        },
+        {
+          "key": "LSA Features",
+          "count": 44
+        },
+        {
+          "key": "Flight Controls",
+          "count": 33
+        },
+        {
+          "key": "Medical Eligibility",
+          "count": 22
+        },
+        {
+          "key": "LSA Maintenance",
+          "count": 22
+        },
+        {
+          "key": "LSA",
+          "count": 22
+        },
+        {
+          "key": "Weather Considerations",
+          "count": 22
+        },
+        {
+          "key": "Flight Risk Management",
+          "count": 22
+        },
+        {
+          "key": "Engine Controls",
+          "count": 22
+        },
+        {
+          "key": "LSA Preflight",
+          "count": 22
+        },
+        {
+          "key": "Control pressures",
+          "count": 22
+        },
+        {
+          "key": "Aviation Organizations",
+          "count": 11
+        },
+        {
+          "key": "Aircraft Specifications",
+          "count": 11
+        },
+        {
+          "key": "Aircraft Categories",
+          "count": 11
+        }
+      ],
+      "issues": []
+    },
+    {
+      "type": "conversational",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_17 output docs\\afh_17_conversational_training_pairs.json",
+      "pairCount": 292,
+      "subjectDistributionTop": [
+        {
+          "key": "EFIS",
+          "count": 22
+        },
+        {
+          "key": "preflight inspection",
+          "count": 16
+        },
+        {
+          "key": "LSA",
+          "count": 13
+        },
+        {
+          "key": "Preflight",
+          "count": 12
+        },
+        {
+          "key": "checkride preparation",
+          "count": 11
+        },
+        {
+          "key": "emergency procedures",
+          "count": 10
+        },
+        {
+          "key": "LSA characteristics",
+          "count": 9
+        },
+        {
+          "key": "Flight Controls",
+          "count": 8
+        },
+        {
+          "key": "taxi",
+          "count": 7
+        },
+        {
+          "key": "Elevator Trim",
+          "count": 6
+        },
+        {
+          "key": "Engine Controls",
+          "count": 6
+        },
+        {
+          "key": "Ballistic Parachute",
+          "count": 6
+        },
+        {
+          "key": "LSA transition",
+          "count": 5
+        },
+        {
+          "key": "flight school selection",
+          "count": 5
+        },
+        {
+          "key": "Composite Construction",
+          "count": 5
+        }
+      ],
+      "issues": []
+    }
+  ]
+}

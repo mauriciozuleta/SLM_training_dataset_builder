@@ -1,0 +1,160 @@
+{
+  "generatedAtUtc": "2026-03-29T14:32:22.038Z",
+  "root": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files",
+  "fileCount": 2,
+  "totalPairs": 798,
+  "overallRating": {
+    "level": "optimum",
+    "weightedIssueRate": 0,
+    "weightedIssuePercent": 0,
+    "weightedIssueCount": 0,
+    "thresholds": {
+      "optimumMaxPercent": 0.5,
+      "acceptableMaxPercent": 2,
+      "criticalMaxPercent": 7.000000000000001
+    },
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "fatalIssueCount": 0
+  },
+  "results": [
+    {
+      "type": "deterministic",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_15 output docs\\afh_15_deterministic_training_pairs.json",
+      "pairCount": 550,
+      "questionCount": 50,
+      "subjectDistributionTop": [
+        {
+          "key": "Gas Turbine Engine",
+          "count": 33
+        },
+        {
+          "key": "Propeller Mechanics",
+          "count": 33
+        },
+        {
+          "key": "equivalent shaft horsepower",
+          "count": 22
+        },
+        {
+          "key": "Engine Components",
+          "count": 22
+        },
+        {
+          "key": "Turboprop Mechanics",
+          "count": 22
+        },
+        {
+          "key": "Turboprop Systems",
+          "count": 22
+        },
+        {
+          "key": "Turboprop Operation",
+          "count": 22
+        },
+        {
+          "key": "Engine Performance",
+          "count": 22
+        },
+        {
+          "key": "Engine Operations",
+          "count": 22
+        },
+        {
+          "key": "Turboprop Transition",
+          "count": 22
+        },
+        {
+          "key": "Turboprop Engines",
+          "count": 22
+        },
+        {
+          "key": "Startup Procedures",
+          "count": 22
+        },
+        {
+          "key": "Turbine Engines",
+          "count": 22
+        },
+        {
+          "key": "Pilot Actions",
+          "count": 22
+        },
+        {
+          "key": "Pilot Monitoring",
+          "count": 22
+        }
+      ],
+      "issues": []
+    },
+    {
+      "type": "conversational",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_15 output docs\\afh_15_conversational_training_pairs.json",
+      "pairCount": 248,
+      "subjectDistributionTop": [
+        {
+          "key": "turboprop engines",
+          "count": 33
+        },
+        {
+          "key": "beta range",
+          "count": 8
+        },
+        {
+          "key": "Engine Components",
+          "count": 7
+        },
+        {
+          "key": "Instrumentation",
+          "count": 7
+        },
+        {
+          "key": "engine start",
+          "count": 5
+        },
+        {
+          "key": "NTS",
+          "count": 5
+        },
+        {
+          "key": "engine operation",
+          "count": 5
+        },
+        {
+          "key": "Airflow",
+          "count": 4
+        },
+        {
+          "key": "Engine Failure",
+          "count": 4
+        },
+        {
+          "key": "Drag",
+          "count": 4
+        },
+        {
+          "key": "Engine RPM",
+          "count": 4
+        },
+        {
+          "key": "Turbine Temperature",
+          "count": 4
+        },
+        {
+          "key": "reverse thrust",
+          "count": 4
+        },
+        {
+          "key": "checkride",
+          "count": 4
+        },
+        {
+          "key": "alpha mode",
+          "count": 4
+        }
+      ],
+      "issues": []
+    }
+  ]
+}

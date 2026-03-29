@@ -1,0 +1,211 @@
+{
+  "generatedAtUtc": "2026-03-27T18:36:48.054Z",
+  "root": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files",
+  "fileCount": 2,
+  "totalPairs": 668,
+  "overallRating": {
+    "level": "optimum",
+    "weightedIssueRate": 0.00037425149700598805,
+    "weightedIssuePercent": 0.037,
+    "weightedIssueCount": 0.25,
+    "thresholds": {
+      "optimumMaxPercent": 0.5,
+      "acceptableMaxPercent": 2,
+      "criticalMaxPercent": 7.000000000000001
+    },
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "fatalIssueCount": 0
+  },
+  "results": [
+    {
+      "type": "deterministic",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_8 output docs\\afh_8_deterministic_training_pairs.json",
+      "pairCount": 550,
+      "questionCount": 50,
+      "subjectDistributionTop": [
+        {
+          "key": "Traffic Pattern Procedures",
+          "count": 99
+        },
+        {
+          "key": "Non-towered operations",
+          "count": 77
+        },
+        {
+          "key": "Traffic Pattern Safety",
+          "count": 55
+        },
+        {
+          "key": "Traffic pattern entry",
+          "count": 55
+        },
+        {
+          "key": "Traffic Pattern Entry",
+          "count": 44
+        },
+        {
+          "key": "Traffic Pattern Indicators",
+          "count": 33
+        },
+        {
+          "key": "Flight Safety",
+          "count": 33
+        },
+        {
+          "key": "Pilot Responsibilities",
+          "count": 22
+        },
+        {
+          "key": "Traffic Pattern Direction",
+          "count": 22
+        },
+        {
+          "key": "Traffic pattern procedures",
+          "count": 22
+        },
+        {
+          "key": "Airport Operations",
+          "count": 11
+        },
+        {
+          "key": "Pre-flight Planning",
+          "count": 11
+        },
+        {
+          "key": "Traffic Management",
+          "count": 11
+        },
+        {
+          "key": "Controlled Airspace Operations",
+          "count": 11
+        },
+        {
+          "key": "Aircraft Operations",
+          "count": 11
+        }
+      ],
+      "issues": []
+    },
+    {
+      "type": "conversational",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_8 output docs\\afh_8_conversational_training_pairs.json",
+      "pairCount": 118,
+      "subjectDistributionTop": [
+        {
+          "key": "traffic pattern entry",
+          "count": 26
+        },
+        {
+          "key": "non-towered airports",
+          "count": 21
+        },
+        {
+          "key": "traffic patterns",
+          "count": 11
+        },
+        {
+          "key": "final approach",
+          "count": 11
+        },
+        {
+          "key": "Mid-air Collisions",
+          "count": 8
+        },
+        {
+          "key": "traffic pattern safety",
+          "count": 5
+        },
+        {
+          "key": "base leg",
+          "count": 5
+        },
+        {
+          "key": "downwind leg",
+          "count": 5
+        },
+        {
+          "key": "airport operations",
+          "count": 4
+        },
+        {
+          "key": "upwind leg",
+          "count": 4
+        },
+        {
+          "key": "departure leg",
+          "count": 4
+        },
+        {
+          "key": "pattern altitude",
+          "count": 4
+        },
+        {
+          "key": "Visibility",
+          "count": 4
+        },
+        {
+          "key": "safety",
+          "count": 3
+        },
+        {
+          "key": "control tower",
+          "count": 3
+        }
+      ],
+      "issues": [
+        {
+          "severity": "warning",
+          "code": "DUPLICATE_CONVERSATIONS",
+          "message": "Found 4 duplicated user+assistant exchanges.",
+          "target": {
+            "type": "pair-group",
+            "id": "duplicate-conversations"
+          },
+          "repairGuidance": {
+            "action": "targeted-repair",
+            "scope": "pair",
+            "instruction": "Regenerate only duplicated conversational pairs with variation constraints."
+          },
+          "context": {
+            "topDuplicates": [
+              {
+                "key": "what should i do if i need to overtake another aircraft in the pattern? ||| avoid overtaking in the pattern. if necessary, consider a go-around to maintain safe separation and avoid steep turns.",
+                "count": 2,
+                "targets": [
+                  "AFH.8.2.1.z.27",
+                  "AFH.8.2.1.z.54"
+                ]
+              },
+              {
+                "key": "how do i know when to turn from downwind to base leg? ||| turn to base leg when approximately 45° from the approach end of the runway, considering wind conditions for timing.",
+                "count": 2,
+                "targets": [
+                  "AFH.8.2.1.z.28",
+                  "AFH.8.2.1.z.55"
+                ]
+              },
+              {
+                "key": "why do we fly the upwind leg after a go-around? ||| the upwind leg allows for a safe climb and transition back into the traffic pattern, providing visibility of the runway for departing aircraft.",
+                "count": 2,
+                "targets": [
+                  "AFH.8.2.1.z.29",
+                  "AFH.8.2.1.z.56"
+                ]
+              },
+              {
+                "key": "what are the risks of rushing the turn to final approach? ||| rushing the turn can lead to steep angles and potential collision hazards. it's safer to go around if spacing is insufficient.",
+                "count": 2,
+                "targets": [
+                  "AFH.8.2.1.z.30",
+                  "AFH.8.2.1.z.57"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

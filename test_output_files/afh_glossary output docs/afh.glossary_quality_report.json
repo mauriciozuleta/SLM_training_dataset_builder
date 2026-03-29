@@ -1,0 +1,219 @@
+{
+  "generatedAtUtc": "2026-03-27T17:47:43.575Z",
+  "root": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files",
+  "fileCount": 2,
+  "totalPairs": 1334,
+  "overallRating": {
+    "level": "optimum",
+    "weightedIssueRate": 0.0001874062968515742,
+    "weightedIssuePercent": 0.019,
+    "weightedIssueCount": 0.25,
+    "thresholds": {
+      "optimumMaxPercent": 0.5,
+      "acceptableMaxPercent": 2,
+      "criticalMaxPercent": 7.000000000000001
+    },
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "fatalIssueCount": 0
+  },
+  "results": [
+    {
+      "type": "deterministic",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_glossary output docs\\afh_glossary_deterministic_training_pairs.json",
+      "pairCount": 693,
+      "questionCount": 63,
+      "subjectDistributionTop": [
+        {
+          "key": "Aerodynamics",
+          "count": 110
+        },
+        {
+          "key": "Aircraft Systems",
+          "count": 77
+        },
+        {
+          "key": "Performance",
+          "count": 33
+        },
+        {
+          "key": "Flight Control",
+          "count": 22
+        },
+        {
+          "key": "Aircraft Components",
+          "count": 22
+        },
+        {
+          "key": "Flight Dynamics",
+          "count": 22
+        },
+        {
+          "key": "Aircraft Engines",
+          "count": 22
+        },
+        {
+          "key": "Aviation Terminology",
+          "count": 22
+        },
+        {
+          "key": "Aviation Regulations",
+          "count": 11
+        },
+        {
+          "key": "Altitude",
+          "count": 11
+        },
+        {
+          "key": "Ceiling",
+          "count": 11
+        },
+        {
+          "key": "Takeoff",
+          "count": 11
+        },
+        {
+          "key": "Maintenance",
+          "count": 11
+        },
+        {
+          "key": "Cabin pressurization",
+          "count": 11
+        },
+        {
+          "key": "Calibrated airspeed",
+          "count": 11
+        }
+      ],
+      "issues": []
+    },
+    {
+      "type": "conversational",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_glossary output docs\\afh_glossary_conversational_training_pairs.json",
+      "pairCount": 641,
+      "subjectDistributionTop": [
+        {
+          "key": "aerodynamics",
+          "count": 12
+        },
+        {
+          "key": "engine",
+          "count": 8
+        },
+        {
+          "key": "navigation",
+          "count": 7
+        },
+        {
+          "key": "engine components",
+          "count": 6
+        },
+        {
+          "key": "flight dynamics",
+          "count": 6
+        },
+        {
+          "key": "center of gravity",
+          "count": 5
+        },
+        {
+          "key": "landing",
+          "count": 5
+        },
+        {
+          "key": "turbofan engine",
+          "count": 5
+        },
+        {
+          "key": "engine operation",
+          "count": 5
+        },
+        {
+          "key": "aircraft stability",
+          "count": 5
+        },
+        {
+          "key": "takeoff",
+          "count": 5
+        },
+        {
+          "key": "adverse yaw",
+          "count": 4
+        },
+        {
+          "key": "electrical system",
+          "count": 4
+        },
+        {
+          "key": "safety",
+          "count": 4
+        },
+        {
+          "key": "gas turbine engine",
+          "count": 4
+        }
+      ],
+      "issues": [
+        {
+          "severity": "warning",
+          "code": "DUPLICATE_CONVERSATIONS",
+          "message": "Found 7 duplicated user+assistant exchanges.",
+          "target": {
+            "type": "pair-group",
+            "id": "duplicate-conversations"
+          },
+          "repairGuidance": {
+            "action": "targeted-repair",
+            "scope": "pair",
+            "instruction": "Regenerate only duplicated conversational pairs with variation constraints."
+          },
+          "context": {
+            "topDuplicates": [
+              {
+                "key": "what is a supplemental type certificate (stc)? ||| an stc authorizes an alteration to an airframe, engine, or component that has an approved type certificate.",
+                "count": 2,
+                "targets": [
+                  "AFH.GLOSSARY.19.1.z.22",
+                  "AFH.GLOSSARY.19.1.z.50"
+                ]
+              },
+              {
+                "key": "what does a starter/generator do in a turbine engine? ||| a starter/generator acts as a starter to rotate the engine and then converts to a generator after the engine is running.",
+                "count": 2,
+                "targets": [
+                  "AFH.GLOSSARY.19.1.z.23",
+                  "AFH.GLOSSARY.19.1.z.51"
+                ]
+              },
+              {
+                "key": "how is specific fuel consumption measured? ||| specific fuel consumption is measured by the number of pounds of fuel consumed in one hour to produce one horsepower.",
+                "count": 2,
+                "targets": [
+                  "AFH.GLOSSARY.19.1.z.24",
+                  "AFH.GLOSSARY.19.1.z.52"
+                ]
+              },
+              {
+                "key": "what is the function of a shaft in a turbine engine? ||| a spool is a shaft in a turbine engine that drives compressors with power derived from turbines.",
+                "count": 2,
+                "targets": [
+                  "AFH.GLOSSARY.19.1.z.25",
+                  "AFH.GLOSSARY.19.1.z.53"
+                ]
+              },
+              {
+                "key": "can you explain what a skid is in aviation? ||| a skid is when the tail of the airplane follows a path outside the path of the nose during a turn.",
+                "count": 2,
+                "targets": [
+                  "AFH.GLOSSARY.19.1.z.26",
+                  "AFH.GLOSSARY.19.1.z.54"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

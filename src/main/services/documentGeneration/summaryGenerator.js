@@ -24,6 +24,17 @@ function createSummaryGenerator({ api }) {
     return Array.isArray(words) ? words.length : 0;
   };
 
+  const normalizeProviderList = (...values) => {
+    const normalized = [];
+    values.flat().forEach((value) => {
+      const provider = `${value || ''}`.trim().toLowerCase();
+      if (provider && !normalized.includes(provider)) {
+        normalized.push(provider);
+      }
+    });
+    return normalized;
+  };
+
   const buildMetadata = ({
     chapter,
     totalSections,
@@ -32,6 +43,11 @@ function createSummaryGenerator({ api }) {
     providers,
     models,
     usage,
+    buildStatus = 'complete',
+    buildStage = 'summary',
+    completedSections = 0,
+    incompleteSections = [],
+    failureReason = '',
   }) => ({
     generatedAtUtc: new Date().toISOString(),
     chapter: Number(chapter) || 0,
@@ -43,6 +59,11 @@ function createSummaryGenerator({ api }) {
     promptTokens: Number(usage?.prompt_tokens || 0),
     completionTokens: Number(usage?.completion_tokens || 0),
     totalTokens: Number((usage?.prompt_tokens || 0) + (usage?.completion_tokens || 0)),
+    buildStatus,
+    buildStage,
+    completedSections: Number(completedSections || 0),
+    incompleteSections: Array.isArray(incompleteSections) ? incompleteSections : [],
+    failureReason: `${failureReason || ''}`.trim(),
   });
 
   const buildFallbackSummaryModel = (documentJson) => {
@@ -160,6 +181,12 @@ function createSummaryGenerator({ api }) {
     lines.push(`- Prompt Tokens: ${metadata.promptTokens || 0}`);
     lines.push(`- Completion Tokens: ${metadata.completionTokens || 0}`);
     lines.push(`- Total Tokens: ${metadata.totalTokens || 0}`);
+    lines.push(`- Build Status: ${metadata.buildStatus || 'complete'}`);
+    lines.push(`- Completed Sections: ${metadata.completedSections || 0}`);
+    lines.push(`- Incomplete Sections: ${Array.isArray(metadata.incompleteSections) ? metadata.incompleteSections.length : 0}`);
+    if (metadata.failureReason) {
+      lines.push(`- Failure Reason: ${metadata.failureReason}`);
+    }
     lines.push('');
     lines.push(buildSummaryMarkdownBody(summaryModel).trim());
 
@@ -226,6 +253,8 @@ function createSummaryGenerator({ api }) {
     const secondaryProvider = typeof options?.secondaryProvider === 'string'
       ? options.secondaryProvider.trim().toLowerCase()
       : '';
+    const workerProviders = normalizeProviderList(options?.workerProviders);
+    const providerFallbackOrder = normalizeProviderList(preferredProvider, secondaryProvider, workerProviders);
     const allowLocalFallback = Boolean(options?.allowLocalFallback);
     const generationGuidance = cleanText(options?.generationGuidance).slice(0, MAX_GUIDANCE_CHARS);
     const onLog = typeof options?.onLog === 'function' ? options.onLog : () => {};
@@ -234,10 +263,26 @@ function createSummaryGenerator({ api }) {
     const PRIMARY_TIMEOUT_MS = 30000;
     const SECONDARY_TIMEOUT_MS = 60000;
     const SWITCH_WINDOW_MS = 60000;
+    const SECTION_REBUILD_PASSES = 2;
+    const getPrimaryTimeoutMs = (provider) => {
+      const normalized = `${provider || ''}`.trim().toLowerCase();
+      if (normalized === 'anthropic') {
+        return 60000;
+      }
+      if (normalized === 'gemini') {
+        return 45000;
+      }
+      return PRIMARY_TIMEOUT_MS;
+    };
 
     const isAborted = () => Boolean(abortSignal?.aborted);
     const assertNotAborted = () => {
       if (isAborted()) {
+        throw new Error('Generation cancelled by user.');
+      }
+    };
+    const rethrowIfCancelled = (error) => {
+      if (isAborted() || /generation cancelled by user/i.test(`${error?.message || error || ''}`)) {
         throw new Error('Generation cancelled by user.');
       }
     };
@@ -255,12 +300,89 @@ function createSummaryGenerator({ api }) {
 
     let switchedToSecondaryUntil = 0;
     let primaryRecoveryPending = false;
-    let forceSecondaryForRemainder = false;
+
+    const buildSummaryModel = ({ buildStatus = 'complete', failedSection = null, failureReason = '' } = {}) => {
+      const incompleteSections = sections
+        .map((section, index) => {
+          if (index < mainConcepts.length) {
+            return null;
+          }
+          const isFailedSection = Number(failedSection?.sectionIndex) === index;
+          return {
+            sectionOrdinal: index + 1,
+            sectionId: cleanText(section?.id) || `section.${index + 1}`,
+            sectionTitle: cleanText(section?.title) || `Section ${index + 1}`,
+            status: isFailedSection ? 'failed' : 'pending',
+            attemptedProviders: isFailedSection ? (failedSection?.attemptedProviders || []) : [],
+            error: isFailedSection ? `${failedSection?.error || failureReason || 'Unknown API error.'}` : '',
+          };
+        })
+        .filter(Boolean);
+
+      const keyLearningObjectives = sections
+        .slice(0, Math.min(12, sections.length))
+        .map((section) => cleanText(section?.title))
+        .filter(Boolean)
+        .map((title) => `Understand and apply ${title.toLowerCase()} in practical training scenarios.`);
+
+      const keyTerms = sections
+        .slice(0, Math.min(12, sections.length))
+        .map((section) => cleanText(section?.title))
+        .filter(Boolean)
+        .map((term) => ({
+          term: toTitleCase(term),
+          definition: 'A primary chapter concept that supports safe execution and consistent pilot performance.',
+        }));
+
+      const totalWords = Number(documentJson?.totalWords) > 0
+        ? Number(documentJson.totalWords)
+        : sections.reduce((sum, sec) => sum + (Number(sec?.wordCount) || 0), 0);
+
+      const importantFacts = [
+        `The chapter is organized into ${totalSections} section${totalSections === 1 ? '' : 's'} and ${mainConcepts.length} section${mainConcepts.length === 1 ? '' : 's'} were summarized in this build.`,
+        totalWords > 0
+          ? `The extracted source content totals approximately ${totalWords.toLocaleString()} words.`
+          : 'The extracted source content provides full chapter coverage for review.',
+        buildStatus === 'incomplete'
+          ? 'Some sections remain incomplete and should be repaired before treating this summary as final.'
+          : 'The section summaries are intended for fast review before deeper study of each section in the source chapter.',
+      ];
+
+      const summaryModel = {
+        chapterTitle: cleanText(documentJson?.title) || fallbackModel.chapterTitle,
+        totalSections,
+        overview: `Chapter ${documentJson?.chapter || '?'} covers ${totalSections} sections, and this summary includes section-by-section coverage built directly from the document JSON.`,
+        keyLearningObjectives,
+        mainConcepts,
+        keyTerms,
+        importantFacts,
+        metadata: null,
+      };
+
+      const body = buildSummaryMarkdownBody(summaryModel);
+      summaryModel.metadata = buildMetadata({
+        chapter: documentJson?.chapter,
+        totalSections,
+        sectionsSummarized: mainConcepts.length,
+        summaryWordCount: countWords(body),
+        providers: Array.from(providers),
+        models: Array.from(models),
+        usage,
+        buildStatus,
+        buildStage: 'summary',
+        completedSections: mainConcepts.length,
+        incompleteSections,
+        failureReason: buildStatus === 'incomplete' ? `${failureReason || 'One or more sections failed across all providers.'}` : '',
+      });
+
+      return summaryModel;
+    };
 
     onProgress({
       completed: 0,
       total: totalSections,
       progressText: `0/${totalSections}`,
+      provider: '',
     });
 
     for (let index = 0; index < sections.length; index += 1) {
@@ -270,82 +392,72 @@ function createSummaryGenerator({ api }) {
 
       let apiSection = null;
       let lastError = null;
+      const attemptedProviders = [];
 
       const canUseSecondary = Boolean(secondaryProvider && secondaryProvider !== preferredProvider);
       const now = Date.now();
-      if (canUseSecondary && primaryRecoveryPending && !forceSecondaryForRemainder && now >= switchedToSecondaryUntil) {
+      if (canUseSecondary && primaryRecoveryPending && now >= switchedToSecondaryUntil) {
         log('Backup window elapsed. Retrying primary API for summary generation.', 'info');
       }
-      const preferSecondary = canUseSecondary && (forceSecondaryForRemainder || now < switchedToSecondaryUntil);
+      const preferSecondary = canUseSecondary && now < switchedToSecondaryUntil;
       const firstProvider = preferSecondary ? secondaryProvider : preferredProvider;
-      const secondProvider = canUseSecondary
-        ? (firstProvider === preferredProvider ? secondaryProvider : preferredProvider)
-        : '';
+      const providerAttempts = normalizeProviderList(
+        firstProvider,
+        providerFallbackOrder.filter((provider) => provider && provider !== firstProvider)
+      );
       const windowRemainingMs = Math.max(0, switchedToSecondaryUntil - now);
-      const routingMode = forceSecondaryForRemainder
-        ? 'secondary-locked'
-        : (preferSecondary ? 'secondary-window' : 'primary');
+      const routingMode = preferSecondary ? 'secondary-window' : 'primary';
       let resolvedProvider = '';
       let resolvedVia = 'none';
 
       log(
-        `Failover timeline [summary s${index + 1}]: start mode=${routingMode} first=${firstProvider || 'none'} alt=${secondProvider || 'none'} windowMs=${windowRemainingMs}`,
+        `Failover timeline [summary s${index + 1}]: start mode=${routingMode} first=${firstProvider || 'none'} attempts=${providerAttempts.join('>') || 'none'} windowMs=${windowRemainingMs}`,
         'info'
       );
 
-      if (firstProvider) {
-        try {
-          apiSection = await buildSectionSummaryFromApi({
-            documentJson,
-            section,
-            sectionIndex: index,
-            totalSections,
-            preferredProvider: firstProvider,
-            requestOptions: {
-              signal: abortSignal,
-              timeoutMs: firstProvider === preferredProvider ? PRIMARY_TIMEOUT_MS : SECONDARY_TIMEOUT_MS,
-              generationGuidance,
-            },
-          });
-          resolvedProvider = firstProvider;
-          resolvedVia = 'first';
-          if (firstProvider === preferredProvider) {
-            primaryRecoveryPending = false;
-          }
-        } catch (error) {
-          lastError = error;
-          if (firstProvider === preferredProvider && canUseSecondary) {
-            if (primaryRecoveryPending) {
-              forceSecondaryForRemainder = true;
-              log('Primary API failed again after recovery attempt. Remaining summary sections will use backup API.', 'warning');
-            } else {
+      for (let pass = 0; pass < SECTION_REBUILD_PASSES && !apiSection; pass += 1) {
+        if (pass > 0) {
+          log(
+            `Rebuilding summary section ${index + 1} after first-pass failures (pass ${pass + 1}/${SECTION_REBUILD_PASSES}).`,
+            'warning'
+          );
+        }
+
+        for (let attemptIndex = 0; attemptIndex < providerAttempts.length; attemptIndex += 1) {
+          const provider = providerAttempts[attemptIndex];
+          const isFirstAttempt = pass === 0 && attemptIndex === 0;
+          try {
+            apiSection = await buildSectionSummaryFromApi({
+              documentJson,
+              section,
+              sectionIndex: index,
+              totalSections,
+              preferredProvider: provider,
+              requestOptions: {
+                signal: abortSignal,
+                timeoutMs: isFirstAttempt ? getPrimaryTimeoutMs(provider) : SECONDARY_TIMEOUT_MS,
+                generationGuidance,
+              },
+            });
+            resolvedProvider = provider;
+            resolvedVia = isFirstAttempt ? 'first' : (pass === 0 ? 'alternate' : `rebuild-${pass + 1}`);
+            if (provider === preferredProvider) {
+              primaryRecoveryPending = false;
+            }
+            break;
+          } catch (error) {
+            rethrowIfCancelled(error);
+            lastError = error;
+            attemptedProviders.push({
+              provider,
+              error: `${error?.message || error || 'Unknown API error.'}`,
+            });
+            if (provider === preferredProvider && canUseSecondary) {
               switchedToSecondaryUntil = Date.now() + SWITCH_WINDOW_MS;
               primaryRecoveryPending = true;
               log('Primary API was unresponsive for 30s. Switching summary generation to backup API for 1 minute.', 'warning');
             }
           }
-        }
-      }
-
-      if (!apiSection && secondProvider) {
-        try {
-          log(`Retrying summary section ${index + 1} with alternate API (${secondProvider}).`, 'warning');
-          apiSection = await buildSectionSummaryFromApi({
-            documentJson,
-            section,
-            sectionIndex: index,
-            totalSections,
-            preferredProvider: secondProvider,
-            requestOptions: {
-              signal: abortSignal,
-              timeoutMs: SECONDARY_TIMEOUT_MS,
-              generationGuidance,
-            },
-          });
-          resolvedProvider = secondProvider;
-          resolvedVia = 'alternate';
-        } catch (error) {
-          lastError = error;
         }
       }
 
@@ -370,6 +482,7 @@ function createSummaryGenerator({ api }) {
           'info'
         );
       } else if (allowLocalFallback) {
+        assertNotAborted();
         mainConcepts.push({
           title,
           summary: summarizeSectionContent(section?.content, 260),
@@ -379,66 +492,29 @@ function createSummaryGenerator({ api }) {
         const sectionRef = cleanText(section?.id) || `${index + 1}`;
         const errorMsg = `${lastError?.message || lastError || 'Unknown API error.'}`;
         log(`Failover timeline [summary s${index + 1}]: outcome=failed error=${errorMsg}`, 'error');
-        throw new Error(`Summary generation failed for section ${sectionRef}. ${errorMsg}`);
+        return buildSummaryModel({
+          buildStatus: 'incomplete',
+          failedSection: {
+            sectionIndex: index,
+            sectionOrdinal: index + 1,
+            sectionId: sectionRef,
+            sectionTitle: title,
+            attemptedProviders,
+            error: errorMsg,
+          },
+          failureReason: `Summary generation failed for section ${sectionRef}. ${errorMsg}`,
+        });
       }
 
       onProgress({
         completed: index + 1,
         total: totalSections,
         progressText: `${index + 1}/${totalSections}`,
+        provider: resolvedProvider || '',
       });
     }
 
-    const keyLearningObjectives = sections
-      .slice(0, Math.min(12, sections.length))
-      .map((section) => cleanText(section?.title))
-      .filter(Boolean)
-      .map((title) => `Understand and apply ${title.toLowerCase()} in practical training scenarios.`);
-
-    const keyTerms = sections
-      .slice(0, Math.min(12, sections.length))
-      .map((section) => cleanText(section?.title))
-      .filter(Boolean)
-      .map((term) => ({
-        term: toTitleCase(term),
-        definition: 'A primary chapter concept that supports safe execution and consistent pilot performance.',
-      }));
-
-    const totalWords = Number(documentJson?.totalWords) > 0
-      ? Number(documentJson.totalWords)
-      : sections.reduce((sum, sec) => sum + (Number(sec?.wordCount) || 0), 0);
-
-    const importantFacts = [
-      `The chapter is organized into ${totalSections} section${totalSections === 1 ? '' : 's'} and all available sections were summarized.`,
-      totalWords > 0
-        ? `The extracted source content totals approximately ${totalWords.toLocaleString()} words.`
-        : 'The extracted source content provides full chapter coverage for review.',
-      'The section summaries are intended for fast review before deeper study of each section in the source chapter.',
-    ];
-
-    const summaryModel = {
-      chapterTitle: cleanText(documentJson?.title) || fallbackModel.chapterTitle,
-      totalSections,
-      overview: `Chapter ${documentJson?.chapter || '?'} covers ${totalSections} sections, and this summary includes section-by-section coverage built directly from the document JSON.`,
-      keyLearningObjectives,
-      mainConcepts,
-      keyTerms,
-      importantFacts,
-      metadata: null,
-    };
-
-    const body = buildSummaryMarkdownBody(summaryModel);
-    summaryModel.metadata = buildMetadata({
-      chapter: documentJson?.chapter,
-      totalSections,
-      sectionsSummarized: mainConcepts.length,
-      summaryWordCount: countWords(body),
-      providers: Array.from(providers),
-      models: Array.from(models),
-      usage,
-    });
-
-    return summaryModel;
+    return buildSummaryModel({ buildStatus: 'complete' });
   };
 
   async function buildSummary(documentJson, options = {}) {

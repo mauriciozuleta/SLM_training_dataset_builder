@@ -1,0 +1,156 @@
+{
+  "startedAtUtc": "2026-03-28T14:34:09.537Z",
+  "completedAtUtc": "2026-03-28T14:34:20.630Z",
+  "runs": 3,
+  "timeoutMs": 60000,
+  "providers": [
+    "openai",
+    "anthropic",
+    "gemini"
+  ],
+  "summary": [
+    {
+      "provider": "openai",
+      "totalRuns": 3,
+      "successCount": 3,
+      "failureCount": 0,
+      "minMs": 1133,
+      "maxMs": 1809,
+      "avgMs": 1459,
+      "p50Ms": 1435,
+      "p95Ms": 1809,
+      "lastError": ""
+    },
+    {
+      "provider": "anthropic",
+      "totalRuns": 3,
+      "successCount": 3,
+      "failureCount": 0,
+      "minMs": 844,
+      "maxMs": 1638,
+      "avgMs": 1235.3,
+      "p50Ms": 1224,
+      "p95Ms": 1638,
+      "lastError": ""
+    },
+    {
+      "provider": "gemini",
+      "totalRuns": 3,
+      "successCount": 3,
+      "failureCount": 0,
+      "minMs": 765,
+      "maxMs": 1293,
+      "avgMs": 1003,
+      "p50Ms": 951,
+      "p95Ms": 1293,
+      "lastError": ""
+    }
+  ],
+  "details": {
+    "openai": [
+      {
+        "run": 1,
+        "ok": true,
+        "elapsedMs": 1133,
+        "modelUsed": "openai",
+        "modelVersion": "gpt-4o",
+        "usage": {
+          "prompt_tokens": 51,
+          "completion_tokens": 18
+        }
+      },
+      {
+        "run": 2,
+        "ok": true,
+        "elapsedMs": 1809,
+        "modelUsed": "openai",
+        "modelVersion": "gpt-4o",
+        "usage": {
+          "prompt_tokens": 51,
+          "completion_tokens": 18
+        }
+      },
+      {
+        "run": 3,
+        "ok": true,
+        "elapsedMs": 1435,
+        "modelUsed": "openai",
+        "modelVersion": "gpt-4o",
+        "usage": {
+          "prompt_tokens": 51,
+          "completion_tokens": 18
+        }
+      }
+    ],
+    "anthropic": [
+      {
+        "run": 1,
+        "ok": true,
+        "elapsedMs": 1638,
+        "modelUsed": "anthropic",
+        "modelVersion": "claude-sonnet-4-6",
+        "usage": {
+          "prompt_tokens": 49,
+          "completion_tokens": 21
+        }
+      },
+      {
+        "run": 2,
+        "ok": true,
+        "elapsedMs": 844,
+        "modelUsed": "anthropic",
+        "modelVersion": "claude-sonnet-4-6",
+        "usage": {
+          "prompt_tokens": 49,
+          "completion_tokens": 21
+        }
+      },
+      {
+        "run": 3,
+        "ok": true,
+        "elapsedMs": 1224,
+        "modelUsed": "anthropic",
+        "modelVersion": "claude-sonnet-4-6",
+        "usage": {
+          "prompt_tokens": 49,
+          "completion_tokens": 21
+        }
+      }
+    ],
+    "gemini": [
+      {
+        "run": 1,
+        "ok": true,
+        "elapsedMs": 1293,
+        "modelUsed": "gemini",
+        "modelVersion": "gemini-2.5-flash",
+        "usage": {
+          "prompt_tokens": 0,
+          "completion_tokens": 0
+        }
+      },
+      {
+        "run": 2,
+        "ok": true,
+        "elapsedMs": 951,
+        "modelUsed": "gemini",
+        "modelVersion": "gemini-2.5-flash",
+        "usage": {
+          "prompt_tokens": 0,
+          "completion_tokens": 0
+        }
+      },
+      {
+        "run": 3,
+        "ok": true,
+        "elapsedMs": 765,
+        "modelUsed": "gemini",
+        "modelVersion": "gemini-2.5-flash",
+        "usage": {
+          "prompt_tokens": 0,
+          "completion_tokens": 0
+        }
+      }
+    ]
+  }
+}

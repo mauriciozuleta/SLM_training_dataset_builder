@@ -1,3 +1,4 @@
-[Tue 03/24/2026 14:57:35.02] Launcher started
-[Tue 03/24/2026 14:57:35.02] Launching Electron: "D:\OneDrive\0. software Lab\pair generation\node_modules\electron\dist\electron.exe" "D:\OneDrive\0. software Lab\pair generation"
-[Tue 03/24/2026 14:57:35.04] START command exit code: 0
+[Sun 03/29/2026  9:10:01.43] Launcher started
+[Sun 03/29/2026  9:10:01.43] Using forced Python: "D:\OneDrive\0. software Lab\pair generation\..\AI_FRESH24\.venv310\Scripts\python.exe"
+[Sun 03/29/2026  9:10:01.44] Launching Electron: "D:\OneDrive\0. software Lab\pair generation\node_modules\electron\dist\electron.exe" "D:\OneDrive\0. software Lab\pair generation"
+[Sun 03/29/2026  9:10:01.45] START command exit code: 0

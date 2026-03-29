@@ -2,15 +2,26 @@ const card = document.querySelector('[data-file-card]');
 const requiredCards = document.querySelectorAll('[data-file-card][data-required="true"]');
 const generateButton = document.getElementById('generateButton');
 const cancelButton = document.getElementById('cancelButton');
+const repairButton = document.getElementById('repairButton');
+const exportButton = document.getElementById('exportButton');
 const generateHint = document.getElementById('generateHint');
+const repairHint = document.getElementById('repairHint');
+const exportHint = document.getElementById('exportHint');
+const sharedOutputSubtitle = document.getElementById('sharedOutputSubtitle');
 const logWindow = document.getElementById('logWindow');
 const clearLogButton = document.getElementById('clearLogButton');
+const modeButtons = document.querySelectorAll('[data-mode-trigger]');
+const modePanels = document.querySelectorAll('[data-mode-panel]');
 
 const outputFolderInput = document.getElementById('outputFolder');
 const outputFolderButton = document.querySelector('[data-select-folder="outputFolder"]');
 const outputPrefixInput = document.getElementById('outputPrefix');
+const commonPrefixCell = document.querySelector('[data-common-prefix-cell]');
+const exportSourceFolderInput = document.getElementById('exportSourceFolder');
+const exportSourceFolderButton = document.getElementById('exportSourceFolderButton');
 const pdfDropTextEl = document.getElementById('pdfDropText');
 const legacyCard = document.querySelector('[data-legacy-card]');
+const repairCards = document.querySelectorAll('[data-repair-card]');
 const defaultPdfDropText = 'Drop the source PDF document to extract the structured chapter JSON.';
 
 const checkboxIds = {
@@ -29,8 +40,22 @@ const questionReadyBadge = document.getElementById('questionReadyBadge');
 const deterministicPairsReadyBadge = document.getElementById('deterministicPairsReadyBadge');
 const conversationalPairsReadyBadge = document.getElementById('conversationalPairsReadyBadge');
 const documentOutputCard = document.querySelector('[data-document-card]');
+const repairStatusCard = document.querySelector('[data-repair-status-card]');
 const openAiStatusButton = document.getElementById('openAiStatusButton');
+const anthropicStatusButton = document.getElementById('anthropicStatusButton');
 const geminiStatusButton = document.getElementById('geminiStatusButton');
+const summaryProviderIndicators = document.getElementById('summaryProviderIndicators');
+const questionsProviderIndicators = document.getElementById('questionsProviderIndicators');
+const conversationalProviderIndicators = document.getElementById('conversationalProviderIndicators');
+const repairQuestionsBadge = document.getElementById('repairQuestionsBadge');
+const repairConversationalBadge = document.getElementById('repairConversationalBadge');
+const repairQuestionsProviderIndicators = document.getElementById('repairQuestionsProviderIndicators');
+const repairConversationalProviderIndicators = document.getElementById('repairConversationalProviderIndicators');
+const repairSourceFileName = document.getElementById('repairSourceFileName');
+const repairTargetFileName = document.getElementById('repairTargetFileName');
+const repairAnalysis = document.getElementById('repairAnalysis');
+const repairAnalysisSummary = document.getElementById('repairAnalysisSummary');
+const repairAnalysisDetails = document.getElementById('repairAnalysisDetails');
 
 const qualityResultsModal = document.getElementById('qualityResultsModal');
 const qualityRatingDisplay = document.getElementById('qualityRatingDisplay');
@@ -49,8 +74,35 @@ const outputBadgesByKey = {
   conversationalPairs: conversationalPairsReadyBadge,
 };
 
+const outputProviderIndicatorsByKey = {
+  summary: summaryProviderIndicators,
+  questions: questionsProviderIndicators,
+  conversationalPairs: conversationalProviderIndicators,
+};
+
+const repairBadgesByKey = {
+  questions: repairQuestionsBadge,
+  conversationalPairs: repairConversationalBadge,
+};
+
+const repairProviderIndicatorsByKey = {
+  questions: repairQuestionsProviderIndicators,
+  conversationalPairs: repairConversationalProviderIndicators,
+};
+
+const outputProviderState = {
+  summary: { seen: new Set(), active: '' },
+  questions: { seen: new Set(), active: '' },
+  conversationalPairs: { seen: new Set(), active: '' },
+};
+
+const repairProviderState = {
+  questions: { seen: new Set(), active: '' },
+  conversationalPairs: { seen: new Set(), active: '' },
+};
+
 const cardRegistry = new Map();
-const selectedFiles = { originalPdf: null, legacyFile: null };
+const selectedFiles = { originalPdf: null, legacyFile: null, sourceDocumentJson: null, repairArtifactJson: null };
 let lastLoadedPdfName = '';
 let lastUsedOutputFolder = '';
 let lastUsedOutputPrefix = '';
@@ -59,6 +111,12 @@ let apiProviderCount = 0;
 let apiProviders = [];
 let generationInProgress = false;
 let generationCancelRequested = false;
+let repairInProgress = false;
+let exportInProgress = false;
+let currentTaskMode = '';
+let repairInspection = null;
+let repairInspectionLoading = false;
+let repairInspectionRequestId = 0;
 let clearPrimaryPdf = async () => {};
 
 const getTimeStamp = () => new Date().toLocaleTimeString([], { hour12: false });
@@ -272,6 +330,144 @@ const setConversionStatus = (message, percent = 0, state = 'idle') => {
   void percent;
 };
 
+const getProviderShortName = (provider) => {
+  const normalized = `${provider || ''}`.trim().toLowerCase();
+  if (normalized === 'openai') {
+    return 'O';
+  }
+  if (normalized === 'gemini') {
+    return 'G';
+  }
+  if (normalized === 'anthropic') {
+    return 'C';
+  }
+  return normalized.slice(0, 1).toUpperCase() || '?';
+};
+
+const renderOutputProviderIndicators = (key) => {
+  const container = outputProviderIndicatorsByKey[key];
+  const state = outputProviderState[key];
+  if (!container || !state) {
+    return;
+  }
+
+  const providers = Array.from(state.seen);
+  if (providers.length === 0) {
+    container.hidden = true;
+    container.setAttribute('aria-hidden', 'true');
+    container.innerHTML = '';
+    return;
+  }
+
+  container.hidden = false;
+  container.setAttribute('aria-hidden', 'false');
+  container.innerHTML = '';
+
+  providers.forEach((provider) => {
+    const icon = document.createElement('span');
+    icon.className = 'provider-mini-icon';
+    icon.dataset.provider = provider;
+    icon.dataset.active = provider === state.active ? 'true' : 'false';
+    icon.textContent = getProviderShortName(provider);
+    icon.title = provider;
+    container.appendChild(icon);
+  });
+};
+
+const renderRepairProviderIndicators = (key) => {
+  const container = repairProviderIndicatorsByKey[key];
+  const state = repairProviderState[key];
+  if (!container || !state) {
+    return;
+  }
+
+  const providers = Array.from(state.seen);
+  if (providers.length === 0) {
+    container.hidden = true;
+    container.setAttribute('aria-hidden', 'true');
+    container.innerHTML = '';
+    return;
+  }
+
+  container.hidden = false;
+  container.setAttribute('aria-hidden', 'false');
+  container.innerHTML = '';
+
+  providers.forEach((provider) => {
+    const icon = document.createElement('span');
+    icon.className = 'provider-mini-icon';
+    icon.dataset.provider = provider;
+    icon.dataset.active = provider === state.active ? 'true' : 'false';
+    icon.textContent = getProviderShortName(provider);
+    icon.title = provider;
+    container.appendChild(icon);
+  });
+};
+
+const updateOutputProviderIndicators = (key, progressUpdate = {}) => {
+  const state = outputProviderState[key];
+  if (!state) {
+    return;
+  }
+
+  const singleProvider = `${progressUpdate?.provider || ''}`.trim().toLowerCase();
+  if (singleProvider) {
+    state.seen.add(singleProvider);
+    state.active = singleProvider;
+  }
+
+  if (Array.isArray(progressUpdate?.providers)) {
+    progressUpdate.providers
+      .map((entry) => `${entry || ''}`.trim().toLowerCase())
+      .filter(Boolean)
+      .forEach((provider) => state.seen.add(provider));
+  }
+
+  renderOutputProviderIndicators(key);
+};
+
+const updateRepairProviderIndicators = (key, progressUpdate = {}) => {
+  const state = repairProviderState[key];
+  if (!state) {
+    return;
+  }
+
+  const singleProvider = `${progressUpdate?.provider || ''}`.trim().toLowerCase();
+  if (singleProvider) {
+    state.seen.add(singleProvider);
+    state.active = singleProvider;
+  }
+
+  if (Array.isArray(progressUpdate?.providers)) {
+    progressUpdate.providers
+      .map((entry) => `${entry || ''}`.trim().toLowerCase())
+      .filter(Boolean)
+      .forEach((provider) => state.seen.add(provider));
+  }
+
+  renderRepairProviderIndicators(key);
+};
+
+const clearOutputProviderIndicators = (key) => {
+  const state = outputProviderState[key];
+  if (!state) {
+    return;
+  }
+  state.seen.clear();
+  state.active = '';
+  renderOutputProviderIndicators(key);
+};
+
+const clearRepairProviderIndicators = (key) => {
+  const state = repairProviderState[key];
+  if (!state) {
+    return;
+  }
+  state.seen.clear();
+  state.active = '';
+  renderRepairProviderIndicators(key);
+};
+
 const setOutputBuildState = (key, state = 'idle', progressText = '') => {
   const badge = outputBadgesByKey[key];
   if (!badge) {
@@ -285,6 +481,7 @@ const setOutputBuildState = (key, state = 'idle', progressText = '') => {
     delete badge.dataset.hasText;
     badge.title = '';
     badge.textContent = '';
+    clearOutputProviderIndicators(key);
     return;
   }
 
@@ -296,12 +493,31 @@ const setOutputBuildState = (key, state = 'idle', progressText = '') => {
     badge.dataset.hasText = 'false';
     badge.title = '';
     badge.textContent = '✓';
+    clearOutputProviderIndicators(key);
     return;
   }
   if (state === 'error') {
     badge.dataset.hasText = 'false';
     badge.title = '';
     badge.textContent = '!';
+    clearOutputProviderIndicators(key);
+    return;
+  }
+
+  if (state === 'incomplete') {
+    const label = `${progressText || 'PARTIAL'}`.trim() || 'PARTIAL';
+    badge.dataset.hasText = 'true';
+    badge.title = label;
+    badge.textContent = label;
+    return;
+  }
+
+  if (state === 'skipped') {
+    const label = `${progressText || 'SKIP'}`.trim() || 'SKIP';
+    badge.dataset.hasText = 'true';
+    badge.title = label;
+    badge.textContent = label;
+    clearOutputProviderIndicators(key);
     return;
   }
 
@@ -309,6 +525,108 @@ const setOutputBuildState = (key, state = 'idle', progressText = '') => {
   badge.dataset.hasText = safeProgressText ? 'true' : 'false';
   badge.title = safeProgressText;
   badge.textContent = safeProgressText;
+};
+
+const setRepairBuildState = (key, state = 'idle', progressText = '') => {
+  const badge = repairBadgesByKey[key];
+  if (!badge) {
+    return;
+  }
+
+  if (repairStatusCard) {
+    repairStatusCard.dataset.state = state === 'idle'
+      ? 'idle'
+      : (state === 'error' || state === 'incomplete' ? 'error' : (state === 'success' ? 'success' : 'running'));
+  }
+
+  if (state === 'idle') {
+    badge.hidden = true;
+    badge.setAttribute('aria-hidden', 'true');
+    delete badge.dataset.state;
+    delete badge.dataset.hasText;
+    badge.title = '';
+    badge.textContent = '';
+    clearRepairProviderIndicators(key);
+    return;
+  }
+
+  badge.hidden = false;
+  badge.setAttribute('aria-hidden', 'false');
+  badge.dataset.state = state;
+
+  if (state === 'success') {
+    badge.dataset.hasText = 'false';
+    badge.title = '';
+    badge.textContent = '✓';
+    clearRepairProviderIndicators(key);
+    return;
+  }
+  if (state === 'error') {
+    badge.dataset.hasText = 'false';
+    badge.title = '';
+    badge.textContent = '!';
+    clearRepairProviderIndicators(key);
+    return;
+  }
+  if (state === 'incomplete') {
+    const label = `${progressText || 'PARTIAL'}`.trim() || 'PARTIAL';
+    badge.dataset.hasText = 'true';
+    badge.title = label;
+    badge.textContent = label;
+    return;
+  }
+  if (state === 'skipped') {
+    const label = `${progressText || 'SKIP'}`.trim() || 'SKIP';
+    badge.dataset.hasText = 'true';
+    badge.title = label;
+    badge.textContent = label;
+    clearRepairProviderIndicators(key);
+    return;
+  }
+
+  const safeProgressText = `${progressText || ''}`.trim();
+  badge.dataset.hasText = safeProgressText ? 'true' : 'false';
+  badge.title = safeProgressText;
+  badge.textContent = safeProgressText;
+};
+
+const applyRepairProgressUpdate = (update = {}) => {
+  const key = `${update?.key || ''}`.trim();
+  const state = `${update?.state || ''}`.trim().toLowerCase();
+  if (!key || !repairBadgesByKey[key]) {
+    return;
+  }
+
+  if (state === 'running') {
+    const progressText = `${update?.progressText || ''}`.trim();
+    setRepairBuildState(key, 'running', progressText);
+    updateRepairProviderIndicators(key, update);
+    return;
+  }
+  if (state === 'completed') {
+    setRepairBuildState(key, 'success');
+    return;
+  }
+  if (state === 'incomplete') {
+    setRepairBuildState(key, 'incomplete', 'PARTIAL');
+    return;
+  }
+  if (state === 'skipped') {
+    setRepairBuildState(key, 'skipped', 'SKIP');
+    return;
+  }
+  if (state === 'error') {
+    setRepairBuildState(key, 'error');
+  }
+};
+
+const resetRepairOutputState = () => {
+  setRepairBuildState('questions', 'idle');
+  setRepairBuildState('conversationalPairs', 'idle');
+  if (repairStatusCard) {
+    repairStatusCard.dataset.state = 'idle';
+  }
+  refreshRepairFileSummary();
 };
 
 const setOutputReadyState = (key, isReady) => {
@@ -374,12 +692,13 @@ const applyApiOutputAvailability = async (status = {}) => {
 
   const checks = status?.checks && typeof status.checks === 'object' ? status.checks : {};
   setProviderState(openAiStatusButton, 'OpenAI', checks.openai || { configured: configuredProviders.includes('openai'), verified: false, error: 'unreachable' });
+  setProviderState(anthropicStatusButton, 'Claude', checks.anthropic || { configured: configuredProviders.includes('anthropic'), verified: false, error: 'unreachable' });
   setProviderState(geminiStatusButton, 'Gemini', checks.gemini || { configured: configuredProviders.includes('gemini'), verified: false, error: 'unreachable' });
 
   if (!configuredProviders.length) {
     addLog('API unavailable. Configure OpenAI and/or Gemini keys in .env, then restart the app.', 'error');
   } else {
-    const details = ['openai', 'gemini']
+    const details = ['openai', 'anthropic', 'gemini']
       .filter((provider) => checks[provider]?.configured)
       .map((provider) => {
         const check = checks[provider];
@@ -435,7 +754,7 @@ const applyApiOutputAvailability = async (status = {}) => {
 };
 
 const refreshApiAvailability = async () => {
-  [openAiStatusButton, geminiStatusButton].forEach((button) => {
+  [openAiStatusButton, anthropicStatusButton, geminiStatusButton].forEach((button) => {
     if (!button) {
       return;
     }
@@ -527,6 +846,242 @@ const getBaseName = (fullPath) => {
   return parts[parts.length - 1] || fullPath;
 };
 
+const isJsonFileName = (fileName) => `${fileName || ''}`.trim().toLowerCase().endsWith('.json');
+
+const parseDroppedPath = (rawValue) => {
+  const value = `${rawValue || ''}`.trim();
+  if (!value) {
+    return '';
+  }
+
+  const firstLine = value.split(/\r?\n/).map((entry) => entry.trim()).find(Boolean) || '';
+  if (!firstLine) {
+    return '';
+  }
+
+  if (/^file:\/\//i.test(firstLine)) {
+    try {
+      const url = new URL(firstLine);
+      return decodeURIComponent(url.pathname || '').replace(/^\/+([A-Za-z]:)/, '$1');
+    } catch (_) {
+      return firstLine.replace(/^file:\/\//i, '').replace(/^\/+([A-Za-z]:)/, '$1');
+    }
+  }
+
+  return firstLine;
+};
+
+const inferRepairArtifactTypeFromName = (fileName) => {
+  const lowerName = `${fileName || ''}`.trim().toLowerCase();
+  if (!lowerName) {
+    return '';
+  }
+  if (lowerName.includes('conversational') || lowerName.includes('conversation')) {
+    return 'conversationalPairs';
+  }
+  if (lowerName.includes('question')) {
+    return 'questions';
+  }
+  return '';
+};
+
+const formatRepairSectionList = (sections = [], maxItems = 5) => {
+  const list = (Array.isArray(sections) ? sections : [])
+    .map((entry) => `${entry?.sectionId || ''}`.trim())
+    .filter(Boolean);
+  if (!list.length) {
+    return '';
+  }
+  if (list.length <= maxItems) {
+    return list.join(', ');
+  }
+  return `${list.slice(0, maxItems).join(', ')}, +${list.length - maxItems} more`;
+};
+
+const renderRepairAnalysis = () => {
+  if (!repairAnalysis || !repairAnalysisSummary || !repairAnalysisDetails) {
+    return;
+  }
+
+  if (repairInspectionLoading) {
+    repairAnalysis.hidden = false;
+    repairAnalysisSummary.textContent = 'Reading incomplete metadata from selected repair artifact...';
+    repairAnalysisDetails.textContent = '';
+    return;
+  }
+
+  const hasSource = Boolean(selectedFiles.sourceDocumentJson?.path);
+  const hasTarget = Boolean(selectedFiles.repairArtifactJson?.path);
+  if (!hasSource || !hasTarget || !repairInspection) {
+    repairAnalysis.hidden = true;
+    repairAnalysisSummary.textContent = '';
+    repairAnalysisDetails.textContent = '';
+    return;
+  }
+
+  repairAnalysis.hidden = false;
+
+  if (!repairInspection.success) {
+    repairAnalysisSummary.textContent = 'Metadata check failed for selected repair artifact.';
+    repairAnalysisDetails.textContent = `${repairInspection.message || 'Unable to determine required fixes.'}`.trim();
+    return;
+  }
+
+  const artifactLabel = repairInspection.artifactType === 'conversationalPairs'
+    ? 'conversational pairs'
+    : 'question bank';
+  const incompleteCount = Number(repairInspection.incompleteSectionCount || 0);
+  const sectionSummary = formatRepairSectionList(repairInspection.incompleteSections);
+  const failureReason = `${repairInspection.failureReason || ''}`.trim();
+  const missingFromSource = Array.isArray(repairInspection.missingFromSource)
+    ? repairInspection.missingFromSource
+    : [];
+
+  if (incompleteCount <= 0) {
+    repairAnalysisSummary.textContent = `Selected ${artifactLabel} artifact does not report incomplete sections.`;
+    repairAnalysisDetails.textContent = 'No repair is required according to metadata.';
+    return;
+  }
+
+  repairAnalysisSummary.textContent = `Required fixes detected: ${incompleteCount} incomplete section(s) in ${artifactLabel} metadata.`;
+
+  const detailParts = [];
+  if (sectionSummary) {
+    detailParts.push(`Sections: ${sectionSummary}`);
+  }
+  if (failureReason) {
+    detailParts.push(`Reason: ${failureReason}`);
+  }
+  if (missingFromSource.length > 0) {
+    detailParts.push(`Missing in source JSON: ${missingFromSource.join(', ')}`);
+  }
+
+  repairAnalysisDetails.textContent = detailParts.join(' | ');
+};
+
+const refreshRepairFileSummary = () => {
+  const sourceName = selectedFiles.sourceDocumentJson?.name || 'No source document selected';
+  const targetName = selectedFiles.repairArtifactJson?.name || 'No partial artifact selected';
+
+  if (repairSourceFileName) {
+    repairSourceFileName.textContent = sourceName;
+    repairSourceFileName.title = sourceName;
+  }
+
+  if (repairTargetFileName) {
+    repairTargetFileName.textContent = targetName;
+    repairTargetFileName.title = targetName;
+  }
+
+  renderRepairAnalysis();
+};
+
+const inspectSelectedRepairArtifact = async () => {
+  const sourceDocumentPath = selectedFiles.sourceDocumentJson?.path;
+  const repairArtifactPath = selectedFiles.repairArtifactJson?.path;
+  const hasBothFiles = Boolean(sourceDocumentPath && repairArtifactPath);
+
+  if (!hasBothFiles) {
+    repairInspection = null;
+    repairInspectionLoading = false;
+    refreshRepairFileSummary();
+    refreshRepairState();
+    return;
+  }
+
+  if (!window.desktopApp?.inspectRepairArtifact) {
+    repairInspection = {
+      success: false,
+      message: 'Repair metadata preflight is unavailable in this app build.',
+    };
+    repairInspectionLoading = false;
+    refreshRepairFileSummary();
+    refreshRepairState();
+    return;
+  }
+
+  repairInspectionRequestId += 1;
+  const requestId = repairInspectionRequestId;
+  repairInspectionLoading = true;
+  repairInspection = null;
+  refreshRepairFileSummary();
+  refreshRepairState();
+
+  try {
+    const inspection = await window.desktopApp.inspectRepairArtifact({
+      sourceDocumentPath,
+      repairArtifactPath,
+    });
+    if (requestId !== repairInspectionRequestId) {
+      return;
+    }
+    repairInspection = {
+      success: true,
+      ...inspection,
+    };
+    const artifactLabel = inspection?.artifactType === 'conversationalPairs' ? 'conversational pairs' : 'question bank';
+    addLog(
+      `Repair metadata loaded: ${artifactLabel}, incomplete sections ${Number(inspection?.incompleteSectionCount || 0)}.`,
+      'info'
+    );
+  } catch (error) {
+    if (requestId !== repairInspectionRequestId) {
+      return;
+    }
+    repairInspection = {
+      success: false,
+      message: `${error?.message || 'Unable to inspect repair metadata.'}`.trim(),
+    };
+    addLog(`Repair metadata check failed: ${repairInspection.message}`, 'error');
+  } finally {
+    if (requestId !== repairInspectionRequestId) {
+      return;
+    }
+    repairInspectionLoading = false;
+    refreshRepairFileSummary();
+    refreshRepairState();
+  }
+};
+
+const getDroppedFileFromEvent = (event) => {
+  const transfer = event?.dataTransfer;
+  if (!transfer) {
+    return null;
+  }
+
+  if (transfer.files && transfer.files.length > 0) {
+    return transfer.files[0];
+  }
+
+  if (transfer.items && transfer.items.length > 0) {
+    for (const item of transfer.items) {
+      if (item?.kind === 'file') {
+        const candidate = item.getAsFile?.();
+        if (candidate) {
+          return candidate;
+        }
+      }
+    }
+  }
+
+  const droppedPath = parseDroppedPath(
+    transfer.getData?.('text/uri-list')
+      || transfer.getData?.('text/plain')
+      || transfer.getData?.('DownloadURL')
+  );
+
+  if (droppedPath) {
+    return {
+      name: getBaseName(droppedPath),
+      path: droppedPath,
+      size: 0,
+      type: 'application/json',
+    };
+  }
+
+  return null;
+};
+
 const setPdfDropText = (text, isLoaded = false) => {
   if (!pdfDropTextEl) {
     return;
@@ -605,12 +1160,145 @@ const getDestinationsReady = () =>
 
 const hasSelectedOutput = () => Object.values(getSelectedOutputs()).some(Boolean);
 
+const refreshTaskModeState = () => {
+  modeButtons.forEach((button) => {
+    const buttonMode = `${button?.dataset?.modeTrigger || ''}`.trim();
+    button.setAttribute('aria-pressed', currentTaskMode === buttonMode ? 'true' : 'false');
+    button.disabled = generationInProgress || repairInProgress || exportInProgress;
+  });
+
+  modePanels.forEach((panel) => {
+    const panelMode = `${panel?.dataset?.modePanel || ''}`.trim();
+    panel.hidden = currentTaskMode !== panelMode;
+  });
+
+  if (sharedOutputSubtitle) {
+    const subtitles = {
+      generate: 'Generate mode: choose destination folder and output prefix used for the next dataset run.',
+      repair: 'Repair mode: output prefix is ignored. The repaired file keeps its original filename and is overwritten in place.',
+      export: 'Export mode: output prefix is ignored. Export creates a folder named <selected-folder>_training_files.',
+      default: 'Shared for all tasks: choose a destination folder and output prefix/file name base.',
+    };
+    sharedOutputSubtitle.textContent = subtitles[currentTaskMode] || subtitles.default;
+  }
+
+  const isGenerateMode = currentTaskMode === 'generate' || currentTaskMode === '';
+  if (commonPrefixCell) {
+    commonPrefixCell.hidden = !isGenerateMode;
+  }
+  if (outputPrefixInput) {
+    outputPrefixInput.disabled = !isGenerateMode;
+  }
+};
+
+const setTaskMode = (mode) => {
+  const normalized = `${mode || ''}`.trim().toLowerCase();
+  if (!['generate', 'repair', 'export'].includes(normalized)) {
+    currentTaskMode = '';
+  } else {
+    currentTaskMode = normalized;
+  }
+  refreshTaskModeState();
+};
+
+const refreshExportState = () => {
+  if (!exportButton || !exportHint) {
+    return;
+  }
+
+  const hasExportFolder = Boolean(exportSourceFolderInput?.value && exportSourceFolderInput.value !== 'No folder selected');
+  const ready = !generationInProgress && !repairInProgress && !exportInProgress && hasExportFolder;
+  exportButton.disabled = !ready;
+  exportButton.textContent = exportInProgress ? 'Exporting...' : 'Export Training Files';
+
+  if (exportInProgress) {
+    exportHint.textContent = 'Export in progress. Please wait.';
+    return;
+  }
+
+  if (!hasExportFolder) {
+    exportHint.textContent = 'Select a root folder that contains generated output folders.';
+    return;
+  }
+
+  const folderName = getBaseName(`${exportSourceFolderInput?.value || ''}`.replace(/[\\/]+$/g, '')) || 'selected_folder';
+  exportHint.textContent = `Ready to scan recursively and create ${folderName}_training_files with only questions and conversational files.`;
+};
+
+const refreshRepairState = () => {
+  if (!repairButton || !repairHint) {
+    return;
+  }
+
+  const hasSourceDocument = Boolean(selectedFiles.sourceDocumentJson?.path);
+  const hasRepairArtifact = Boolean(selectedFiles.repairArtifactJson?.path);
+  const inspectedReady = Boolean(
+    repairInspection
+    && repairInspection.success
+    && repairInspection.canRepair
+    && Number(repairInspection.incompleteSectionCount || 0) > 0
+  );
+  const ready = !generationInProgress
+    && !repairInProgress
+    && !exportInProgress
+    && !repairInspectionLoading
+    && apiAvailable
+    && hasSourceDocument
+    && hasRepairArtifact
+    && inspectedReady;
+  repairButton.disabled = !ready;
+  repairButton.textContent = repairInProgress ? 'Repairing...' : 'Repair Partial Artifact';
+
+  if (repairInProgress) {
+    repairHint.textContent = 'Repair in progress. Please wait.';
+    return;
+  }
+
+  if (!apiAvailable) {
+    repairHint.textContent = 'API is required before repair can start.';
+    return;
+  }
+
+  if (!hasSourceDocument || !hasRepairArtifact) {
+    repairHint.textContent = 'Select the source document JSON and a partial questions or conversational pairs JSON.';
+    return;
+  }
+
+  if (repairInspectionLoading) {
+    repairHint.textContent = 'Reading repair metadata and required fixes...';
+    return;
+  }
+
+  if (repairInspection && !repairInspection.success) {
+    repairHint.textContent = `Repair metadata check failed: ${repairInspection.message || 'Unsupported or invalid metadata.'}`;
+    return;
+  }
+
+  if (repairInspection && !repairInspection.canRepair) {
+    const missingCount = Array.isArray(repairInspection.missingFromSource)
+      ? repairInspection.missingFromSource.length
+      : 0;
+    if (missingCount > 0) {
+      repairHint.textContent = `Repair blocked: ${missingCount} incomplete section(s) from metadata are missing in the selected source document JSON.`;
+      return;
+    }
+    repairHint.textContent = 'No incomplete sections found in metadata. This artifact does not require repair.';
+    return;
+  }
+
+  const detectedType = repairInspection?.artifactType || inferRepairArtifactTypeFromName(selectedFiles.repairArtifactJson?.name || '');
+  repairHint.textContent = detectedType === 'conversationalPairs'
+    ? 'Ready to resume incomplete conversational sections and overwrite the selected partial artifact.'
+    : 'Ready to resume incomplete question sections and overwrite the selected partial artifact.';
+};
+
 const refreshGenerateState = () => {
   if (!generateButton || !generateHint) {
     return;
   }
 
-  const ready = !generationInProgress && getRequiredUploadsReady() && getDestinationsReady() && hasSelectedOutput();
+  const appBusy = generationInProgress || repairInProgress || exportInProgress;
+  const ready = !appBusy && getRequiredUploadsReady() && getDestinationsReady() && hasSelectedOutput();
   generateButton.disabled = !ready;
   generateButton.textContent = generationInProgress ? 'Generating...' : 'Generate';
   if (cancelButton) {
@@ -620,6 +1308,23 @@ const refreshGenerateState = () => {
 
   if (generationInProgress) {
     generateHint.textContent = 'Generation in progress. Please wait.';
+    refreshRepairState();
+    return;
+  }
+
+  if (repairInProgress) {
+    generateHint.textContent = 'Repair in progress. Please wait.';
+    refreshRepairState();
+    refreshExportState();
+    refreshTaskModeState();
+    return;
+  }
+
+  if (exportInProgress) {
+    generateHint.textContent = 'Export in progress. Please wait.';
+    refreshRepairState();
+    refreshExportState();
+    refreshTaskModeState();
     return;
   }
 
@@ -627,17 +1332,25 @@ const refreshGenerateState = () => {
     generateHint.textContent = ready
       ? 'API is required before generation can start.'
       : 'Set API credentials, then select PDF/output options.';
+    refreshRepairState();
+    refreshExportState();
+    refreshTaskModeState();
     return;
   }
 
   generateHint.textContent = ready
     ? 'Ready to process PDF and generate selected outputs.'
     : 'Select the PDF, output folder, and at least one output type.';
+  refreshRepairState();
+  refreshExportState();
+  refreshTaskModeState();
 };
 
 const collectSettings = () => ({
   outputFolder: outputFolderInput?.value || '',
   outputPrefix: outputPrefixInput?.value || '',
+  exportSourceFolder: exportSourceFolderInput?.value || '',
+  currentTaskMode,
   selectedOutputs: getSelectedOutputs(),
   lastLoadedPdfName,
   lastUsed: {
@@ -670,6 +1383,10 @@ const applySettings = (settings) => {
     outputPrefixInput.value = settings.outputPrefix;
   }
 
+  if (exportSourceFolderInput && typeof settings.exportSourceFolder === 'string' && settings.exportSourceFolder.trim() !== '') {
+    exportSourceFolderInput.value = settings.exportSourceFolder;
+  }
+
   if (typeof settings.lastLoadedPdfName === 'string') {
     lastLoadedPdfName = settings.lastLoadedPdfName;
   }
@@ -700,7 +1417,17 @@ const applySettings = (settings) => {
     });
   }
 
+  if (typeof settings.currentTaskMode === 'string') {
+    currentTaskMode = settings.currentTaskMode.trim().toLowerCase();
+  }
+
   enforceOutputDependencies();
+
+  if (!['generate', 'repair', 'export'].includes(currentTaskMode)) {
+    currentTaskMode = '';
+  }
+
+  refreshTaskModeState();
 
 };
 
@@ -970,6 +1697,163 @@ if (legacyCard) {
   });
 }
 
+const repairCardDialogTitles = {
+  sourceDocumentJson: 'Select Source Document JSON',
+  repairArtifactJson: 'Select Partial Artifact JSON',
+};
+
+repairCards.forEach((repairCard) => {
+  const key = `${repairCard.dataset.repairCard || ''}`.trim();
+  if (!key) {
+    return;
+  }
+
+  const dropZone = repairCard.querySelector('.drop-zone');
+  const uploadButton = repairCard.querySelector('.upload-button');
+  const fileInput = repairCard.querySelector('.repair-file-input');
+  const fileName = repairCard.querySelector('.file-name');
+  const clearCardButton = repairCard.querySelector('.clear-card-button');
+
+  cardRegistry.set(key, {
+    card: repairCard,
+    fileName,
+  });
+
+  const clearRepairFile = async () => {
+    updateCardDisplay(key, 'No file selected', { selected: false, invalid: false });
+    if (fileInput) {
+      fileInput.value = '';
+    }
+    selectedFiles[key] = null;
+    repairInspection = null;
+    repairInspectionLoading = false;
+    refreshRepairFileSummary();
+    addLog(`${key === 'sourceDocumentJson' ? 'Source document JSON' : 'Partial artifact JSON'} cleared.`, 'info');
+    await inspectSelectedRepairArtifact();
+    refreshRepairState();
+  };
+
+  const setRepairFile = async (file) => {
+    if (!file) {
+      return;
+    }
+
+    let resolvedPath = file.path || null;
+    if (!resolvedPath && window.desktopApp?.getPathForFile) {
+      try { resolvedPath = window.desktopApp.getPathForFile(file) || null; } catch (_) {}
+    }
+
+    const resolvedName = `${file.name || getBaseName(resolvedPath) || ''}`.trim();
+
+    if (!isJsonFileName(resolvedName)) {
+      updateCardDisplay(key, `${resolvedName || 'Unknown file'} (invalid type)`, { selected: false, invalid: true });
+      selectedFiles[key] = null;
+      repairInspection = null;
+      repairInspectionLoading = false;
+      refreshRepairFileSummary();
+      addLog('Only JSON files are supported in the repair panel.', 'error');
+      refreshRepairState();
+      return;
+    }
+
+    updateCardDisplay(key, resolvedName, { selected: true, invalid: false });
+    selectedFiles[key] = {
+      name: resolvedName,
+      size: file.size,
+      type: file.type,
+      path: resolvedPath,
+    };
+    repairInspection = null;
+    refreshRepairFileSummary();
+    addLog(`${key === 'sourceDocumentJson' ? 'Source document JSON' : 'Partial artifact JSON'} selected: ${resolvedName}`, 'info');
+    await inspectSelectedRepairArtifact();
+    refreshRepairState();
+  };
+
+  clearCardButton?.addEventListener('click', (event) => {
+    event.stopPropagation();
+    void clearRepairFile();
+  });
+
+  uploadButton?.addEventListener('click', async () => {
+    if (selectedFiles[key]) {
+      void clearRepairFile();
+      return;
+    }
+
+    if (window.desktopApp?.openJsonDialog) {
+      const filePath = await window.desktopApp.openJsonDialog({ title: repairCardDialogTitles[key] || 'Select JSON File' });
+      if (filePath) {
+        void setRepairFile({ name: getBaseName(filePath), path: filePath, size: 0, type: 'application/json' });
+      }
+      return;
+    }
+
+    fileInput?.click();
+  });
+
+  fileInput?.addEventListener('change', (event) => {
+    const [file] = event.target.files;
+    if (!file) {
+      return;
+    }
+    void setRepairFile(file);
+  });
+
+  const onRepairDragOver = (event) => {
+    event.preventDefault();
+    repairCard.dataset.dragging = 'true';
+  };
+
+  const onRepairDrop = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    delete repairCard.dataset.dragging;
+    const file = getDroppedFileFromEvent(event);
+    if (file) {
+      void setRepairFile(file);
+    }
+  };
+
+  dropZone?.addEventListener('dragenter', onRepairDragOver);
+  dropZone?.addEventListener('dragover', onRepairDragOver);
+  repairCard.addEventListener('dragenter', onRepairDragOver);
+  repairCard.addEventListener('dragover', onRepairDragOver);
+
+  dropZone?.addEventListener('dragleave', () => {
+    delete repairCard.dataset.dragging;
+  });
+
+  repairCard.addEventListener('dragleave', () => {
+    delete repairCard.dataset.dragging;
+  });
+
+  dropZone?.addEventListener('drop', onRepairDrop);
+  repairCard.addEventListener('drop', onRepairDrop);
+
+  dropZone?.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      if (selectedFiles[key]) {
+        void clearRepairFile();
+      } else {
+        uploadButton?.click();
+      }
+    }
+  });
+});
+
+modeButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const nextMode = `${button?.dataset?.modeTrigger || ''}`.trim().toLowerCase();
+    if (generationInProgress || repairInProgress || exportInProgress) {
+      return;
+    }
+    setTaskMode(currentTaskMode === nextMode ? '' : nextMode);
+    void persistSettings();
+  });
+});
+
 outputFolderButton?.addEventListener('click', async () => {
   if (!window.desktopApp?.selectFolder || !outputFolderInput) {
     return;
@@ -983,6 +1867,22 @@ outputFolderButton?.addEventListener('click', async () => {
   outputFolderInput.value = selectedPath;
   lastUsedOutputFolder = selectedPath;
   addLog(`Output folder selected: ${selectedPath}`);
+  await persistSettings();
+  refreshGenerateState();
+});
+
+exportSourceFolderButton?.addEventListener('click', async () => {
+  if (!window.desktopApp?.selectFolder || !exportSourceFolderInput) {
+    return;
+  }
+
+  const selectedPath = await window.desktopApp.selectFolder();
+  if (!selectedPath) {
+    return;
+  }
+
+  exportSourceFolderInput.value = selectedPath;
+  addLog(`Export scan folder selected: ${selectedPath}`, 'info');
   await persistSettings();
   refreshGenerateState();
 });
@@ -1019,6 +1919,160 @@ clearLogButton?.addEventListener('click', () => {
   }
   logWindow.innerHTML = '';
   addLog('Log cleared.');
+});
+
+repairButton?.addEventListener('click', async () => {
+  if (repairButton.disabled) {
+    return;
+  }
+
+  if (!window.desktopApp?.repairPartialArtifact) {
+    addLog('Required repair API is not available.', 'error');
+    refreshRepairState();
+    return;
+  }
+
+  if (!apiAvailable) {
+    await showWarningPopup('API is required.', 'Set a valid API key in .env, restart the app, then run repair.');
+    refreshRepairState();
+    return;
+  }
+
+  const sourceDocumentPath = selectedFiles.sourceDocumentJson?.path;
+  const repairArtifactPath = selectedFiles.repairArtifactJson?.path;
+  if (!sourceDocumentPath || !repairArtifactPath) {
+    refreshRepairState();
+    return;
+  }
+
+  if (!repairInspection || !repairInspection.success || !repairInspection.canRepair) {
+    await inspectSelectedRepairArtifact();
+  }
+
+  if (!repairInspection || !repairInspection.success || !repairInspection.canRepair) {
+    refreshRepairState();
+    return;
+  }
+
+  if (window.desktopApp?.showConfirm) {
+    const confirmed = await window.desktopApp.showConfirm({
+      type: 'question',
+      title: 'Confirm Partial Repair',
+      message: 'Resume incomplete sections and overwrite the selected partial artifact?',
+      detail: `Source document: ${sourceDocumentPath}\nRepair target: ${repairArtifactPath}\n\nSupported targets: partial questions JSON or partial conversational pairs JSON.`,
+      buttons: ['Repair', 'Cancel'],
+    });
+
+    if (!confirmed) {
+      addLog('Repair cancelled by user.', 'info');
+      refreshRepairState();
+      return;
+    }
+  }
+
+  try {
+    repairInProgress = true;
+    resetRepairOutputState();
+    if (repairInspection.artifactType === 'questions') {
+      setRepairBuildState('conversationalPairs', 'skipped', 'SKIP');
+      setRepairBuildState('questions', 'running', '0/0');
+    } else if (repairInspection.artifactType === 'conversationalPairs') {
+      setRepairBuildState('questions', 'skipped', 'SKIP');
+      setRepairBuildState('conversationalPairs', 'running', '0/0');
+    }
+    refreshGenerateState();
+    const unsubscribeRepairProgress = window.desktopApp?.onArtifactProgress?.((update) => {
+      applyRepairProgressUpdate(update);
+    }) || (() => {});
+    const guardrailSnapshot = await window.desktopApp?.getQualityGuardrails?.({ maxItems: 8 });
+    const generationGuidance = `${guardrailSnapshot?.guardrails || ''}`.trim();
+    if (generationGuidance) {
+      addLog('Loaded persistent quality guardrails for repair.', 'info');
+    }
+
+    addLog(`Starting partial repair for ${getBaseName(repairArtifactPath)}...`, 'info');
+    let repairResult;
+    try {
+      repairResult = await window.desktopApp.repairPartialArtifact({
+        sourceDocumentPath,
+        repairArtifactPath,
+        generationGuidance,
+      });
+    } finally {
+      unsubscribeRepairProgress();
+    }
+
+    if (`${repairResult?.buildStatus || ''}`.toLowerCase() === 'incomplete') {
+      addLog(
+        `Repair finished with partial output. Remaining incomplete sections: ${Number(repairResult?.remainingIncompleteSections || 0)}.`,
+        'warning'
+      );
+    } else {
+      addLog(`Repair completed successfully for ${getBaseName(repairArtifactPath)}.`, 'success');
+    }
+    await inspectSelectedRepairArtifact();
+    addLog(`Repaired artifact saved in place: ${repairResult?.repairedPath || repairArtifactPath}`, 'info');
+  } catch (error) {
+    setRepairBuildState('questions', 'error');
+    setRepairBuildState('conversationalPairs', 'error');
+    addLog(`Partial repair failed: ${error?.message || error || 'Unknown error.'}`, 'error');
+  } finally {
+    repairInProgress = false;
+    refreshGenerateState();
+  }
+});
+
+exportButton?.addEventListener('click', async () => {
+  if (exportButton.disabled) {
+    return;
+  }
+
+  if (!window.desktopApp?.exportTrainingFiles) {
+    addLog('Required export API is not available.', 'error');
+    refreshGenerateState();
+    return;
+  }
+
+  const rootFolder = `${exportSourceFolderInput?.value || ''}`.trim();
+  if (!rootFolder || rootFolder === 'No folder selected') {
+    refreshGenerateState();
+    return;
+  }
+
+  if (window.desktopApp?.showConfirm) {
+    const confirmed = await window.desktopApp.showConfirm({
+      type: 'question',
+      title: 'Confirm Export',
+      message: 'Create a fresh export folder with only questions and conversational training files?',
+      detail: `Scan root: ${rootFolder}\n\nThe app will scan this folder recursively and create ${getBaseName(rootFolder.replace(/[\\/]+$/g, ''))}_training_files. Relative subfolders are preserved for copied files.`,
+      buttons: ['Export', 'Cancel'],
+    });
+
+    if (!confirmed) {
+      addLog('Export cancelled by user.', 'info');
+      refreshGenerateState();
+      return;
+    }
+  }
+
+  try {
+    exportInProgress = true;
+    refreshGenerateState();
+    addLog(`Scanning ${rootFolder} for training files...`, 'info');
+    const exportResult = await window.desktopApp.exportTrainingFiles({ rootFolder });
+    addLog(
+      `Export complete: ${Number(exportResult?.copiedCount || 0)} files copied (${Number(exportResult?.summary?.questions || 0)} questions, ${Number(exportResult?.summary?.conversationalPairs || 0)} conversational).`,
+      'success'
+    );
+    addLog(`Export folder created: ${exportResult?.exportFolder || ''}`, 'info');
+    setTaskMode('export');
+    await persistSettings();
+  } catch (error) {
+    addLog(`Export failed: ${error?.message || error || 'Unknown error.'}`, 'error');
+  } finally {
+    exportInProgress = false;
+    refreshGenerateState();
+  }
 });
 
 generateButton?.addEventListener('click', async () => {
@@ -1160,10 +2214,19 @@ generateButton?.addEventListener('click', async () => {
           if (state === 'running') {
               const progressText = `${update?.progressText || ''}`.trim();
               setOutputBuildState(key, 'running', progressText);
+              updateOutputProviderIndicators(key, update);
             return;
           }
           if (state === 'completed') {
             setOutputReadyState(key, true);
+            return;
+          }
+          if (state === 'incomplete') {
+            setOutputBuildState(key, 'incomplete', 'PARTIAL');
+            return;
+          }
+          if (state === 'skipped') {
+            setOutputBuildState(key, 'skipped', 'SKIP');
             return;
           }
           if (state === 'error') {
@@ -1202,45 +2265,12 @@ generateButton?.addEventListener('click', async () => {
             apiProviders,
           });
 
-          try {
-            result = await runBuildArtifacts({ allowLocalFallback: false });
-          } catch (firstBuildError) {
-            const firstMessage = `${firstBuildError?.message || firstBuildError || ''}`;
-            const cancelled = /generation cancelled by user/i.test(firstMessage);
-            const bothApisFailed = /failed for section|no api provider call succeeded|request timed out|openai request failed|gemini request failed/i.test(firstMessage.toLowerCase());
-
-            if (cancelled) {
-              throw firstBuildError;
-            }
-
-            if (!bothApisFailed || !window.desktopApp?.showConfirm) {
-              throw firstBuildError;
-            }
-
-            const allowLocalFallback = await window.desktopApp.showConfirm({
-              type: 'question',
-              title: 'Both APIs Failed',
-              message: 'Both APIs failed for at least one section. Allow local fallback for remaining output?',
-              detail: 'Choosing Disallow will stop generation and preserve API-only behavior.',
-              buttons: ['Allow Fallback', 'Disallow Fallback'],
-            });
-
-            addLog(
-              allowLocalFallback
-                ? 'User approved local fallback after both APIs failed. Retrying artifact generation.'
-                : 'User disallowed local fallback after both APIs failed.',
-              allowLocalFallback ? 'warning' : 'warning'
-            );
-
-            if (!allowLocalFallback) {
-              throw firstBuildError;
-            }
-
-            result = await runBuildArtifacts({ allowLocalFallback: true });
-          }
+          result = await runBuildArtifacts({ allowLocalFallback: false });
         } finally {
           unsubscribeArtifactProgress();
         }
+
+        const artifactStatuses = result?.summary?.artifactStatuses || {};
 
         if (Array.isArray(result?.written) && result.written.length > 0) {
           result.written.forEach((entry) => {
@@ -1250,16 +2280,28 @@ generateButton?.addEventListener('click', async () => {
               return;
             }
             if (entry?.key === 'summary') {
-              setOutputReadyState('summary', true);
+              if (`${artifactStatuses.summary?.buildStatus || 'complete'}`.toLowerCase() === 'incomplete') {
+                setOutputBuildState('summary', 'incomplete', 'PARTIAL');
+              } else {
+                setOutputReadyState('summary', true);
+              }
             }
             if (entry?.key === 'questions') {
-              setOutputReadyState('questions', true);
+              if (`${artifactStatuses.questions?.buildStatus || 'complete'}`.toLowerCase() === 'incomplete') {
+                setOutputBuildState('questions', 'incomplete', 'PARTIAL');
+              } else {
+                setOutputReadyState('questions', true);
+              }
             }
             if (entry?.key === 'deterministicPairs') {
               setOutputReadyState('deterministicPairs', true);
             }
             if (entry?.key === 'conversationalPairs') {
-              setOutputReadyState('conversationalPairs', true);
+              if (`${artifactStatuses.conversationalPairs?.buildStatus || 'complete'}`.toLowerCase() === 'incomplete') {
+                setOutputBuildState('conversationalPairs', 'incomplete', 'PARTIAL');
+              } else {
+                setOutputReadyState('conversationalPairs', true);
+              }
             }
             addLog(`Saved (${entry.key}): ${entry.path}`, 'success');
           });
@@ -1288,12 +2330,48 @@ generateButton?.addEventListener('click', async () => {
           addLog('No selected artifacts were written.', 'info');
         }
 
+        Object.entries(artifactStatuses).forEach(([key, status]) => {
+          const buildStatus = `${status?.buildStatus || ''}`.toLowerCase();
+          const failureReason = `${status?.failureReason || ''}`.trim();
+          const incompleteSections = Array.isArray(status?.incompleteSections) ? status.incompleteSections : [];
+
+          if (buildStatus === 'incomplete') {
+            const failedCount = incompleteSections.filter((entry) => `${entry?.status || ''}`.toLowerCase() === 'failed').length;
+            setOutputBuildState(key, 'incomplete', 'PARTIAL');
+            addLog(
+              `${key} saved as partial output. Failed sections: ${failedCount}. ${failureReason || 'Repair can continue from incomplete sections.'}`,
+              'warning'
+            );
+          }
+
+          if (buildStatus === 'skipped') {
+            setOutputBuildState(key, 'skipped', 'SKIP');
+            addLog(`${key} skipped. ${failureReason || 'A required upstream artifact was incomplete.'}`, 'warning');
+          }
+        });
+
         const auditCandidates = Array.isArray(result?.written)
           ? result.written
-            .filter((entry) => ['conversationalPairs', 'deterministicPairs'].includes(`${entry?.key || ''}`))
+            .filter((entry) => {
+              const key = `${entry?.key || ''}`;
+              if (!['conversationalPairs', 'deterministicPairs'].includes(key)) {
+                return false;
+              }
+              return `${artifactStatuses?.[key]?.buildStatus || 'complete'}`.toLowerCase() === 'complete';
+            })
             .map((entry) => `${entry?.path || ''}`)
             .filter(Boolean)
           : [];
+
+        if (auditCandidates.length === 0) {
+          const pairArtifactsIncomplete = ['conversationalPairs', 'deterministicPairs'].some((key) => {
+            const status = `${artifactStatuses?.[key]?.buildStatus || ''}`.toLowerCase();
+            return status === 'incomplete' || status === 'skipped';
+          });
+          if (pairArtifactsIncomplete) {
+            addLog('Quality audit skipped because at least one pair artifact is partial or was skipped.', 'warning');
+          }
+        }
 
         if (auditCandidates.length > 0 && window.desktopApp?.auditPairs) {
           const qualityReportPath = joinPath(outputFolder, `${documentIdPrefix || 'output'}_quality_report.json`);
@@ -1507,8 +2585,19 @@ generateButton?.addEventListener('click', async () => {
           }
         }
 
-        setConversionStatus('Conversion completed successfully.', 100, 'success');
-        addLog('Pipeline completed successfully.', 'success');
+        const finalArtifactStatuses = result?.summary?.artifactStatuses || {};
+        const hasPartialArtifacts = Object.values(finalArtifactStatuses).some((status) => {
+          const buildStatus = `${status?.buildStatus || ''}`.toLowerCase();
+          return buildStatus === 'incomplete' || buildStatus === 'skipped';
+        });
+
+        if (hasPartialArtifacts) {
+          setConversionStatus('Conversion completed with partial artifacts.', 100, 'warning');
+          addLog('Pipeline completed with partial artifacts. Review incomplete sections before final use.', 'warning');
+        } else {
+          setConversionStatus('Conversion completed successfully.', 100, 'success');
+          addLog('Pipeline completed successfully.', 'success');
+        }
         if (outputPrefixInput) {
           outputPrefixInput.value = '';
           lastUsedOutputPrefix = '';

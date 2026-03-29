@@ -1,5 +1,5 @@
 {
-  "updatedAtUtc": "2026-03-27T17:32:59.249Z",
+  "updatedAtUtc": "2026-03-29T14:45:05.065Z",
   "runs": [
     {
       "atUtc": "2026-03-27T16:36:56.944Z",
@@ -30,35 +30,114 @@
       "beforeLevel": "optimum",
       "afterLevel": "optimum",
       "improved": false
-    }
-  ],
-  "issueStats": {
-    "DUPLICATE_CONVERSATIONS": {
-      "count": 1,
-      "severity": "warning",
-      "instruction": "Regenerate only duplicated conversational pairs with variation constraints.",
-      "lastSeenUtc": "2026-03-27T16:36:56.944Z"
     },
-    "REPEATED_SUBJECTS": {
-      "count": 1,
-      "severity": "warning",
-      "instruction": "Regenerate over-concentrated sections with subject balancing constraints.",
-      "lastSeenUtc": "2026-03-27T17:32:59.249Z"
-    }
-  },
-  "successfulFixes": {},
-  "stability": {
-    "isStableOptimum": false,
-    "checkedAtUtc": "2026-03-27T17:32:59.249Z",
-    "rules": {
-      "consecutiveOptimumRuns": 3,
-      "recurringHighImpactThreshold": 2,
-      "highImpactWindow": 5
+    {
+      "atUtc": "2026-03-27T17:47:48.486Z",
+      "decision": "close",
+      "totalIssues": 1,
+      "issueCodes": [
+        "DUPLICATE_CONVERSATIONS"
+      ],
+      "fatalIssueCodes": [],
+      "fatalIssueCount": 0,
+      "beforeWeightedIssuePercent": 0.019,
+      "afterWeightedIssuePercent": 0.019,
+      "beforeLevel": "optimum",
+      "afterLevel": "optimum",
+      "improved": false
     },
-    "consecutiveOptimumRuns": 2,
-    "recurringHighImpact": [],
-    "latestRun": {
-      "atUtc": "2026-03-27T17:32:59.249Z",
+    {
+      "atUtc": "2026-03-27T18:13:44.856Z",
+      "decision": "close",
+      "totalIssues": 2,
+      "issueCodes": [
+        "DUPLICATE_CONVERSATIONS",
+        "REPEATED_SUBJECTS"
+      ],
+      "fatalIssueCodes": [],
+      "fatalIssueCount": 0,
+      "beforeWeightedIssuePercent": 0.05,
+      "afterWeightedIssuePercent": 0.05,
+      "beforeLevel": "optimum",
+      "afterLevel": "optimum",
+      "improved": false
+    },
+    {
+      "atUtc": "2026-03-27T18:36:50.447Z",
+      "decision": "close",
+      "totalIssues": 1,
+      "issueCodes": [
+        "DUPLICATE_CONVERSATIONS"
+      ],
+      "fatalIssueCodes": [],
+      "fatalIssueCount": 0,
+      "beforeWeightedIssuePercent": 0.037,
+      "afterWeightedIssuePercent": 0.037,
+      "beforeLevel": "optimum",
+      "afterLevel": "optimum",
+      "improved": false
+    },
+    {
+      "atUtc": "2026-03-28T14:09:19.699Z",
+      "decision": "close",
+      "totalIssues": 3,
+      "issueCodes": [
+        "DUPLICATE_CONVERSATIONS",
+        "REPEATED_SUBJECTS"
+      ],
+      "fatalIssueCodes": [],
+      "fatalIssueCount": 0,
+      "beforeWeightedIssuePercent": 0.101,
+      "afterWeightedIssuePercent": 0.101,
+      "beforeLevel": "optimum",
+      "afterLevel": "optimum",
+      "improved": false
+    },
+    {
+      "atUtc": "2026-03-29T14:13:58.126Z",
+      "decision": "close",
+      "totalIssues": 2,
+      "issueCodes": [
+        "REPEATED_SUBJECTS"
+      ],
+      "fatalIssueCodes": [],
+      "fatalIssueCount": 0,
+      "beforeWeightedIssuePercent": 0.058,
+      "afterWeightedIssuePercent": 0.058,
+      "beforeLevel": "optimum",
+      "afterLevel": "optimum",
+      "improved": false
+    },
+    {
+      "atUtc": "2026-03-29T14:16:56.803Z",
+      "decision": "close",
+      "totalIssues": 0,
+      "issueCodes": [],
+      "fatalIssueCodes": [],
+      "fatalIssueCount": 0,
+      "beforeWeightedIssuePercent": 0,
+      "afterWeightedIssuePercent": 0,
+      "beforeLevel": "optimum",
+      "afterLevel": "optimum",
+      "improved": false
+    },
+    {
+      "atUtc": "2026-03-29T14:28:12.049Z",
+      "decision": "close",
+      "totalIssues": 1,
+      "issueCodes": [
+        "DUPLICATE_CONVERSATIONS"
+      ],
+      "fatalIssueCodes": [],
+      "fatalIssueCount": 0,
+      "beforeWeightedIssuePercent": 0.012,
+      "afterWeightedIssuePercent": 0.012,
+      "beforeLevel": "optimum",
+      "afterLevel": "optimum",
+      "improved": false
+    },
+    {
+      "atUtc": "2026-03-29T14:30:44.741Z",
       "decision": "close",
       "totalIssues": 1,
       "issueCodes": [
@@ -66,14 +145,107 @@
       ],
       "fatalIssueCodes": [],
       "fatalIssueCount": 0,
-      "beforeWeightedIssuePercent": 0.017,
-      "afterWeightedIssuePercent": 0.017,
+      "beforeWeightedIssuePercent": 0.032,
+      "afterWeightedIssuePercent": 0.032,
       "beforeLevel": "optimum",
       "afterLevel": "optimum",
       "improved": false
     },
-    "reasons": [
-      "Need 3 consecutive runs; only 2 recorded."
-    ]
+    {
+      "atUtc": "2026-03-29T14:33:14.393Z",
+      "decision": "close",
+      "totalIssues": 0,
+      "issueCodes": [],
+      "fatalIssueCodes": [],
+      "fatalIssueCount": 0,
+      "beforeWeightedIssuePercent": 0,
+      "afterWeightedIssuePercent": 0,
+      "beforeLevel": "optimum",
+      "afterLevel": "optimum",
+      "improved": false
+    },
+    {
+      "atUtc": "2026-03-29T14:38:35.861Z",
+      "decision": "close",
+      "totalIssues": 0,
+      "issueCodes": [],
+      "fatalIssueCodes": [],
+      "fatalIssueCount": 0,
+      "beforeWeightedIssuePercent": 0,
+      "afterWeightedIssuePercent": 0,
+      "beforeLevel": "optimum",
+      "afterLevel": "optimum",
+      "improved": false
+    },
+    {
+      "atUtc": "2026-03-29T14:41:12.853Z",
+      "decision": "close",
+      "totalIssues": 0,
+      "issueCodes": [],
+      "fatalIssueCodes": [],
+      "fatalIssueCount": 0,
+      "beforeWeightedIssuePercent": 0,
+      "afterWeightedIssuePercent": 0,
+      "beforeLevel": "optimum",
+      "afterLevel": "optimum",
+      "improved": false
+    },
+    {
+      "atUtc": "2026-03-29T14:45:05.065Z",
+      "decision": "close",
+      "totalIssues": 1,
+      "issueCodes": [
+        "REPEATED_SUBJECTS"
+      ],
+      "fatalIssueCodes": [],
+      "fatalIssueCount": 0,
+      "beforeWeightedIssuePercent": 0.023,
+      "afterWeightedIssuePercent": 0.023,
+      "beforeLevel": "optimum",
+      "afterLevel": "optimum",
+      "improved": false
+    }
+  ],
+  "issueStats": {
+    "DUPLICATE_CONVERSATIONS": {
+      "count": 6,
+      "severity": "warning",
+      "instruction": "Regenerate only duplicated conversational pairs with variation constraints.",
+      "lastSeenUtc": "2026-03-29T14:28:12.049Z"
+    },
+    "REPEATED_SUBJECTS": {
+      "count": 8,
+      "severity": "warning",
+      "instruction": "Regenerate over-concentrated sections with subject balancing constraints.",
+      "lastSeenUtc": "2026-03-29T14:45:05.065Z"
+    }
+  },
+  "successfulFixes": {},
+  "stability": {
+    "isStableOptimum": true,
+    "checkedAtUtc": "2026-03-29T14:45:05.065Z",
+    "rules": {
+      "consecutiveOptimumRuns": 3,
+      "recurringHighImpactThreshold": 2,
+      "highImpactWindow": 5
+    },
+    "consecutiveOptimumRuns": 3,
+    "recurringHighImpact": [],
+    "latestRun": {
+      "atUtc": "2026-03-29T14:45:05.065Z",
+      "decision": "close",
+      "totalIssues": 1,
+      "issueCodes": [
+        "REPEATED_SUBJECTS"
+      ],
+      "fatalIssueCodes": [],
+      "fatalIssueCount": 0,
+      "beforeWeightedIssuePercent": 0.023,
+      "afterWeightedIssuePercent": 0.023,
+      "beforeLevel": "optimum",
+      "afterLevel": "optimum",
+      "improved": false
+    },
+    "reasons": []
   }
 }

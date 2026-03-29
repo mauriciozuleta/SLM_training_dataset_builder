@@ -1,0 +1,220 @@
+{
+  "generatedAtUtc": "2026-03-29T14:25:35.163Z",
+  "root": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files",
+  "fileCount": 2,
+  "totalPairs": 2125,
+  "overallRating": {
+    "level": "optimum",
+    "weightedIssueRate": 0.00011764705882352942,
+    "weightedIssuePercent": 0.012,
+    "weightedIssueCount": 0.25,
+    "thresholds": {
+      "optimumMaxPercent": 0.5,
+      "acceptableMaxPercent": 2,
+      "criticalMaxPercent": 7.000000000000001
+    },
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "fatalIssueCount": 0
+  },
+  "results": [
+    {
+      "type": "deterministic",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_13 output docs\\afh_13_deterministic_training_pairs.json",
+      "pairCount": 1089,
+      "questionCount": 99,
+      "subjectDistributionTop": [
+        {
+          "key": "Multiengine Airplanes",
+          "count": 121
+        },
+        {
+          "key": "Multiengine Operations",
+          "count": 110
+        },
+        {
+          "key": "Emergency Procedures",
+          "count": 66
+        },
+        {
+          "key": "Weight and Balance",
+          "count": 66
+        },
+        {
+          "key": "Feathering Propellers",
+          "count": 55
+        },
+        {
+          "key": "Flight Safety",
+          "count": 33
+        },
+        {
+          "key": "Stall Recovery",
+          "count": 33
+        },
+        {
+          "key": "Directional Control",
+          "count": 33
+        },
+        {
+          "key": "Aircraft Certification",
+          "count": 33
+        },
+        {
+          "key": "Critical Engine",
+          "count": 33
+        },
+        {
+          "key": "Engine Failure During Flight",
+          "count": 33
+        },
+        {
+          "key": "Engine Inoperative Approach and Landing",
+          "count": 33
+        },
+        {
+          "key": "Engine Failure",
+          "count": 22
+        },
+        {
+          "key": "Flight Performance",
+          "count": 22
+        },
+        {
+          "key": "Aircraft Systems",
+          "count": 22
+        }
+      ],
+      "issues": []
+    },
+    {
+      "type": "conversational",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_13 output docs\\afh_13_conversational_training_pairs.json",
+      "pairCount": 1036,
+      "subjectDistributionTop": [
+        {
+          "key": "VMC",
+          "count": 91
+        },
+        {
+          "key": "engine failure",
+          "count": 56
+        },
+        {
+          "key": "OEI Flight",
+          "count": 33
+        },
+        {
+          "key": "VYSE",
+          "count": 27
+        },
+        {
+          "key": "AFM/POH",
+          "count": 27
+        },
+        {
+          "key": "VMC demo",
+          "count": 25
+        },
+        {
+          "key": "OEI approach",
+          "count": 21
+        },
+        {
+          "key": "crosswind landing",
+          "count": 20
+        },
+        {
+          "key": "crossfeed",
+          "count": 19
+        },
+        {
+          "key": "icing conditions",
+          "count": 19
+        },
+        {
+          "key": "stall recovery",
+          "count": 18
+        },
+        {
+          "key": "multiengine airplanes",
+          "count": 16
+        },
+        {
+          "key": "go-around",
+          "count": 16
+        },
+        {
+          "key": "emergency procedures",
+          "count": 15
+        },
+        {
+          "key": "center of gravity",
+          "count": 15
+        }
+      ],
+      "issues": [
+        {
+          "severity": "warning",
+          "code": "DUPLICATE_CONVERSATIONS",
+          "message": "Found 20 duplicated user+assistant exchanges.",
+          "target": {
+            "type": "pair-group",
+            "id": "duplicate-conversations"
+          },
+          "repairGuidance": {
+            "action": "targeted-repair",
+            "scope": "pair",
+            "instruction": "Regenerate only duplicated conversational pairs with variation constraints."
+          },
+          "context": {
+            "topDuplicates": [
+              {
+                "key": "why is vmc higher with a windmilling propeller? ||| a windmilling propeller increases drag on the inoperative engine, raising vmc.",
+                "count": 3,
+                "targets": [
+                  "AFH.13.33.1.z.19",
+                  "AFH.13.33.1.z.39",
+                  "AFH.13.33.1.z.57"
+                ]
+              },
+              {
+                "key": "can you explain zero fuel weight and its importance? ||| zero fuel weight is the maximum allowable weight of the airplane and payload without usable fuel. it limits load forces on the wing spars, ensuring structural integrity with heavy fuselage loads.",
+                "count": 2,
+                "targets": [
+                  "AFH.13.14.1.z.3",
+                  "AFH.13.14.1.z.48"
+                ]
+              },
+              {
+                "key": "how do i calculate the useful load of a multiengine airplane? ||| subtract the basic empty weight from the maximum takeoff weight to find the useful load, which includes usable fuel, passengers, baggage, and cargo.",
+                "count": 2,
+                "targets": [
+                  "AFH.13.14.1.z.4",
+                  "AFH.13.14.1.z.46"
+                ]
+              },
+              {
+                "key": "why is the center of gravity important in multiengine airplanes? ||| the center of gravity affects flight characteristics. a forward cg makes the airplane more stable but slower, while an aft cg makes it less stable but faster. staying within limits is crucial for safe operation.",
+                "count": 2,
+                "targets": [
+                  "AFH.13.14.1.z.5",
+                  "AFH.13.14.1.z.50"
+                ]
+              },
+              {
+                "key": "what should i consider about ballast in multiengine airplanes? ||| ballast may be needed to stay within cg limits. it should be securely tied down and not exceed maximum floor loading. placement depends on passenger and cargo distribution.",
+                "count": 2,
+                "targets": [
+                  "AFH.13.14.1.z.6",
+                  "AFH.13.14.1.z.51"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

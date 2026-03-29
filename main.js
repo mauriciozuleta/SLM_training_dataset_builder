@@ -7,8 +7,22 @@ const { performAudit } = require('./scripts/audit_training_pairs');
 const { repairAffectedPairs } = require('./src/main/services/documentGeneration/pairRepairService');
 const { persistDeferredQualityLog } = require('./src/main/services/documentGeneration/deferredQualityLogService');
 const { getQualityGuardrails, getQualityStabilityStatus, updateQualityMemoryFromAudit } = require('./src/main/services/documentGeneration/qualityMemoryService');
+const { createExportDatasetService } = require('./src/main/services/exportDatasetService');
+const packageMetadata = require('./package.json');
 
 require('dotenv').config({ path: path.join(__dirname, '.env') });
+
+const APP_DISPLAY_NAME = 'Pair Generation Desktop';
+const APP_VERSION = packageMetadata?.version || '0.0.0';
+const LOCAL_USER_DATA_DIR = path.join(__dirname, '.electron-user-data');
+
+app.setName(APP_DISPLAY_NAME);
+app.commandLine.appendSwitch('disable-gpu-shader-disk-cache');
+try {
+  app.setPath('userData', LOCAL_USER_DATA_DIR);
+} catch {
+  // Keep Electron default userData path if setting a custom path is unavailable.
+}
 
 const API_TIMEOUT_MS = Math.max(15000, Number.parseInt(process.env.API_TIMEOUT_MS || '90000', 10) || 90000);
 const MAX_QUESTION_TARGET = Math.max(50, Number.parseInt(process.env.MAX_QUESTION_TARGET || '150', 10) || 150);
@@ -20,6 +34,7 @@ const documentGenerationService = createDocumentGenerationService({
   apiTimeoutMs: API_TIMEOUT_MS,
   maxQuestionTarget: MAX_QUESTION_TARGET,
 });
+const exportDatasetService = createExportDatasetService({ fs, path });
 
 let activeGenerationAbortController = null;
 
@@ -310,6 +325,7 @@ async function runPairAudit(payload = {}) {
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
+    title: `${APP_DISPLAY_NAME} v${APP_VERSION}`,
     width: 1180,
     height: 760,
     minWidth: 980,
@@ -437,6 +453,20 @@ app.whenReady().then(() => {
     return result.filePaths[0];
   });
 
+  ipcMain.handle('dialog:openJson', async (_event, options = {}) => {
+    const result = await dialog.showOpenDialog({
+      properties: ['openFile'],
+      filters: [{ name: 'JSON Files', extensions: ['json'] }],
+      title: options?.title || 'Select JSON File',
+    });
+
+    if (result.canceled || result.filePaths.length === 0) {
+      return null;
+    }
+
+    return result.filePaths[0];
+  });
+
   ipcMain.handle('rag:processPdf', async (_event, payload) => {
     return processPdfToJson(payload);
   });
@@ -466,6 +496,42 @@ app.whenReady().then(() => {
     } finally {
       activeGenerationAbortController = null;
     }
+  });
+
+  ipcMain.handle('generation:repairPartialArtifact', async (event, payload) => {
+    if (activeGenerationAbortController) {
+      throw new Error('A generation or repair process is already running.');
+    }
+
+    activeGenerationAbortController = new AbortController();
+    const runtimeApiStatus = getApiStatus();
+    const runtimeProviders = Array.isArray(runtimeApiStatus?.providers)
+      ? runtimeApiStatus.providers
+      : [];
+
+    try {
+      return await documentGenerationService.repairPartialArtifact({
+        ...payload,
+        apiProviders: runtimeProviders,
+        abortSignal: activeGenerationAbortController.signal,
+        onProgress: (update) => {
+          event.sender.send('generation:artifactProgress', update);
+        },
+        onLog: (logEvent) => {
+          event.sender.send('generation:statusLog', logEvent);
+        },
+      });
+    } finally {
+      activeGenerationAbortController = null;
+    }
+  });
+
+  ipcMain.handle('generation:inspectRepairArtifact', async (_event, payload) => {
+    return documentGenerationService.inspectRepairArtifact(payload || {});
+  });
+
+  ipcMain.handle('dataset:exportTrainingFiles', async (_event, payload) => {
+    return exportDatasetService.exportTrainingFiles(payload || {});
   });
 
   ipcMain.handle('generation:cancel', async () => {

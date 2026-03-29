@@ -1,0 +1,326 @@
+{
+  "generatedAtUtc": "2026-03-28T14:09:10.673Z",
+  "root": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files",
+  "fileCount": 2,
+  "totalPairs": 739,
+  "overallRating": {
+    "level": "optimum",
+    "weightedIssueRate": 0.0010148849797023004,
+    "weightedIssuePercent": 0.101,
+    "weightedIssueCount": 0.75,
+    "thresholds": {
+      "optimumMaxPercent": 0.5,
+      "acceptableMaxPercent": 2,
+      "criticalMaxPercent": 7.000000000000001
+    },
+    "errorCount": 0,
+    "warningCount": 3,
+    "infoCount": 0,
+    "fatalIssueCount": 0
+  },
+  "results": [
+    {
+      "type": "deterministic",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_10 output docs\\afh_10_deterministic_training_pairs.json",
+      "pairCount": 550,
+      "questionCount": 50,
+      "subjectDistributionTop": [
+        {
+          "key": "Steep Turns",
+          "count": 187
+        },
+        {
+          "key": "Flight Maneuvers",
+          "count": 154
+        },
+        {
+          "key": "Chandelle",
+          "count": 121
+        },
+        {
+          "key": "Flight Controls",
+          "count": 44
+        },
+        {
+          "key": "Engine Management",
+          "count": 33
+        },
+        {
+          "key": "Performance Maneuvers",
+          "count": 33
+        },
+        {
+          "key": "Aerodynamics",
+          "count": 22
+        },
+        {
+          "key": "Flight Errors",
+          "count": 22
+        },
+        {
+          "key": "Power Management",
+          "count": 22
+        },
+        {
+          "key": "Steep Spiral Objectives",
+          "count": 11
+        },
+        {
+          "key": "Emergency Procedures",
+          "count": 11
+        },
+        {
+          "key": "Steep Spiral Entry Procedure",
+          "count": 11
+        },
+        {
+          "key": "Steep Spiral Requirements",
+          "count": 11
+        },
+        {
+          "key": "Altitude Management",
+          "count": 11
+        },
+        {
+          "key": "Wind Correction",
+          "count": 11
+        }
+      ],
+      "issues": [
+        {
+          "severity": "warning",
+          "code": "REPEATED_SUBJECTS",
+          "message": "Subject distribution is highly concentrated; consider balancing section/topic coverage.",
+          "target": {
+            "type": "subject-group",
+            "id": "repeated-subjects"
+          },
+          "repairGuidance": {
+            "action": "targeted-repair",
+            "scope": "section",
+            "instruction": "Regenerate over-concentrated sections with subject balancing constraints."
+          },
+          "context": {
+            "repeatedSubjects": [
+              {
+                "key": "Steep Turns",
+                "count": 187,
+                "targets": [
+                  "AFH.10.1.1",
+                  "AFH.10.1.1",
+                  "AFH.10.1.1",
+                  "AFH.10.1.1",
+                  "AFH.10.1.1",
+                  "AFH.10.1.1",
+                  "AFH.10.1.1",
+                  "AFH.10.1.1"
+                ]
+              },
+              {
+                "key": "Flight Maneuvers",
+                "count": 154,
+                "targets": [
+                  "AFH.10.4.1",
+                  "AFH.10.4.1",
+                  "AFH.10.4.1",
+                  "AFH.10.4.1",
+                  "AFH.10.4.1",
+                  "AFH.10.4.1",
+                  "AFH.10.4.1",
+                  "AFH.10.4.1"
+                ]
+              },
+              {
+                "key": "Chandelle",
+                "count": 121,
+                "targets": [
+                  "AFH.10.3.1",
+                  "AFH.10.3.1",
+                  "AFH.10.3.1",
+                  "AFH.10.3.1",
+                  "AFH.10.3.1",
+                  "AFH.10.3.1",
+                  "AFH.10.3.1",
+                  "AFH.10.3.1"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "conversational",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_10 output docs\\afh_10_conversational_training_pairs.json",
+      "pairCount": 189,
+      "subjectDistributionTop": [
+        {
+          "key": "steep turns",
+          "count": 57
+        },
+        {
+          "key": "lazy eight",
+          "count": 51
+        },
+        {
+          "key": "steep spiral",
+          "count": 30
+        },
+        {
+          "key": "Common Errors",
+          "count": 13
+        },
+        {
+          "key": "bank angle",
+          "count": 9
+        },
+        {
+          "key": "Pitch Control",
+          "count": 9
+        },
+        {
+          "key": "First 90 Degree Phase",
+          "count": 7
+        },
+        {
+          "key": "stalling speed",
+          "count": 6
+        },
+        {
+          "key": "Second 90 Degree Phase",
+          "count": 6
+        },
+        {
+          "key": "load factor",
+          "count": 5
+        },
+        {
+          "key": "performance maneuvers",
+          "count": 5
+        },
+        {
+          "key": "power management",
+          "count": 4
+        },
+        {
+          "key": "wind correction",
+          "count": 4
+        },
+        {
+          "key": "Maneuver Completion",
+          "count": 4
+        },
+        {
+          "key": "common errors",
+          "count": 3
+        }
+      ],
+      "issues": [
+        {
+          "severity": "warning",
+          "code": "DUPLICATE_CONVERSATIONS",
+          "message": "Found 6 duplicated user+assistant exchanges.",
+          "target": {
+            "type": "pair-group",
+            "id": "duplicate-conversations"
+          },
+          "repairGuidance": {
+            "action": "targeted-repair",
+            "scope": "pair",
+            "instruction": "Regenerate only duplicated conversational pairs with variation constraints."
+          },
+          "context": {
+            "topDuplicates": [
+              {
+                "key": "why is it important to avoid exceeding the airplane's structural limitations in steep turns? ||| exceeding structural limitations can lead to aircraft damage or failure, compromising safety.",
+                "count": 2,
+                "targets": [
+                  "AFH.10.1.1.z.34",
+                  "AFH.10.1.1.z.52"
+                ]
+              },
+              {
+                "key": "how does the airplane's design affect its steep turn performance? ||| the airplane's structural and aerodynamic design, along with available power, limit its level turning performance.",
+                "count": 2,
+                "targets": [
+                  "AFH.10.1.1.z.35",
+                  "AFH.10.1.1.z.53"
+                ]
+              },
+              {
+                "key": "what should i do if i notice i'm gaining altitude during a steep turn? ||| reduce elevator back pressure slightly while maintaining bank angle to correct the altitude gain.",
+                "count": 2,
+                "targets": [
+                  "AFH.10.1.1.z.36",
+                  "AFH.10.1.1.z.54"
+                ]
+              },
+              {
+                "key": "how does the bank angle affect the airplane's stalling speed? ||| as bank angle increases, the stalling speed increases due to the higher load factor.",
+                "count": 2,
+                "targets": [
+                  "AFH.10.1.1.z.37",
+                  "AFH.10.1.1.z.55"
+                ]
+              },
+              {
+                "key": "why do steep turns require more precise control inputs? ||| steep turns involve higher g-forces and load factors, requiring precise inputs to maintain control and performance standards.",
+                "count": 2,
+                "targets": [
+                  "AFH.10.1.1.z.38",
+                  "AFH.10.1.1.z.56"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "severity": "warning",
+          "code": "REPEATED_SUBJECTS",
+          "message": "Subject distribution is highly concentrated; consider balancing sections/topics.",
+          "target": {
+            "type": "subject-group",
+            "id": "repeated-subjects"
+          },
+          "repairGuidance": {
+            "action": "targeted-repair",
+            "scope": "section",
+            "instruction": "Regenerate over-concentrated sections with subject balancing constraints."
+          },
+          "context": {
+            "repeatedSubjects": [
+              {
+                "key": "steep turns",
+                "count": 57,
+                "targets": [
+                  "AFH.10.1.1.z.1",
+                  "AFH.10.1.1.z.2",
+                  "AFH.10.1.1.z.3",
+                  "AFH.10.1.1.z.4",
+                  "AFH.10.1.1.z.5",
+                  "AFH.10.1.1.z.6",
+                  "AFH.10.1.1.z.7",
+                  "AFH.10.1.1.z.8"
+                ]
+              },
+              {
+                "key": "lazy eight",
+                "count": 51,
+                "targets": [
+                  "AFH.10.4.1.z.1",
+                  "AFH.10.4.1.z.2",
+                  "AFH.10.4.1.z.3",
+                  "AFH.10.4.1.z.4",
+                  "AFH.10.4.1.z.5",
+                  "AFH.10.4.1.z.6",
+                  "AFH.10.4.1.z.7",
+                  "AFH.10.4.1.z.8"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

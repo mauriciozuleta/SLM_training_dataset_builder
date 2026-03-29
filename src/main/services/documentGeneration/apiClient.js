@@ -376,6 +376,12 @@ function createApiClient({ env, apiTimeoutMs }) {
         model: '',
         error: '',
       },
+      anthropic: {
+        configured: status.providers.includes('anthropic'),
+        verified: false,
+        model: '',
+        error: '',
+      },
     };
 
     const verifyOne = async (provider) => {
@@ -402,6 +408,7 @@ function createApiClient({ env, apiTimeoutMs }) {
     await Promise.all([
       verifyOne('openai'),
       verifyOne('gemini'),
+      verifyOne('anthropic'),
     ]);
 
     const verifiedProviders = Object.entries(checks)

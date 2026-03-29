@@ -1,0 +1,3249 @@
+[
+  {
+    "questionBank": {
+      "chapterId": "afh.18",
+      "bookId": "AFH",
+      "chapterNumber": 18,
+      "chapterTitle": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction",
+      "totalRequiredQuestions": 51,
+      "metadata": {
+        "generatedAtUtc": "2026-03-29T14:43:12.509Z",
+        "chapterId": "afh.18",
+        "chapterNumber": 18,
+        "totalSections": 38,
+        "totalRequiredQuestions": 51,
+        "providers": [
+          "openai",
+          "anthropic",
+          "gemini"
+        ],
+        "models": [
+          "gpt-4o",
+          "claude-sonnet-4-6",
+          "gemini-2.5-flash"
+        ],
+        "promptTokens": 19652,
+        "completionTokens": 7294,
+        "totalTokens": 26946,
+        "sectionQuestionSummary": [
+          {
+            "sectionId": "afh.18.1",
+            "sectionTitle": "Emergency Landings",
+            "sectionOrdinal": 1,
+            "sectionWeightPercentage": 0.64,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.2",
+            "sectionTitle": "Types of Emergency Landings",
+            "sectionOrdinal": 2,
+            "sectionWeightPercentage": 1.8,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.3",
+            "sectionTitle": "Psychological Hazards",
+            "sectionOrdinal": 3,
+            "sectionWeightPercentage": 3.3,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.4",
+            "sectionTitle": "Basic Safety Concepts",
+            "sectionOrdinal": 4,
+            "sectionWeightPercentage": 5.36,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.18.5",
+            "sectionTitle": "Attitude and Sink Rate Control",
+            "sectionOrdinal": 5,
+            "sectionWeightPercentage": 1.75,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.6",
+            "sectionTitle": "Terrain Selection",
+            "sectionOrdinal": 6,
+            "sectionWeightPercentage": 1.86,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.7",
+            "sectionTitle": "Airplane Configuration",
+            "sectionOrdinal": 7,
+            "sectionWeightPercentage": 2.61,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.8",
+            "sectionTitle": "Approach",
+            "sectionOrdinal": 8,
+            "sectionWeightPercentage": 1.58,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.9",
+            "sectionTitle": "Confined Areas",
+            "sectionOrdinal": 9,
+            "sectionWeightPercentage": 1.87,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.10",
+            "sectionTitle": "Trees (Forest)",
+            "sectionOrdinal": 10,
+            "sectionWeightPercentage": 2.27,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.11",
+            "sectionTitle": "Water (Ditching) and Snow",
+            "sectionOrdinal": 11,
+            "sectionWeightPercentage": 1.66,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.12",
+            "sectionTitle": "Engine Failure After Takeoff (Single-Engine)",
+            "sectionOrdinal": 12,
+            "sectionWeightPercentage": 8.21,
+            "questionsGenerated": 4
+          },
+          {
+            "sectionId": "afh.18.13",
+            "sectionTitle": "Emergency Descents",
+            "sectionOrdinal": 13,
+            "sectionWeightPercentage": 3.82,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.18.14",
+            "sectionTitle": "In-Flight Fire",
+            "sectionOrdinal": 14,
+            "sectionWeightPercentage": 0.44,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.15",
+            "sectionTitle": "Engine Fire",
+            "sectionOrdinal": 15,
+            "sectionWeightPercentage": 5.21,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.18.16",
+            "sectionTitle": "Electrical Fires",
+            "sectionOrdinal": 16,
+            "sectionWeightPercentage": 1.67,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.17",
+            "sectionTitle": "Cabin Fire",
+            "sectionOrdinal": 17,
+            "sectionWeightPercentage": 2.58,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.18",
+            "sectionTitle": "Flight Control Malfunction/Failure",
+            "sectionOrdinal": 18,
+            "sectionWeightPercentage": 2.51,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.19",
+            "sectionTitle": "Asymmetric (Split) Flap",
+            "sectionOrdinal": 19,
+            "sectionWeightPercentage": 1.7,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.20",
+            "sectionTitle": "Loss of Elevator Control",
+            "sectionOrdinal": 20,
+            "sectionWeightPercentage": 3.97,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.18.21",
+            "sectionTitle": "Landing Gear Malfunction",
+            "sectionOrdinal": 21,
+            "sectionWeightPercentage": 4.84,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.18.22",
+            "sectionTitle": "System Malfunctions",
+            "sectionOrdinal": 22,
+            "sectionWeightPercentage": 4.19,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.18.23",
+            "sectionTitle": "Pitot-Static System",
+            "sectionOrdinal": 23,
+            "sectionWeightPercentage": 6.35,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.18.24",
+            "sectionTitle": "Abnormal Engine Instrument Indication",
+            "sectionOrdinal": 24,
+            "sectionWeightPercentage": 0.44,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.25",
+            "sectionTitle": "Door Opening In-Flight",
+            "sectionOrdinal": 25,
+            "sectionWeightPercentage": 3.11,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.26",
+            "sectionTitle": "Inadvertent VFR Flight Into IMC",
+            "sectionOrdinal": 26,
+            "sectionWeightPercentage": 2.72,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.27",
+            "sectionTitle": "Recognition",
+            "sectionOrdinal": 27,
+            "sectionWeightPercentage": 1.95,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.28",
+            "sectionTitle": "Maintaining Airplane Control",
+            "sectionOrdinal": 28,
+            "sectionWeightPercentage": 2.83,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.29",
+            "sectionTitle": "Attitude Control",
+            "sectionOrdinal": 29,
+            "sectionWeightPercentage": 2.54,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.30",
+            "sectionTitle": "Turns",
+            "sectionOrdinal": 30,
+            "sectionWeightPercentage": 1.4,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.31",
+            "sectionTitle": "Climbs",
+            "sectionOrdinal": 31,
+            "sectionWeightPercentage": 1.85,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.32",
+            "sectionTitle": "Descents",
+            "sectionOrdinal": 32,
+            "sectionWeightPercentage": 1.62,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.33",
+            "sectionTitle": "Combined Maneuvers",
+            "sectionOrdinal": 33,
+            "sectionWeightPercentage": 1.29,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.34",
+            "sectionTitle": "Transition to Visual Flight",
+            "sectionOrdinal": 34,
+            "sectionWeightPercentage": 2.15,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.35",
+            "sectionTitle": "Emergency Response Systems",
+            "sectionOrdinal": 35,
+            "sectionWeightPercentage": 0.64,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.36",
+            "sectionTitle": "Ballistic Parachutes",
+            "sectionOrdinal": 36,
+            "sectionWeightPercentage": 2.48,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.37",
+            "sectionTitle": "Autoland",
+            "sectionOrdinal": 37,
+            "sectionWeightPercentage": 3.23,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.18.38",
+            "sectionTitle": "Chapter Summary",
+            "sectionOrdinal": 38,
+            "sectionWeightPercentage": 1.56,
+            "questionsGenerated": 1
+          }
+        ],
+        "buildStatus": "complete",
+        "buildStage": "questions",
+        "completedSections": 38,
+        "incompleteSections": [],
+        "failureReason": ""
+      }
+    }
+  },
+  {
+    "questionid": "AFH.18.1.1",
+    "question": "What are key considerations for executing an emergency landing in small fixed-wing airplanes?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.1.1.c.1",
+        "text": "Use airplane structure for self-protection"
+      },
+      {
+        "id": "AFH.18.1.1.c.2",
+        "text": "Consider almost any terrain as suitable"
+      },
+      {
+        "id": "AFH.18.1.1.c.3",
+        "text": "Protect passengers using airplane structure"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.1.1.w.1",
+        "text": "Focus solely on engine performance"
+      },
+      {
+        "id": "AFH.18.1.1.w.2",
+        "text": "Prioritize speed over control"
+      },
+      {
+        "id": "AFH.18.1.1.w.3",
+        "text": "Always aim for water landings"
+      },
+      {
+        "id": "AFH.18.1.1.w.4",
+        "text": "Rely on autopilot systems"
+      },
+      {
+        "id": "AFH.18.1.1.w.5",
+        "text": "Ignore terrain conditions"
+      },
+      {
+        "id": "AFH.18.1.1.w.6",
+        "text": "Avoid using flaps"
+      },
+      {
+        "id": "AFH.18.1.1.w.7",
+        "text": "Descend as quickly as possible"
+      },
+      {
+        "id": "AFH.18.1.1.w.8",
+        "text": "Only land on paved runways"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction",
+    "subjects": [
+      "Emergency Landings",
+      "Pilot Safety",
+      "Terrain Assessment"
+    ]
+  },
+  {
+    "questionid": "AFH.18.2.1",
+    "question": "Which of the following are TRUE regarding the types of emergency landings defined in the Airplane Flying Handbook?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.2.1.c.1",
+        "text": "A precautionary landing is generally less hazardous than a forced landing because the pilot has more time for terrain selection and approach planning"
+      },
+      {
+        "id": "AFH.18.2.1.c.2",
+        "text": "Ditching is defined as a forced or precautionary landing on water"
+      },
+      {
+        "id": "AFH.18.2.1.c.3",
+        "text": "A forced landing is an immediate landing necessitated by the inability to continue further flight"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.2.1.w.1",
+        "text": "A precautionary landing requires the pilot to land immediately due to complete engine failure"
+      },
+      {
+        "id": "AFH.18.2.1.w.2",
+        "text": "Ditching refers exclusively to a forced landing on water, not a precautionary landing on water"
+      },
+      {
+        "id": "AFH.18.2.1.w.3",
+        "text": "A forced landing is always planned in advance, allowing the pilot time to select suitable terrain"
+      },
+      {
+        "id": "AFH.18.2.1.w.4",
+        "text": "A precautionary landing is more hazardous than a forced landing because the pilot cannot use engine power"
+      },
+      {
+        "id": "AFH.18.2.1.w.5",
+        "text": "Fuel shortage alone is never a valid reason to initiate a precautionary landing"
+      },
+      {
+        "id": "AFH.18.2.1.w.6",
+        "text": "A non-instrument-rated pilot trapped by weather should always continue flight rather than consider a precautionary landing"
+      },
+      {
+        "id": "AFH.18.2.1.w.7",
+        "text": "Wishful thinking is an acceptable decision-making strategy when facing a self-inflicted predicament in flight"
+      },
+      {
+        "id": "AFH.18.2.1.w.8",
+        "text": "During a precautionary landing, the pilot cannot use power to compensate for errors in judgment or technique"
+      }
+    ],
+    "source": "AFH Chapter 18, Section 18.2: Types of Emergency Landings",
+    "subjects": [
+      "Emergency Procedures",
+      "Types of Emergency Landings",
+      "Precautionary Landing",
+      "Forced Landing",
+      "Ditching"
+    ]
+  },
+  {
+    "questionid": "AFH.18.3.1",
+    "question": "Which of the following are common errors a pilot might make due to an undue desire to save the airplane during an emergency?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.3.1.c.1",
+        "text": "Making a 180° turn back to the runway when available altitude is insufficient."
+      },
+      {
+        "id": "AFH.18.3.1.c.2",
+        "text": "Stretching the glide without regard for minimum control speed."
+      },
+      {
+        "id": "AFH.18.3.1.c.3",
+        "text": "Accepting an approach and touchdown situation that leaves no margin for error."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.3.1.w.1",
+        "text": "Failure to lower the nose to maintain flying speed."
+      },
+      {
+        "id": "AFH.18.3.1.w.2",
+        "text": "Delay in the selection of the most suitable landing area."
+      },
+      {
+        "id": "AFH.18.3.1.w.3",
+        "text": "Indecision in general."
+      },
+      {
+        "id": "AFH.18.3.1.w.4",
+        "text": "Desperate attempts to correct whatever went wrong at the expense of airplane control."
+      },
+      {
+        "id": "AFH.18.3.1.w.5",
+        "text": "Prioritizing occupant safety by sacrificing the airplane."
+      },
+      {
+        "id": "AFH.18.3.1.w.6",
+        "text": "Maintaining composure and applying general emergency procedures."
+      },
+      {
+        "id": "AFH.18.3.1.w.7",
+        "text": "Immediately securing the engine after a power loss."
+      },
+      {
+        "id": "AFH.18.3.1.w.8",
+        "text": "Conducting a thorough preflight inspection."
+      }
+    ],
+    "source": "afh.18.3",
+    "subjects": [
+      "Psychological Hazards",
+      "Emergency Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.18.4.1",
+    "question": "What are key considerations for a pilot during an emergency landing to minimize crash injuries?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.4.1.c.1",
+        "text": "Keeping the cabin area intact"
+      },
+      {
+        "id": "AFH.18.4.1.c.2",
+        "text": "Using dispensable structure to absorb impact"
+      },
+      {
+        "id": "AFH.18.4.1.c.3",
+        "text": "Avoiding forceful bodily contact with interior structure"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.4.1.w.1",
+        "text": "Increasing groundspeed"
+      },
+      {
+        "id": "AFH.18.4.1.w.2",
+        "text": "Choosing the smallest available field"
+      },
+      {
+        "id": "AFH.18.4.1.w.3",
+        "text": "Landing with maximum airspeed"
+      },
+      {
+        "id": "AFH.18.4.1.w.4",
+        "text": "Ignoring vegetation and trees"
+      },
+      {
+        "id": "AFH.18.4.1.w.5",
+        "text": "Focusing on non-dispensable structure"
+      },
+      {
+        "id": "AFH.18.4.1.w.6",
+        "text": "Relying solely on pilot technique"
+      },
+      {
+        "id": "AFH.18.4.1.w.7",
+        "text": "Avoiding cultivated fields"
+      },
+      {
+        "id": "AFH.18.4.1.w.8",
+        "text": "Using essential structure for slowing down"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction, Section: Basic Safety Concepts",
+    "subjects": [
+      "Emergency Landing",
+      "Crash Injury Prevention",
+      "Pilot Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.18.4.2",
+    "question": "Which structures can be used to absorb energy during an emergency landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.4.2.c.1",
+        "text": "Dispensable airplane structure"
+      },
+      {
+        "id": "AFH.18.4.2.c.2",
+        "text": "Vegetation and trees"
+      },
+      {
+        "id": "AFH.18.4.2.c.3",
+        "text": "Manmade structures"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.4.2.w.1",
+        "text": "Essential airplane structure"
+      },
+      {
+        "id": "AFH.18.4.2.w.2",
+        "text": "Pilot's seat"
+      },
+      {
+        "id": "AFH.18.4.2.w.3",
+        "text": "Cockpit controls"
+      },
+      {
+        "id": "AFH.18.4.2.w.4",
+        "text": "Landing gear only"
+      },
+      {
+        "id": "AFH.18.4.2.w.5",
+        "text": "Passenger seats"
+      },
+      {
+        "id": "AFH.18.4.2.w.6",
+        "text": "Aircraft windows"
+      },
+      {
+        "id": "AFH.18.4.2.w.7",
+        "text": "Aircraft doors"
+      },
+      {
+        "id": "AFH.18.4.2.w.8",
+        "text": "Engine components"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction, Section: Basic Safety Concepts",
+    "subjects": [
+      "Energy Absorption",
+      "Emergency Landing",
+      "Safety Structures"
+    ]
+  },
+  {
+    "questionid": "AFH.18.4.3",
+    "question": "What factors influence the severity of a deceleration process during an emergency landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.4.3.c.1",
+        "text": "Groundspeed"
+      },
+      {
+        "id": "AFH.18.4.3.c.2",
+        "text": "Stopping distance"
+      },
+      {
+        "id": "AFH.18.4.3.c.3",
+        "text": "Touchdown airspeed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.4.3.w.1",
+        "text": "Pilot's age"
+      },
+      {
+        "id": "AFH.18.4.3.w.2",
+        "text": "Aircraft color"
+      },
+      {
+        "id": "AFH.18.4.3.w.3",
+        "text": "Weather conditions"
+      },
+      {
+        "id": "AFH.18.4.3.w.4",
+        "text": "Passenger weight"
+      },
+      {
+        "id": "AFH.18.4.3.w.5",
+        "text": "Altitude"
+      },
+      {
+        "id": "AFH.18.4.3.w.6",
+        "text": "Fuel level"
+      },
+      {
+        "id": "AFH.18.4.3.w.7",
+        "text": "Engine power"
+      },
+      {
+        "id": "AFH.18.4.3.w.8",
+        "text": "Aircraft model"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction, Section: Basic Safety Concepts",
+    "subjects": [
+      "Deceleration Factors",
+      "Emergency Landing",
+      "Crash Dynamics"
+    ]
+  },
+  {
+    "questionid": "AFH.18.5.1",
+    "question": "During an emergency landing, which conditions represent critical errors or hazards related to attitude and sink rate control at touchdown?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.5.1.c.1",
+        "text": "An excessive nose-low pitch attitude risks 'sticking' the nose in the ground on flat terrain"
+      },
+      {
+        "id": "AFH.18.5.1.c.2",
+        "text": "Steep bank angles just before touchdown increase stalling speed and risk a wingtip strike"
+      },
+      {
+        "id": "AFH.18.5.1.c.3",
+        "text": "A flat touchdown at a sink rate well in excess of 500 fpm on a hard surface can cause injury without destroying cabin structure"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.5.1.w.1",
+        "text": "Maintaining a wings-level attitude throughout the approach is the primary cause of emergency landing fatalities"
+      },
+      {
+        "id": "AFH.18.5.1.w.2",
+        "text": "A sink rate below 200 fpm is considered the most dangerous condition during emergency touchdowns"
+      },
+      {
+        "id": "AFH.18.5.1.w.3",
+        "text": "High-wing airplanes are immune to structural collapse during high sink rate touchdowns"
+      },
+      {
+        "id": "AFH.18.5.1.w.4",
+        "text": "Excessive nose-high pitch attitude is the most critical error on flat open terrain"
+      },
+      {
+        "id": "AFH.18.5.1.w.5",
+        "text": "Steep bank angles reduce stalling speed and are recommended just before touchdown"
+      },
+      {
+        "id": "AFH.18.5.1.w.6",
+        "text": "Soft terrain always prevents structural damage regardless of sink rate"
+      },
+      {
+        "id": "AFH.18.5.1.w.7",
+        "text": "A sink rate of 300 fpm on a hard surface is considered well in excess of safe limits"
+      },
+      {
+        "id": "AFH.18.5.1.w.8",
+        "text": "Low-wing airplanes are protected from impact injury by their flexible bottom construction"
+      }
+    ],
+    "source": "AFH Chapter 18, Section 5: Attitude and Sink Rate Control",
+    "subjects": [
+      "Emergency Landing Attitude Control",
+      "Sink Rate Management",
+      "Touchdown Hazards"
+    ]
+  },
+  {
+    "questionid": "AFH.18.6.1",
+    "question": "What factors influence a pilot's choice of emergency landing sites?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.6.1.c.1",
+        "text": "The route selected during preflight planning"
+      },
+      {
+        "id": "AFH.18.6.1.c.2",
+        "text": "The height above the ground when the emergency occurs"
+      },
+      {
+        "id": "AFH.18.6.1.c.3",
+        "text": "Excess airspeed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.6.1.w.1",
+        "text": "The color of the terrain"
+      },
+      {
+        "id": "AFH.18.6.1.w.2",
+        "text": "The time of day"
+      },
+      {
+        "id": "AFH.18.6.1.w.3",
+        "text": "The type of aircraft"
+      },
+      {
+        "id": "AFH.18.6.1.w.4",
+        "text": "The weather conditions"
+      },
+      {
+        "id": "AFH.18.6.1.w.5",
+        "text": "The pilot's experience level"
+      },
+      {
+        "id": "AFH.18.6.1.w.6",
+        "text": "The presence of nearby airports"
+      },
+      {
+        "id": "AFH.18.6.1.w.7",
+        "text": "The availability of emergency services"
+      },
+      {
+        "id": "AFH.18.6.1.w.8",
+        "text": "The direction of the wind"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction, Section: Terrain Selection",
+    "subjects": [
+      "Emergency Procedures",
+      "Terrain Selection",
+      "Pilot Decision-Making"
+    ]
+  },
+  {
+    "questionid": "AFH.18.7.1",
+    "question": "When executing an emergency landing, which of the following actions or considerations are recommended or prioritized just before touchdown?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.7.1.c.1",
+        "text": "Prioritizing positive airplane control over configuration and checklist tasks during the final approach."
+      },
+      {
+        "id": "AFH.18.7.1.c.2",
+        "text": "Switching the engine and fuel off just before touchdown to reduce fire hazard."
+      },
+      {
+        "id": "AFH.18.7.1.c.3",
+        "text": "Deactivating the electrical system before touchdown, but only after vital systems are no longer needed."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.7.1.w.1",
+        "text": "Always performing a gear-up landing on any terrain to minimize damage."
+      },
+      {
+        "id": "AFH.18.7.1.w.2",
+        "text": "Fully extending flaps during an emergency approach to maximize lift."
+      },
+      {
+        "id": "AFH.18.7.1.w.3",
+        "text": "Turning off the battery master switch immediately upon recognizing an emergency to prevent fire."
+      },
+      {
+        "id": "AFH.18.7.1.w.4",
+        "text": "Prioritizing completion of all checklist tasks before focusing on airplane control during the final approach."
+      },
+      {
+        "id": "AFH.18.7.1.w.5",
+        "text": "Keeping an irregularly running engine on until impact to maximize any available power."
+      },
+      {
+        "id": "AFH.18.7.1.w.6",
+        "text": "Assuming an extended landing gear always provides a protective effect on the cabin area."
+      },
+      {
+        "id": "AFH.18.7.1.w.7",
+        "text": "Always preferring a gear-down landing to prevent fuel tank rupture."
+      },
+      {
+        "id": "AFH.18.7.1.w.8",
+        "text": "Using flaps extensively to improve gliding distance during an emergency."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Emergency Procedures",
+      "Airplane Configuration",
+      "System Management"
+    ]
+  },
+  {
+    "questionid": "AFH.18.8.1",
+    "question": "What factors should govern the planning of an approach when the pilot has time to maneuver?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.8.1.c.1",
+        "text": "Wind direction and velocity"
+      },
+      {
+        "id": "AFH.18.8.1.c.2",
+        "text": "Dimensions and slope of the chosen field"
+      },
+      {
+        "id": "AFH.18.8.1.c.3",
+        "text": "Obstacles in the final approach path"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.8.1.w.1",
+        "text": "Fuel level"
+      },
+      {
+        "id": "AFH.18.8.1.w.2",
+        "text": "Passenger weight"
+      },
+      {
+        "id": "AFH.18.8.1.w.3",
+        "text": "Aircraft color"
+      },
+      {
+        "id": "AFH.18.8.1.w.4",
+        "text": "Pilot's experience"
+      },
+      {
+        "id": "AFH.18.8.1.w.5",
+        "text": "Time of day"
+      },
+      {
+        "id": "AFH.18.8.1.w.6",
+        "text": "Altitude"
+      },
+      {
+        "id": "AFH.18.8.1.w.7",
+        "text": "Visibility conditions"
+      },
+      {
+        "id": "AFH.18.8.1.w.8",
+        "text": "Temperature"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction, Section: Approach",
+    "subjects": [
+      "Emergency Procedures",
+      "Approach Planning",
+      "Pilot Decision Making"
+    ]
+  },
+  {
+    "questionid": "AFH.18.9.1",
+    "question": "What considerations should a pilot have when selecting a landing site in a confined area?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.9.1.c.1",
+        "text": "Avoid steep descents into open spots between obstacles."
+      },
+      {
+        "id": "AFH.18.9.1.c.2",
+        "text": "Consider ground-looping or retracting landing gear if necessary."
+      },
+      {
+        "id": "AFH.18.9.1.c.3",
+        "text": "Be cautious of power or telephone lines near roads."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.9.1.w.1",
+        "text": "Always choose a road for landing."
+      },
+      {
+        "id": "AFH.18.9.1.w.2",
+        "text": "Land only on water surfaces."
+      },
+      {
+        "id": "AFH.18.9.1.w.3",
+        "text": "Ignore obstacles during descent."
+      },
+      {
+        "id": "AFH.18.9.1.w.4",
+        "text": "Always delay touchdown until the airplane stalls."
+      },
+      {
+        "id": "AFH.18.9.1.w.5",
+        "text": "Select the largest open area regardless of descent angle."
+      },
+      {
+        "id": "AFH.18.9.1.w.6",
+        "text": "Focus solely on deceleration after landing."
+      },
+      {
+        "id": "AFH.18.9.1.w.7",
+        "text": "Choose any open spot without assessing approach path."
+      },
+      {
+        "id": "AFH.18.9.1.w.8",
+        "text": "Always retract landing gear in emergencies."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction, Section 9: Confined Areas",
+    "subjects": [
+      "Emergency Procedures",
+      "Landing Techniques",
+      "Pilot Decision-Making"
+    ]
+  },
+  {
+    "questionid": "AFH.18.10.1",
+    "question": "What are the recommended guidelines for making a tree landing survivable?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.10.1.c.1",
+        "text": "Use the normal landing configuration with full flaps and gear down"
+      },
+      {
+        "id": "AFH.18.10.1.c.2",
+        "text": "Make contact at minimum indicated airspeed, but not below stall speed"
+      },
+      {
+        "id": "AFH.18.10.1.c.3",
+        "text": "Involve the underside of the fuselage and both wings in the initial tree contact"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.10.1.w.1",
+        "text": "Attempt to land on a single wing"
+      },
+      {
+        "id": "AFH.18.10.1.w.2",
+        "text": "Approach with high groundspeed"
+      },
+      {
+        "id": "AFH.18.10.1.w.3",
+        "text": "Avoid using flaps during landing"
+      },
+      {
+        "id": "AFH.18.10.1.w.4",
+        "text": "Aim for tall trees with thin tops"
+      },
+      {
+        "id": "AFH.18.10.1.w.5",
+        "text": "Make contact at maximum airspeed"
+      },
+      {
+        "id": "AFH.18.10.1.w.6",
+        "text": "Directly hit heavy tree trunks with the fuselage"
+      },
+      {
+        "id": "AFH.18.10.1.w.7",
+        "text": "Attempt to land nose-first"
+      },
+      {
+        "id": "AFH.18.10.1.w.8",
+        "text": "Avoid using landing gear"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction, Section: Trees (Forest)",
+    "subjects": [
+      "Emergency Procedures",
+      "Tree Landing",
+      "Aviation Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.18.11.1",
+    "question": "When executing a water ditching or snow landing, which of the following procedures are recommended?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.11.1.c.1",
+        "text": "Use no more than intermediate flaps on low-wing airplanes to avoid asymmetrical flap failure"
+      },
+      {
+        "id": "AFH.18.11.1.c.2",
+        "text": "Keep retractable landing gear up unless the AFM/POH advises otherwise"
+      },
+      {
+        "id": "AFH.18.11.1.c.3",
+        "text": "'Drag in' the airplane when possible to counter loss of depth perception over smooth water"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.11.1.w.1",
+        "text": "Extend flaps fully to maximize drag and reduce touchdown speed"
+      },
+      {
+        "id": "AFH.18.11.1.w.2",
+        "text": "Lower retractable gear to provide a stable platform on the water surface"
+      },
+      {
+        "id": "AFH.18.11.1.w.3",
+        "text": "Approach at a steep angle to ensure positive contact with the water surface"
+      },
+      {
+        "id": "AFH.18.11.1.w.4",
+        "text": "Use full flaps on low-wing airplanes to achieve the shortest possible landing roll"
+      },
+      {
+        "id": "AFH.18.11.1.w.5",
+        "text": "Increase approach speed well above minimum to maintain better depth perception"
+      },
+      {
+        "id": "AFH.18.11.1.w.6",
+        "text": "Expect the airplane to sink immediately upon touchdown regardless of wing and fuel tank condition"
+      },
+      {
+        "id": "AFH.18.11.1.w.7",
+        "text": "Treat a snow landing differently from a water ditching by using a higher flap setting"
+      },
+      {
+        "id": "AFH.18.11.1.w.8",
+        "text": "It is mainly about unrelated advanced turbine transition procedures not covered in water (ditching) and snow."
+      }
+    ],
+    "source": "AFH Chapter 18, Section 18.11: Water (Ditching) and Snow",
+    "subjects": [
+      "Emergency Procedures",
+      "Ditching Techniques",
+      "Snow Landing",
+      "Flap Configuration",
+      "Depth Perception Hazards"
+    ]
+  },
+  {
+    "questionid": "AFH.18.12.1",
+    "question": "What should a pilot do immediately after an engine failure during the initial climb?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.12.1.c.1",
+        "text": "Lower the nose of the airplane"
+      },
+      {
+        "id": "AFH.18.12.1.c.2",
+        "text": "Establish the proper glide attitude"
+      },
+      {
+        "id": "AFH.18.12.1.c.3",
+        "text": "Consider landing straight ahead"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.12.1.w.1",
+        "text": "Increase throttle"
+      },
+      {
+        "id": "AFH.18.12.1.w.2",
+        "text": "Climb to a higher altitude"
+      },
+      {
+        "id": "AFH.18.12.1.w.3",
+        "text": "Turn back immediately"
+      },
+      {
+        "id": "AFH.18.12.1.w.4",
+        "text": "Perform a barrel roll"
+      },
+      {
+        "id": "AFH.18.12.1.w.5",
+        "text": "Engage autopilot"
+      },
+      {
+        "id": "AFH.18.12.1.w.6",
+        "text": "Contact air traffic control"
+      },
+      {
+        "id": "AFH.18.12.1.w.7",
+        "text": "Deploy landing gear"
+      },
+      {
+        "id": "AFH.18.12.1.w.8",
+        "text": "Activate emergency beacon"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction, Section 18.12",
+    "subjects": [
+      "Emergency Procedures",
+      "Initial Climb",
+      "Engine Failure"
+    ]
+  },
+  {
+    "questionid": "AFH.18.12.2",
+    "question": "What are the risks associated with turning back to the airport after an engine failure on takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.12.2.c.1",
+        "text": "Cartwheeling if the airplane strikes the ground"
+      },
+      {
+        "id": "AFH.18.12.2.c.2",
+        "text": "Accelerated stall if the nose is not lowered sufficiently"
+      },
+      {
+        "id": "AFH.18.12.2.c.3",
+        "text": "Increased groundspeed leading to rushed landing"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.12.2.w.1",
+        "text": "Improved glide ratio"
+      },
+      {
+        "id": "AFH.18.12.2.w.2",
+        "text": "Reduced descent rate"
+      },
+      {
+        "id": "AFH.18.12.2.w.3",
+        "text": "Increased lift"
+      },
+      {
+        "id": "AFH.18.12.2.w.4",
+        "text": "Decreased fuel consumption"
+      },
+      {
+        "id": "AFH.18.12.2.w.5",
+        "text": "Enhanced control stability"
+      },
+      {
+        "id": "AFH.18.12.2.w.6",
+        "text": "Lowered risk of collision"
+      },
+      {
+        "id": "AFH.18.12.2.w.7",
+        "text": "Increased altitude"
+      },
+      {
+        "id": "AFH.18.12.2.w.8",
+        "text": "Reduced pilot workload"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction, Section 18.12",
+    "subjects": [
+      "Emergency Procedures",
+      "Engine Failure",
+      "Risk Management"
+    ]
+  },
+  {
+    "questionid": "AFH.18.12.3",
+    "question": "Why is turning back to the runway after engine failure often called 'the impossible turn'?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.12.3.c.1",
+        "text": "Requires complex analysis and consideration of risk"
+      },
+      {
+        "id": "AFH.18.12.3.c.2",
+        "text": "Needs considerable luck to prevent disaster"
+      },
+      {
+        "id": "AFH.18.12.3.c.3",
+        "text": "Often results in a downwind approach"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.12.3.w.1",
+        "text": "Always results in a safe landing"
+      },
+      {
+        "id": "AFH.18.12.3.w.2",
+        "text": "Reduces the risk of injury"
+      },
+      {
+        "id": "AFH.18.12.3.w.3",
+        "text": "Increases altitude"
+      },
+      {
+        "id": "AFH.18.12.3.w.4",
+        "text": "Simplifies decision-making"
+      },
+      {
+        "id": "AFH.18.12.3.w.5",
+        "text": "Improves aircraft performance"
+      },
+      {
+        "id": "AFH.18.12.3.w.6",
+        "text": "Decreases pilot stress"
+      },
+      {
+        "id": "AFH.18.12.3.w.7",
+        "text": "Enhances visibility"
+      },
+      {
+        "id": "AFH.18.12.3.w.8",
+        "text": "Ensures runway alignment"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction, Section 18.12",
+    "subjects": [
+      "Emergency Procedures",
+      "Engine Failure",
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.18.12.4",
+    "question": "What factors should a pilot consider before attempting a turn back to the runway after engine failure?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.12.4.c.1",
+        "text": "Expected altitude loss during the turn"
+      },
+      {
+        "id": "AFH.18.12.4.c.2",
+        "text": "Whether the airplane can glide back to the field"
+      },
+      {
+        "id": "AFH.18.12.4.c.3",
+        "text": "Pilot training and practice for the maneuver"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.12.4.w.1",
+        "text": "Current fuel levels"
+      },
+      {
+        "id": "AFH.18.12.4.w.2",
+        "text": "Passenger comfort"
+      },
+      {
+        "id": "AFH.18.12.4.w.3",
+        "text": "Weather conditions at destination"
+      },
+      {
+        "id": "AFH.18.12.4.w.4",
+        "text": "Aircraft color"
+      },
+      {
+        "id": "AFH.18.12.4.w.5",
+        "text": "Pilot's personal schedule"
+      },
+      {
+        "id": "AFH.18.12.4.w.6",
+        "text": "In-flight entertainment options"
+      },
+      {
+        "id": "AFH.18.12.4.w.7",
+        "text": "Cabin temperature"
+      },
+      {
+        "id": "AFH.18.12.4.w.8",
+        "text": "Availability of snacks"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction, Section 18.12",
+    "subjects": [
+      "Emergency Procedures",
+      "Engine Failure",
+      "Pilot Decision-Making"
+    ]
+  },
+  {
+    "questionid": "AFH.18.13.1",
+    "question": "According to the Airplane Flying Handbook, what are key considerations and initial actions during an emergency descent?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.13.1.c.1",
+        "text": "Reduce power to idle and place the propeller control in the low pitch (high rpm) position, if equipped."
+      },
+      {
+        "id": "AFH.18.13.1.c.2",
+        "text": "Establish a bank of approximately 30 to 45° to maintain positive load factors."
+      },
+      {
+        "id": "AFH.18.13.1.c.3",
+        "text": "Extend landing gear and flaps as recommended by the manufacturer for maximum drag."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.13.1.w.1",
+        "text": "Maintain cruise power to ensure adequate control authority."
+      },
+      {
+        "id": "AFH.18.13.1.w.2",
+        "text": "Place the propeller control in the high pitch (low rpm) position to reduce drag."
+      },
+      {
+        "id": "AFH.18.13.1.w.3",
+        "text": "Avoid extending landing gear or flaps to prevent structural stress."
+      },
+      {
+        "id": "AFH.18.13.1.w.4",
+        "text": "Initiate the descent in a straight line to reach the ground faster."
+      },
+      {
+        "id": "AFH.18.13.1.w.5",
+        "text": "Exceed the never-exceed speed (VNE) if necessary to achieve the fastest descent rate."
+      },
+      {
+        "id": "AFH.18.13.1.w.6",
+        "text": "Increase airspeed beyond the maximum flap extended speed (VFE) for maximum effectiveness."
+      },
+      {
+        "id": "AFH.18.13.1.w.7",
+        "text": "Maintain a wings-level attitude to minimize G forces."
+      },
+      {
+        "id": "AFH.18.13.1.w.8",
+        "text": "Avoid making a radio call to prevent distracting other aircraft."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction",
+    "subjects": [
+      "Emergency Procedures",
+      "Flight Controls",
+      "Aircraft Configuration"
+    ]
+  },
+  {
+    "questionid": "AFH.18.13.2",
+    "question": "Based on the provided text, what are valid reasons for initiating an emergency descent and important speed considerations during the maneuver?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.13.2.c.1",
+        "text": "A sudden loss of cabin pressurization."
+      },
+      {
+        "id": "AFH.18.13.2.c.2",
+        "text": "The objective is to descend as rapidly as possible without exceeding structural limitations."
+      },
+      {
+        "id": "AFH.18.13.2.c.3",
+        "text": "Comply with the design maneuvering speed (VA) limitations if the descent is conducted in turbulent conditions."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.13.2.w.1",
+        "text": "To practice high-speed maneuvers for proficiency."
+      },
+      {
+        "id": "AFH.18.13.2.w.2",
+        "text": "To intentionally exceed the maximum landing gear extended speed (VLE) for a quicker descent."
+      },
+      {
+        "id": "AFH.18.13.2.w.3",
+        "text": "To cool the engine cylinders during prolonged flight."
+      },
+      {
+        "id": "AFH.18.13.2.w.4",
+        "text": "A minor electrical system malfunction."
+      },
+      {
+        "id": "AFH.18.13.2.w.5",
+        "text": "The primary goal is to maintain a constant airspeed throughout the descent."
+      },
+      {
+        "id": "AFH.18.13.2.w.6",
+        "text": "To test the aircraft's structural limits."
+      },
+      {
+        "id": "AFH.18.13.2.w.7",
+        "text": "To avoid making a precautionary landing."
+      },
+      {
+        "id": "AFH.18.13.2.w.8",
+        "text": "To achieve the slowest possible rate of descent to conserve fuel."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction",
+    "subjects": [
+      "Emergency Procedures",
+      "Aircraft Limitations",
+      "Aerodynamics"
+    ]
+  },
+  {
+    "questionid": "AFH.18.14.1",
+    "question": "What are the classifications of in-flight fires according to the Airplane Flying Handbook?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.14.1.c.1",
+        "text": "In-flight engine fires"
+      },
+      {
+        "id": "AFH.18.14.1.c.2",
+        "text": "Electrical fires"
+      },
+      {
+        "id": "AFH.18.14.1.c.3",
+        "text": "Cabin fires"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.14.1.w.1",
+        "text": "Fuel tank fires"
+      },
+      {
+        "id": "AFH.18.14.1.w.2",
+        "text": "Landing gear fires"
+      },
+      {
+        "id": "AFH.18.14.1.w.3",
+        "text": "Hydraulic system fires"
+      },
+      {
+        "id": "AFH.18.14.1.w.4",
+        "text": "Avionics fires"
+      },
+      {
+        "id": "AFH.18.14.1.w.5",
+        "text": "Wing fires"
+      },
+      {
+        "id": "AFH.18.14.1.w.6",
+        "text": "Tail section fires"
+      },
+      {
+        "id": "AFH.18.14.1.w.7",
+        "text": "Cargo hold fires"
+      },
+      {
+        "id": "AFH.18.14.1.w.8",
+        "text": "Control surface fires"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18, Section 14",
+    "subjects": [
+      "Emergency Procedures",
+      "In-Flight Fire",
+      "Pilot Training"
+    ]
+  },
+  {
+    "questionid": "AFH.18.15.1",
+    "question": "What are the initial steps a pilot should take upon discovering an in-flight engine compartment fire, unless the AFM/POH directs otherwise?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.15.1.c.1",
+        "text": "Place the mixture control in the idle cut off position"
+      },
+      {
+        "id": "AFH.18.15.1.c.2",
+        "text": "Turn the fuel selector shutoff valve to the OFF position"
+      },
+      {
+        "id": "AFH.18.15.1.c.3",
+        "text": "Leave the ignition switch ON to burn remaining fuel in the lines"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.15.1.w.1",
+        "text": "Immediately shut off the ignition switch to prevent sparks"
+      },
+      {
+        "id": "AFH.18.15.1.w.2",
+        "text": "Increase airspeed to blow out the flames"
+      },
+      {
+        "id": "AFH.18.15.1.w.3",
+        "text": "Activate the fire suppression system before adjusting fuel controls"
+      },
+      {
+        "id": "AFH.18.15.1.w.4",
+        "text": "Turn the electrical master switch off as the first action"
+      },
+      {
+        "id": "AFH.18.15.1.w.5",
+        "text": "Open the throttle fully to consume remaining fuel faster"
+      },
+      {
+        "id": "AFH.18.15.1.w.6",
+        "text": "Declare an emergency and land before adjusting any controls"
+      },
+      {
+        "id": "AFH.18.15.1.w.7",
+        "text": "Place the fuel selector to the richest mixture setting"
+      },
+      {
+        "id": "AFH.18.15.1.w.8",
+        "text": "Feather the propeller as the very first corrective action"
+      }
+    ],
+    "source": "AFH Chapter 18, Section 18.15 – Engine Fire",
+    "subjects": [
+      "Engine Fire Procedures",
+      "Fuel System Management",
+      "Emergency Checklist Actions"
+    ]
+  },
+  {
+    "questionid": "AFH.18.15.2",
+    "question": "How can a pilot distinguish an oil-fed engine compartment fire from a fuel-fed engine compartment fire, and what action addresses an oil-fed fire?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.15.2.c.1",
+        "text": "An oil-fed fire produces thick black smoke, while a fuel-fed fire produces bright orange flames"
+      },
+      {
+        "id": "AFH.18.15.2.c.2",
+        "text": "Stopping propeller rotation halts the engine-driven oil pump feeding an oil-fed fire"
+      },
+      {
+        "id": "AFH.18.15.2.c.3",
+        "text": "Propeller rotation can be stopped by placing the pitch control to minimum rpm and raising the nose to reduce airspeed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.15.2.w.1",
+        "text": "A fuel-fed fire produces thick black smoke, while an oil-fed fire produces bright orange flames"
+      },
+      {
+        "id": "AFH.18.15.2.w.2",
+        "text": "Increasing airspeed is the recommended method to stop an oil-fed fire"
+      },
+      {
+        "id": "AFH.18.15.2.w.3",
+        "text": "Shutting off the electrical master switch is the primary action for an oil-fed fire"
+      },
+      {
+        "id": "AFH.18.15.2.w.4",
+        "text": "An oil-fed fire is identified by white smoke and requires immediate engine restart"
+      },
+      {
+        "id": "AFH.18.15.2.w.5",
+        "text": "Feathering is never an acceptable method to stop propeller rotation during an oil-fed fire"
+      },
+      {
+        "id": "AFH.18.15.2.w.6",
+        "text": "Placing the mixture to full rich is the correct response to an oil-fed engine fire"
+      },
+      {
+        "id": "AFH.18.15.2.w.7",
+        "text": "An oil-fed fire can be extinguished by opening cowl flaps to increase airflow"
+      },
+      {
+        "id": "AFH.18.15.2.w.8",
+        "text": "Both oil-fed and fuel-fed fires are identified solely by the color of the engine cowling discoloration"
+      }
+    ],
+    "source": "AFH Chapter 18, Section 18.15 – Engine Fire",
+    "subjects": [
+      "Oil-Fed vs Fuel-Fed Fire Identification",
+      "Propeller Control During Emergencies",
+      "Engine Fire Suppression Techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.18.15.3",
+    "question": "What are important considerations regarding the electrical master switch and structural integrity during an in-flight engine compartment fire?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.15.3.c.1",
+        "text": "Shutting off the electrical master switch prevents use of panel radios for transmitting distress messages"
+      },
+      {
+        "id": "AFH.18.15.3.c.2",
+        "text": "Deactivating the electrical system causes ATC to lose transponder returns"
+      },
+      {
+        "id": "AFH.18.15.3.c.3",
+        "text": "Even a brief but intense engine fire could cause dangerous structural damage to the wing"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.15.3.w.1",
+        "text": "The electrical master switch should always be the first item shut off during any engine fire"
+      },
+      {
+        "id": "AFH.18.15.3.w.2",
+        "text": "Transponder returns are unaffected when the electrical master switch is turned off"
+      },
+      {
+        "id": "AFH.18.15.3.w.3",
+        "text": "Structural damage from an engine fire is only a concern for twin-engine airplanes"
+      },
+      {
+        "id": "AFH.18.15.3.w.4",
+        "text": "An engine fire that appears extinguished will not rekindle once airspeed is stabilized"
+      },
+      {
+        "id": "AFH.18.15.3.w.5",
+        "text": "Pilots of twin-engine airplanes must always divert immediately regardless of fire status"
+      },
+      {
+        "id": "AFH.18.15.3.w.6",
+        "text": "Panel radios operate independently of the electrical master switch during emergencies"
+      },
+      {
+        "id": "AFH.18.15.3.w.7",
+        "text": "Wing structural failure from fire is only possible if flames are visible to the pilot"
+      },
+      {
+        "id": "AFH.18.15.3.w.8",
+        "text": "The electrical master switch should be shut off only if the airplane is equipped with a fire suppression system"
+      }
+    ],
+    "source": "AFH Chapter 18, Section 18.15 – Engine Fire",
+    "subjects": [
+      "Electrical System Management During Fire",
+      "Structural Integrity Concerns",
+      "ATC Communication During Emergencies"
+    ]
+  },
+  {
+    "questionid": "AFH.18.16.1",
+    "question": "What are the initial steps a pilot should take when detecting an electrical fire in flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.16.1.c.1",
+        "text": "Turn off the battery master switch and alternator/generator switches"
+      },
+      {
+        "id": "AFH.18.16.1.c.2",
+        "text": "Attempt to identify the faulty circuit by checking circuit breakers"
+      },
+      {
+        "id": "AFH.18.16.1.c.3",
+        "text": "Land as soon as possible"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.16.1.w.1",
+        "text": "Increase altitude to reduce fire risk"
+      },
+      {
+        "id": "AFH.18.16.1.w.2",
+        "text": "Open all windows to ventilate the cockpit"
+      },
+      {
+        "id": "AFH.18.16.1.w.3",
+        "text": "Use water to extinguish the fire"
+      },
+      {
+        "id": "AFH.18.16.1.w.4",
+        "text": "Ignore the odor if no smoke is visible"
+      },
+      {
+        "id": "AFH.18.16.1.w.5",
+        "text": "Continue flying to the destination"
+      },
+      {
+        "id": "AFH.18.16.1.w.6",
+        "text": "Turn off only the avionics"
+      },
+      {
+        "id": "AFH.18.16.1.w.7",
+        "text": "Switch off the autopilot"
+      },
+      {
+        "id": "AFH.18.16.1.w.8",
+        "text": "Use a fire extinguisher on the circuit breakers"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction",
+    "subjects": [
+      "Emergency Procedures",
+      "Electrical Systems",
+      "Fire Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.18.17.1",
+    "question": "What are the primary sources of cabin fires in airplanes?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.17.1.c.1",
+        "text": "Careless smoking by pilot or passengers"
+      },
+      {
+        "id": "AFH.18.17.1.c.2",
+        "text": "Electrical system malfunctions"
+      },
+      {
+        "id": "AFH.18.17.1.c.3",
+        "text": "Heating system malfunctions"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.17.1.w.1",
+        "text": "Fuel system leaks"
+      },
+      {
+        "id": "AFH.18.17.1.w.2",
+        "text": "Hydraulic system failures"
+      },
+      {
+        "id": "AFH.18.17.1.w.3",
+        "text": "Overloaded cargo"
+      },
+      {
+        "id": "AFH.18.17.1.w.4",
+        "text": "Improperly stored luggage"
+      },
+      {
+        "id": "AFH.18.17.1.w.5",
+        "text": "Engine overheating"
+      },
+      {
+        "id": "AFH.18.17.1.w.6",
+        "text": "Landing gear friction"
+      },
+      {
+        "id": "AFH.18.17.1.w.7",
+        "text": "Bird strikes"
+      },
+      {
+        "id": "AFH.18.17.1.w.8",
+        "text": "Turbulence"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction, Section: Cabin Fire",
+    "subjects": [
+      "Aviation Safety",
+      "Emergency Procedures",
+      "Aircraft Systems"
+    ]
+  },
+  {
+    "questionid": "AFH.18.18.1",
+    "question": "What are some considerations for executing a no-flap approach and landing in light airplanes?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.18.1.c.1",
+        "text": "Requires more runway than normal"
+      },
+      {
+        "id": "AFH.18.18.1.c.2",
+        "text": "Nose-high attitude needed to maintain altitude"
+      },
+      {
+        "id": "AFH.18.18.1.c.3",
+        "text": "Airplane tends to float during roundout"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.18.1.w.1",
+        "text": "Flaps increase stability in pitch and roll axes"
+      },
+      {
+        "id": "AFH.18.18.1.w.2",
+        "text": "Flaps reduce landing distance by 50%"
+      },
+      {
+        "id": "AFH.18.18.1.w.3",
+        "text": "Nose-low attitude is recommended"
+      },
+      {
+        "id": "AFH.18.18.1.w.4",
+        "text": "Flaps help in losing altitude quickly"
+      },
+      {
+        "id": "AFH.18.18.1.w.5",
+        "text": "Flaps prevent excessive airspeed buildup"
+      },
+      {
+        "id": "AFH.18.18.1.w.6",
+        "text": "Flaps ensure a stable approach"
+      },
+      {
+        "id": "AFH.18.18.1.w.7",
+        "text": "Flaps make it easier to judge height and distance"
+      },
+      {
+        "id": "AFH.18.18.1.w.8",
+        "text": "Flaps prevent tail strikes during flare"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction",
+    "subjects": [
+      "Flight Control Malfunction/Failure"
+    ]
+  },
+  {
+    "questionid": "AFH.18.19.1",
+    "question": "What actions should a pilot take during an asymmetric split flap situation?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.19.1.c.1",
+        "text": "Counter the roll with opposite aileron"
+      },
+      {
+        "id": "AFH.18.19.1.c.2",
+        "text": "Use substantial opposite rudder to manage yaw"
+      },
+      {
+        "id": "AFH.18.19.1.c.3",
+        "text": "Fly the approach at a higher than normal airspeed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.19.1.w.1",
+        "text": "Land with a crosswind from the side of the deployed flap"
+      },
+      {
+        "id": "AFH.18.19.1.w.2",
+        "text": "Flare excessively during landing"
+      },
+      {
+        "id": "AFH.18.19.1.w.3",
+        "text": "Ignore the roll and yaw"
+      },
+      {
+        "id": "AFH.18.19.1.w.4",
+        "text": "Use full flaps for landing"
+      },
+      {
+        "id": "AFH.18.19.1.w.5",
+        "text": "Reduce airspeed below normal approach speed"
+      },
+      {
+        "id": "AFH.18.19.1.w.6",
+        "text": "Attempt to retract the flaps fully"
+      },
+      {
+        "id": "AFH.18.19.1.w.7",
+        "text": "Rely solely on rudder to maintain control"
+      },
+      {
+        "id": "AFH.18.19.1.w.8",
+        "text": "Perform a steep bank turn"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction",
+    "subjects": [
+      "Emergency Procedures",
+      "Flight Control",
+      "Landing Techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.18.20.1",
+    "question": "When experiencing a loss of up-elevator control, what actions can a pilot take to retain pitch control?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.20.1.c.1",
+        "text": "Applying considerable nose-up trim"
+      },
+      {
+        "id": "AFH.18.20.1.c.2",
+        "text": "Pushing the control yoke forward to attain and maintain desired attitude"
+      },
+      {
+        "id": "AFH.18.20.1.c.3",
+        "text": "Increasing forward pressure to lower the nose and relaxing forward pressure to raise the nose"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.20.1.w.1",
+        "text": "Applying considerable nose-down trim"
+      },
+      {
+        "id": "AFH.18.20.1.w.2",
+        "text": "Pulling the control yoke aft to attain and maintain attitude"
+      },
+      {
+        "id": "AFH.18.20.1.w.3",
+        "text": "Releasing back pressure to lower the nose and increasing back pressure to raise the nose"
+      },
+      {
+        "id": "AFH.18.20.1.w.4",
+        "text": "Increasing back pressure to flare for landing"
+      },
+      {
+        "id": "AFH.18.20.1.w.5",
+        "text": "Moving the control yoke aft to lower the nose"
+      },
+      {
+        "id": "AFH.18.20.1.w.6",
+        "text": "Reducing engine power to induce a nose-up attitude"
+      },
+      {
+        "id": "AFH.18.20.1.w.7",
+        "text": "Fully extending flaps to gain pitch authority"
+      },
+      {
+        "id": "AFH.18.20.1.w.8",
+        "text": "Using rudder input to control pitch"
+      }
+    ],
+    "source": "AFH.18.20",
+    "subjects": [
+      "Emergency Procedures",
+      "Flight Controls"
+    ]
+  },
+  {
+    "questionid": "AFH.18.20.2",
+    "question": "In the event of a loss of down-elevator control, how can a pilot maintain pitch control?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.20.2.c.1",
+        "text": "Applying considerable nose-down trim"
+      },
+      {
+        "id": "AFH.18.20.2.c.2",
+        "text": "Pulling the control yoke aft to attain and maintain attitude"
+      },
+      {
+        "id": "AFH.18.20.2.c.3",
+        "text": "Releasing back pressure to lower the nose and increasing back pressure to raise the nose"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.20.2.w.1",
+        "text": "Applying considerable nose-up trim"
+      },
+      {
+        "id": "AFH.18.20.2.w.2",
+        "text": "Pushing the control yoke forward to attain and maintain desired attitude"
+      },
+      {
+        "id": "AFH.18.20.2.w.3",
+        "text": "Increasing forward pressure to lower the nose and relaxing forward pressure to raise the nose"
+      },
+      {
+        "id": "AFH.18.20.2.w.4",
+        "text": "Releasing forward pressure to flare for landing"
+      },
+      {
+        "id": "AFH.18.20.2.w.5",
+        "text": "Moving the control yoke forward to raise the nose"
+      },
+      {
+        "id": "AFH.18.20.2.w.6",
+        "text": "Increasing engine power to induce a nose-down attitude"
+      },
+      {
+        "id": "AFH.18.20.2.w.7",
+        "text": "Retracting flaps to increase elevator effectiveness"
+      },
+      {
+        "id": "AFH.18.20.2.w.8",
+        "text": "Using aileron input to control pitch"
+      }
+    ],
+    "source": "AFH.18.20",
+    "subjects": [
+      "Emergency Procedures",
+      "Flight Controls"
+    ]
+  },
+  {
+    "questionid": "AFH.18.21.1",
+    "question": "What should a pilot consider when selecting a landing surface during a landing gear malfunction?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.21.1.c.1",
+        "text": "Select a smooth, hard-surface runway to minimize damage."
+      },
+      {
+        "id": "AFH.18.21.1.c.2",
+        "text": "Consider requesting runway foaming to reduce fire risk."
+      },
+      {
+        "id": "AFH.18.21.1.c.3",
+        "text": "Choose an airport with crash and rescue facilities."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.21.1.w.1",
+        "text": "Select a rough, unimproved grass strip for landing."
+      },
+      {
+        "id": "AFH.18.21.1.w.2",
+        "text": "Ignore the presence of emergency equipment."
+      },
+      {
+        "id": "AFH.18.21.1.w.3",
+        "text": "Choose a runway without considering surface conditions."
+      },
+      {
+        "id": "AFH.18.21.1.w.4",
+        "text": "Select a runway based solely on length."
+      },
+      {
+        "id": "AFH.18.21.1.w.5",
+        "text": "Prioritize a runway with no lighting."
+      },
+      {
+        "id": "AFH.18.21.1.w.6",
+        "text": "Select a runway with obstacles lining the edge."
+      },
+      {
+        "id": "AFH.18.21.1.w.7",
+        "text": "Ignore the potential for sparks igniting fuel."
+      },
+      {
+        "id": "AFH.18.21.1.w.8",
+        "text": "Choose a runway based on wind direction only."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction, Section: Landing Gear Malfunction",
+    "subjects": [
+      "Emergency Procedures",
+      "Landing Gear Malfunction"
+    ]
+  },
+  {
+    "questionid": "AFH.18.21.2",
+    "question": "What actions should a pilot take if landing with one main gear retracted?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.21.2.c.1",
+        "text": "Land in a nose-high attitude with wings level."
+      },
+      {
+        "id": "AFH.18.21.2.c.2",
+        "text": "Apply aileron control to keep the unsupported wing airborne."
+      },
+      {
+        "id": "AFH.18.21.2.c.3",
+        "text": "Use full opposite rudder and aggressive braking after touchdown."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.21.2.w.1",
+        "text": "Land with the nose gear touching first."
+      },
+      {
+        "id": "AFH.18.21.2.w.2",
+        "text": "Apply full brake pressure immediately upon landing."
+      },
+      {
+        "id": "AFH.18.21.2.w.3",
+        "text": "Ignore the need for directional control."
+      },
+      {
+        "id": "AFH.18.21.2.w.4",
+        "text": "Allow the unsupported wing to contact the surface early."
+      },
+      {
+        "id": "AFH.18.21.2.w.5",
+        "text": "Land with a nose-low attitude."
+      },
+      {
+        "id": "AFH.18.21.2.w.6",
+        "text": "Use no rudder input after touchdown."
+      },
+      {
+        "id": "AFH.18.21.2.w.7",
+        "text": "Apply no aileron control during landing."
+      },
+      {
+        "id": "AFH.18.21.2.w.8",
+        "text": "Land with all gear retracted regardless of conditions."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction, Section: Landing Gear Malfunction",
+    "subjects": [
+      "Emergency Procedures",
+      "Landing Gear Malfunction"
+    ]
+  },
+  {
+    "questionid": "AFH.18.22.1",
+    "question": "What should a pilot do immediately after detecting an alternator or generator failure in a light airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.22.1.c.1",
+        "text": "Shed non-essential electrical loads"
+      },
+      {
+        "id": "AFH.18.22.1.c.2",
+        "text": "Notify ATC of the situation"
+      },
+      {
+        "id": "AFH.18.22.1.c.3",
+        "text": "Plan to land at the nearest suitable airport"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.22.1.w.1",
+        "text": "Continue flying without changes"
+      },
+      {
+        "id": "AFH.18.22.1.w.2",
+        "text": "Increase electrical load"
+      },
+      {
+        "id": "AFH.18.22.1.w.3",
+        "text": "Ignore the warning light"
+      },
+      {
+        "id": "AFH.18.22.1.w.4",
+        "text": "Wait for the battery to deplete"
+      },
+      {
+        "id": "AFH.18.22.1.w.5",
+        "text": "Attempt to repair the alternator in-flight"
+      },
+      {
+        "id": "AFH.18.22.1.w.6",
+        "text": "Use electrically-powered landing gear immediately"
+      },
+      {
+        "id": "AFH.18.22.1.w.7",
+        "text": "Rely solely on the battery for extended periods"
+      },
+      {
+        "id": "AFH.18.22.1.w.8",
+        "text": "Perform a normal landing without adjustments"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction, Section 22: System Malfunctions",
+    "subjects": [
+      "Electrical System Malfunctions"
+    ]
+  },
+  {
+    "questionid": "AFH.18.22.2",
+    "question": "Why is it critical to shed non-essential electrical loads after an electrical system failure?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.22.2.c.1",
+        "text": "To conserve battery power"
+      },
+      {
+        "id": "AFH.18.22.2.c.2",
+        "text": "To prevent total electrical power loss"
+      },
+      {
+        "id": "AFH.18.22.2.c.3",
+        "text": "To ensure essential systems remain operational"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.22.2.w.1",
+        "text": "To increase battery life indefinitely"
+      },
+      {
+        "id": "AFH.18.22.2.w.2",
+        "text": "To allow for normal operation of all systems"
+      },
+      {
+        "id": "AFH.18.22.2.w.3",
+        "text": "To avoid notifying ATC"
+      },
+      {
+        "id": "AFH.18.22.2.w.4",
+        "text": "To ensure landing gear functions normally"
+      },
+      {
+        "id": "AFH.18.22.2.w.5",
+        "text": "To maintain full electrical functionality"
+      },
+      {
+        "id": "AFH.18.22.2.w.6",
+        "text": "To extend flight duration without landing"
+      },
+      {
+        "id": "AFH.18.22.2.w.7",
+        "text": "To enable use of all electrical equipment"
+      },
+      {
+        "id": "AFH.18.22.2.w.8",
+        "text": "To avoid planning for a no-flap landing"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction, Section 22: System Malfunctions",
+    "subjects": [
+      "Electrical System Malfunctions"
+    ]
+  },
+  {
+    "questionid": "AFH.18.23.1",
+    "question": "What are the major components of the pitot-static system?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.23.1.c.1",
+        "text": "Impact pressure chamber"
+      },
+      {
+        "id": "AFH.18.23.1.c.2",
+        "text": "Static pressure chamber"
+      },
+      {
+        "id": "AFH.18.23.1.c.3",
+        "text": "Lines"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.23.1.w.1",
+        "text": "Pitot tube"
+      },
+      {
+        "id": "AFH.18.23.1.w.2",
+        "text": "Gyroscopic instruments"
+      },
+      {
+        "id": "AFH.18.23.1.w.3",
+        "text": "Fuel lines"
+      },
+      {
+        "id": "AFH.18.23.1.w.4",
+        "text": "Hydraulic system"
+      },
+      {
+        "id": "AFH.18.23.1.w.5",
+        "text": "Electrical system"
+      },
+      {
+        "id": "AFH.18.23.1.w.6",
+        "text": "Engine components"
+      },
+      {
+        "id": "AFH.18.23.1.w.7",
+        "text": "Control surfaces"
+      },
+      {
+        "id": "AFH.18.23.1.w.8",
+        "text": "Navigation lights"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction, Section: Pitot-Static System",
+    "subjects": [
+      "Aviation Systems"
+    ]
+  },
+  {
+    "questionid": "AFH.18.23.2",
+    "question": "What happens to the altimeter reading if the static reference system is partially blocked during descent?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.23.2.c.1",
+        "text": "Indicates higher than actual altitude"
+      },
+      {
+        "id": "AFH.18.23.2.c.2",
+        "text": "Static pressure lags behind actual pressure"
+      },
+      {
+        "id": "AFH.18.23.2.c.3",
+        "text": "Obstruction slows airflow to altimeter"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.23.2.w.1",
+        "text": "Indicates lower than actual altitude"
+      },
+      {
+        "id": "AFH.18.23.2.w.2",
+        "text": "Shows no change in altitude"
+      },
+      {
+        "id": "AFH.18.23.2.w.3",
+        "text": "Displays correct altitude"
+      },
+      {
+        "id": "AFH.18.23.2.w.4",
+        "text": "Increases airspeed reading"
+      },
+      {
+        "id": "AFH.18.23.2.w.5",
+        "text": "Decreases airspeed reading"
+      },
+      {
+        "id": "AFH.18.23.2.w.6",
+        "text": "Shows faster descent rate"
+      },
+      {
+        "id": "AFH.18.23.2.w.7",
+        "text": "Shows slower climb rate"
+      },
+      {
+        "id": "AFH.18.23.2.w.8",
+        "text": "Indicates stall speed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction, Section: Pitot-Static System",
+    "subjects": [
+      "Instrumentation"
+    ]
+  },
+  {
+    "questionid": "AFH.18.23.3",
+    "question": "What should a pilot do if a pitot-static system malfunction is suspected?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.23.3.c.1",
+        "text": "Open the alternate static source"
+      },
+      {
+        "id": "AFH.18.23.3.c.2",
+        "text": "Confirm malfunction during climb or descent"
+      },
+      {
+        "id": "AFH.18.23.3.c.3",
+        "text": "Use alternate source for remainder of flight"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.23.3.w.1",
+        "text": "Ignore the malfunction"
+      },
+      {
+        "id": "AFH.18.23.3.w.2",
+        "text": "Continue using the primary static source"
+      },
+      {
+        "id": "AFH.18.23.3.w.3",
+        "text": "Descend immediately"
+      },
+      {
+        "id": "AFH.18.23.3.w.4",
+        "text": "Climb immediately"
+      },
+      {
+        "id": "AFH.18.23.3.w.5",
+        "text": "Land as soon as possible"
+      },
+      {
+        "id": "AFH.18.23.3.w.6",
+        "text": "Contact air traffic control"
+      },
+      {
+        "id": "AFH.18.23.3.w.7",
+        "text": "Reset the instruments"
+      },
+      {
+        "id": "AFH.18.23.3.w.8",
+        "text": "Turn off the EFIS"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction, Section: Pitot-Static System",
+    "subjects": [
+      "Emergency Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.18.24.1",
+    "question": "According to the Airplane Flying Handbook, what sources provide information and guidance regarding abnormal engine instrument indications?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.24.1.c.1",
+        "text": "The AFM/POH for the specific airplane"
+      },
+      {
+        "id": "AFH.18.24.1.c.2",
+        "text": "Generic information on commonly experienced in-flight abnormal engine instrument indications"
+      },
+      {
+        "id": "AFH.18.24.1.c.3",
+        "text": "Guidance on possible causes and corrective actions for abnormal engine instrument indications"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.24.1.w.1",
+        "text": "The aircraft's maintenance logbook"
+      },
+      {
+        "id": "AFH.18.24.1.w.2",
+        "text": "General aviation regulations (FARs)"
+      },
+      {
+        "id": "AFH.18.24.1.w.3",
+        "text": "The pilot operating handbook for a different aircraft model"
+      },
+      {
+        "id": "AFH.18.24.1.w.4",
+        "text": "Air Traffic Control instructions"
+      },
+      {
+        "id": "AFH.18.24.1.w.5",
+        "text": "The pre-flight inspection checklist"
+      },
+      {
+        "id": "AFH.18.24.1.w.6",
+        "text": "The aircraft's weight and balance sheet"
+      },
+      {
+        "id": "AFH.18.24.1.w.7",
+        "text": "The manufacturer's marketing brochure"
+      },
+      {
+        "id": "AFH.18.24.1.w.8",
+        "text": "The aircraft's flight plan"
+      }
+    ],
+    "source": "afh.18.24",
+    "subjects": [
+      "Abnormal Engine Instrument Indications",
+      "Emergency Procedures",
+      "Aircraft Manuals"
+    ]
+  },
+  {
+    "questionid": "AFH.18.25.1",
+    "question": "According to the AFH, which of the following are correct pilot actions when a cabin door opens in flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.25.1.c.1",
+        "text": "Concentrate on flying the airplane and maintain control"
+      },
+      {
+        "id": "AFH.18.25.1.c.2",
+        "text": "Climb to normal traffic pattern altitude and fly a normal traffic pattern before landing"
+      },
+      {
+        "id": "AFH.18.25.1.c.3",
+        "text": "Do not release the seat belt and shoulder harness to reach the door; leave it alone until on the ground"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.25.1.w.1",
+        "text": "Immediately initiate an emergency descent to land as quickly as possible"
+      },
+      {
+        "id": "AFH.18.25.1.w.2",
+        "text": "Release the seat belt to reach back and pull the door closed"
+      },
+      {
+        "id": "AFH.18.25.1.w.3",
+        "text": "Declare an emergency and request priority handling from ATC"
+      },
+      {
+        "id": "AFH.18.25.1.w.4",
+        "text": "Slip toward the open door to force it closed"
+      },
+      {
+        "id": "AFH.18.25.1.w.5",
+        "text": "Expect severe loss of lift requiring immediate power increase"
+      },
+      {
+        "id": "AFH.18.25.1.w.6",
+        "text": "Shut down non-essential systems to reduce vibration caused by the open door"
+      },
+      {
+        "id": "AFH.18.25.1.w.7",
+        "text": "Attempt steep turns to align quickly with the runway to minimize time with the door open"
+      },
+      {
+        "id": "AFH.18.25.1.w.8",
+        "text": "Ignore the landing checklist to save time during the expedited approach"
+      }
+    ],
+    "source": "AFH Chapter 18, Section: Door Opening In-Flight",
+    "subjects": [
+      "Emergency Procedures",
+      "Door Opening In-Flight",
+      "Pilot Decision Making"
+    ]
+  },
+  {
+    "questionid": "AFH.18.26.1",
+    "question": "What are the initial steps a VFR pilot should take when inadvertently flying into IMC?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.26.1.c.1",
+        "text": "Recognize the seriousness of the situation"
+      },
+      {
+        "id": "AFH.18.26.1.c.2",
+        "text": "Maintain control of the airplane"
+      },
+      {
+        "id": "AFH.18.26.1.c.3",
+        "text": "Obtain appropriate assistance"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.26.1.w.1",
+        "text": "Perform precision instrument flying"
+      },
+      {
+        "id": "AFH.18.26.1.w.2",
+        "text": "Ignore the situation"
+      },
+      {
+        "id": "AFH.18.26.1.w.3",
+        "text": "Continue flying without changes"
+      },
+      {
+        "id": "AFH.18.26.1.w.4",
+        "text": "Rely solely on visual references"
+      },
+      {
+        "id": "AFH.18.26.1.w.5",
+        "text": "Descend immediately without checking altitude"
+      },
+      {
+        "id": "AFH.18.26.1.w.6",
+        "text": "Attempt to land immediately without assistance"
+      },
+      {
+        "id": "AFH.18.26.1.w.7",
+        "text": "Focus on navigation tasks"
+      },
+      {
+        "id": "AFH.18.26.1.w.8",
+        "text": "Wait for conditions to improve"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction",
+    "subjects": [
+      "Emergency Procedures",
+      "VFR Flight",
+      "IMC Conditions"
+    ]
+  },
+  {
+    "questionid": "AFH.18.27.1",
+    "question": "What should a VFR pilot consider as an emergency when unable to maintain airplane attitude control?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.27.1.c.1",
+        "text": "Inability to maintain airplane attitude control by reference to the natural horizon"
+      },
+      {
+        "id": "AFH.18.27.1.c.2",
+        "text": "Being in IMC conditions without visual reference to landmarks"
+      },
+      {
+        "id": "AFH.18.27.1.c.3",
+        "text": "Loss of geographical position by visual reference"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.27.1.w.1",
+        "text": "Having a fully functional attitude indicator"
+      },
+      {
+        "id": "AFH.18.27.1.w.2",
+        "text": "Flying in clear weather conditions"
+      },
+      {
+        "id": "AFH.18.27.1.w.3",
+        "text": "Being trained in IFR conditions"
+      },
+      {
+        "id": "AFH.18.27.1.w.4",
+        "text": "Having a co-pilot on board"
+      },
+      {
+        "id": "AFH.18.27.1.w.5",
+        "text": "Using autopilot for navigation"
+      },
+      {
+        "id": "AFH.18.27.1.w.6",
+        "text": "Flying over familiar terrain"
+      },
+      {
+        "id": "AFH.18.27.1.w.7",
+        "text": "Having a GPS system"
+      },
+      {
+        "id": "AFH.18.27.1.w.8",
+        "text": "Maintaining radio communication"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction, Section: Recognition",
+    "subjects": [
+      "Emergency Procedures",
+      "VFR Flight",
+      "IMC Conditions"
+    ]
+  },
+  {
+    "questionid": "AFH.18.28.1",
+    "question": "What are the key actions a pilot should take to maintain airplane control during an emergency situation?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.28.1.c.1",
+        "text": "Trust the flight instruments"
+      },
+      {
+        "id": "AFH.18.28.1.c.2",
+        "text": "Keep the wings level"
+      },
+      {
+        "id": "AFH.18.28.1.c.3",
+        "text": "Relax and control with the eyes and brain"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.28.1.w.1",
+        "text": "Rely on vestibular senses"
+      },
+      {
+        "id": "AFH.18.28.1.w.2",
+        "text": "Panic and tighten grip on controls"
+      },
+      {
+        "id": "AFH.18.28.1.w.3",
+        "text": "Search outside for visual confirmation"
+      },
+      {
+        "id": "AFH.18.28.1.w.4",
+        "text": "Ignore flight instruments"
+      },
+      {
+        "id": "AFH.18.28.1.w.5",
+        "text": "Focus solely on pitch control"
+      },
+      {
+        "id": "AFH.18.28.1.w.6",
+        "text": "Make abrupt control movements"
+      },
+      {
+        "id": "AFH.18.28.1.w.7",
+        "text": "Trust natural senses over instruments"
+      },
+      {
+        "id": "AFH.18.28.1.w.8",
+        "text": "Attempt to feel control pressures"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction, Section: Maintaining Airplane Control",
+    "subjects": [
+      "Emergency Procedures",
+      "Flight Instruments",
+      "Spatial Disorientation"
+    ]
+  },
+  {
+    "questionid": "AFH.18.29.1",
+    "question": "According to the Airplane Flying Handbook, which of the following are key principles for effective emergency airplane attitude control?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.29.1.c.1",
+        "text": "Trim the airplane with the elevator trim so that it maintains hands-off level flight at cruise airspeed."
+      },
+      {
+        "id": "AFH.18.29.1.c.2",
+        "text": "Resist the tendency to over-control the airplane, flying the attitude indicator with fingertip control."
+      },
+      {
+        "id": "AFH.18.29.1.c.3",
+        "text": "Make all attitude changes smooth and small, yet with positive pressure."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.29.1.w.1",
+        "text": "Make large, decisive control inputs to quickly correct any deviations."
+      },
+      {
+        "id": "AFH.18.29.1.w.2",
+        "text": "Vary airspeed frequently to adapt to changing flight conditions."
+      },
+      {
+        "id": "AFH.18.29.1.w.3",
+        "text": "Prioritize the altimeter as the primary instrument for attitude control."
+      },
+      {
+        "id": "AFH.18.29.1.w.4",
+        "text": "Use aggressive rudder inputs to maintain straight flight."
+      },
+      {
+        "id": "AFH.18.29.1.w.5",
+        "text": "Allow the airplane to drift significantly before making any corrections."
+      },
+      {
+        "id": "AFH.18.29.1.w.6",
+        "text": "Focus primarily on outside visual references, disregarding the attitude indicator."
+      },
+      {
+        "id": "AFH.18.29.1.w.7",
+        "text": "Increase pitch attitude changes to several bar widths for effective control."
+      },
+      {
+        "id": "AFH.18.29.1.w.8",
+        "text": "Disengage any available autopilot or wing leveler to ensure manual control."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Emergency Procedures",
+      "Attitude Control"
+    ]
+  },
+  {
+    "questionid": "AFH.18.30.1",
+    "question": "What are the recommended practices for an untrained instrument pilot when making turns?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.30.1.c.1",
+        "text": "Use the smallest practical bank angle"
+      },
+      {
+        "id": "AFH.18.30.1.c.2",
+        "text": "Limit bank angle to no more than 10°"
+      },
+      {
+        "id": "AFH.18.30.1.c.3",
+        "text": "Turn a few degrees and return to level flight"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.30.1.w.1",
+        "text": "Use a steep bank angle"
+      },
+      {
+        "id": "AFH.18.30.1.w.2",
+        "text": "Ignore the instability of the roll axis"
+      },
+      {
+        "id": "AFH.18.30.1.w.3",
+        "text": "Make continuous prolonged turns"
+      },
+      {
+        "id": "AFH.18.30.1.w.4",
+        "text": "Rely solely on visual cues"
+      },
+      {
+        "id": "AFH.18.30.1.w.5",
+        "text": "Disregard altitude changes"
+      },
+      {
+        "id": "AFH.18.30.1.w.6",
+        "text": "Use aggressive control inputs"
+      },
+      {
+        "id": "AFH.18.30.1.w.7",
+        "text": "Ignore heading changes"
+      },
+      {
+        "id": "AFH.18.30.1.w.8",
+        "text": "Perform rapid turns"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction, Section: Turns",
+    "subjects": [
+      "Emergency Procedures",
+      "Instrument Flying",
+      "Pilot Training"
+    ]
+  },
+  {
+    "questionid": "AFH.18.31.1",
+    "question": "When performing a climb during unusual attitude recovery, which of the following statements are correct?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.31.1.c.1",
+        "text": "Raise the miniature airplane no more than one bar width on the attitude indicator when initiating a climb"
+      },
+      {
+        "id": "AFH.18.31.1.c.2",
+        "text": "Torque and P-factor will cause a tendency to bank and turn left, which must be anticipated and compensated for"
+      },
+      {
+        "id": "AFH.18.31.1.c.3",
+        "text": "If the initial climb rate is inadequate, increase power in increments of 100 rpm or 1 inch of manifold pressure"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.31.1.w.1",
+        "text": "Immediately apply maximum available power to ensure the best possible climb rate"
+      },
+      {
+        "id": "AFH.18.31.1.w.2",
+        "text": "Attempt to attain a specific target climb speed such as Vy before leveling off"
+      },
+      {
+        "id": "AFH.18.31.1.w.3",
+        "text": "Raise the miniature airplane two bar widths on the attitude indicator to establish a positive climb"
+      },
+      {
+        "id": "AFH.18.31.1.w.4",
+        "text": "Resume level flight by first reducing power before adjusting pitch attitude"
+      },
+      {
+        "id": "AFH.18.31.1.w.5",
+        "text": "The airplane will tend to bank and turn right due to torque and P-factor during a power climb"
+      },
+      {
+        "id": "AFH.18.31.1.w.6",
+        "text": "A properly trimmed airplane will not change attitude when power is applied during a climb"
+      },
+      {
+        "id": "AFH.18.31.1.w.7",
+        "text": "Large, rapid control inputs should be used to quickly establish the desired climb attitude"
+      },
+      {
+        "id": "AFH.18.31.1.w.8",
+        "text": "It is mainly about unrelated advanced turbine transition procedures not covered in climbs."
+      }
+    ],
+    "source": "AFH Chapter 18, Section 18.31 – Climbs",
+    "subjects": [
+      "unusual attitude recovery",
+      "attitude indicator",
+      "climb technique"
+    ]
+  },
+  {
+    "questionid": "AFH.18.32.1",
+    "question": "What factors influence the rate of descent in an airplane when properly trimmed for hands-off straight-and-level flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.32.1.c.1",
+        "text": "Amount of thrust removed"
+      },
+      {
+        "id": "AFH.18.32.1.c.2",
+        "text": "Pitch attitude"
+      },
+      {
+        "id": "AFH.18.32.1.c.3",
+        "text": "Engine power reduction"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.32.1.w.1",
+        "text": "Wind direction"
+      },
+      {
+        "id": "AFH.18.32.1.w.2",
+        "text": "Aircraft weight"
+      },
+      {
+        "id": "AFH.18.32.1.w.3",
+        "text": "Fuel type"
+      },
+      {
+        "id": "AFH.18.32.1.w.4",
+        "text": "Altitude"
+      },
+      {
+        "id": "AFH.18.32.1.w.5",
+        "text": "Temperature"
+      },
+      {
+        "id": "AFH.18.32.1.w.6",
+        "text": "Humidity"
+      },
+      {
+        "id": "AFH.18.32.1.w.7",
+        "text": "Pilot's weight"
+      },
+      {
+        "id": "AFH.18.32.1.w.8",
+        "text": "Wing shape"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction, Section: Descents",
+    "subjects": [
+      "Aviation",
+      "Flight Mechanics",
+      "Emergency Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.18.33.1",
+    "question": "What should an untrained instrument pilot avoid to minimize the risk of control loss?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.33.1.c.1",
+        "text": "Combined maneuvers"
+      },
+      {
+        "id": "AFH.18.33.1.c.2",
+        "text": "Climbing turns"
+      },
+      {
+        "id": "AFH.18.33.1.c.3",
+        "text": "Descending turns"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.33.1.w.1",
+        "text": "Straight-and-level flight"
+      },
+      {
+        "id": "AFH.18.33.1.w.2",
+        "text": "Maintaining natural equilibrium"
+      },
+      {
+        "id": "AFH.18.33.1.w.3",
+        "text": "Requesting ATC assistance"
+      },
+      {
+        "id": "AFH.18.33.1.w.4",
+        "text": "Flying in clear weather"
+      },
+      {
+        "id": "AFH.18.33.1.w.5",
+        "text": "Using autopilot"
+      },
+      {
+        "id": "AFH.18.33.1.w.6",
+        "text": "Maintaining constant speed"
+      },
+      {
+        "id": "AFH.18.33.1.w.7",
+        "text": "Flying at low altitude"
+      },
+      {
+        "id": "AFH.18.33.1.w.8",
+        "text": "Avoiding turbulence"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction, Section: Combined Maneuvers",
+    "subjects": [
+      "Aviation Safety",
+      "Instrument Flight",
+      "Pilot Training"
+    ]
+  },
+  {
+    "questionid": "AFH.18.34.1",
+    "question": "What are some challenges faced by untrained instrument pilots during the transition to visual flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.34.1.c.1",
+        "text": "Limited visibility"
+      },
+      {
+        "id": "AFH.18.34.1.c.2",
+        "text": "Unfamiliar terrain"
+      },
+      {
+        "id": "AFH.18.34.1.c.3",
+        "text": "Psychological pressure"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.34.1.w.1",
+        "text": "Excessive fuel consumption"
+      },
+      {
+        "id": "AFH.18.34.1.w.2",
+        "text": "Engine failure"
+      },
+      {
+        "id": "AFH.18.34.1.w.3",
+        "text": "Radio communication issues"
+      },
+      {
+        "id": "AFH.18.34.1.w.4",
+        "text": "Overheating instruments"
+      },
+      {
+        "id": "AFH.18.34.1.w.5",
+        "text": "Navigation system malfunction"
+      },
+      {
+        "id": "AFH.18.34.1.w.6",
+        "text": "Landing gear problems"
+      },
+      {
+        "id": "AFH.18.34.1.w.7",
+        "text": "Cabin pressure loss"
+      },
+      {
+        "id": "AFH.18.34.1.w.8",
+        "text": "Autopilot disengagement"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction, Section: Transition to Visual Flight",
+    "subjects": [
+      "Instrument Flight",
+      "Visual Flight Transition",
+      "Pilot Acclimatization"
+    ]
+  },
+  {
+    "questionid": "AFH.18.35.1",
+    "question": "According to the provided text, which of the following statements accurately describe installed emergency response systems in airplanes?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.35.1.c.1",
+        "text": "Ballistic parachute systems, if installed, may be deployed in an emergency allowing an airplane to descend slowly enough toward the ground."
+      },
+      {
+        "id": "AFH.18.35.1.c.2",
+        "text": "Emergency Autoland (EAL) systems can take over control of the aircraft when necessary for a safe outcome."
+      },
+      {
+        "id": "AFH.18.35.1.c.3",
+        "text": "When a ballistic parachute system is deployed, occupants usually survive the resulting impact with minor or no injuries."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.35.1.w.1",
+        "text": "Ballistic parachute systems are primarily designed for high-altitude cargo drops."
+      },
+      {
+        "id": "AFH.18.35.1.w.2",
+        "text": "Emergency Autoland (EAL) systems are used for routine pilot training exercises."
+      },
+      {
+        "id": "AFH.18.35.1.w.3",
+        "text": "Installed systems provide alternatives in all possible emergency situations."
+      },
+      {
+        "id": "AFH.18.35.1.w.4",
+        "text": "Ballistic parachute systems are only for military aircraft."
+      },
+      {
+        "id": "AFH.18.35.1.w.5",
+        "text": "Emergency Autoland (EAL) systems require constant pilot input to function."
+      },
+      {
+        "id": "AFH.18.35.1.w.6",
+        "text": "Ballistic parachute systems are designed to increase an airplane's descent rate."
+      },
+      {
+        "id": "AFH.18.35.1.w.7",
+        "text": "Emergency Autoland (EAL) systems are primarily for communication failures."
+      },
+      {
+        "id": "AFH.18.35.1.w.8",
+        "text": "Installed emergency systems are always mandatory on all aircraft."
+      }
+    ],
+    "source": "afh.18.35",
+    "subjects": [
+      "Emergency Procedures",
+      "Emergency Response Systems",
+      "Ballistic Parachute Systems",
+      "Emergency Autoland (EAL)"
+    ]
+  },
+  {
+    "questionid": "AFH.18.36.1",
+    "question": "What are some key considerations for pilots when using a ballistic parachute system in an airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.36.1.c.1",
+        "text": "Understand and follow arming and disarming procedures"
+      },
+      {
+        "id": "AFH.18.36.1.c.2",
+        "text": "Brief passengers on deployment conditions"
+      },
+      {
+        "id": "AFH.18.36.1.c.3",
+        "text": "Study manufacturer guidance"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.36.1.w.1",
+        "text": "Deploy the system at any sign of turbulence"
+      },
+      {
+        "id": "AFH.18.36.1.w.2",
+        "text": "Use the system for routine landings"
+      },
+      {
+        "id": "AFH.18.36.1.w.3",
+        "text": "Ignore passenger briefing"
+      },
+      {
+        "id": "AFH.18.36.1.w.4",
+        "text": "Rely solely on the parachute for safety"
+      },
+      {
+        "id": "AFH.18.36.1.w.5",
+        "text": "Deploy without checking conditions"
+      },
+      {
+        "id": "AFH.18.36.1.w.6",
+        "text": "Use without understanding impact forces"
+      },
+      {
+        "id": "AFH.18.36.1.w.7",
+        "text": "Disregard manufacturer instructions"
+      },
+      {
+        "id": "AFH.18.36.1.w.8",
+        "text": "Deploy at low altitude without necessity"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction, Section: Ballistic Parachutes",
+    "subjects": [
+      "Emergency Procedures",
+      "Ballistic Parachutes",
+      "Pilot Responsibilities"
+    ]
+  },
+  {
+    "questionid": "AFH.18.37.1",
+    "question": "Which of the following are factors the Emergency Autoland (EAL) system considers when selecting a suitable landing airfield?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.37.1.c.1",
+        "text": "Weather and wind conditions"
+      },
+      {
+        "id": "AFH.18.37.1.c.2",
+        "text": "Runway length requirements based on aircraft type"
+      },
+      {
+        "id": "AFH.18.37.1.c.3",
+        "text": "Towered versus non-towered airport status"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.37.1.w.1",
+        "text": "Availability of instrument landing system (ILS) approaches"
+      },
+      {
+        "id": "AFH.18.37.1.w.2",
+        "text": "Proximity to military operations areas (MOAs)"
+      },
+      {
+        "id": "AFH.18.37.1.w.3",
+        "text": "Current NOTAMs for the destination airport"
+      },
+      {
+        "id": "AFH.18.37.1.w.4",
+        "text": "Fuel availability at the destination airport"
+      },
+      {
+        "id": "AFH.18.37.1.w.5",
+        "text": "Presence of active restricted airspace near the airport"
+      },
+      {
+        "id": "AFH.18.37.1.w.6",
+        "text": "Detection of conflicting traffic in the traffic pattern"
+      },
+      {
+        "id": "AFH.18.37.1.w.7",
+        "text": "Temporary Flight Restriction (TFR) status over the airport"
+      },
+      {
+        "id": "AFH.18.37.1.w.8",
+        "text": "It is mainly about unrelated advanced turbine transition procedures not covered in autoland."
+      }
+    ],
+    "source": "AFH Chapter 18, Section: Autoland",
+    "subjects": [
+      "Emergency Autoland System",
+      "Airport Selection Criteria",
+      "EAL Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.18.38.1",
+    "question": "What are some challenges pilots face with EFIS during emergency situations in light single-engine airplanes?",
+    "correct_answers": [
+      {
+        "id": "AFH.18.38.1.c.1",
+        "text": "Failure indications of EFIS may differ from conventional instruments."
+      },
+      {
+        "id": "AFH.18.38.1.c.2",
+        "text": "Lack of system standardization complicates malfunction recognition."
+      },
+      {
+        "id": "AFH.18.38.1.c.3",
+        "text": "Inability to simulate certain failure modes during training."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.18.38.1.w.1",
+        "text": "EFIS systems are always more reliable than conventional instruments."
+      },
+      {
+        "id": "AFH.18.38.1.w.2",
+        "text": "All EFIS systems have the same failure indications."
+      },
+      {
+        "id": "AFH.18.38.1.w.3",
+        "text": "Backup systems for IFR flight never rely on the same pitot-static source."
+      },
+      {
+        "id": "AFH.18.38.1.w.4",
+        "text": "Training for EFIS systems is always comprehensive and complete."
+      },
+      {
+        "id": "AFH.18.38.1.w.5",
+        "text": "EFIS systems do not require specific equipment knowledge."
+      },
+      {
+        "id": "AFH.18.38.1.w.6",
+        "text": "Electronic avionics do not need careful analysis for safe operation."
+      },
+      {
+        "id": "AFH.18.38.1.w.7",
+        "text": "EFIS systems are standardized across all aircraft."
+      },
+      {
+        "id": "AFH.18.38.1.w.8",
+        "text": "Pilots can always simulate every failure mode during training."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 18: Emergency Procedures Introduction",
+    "subjects": [
+      "Emergency Procedures",
+      "EFIS Challenges",
+      "Pilot Training"
+    ]
+  }
+]

@@ -1,0 +1,193 @@
+{
+  "generatedAtUtc": "2026-03-29T14:30:41.778Z",
+  "root": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files",
+  "fileCount": 2,
+  "totalPairs": 782,
+  "overallRating": {
+    "level": "optimum",
+    "weightedIssueRate": 0.00031969309462915604,
+    "weightedIssuePercent": 0.032,
+    "weightedIssueCount": 0.25,
+    "thresholds": {
+      "optimumMaxPercent": 0.5,
+      "acceptableMaxPercent": 2,
+      "criticalMaxPercent": 7.000000000000001
+    },
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "fatalIssueCount": 0
+  },
+  "results": [
+    {
+      "type": "deterministic",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_14 output docs\\afh_14_deterministic_training_pairs.json",
+      "pairCount": 550,
+      "questionCount": 50,
+      "subjectDistributionTop": [
+        {
+          "key": "Tailwheel Airplanes",
+          "count": 165
+        },
+        {
+          "key": "Taxiing",
+          "count": 88
+        },
+        {
+          "key": "After-Landing Roll",
+          "count": 55
+        },
+        {
+          "key": "Directional Control",
+          "count": 44
+        },
+        {
+          "key": "Landing Techniques",
+          "count": 44
+        },
+        {
+          "key": "Landing Gear",
+          "count": 33
+        },
+        {
+          "key": "Soft-Field Takeoff",
+          "count": 33
+        },
+        {
+          "key": "Tailwheel Ground Handling",
+          "count": 22
+        },
+        {
+          "key": "Taxi Technique",
+          "count": 22
+        },
+        {
+          "key": "Tailwheel Operations",
+          "count": 22
+        },
+        {
+          "key": "Ground Handling",
+          "count": 22
+        },
+        {
+          "key": "Gyroscopic Precession",
+          "count": 22
+        },
+        {
+          "key": "Takeoff Procedures",
+          "count": 22
+        },
+        {
+          "key": "Tailwheel Aircraft",
+          "count": 22
+        },
+        {
+          "key": "Landing Errors",
+          "count": 22
+        }
+      ],
+      "issues": [
+        {
+          "severity": "warning",
+          "code": "REPEATED_SUBJECTS",
+          "message": "Subject distribution is highly concentrated; consider balancing section/topic coverage.",
+          "target": {
+            "type": "subject-group",
+            "id": "repeated-subjects"
+          },
+          "repairGuidance": {
+            "action": "targeted-repair",
+            "scope": "section",
+            "instruction": "Regenerate over-concentrated sections with subject balancing constraints."
+          },
+          "context": {
+            "repeatedSubjects": [
+              {
+                "key": "Tailwheel Airplanes",
+                "count": 165,
+                "targets": [
+                  "AFH.14.4.1",
+                  "AFH.14.4.1",
+                  "AFH.14.4.1",
+                  "AFH.14.4.1",
+                  "AFH.14.4.1",
+                  "AFH.14.4.1",
+                  "AFH.14.4.1",
+                  "AFH.14.4.1"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "conversational",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_14 output docs\\afh_14_conversational_training_pairs.json",
+      "pairCount": 232,
+      "subjectDistributionTop": [
+        {
+          "key": "ground loop",
+          "count": 12
+        },
+        {
+          "key": "taxiing",
+          "count": 11
+        },
+        {
+          "key": "directional control",
+          "count": 10
+        },
+        {
+          "key": "Control Placement",
+          "count": 10
+        },
+        {
+          "key": "Elevator Positioning",
+          "count": 9
+        },
+        {
+          "key": "Tailwind",
+          "count": 9
+        },
+        {
+          "key": "crosswind takeoff",
+          "count": 9
+        },
+        {
+          "key": "landing",
+          "count": 9
+        },
+        {
+          "key": "weathervaning",
+          "count": 8
+        },
+        {
+          "key": "soft-field takeoff",
+          "count": 8
+        },
+        {
+          "key": "rudder control",
+          "count": 7
+        },
+        {
+          "key": "checkride",
+          "count": 7
+        },
+        {
+          "key": "visibility",
+          "count": 7
+        },
+        {
+          "key": "takeoff",
+          "count": 7
+        },
+        {
+          "key": "elevator control",
+          "count": 7
+        }
+      ],
+      "issues": []
+    }
+  ]
+}

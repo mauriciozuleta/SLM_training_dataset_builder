@@ -1,0 +1,236 @@
+{
+  "generatedAtUtc": "2026-03-27T18:13:14.890Z",
+  "root": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files",
+  "fileCount": 2,
+  "totalPairs": 991,
+  "overallRating": {
+    "level": "optimum",
+    "weightedIssueRate": 0.0005045408678102926,
+    "weightedIssuePercent": 0.05,
+    "weightedIssueCount": 0.5,
+    "thresholds": {
+      "optimumMaxPercent": 0.5,
+      "acceptableMaxPercent": 2,
+      "criticalMaxPercent": 7.000000000000001
+    },
+    "errorCount": 0,
+    "warningCount": 2,
+    "infoCount": 0,
+    "fatalIssueCount": 0
+  },
+  "results": [
+    {
+      "type": "deterministic",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_7 output docs\\afh_7_deterministic_training_pairs.json",
+      "pairCount": 550,
+      "questionCount": 50,
+      "subjectDistributionTop": [
+        {
+          "key": "Ground Reference Maneuvers",
+          "count": 363
+        },
+        {
+          "key": "Pilot Training",
+          "count": 66
+        },
+        {
+          "key": "S-Turns",
+          "count": 55
+        },
+        {
+          "key": "Wind Correction Angle",
+          "count": 33
+        },
+        {
+          "key": "Bank Angle",
+          "count": 33
+        },
+        {
+          "key": "Groundspeed",
+          "count": 22
+        },
+        {
+          "key": "Constant Radius Turn",
+          "count": 22
+        },
+        {
+          "key": "Wind Correction",
+          "count": 22
+        },
+        {
+          "key": "Common Errors",
+          "count": 22
+        },
+        {
+          "key": "Visual Perception",
+          "count": 11
+        },
+        {
+          "key": "Ground Reference Selection",
+          "count": 11
+        },
+        {
+          "key": "Aviation",
+          "count": 11
+        },
+        {
+          "key": "Flight Maneuvers",
+          "count": 11
+        },
+        {
+          "key": "Wind Drift Correction",
+          "count": 11
+        },
+        {
+          "key": "Straight-and-Level Flight",
+          "count": 11
+        }
+      ],
+      "issues": [
+        {
+          "severity": "warning",
+          "code": "REPEATED_SUBJECTS",
+          "message": "Subject distribution is highly concentrated; consider balancing section/topic coverage.",
+          "target": {
+            "type": "subject-group",
+            "id": "repeated-subjects"
+          },
+          "repairGuidance": {
+            "action": "targeted-repair",
+            "scope": "section",
+            "instruction": "Regenerate over-concentrated sections with subject balancing constraints."
+          },
+          "context": {
+            "repeatedSubjects": [
+              {
+                "key": "Ground Reference Maneuvers",
+                "count": 363,
+                "targets": [
+                  "AFH.7.1.1",
+                  "AFH.7.1.1",
+                  "AFH.7.1.1",
+                  "AFH.7.1.1",
+                  "AFH.7.1.1",
+                  "AFH.7.1.1",
+                  "AFH.7.1.1",
+                  "AFH.7.1.1"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "conversational",
+      "filePath": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files\\afh_7 output docs\\afh_7_conversational_training_pairs.json",
+      "pairCount": 441,
+      "subjectDistributionTop": [
+        {
+          "key": "rectangular course",
+          "count": 47
+        },
+        {
+          "key": "eights along a road",
+          "count": 42
+        },
+        {
+          "key": "S-turns",
+          "count": 39
+        },
+        {
+          "key": "Pivotal Altitude",
+          "count": 29
+        },
+        {
+          "key": "ground reference maneuvers",
+          "count": 24
+        },
+        {
+          "key": "Visual Reference Line",
+          "count": 24
+        },
+        {
+          "key": "groundspeed",
+          "count": 22
+        },
+        {
+          "key": "bank angle",
+          "count": 22
+        },
+        {
+          "key": "Maneuver Execution",
+          "count": 22
+        },
+        {
+          "key": "safety",
+          "count": 18
+        },
+        {
+          "key": "checkride preparation",
+          "count": 18
+        },
+        {
+          "key": "wind drift",
+          "count": 15
+        },
+        {
+          "key": "Bank Angle",
+          "count": 14
+        },
+        {
+          "key": "crosswind",
+          "count": 13
+        },
+        {
+          "key": "Corrections",
+          "count": 13
+        }
+      ],
+      "issues": [
+        {
+          "severity": "warning",
+          "code": "DUPLICATE_CONVERSATIONS",
+          "message": "Found 3 duplicated user+assistant exchanges.",
+          "target": {
+            "type": "pair-group",
+            "id": "duplicate-conversations"
+          },
+          "repairGuidance": {
+            "action": "targeted-repair",
+            "scope": "pair",
+            "instruction": "Regenerate only duplicated conversational pairs with variation constraints."
+          },
+          "context": {
+            "topDuplicates": [
+              {
+                "key": "how does the wind affect the bank angle during the rectangular course? ||| the bank angle should be adjusted based on groundspeed changes due to wind; steeper banks for higher groundspeed and shallower for lower groundspeed.",
+                "count": 2,
+                "targets": [
+                  "AFH.7.6.1.z.22",
+                  "AFH.7.6.1.z.46"
+                ]
+              },
+              {
+                "key": "why do i need to divide my attention during the rectangular course? ||| dividing attention is crucial to manage airplane control and maintain orientation with ground references, ensuring accurate maneuver execution.",
+                "count": 2,
+                "targets": [
+                  "AFH.7.6.1.z.23",
+                  "AFH.7.6.1.z.47"
+                ]
+              },
+              {
+                "key": "what should i do if i encounter a slip or skid during the rectangular course? ||| apply coordinated aileron and rudder pressures to correct the slip or skid and maintain smooth control of the airplane.",
+                "count": 2,
+                "targets": [
+                  "AFH.7.6.1.z.24",
+                  "AFH.7.6.1.z.45"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
