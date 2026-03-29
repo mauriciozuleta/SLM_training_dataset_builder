@@ -1,0 +1,3634 @@
+[
+  {
+    "questionBank": {
+      "chapterId": "afh.16",
+      "bookId": "AFH",
+      "chapterNumber": 16,
+      "chapterTitle": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16: Transition to Jet-Powered Airplanes Introduction",
+      "totalRequiredQuestions": 59,
+      "metadata": {
+        "generatedAtUtc": "2026-03-29T14:34:57.149Z",
+        "chapterId": "afh.16",
+        "chapterNumber": 16,
+        "totalSections": 32,
+        "totalRequiredQuestions": 59,
+        "providers": [
+          "openai",
+          "anthropic",
+          "gemini"
+        ],
+        "models": [
+          "gpt-4o",
+          "claude-sonnet-4-6",
+          "gemini-2.5-flash"
+        ],
+        "promptTokens": 18798,
+        "completionTokens": 8289,
+        "totalTokens": 27087,
+        "sectionQuestionSummary": [
+          {
+            "sectionId": "afh.16.1",
+            "sectionTitle": "Ground Safety",
+            "sectionOrdinal": 1,
+            "sectionWeightPercentage": 0.98,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.16.2",
+            "sectionTitle": "Jet Engine Basics",
+            "sectionOrdinal": 2,
+            "sectionWeightPercentage": 2.86,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.16.3",
+            "sectionTitle": "Operating the Jet Engine",
+            "sectionOrdinal": 3,
+            "sectionWeightPercentage": 6.16,
+            "questionsGenerated": 4
+          },
+          {
+            "sectionId": "afh.16.4",
+            "sectionTitle": "Absence of Propeller Drag",
+            "sectionOrdinal": 4,
+            "sectionWeightPercentage": 0.98,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.16.5",
+            "sectionTitle": "Speed Margins",
+            "sectionOrdinal": 5,
+            "sectionWeightPercentage": 4.01,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.16.6",
+            "sectionTitle": "Mach Buffet",
+            "sectionOrdinal": 6,
+            "sectionWeightPercentage": 3.43,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.16.7",
+            "sectionTitle": "Low-Speed Flight",
+            "sectionOrdinal": 7,
+            "sectionWeightPercentage": 1.79,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.16.8",
+            "sectionTitle": "Stalls",
+            "sectionOrdinal": 8,
+            "sectionWeightPercentage": 5.6,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.16.9",
+            "sectionTitle": "Drag Devices",
+            "sectionOrdinal": 9,
+            "sectionWeightPercentage": 2.5,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.16.10",
+            "sectionTitle": "Thrust Reversers",
+            "sectionOrdinal": 10,
+            "sectionWeightPercentage": 4.82,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.16.11",
+            "sectionTitle": "Pilot Sensations in Jet Flying",
+            "sectionOrdinal": 11,
+            "sectionWeightPercentage": 4.29,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.16.12",
+            "sectionTitle": "Jet Airplane Takeoff and Climb",
+            "sectionOrdinal": 12,
+            "sectionWeightPercentage": 0.69,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.16.13",
+            "sectionTitle": "V-Speeds",
+            "sectionOrdinal": 13,
+            "sectionWeightPercentage": 2.09,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.16.14",
+            "sectionTitle": "Takeoff Roll",
+            "sectionOrdinal": 14,
+            "sectionWeightPercentage": 6.58,
+            "questionsGenerated": 4
+          },
+          {
+            "sectionId": "afh.16.15",
+            "sectionTitle": "Rejected Takeoff",
+            "sectionOrdinal": 15,
+            "sectionWeightPercentage": 8.59,
+            "questionsGenerated": 5
+          },
+          {
+            "sectionId": "afh.16.16",
+            "sectionTitle": "Rotation and Lift-Off",
+            "sectionOrdinal": 16,
+            "sectionWeightPercentage": 2.33,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.16.17",
+            "sectionTitle": "Initial Climb",
+            "sectionOrdinal": 17,
+            "sectionWeightPercentage": 2.72,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.16.18",
+            "sectionTitle": "Jet Airplane Descent and Approach",
+            "sectionOrdinal": 18,
+            "sectionWeightPercentage": 0.59,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.16.19",
+            "sectionTitle": "Descent Planning",
+            "sectionOrdinal": 19,
+            "sectionWeightPercentage": 2.51,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.16.20",
+            "sectionTitle": "Descent Energy Management",
+            "sectionOrdinal": 20,
+            "sectionWeightPercentage": 5.79,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.16.21",
+            "sectionTitle": "Jet Engine Landing",
+            "sectionOrdinal": 21,
+            "sectionWeightPercentage": 2.55,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.16.22",
+            "sectionTitle": "Landing Speeds",
+            "sectionOrdinal": 22,
+            "sectionWeightPercentage": 1.4,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.16.23",
+            "sectionTitle": "Significant Differences",
+            "sectionOrdinal": 23,
+            "sectionWeightPercentage": 3.16,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.16.24",
+            "sectionTitle": "Stabilized Approach",
+            "sectionOrdinal": 24,
+            "sectionWeightPercentage": 2.7,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.16.25",
+            "sectionTitle": "Approach Speed",
+            "sectionOrdinal": 25,
+            "sectionWeightPercentage": 1.89,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.16.26",
+            "sectionTitle": "Glidepath Control",
+            "sectionOrdinal": 26,
+            "sectionWeightPercentage": 1.16,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.16.27",
+            "sectionTitle": "The Flare",
+            "sectionOrdinal": 27,
+            "sectionWeightPercentage": 4.15,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.16.28",
+            "sectionTitle": "Touchdown and Rollout",
+            "sectionOrdinal": 28,
+            "sectionWeightPercentage": 4.45,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.16.29",
+            "sectionTitle": "Jet Airplane Systems and Maintenance",
+            "sectionOrdinal": 29,
+            "sectionWeightPercentage": 1.05,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.16.30",
+            "sectionTitle": "Minimum Equipment List",
+            "sectionOrdinal": 30,
+            "sectionWeightPercentage": 6.31,
+            "questionsGenerated": 4
+          },
+          {
+            "sectionId": "afh.16.31",
+            "sectionTitle": "Configuration Deviation List",
+            "sectionOrdinal": 31,
+            "sectionWeightPercentage": 0.56,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.16.32",
+            "sectionTitle": "Chapter Summary",
+            "sectionOrdinal": 32,
+            "sectionWeightPercentage": 1.31,
+            "questionsGenerated": 1
+          }
+        ],
+        "buildStatus": "complete",
+        "buildStage": "questions",
+        "completedSections": 32,
+        "incompleteSections": [],
+        "failureReason": ""
+      }
+    }
+  },
+  {
+    "questionid": "AFH.16.1.1",
+    "question": "What are some safety precautions to consider when operating near jet-powered airplanes on the ground?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.1.1.c.1",
+        "text": "Avoid standing near the engine intake to prevent being pulled in."
+      },
+      {
+        "id": "AFH.16.1.1.c.2",
+        "text": "Be cautious of hot and fast-moving exhaust that can blow a person down."
+      },
+      {
+        "id": "AFH.16.1.1.c.3",
+        "text": "Exercise caution during taxi to avoid jet blast affecting ground equipment."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.1.1.w.1",
+        "text": "Stand close to the engine intake for better visibility."
+      },
+      {
+        "id": "AFH.16.1.1.w.2",
+        "text": "Ignore the exhaust as it is not a safety concern."
+      },
+      {
+        "id": "AFH.16.1.1.w.3",
+        "text": "Increase power rapidly to start moving quickly."
+      },
+      {
+        "id": "AFH.16.1.1.w.4",
+        "text": "Jet engines are safe at idle and pose no threat."
+      },
+      {
+        "id": "AFH.16.1.1.w.5",
+        "text": "Jet blast only affects large equipment, not small items."
+      },
+      {
+        "id": "AFH.16.1.1.w.6",
+        "text": "There is no need for caution when taxiing into parking areas."
+      },
+      {
+        "id": "AFH.16.1.1.w.7",
+        "text": "Debris on the ground is not a concern for jet engines."
+      },
+      {
+        "id": "AFH.16.1.1.w.8",
+        "text": "Jet engines have visible propellers to indicate they are running."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16: Transition to Jet-Powered Airplanes Introduction",
+    "subjects": [
+      "Ground Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.16.2.1",
+    "question": "Which of the following are true regarding turbofan engine design and operation?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.2.1.c.1",
+        "text": "The bypass ratio compares the amount of air bypassing the core to the amount compressed for combustion"
+      },
+      {
+        "id": "AFH.16.2.1.c.2",
+        "text": "Each turbine sub-section connects to a specific compressor sub-section via a split-spool shaft"
+      },
+      {
+        "id": "AFH.16.2.1.c.3",
+        "text": "The turbofan engine improves acceleration and decreases takeoff roll compared to a turbojet"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.2.1.w.1",
+        "text": "The first compressor stage has the smallest diameter and thinnest blades"
+      },
+      {
+        "id": "AFH.16.2.1.w.2",
+        "text": "Igniters continuously fire throughout engine operation to sustain combustion"
+      },
+      {
+        "id": "AFH.16.2.1.w.3",
+        "text": "A turbojet diverts bypass air around the engine core to produce additional thrust"
+      },
+      {
+        "id": "AFH.16.2.1.w.4",
+        "text": "The turbofan engine is most efficient at higher altitudes compared to lower altitudes"
+      },
+      {
+        "id": "AFH.16.2.1.w.5",
+        "text": "The turbine section drives the compressor by extracting all available energy from the airflow"
+      },
+      {
+        "id": "AFH.16.2.1.w.6",
+        "text": "Bypass air in a turbofan is hotter and faster than the core exhaust gas"
+      },
+      {
+        "id": "AFH.16.2.1.w.7",
+        "text": "The compressor section in a turbofan is a single unified spool with no sub-sections"
+      },
+      {
+        "id": "AFH.16.2.1.w.8",
+        "text": "Higher bypass ratio means more air is directed through the combustion chamber"
+      }
+    ],
+    "source": "AFH Chapter 16, Section 16.2: Jet Engine Basics",
+    "subjects": [
+      "Turbofan Engine Design",
+      "Jet Engine Operation",
+      "Compressor and Turbine Sections"
+    ]
+  },
+  {
+    "questionid": "AFH.16.3.1",
+    "question": "In a jet engine, which of the following statements accurately describe how thrust is controlled and indicated on the flight deck?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.3.1.c.1",
+        "text": "The amount of fuel injected into the combustion chamber controls thrust."
+      },
+      {
+        "id": "AFH.16.3.1.c.2",
+        "text": "Thrust levers link to a fuel control and/or electronic engine computer that meters fuel flow."
+      },
+      {
+        "id": "AFH.16.3.1.c.3",
+        "text": "Flight deck indications for rotation speed read as percent of rpm rather than actual rpm."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.3.1.w.1",
+        "text": "Thrust is primarily controlled by adjusting the compressor blade angle."
+      },
+      {
+        "id": "AFH.16.3.1.w.2",
+        "text": "Thrust levers directly control the physical position of the turbine blades."
+      },
+      {
+        "id": "AFH.16.3.1.w.3",
+        "text": "Flight deck indications for rotation speed display actual rpm values in the thousands."
+      },
+      {
+        "id": "AFH.16.3.1.w.4",
+        "text": "Engine power is set by directly adjusting the exhaust nozzle diameter."
+      },
+      {
+        "id": "AFH.16.3.1.w.5",
+        "text": "Fuel flow is manually adjusted by the pilot using a separate lever."
+      },
+      {
+        "id": "AFH.16.3.1.w.6",
+        "text": "Thrust is controlled by varying the amount of air entering the engine."
+      },
+      {
+        "id": "AFH.16.3.1.w.7",
+        "text": "Engine indications typically show only fuel pressure and oil temperature."
+      },
+      {
+        "id": "AFH.16.3.1.w.8",
+        "text": "The thrust lever directly regulates the bypass ratio in turbofan engines."
+      }
+    ],
+    "source": "afh.16.3",
+    "subjects": [
+      "Engine Control",
+      "Flight Deck Indications",
+      "Thrust Management"
+    ]
+  },
+  {
+    "questionid": "AFH.16.3.2",
+    "question": "Regarding the operation and limitations of jet engines, which of the following statements are true?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.3.2.c.1",
+        "text": "Exceeding temperature or rpm limits, even for a few seconds, may result in serious damage to turbine blades and other components."
+      },
+      {
+        "id": "AFH.16.3.2.c.2",
+        "text": "The pilot should monitor the temperature of turbine gases and rotation speeds as needed."
+      },
+      {
+        "id": "AFH.16.3.2.c.3",
+        "text": "Modern aircraft are designed to prevent exceedances and alert the pilot of an impending or actual exceedance."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.3.2.w.1",
+        "text": "Brief exceedances of temperature or rpm limits are generally harmless to jet engines."
+      },
+      {
+        "id": "AFH.16.3.2.w.2",
+        "text": "Only older aircraft designs incorporate systems to prevent engine exceedances."
+      },
+      {
+        "id": "AFH.16.3.2.w.3",
+        "text": "Pilots primarily monitor oil pressure and hydraulic fluid levels for engine health."
+      },
+      {
+        "id": "AFH.16.3.2.w.4",
+        "text": "Engine damage from exceedances is typically limited to minor cosmetic issues."
+      },
+      {
+        "id": "AFH.16.3.2.w.5",
+        "text": "Modern aircraft rely solely on pilot vigilance to prevent engine limit exceedances."
+      },
+      {
+        "id": "AFH.16.3.2.w.6",
+        "text": "Exceeding limits only causes damage if sustained for several minutes."
+      },
+      {
+        "id": "AFH.16.3.2.w.7",
+        "text": "Turbine gas temperature is not a critical parameter for pilot monitoring."
+      },
+      {
+        "id": "AFH.16.3.2.w.8",
+        "text": "Engine rotation speeds are automatically adjusted and do not require pilot monitoring."
+      }
+    ],
+    "source": "afh.16.3",
+    "subjects": [
+      "Engine Limitations",
+      "Pilot Monitoring",
+      "Engine Damage"
+    ]
+  },
+  {
+    "questionid": "AFH.16.3.3",
+    "question": "When operating a jet engine, what is true about the relationship between thrust levers, RPM, and engine efficiency?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.3.3.c.1",
+        "text": "Thrust output changes much more per increment of throttle movement at high engine speeds."
+      },
+      {
+        "id": "AFH.16.3.3.c.2",
+        "text": "Jets operate most efficiently in the 85 percent to 100 percent rpm range."
+      },
+      {
+        "id": "AFH.16.3.3.c.3",
+        "text": "At idle rpm of approximately 55 percent to 60 percent, jet engines produce a relatively small amount of thrust."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.3.3.w.1",
+        "text": "Thrust output changes linearly with throttle movement across all engine speeds."
+      },
+      {
+        "id": "AFH.16.3.3.w.2",
+        "text": "Jet engines are most efficient at idle rpm settings."
+      },
+      {
+        "id": "AFH.16.3.3.w.3",
+        "text": "A small thrust lever movement at low rpm significantly increases power output."
+      },
+      {
+        "id": "AFH.16.3.3.w.4",
+        "text": "Idle rpm typically produces the maximum available thrust for taxiing."
+      },
+      {
+        "id": "AFH.16.3.3.w.5",
+        "text": "The most efficient rpm range for jets is between 30 percent and 50 percent."
+      },
+      {
+        "id": "AFH.16.3.3.w.6",
+        "text": "Thrust lever movement has a greater effect on power output at low engine speeds."
+      },
+      {
+        "id": "AFH.16.3.3.w.7",
+        "text": "An increase from 90 to 100 percent rpm provides only a negligible thrust increase."
+      },
+      {
+        "id": "AFH.16.3.3.w.8",
+        "text": "Jet engines produce maximum thrust at 55 percent rpm."
+      }
+    ],
+    "source": "afh.16.3",
+    "subjects": [
+      "Thrust Lever Response",
+      "Engine Efficiency",
+      "RPM Characteristics"
+    ]
+  },
+  {
+    "questionid": "AFH.16.3.4",
+    "question": "Which statements accurately describe the acceleration characteristics and efficiency factors of jet engines?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.3.4.c.1",
+        "text": "Acceleration of a jet engine from idle to full power is usually much slower than a piston engine."
+      },
+      {
+        "id": "AFH.16.3.4.c.2",
+        "text": "Pilots should anticipate the need for adding power from low power settings."
+      },
+      {
+        "id": "AFH.16.3.4.c.3",
+        "text": "The efficiency of the jet engine increases in the cold temperatures found at high altitudes."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.3.4.w.1",
+        "text": "Jet engines accelerate from idle to full power more rapidly than piston engines."
+      },
+      {
+        "id": "AFH.16.3.4.w.2",
+        "text": "Pilots can react instantly to power demands due to rapid jet engine acceleration."
+      },
+      {
+        "id": "AFH.16.3.4.w.3",
+        "text": "Jet engine efficiency decreases in cold temperatures and at high altitudes."
+      },
+      {
+        "id": "AFH.16.3.4.w.4",
+        "text": "Fuel consumption of jet engines increases as outside air temperature decreases."
+      },
+      {
+        "id": "AFH.16.3.4.w.5",
+        "text": "Transition to full power in a jet engine typically takes less than 2 seconds."
+      },
+      {
+        "id": "AFH.16.3.4.w.6",
+        "text": "Jet engine efficiency is unaffected by ambient temperature or altitude."
+      },
+      {
+        "id": "AFH.16.3.4.w.7",
+        "text": "Pilots should avoid anticipating power needs, as the engine responds quickly."
+      },
+      {
+        "id": "AFH.16.3.4.w.8",
+        "text": "Fuel consumption is highest in cold, high-altitude conditions."
+      }
+    ],
+    "source": "afh.16.3",
+    "subjects": [
+      "Engine Acceleration",
+      "Pilot Anticipation",
+      "Environmental Efficiency"
+    ]
+  },
+  {
+    "questionid": "AFH.16.4.1",
+    "question": "What are some challenges pilots face when transitioning to jet-powered airplanes due to the absence of propeller drag?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.4.1.c.1",
+        "text": "Difficulty in slowing down the airplane quickly"
+      },
+      {
+        "id": "AFH.16.4.1.c.2",
+        "text": "Jet engines still produce forward thrust at idle"
+      },
+      {
+        "id": "AFH.16.4.1.c.3",
+        "text": "Aerodynamically clean airframe contributes to less drag"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.4.1.w.1",
+        "text": "Increased propeller drag at idle"
+      },
+      {
+        "id": "AFH.16.4.1.w.2",
+        "text": "Immediate decrease in altitude when throttles are closed"
+      },
+      {
+        "id": "AFH.16.4.1.w.3",
+        "text": "Jet engines produce significant drag at idle"
+      },
+      {
+        "id": "AFH.16.4.1.w.4",
+        "text": "Easier to lose speed quickly"
+      },
+      {
+        "id": "AFH.16.4.1.w.5",
+        "text": "Propellers create more drag in jets"
+      },
+      {
+        "id": "AFH.16.4.1.w.6",
+        "text": "Jets require less distance to lose airspeed"
+      },
+      {
+        "id": "AFH.16.4.1.w.7",
+        "text": "Jets have more drag than piston-powered airplanes"
+      },
+      {
+        "id": "AFH.16.4.1.w.8",
+        "text": "Jets slow down faster than piston-powered airplanes"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16, Section 4",
+    "subjects": [
+      "Jet Transition",
+      "Aerodynamics",
+      "Pilot Training"
+    ]
+  },
+  {
+    "questionid": "AFH.16.5.1",
+    "question": "What are the maximum operating speeds in jet airplanes referred to as?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.5.1.c.1",
+        "text": "VMO"
+      },
+      {
+        "id": "AFH.16.5.1.c.2",
+        "text": "MMO"
+      },
+      {
+        "id": "AFH.16.5.1.c.3",
+        "text": "Mach number"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.5.1.w.1",
+        "text": "VNE"
+      },
+      {
+        "id": "AFH.16.5.1.w.2",
+        "text": "VFE"
+      },
+      {
+        "id": "AFH.16.5.1.w.3",
+        "text": "VNO"
+      },
+      {
+        "id": "AFH.16.5.1.w.4",
+        "text": "VLE"
+      },
+      {
+        "id": "AFH.16.5.1.w.5",
+        "text": "VLO"
+      },
+      {
+        "id": "AFH.16.5.1.w.6",
+        "text": "VSI"
+      },
+      {
+        "id": "AFH.16.5.1.w.7",
+        "text": "VSO"
+      },
+      {
+        "id": "AFH.16.5.1.w.8",
+        "text": "VY"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16: Transition to Jet-Powered Airplanes Introduction, Section: Speed Margins",
+    "subjects": [
+      "Jet Airplane Speeds"
+    ]
+  },
+  {
+    "questionid": "AFH.16.5.2",
+    "question": "What happens when a jet airplane exceeds its maximum operating Mach number (MMO)?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.5.2.c.1",
+        "text": "Severe buffeting"
+      },
+      {
+        "id": "AFH.16.5.2.c.2",
+        "text": "Possible loss of control"
+      },
+      {
+        "id": "AFH.16.5.2.c.3",
+        "text": "Mach tuck"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.5.2.w.1",
+        "text": "Increased fuel efficiency"
+      },
+      {
+        "id": "AFH.16.5.2.w.2",
+        "text": "Improved handling"
+      },
+      {
+        "id": "AFH.16.5.2.w.3",
+        "text": "Reduced drag"
+      },
+      {
+        "id": "AFH.16.5.2.w.4",
+        "text": "Enhanced stability"
+      },
+      {
+        "id": "AFH.16.5.2.w.5",
+        "text": "Higher lift"
+      },
+      {
+        "id": "AFH.16.5.2.w.6",
+        "text": "Lower noise levels"
+      },
+      {
+        "id": "AFH.16.5.2.w.7",
+        "text": "Better maneuverability"
+      },
+      {
+        "id": "AFH.16.5.2.w.8",
+        "text": "Increased range"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16: Transition to Jet-Powered Airplanes Introduction, Section: Speed Margins",
+    "subjects": [
+      "Jet Airplane Handling"
+    ]
+  },
+  {
+    "questionid": "AFH.16.6.1",
+    "question": "Which statements correctly describe the characteristics of Mach buffet at low-speed cruise?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.6.1.c.1",
+        "text": "The shock wave does not move as far aft as it does in high-speed cruise"
+      },
+      {
+        "id": "AFH.16.6.1.c.2",
+        "text": "The separated flow acts over a larger portion of the chord"
+      },
+      {
+        "id": "AFH.16.6.1.c.3",
+        "text": "The effect on aircraft control is more significant than in high-speed cruise"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.6.1.w.1",
+        "text": "The shock wave moves further aft than in high-speed cruise"
+      },
+      {
+        "id": "AFH.16.6.1.w.2",
+        "text": "The separated flow acts over a smaller portion of the chord"
+      },
+      {
+        "id": "AFH.16.6.1.w.3",
+        "text": "The buffet produces only a slight buzz due to limited surface area affected"
+      },
+      {
+        "id": "AFH.16.6.1.w.4",
+        "text": "Mach buffet at low speed is caused by a stall rather than shock wave separation"
+      },
+      {
+        "id": "AFH.16.6.1.w.5",
+        "text": "The airflow over the upper wing surface remains subsonic throughout low-speed cruise"
+      },
+      {
+        "id": "AFH.16.6.1.w.6",
+        "text": "Low-speed Mach buffet is unaffected by the angle of attack required to maintain flight"
+      },
+      {
+        "id": "AFH.16.6.1.w.7",
+        "text": "The shock wave position is identical between low-speed and high-speed cruise conditions"
+      },
+      {
+        "id": "AFH.16.6.1.w.8",
+        "text": "Airflow separation at low-speed cruise occurs on the lower surface of the wing"
+      }
+    ],
+    "source": "AFH Chapter 16, Section 16.6 – Mach Buffet",
+    "subjects": [
+      "Mach Buffet Characteristics",
+      "Shock Wave Behavior"
+    ]
+  },
+  {
+    "questionid": "AFH.16.6.2",
+    "question": "Which statements accurately describe the concept of 'coffin corner' and the aerodynamic ceiling?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.6.2.c.1",
+        "text": "Flying faster than MMO at the aerodynamic ceiling leads to high-speed Mach buffet"
+      },
+      {
+        "id": "AFH.16.6.2.c.2",
+        "text": "Flying slower at the aerodynamic ceiling requires an AOA that causes low-speed Mach buffet"
+      },
+      {
+        "id": "AFH.16.6.2.c.3",
+        "text": "An increase in load factor raises the low-end buffet speed, reducing the available margin"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.6.2.w.1",
+        "text": "Coffin corner is the altitude where the airplane can safely accelerate beyond MMO"
+      },
+      {
+        "id": "AFH.16.6.2.w.2",
+        "text": "The aerodynamic ceiling is determined by engine thrust limitations rather than buffet onset"
+      },
+      {
+        "id": "AFH.16.6.2.w.3",
+        "text": "At coffin corner, low-speed buffet is eliminated by reducing angle of attack"
+      },
+      {
+        "id": "AFH.16.6.2.w.4",
+        "text": "An increase in G-load lowers the low-end buffet speed, expanding the safe flight envelope"
+      },
+      {
+        "id": "AFH.16.6.2.w.5",
+        "text": "The manufacturer's recommended turbulence penetration speed minimizes the margin between high- and low-speed buffets"
+      },
+      {
+        "id": "AFH.16.6.2.w.6",
+        "text": "Flying at MMO at the aerodynamic ceiling provides a large margin for maneuvering"
+      },
+      {
+        "id": "AFH.16.6.2.w.7",
+        "text": "Coffin corner only applies to propeller-driven aircraft operating at high altitudes"
+      },
+      {
+        "id": "AFH.16.6.2.w.8",
+        "text": "High-speed Mach buffet at coffin corner results from airflow separation on the lower wing surface"
+      }
+    ],
+    "source": "AFH Chapter 16, Section 16.6 – Mach Buffet",
+    "subjects": [
+      "Coffin Corner",
+      "Aerodynamic Ceiling and Load Factor Effects"
+    ]
+  },
+  {
+    "questionid": "AFH.16.7.1",
+    "question": "What are some characteristics of jet airplane wings that affect low-speed flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.7.1.c.1",
+        "text": "Lower aspect ratio"
+      },
+      {
+        "id": "AFH.16.7.1.c.2",
+        "text": "Thin airfoil shape"
+      },
+      {
+        "id": "AFH.16.7.1.c.3",
+        "text": "Swept wing design"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.7.1.w.1",
+        "text": "High aspect ratio"
+      },
+      {
+        "id": "AFH.16.7.1.w.2",
+        "text": "Thick airfoil shape"
+      },
+      {
+        "id": "AFH.16.7.1.w.3",
+        "text": "Straight wing design"
+      },
+      {
+        "id": "AFH.16.7.1.w.4",
+        "text": "Large wing area"
+      },
+      {
+        "id": "AFH.16.7.1.w.5",
+        "text": "High speed stability"
+      },
+      {
+        "id": "AFH.16.7.1.w.6",
+        "text": "High lift at low speeds"
+      },
+      {
+        "id": "AFH.16.7.1.w.7",
+        "text": "Effective lift at low speeds"
+      },
+      {
+        "id": "AFH.16.7.1.w.8",
+        "text": "Short chord/long span"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16, Section 7",
+    "subjects": [
+      "Aerodynamics",
+      "Jet Aircraft",
+      "Low-Speed Flight"
+    ]
+  },
+  {
+    "questionid": "AFH.16.8.1",
+    "question": "What are some characteristics of swept wing jet airplanes during stalls?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.8.1.c.1",
+        "text": "Gradual buildup of lift"
+      },
+      {
+        "id": "AFH.16.8.1.c.2",
+        "text": "Less-defined maximum coefficient of lift"
+      },
+      {
+        "id": "AFH.16.8.1.c.3",
+        "text": "High drag at high-lift conditions"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.8.1.w.1",
+        "text": "Dramatic loss of lift"
+      },
+      {
+        "id": "AFH.16.8.1.w.2",
+        "text": "Immediate stall recovery"
+      },
+      {
+        "id": "AFH.16.8.1.w.3",
+        "text": "Low drag at high-lift conditions"
+      },
+      {
+        "id": "AFH.16.8.1.w.4",
+        "text": "Stalls at wing roots first"
+      },
+      {
+        "id": "AFH.16.8.1.w.5",
+        "text": "No need for vortex generators"
+      },
+      {
+        "id": "AFH.16.8.1.w.6",
+        "text": "Always recoverable deep stalls"
+      },
+      {
+        "id": "AFH.16.8.1.w.7",
+        "text": "Stick shakers activate at 90% stall speed"
+      },
+      {
+        "id": "AFH.16.8.1.w.8",
+        "text": "No need for pitch trim during recovery"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16: Transition to Jet-Powered Airplanes Introduction",
+    "subjects": [
+      "Aerodynamics",
+      "Jet Airplanes",
+      "Stall Characteristics"
+    ]
+  },
+  {
+    "questionid": "AFH.16.8.2",
+    "question": "What modifications can prevent swept wing airplanes from stalling at the wingtips?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.8.2.c.1",
+        "text": "Wing twist"
+      },
+      {
+        "id": "AFH.16.8.2.c.2",
+        "text": "Changes in airfoil section"
+      },
+      {
+        "id": "AFH.16.8.2.c.3",
+        "text": "Inclusion of vortex generators"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.8.2.w.1",
+        "text": "Increasing wing sweep"
+      },
+      {
+        "id": "AFH.16.8.2.w.2",
+        "text": "Reducing wing taper"
+      },
+      {
+        "id": "AFH.16.8.2.w.3",
+        "text": "Adding more weight to wingtips"
+      },
+      {
+        "id": "AFH.16.8.2.w.4",
+        "text": "Increasing angle of attack"
+      },
+      {
+        "id": "AFH.16.8.2.w.5",
+        "text": "Reducing wing span"
+      },
+      {
+        "id": "AFH.16.8.2.w.6",
+        "text": "Increasing wing area"
+      },
+      {
+        "id": "AFH.16.8.2.w.7",
+        "text": "Adding more engines"
+      },
+      {
+        "id": "AFH.16.8.2.w.8",
+        "text": "Increasing fuselage length"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16: Transition to Jet-Powered Airplanes Introduction",
+    "subjects": [
+      "Aerodynamics",
+      "Aircraft Design",
+      "Stall Prevention"
+    ]
+  },
+  {
+    "questionid": "AFH.16.8.3",
+    "question": "What actions should a pilot take when encountering a stall warning in a jet airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.8.3.c.1",
+        "text": "Apply nose-down input"
+      },
+      {
+        "id": "AFH.16.8.3.c.2",
+        "text": "Use pitch trim if necessary"
+      },
+      {
+        "id": "AFH.16.8.3.c.3",
+        "text": "Roll wings level"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.8.3.w.1",
+        "text": "Increase throttle"
+      },
+      {
+        "id": "AFH.16.8.3.w.2",
+        "text": "Pull back on the yoke"
+      },
+      {
+        "id": "AFH.16.8.3.w.3",
+        "text": "Ignore the warning"
+      },
+      {
+        "id": "AFH.16.8.3.w.4",
+        "text": "Increase angle of attack"
+      },
+      {
+        "id": "AFH.16.8.3.w.5",
+        "text": "Reduce airspeed"
+      },
+      {
+        "id": "AFH.16.8.3.w.6",
+        "text": "Activate autopilot"
+      },
+      {
+        "id": "AFH.16.8.3.w.7",
+        "text": "Deploy landing gear"
+      },
+      {
+        "id": "AFH.16.8.3.w.8",
+        "text": "Extend flaps"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16: Transition to Jet-Powered Airplanes Introduction",
+    "subjects": [
+      "Pilot Training",
+      "Stall Recovery",
+      "Jet Airplanes"
+    ]
+  },
+  {
+    "questionid": "AFH.16.9.1",
+    "question": "What are the primary purposes of drag devices on jet airplanes?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.9.1.c.1",
+        "text": "To spoil lift"
+      },
+      {
+        "id": "AFH.16.9.1.c.2",
+        "text": "To increase drag"
+      },
+      {
+        "id": "AFH.16.9.1.c.3",
+        "text": "To aid in aerodynamic braking"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.9.1.w.1",
+        "text": "To enhance lift"
+      },
+      {
+        "id": "AFH.16.9.1.w.2",
+        "text": "To improve fuel efficiency"
+      },
+      {
+        "id": "AFH.16.9.1.w.3",
+        "text": "To reduce noise"
+      },
+      {
+        "id": "AFH.16.9.1.w.4",
+        "text": "To increase speed"
+      },
+      {
+        "id": "AFH.16.9.1.w.5",
+        "text": "To improve roll control"
+      },
+      {
+        "id": "AFH.16.9.1.w.6",
+        "text": "To enhance stability"
+      },
+      {
+        "id": "AFH.16.9.1.w.7",
+        "text": "To decrease descent rate"
+      },
+      {
+        "id": "AFH.16.9.1.w.8",
+        "text": "To improve climb performance"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16: Transition to Jet-Powered Airplanes Introduction, Section: Drag Devices",
+    "subjects": [
+      "Aerodynamics",
+      "Jet Airplanes",
+      "Flight Mechanics"
+    ]
+  },
+  {
+    "questionid": "AFH.16.10.1",
+    "question": "What are the two main types of thrust reversers used in jet engines?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.10.1.c.1",
+        "text": "Target reversers"
+      },
+      {
+        "id": "AFH.16.10.1.c.2",
+        "text": "Cascade reversers"
+      },
+      {
+        "id": "AFH.16.10.1.c.3",
+        "text": "Clamshell doors"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.10.1.w.1",
+        "text": "Spoilers"
+      },
+      {
+        "id": "AFH.16.10.1.w.2",
+        "text": "Flaps"
+      },
+      {
+        "id": "AFH.16.10.1.w.3",
+        "text": "Ailerons"
+      },
+      {
+        "id": "AFH.16.10.1.w.4",
+        "text": "Elevators"
+      },
+      {
+        "id": "AFH.16.10.1.w.5",
+        "text": "Rudder"
+      },
+      {
+        "id": "AFH.16.10.1.w.6",
+        "text": "Slats"
+      },
+      {
+        "id": "AFH.16.10.1.w.7",
+        "text": "Speed brakes"
+      },
+      {
+        "id": "AFH.16.10.1.w.8",
+        "text": "Drag chutes"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16: Transition to Jet-Powered Airplanes Introduction",
+    "subjects": [
+      "Jet Engines",
+      "Thrust Reversers"
+    ]
+  },
+  {
+    "questionid": "AFH.16.10.2",
+    "question": "What is the typical angle of exhaust gas flow when using thrust reversers?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.10.2.c.1",
+        "text": "About 45° from straight ahead"
+      },
+      {
+        "id": "AFH.16.10.2.c.2",
+        "text": "Not completely reversed"
+      },
+      {
+        "id": "AFH.16.10.2.c.3",
+        "text": "Partially redirected"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.10.2.w.1",
+        "text": "90° from straight ahead"
+      },
+      {
+        "id": "AFH.16.10.2.w.2",
+        "text": "Completely reversed"
+      },
+      {
+        "id": "AFH.16.10.2.w.3",
+        "text": "Parallel to the aircraft"
+      },
+      {
+        "id": "AFH.16.10.2.w.4",
+        "text": "Perpendicular to the aircraft"
+      },
+      {
+        "id": "AFH.16.10.2.w.5",
+        "text": "180° from straight ahead"
+      },
+      {
+        "id": "AFH.16.10.2.w.6",
+        "text": "Directly forward"
+      },
+      {
+        "id": "AFH.16.10.2.w.7",
+        "text": "Directly backward"
+      },
+      {
+        "id": "AFH.16.10.2.w.8",
+        "text": "45° backward"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16: Transition to Jet-Powered Airplanes Introduction",
+    "subjects": [
+      "Jet Engines",
+      "Thrust Reversers"
+    ]
+  },
+  {
+    "questionid": "AFH.16.10.3",
+    "question": "What factors should be considered when using reverse thrust on landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.10.3.c.1",
+        "text": "Runway surface conditions"
+      },
+      {
+        "id": "AFH.16.10.3.c.2",
+        "text": "Directional control"
+      },
+      {
+        "id": "AFH.16.10.3.c.3",
+        "text": "Nose-up pitch effect"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.10.3.w.1",
+        "text": "Altitude"
+      },
+      {
+        "id": "AFH.16.10.3.w.2",
+        "text": "Fuel consumption"
+      },
+      {
+        "id": "AFH.16.10.3.w.3",
+        "text": "Engine temperature"
+      },
+      {
+        "id": "AFH.16.10.3.w.4",
+        "text": "Cabin pressure"
+      },
+      {
+        "id": "AFH.16.10.3.w.5",
+        "text": "Passenger comfort"
+      },
+      {
+        "id": "AFH.16.10.3.w.6",
+        "text": "Weather conditions"
+      },
+      {
+        "id": "AFH.16.10.3.w.7",
+        "text": "Aircraft weight"
+      },
+      {
+        "id": "AFH.16.10.3.w.8",
+        "text": "Wind speed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16: Transition to Jet-Powered Airplanes Introduction",
+    "subjects": [
+      "Jet Engines",
+      "Landing Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.16.11.1",
+    "question": "What are the general sensations pilots transitioning into jet-powered airplanes may notice?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.11.1.c.1",
+        "text": "Response differences"
+      },
+      {
+        "id": "AFH.16.11.1.c.2",
+        "text": "Increased control sensitivity"
+      },
+      {
+        "id": "AFH.16.11.1.c.3",
+        "text": "Increased tempo of flight"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.11.1.w.1",
+        "text": "Slower airspeed changes in some flight conditions"
+      },
+      {
+        "id": "AFH.16.11.1.w.2",
+        "text": "More gradual deceleration when thrust is reduced"
+      },
+      {
+        "id": "AFH.16.11.1.w.3",
+        "text": "Lack of propeller torque effect"
+      },
+      {
+        "id": "AFH.16.11.1.w.4",
+        "text": "Less drag at low power settings"
+      },
+      {
+        "id": "AFH.16.11.1.w.5",
+        "text": "Pitching tendency with power changes"
+      },
+      {
+        "id": "AFH.16.11.1.w.6",
+        "text": "Varying power settings due to significant weight changes"
+      },
+      {
+        "id": "AFH.16.11.1.w.7",
+        "text": "Greater reliance on flight instruments at high pitch attitudes"
+      },
+      {
+        "id": "AFH.16.11.1.w.8",
+        "text": "A tendency to overcontrol pitch during initial training flights"
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Pilot Sensations",
+      "Transition Training",
+      "Jet Characteristics"
+    ]
+  },
+  {
+    "questionid": "AFH.16.11.2",
+    "question": "Which statements accurately describe the aerodynamic and thrust characteristics of jet airplanes compared to propeller airplanes?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.11.2.c.1",
+        "text": "More gradual deceleration when thrust is reduced due to clean aerodynamic design."
+      },
+      {
+        "id": "AFH.16.11.2.c.2",
+        "text": "Less drag at low power settings due to the lack of propeller effects."
+      },
+      {
+        "id": "AFH.16.11.2.c.3",
+        "text": "Reduced ability to accelerate at high altitudes due to reduced available thrust."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.11.2.w.1",
+        "text": "Increased control sensitivity."
+      },
+      {
+        "id": "AFH.16.11.2.w.2",
+        "text": "Increased tempo of flight."
+      },
+      {
+        "id": "AFH.16.11.2.w.3",
+        "text": "Lack of effective slipstream over lifting and control surfaces."
+      },
+      {
+        "id": "AFH.16.11.2.w.4",
+        "text": "Pitching tendency with the lowering of flaps."
+      },
+      {
+        "id": "AFH.16.11.2.w.5",
+        "text": "The need to change power settings smoothly."
+      },
+      {
+        "id": "AFH.16.11.2.w.6",
+        "text": "Reliance on airspeed trend information for power required."
+      },
+      {
+        "id": "AFH.16.11.2.w.7",
+        "text": "A tendency to overcontrol pitch during initial training."
+      },
+      {
+        "id": "AFH.16.11.2.w.8",
+        "text": "The use of small, intermittent applications of pitch trim."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Jet Aerodynamics",
+      "Thrust Management",
+      "Deceleration"
+    ]
+  },
+  {
+    "questionid": "AFH.16.11.3",
+    "question": "What are key techniques or considerations for pilots to master when managing controls and power in a jet airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.11.3.c.1",
+        "text": "Changing power settings smoothly."
+      },
+      {
+        "id": "AFH.16.11.3.c.2",
+        "text": "Using several small, intermittent applications of pitch trim."
+      },
+      {
+        "id": "AFH.16.11.3.c.3",
+        "text": "Learning when to use available drag devices appropriately to slow the airplane."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.11.3.w.1",
+        "text": "Increased tempo of flight."
+      },
+      {
+        "id": "AFH.16.11.3.w.2",
+        "text": "More gradual deceleration."
+      },
+      {
+        "id": "AFH.16.11.3.w.3",
+        "text": "Lack of propeller torque effect."
+      },
+      {
+        "id": "AFH.16.11.3.w.4",
+        "text": "Reduced ability to accelerate at high altitudes."
+      },
+      {
+        "id": "AFH.16.11.3.w.5",
+        "text": "Greater reliance on flight instruments at high pitch attitudes."
+      },
+      {
+        "id": "AFH.16.11.3.w.6",
+        "text": "Control surfaces being less effective at higher speeds."
+      },
+      {
+        "id": "AFH.16.11.3.w.7",
+        "text": "Holding the trim button for longer periods of time."
+      },
+      {
+        "id": "AFH.16.11.3.w.8",
+        "text": "Gripping the yoke with the hand at high speeds."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Pilot Techniques",
+      "Power Management",
+      "Pitch Trim"
+    ]
+  },
+  {
+    "questionid": "AFH.16.12.1",
+    "question": "Regarding the generic jet airplane takeoff and climb procedures described in the Airplane Flying Handbook, which of the following statements are correct?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.12.1.c.1",
+        "text": "The information presented is generic in nature and assumes a two-pilot crew"
+      },
+      {
+        "id": "AFH.16.12.1.c.2",
+        "text": "If the AFM procedures for a specific airplane conflict with the generic information, the AFM procedures take precedence"
+      },
+      {
+        "id": "AFH.16.12.1.c.3",
+        "text": "If FAA-approved procedures developed for a specific air operator differ from the generic procedures, the operator's FAA-approved procedures take precedence"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.12.1.w.1",
+        "text": "The generic procedures apply universally and override all AFM procedures"
+      },
+      {
+        "id": "AFH.16.12.1.w.2",
+        "text": "Most civilian jet airplanes require a minimum flight crew of three pilots"
+      },
+      {
+        "id": "AFH.16.12.1.w.3",
+        "text": "The generic procedures were developed specifically for military jet operations"
+      },
+      {
+        "id": "AFH.16.12.1.w.4",
+        "text": "AFM procedures may be disregarded if they conflict with the generic handbook information"
+      },
+      {
+        "id": "AFH.16.12.1.w.5",
+        "text": "The generic information assumes a single-pilot crew for all civilian jet operations"
+      },
+      {
+        "id": "AFH.16.12.1.w.6",
+        "text": "FAA-approved training center procedures must always defer to the generic handbook procedures"
+      },
+      {
+        "id": "AFH.16.12.1.w.7",
+        "text": "Operator-specific FAA-approved procedures are only advisory and the generic procedures take precedence"
+      },
+      {
+        "id": "AFH.16.12.1.w.8",
+        "text": "The handbook procedures take precedence over all FAA-approved air operator procedures"
+      }
+    ],
+    "source": "AFH Chapter 16, Section 16.12: Jet Airplane Takeoff and Climb",
+    "subjects": [
+      "Jet Airplane Operations",
+      "Takeoff and Climb Procedures",
+      "AFM Authority",
+      "Crew Requirements"
+    ]
+  },
+  {
+    "questionid": "AFH.16.13.1",
+    "question": "Which of the following V-speeds are critical for a jet airplane's takeoff performance?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.13.1.c.1",
+        "text": "V1 —critical engine failure speed or takeoff decision speed"
+      },
+      {
+        "id": "AFH.16.13.1.c.2",
+        "text": "VR —rotation speed"
+      },
+      {
+        "id": "AFH.16.13.1.c.3",
+        "text": "V2 —takeoff safety speed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.13.1.w.1",
+        "text": "VS —stalling speed"
+      },
+      {
+        "id": "AFH.16.13.1.w.2",
+        "text": "VEF —speed used during certification for engine failure"
+      },
+      {
+        "id": "AFH.16.13.1.w.3",
+        "text": "VLOF —lift-off speed"
+      },
+      {
+        "id": "AFH.16.13.1.w.4",
+        "text": "VNE —never exceed speed"
+      },
+      {
+        "id": "AFH.16.13.1.w.5",
+        "text": "VNO —maximum structural cruising speed"
+      },
+      {
+        "id": "AFH.16.13.1.w.6",
+        "text": "VX —best angle of climb speed"
+      },
+      {
+        "id": "AFH.16.13.1.w.7",
+        "text": "VY —best rate of climb speed"
+      },
+      {
+        "id": "AFH.16.13.1.w.8",
+        "text": "VREF —landing reference speed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16: Transition to Jet-Powered Airplanes Introduction",
+    "subjects": [
+      "Aviation",
+      "Jet Airplane Takeoff",
+      "V-Speeds"
+    ]
+  },
+  {
+    "questionid": "AFH.16.14.1",
+    "question": "What should be done before releasing the brakes during a takeoff roll on a limited runway?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.14.1.c.1",
+        "text": "Check engine instruments for proper operation"
+      },
+      {
+        "id": "AFH.16.14.1.c.2",
+        "text": "Align airplane in the center of the runway"
+      },
+      {
+        "id": "AFH.16.14.1.c.3",
+        "text": "Bring thrust levers to specified power setting"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.14.1.w.1",
+        "text": "Engage autopilot"
+      },
+      {
+        "id": "AFH.16.14.1.w.2",
+        "text": "Activate reverse thrust"
+      },
+      {
+        "id": "AFH.16.14.1.w.3",
+        "text": "Deploy spoilers"
+      },
+      {
+        "id": "AFH.16.14.1.w.4",
+        "text": "Set flaps to full"
+      },
+      {
+        "id": "AFH.16.14.1.w.5",
+        "text": "Engage landing gear"
+      },
+      {
+        "id": "AFH.16.14.1.w.6",
+        "text": "Activate anti-ice systems"
+      },
+      {
+        "id": "AFH.16.14.1.w.7",
+        "text": "Turn off navigation lights"
+      },
+      {
+        "id": "AFH.16.14.1.w.8",
+        "text": "Engage yaw damper"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16, Section 14",
+    "subjects": [
+      "Takeoff Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.16.14.2",
+    "question": "What is the primary responsibility of the pilot not flying during the takeoff roll?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.14.2.c.1",
+        "text": "Monitor aircraft systems"
+      },
+      {
+        "id": "AFH.16.14.2.c.2",
+        "text": "Call out proper V speeds"
+      },
+      {
+        "id": "AFH.16.14.2.c.3",
+        "text": "Cross-check takeoff data"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.14.2.w.1",
+        "text": "Adjust flaps"
+      },
+      {
+        "id": "AFH.16.14.2.w.2",
+        "text": "Control the rudder"
+      },
+      {
+        "id": "AFH.16.14.2.w.3",
+        "text": "Engage autopilot"
+      },
+      {
+        "id": "AFH.16.14.2.w.4",
+        "text": "Activate reverse thrust"
+      },
+      {
+        "id": "AFH.16.14.2.w.5",
+        "text": "Deploy landing gear"
+      },
+      {
+        "id": "AFH.16.14.2.w.6",
+        "text": "Adjust cabin pressure"
+      },
+      {
+        "id": "AFH.16.14.2.w.7",
+        "text": "Activate anti-ice systems"
+      },
+      {
+        "id": "AFH.16.14.2.w.8",
+        "text": "Engage yaw damper"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16, Section 14",
+    "subjects": [
+      "Crew Resource Management"
+    ]
+  },
+  {
+    "questionid": "AFH.16.14.3",
+    "question": "What should be computed prior to each takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.14.3.c.1",
+        "text": "Takeoff power settings"
+      },
+      {
+        "id": "AFH.16.14.3.c.2",
+        "text": "V1/VR and V2 speeds"
+      },
+      {
+        "id": "AFH.16.14.3.c.3",
+        "text": "Required field length"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.14.3.w.1",
+        "text": "Fuel consumption rate"
+      },
+      {
+        "id": "AFH.16.14.3.w.2",
+        "text": "Passenger weight"
+      },
+      {
+        "id": "AFH.16.14.3.w.3",
+        "text": "Cabin temperature"
+      },
+      {
+        "id": "AFH.16.14.3.w.4",
+        "text": "Cruise altitude"
+      },
+      {
+        "id": "AFH.16.14.3.w.5",
+        "text": "Descent rate"
+      },
+      {
+        "id": "AFH.16.14.3.w.6",
+        "text": "Landing gear position"
+      },
+      {
+        "id": "AFH.16.14.3.w.7",
+        "text": "Flap settings"
+      },
+      {
+        "id": "AFH.16.14.3.w.8",
+        "text": "Autopilot settings"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16, Section 14",
+    "subjects": [
+      "Pre-Takeoff Calculations"
+    ]
+  },
+  {
+    "questionid": "AFH.16.14.4",
+    "question": "What aids the pilot in maintaining directional control during a takeoff roll in a jet-powered airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.14.4.c.1",
+        "text": "No torque-produced yawing"
+      },
+      {
+        "id": "AFH.16.14.4.c.2",
+        "text": "Maintaining centerline"
+      },
+      {
+        "id": "AFH.16.14.4.c.3",
+        "text": "Keeping wings level"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.14.4.w.1",
+        "text": "Using reverse thrust"
+      },
+      {
+        "id": "AFH.16.14.4.w.2",
+        "text": "Deploying spoilers"
+      },
+      {
+        "id": "AFH.16.14.4.w.3",
+        "text": "Engaging autopilot"
+      },
+      {
+        "id": "AFH.16.14.4.w.4",
+        "text": "Activating yaw damper"
+      },
+      {
+        "id": "AFH.16.14.4.w.5",
+        "text": "Adjusting flaps"
+      },
+      {
+        "id": "AFH.16.14.4.w.6",
+        "text": "Engaging landing gear"
+      },
+      {
+        "id": "AFH.16.14.4.w.7",
+        "text": "Activating anti-ice systems"
+      },
+      {
+        "id": "AFH.16.14.4.w.8",
+        "text": "Turning off navigation lights"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16, Section 14",
+    "subjects": [
+      "Directional Control"
+    ]
+  },
+  {
+    "questionid": "AFH.16.15.1",
+    "question": "According to the AFH, which of the following are valid reasons that could trigger a rejected takeoff (RTO)?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.15.1.c.1",
+        "text": "Engine failure during the takeoff roll"
+      },
+      {
+        "id": "AFH.16.15.1.c.2",
+        "text": "Bird strike during the takeoff roll"
+      },
+      {
+        "id": "AFH.16.15.1.c.3",
+        "text": "Direct instructions from the governing ATC authority"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.15.1.w.1",
+        "text": "Passenger request to return to the gate"
+      },
+      {
+        "id": "AFH.16.15.1.w.2",
+        "text": "Scheduled maintenance interval reached"
+      },
+      {
+        "id": "AFH.16.15.1.w.3",
+        "text": "Cabin crew completing safety briefing late"
+      },
+      {
+        "id": "AFH.16.15.1.w.4",
+        "text": "Autopilot failing to engage after liftoff"
+      },
+      {
+        "id": "AFH.16.15.1.w.5",
+        "text": "Fuel quantity gauge fluctuation at cruise altitude"
+      },
+      {
+        "id": "AFH.16.15.1.w.6",
+        "text": "Gear warning light illuminating after landing"
+      },
+      {
+        "id": "AFH.16.15.1.w.7",
+        "text": "Flap asymmetry detected during approach"
+      },
+      {
+        "id": "AFH.16.15.1.w.8",
+        "text": "Loss of cabin pressure at cruise altitude"
+      }
+    ],
+    "source": "AFH Chapter 16, Section 16.15 – Rejected Takeoff",
+    "subjects": [
+      "RTO triggers",
+      "takeoff safety"
+    ]
+  },
+  {
+    "questionid": "AFH.16.15.2",
+    "question": "Which of the following factors can degrade stopping performance during a rejected takeoff, according to the AFH?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.15.2.c.1",
+        "text": "Natural contaminants such as standing water, snow, slush, or ice"
+      },
+      {
+        "id": "AFH.16.15.2.c.2",
+        "text": "Inoperative anti-skid system"
+      },
+      {
+        "id": "AFH.16.15.2.c.3",
+        "text": "Underinflated or failing tires"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.15.2.w.1",
+        "text": "Excessive cabin altitude"
+      },
+      {
+        "id": "AFH.16.15.2.w.2",
+        "text": "High outside air temperature above 30°C"
+      },
+      {
+        "id": "AFH.16.15.2.w.3",
+        "text": "Use of autopilot during the takeoff roll"
+      },
+      {
+        "id": "AFH.16.15.2.w.4",
+        "text": "Passenger weight distribution in the cabin"
+      },
+      {
+        "id": "AFH.16.15.2.w.5",
+        "text": "Fuel imbalance between wing tanks"
+      },
+      {
+        "id": "AFH.16.15.2.w.6",
+        "text": "Activation of the weather radar"
+      },
+      {
+        "id": "AFH.16.15.2.w.7",
+        "text": "Use of engine bleed air for cabin pressurization at cruise"
+      },
+      {
+        "id": "AFH.16.15.2.w.8",
+        "text": "Flap position set to maximum for landing"
+      }
+    ],
+    "source": "AFH Chapter 16, Section 16.15 – Rejected Takeoff",
+    "subjects": [
+      "stopping performance degradation",
+      "RTO factors"
+    ]
+  },
+  {
+    "questionid": "AFH.16.15.3",
+    "question": "Regarding the go/no-go decision and V1, which of the following statements are correct according to the AFH?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.15.3.c.1",
+        "text": "The go/no-go decision should be made before V1 so that deceleration can begin no later than V1"
+      },
+      {
+        "id": "AFH.16.15.3.c.2",
+        "text": "Delaying the RTO maneuver by just one second beyond V1 increases speed by 4 to 6 knots on average"
+      },
+      {
+        "id": "AFH.16.15.3.c.3",
+        "text": "If braking has not begun by V1, the decision to continue the takeoff is made by default"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.15.3.w.1",
+        "text": "V1 is the speed at which the aircraft becomes airborne"
+      },
+      {
+        "id": "AFH.16.15.3.w.2",
+        "text": "A rejected takeoff can be safely initiated at any speed below VR"
+      },
+      {
+        "id": "AFH.16.15.3.w.3",
+        "text": "Crews typically require less than one second to identify and execute an RTO"
+      },
+      {
+        "id": "AFH.16.15.3.w.4",
+        "text": "Reverse thrust is included in FAA-approved stopping distance calculations"
+      },
+      {
+        "id": "AFH.16.15.3.w.5",
+        "text": "The go/no-go decision may be made up to five seconds after V1"
+      },
+      {
+        "id": "AFH.16.15.3.w.6",
+        "text": "High-speed aborts below 80 knots account for the majority of RTO overrun accidents"
+      },
+      {
+        "id": "AFH.16.15.3.w.7",
+        "text": "FAA-approved takeoff data assumes a wet runway for conservatism"
+      },
+      {
+        "id": "AFH.16.15.3.w.8",
+        "text": "Delaying the RTO by two seconds beyond V1 has no significant effect on stopping distance"
+      }
+    ],
+    "source": "AFH Chapter 16, Section 16.15 – Rejected Takeoff",
+    "subjects": [
+      "V1 decision speed",
+      "RTO timing"
+    ]
+  },
+  {
+    "questionid": "AFH.16.15.4",
+    "question": "According to the AFH, which of the following correctly describe the expanded regulatory definition of V1?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.15.4.c.1",
+        "text": "V1 is the maximum speed by which a rejected takeoff assures a safe stop within the remaining runway or runway and stopway"
+      },
+      {
+        "id": "AFH.16.15.4.c.2",
+        "text": "V1 is the minimum speed that assures a takeoff can be safely completed after failure of the most critical engine"
+      },
+      {
+        "id": "AFH.16.15.4.c.3",
+        "text": "V1 is the single speed permitting a successful stop or continued takeoff when operating at minimum allowable field length for a particular weight"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.15.4.w.1",
+        "text": "V1 is the speed at which the nose wheel lifts off the runway"
+      },
+      {
+        "id": "AFH.16.15.4.w.2",
+        "text": "V1 is the speed at which the aircraft achieves a positive rate of climb"
+      },
+      {
+        "id": "AFH.16.15.4.w.3",
+        "text": "V1 is always equal to VR for transport category aircraft"
+      },
+      {
+        "id": "AFH.16.15.4.w.4",
+        "text": "V1 is the speed at which full rudder authority is first available"
+      },
+      {
+        "id": "AFH.16.15.4.w.5",
+        "text": "V1 is the speed used to compute maximum landing distance"
+      },
+      {
+        "id": "AFH.16.15.4.w.6",
+        "text": "V1 is defined solely by aircraft gross weight without regard to runway length"
+      },
+      {
+        "id": "AFH.16.15.4.w.7",
+        "text": "V1 is the speed at which reverse thrust becomes effective"
+      },
+      {
+        "id": "AFH.16.15.4.w.8",
+        "text": "V1 is the speed at which the autopilot must be engaged for a continued takeoff"
+      }
+    ],
+    "source": "AFH Chapter 16, Section 16.15 – Rejected Takeoff",
+    "subjects": [
+      "V1 definition",
+      "takeoff decision speed"
+    ]
+  },
+  {
+    "questionid": "AFH.16.15.5",
+    "question": "According to the AFH, which of the following statements about FAA-approved takeoff performance data and RTO statistics are accurate?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.15.5.c.1",
+        "text": "FAA-approved takeoff data is based on aircraft performance demonstrated using a clean, dry runway"
+      },
+      {
+        "id": "AFH.16.15.5.c.2",
+        "text": "Reverse thrust is not used to compute stopping distance in FAA-approved takeoff data"
+      },
+      {
+        "id": "AFH.16.15.5.c.3",
+        "text": "High-speed aborts above 120 knots account for the vast majority of RTO overrun accidents despite representing only 2 percent of rejected takeoffs"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.15.5.w.1",
+        "text": "FAA-approved takeoff data includes a wet runway safety margin by regulation"
+      },
+      {
+        "id": "AFH.16.15.5.w.2",
+        "text": "Reverse thrust is the primary factor used to compute FAA-approved stopping distance"
+      },
+      {
+        "id": "AFH.16.15.5.w.3",
+        "text": "The majority of RTO overrun accidents occur at speeds below 80 knots"
+      },
+      {
+        "id": "AFH.16.15.5.w.4",
+        "text": "High-speed aborts above 120 knots represent the majority of all rejected takeoffs"
+      },
+      {
+        "id": "AFH.16.15.5.w.5",
+        "text": "FAA-approved takeoff data assumes maximum crosswind conditions for conservatism"
+      },
+      {
+        "id": "AFH.16.15.5.w.6",
+        "text": "Ill-advised RTO decisions account for a minority of takeoff-related commercial aviation accidents"
+      },
+      {
+        "id": "AFH.16.15.5.w.7",
+        "text": "Grooved runways are assumed in all FAA-approved stopping distance calculations"
+      },
+      {
+        "id": "AFH.16.15.5.w.8",
+        "text": "Anti-skid system performance is excluded from all FAA-approved takeoff data"
+      }
+    ],
+    "source": "AFH Chapter 16, Section 16.15 – Rejected Takeoff",
+    "subjects": [
+      "RTO statistics",
+      "FAA takeoff performance data"
+    ]
+  },
+  {
+    "questionid": "AFH.16.16.1",
+    "question": "What are key considerations for rotation and lift-off in a jet airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.16.1.c.1",
+        "text": "Initiate rotation at VR to achieve takeoff pitch attitude"
+      },
+      {
+        "id": "AFH.16.16.1.c.2",
+        "text": "Achieve V2 speed at 35 feet AGL"
+      },
+      {
+        "id": "AFH.16.16.1.c.3",
+        "text": "Maintain a constant takeoff pitch attitude regardless of weight"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.16.1.w.1",
+        "text": "Rotate to takeoff pitch attitude too soon to extend takeoff roll"
+      },
+      {
+        "id": "AFH.16.16.1.w.2",
+        "text": "Exceed V2 speed for a better climb path"
+      },
+      {
+        "id": "AFH.16.16.1.w.3",
+        "text": "Use a pitch attitude increase rate of 5° per second"
+      },
+      {
+        "id": "AFH.16.16.1.w.4",
+        "text": "Rotate late to ensure a longer takeoff roll"
+      },
+      {
+        "id": "AFH.16.16.1.w.5",
+        "text": "Achieve V2 speed at 50 feet AGL"
+      },
+      {
+        "id": "AFH.16.16.1.w.6",
+        "text": "Vary takeoff pitch attitude based on airplane weight"
+      },
+      {
+        "id": "AFH.16.16.1.w.7",
+        "text": "Ignore VR and focus on VLOF"
+      },
+      {
+        "id": "AFH.16.16.1.w.8",
+        "text": "Rotate at any speed for flexibility"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16: Transition to Jet-Powered Airplanes Introduction",
+    "subjects": [
+      "Jet Airplane Takeoff",
+      "Flight Path Management",
+      "Airspeed Control"
+    ]
+  },
+  {
+    "questionid": "AFH.16.17.1",
+    "question": "What actions should a pilot take during the initial climb phase in a jet-powered airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.17.1.c.1",
+        "text": "Maintain proper pitch attitude"
+      },
+      {
+        "id": "AFH.16.17.1.c.2",
+        "text": "Retract landing gear after positive rate of climb"
+      },
+      {
+        "id": "AFH.16.17.1.c.3",
+        "text": "Monitor airspeed, altitude, and climb rate"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.17.1.w.1",
+        "text": "Retract flaps immediately after takeoff"
+      },
+      {
+        "id": "AFH.16.17.1.w.2",
+        "text": "Ignore vertical speed indicator"
+      },
+      {
+        "id": "AFH.16.17.1.w.3",
+        "text": "Increase power without monitoring airspeed"
+      },
+      {
+        "id": "AFH.16.17.1.w.4",
+        "text": "Retract landing gear before positive rate of climb"
+      },
+      {
+        "id": "AFH.16.17.1.w.5",
+        "text": "Maintain speed above 250 KIAS below 10,000 feet MSL"
+      },
+      {
+        "id": "AFH.16.17.1.w.6",
+        "text": "Ignore ground effect during climb"
+      },
+      {
+        "id": "AFH.16.17.1.w.7",
+        "text": "Disregard heading during climb"
+      },
+      {
+        "id": "AFH.16.17.1.w.8",
+        "text": "Perform zoom climb immediately after takeoff"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16: Transition to Jet-Powered Airplanes Introduction, Section: Initial Climb",
+    "subjects": [
+      "Jet-powered airplanes",
+      "Initial climb procedures",
+      "Airspeed management"
+    ]
+  },
+  {
+    "questionid": "AFH.16.18.1",
+    "question": "According to the Airplane Flying Handbook, which of the following are characteristics of the smoothest and most fuel-efficient descent profile for a jet airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.18.1.c.1",
+        "text": "Reduce power to flight idle."
+      },
+      {
+        "id": "AFH.16.18.1.c.2",
+        "text": "Slow to L/DMAX."
+      },
+      {
+        "id": "AFH.16.18.1.c.3",
+        "text": "Level off to decelerate."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.18.1.w.1",
+        "text": "Maintain maximum cruise speed."
+      },
+      {
+        "id": "AFH.16.18.1.w.2",
+        "text": "Increase power to maintain altitude."
+      },
+      {
+        "id": "AFH.16.18.1.w.3",
+        "text": "Execute a rapid deceleration immediately after top of descent."
+      },
+      {
+        "id": "AFH.16.18.1.w.4",
+        "text": "Perform a continuous descent without leveling off."
+      },
+      {
+        "id": "AFH.16.18.1.w.5",
+        "text": "Initiate a steep dive."
+      },
+      {
+        "id": "AFH.16.18.1.w.6",
+        "text": "Accelerate to VMO/MMO."
+      },
+      {
+        "id": "AFH.16.18.1.w.7",
+        "text": "Have three descent segments with two speed reductions."
+      },
+      {
+        "id": "AFH.16.18.1.w.8",
+        "text": "Delay configuration for landing until short final."
+      }
+    ],
+    "source": "afh.16.18",
+    "subjects": [
+      "Jet Airplane Descent and Approach"
+    ]
+  },
+  {
+    "questionid": "AFH.16.19.1",
+    "question": "What factors affect the calculation of the top of descent (TOD) for a jet-powered airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.19.1.c.1",
+        "text": "Head/tail wind component"
+      },
+      {
+        "id": "AFH.16.19.1.c.2",
+        "text": "Field elevation"
+      },
+      {
+        "id": "AFH.16.19.1.c.3",
+        "text": "Terrain considerations"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.19.1.w.1",
+        "text": "Aircraft weight"
+      },
+      {
+        "id": "AFH.16.19.1.w.2",
+        "text": "Fuel type"
+      },
+      {
+        "id": "AFH.16.19.1.w.3",
+        "text": "Pilot experience"
+      },
+      {
+        "id": "AFH.16.19.1.w.4",
+        "text": "Engine type"
+      },
+      {
+        "id": "AFH.16.19.1.w.5",
+        "text": "Passenger count"
+      },
+      {
+        "id": "AFH.16.19.1.w.6",
+        "text": "Weather at destination"
+      },
+      {
+        "id": "AFH.16.19.1.w.7",
+        "text": "Time of day"
+      },
+      {
+        "id": "AFH.16.19.1.w.8",
+        "text": "Aircraft color"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16: Transition to Jet-Powered Airplanes",
+    "subjects": [
+      "Descent Planning"
+    ]
+  },
+  {
+    "questionid": "AFH.16.20.1",
+    "question": "What are the two forms of energy in an airplane as discussed in the section on descent energy management?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.20.1.c.1",
+        "text": "Potential energy in the form of altitude"
+      },
+      {
+        "id": "AFH.16.20.1.c.2",
+        "text": "Kinetic energy in the form of speed"
+      },
+      {
+        "id": "AFH.16.20.1.c.3",
+        "text": "Energy state adjustments"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.20.1.w.1",
+        "text": "Thermal energy from engine heat"
+      },
+      {
+        "id": "AFH.16.20.1.w.2",
+        "text": "Chemical energy from fuel"
+      },
+      {
+        "id": "AFH.16.20.1.w.3",
+        "text": "Nuclear energy from onboard systems"
+      },
+      {
+        "id": "AFH.16.20.1.w.4",
+        "text": "Mechanical energy from landing gear"
+      },
+      {
+        "id": "AFH.16.20.1.w.5",
+        "text": "Electrical energy from avionics"
+      },
+      {
+        "id": "AFH.16.20.1.w.6",
+        "text": "Magnetic energy from compass"
+      },
+      {
+        "id": "AFH.16.20.1.w.7",
+        "text": "Gravitational energy from Earth's pull"
+      },
+      {
+        "id": "AFH.16.20.1.w.8",
+        "text": "Solar energy from sunlight"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16: Transition to Jet-Powered Airplanes Introduction, Section: Descent Energy Management",
+    "subjects": [
+      "Energy Management",
+      "Descent Planning",
+      "Altitude Control"
+    ]
+  },
+  {
+    "questionid": "AFH.16.20.2",
+    "question": "What happens to the rate of descent when airspeed is increased from 250 KIAS to 300 KIAS?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.20.2.c.1",
+        "text": "100% increase in descent rate"
+      },
+      {
+        "id": "AFH.16.20.2.c.2",
+        "text": "Increased descent angle"
+      },
+      {
+        "id": "AFH.16.20.2.c.3",
+        "text": "Higher speed increases drag"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.20.2.w.1",
+        "text": "50% decrease in descent rate"
+      },
+      {
+        "id": "AFH.16.20.2.w.2",
+        "text": "No change in descent rate"
+      },
+      {
+        "id": "AFH.16.20.2.w.3",
+        "text": "Decreased descent angle"
+      },
+      {
+        "id": "AFH.16.20.2.w.4",
+        "text": "Lower speed decreases drag"
+      },
+      {
+        "id": "AFH.16.20.2.w.5",
+        "text": "Increased fuel efficiency"
+      },
+      {
+        "id": "AFH.16.20.2.w.6",
+        "text": "Reduced engine power"
+      },
+      {
+        "id": "AFH.16.20.2.w.7",
+        "text": "Constant descent rate"
+      },
+      {
+        "id": "AFH.16.20.2.w.8",
+        "text": "Stable descent angle"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16: Transition to Jet-Powered Airplanes Introduction, Section: Descent Energy Management",
+    "subjects": [
+      "Descent Rate",
+      "Airspeed Impact",
+      "Drag Effects"
+    ]
+  },
+  {
+    "questionid": "AFH.16.20.3",
+    "question": "What should a pilot do if they are ahead of schedule during a descent?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.20.3.c.1",
+        "text": "Leave cruise altitude sooner"
+      },
+      {
+        "id": "AFH.16.20.3.c.2",
+        "text": "Set flight idle"
+      },
+      {
+        "id": "AFH.16.20.3.c.3",
+        "text": "Descend at a slower speed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.20.3.w.1",
+        "text": "Increase engine power"
+      },
+      {
+        "id": "AFH.16.20.3.w.2",
+        "text": "Deploy speed brakes"
+      },
+      {
+        "id": "AFH.16.20.3.w.3",
+        "text": "Maintain current altitude"
+      },
+      {
+        "id": "AFH.16.20.3.w.4",
+        "text": "Descend at maximum speed"
+      },
+      {
+        "id": "AFH.16.20.3.w.5",
+        "text": "Ignore schedule"
+      },
+      {
+        "id": "AFH.16.20.3.w.6",
+        "text": "Increase fuel consumption"
+      },
+      {
+        "id": "AFH.16.20.3.w.7",
+        "text": "Use autopilot for descent"
+      },
+      {
+        "id": "AFH.16.20.3.w.8",
+        "text": "Descend at a constant rate"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16: Transition to Jet-Powered Airplanes Introduction, Section: Descent Energy Management",
+    "subjects": [
+      "Descent Planning",
+      "Fuel Efficiency",
+      "Schedule Management"
+    ]
+  },
+  {
+    "questionid": "AFH.16.21.1",
+    "question": "According to the Airplane Flying Handbook, which statements accurately describe the determination and considerations for jet engine landing distances?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.21.1.c.1",
+        "text": "The landing profile is the horizontal distance required to land and come to a complete stop from a point 50 feet above the landing surface."
+      },
+      {
+        "id": "AFH.16.21.1.c.2",
+        "text": "Manufacturers determine baseline landing distance on a dry, level runway at standard temperatures without using thrust reversers."
+      },
+      {
+        "id": "AFH.16.21.1.c.3",
+        "text": "Certified landing field length requirements are computed for the stop made with speed brakes deployed and maximum wheel braking."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.21.1.w.1",
+        "text": "Certified landing distances are established by utilizing reverse thrust."
+      },
+      {
+        "id": "AFH.16.21.1.w.2",
+        "text": "Pilots normally add a 15% cushion for landing on a dry runway."
+      },
+      {
+        "id": "AFH.16.21.1.w.3",
+        "text": "For a wet runway, the landing distance should be decreased by an additional 15%."
+      },
+      {
+        "id": "AFH.16.21.1.w.4",
+        "text": "The minimum dry runway field length should be at least 1.61 times the calculated air and ground distance needed."
+      },
+      {
+        "id": "AFH.16.21.1.w.5",
+        "text": "Manufacturers determine baseline landing distance using auto-land systems."
+      },
+      {
+        "id": "AFH.16.21.1.w.6",
+        "text": "The pilot uses only the landing weight to determine the actual expected landing requirement."
+      },
+      {
+        "id": "AFH.16.21.1.w.7",
+        "text": "Dividing the usable runway length by 1.4 should give a number equal to or greater than the landing distance calculated from AFM data for a dry runway."
+      },
+      {
+        "id": "AFH.16.21.1.w.8",
+        "text": "Certified landing field length requirements are computed without maximum wheel braking."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16: Transition to Jet-Powered Airplanes Introduction",
+    "subjects": [
+      "Jet Engine Landing Procedures",
+      "Landing Distance Calculation",
+      "FAA Regulations"
+    ]
+  },
+  {
+    "questionid": "AFH.16.22.1",
+    "question": "What are some key speeds to consider when landing a jet airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.22.1.c.1",
+        "text": "VSO — stall speed in the landing configuration"
+      },
+      {
+        "id": "AFH.16.22.1.c.2",
+        "text": "VREF — 1.3 times the stall speed in the landing configuration"
+      },
+      {
+        "id": "AFH.16.22.1.c.3",
+        "text": "Approach climb speed for go-around with an inoperative engine"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.22.1.w.1",
+        "text": "V1 — decision speed during takeoff"
+      },
+      {
+        "id": "AFH.16.22.1.w.2",
+        "text": "VR — rotation speed"
+      },
+      {
+        "id": "AFH.16.22.1.w.3",
+        "text": "V2 — takeoff safety speed"
+      },
+      {
+        "id": "AFH.16.22.1.w.4",
+        "text": "VNE — never exceed speed"
+      },
+      {
+        "id": "AFH.16.22.1.w.5",
+        "text": "VX — best angle of climb speed"
+      },
+      {
+        "id": "AFH.16.22.1.w.6",
+        "text": "VY — best rate of climb speed"
+      },
+      {
+        "id": "AFH.16.22.1.w.7",
+        "text": "VMO — maximum operating speed"
+      },
+      {
+        "id": "AFH.16.22.1.w.8",
+        "text": "VFE — maximum flap extended speed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16: Transition to Jet-Powered Airplanes",
+    "subjects": [
+      "Landing Speeds"
+    ]
+  },
+  {
+    "questionid": "AFH.16.23.1",
+    "question": "What are some reasons why jet airplanes are less forgiving than piston-engine airplanes during approaches?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.23.1.c.1",
+        "text": "Jet engine response at low rpm is slower."
+      },
+      {
+        "id": "AFH.16.23.1.c.2",
+        "text": "There is no propeller slipstream to produce immediate extra lift."
+      },
+      {
+        "id": "AFH.16.23.1.c.3",
+        "text": "Drag increases faster than lift at low speeds."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.23.1.w.1",
+        "text": "Jet airplanes have a smaller variety of glidepath angles."
+      },
+      {
+        "id": "AFH.16.23.1.w.2",
+        "text": "Jet airplanes have a lower approach speed than propeller airplanes."
+      },
+      {
+        "id": "AFH.16.23.1.w.3",
+        "text": "Propeller airplanes require more stable approaches."
+      },
+      {
+        "id": "AFH.16.23.1.w.4",
+        "text": "Jet airplanes can salvage a misjudged glidepath with a burst of power."
+      },
+      {
+        "id": "AFH.16.23.1.w.5",
+        "text": "Propeller slipstream lowers the power-on stall speed in jets."
+      },
+      {
+        "id": "AFH.16.23.1.w.6",
+        "text": "Jet airplanes have a tendency to re-acquire original speed easily."
+      },
+      {
+        "id": "AFH.16.23.1.w.7",
+        "text": "Jet airplanes are lighter than propeller airplanes."
+      },
+      {
+        "id": "AFH.16.23.1.w.8",
+        "text": "Jet airplanes have a larger window for speed differentials."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16, Section 23",
+    "subjects": [
+      "Jet Airplane Characteristics",
+      "Approach Techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.16.23.2",
+    "question": "What are the characteristics of jet airplanes that necessitate a stabilized approach?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.23.2.c.1",
+        "text": "Jet airplanes are consistently heavier and have faster approach speeds."
+      },
+      {
+        "id": "AFH.16.23.2.c.2",
+        "text": "There is little tendency for jet airplanes to re-acquire original speed."
+      },
+      {
+        "id": "AFH.16.23.2.c.3",
+        "text": "Jet airplane wings have a large increase in drag in the approach configuration."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.23.2.w.1",
+        "text": "Jet airplanes have a smaller increase in drag during approach."
+      },
+      {
+        "id": "AFH.16.23.2.w.2",
+        "text": "Jet airplanes can easily adjust speed without planning."
+      },
+      {
+        "id": "AFH.16.23.2.w.3",
+        "text": "Jet airplanes have a consistent tendency to re-acquire speed."
+      },
+      {
+        "id": "AFH.16.23.2.w.4",
+        "text": "Jet airplanes require less force to overcome momentum."
+      },
+      {
+        "id": "AFH.16.23.2.w.5",
+        "text": "Jet airplanes have a slower approach speed than propeller airplanes."
+      },
+      {
+        "id": "AFH.16.23.2.w.6",
+        "text": "Jet airplanes can rely on propeller slipstream for lift."
+      },
+      {
+        "id": "AFH.16.23.2.w.7",
+        "text": "Jet airplanes have a quick engine response at low rpm."
+      },
+      {
+        "id": "AFH.16.23.2.w.8",
+        "text": "Jet airplanes can easily salvage a misjudged glidepath."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16, Section 23",
+    "subjects": [
+      "Jet Airplane Characteristics",
+      "Approach Techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.16.24.1",
+    "question": "Which of the following are key elements of a stabilized approach in a jet-powered airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.24.1.c.1",
+        "text": "The airplane should be in the landing configuration by 1,000 feet AGL."
+      },
+      {
+        "id": "AFH.16.24.1.c.2",
+        "text": "The airplane should be on profile before descending below 1,000 feet AGL."
+      },
+      {
+        "id": "AFH.16.24.1.c.3",
+        "text": "Indicated airspeed should be between zero and 10 knots above the target airspeed by 500 feet AGL."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.24.1.w.1",
+        "text": "The airplane should be in the landing configuration by 500 feet AGL."
+      },
+      {
+        "id": "AFH.16.24.1.w.2",
+        "text": "A go-around should be initiated if not stabilized by 1,000 feet AGL."
+      },
+      {
+        "id": "AFH.16.24.1.w.3",
+        "text": "The optimum glidepath angle should be about 5 degrees."
+      },
+      {
+        "id": "AFH.16.24.1.w.4",
+        "text": "Typical descent rates fall between 300 and 400 feet per minute."
+      },
+      {
+        "id": "AFH.16.24.1.w.5",
+        "text": "The target touchdown zone is approximately 500 feet down the runway."
+      },
+      {
+        "id": "AFH.16.24.1.w.6",
+        "text": "Runway length limitations assume a 100-foot threshold height."
+      },
+      {
+        "id": "AFH.16.24.1.w.7",
+        "text": "Fuel balancing is only required after landing."
+      },
+      {
+        "id": "AFH.16.24.1.w.8",
+        "text": "Indicated airspeed should be between 10 and 20 knots above target airspeed by 500 feet AGL."
+      }
+    ],
+    "source": "AFH 16-24",
+    "subjects": [
+      "Stabilized Approach",
+      "Jet Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.16.25.1",
+    "question": "What are the consequences of carrying excess approach speed in a jet airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.25.1.c.1",
+        "text": "Increased minimum stopping distance on the runway"
+      },
+      {
+        "id": "AFH.16.25.1.c.2",
+        "text": "Increased chances of an extended flare"
+      },
+      {
+        "id": "AFH.16.25.1.c.3",
+        "text": "Increased distance to touchdown"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.25.1.w.1",
+        "text": "Decreased fuel efficiency"
+      },
+      {
+        "id": "AFH.16.25.1.w.2",
+        "text": "Improved climb performance"
+      },
+      {
+        "id": "AFH.16.25.1.w.3",
+        "text": "Reduced landing gear stress"
+      },
+      {
+        "id": "AFH.16.25.1.w.4",
+        "text": "Enhanced passenger comfort"
+      },
+      {
+        "id": "AFH.16.25.1.w.5",
+        "text": "Reduced approach time"
+      },
+      {
+        "id": "AFH.16.25.1.w.6",
+        "text": "Improved braking efficiency"
+      },
+      {
+        "id": "AFH.16.25.1.w.7",
+        "text": "Decreased sink rate"
+      },
+      {
+        "id": "AFH.16.25.1.w.8",
+        "text": "Increased lift during landing"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16: Transition to Jet-Powered Airplanes",
+    "subjects": [
+      "Approach Speed",
+      "Jet Airplane Operations",
+      "Landing Techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.16.26.1",
+    "question": "What are the consequences of a flat approach during landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.26.1.c.1",
+        "text": "Increases landing distance"
+      },
+      {
+        "id": "AFH.16.26.1.c.2",
+        "text": "Adds 500 feet to landing distance with a 2° approach"
+      },
+      {
+        "id": "AFH.16.26.1.c.3",
+        "text": "Results in touchdown beyond normal aiming point"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.26.1.w.1",
+        "text": "Reduces landing distance"
+      },
+      {
+        "id": "AFH.16.26.1.w.2",
+        "text": "Improves fuel efficiency"
+      },
+      {
+        "id": "AFH.16.26.1.w.3",
+        "text": "Decreases approach speed"
+      },
+      {
+        "id": "AFH.16.26.1.w.4",
+        "text": "Enhances passenger comfort"
+      },
+      {
+        "id": "AFH.16.26.1.w.5",
+        "text": "Ensures a smoother landing"
+      },
+      {
+        "id": "AFH.16.26.1.w.6",
+        "text": "Reduces wear on landing gear"
+      },
+      {
+        "id": "AFH.16.26.1.w.7",
+        "text": "Increases approach stability"
+      },
+      {
+        "id": "AFH.16.26.1.w.8",
+        "text": "Improves visibility during landing"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16: Transition to Jet-Powered Airplanes Introduction, Section: Glidepath Control",
+    "subjects": [
+      "Aviation",
+      "Landing Techniques",
+      "Approach Control"
+    ]
+  },
+  {
+    "questionid": "AFH.16.27.1",
+    "question": "What are key considerations when performing the flare in a jet-powered airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.27.1.c.1",
+        "text": "Initiate the flare at the proper height"
+      },
+      {
+        "id": "AFH.16.27.1.c.2",
+        "text": "Reduce thrust smoothly to idle"
+      },
+      {
+        "id": "AFH.16.27.1.c.3",
+        "text": "Plan for a deliberate touchdown"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.27.1.w.1",
+        "text": "Hold off the airplane to dissipate speed"
+      },
+      {
+        "id": "AFH.16.27.1.w.2",
+        "text": "Aim for a soft landing"
+      },
+      {
+        "id": "AFH.16.27.1.w.3",
+        "text": "Initiate flare with a rapid pitch increase"
+      },
+      {
+        "id": "AFH.16.27.1.w.4",
+        "text": "Reduce thrust abruptly"
+      },
+      {
+        "id": "AFH.16.27.1.w.5",
+        "text": "Ignore visual reference cues"
+      },
+      {
+        "id": "AFH.16.27.1.w.6",
+        "text": "Use maximum flaps for all landings"
+      },
+      {
+        "id": "AFH.16.27.1.w.7",
+        "text": "Focus solely on speed bleed off"
+      },
+      {
+        "id": "AFH.16.27.1.w.8",
+        "text": "Disregard runway length"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16, Section 27",
+    "subjects": [
+      "Jet-powered airplane landing techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.16.27.2",
+    "question": "What can result from extending the flare too long during landing in a jet-powered airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.27.2.c.1",
+        "text": "Increased runway usage"
+      },
+      {
+        "id": "AFH.16.27.2.c.2",
+        "text": "Potential tail strike"
+      },
+      {
+        "id": "AFH.16.27.2.c.3",
+        "text": "Excessive pitch attitude"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.27.2.w.1",
+        "text": "Smoother landing"
+      },
+      {
+        "id": "AFH.16.27.2.w.2",
+        "text": "Reduced landing distance"
+      },
+      {
+        "id": "AFH.16.27.2.w.3",
+        "text": "Improved fuel efficiency"
+      },
+      {
+        "id": "AFH.16.27.2.w.4",
+        "text": "Better passenger comfort"
+      },
+      {
+        "id": "AFH.16.27.2.w.5",
+        "text": "Reduced sink rate"
+      },
+      {
+        "id": "AFH.16.27.2.w.6",
+        "text": "More precise touchdown"
+      },
+      {
+        "id": "AFH.16.27.2.w.7",
+        "text": "Enhanced braking efficiency"
+      },
+      {
+        "id": "AFH.16.27.2.w.8",
+        "text": "Lower approach speed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16, Section 27",
+    "subjects": [
+      "Jet-powered airplane landing techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.16.28.1",
+    "question": "Which statements accurately describe the forces available for stopping a jet airplane during rollout?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.28.1.c.1",
+        "text": "Brakes are the most important stopping force for most landings."
+      },
+      {
+        "id": "AFH.16.28.1.c.2",
+        "text": "Reverse thrust and aerodynamic drag are most effective at high speeds."
+      },
+      {
+        "id": "AFH.16.28.1.c.3",
+        "text": "Reverse thrust and aerodynamic drag are not affected by runway surface conditions."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.28.1.w.1",
+        "text": "Brakes are most effective at high speeds."
+      },
+      {
+        "id": "AFH.16.28.1.w.2",
+        "text": "Aerodynamic drag is most effective at low speeds."
+      },
+      {
+        "id": "AFH.16.28.1.w.3",
+        "text": "Spoilers are considered one of the three primary stopping forces."
+      },
+      {
+        "id": "AFH.16.28.1.w.4",
+        "text": "On slippery runways, wheel braking is always the dominant stopping force."
+      },
+      {
+        "id": "AFH.16.28.1.w.5",
+        "text": "The effectiveness of reverse thrust decreases on dry runways."
+      },
+      {
+        "id": "AFH.16.28.1.w.6",
+        "text": "Wheel braking is equally effective at all speeds."
+      },
+      {
+        "id": "AFH.16.28.1.w.7",
+        "text": "Aerodynamic braking is only effective when thrust reversers are deployed."
+      },
+      {
+        "id": "AFH.16.28.1.w.8",
+        "text": "Reverse thrust is primarily used for maintaining directional control."
+      }
+    ],
+    "source": "afh.16.28",
+    "subjects": [
+      "Touchdown and Rollout"
+    ]
+  },
+  {
+    "questionid": "AFH.16.28.2",
+    "question": "What are the primary reasons and timing for lowering the nose-wheel and deploying spoilers immediately after touchdown in a jet airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.28.2.c.1",
+        "text": "Lowering the nose-wheel decreases wing AOA, increasing tire-to-ground friction."
+      },
+      {
+        "id": "AFH.16.28.2.c.2",
+        "text": "Spoilers increase drag and spoil lift, loading more weight onto the wheels."
+      },
+      {
+        "id": "AFH.16.28.2.c.3",
+        "text": "Both nose-wheel lowering and spoiler deployment are most effective when initiated immediately after touchdown."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.28.2.w.1",
+        "text": "Lowering the nose-wheel primarily enhances aerodynamic braking."
+      },
+      {
+        "id": "AFH.16.28.2.w.2",
+        "text": "Spoilers are deployed solely to assist with directional control."
+      },
+      {
+        "id": "AFH.16.28.2.w.3",
+        "text": "The nose-wheel should be held off the runway to maximize aerodynamic drag."
+      },
+      {
+        "id": "AFH.16.28.2.w.4",
+        "text": "Spoilers are most effective at low speeds."
+      },
+      {
+        "id": "AFH.16.28.2.w.5",
+        "text": "Lowering the nose-wheel increases lift, thereby improving braking."
+      },
+      {
+        "id": "AFH.16.28.2.w.6",
+        "text": "Landing distance charts assume nose-wheel lowering within 10 seconds."
+      },
+      {
+        "id": "AFH.16.28.2.w.7",
+        "text": "Spoilers are primarily used to reduce engine wear during rollout."
+      },
+      {
+        "id": "AFH.16.28.2.w.8",
+        "text": "The nose-wheel is lowered to allow for immediate reverse thrust application."
+      }
+    ],
+    "source": "afh.16.28",
+    "subjects": [
+      "Touchdown and Rollout"
+    ]
+  },
+  {
+    "questionid": "AFH.16.28.3",
+    "question": "According to the Airplane Flying Handbook, what are key considerations for a proper touchdown and rollout in a jet-powered airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.28.3.c.1",
+        "text": "The touchdown target zone is usually about 1,000 feet beyond the runway threshold."
+      },
+      {
+        "id": "AFH.16.28.3.c.2",
+        "text": "Braking should begin as soon after touchdown and wheel spin-up as possible."
+      },
+      {
+        "id": "AFH.16.28.3.c.3",
+        "text": "Increasing either directional control or braking force subtracts from the other's available tire ground friction."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.28.3.w.1",
+        "text": "The longest runway distance to stop is achieved by touching down as close to the threshold as possible."
+      },
+      {
+        "id": "AFH.16.28.3.w.2",
+        "text": "Heavy braking is always recommended, even without an anti-skid system."
+      },
+      {
+        "id": "AFH.16.28.3.w.3",
+        "text": "The total energy to be dissipated is greatest if there is no excess speed."
+      },
+      {
+        "id": "AFH.16.28.3.w.4",
+        "text": "The pilot controls only the 'what' factors of stopping forces, not the 'when.'"
+      },
+      {
+        "id": "AFH.16.28.3.w.5",
+        "text": "Tire ground friction is primarily affected by air temperature."
+      },
+      {
+        "id": "AFH.16.28.3.w.6",
+        "text": "Directional control and braking forces are independent regarding tire friction."
+      },
+      {
+        "id": "AFH.16.28.3.w.7",
+        "text": "Maintaining a nose-high attitude during rollout significantly improves jet airplane deceleration."
+      },
+      {
+        "id": "AFH.16.28.3.w.8",
+        "text": "Thrust reversers are most effective at low speeds."
+      }
+    ],
+    "source": "afh.16.28",
+    "subjects": [
+      "Touchdown and Rollout"
+    ]
+  },
+  {
+    "questionid": "AFH.16.29.1",
+    "question": "Regarding FAA-certificated jet airplanes and their operation, which three statements are correct?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.29.1.c.1",
+        "text": "Jet airplanes are certificated under 14 CFR part 25, which contains airworthiness standards for transport category airplanes"
+      },
+      {
+        "id": "AFH.16.29.1.c.2",
+        "text": "A turbine-powered airplane may not depart with inoperable equipment unless an approved Minimum Equipment List (MEL) exists for that aircraft"
+      },
+      {
+        "id": "AFH.16.29.1.c.3",
+        "text": "The airplane must be operated in strict compliance with procedures and limitations in the FAA-approved AFM to realize its performance and safety margins"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.29.1.w.1",
+        "text": "Jet airplanes are certificated under 14 CFR part 23, which governs normal category airplane airworthiness standards"
+      },
+      {
+        "id": "AFH.16.29.1.w.2",
+        "text": "A turbine-powered airplane may always depart with inoperable instruments provided the pilot in command approves the condition"
+      },
+      {
+        "id": "AFH.16.29.1.w.3",
+        "text": "The MEL is an optional document that airlines may choose to follow at their discretion"
+      },
+      {
+        "id": "AFH.16.29.1.w.4",
+        "text": "Performance and safety margins of a jet airplane are guaranteed regardless of how the airplane is operated"
+      },
+      {
+        "id": "AFH.16.29.1.w.5",
+        "text": "14 CFR part 91 section 91.213 applies only to piston-powered aircraft, not turbine-powered airplanes"
+      },
+      {
+        "id": "AFH.16.29.1.w.6",
+        "text": "An approved MEL alone is sufficient to authorize departure with inoperable equipment, with no additional conditions required"
+      },
+      {
+        "id": "AFH.16.29.1.w.7",
+        "text": "Airworthiness standards for transport category airplanes are contained in 14 CFR part 135"
+      },
+      {
+        "id": "AFH.16.29.1.w.8",
+        "text": "The FAA-approved AFM is advisory only and pilots may deviate from its limitations based on experience"
+      }
+    ],
+    "source": "AFH Chapter 16, Section 'Jet Airplane Systems and Maintenance'",
+    "subjects": [
+      "Jet Airplane Certification",
+      "Minimum Equipment List",
+      "AFM Compliance"
+    ]
+  },
+  {
+    "questionid": "AFH.16.30.1",
+    "question": "What is the purpose of the Minimum Equipment List (MEL) in aviation?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.30.1.c.1",
+        "text": "To determine if takeoff is authorized with inoperative equipment"
+      },
+      {
+        "id": "AFH.16.30.1.c.2",
+        "text": "To model after the FAA’s Master MEL for each aircraft type"
+      },
+      {
+        "id": "AFH.16.30.1.c.3",
+        "text": "To provide operational procedures for flight crews and maintenance personnel"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.30.1.w.1",
+        "text": "To list all possible equipment failures"
+      },
+      {
+        "id": "AFH.16.30.1.w.2",
+        "text": "To replace the aircraft's maintenance manual"
+      },
+      {
+        "id": "AFH.16.30.1.w.3",
+        "text": "To serve as a checklist for pre-flight inspections"
+      },
+      {
+        "id": "AFH.16.30.1.w.4",
+        "text": "To authorize all flights regardless of equipment status"
+      },
+      {
+        "id": "AFH.16.30.1.w.5",
+        "text": "To provide a list of spare parts"
+      },
+      {
+        "id": "AFH.16.30.1.w.6",
+        "text": "To ensure all equipment is operational before takeoff"
+      },
+      {
+        "id": "AFH.16.30.1.w.7",
+        "text": "To override FAA regulations"
+      },
+      {
+        "id": "AFH.16.30.1.w.8",
+        "text": "To serve as a pilot's training manual"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16, Section 30",
+    "subjects": [
+      "Aviation Regulations"
+    ]
+  },
+  {
+    "questionid": "AFH.16.30.2",
+    "question": "What must an MEL include according to 14 CFR part 91, section 91.213(a)(3)(ii)?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.30.2.c.1",
+        "text": "Provision for operation with inoperable equipment"
+      },
+      {
+        "id": "AFH.16.30.2.c.2",
+        "text": "Conditions for safe operation"
+      },
+      {
+        "id": "AFH.16.30.2.c.3",
+        "text": "Items that do not allow for safe operation are excluded"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.30.2.w.1",
+        "text": "A list of all aircraft systems"
+      },
+      {
+        "id": "AFH.16.30.2.w.2",
+        "text": "A complete maintenance schedule"
+      },
+      {
+        "id": "AFH.16.30.2.w.3",
+        "text": "Authorization for all flights"
+      },
+      {
+        "id": "AFH.16.30.2.w.4",
+        "text": "A list of all possible malfunctions"
+      },
+      {
+        "id": "AFH.16.30.2.w.5",
+        "text": "A pilot's checklist"
+      },
+      {
+        "id": "AFH.16.30.2.w.6",
+        "text": "A detailed repair manual"
+      },
+      {
+        "id": "AFH.16.30.2.w.7",
+        "text": "A list of spare parts"
+      },
+      {
+        "id": "AFH.16.30.2.w.8",
+        "text": "A flight plan template"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16, Section 30",
+    "subjects": [
+      "Aviation Regulations"
+    ]
+  },
+  {
+    "questionid": "AFH.16.30.3",
+    "question": "How is the MEL organized for quick reference?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.30.3.c.1",
+        "text": "Alphabetical index of aircraft components"
+      },
+      {
+        "id": "AFH.16.30.3.c.2",
+        "text": "Table of contents divided by aircraft system designation"
+      },
+      {
+        "id": "AFH.16.30.3.c.3",
+        "text": "Chapters numbered for corresponding aircraft systems"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.30.3.w.1",
+        "text": "Chronological order of equipment failures"
+      },
+      {
+        "id": "AFH.16.30.3.w.2",
+        "text": "By frequency of equipment use"
+      },
+      {
+        "id": "AFH.16.30.3.w.3",
+        "text": "By pilot preference"
+      },
+      {
+        "id": "AFH.16.30.3.w.4",
+        "text": "By maintenance cost"
+      },
+      {
+        "id": "AFH.16.30.3.w.5",
+        "text": "By manufacturer"
+      },
+      {
+        "id": "AFH.16.30.3.w.6",
+        "text": "By equipment size"
+      },
+      {
+        "id": "AFH.16.30.3.w.7",
+        "text": "By color coding"
+      },
+      {
+        "id": "AFH.16.30.3.w.8",
+        "text": "By flight duration"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16, Section 30",
+    "subjects": [
+      "Aircraft Systems"
+    ]
+  },
+  {
+    "questionid": "AFH.16.30.4",
+    "question": "What are some conditional requirements that may be included in an MEL?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.30.4.c.1",
+        "text": "Operational nature requirements"
+      },
+      {
+        "id": "AFH.16.30.4.c.2",
+        "text": "Mechanical nature requirements"
+      },
+      {
+        "id": "AFH.16.30.4.c.3",
+        "text": "Precautionary pre-flight checks"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.30.4.w.1",
+        "text": "Mandatory equipment upgrades"
+      },
+      {
+        "id": "AFH.16.30.4.w.2",
+        "text": "Pilot certification requirements"
+      },
+      {
+        "id": "AFH.16.30.4.w.3",
+        "text": "Passenger briefing procedures"
+      },
+      {
+        "id": "AFH.16.30.4.w.4",
+        "text": "Weather condition adjustments"
+      },
+      {
+        "id": "AFH.16.30.4.w.5",
+        "text": "Fuel type specifications"
+      },
+      {
+        "id": "AFH.16.30.4.w.6",
+        "text": "Flight path restrictions"
+      },
+      {
+        "id": "AFH.16.30.4.w.7",
+        "text": "Pilot age limitations"
+      },
+      {
+        "id": "AFH.16.30.4.w.8",
+        "text": "Aircraft color requirements"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16, Section 30",
+    "subjects": [
+      "Aircraft Maintenance"
+    ]
+  },
+  {
+    "questionid": "AFH.16.31.1",
+    "question": "What components are typically included in a Configuration Deviation List (CDL)?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.31.1.c.1",
+        "text": "Service doors"
+      },
+      {
+        "id": "AFH.16.31.1.c.2",
+        "text": "Power receptacle doors"
+      },
+      {
+        "id": "AFH.16.31.1.c.3",
+        "text": "Slat track doors"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.31.1.w.1",
+        "text": "Fuel pumps"
+      },
+      {
+        "id": "AFH.16.31.1.w.2",
+        "text": "Hydraulic systems"
+      },
+      {
+        "id": "AFH.16.31.1.w.3",
+        "text": "Avionics systems"
+      },
+      {
+        "id": "AFH.16.31.1.w.4",
+        "text": "Engine controls"
+      },
+      {
+        "id": "AFH.16.31.1.w.5",
+        "text": "Navigation systems"
+      },
+      {
+        "id": "AFH.16.31.1.w.6",
+        "text": "Communication radios"
+      },
+      {
+        "id": "AFH.16.31.1.w.7",
+        "text": "Flight control computers"
+      },
+      {
+        "id": "AFH.16.31.1.w.8",
+        "text": "Cabin pressurization systems"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 16: Transition to Jet-Powered Airplanes Introduction, Section: Configuration Deviation List",
+    "subjects": [
+      "Aviation Systems",
+      "Aircraft Maintenance",
+      "Flight Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.16.32.1",
+    "question": "Which of the following are differences a pilot should expect when transitioning from propeller-driven airplanes to jet-powered airplanes?",
+    "correct_answers": [
+      {
+        "id": "AFH.16.32.1.c.1",
+        "text": "Engine spool up time from low power settings is longer than with propeller-driven aircraft"
+      },
+      {
+        "id": "AFH.16.32.1.c.2",
+        "text": "Swept wing stalls begin at the wingtips rather than the root"
+      },
+      {
+        "id": "AFH.16.32.1.c.3",
+        "text": "There is no propeller-induced lift when power is increased"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.16.32.1.w.1",
+        "text": "Engine spool up time from low power settings is shorter due to turbine efficiency"
+      },
+      {
+        "id": "AFH.16.32.1.w.2",
+        "text": "Swept wing stalls begin at the wing root and progress outward"
+      },
+      {
+        "id": "AFH.16.32.1.w.3",
+        "text": "Propeller slipstream continues to provide additional lift during power increases on jets"
+      },
+      {
+        "id": "AFH.16.32.1.w.4",
+        "text": "Descents are most efficiently performed at high power settings to maintain energy"
+      },
+      {
+        "id": "AFH.16.32.1.w.5",
+        "text": "Higher speeds allow for larger and more aggressive flight control inputs"
+      },
+      {
+        "id": "AFH.16.32.1.w.6",
+        "text": "When descending above L/DMAX, increasing speed decreases the rate of descent"
+      },
+      {
+        "id": "AFH.16.32.1.w.7",
+        "text": "Engine intake and exhaust pose no significant ground hazard on jet aircraft"
+      },
+      {
+        "id": "AFH.16.32.1.w.8",
+        "text": "It is mainly about unrelated advanced turbine transition procedures not covered in chapter summary."
+      }
+    ],
+    "source": "AFH Chapter 16 Section 32: Chapter Summary",
+    "subjects": [
+      "Jet Transition",
+      "Swept Wing Aerodynamics",
+      "Engine Performance"
+    ]
+  }
+]

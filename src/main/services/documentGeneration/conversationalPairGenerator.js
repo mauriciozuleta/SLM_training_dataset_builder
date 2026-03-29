@@ -196,6 +196,22 @@ function normalizeProviderList(...inputs) {
   return providers;
 }
 
+function getSectionPairPassCap({ plannedPairs = 1, sectionWordCount = 0 }) {
+  const planned = Math.max(1, Number(plannedPairs || 0) || 1);
+  const words = Math.max(0, Number(sectionWordCount || 0) || 0);
+
+  if (planned >= 96 || words >= 1800) {
+    return 8;
+  }
+  if (planned >= 60 || words >= 1200) {
+    return 10;
+  }
+  if (planned >= 30 || words >= 700) {
+    return 12;
+  }
+  return 16;
+}
+
 function extractSectionOrdinal(section, fallback = 0) {
   const sectionId = normalizeText(section?.id);
   const dotMatch = sectionId.match(/\.(\d+)$/);
@@ -213,45 +229,75 @@ function extractSectionOrdinal(section, fallback = 0) {
  * Request conversational pairs for a single document section.
  */
 async function buildSectionPairsFromApi(api, documentJson, section, sectionOrdinal, pairCount, preferredProvider, requestOptions = {}) {
+  const MAX_PAIRS_PER_REQUEST = Math.max(4, Number(requestOptions?.maxPairsPerRequest || 12));
+  const targetCount = Math.max(1, Number(pairCount || 1) || 1);
   const sectionTitle = normalizeText(section?.title) || `Section ${sectionOrdinal}`;
   const guidance = normalizeText(requestOptions?.generationGuidance).slice(0, 900);
-  const prompt = [
-    'You are generating aviation tutoring conversations for small language model training.',
-    'Return strict JSON only with shape:',
-    '{"pairs":[{"studentPersona":"confident|confused|checkride","student":string,"assistant":string,"subjects":[string],"source":string}]}',
-    `Generate exactly ${pairCount} high-quality pairs for one section.`,
-    'Requirements:',
-    '- Ground every answer only in the provided section content.',
-    '- Vary the student opening across confident, confused, and checkride-prep styles.',
-    '- Keep the assistant answer concise, instructional, and useful for training.',
-    '- Do not use markdown or code fences.',
-    guidance ? `Regeneration guidance from prior audit findings: ${guidance}` : '',
-  ].join(' ');
-
-  const payload = {
-    chapter: Number(documentJson?.chapter) || 0,
-    chapterTitle: normalizeText(documentJson?.title),
-    documentPrefix: normalizeText(documentJson?.prefix),
-    sectionId: normalizeText(section?.id),
-    sectionOrdinal,
-    sectionTitle,
-    sectionWordCount: Number(section?.wordCount) || 0,
-    pairCount,
-    sectionContent: normalizeText(section?.content),
+  const chunkCount = Math.max(1, Math.ceil(targetCount / MAX_PAIRS_PER_REQUEST));
+  const aggregated = {
+    modelUsed: '',
+    modelVersion: '',
+    usage: {
+      prompt_tokens: 0,
+      completion_tokens: 0,
+    },
+    pairs: [],
   };
 
-  const result = preferredProvider
-    ? await api.callApiJson(preferredProvider, prompt, payload, null, requestOptions)
-    : await api.callPreferredApiJson(prompt, payload, null, requestOptions);
+  for (let chunkIndex = 0; chunkIndex < chunkCount; chunkIndex += 1) {
+    const remaining = targetCount - aggregated.pairs.length;
+    if (remaining <= 0) {
+      break;
+    }
+
+    const chunkTarget = Math.min(MAX_PAIRS_PER_REQUEST, remaining);
+    const prompt = [
+      'You are generating aviation tutoring conversations for small language model training.',
+      'Return strict JSON only with shape:',
+      '{"pairs":[{"studentPersona":"confident|confused|checkride","student":string,"assistant":string,"subjects":[string],"source":string}]}',
+      `Generate exactly ${chunkTarget} high-quality pairs for one section.`,
+      `This is chunk ${chunkIndex + 1} of ${chunkCount} for this section; vary phrasing and avoid repeating previous pair openings.`,
+      'Requirements:',
+      '- Ground every answer only in the provided section content.',
+      '- Vary the student opening across confident, confused, and checkride-prep styles.',
+      '- Keep the assistant answer concise, instructional, and useful for training.',
+      '- Do not use markdown or code fences.',
+      guidance ? `Regeneration guidance from prior audit findings: ${guidance}` : '',
+    ].join(' ');
+
+    const payload = {
+      chapter: Number(documentJson?.chapter) || 0,
+      chapterTitle: normalizeText(documentJson?.title),
+      documentPrefix: normalizeText(documentJson?.prefix),
+      sectionId: normalizeText(section?.id),
+      sectionOrdinal,
+      sectionTitle,
+      sectionWordCount: Number(section?.wordCount) || 0,
+      pairCount: chunkTarget,
+      sectionContent: normalizeText(section?.content),
+    };
+
+    const result = preferredProvider
+      ? await api.callApiJson(preferredProvider, prompt, payload, null, requestOptions)
+      : await api.callPreferredApiJson(prompt, payload, null, requestOptions);
+
+    if (!aggregated.modelUsed) {
+      aggregated.modelUsed = normalizeText(result?.modelUsed);
+    }
+    if (!aggregated.modelVersion) {
+      aggregated.modelVersion = normalizeText(result?.modelVersion);
+    }
+    aggregated.usage.prompt_tokens += Number(result?.usage?.prompt_tokens || 0);
+    aggregated.usage.completion_tokens += Number(result?.usage?.completion_tokens || 0);
+    const chunkPairs = Array.isArray(result?.json?.pairs) ? result.json.pairs : [];
+    aggregated.pairs.push(...chunkPairs.slice(0, chunkTarget));
+  }
 
   return {
-    modelUsed: normalizeText(result?.modelUsed),
-    modelVersion: normalizeText(result?.modelVersion),
-    usage: {
-      prompt_tokens: Number(result?.usage?.prompt_tokens || 0),
-      completion_tokens: Number(result?.usage?.completion_tokens || 0),
-    },
-    pairs: Array.isArray(result?.json?.pairs) ? result.json.pairs : [],
+    modelUsed: aggregated.modelUsed,
+    modelVersion: aggregated.modelVersion,
+    usage: aggregated.usage,
+    pairs: aggregated.pairs.slice(0, targetCount),
   };
 }
 
@@ -319,19 +365,40 @@ function createConversationalPairGenerator({ api }) {
     } else if (externalAbortSignal) {
       externalAbortSignal.addEventListener('abort', () => runAbortController.abort(), { once: true });
     }
-    const PRIMARY_TIMEOUT_MS = 30000;
-    const SECONDARY_TIMEOUT_MS = 60000;
-    const SWITCH_WINDOW_MS = 60000;
-    const SECTION_REBUILD_PASSES = 2;
+    const isRepairRun = Array.isArray(options?.repairSectionPlan) && options.repairSectionPlan.length > 0;
+    const repairRetryMode = `${options?.repairRetryMode || ''}`.trim().toLowerCase() === 'deep' ? 'deep' : 'fast';
+    const useFastRepairProfile = isRepairRun && repairRetryMode === 'fast';
+    const MAX_ATTEMPTS_PER_PROVIDER = 2;
+    const PRIMARY_TIMEOUT_MS = useFastRepairProfile ? 25000 : 30000;
+    const SECONDARY_TIMEOUT_MS = useFastRepairProfile ? 30000 : 60000;
+    const SWITCH_WINDOW_MS = useFastRepairProfile ? 45000 : 60000;
+    const SECTION_REBUILD_PASSES = useFastRepairProfile ? 1 : 2;
+    const formatMs = (ms) => {
+      const seconds = Math.max(1, Math.round(Number(ms || 0) / 1000));
+      return `${seconds}s`;
+    };
     const getPrimaryTimeoutMs = (provider) => {
       const normalized = `${provider || ''}`.trim().toLowerCase();
       if (normalized === 'anthropic') {
-        return 60000;
+        return useFastRepairProfile ? 30000 : 60000;
       }
       if (normalized === 'gemini') {
-        return 45000;
+        return useFastRepairProfile ? 30000 : 45000;
       }
       return PRIMARY_TIMEOUT_MS;
+    };
+    const getRepairTimeoutBoostMs = (plannedPairs) => {
+      if (!isRepairRun) {
+        return 0;
+      }
+      const count = Math.max(1, Number(plannedPairs || 0) || 1);
+      if (count >= 24) {
+        return 15000;
+      }
+      if (count >= 12) {
+        return 8000;
+      }
+      return 0;
     };
     const isAborted = () => Boolean(runAbortSignal?.aborted || externalAbortSignal?.aborted);
     const assertNotAborted = () => {
@@ -359,6 +426,15 @@ function createConversationalPairGenerator({ api }) {
         })
         .filter(Boolean)
     );
+    const repairPassCapBySectionId = new Map(
+      repairSectionPlan
+        .map((entry) => {
+          const sectionId = normalizeText(entry?.sectionId);
+          const passCap = Math.max(4, Number(entry?.passCap || 0) || 0);
+          return sectionId ? [sectionId, passCap] : null;
+        })
+        .filter(Boolean)
+    );
     const targetPairCount = repairPairCountBySectionId.size > 0
       ? Array.from(repairPairCountBySectionId.values()).reduce((sum, count) => sum + count, 0)
       : Math.max(1, Math.floor(totalWords / 20));
@@ -366,8 +442,13 @@ function createConversationalPairGenerator({ api }) {
       ? sections.map((section) => ({
         section,
         pairCount: repairPairCountBySectionId.get(normalizeText(section?.id)) || 1,
+        passCap: repairPassCapBySectionId.get(normalizeText(section?.id)) || 0,
       }))
-      : distributeSectionPairTargets(sections, targetPairCount);
+      : distributeSectionPairTargets(sections, targetPairCount)
+        .map((target) => ({
+          ...target,
+          passCap: 0,
+        }));
     const pairs = [];
     const providers = new Set();
     const models = new Set();
@@ -423,11 +504,20 @@ function createConversationalPairGenerator({ api }) {
           const section = target?.section || {};
           const sectionOrdinal = extractSectionOrdinal(section, index + 1) || (index + 1);
           const isFailedSection = Number(failedSection?.index) === index;
+          const plannedPairs = Math.max(1, Number(target?.pairCount) || 1);
+          const computedPassCap = getSectionPairPassCap({
+            plannedPairs,
+            sectionWordCount: Number(section?.wordCount) || 0,
+          });
+          const passCap = Math.max(4, Number(target?.passCap || 0) || computedPassCap);
+          const plannedPasses = Math.max(1, Math.ceil(plannedPairs / passCap));
           return {
             sectionOrdinal,
             sectionId: normalizeText(section?.id) || `section.${sectionOrdinal}`,
             sectionTitle: normalizeText(section?.title) || `Section ${sectionOrdinal}`,
-            plannedPairs: Math.max(1, Number(target?.pairCount) || 1),
+            plannedPairs,
+            passCap,
+            plannedPasses,
             status: isFailedSection ? 'failed' : 'pending',
             attemptedProviders: isFailedSection ? (failedSection?.attemptedProviders || []) : [],
             error: isFailedSection ? `${failedSection?.error || failureReason || 'Unknown API error.'}` : '',
@@ -479,6 +569,12 @@ function createConversationalPairGenerator({ api }) {
       const pairCount = Math.max(1, Number(target?.pairCount) || 1);
       const sectionOrdinal = extractSectionOrdinal(section, index + 1) || (index + 1);
       const sectionTitle = normalizeText(section?.title) || `Section ${sectionOrdinal}`;
+      const computedPassCap = getSectionPairPassCap({
+        plannedPairs: pairCount,
+        sectionWordCount: Number(section?.wordCount) || 0,
+      });
+      const sectionPassCap = Math.max(4, Number(target?.passCap || 0) || computedPassCap);
+      const plannedPasses = Math.max(1, Math.ceil(pairCount / sectionPassCap));
       let rawPairs = [];
       let modelUsed = '';
       let modelVersion = '';
@@ -488,6 +584,7 @@ function createConversationalPairGenerator({ api }) {
       };
       let lastError = null;
       const attemptedProviders = [];
+      const providerAttemptCounts = {};
 
       const now = Date.now();
       if (canUseSecondary && routingState.primaryRecoveryPending && now >= routingState.switchedToSecondaryUntil) {
@@ -522,8 +619,15 @@ function createConversationalPairGenerator({ api }) {
 
         for (let attemptIndex = 0; attemptIndex < providerAttempts.length; attemptIndex += 1) {
           const provider = providerAttempts[attemptIndex];
+          const attemptsForProvider = Number(providerAttemptCounts[provider] || 0);
+          if (attemptsForProvider >= MAX_ATTEMPTS_PER_PROVIDER) {
+            continue;
+          }
+          providerAttemptCounts[provider] = attemptsForProvider + 1;
           const isFirstAttempt = pass === 0 && attemptIndex === 0;
-          const timeoutMs = isFirstAttempt ? getPrimaryTimeoutMs(provider) : SECONDARY_TIMEOUT_MS;
+          const timeoutMs = isFirstAttempt
+            ? getPrimaryTimeoutMs(provider) + getRepairTimeoutBoostMs(pairCount)
+            : SECONDARY_TIMEOUT_MS;
           assertNotAborted();
           try {
             if (!isFirstAttempt) {
@@ -540,6 +644,7 @@ function createConversationalPairGenerator({ api }) {
                 signal: runAbortSignal,
                 timeoutMs,
                 generationGuidance,
+                maxPairsPerRequest: sectionPassCap,
               }
             );
             rawPairs = Array.isArray(result?.pairs) ? result.pairs.slice(0, pairCount) : [];
@@ -566,7 +671,10 @@ function createConversationalPairGenerator({ api }) {
             if (provider === preferredProvider && canUseSecondary) {
               routingState.switchedToSecondaryUntil = Date.now() + SWITCH_WINDOW_MS;
               routingState.primaryRecoveryPending = true;
-              log('Primary API was unresponsive for 30s. Switching conversational generation to backup API for 1 minute.', 'warning');
+              log(
+                `Primary API was unresponsive for ${formatMs(timeoutMs)}. Switching conversational generation to backup API for ${formatMs(SWITCH_WINDOW_MS)}.`,
+                'warning'
+              );
             }
           }
         }
@@ -585,6 +693,8 @@ function createConversationalPairGenerator({ api }) {
             sectionId: sectionRef,
             sectionTitle,
             plannedPairs: pairCount,
+            passCap: sectionPassCap,
+            plannedPasses,
             attemptedProviders,
             error: errorMsg,
           };
@@ -620,6 +730,8 @@ function createConversationalPairGenerator({ api }) {
         modelVersion,
         sectionUsage,
         resolvedProvider,
+        passCap: sectionPassCap,
+        plannedPasses,
       };
     };
 

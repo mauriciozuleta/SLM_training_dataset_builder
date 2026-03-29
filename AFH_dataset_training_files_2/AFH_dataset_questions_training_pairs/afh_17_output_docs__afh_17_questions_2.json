@@ -1,0 +1,3066 @@
+[
+  {
+    "questionBank": {
+      "chapterId": "afh.17",
+      "bookId": "AFH",
+      "chapterNumber": 17,
+      "chapterTitle": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17: Transition to Light Sport Airplanes (LSA) Introduction",
+      "totalRequiredQuestions": 50,
+      "metadata": {
+        "generatedAtUtc": "2026-03-29T14:39:53.236Z",
+        "chapterId": "afh.17",
+        "chapterNumber": 17,
+        "totalSections": 23,
+        "totalRequiredQuestions": 50,
+        "providers": [
+          "openai",
+          "anthropic",
+          "gemini"
+        ],
+        "models": [
+          "gpt-4o",
+          "claude-sonnet-4-6",
+          "gemini-2.5-flash"
+        ],
+        "promptTokens": 11477,
+        "completionTokens": 6660,
+        "totalTokens": 18137,
+        "sectionQuestionSummary": [
+          {
+            "sectionId": "afh.17.1",
+            "sectionTitle": "Light-Sport Aircraft Background",
+            "sectionOrdinal": 1,
+            "sectionWeightPercentage": 9.01,
+            "questionsGenerated": 5
+          },
+          {
+            "sectionId": "afh.17.2",
+            "sectionTitle": "Light-Sport Airplane Synopsis",
+            "sectionOrdinal": 2,
+            "sectionWeightPercentage": 5.02,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.17.3",
+            "sectionTitle": "Sport Pilot Certificate",
+            "sectionOrdinal": 3,
+            "sectionWeightPercentage": 3.69,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.17.4",
+            "sectionTitle": "Transition Training Considerations",
+            "sectionOrdinal": 4,
+            "sectionWeightPercentage": 2.32,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.17.5",
+            "sectionTitle": "Flight Instructors",
+            "sectionOrdinal": 5,
+            "sectionWeightPercentage": 4.75,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.17.6",
+            "sectionTitle": "LSA Maintenance",
+            "sectionOrdinal": 6,
+            "sectionWeightPercentage": 4.56,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.17.7",
+            "sectionTitle": "Airframe and Systems",
+            "sectionOrdinal": 7,
+            "sectionWeightPercentage": 5.65,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.17.8",
+            "sectionTitle": "Engines",
+            "sectionOrdinal": 8,
+            "sectionWeightPercentage": 1.95,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.17.9",
+            "sectionTitle": "Instrumentation",
+            "sectionOrdinal": 9,
+            "sectionWeightPercentage": 4.3,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.17.10",
+            "sectionTitle": "Weather Considerations",
+            "sectionOrdinal": 10,
+            "sectionWeightPercentage": 3.74,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.17.11",
+            "sectionTitle": "Flight Environment",
+            "sectionOrdinal": 11,
+            "sectionWeightPercentage": 1.28,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.17.12",
+            "sectionTitle": "Preflight",
+            "sectionOrdinal": 12,
+            "sectionWeightPercentage": 1.06,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.17.13",
+            "sectionTitle": "Inside the Airplane",
+            "sectionOrdinal": 13,
+            "sectionWeightPercentage": 14.87,
+            "questionsGenerated": 7
+          },
+          {
+            "sectionId": "afh.17.14",
+            "sectionTitle": "Outside the Airplane",
+            "sectionOrdinal": 14,
+            "sectionWeightPercentage": 4.56,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.17.15",
+            "sectionTitle": "Before Start and Starting Engine",
+            "sectionOrdinal": 15,
+            "sectionWeightPercentage": 2.39,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.17.16",
+            "sectionTitle": "Taxi",
+            "sectionOrdinal": 16,
+            "sectionWeightPercentage": 2.32,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.17.17",
+            "sectionTitle": "Takeoff and Climb",
+            "sectionOrdinal": 17,
+            "sectionWeightPercentage": 3.98,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.17.18",
+            "sectionTitle": "Cruise",
+            "sectionOrdinal": 18,
+            "sectionWeightPercentage": 9.39,
+            "questionsGenerated": 5
+          },
+          {
+            "sectionId": "afh.17.19",
+            "sectionTitle": "Approach and Landing",
+            "sectionOrdinal": 19,
+            "sectionWeightPercentage": 3.07,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.17.20",
+            "sectionTitle": "Emergencies",
+            "sectionOrdinal": 20,
+            "sectionWeightPercentage": 3.11,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.17.21",
+            "sectionTitle": "Post-Flight",
+            "sectionOrdinal": 21,
+            "sectionWeightPercentage": 0.99,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.17.22",
+            "sectionTitle": "Key Points",
+            "sectionOrdinal": 22,
+            "sectionWeightPercentage": 6.49,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.17.23",
+            "sectionTitle": "Chapter Summary",
+            "sectionOrdinal": 23,
+            "sectionWeightPercentage": 1.5,
+            "questionsGenerated": 1
+          }
+        ],
+        "buildStatus": "complete",
+        "buildStage": "questions",
+        "completedSections": 23,
+        "incompleteSections": [],
+        "failureReason": ""
+      }
+    }
+  },
+  {
+    "questionid": "AFH.17.1.1",
+    "question": "Which organizations were instrumental in the development of the LSA concept?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.1.1.c.1",
+        "text": "Federal Aviation Administration (FAA)"
+      },
+      {
+        "id": "AFH.17.1.1.c.2",
+        "text": "Light Aircraft Manufacturers Association"
+      },
+      {
+        "id": "AFH.17.1.1.c.3",
+        "text": "American Society for Testing and Materials (ASTM) International"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.1.1.w.1",
+        "text": "International Civil Aviation Organization (ICAO)"
+      },
+      {
+        "id": "AFH.17.1.1.w.2",
+        "text": "National Aeronautics and Space Administration (NASA)"
+      },
+      {
+        "id": "AFH.17.1.1.w.3",
+        "text": "European Union Aviation Safety Agency (EASA)"
+      },
+      {
+        "id": "AFH.17.1.1.w.4",
+        "text": "Boeing"
+      },
+      {
+        "id": "AFH.17.1.1.w.5",
+        "text": "Airbus"
+      },
+      {
+        "id": "AFH.17.1.1.w.6",
+        "text": "Lockheed Martin"
+      },
+      {
+        "id": "AFH.17.1.1.w.7",
+        "text": "General Electric"
+      },
+      {
+        "id": "AFH.17.1.1.w.8",
+        "text": "Rolls-Royce"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17, Section 1",
+    "subjects": [
+      "Aviation Organizations"
+    ]
+  },
+  {
+    "questionid": "AFH.17.1.2",
+    "question": "What are the maximum takeoff weights for landplane and seaplane in the LSA category?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.1.2.c.1",
+        "text": "1,320 pounds for landplane"
+      },
+      {
+        "id": "AFH.17.1.2.c.2",
+        "text": "1,430 pounds for seaplane"
+      },
+      {
+        "id": "AFH.17.1.2.c.3",
+        "text": "Several groups were instrumental in the development and success of the LSA concept."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.1.2.w.1",
+        "text": "1,500 pounds for landplane"
+      },
+      {
+        "id": "AFH.17.1.2.w.2",
+        "text": "1,600 pounds for seaplane"
+      },
+      {
+        "id": "AFH.17.1.2.w.3",
+        "text": "1,200 pounds for landplane"
+      },
+      {
+        "id": "AFH.17.1.2.w.4",
+        "text": "1,350 pounds for seaplane"
+      },
+      {
+        "id": "AFH.17.1.2.w.5",
+        "text": "1,400 pounds for landplane"
+      },
+      {
+        "id": "AFH.17.1.2.w.6",
+        "text": "1,450 pounds for seaplane"
+      },
+      {
+        "id": "AFH.17.1.2.w.7",
+        "text": "1,250 pounds for landplane"
+      },
+      {
+        "id": "AFH.17.1.2.w.8",
+        "text": "1,300 pounds for seaplane"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17, Section 1",
+    "subjects": [
+      "Aircraft Specifications"
+    ]
+  },
+  {
+    "questionid": "AFH.17.1.3",
+    "question": "What are the designations included in the LSA category?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.1.3.c.1",
+        "text": "Standard"
+      },
+      {
+        "id": "AFH.17.1.3.c.2",
+        "text": "Special (S-LSA)"
+      },
+      {
+        "id": "AFH.17.1.3.c.3",
+        "text": "Experimental (E-LSA)"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.1.3.w.1",
+        "text": "Commercial"
+      },
+      {
+        "id": "AFH.17.1.3.w.2",
+        "text": "Military"
+      },
+      {
+        "id": "AFH.17.1.3.w.3",
+        "text": "Private"
+      },
+      {
+        "id": "AFH.17.1.3.w.4",
+        "text": "Cargo"
+      },
+      {
+        "id": "AFH.17.1.3.w.5",
+        "text": "Passenger"
+      },
+      {
+        "id": "AFH.17.1.3.w.6",
+        "text": "Utility"
+      },
+      {
+        "id": "AFH.17.1.3.w.7",
+        "text": "Transport"
+      },
+      {
+        "id": "AFH.17.1.3.w.8",
+        "text": "Recreational"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17, Section 1",
+    "subjects": [
+      "Aircraft Categories"
+    ]
+  },
+  {
+    "questionid": "AFH.17.1.4",
+    "question": "What are the maximum speed and stall speed requirements for an LSA?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.1.4.c.1",
+        "text": "120 knots calibrated airspeed (CAS) maximum speed"
+      },
+      {
+        "id": "AFH.17.1.4.c.2",
+        "text": "45 knots maximum stall speed"
+      },
+      {
+        "id": "AFH.17.1.4.c.3",
+        "text": "Several groups were instrumental in the development and success of the LSA concept."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.1.4.w.1",
+        "text": "130 knots maximum speed"
+      },
+      {
+        "id": "AFH.17.1.4.w.2",
+        "text": "50 knots maximum stall speed"
+      },
+      {
+        "id": "AFH.17.1.4.w.3",
+        "text": "110 knots maximum speed"
+      },
+      {
+        "id": "AFH.17.1.4.w.4",
+        "text": "40 knots maximum stall speed"
+      },
+      {
+        "id": "AFH.17.1.4.w.5",
+        "text": "125 knots maximum speed"
+      },
+      {
+        "id": "AFH.17.1.4.w.6",
+        "text": "55 knots maximum stall speed"
+      },
+      {
+        "id": "AFH.17.1.4.w.7",
+        "text": "115 knots maximum speed"
+      },
+      {
+        "id": "AFH.17.1.4.w.8",
+        "text": "60 knots maximum stall speed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17, Section 1",
+    "subjects": [
+      "Aircraft Performance"
+    ]
+  },
+  {
+    "questionid": "AFH.17.1.5",
+    "question": "What standards must S-LSA and E-LSA aircraft adhere to?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.1.5.c.1",
+        "text": "ASTM Committee F-37 Industry Consensus Standards"
+      },
+      {
+        "id": "AFH.17.1.5.c.2",
+        "text": "Design and performance standards"
+      },
+      {
+        "id": "AFH.17.1.5.c.3",
+        "text": "Quality assurance standards"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.1.5.w.1",
+        "text": "FAA Part 23 certification"
+      },
+      {
+        "id": "AFH.17.1.5.w.2",
+        "text": "ISO 9001 standards"
+      },
+      {
+        "id": "AFH.17.1.5.w.3",
+        "text": "EASA Part 21 standards"
+      },
+      {
+        "id": "AFH.17.1.5.w.4",
+        "text": "ICAO Annex 8 standards"
+      },
+      {
+        "id": "AFH.17.1.5.w.5",
+        "text": "MIL-STD-810 standards"
+      },
+      {
+        "id": "AFH.17.1.5.w.6",
+        "text": "SAE AS9100 standards"
+      },
+      {
+        "id": "AFH.17.1.5.w.7",
+        "text": "NIST standards"
+      },
+      {
+        "id": "AFH.17.1.5.w.8",
+        "text": "ANSI standards"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17, Section 1",
+    "subjects": [
+      "Aircraft Standards"
+    ]
+  },
+  {
+    "questionid": "AFH.17.2.1",
+    "question": "Which pilot certificate levels are authorized by FAA policy to pilot sport aircraft?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.2.1.c.1",
+        "text": "Sport pilot certificate"
+      },
+      {
+        "id": "AFH.17.2.1.c.2",
+        "text": "Private pilot certificate"
+      },
+      {
+        "id": "AFH.17.2.1.c.3",
+        "text": "ATP certificate"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.2.1.w.1",
+        "text": "Student pilot certificate only"
+      },
+      {
+        "id": "AFH.17.2.1.w.2",
+        "text": "Ultralight vehicle operator permit"
+      },
+      {
+        "id": "AFH.17.2.1.w.3",
+        "text": "Glider-only rated pilot certificate"
+      },
+      {
+        "id": "AFH.17.2.1.w.4",
+        "text": "Foreign pilot license without FAA validation"
+      },
+      {
+        "id": "AFH.17.2.1.w.5",
+        "text": "Medical certificate holder without pilot certificate"
+      },
+      {
+        "id": "AFH.17.2.1.w.6",
+        "text": "Ground instructor certificate"
+      },
+      {
+        "id": "AFH.17.2.1.w.7",
+        "text": "Flight engineer certificate"
+      },
+      {
+        "id": "AFH.17.2.1.w.8",
+        "text": "Balloon pilot certificate only"
+      }
+    ],
+    "source": "AFH Chapter 17, Section 17.2 – Light-Sport Airplane Synopsis",
+    "subjects": [
+      "LSA pilot eligibility",
+      "sport pilot certificate",
+      "pilot certificate levels"
+    ]
+  },
+  {
+    "questionid": "AFH.17.2.2",
+    "question": "Under what conditions may an LSA be operated by a recreational pilot between sunset and sunrise?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.2.2.c.1",
+        "text": "The recreational pilot must be the sole occupant of the aircraft"
+      },
+      {
+        "id": "AFH.17.2.2.c.2",
+        "text": "The flight must be under the supervision of an authorized instructor"
+      },
+      {
+        "id": "AFH.17.2.2.c.3",
+        "text": "Flight or surface visibility must be at least 5 statute miles"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.2.2.w.1",
+        "text": "The aircraft must be equipped with a transponder"
+      },
+      {
+        "id": "AFH.17.2.2.w.2",
+        "text": "The recreational pilot must hold an instrument rating"
+      },
+      {
+        "id": "AFH.17.2.2.w.3",
+        "text": "A second pilot must be on board as a safety observer"
+      },
+      {
+        "id": "AFH.17.2.2.w.4",
+        "text": "The flight must remain within 25 nautical miles of the departure airport"
+      },
+      {
+        "id": "AFH.17.2.2.w.5",
+        "text": "Night operations require a commercial pilot certificate"
+      },
+      {
+        "id": "AFH.17.2.2.w.6",
+        "text": "The aircraft must have anti-collision lights only"
+      },
+      {
+        "id": "AFH.17.2.2.w.7",
+        "text": "The pilot must have logged at least 100 flight hours"
+      },
+      {
+        "id": "AFH.17.2.2.w.8",
+        "text": "Operations are only permitted for cross-country training flights"
+      }
+    ],
+    "source": "AFH Chapter 17, Section 17.2 – Light-Sport Airplane Synopsis",
+    "subjects": [
+      "recreational pilot night operations",
+      "LSA operating limitations",
+      "visibility requirements"
+    ]
+  },
+  {
+    "questionid": "AFH.17.2.3",
+    "question": "Which statements correctly describe E-LSA certification?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.2.3.c.1",
+        "text": "E-LSA-certified airplanes may be used for sport and recreation"
+      },
+      {
+        "id": "AFH.17.2.3.c.2",
+        "text": "E-LSA certification is based on an approved S-LSA airplane"
+      },
+      {
+        "id": "AFH.17.2.3.c.3",
+        "text": "E-LSA certification is not the same as Experimental Amateur-Built aircraft certification"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.2.3.w.1",
+        "text": "E-LSA airplanes may be rented to the general public"
+      },
+      {
+        "id": "AFH.17.2.3.w.2",
+        "text": "E-LSA certification is equivalent to Experimental Amateur-Built certification"
+      },
+      {
+        "id": "AFH.17.2.3.w.3",
+        "text": "E-LSA airplanes are approved for commercial air tours"
+      },
+      {
+        "id": "AFH.17.2.3.w.4",
+        "text": "E-LSA airplanes may be used for aircraft rental by any certificated pilot"
+      },
+      {
+        "id": "AFH.17.2.3.w.5",
+        "text": "E-LSA certification is independent of any S-LSA design"
+      },
+      {
+        "id": "AFH.17.2.3.w.6",
+        "text": "E-LSA airplanes require a standard airworthiness certificate"
+      },
+      {
+        "id": "AFH.17.2.3.w.7",
+        "text": "E-LSA airplanes may be operated under IFR conditions"
+      },
+      {
+        "id": "AFH.17.2.3.w.8",
+        "text": "E-LSA certification allows unrestricted flight instruction by any instructor"
+      }
+    ],
+    "source": "AFH Chapter 17, Section 17.2 – Light-Sport Airplane Synopsis",
+    "subjects": [
+      "E-LSA certification",
+      "LSA categories",
+      "experimental aircraft"
+    ]
+  },
+  {
+    "questionid": "AFH.17.3.1",
+    "question": "Which of the following are requirements for a pilot holding a recreational, private, commercial, or airline transport pilot certificate to act as pilot in command of a light-sport airplane (LSA)?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.3.1.c.1",
+        "text": "Possess the appropriate category and class rating."
+      },
+      {
+        "id": "AFH.17.3.1.c.2",
+        "text": "Hold a valid U.S. driver's license as evidence of medical eligibility."
+      },
+      {
+        "id": "AFH.17.3.1.c.3",
+        "text": "Hold a medical certificate that meets the requirements of 14 CFR part 61, section 61.303 table."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.3.1.w.1",
+        "text": "Obtain a sport pilot certificate."
+      },
+      {
+        "id": "AFH.17.3.1.w.2",
+        "text": "Complete additional LSA-specific flight training."
+      },
+      {
+        "id": "AFH.17.3.1.w.3",
+        "text": "Pass a specific LSA knowledge test."
+      },
+      {
+        "id": "AFH.17.3.1.w.4",
+        "text": "Have at least 100 hours of PIC time in LSAs."
+      },
+      {
+        "id": "AFH.17.3.1.w.5",
+        "text": "Be under 65 years of age."
+      },
+      {
+        "id": "AFH.17.3.1.w.6",
+        "text": "Possess a second-class medical certificate."
+      },
+      {
+        "id": "AFH.17.3.1.w.7",
+        "text": "Receive an endorsement from an authorized LSA instructor for each LSA type."
+      },
+      {
+        "id": "AFH.17.3.1.w.8",
+        "text": "Operate only within 50 nautical miles of their home airport."
+      }
+    ],
+    "source": "AFH, Chapter 17, Section 17.3",
+    "subjects": [
+      "Sport Pilot Privileges",
+      "Medical Eligibility",
+      "Category and Class Ratings"
+    ]
+  },
+  {
+    "questionid": "AFH.17.3.2",
+    "question": "According to FAA regulations, under which specific circumstances is a U.S. driver's license not sufficient for a pilot holding a higher-level certificate to meet the medical eligibility requirements for flying a light-sport airplane (LSA)?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.3.2.c.1",
+        "text": "The pilot's most recent medical certificate was denied."
+      },
+      {
+        "id": "AFH.17.3.2.c.2",
+        "text": "The pilot's most recent medical certificate was revoked."
+      },
+      {
+        "id": "AFH.17.3.2.c.3",
+        "text": "The pilot's most recent medical certificate was suspended."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.3.2.w.1",
+        "text": "The pilot is over 70 years old."
+      },
+      {
+        "id": "AFH.17.3.2.w.2",
+        "text": "The pilot is flying for compensation or hire."
+      },
+      {
+        "id": "AFH.17.3.2.w.3",
+        "text": "The pilot is operating outside of U.S. airspace."
+      },
+      {
+        "id": "AFH.17.3.2.w.4",
+        "text": "The pilot's driver's license has an expired endorsement."
+      },
+      {
+        "id": "AFH.17.3.2.w.5",
+        "text": "The pilot is flying an LSA with more than one engine."
+      },
+      {
+        "id": "AFH.17.3.2.w.6",
+        "text": "The pilot has not flown an LSA in the past 24 months."
+      },
+      {
+        "id": "AFH.17.3.2.w.7",
+        "text": "The pilot is acting as a flight instructor in an LSA."
+      },
+      {
+        "id": "AFH.17.3.2.w.8",
+        "text": "The pilot is operating at night."
+      }
+    ],
+    "source": "AFH, Chapter 17, Section 17.3",
+    "subjects": [
+      "Medical Eligibility",
+      "Sport Pilot Certificate",
+      "Driver's License"
+    ]
+  },
+  {
+    "questionid": "AFH.17.4.1",
+    "question": "What should a pilot consider when selecting a flight school for transitioning to Light Sport Airplanes (LSA)?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.4.1.c.1",
+        "text": "Experience in LSA instruction"
+      },
+      {
+        "id": "AFH.17.4.1.c.2",
+        "text": "Quality of instruction"
+      },
+      {
+        "id": "AFH.17.4.1.c.3",
+        "text": "Feedback from other pilots"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.4.1.w.1",
+        "text": "Number of helicopters available"
+      },
+      {
+        "id": "AFH.17.4.1.w.2",
+        "text": "Availability of jet simulators"
+      },
+      {
+        "id": "AFH.17.4.1.w.3",
+        "text": "Proximity to international airports"
+      },
+      {
+        "id": "AFH.17.4.1.w.4",
+        "text": "Number of commercial pilot instructors"
+      },
+      {
+        "id": "AFH.17.4.1.w.5",
+        "text": "Availability of night flying courses"
+      },
+      {
+        "id": "AFH.17.4.1.w.6",
+        "text": "Partnerships with airlines"
+      },
+      {
+        "id": "AFH.17.4.1.w.7",
+        "text": "Number of twin-engine aircraft"
+      },
+      {
+        "id": "AFH.17.4.1.w.8",
+        "text": "Availability of aerobatic training"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17, Section 4",
+    "subjects": [
+      "Flight Schools",
+      "LSA Transition",
+      "Pilot Training"
+    ]
+  },
+  {
+    "questionid": "AFH.17.5.1",
+    "question": "What are the responsibilities of a flight instructor-S according to 14 CFR part 61, section 61.413?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.5.1.c.1",
+        "text": "Provide instruction only in LSAs"
+      },
+      {
+        "id": "AFH.17.5.1.c.2",
+        "text": "Cannot instruct in non-LSA airplanes"
+      },
+      {
+        "id": "AFH.17.5.1.c.3",
+        "text": "Must have verifiable LSA instruction experience"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.5.1.w.1",
+        "text": "Can instruct in any type of airplane"
+      },
+      {
+        "id": "AFH.17.5.1.w.2",
+        "text": "Provide instruction in Cessna 150"
+      },
+      {
+        "id": "AFH.17.5.1.w.3",
+        "text": "Can instruct in helicopters"
+      },
+      {
+        "id": "AFH.17.5.1.w.4",
+        "text": "Can instruct in gliders"
+      },
+      {
+        "id": "AFH.17.5.1.w.5",
+        "text": "Provide instruction in jets"
+      },
+      {
+        "id": "AFH.17.5.1.w.6",
+        "text": "Can instruct in military aircraft"
+      },
+      {
+        "id": "AFH.17.5.1.w.7",
+        "text": "Can instruct in seaplanes"
+      },
+      {
+        "id": "AFH.17.5.1.w.8",
+        "text": "Provide instruction in balloons"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17, Section 5",
+    "subjects": [
+      "Flight Instructors",
+      "LSA Regulations"
+    ]
+  },
+  {
+    "questionid": "AFH.17.5.2",
+    "question": "What should a transitioning LSA pilot review as part of their training curriculum?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.5.2.c.1",
+        "text": "Pilot’s Operating Handbook (POH)"
+      },
+      {
+        "id": "AFH.17.5.2.c.2",
+        "text": "LSA maintenance"
+      },
+      {
+        "id": "AFH.17.5.2.c.3",
+        "text": "Wake turbulence avoidance"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.5.2.w.1",
+        "text": "Helicopter operations"
+      },
+      {
+        "id": "AFH.17.5.2.w.2",
+        "text": "Jet engine mechanics"
+      },
+      {
+        "id": "AFH.17.5.2.w.3",
+        "text": "Seaplane operations"
+      },
+      {
+        "id": "AFH.17.5.2.w.4",
+        "text": "Glider towing procedures"
+      },
+      {
+        "id": "AFH.17.5.2.w.5",
+        "text": "Balloon inflation techniques"
+      },
+      {
+        "id": "AFH.17.5.2.w.6",
+        "text": "Military aircraft systems"
+      },
+      {
+        "id": "AFH.17.5.2.w.7",
+        "text": "Spacecraft re-entry procedures"
+      },
+      {
+        "id": "AFH.17.5.2.w.8",
+        "text": "Submarine navigation"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17, Section 5",
+    "subjects": [
+      "LSA Training",
+      "Pilot Curriculum"
+    ]
+  },
+  {
+    "questionid": "AFH.17.6.1",
+    "question": "Who is authorized to perform maintenance on an S-LSA?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.6.1.c.1",
+        "text": "LSA Repairman with a Maintenance rating"
+      },
+      {
+        "id": "AFH.17.6.1.c.2",
+        "text": "FAA-certificated Airframe and Powerplant Mechanic (A&P)"
+      },
+      {
+        "id": "AFH.17.6.1.c.3",
+        "text": "As specified by the aircraft manufacturer"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.6.1.w.1",
+        "text": "FAA-certificated Pilot"
+      },
+      {
+        "id": "AFH.17.6.1.w.2",
+        "text": "A&P with Inspection Authorization (IA)"
+      },
+      {
+        "id": "AFH.17.6.1.w.3",
+        "text": "Only the aircraft manufacturer"
+      },
+      {
+        "id": "AFH.17.6.1.w.4",
+        "text": "FAA Flight Instructor"
+      },
+      {
+        "id": "AFH.17.6.1.w.5",
+        "text": "Private Aircraft Owner"
+      },
+      {
+        "id": "AFH.17.6.1.w.6",
+        "text": "FAA Safety Inspector"
+      },
+      {
+        "id": "AFH.17.6.1.w.7",
+        "text": "Commercial Pilot"
+      },
+      {
+        "id": "AFH.17.6.1.w.8",
+        "text": "Air Traffic Controller"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17, Section 6",
+    "subjects": [
+      "LSA Maintenance"
+    ]
+  },
+  {
+    "questionid": "AFH.17.6.2",
+    "question": "What should S-LSA owners comply with regarding maintenance?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.6.2.c.1",
+        "text": "Safety directives issued by the LSA manufacturer"
+      },
+      {
+        "id": "AFH.17.6.2.c.2",
+        "text": "ADs for FAA-certificated components"
+      },
+      {
+        "id": "AFH.17.6.2.c.3",
+        "text": "Service bulletins recommending future action"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.6.2.w.1",
+        "text": "Only FAA-issued directives"
+      },
+      {
+        "id": "AFH.17.6.2.w.2",
+        "text": "General aviation maintenance guidelines"
+      },
+      {
+        "id": "AFH.17.6.2.w.3",
+        "text": "Local aviation authority regulations"
+      },
+      {
+        "id": "AFH.17.6.2.w.4",
+        "text": "Pilot's personal maintenance checklist"
+      },
+      {
+        "id": "AFH.17.6.2.w.5",
+        "text": "Non-certified mechanic recommendations"
+      },
+      {
+        "id": "AFH.17.6.2.w.6",
+        "text": "Unverified online maintenance tips"
+      },
+      {
+        "id": "AFH.17.6.2.w.7",
+        "text": "Flight instructor advice"
+      },
+      {
+        "id": "AFH.17.6.2.w.8",
+        "text": "Air traffic control instructions"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17, Section 6",
+    "subjects": [
+      "LSA Maintenance"
+    ]
+  },
+  {
+    "questionid": "AFH.17.7.1",
+    "question": "What materials are commonly used in the construction of Light Sport Airplanes (LSAs)?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.7.1.c.1",
+        "text": "Wood"
+      },
+      {
+        "id": "AFH.17.7.1.c.2",
+        "text": "Composite"
+      },
+      {
+        "id": "AFH.17.7.1.c.3",
+        "text": "Metal"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.7.1.w.1",
+        "text": "Plastic"
+      },
+      {
+        "id": "AFH.17.7.1.w.2",
+        "text": "Rubber"
+      },
+      {
+        "id": "AFH.17.7.1.w.3",
+        "text": "Glass"
+      },
+      {
+        "id": "AFH.17.7.1.w.4",
+        "text": "Concrete"
+      },
+      {
+        "id": "AFH.17.7.1.w.5",
+        "text": "Ceramic"
+      },
+      {
+        "id": "AFH.17.7.1.w.6",
+        "text": "Leather"
+      },
+      {
+        "id": "AFH.17.7.1.w.7",
+        "text": "Foam"
+      },
+      {
+        "id": "AFH.17.7.1.w.8",
+        "text": "Paper"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17, Section 7",
+    "subjects": [
+      "Materials",
+      "Construction"
+    ]
+  },
+  {
+    "questionid": "AFH.17.7.2",
+    "question": "What are typical inspection concerns for composite LSAs?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.7.2.c.1",
+        "text": "Hair-line cracks"
+      },
+      {
+        "id": "AFH.17.7.2.c.2",
+        "text": "Delamination"
+      },
+      {
+        "id": "AFH.17.7.2.c.3",
+        "text": "Few fasteners"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.7.2.w.1",
+        "text": "Corrosion"
+      },
+      {
+        "id": "AFH.17.7.2.w.2",
+        "text": "Working rivets"
+      },
+      {
+        "id": "AFH.17.7.2.w.3",
+        "text": "Tears in fabric"
+      },
+      {
+        "id": "AFH.17.7.2.w.4",
+        "text": "Fading paint"
+      },
+      {
+        "id": "AFH.17.7.2.w.5",
+        "text": "Loose bolts"
+      },
+      {
+        "id": "AFH.17.7.2.w.6",
+        "text": "Dents"
+      },
+      {
+        "id": "AFH.17.7.2.w.7",
+        "text": "Cracks in metal"
+      },
+      {
+        "id": "AFH.17.7.2.w.8",
+        "text": "Rusted steel"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17, Section 7",
+    "subjects": [
+      "Inspection",
+      "Composite Construction"
+    ]
+  },
+  {
+    "questionid": "AFH.17.7.3",
+    "question": "What are characteristics of aluminum-fabricated LSAs?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.7.3.c.1",
+        "text": "Lightly rounded structures"
+      },
+      {
+        "id": "AFH.17.7.3.c.2",
+        "text": "Dotted with rivets"
+      },
+      {
+        "id": "AFH.17.7.3.c.3",
+        "text": "Easily inspected"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.7.3.w.1",
+        "text": "Sculpted, mirror-like finish"
+      },
+      {
+        "id": "AFH.17.7.3.w.2",
+        "text": "Covered with fabric"
+      },
+      {
+        "id": "AFH.17.7.3.w.3",
+        "text": "Made from wood"
+      },
+      {
+        "id": "AFH.17.7.3.w.4",
+        "text": "Few fasteners"
+      },
+      {
+        "id": "AFH.17.7.3.w.5",
+        "text": "Made from carbon fiber"
+      },
+      {
+        "id": "AFH.17.7.3.w.6",
+        "text": "Heavy and dense"
+      },
+      {
+        "id": "AFH.17.7.3.w.7",
+        "text": "Molded in halves"
+      },
+      {
+        "id": "AFH.17.7.3.w.8",
+        "text": "Authentic-looking"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17, Section 7",
+    "subjects": [
+      "Aluminum Construction",
+      "Characteristics"
+    ]
+  },
+  {
+    "questionid": "AFH.17.8.1",
+    "question": "Which of the following statements accurately describe the engine characteristics commonly found in Light Sport Airplanes (LSAs)?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.8.1.c.1",
+        "text": "Most LSA engines are water-cooled, 4-cycle, and carbureted"
+      },
+      {
+        "id": "AFH.17.8.1.c.2",
+        "text": "LSA engines operate at much higher rpm and require a gearbox to reduce propeller rpm to the proper range"
+      },
+      {
+        "id": "AFH.17.8.1.c.3",
+        "text": "Vibration and noise signatures in most LSAs are quite different from standard type certificated designs due to higher engine operating rpm"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.8.1.w.1",
+        "text": "All LSA engines must be FAA-certificated"
+      },
+      {
+        "id": "AFH.17.8.1.w.2",
+        "text": "LSA engines are typically air-cooled and direct-drive with no gearbox required"
+      },
+      {
+        "id": "AFH.17.8.1.w.3",
+        "text": "Most LSAs use 2-cycle engines to reduce weight and complexity"
+      },
+      {
+        "id": "AFH.17.8.1.w.4",
+        "text": "LSA engines operate at lower rpm than conventional aircraft engines, requiring no gearbox"
+      },
+      {
+        "id": "AFH.17.8.1.w.5",
+        "text": "All light-sport airplanes use the same engine technology as standard type certificated aircraft"
+      },
+      {
+        "id": "AFH.17.8.1.w.6",
+        "text": "LSA engines are exclusively fuel-injected and do not use carburetors"
+      },
+      {
+        "id": "AFH.17.8.1.w.7",
+        "text": "Gearboxes in LSAs are used to increase propeller rpm above engine rpm"
+      },
+      {
+        "id": "AFH.17.8.1.w.8",
+        "text": "Transitioning pilots need no additional training when moving to LSA engines because they are identical to conventional designs"
+      }
+    ],
+    "source": "AFH Chapter 17, Section 17.8: Engines",
+    "subjects": [
+      "LSA Engine Types",
+      "LSA Engine Characteristics",
+      "Transition to Light Sport Airplanes"
+    ]
+  },
+  {
+    "questionid": "AFH.17.9.1",
+    "question": "Which of the following types of information are typically provided by an Electronic Flight Instrumentation System (EFIS) in Light Sport Airplanes (LSAs)?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.9.1.c.1",
+        "text": "Attitude"
+      },
+      {
+        "id": "AFH.17.9.1.c.2",
+        "text": "Airspeed"
+      },
+      {
+        "id": "AFH.17.9.1.c.3",
+        "text": "Engine data"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.9.1.w.1",
+        "text": "Fueling instructions"
+      },
+      {
+        "id": "AFH.17.9.1.w.2",
+        "text": "Pre-flight inspection checklists"
+      },
+      {
+        "id": "AFH.17.9.1.w.3",
+        "text": "Maintenance log entries"
+      },
+      {
+        "id": "AFH.17.9.1.w.4",
+        "text": "Passenger manifest"
+      },
+      {
+        "id": "AFH.17.9.1.w.5",
+        "text": "Airframe structural integrity reports"
+      },
+      {
+        "id": "AFH.17.9.1.w.6",
+        "text": "Landing gear retraction sequence"
+      },
+      {
+        "id": "AFH.17.9.1.w.7",
+        "text": "Tire pressure monitoring"
+      },
+      {
+        "id": "AFH.17.9.1.w.8",
+        "text": "Cabin temperature control"
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Instrumentation",
+      "EFIS",
+      "LSA"
+    ]
+  },
+  {
+    "questionid": "AFH.17.9.2",
+    "question": "What are the primary advantages of Electronic Flight Instrumentation Systems (EFIS) in Light Sport Airplanes (LSAs) compared to traditional mechanical instrumentation?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.9.2.c.1",
+        "text": "Requires almost no maintenance"
+      },
+      {
+        "id": "AFH.17.9.2.c.2",
+        "text": "Serves as a cost-effective replacement for traditional mechanical gyros and instruments"
+      },
+      {
+        "id": "AFH.17.9.2.c.3",
+        "text": "Consolidates various flight and engine data onto one or two liquid crystal displays"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.9.2.w.1",
+        "text": "Eliminates the need for pilot training"
+      },
+      {
+        "id": "AFH.17.9.2.w.2",
+        "text": "Guarantees perfect situational awareness"
+      },
+      {
+        "id": "AFH.17.9.2.w.3",
+        "text": "Operates independently of aircraft power"
+      },
+      {
+        "id": "AFH.17.9.2.w.4",
+        "text": "Is immune to electromagnetic interference"
+      },
+      {
+        "id": "AFH.17.9.2.w.5",
+        "text": "Reduces aircraft weight significantly"
+      },
+      {
+        "id": "AFH.17.9.2.w.6",
+        "text": "Provides automatic flight control"
+      },
+      {
+        "id": "AFH.17.9.2.w.7",
+        "text": "Is simpler to operate without prior instruction"
+      },
+      {
+        "id": "AFH.17.9.2.w.8",
+        "text": "Allows for in-flight software updates by the pilot"
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Advanced Instrumentation",
+      "Operational Benefits",
+      "LSA"
+    ]
+  },
+  {
+    "questionid": "AFH.17.10.1",
+    "question": "Why is managing weather factors more significant for lighter weight airplanes like LSAs?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.10.1.c.1",
+        "text": "They are more easily affected by strong winds."
+      },
+      {
+        "id": "AFH.17.10.1.c.2",
+        "text": "They are more susceptible to turbulence."
+      },
+      {
+        "id": "AFH.17.10.1.c.3",
+        "text": "They are influenced by terrain more than heavier airplanes."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.10.1.w.1",
+        "text": "They have more powerful engines."
+      },
+      {
+        "id": "AFH.17.10.1.w.2",
+        "text": "They have better fuel efficiency."
+      },
+      {
+        "id": "AFH.17.10.1.w.3",
+        "text": "They are faster than heavier airplanes."
+      },
+      {
+        "id": "AFH.17.10.1.w.4",
+        "text": "They have larger wingspans."
+      },
+      {
+        "id": "AFH.17.10.1.w.5",
+        "text": "They are more stable in flight."
+      },
+      {
+        "id": "AFH.17.10.1.w.6",
+        "text": "They require less maintenance."
+      },
+      {
+        "id": "AFH.17.10.1.w.7",
+        "text": "They have advanced autopilot systems."
+      },
+      {
+        "id": "AFH.17.10.1.w.8",
+        "text": "They are less affected by temperature changes."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17, Section 10",
+    "subjects": [
+      "Weather Considerations",
+      "Light Sport Airplanes",
+      "Flight Risk Management"
+    ]
+  },
+  {
+    "questionid": "AFH.17.10.2",
+    "question": "What should LSA pilots consider to mitigate flight risks related to weather?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.10.2.c.1",
+        "text": "Use personal minimums."
+      },
+      {
+        "id": "AFH.17.10.2.c.2",
+        "text": "Avoid operations near thunderstorms."
+      },
+      {
+        "id": "AFH.17.10.2.c.3",
+        "text": "Consider greater distances from convective weather."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.10.2.w.1",
+        "text": "Fly at higher altitudes."
+      },
+      {
+        "id": "AFH.17.10.2.w.2",
+        "text": "Rely solely on autopilot."
+      },
+      {
+        "id": "AFH.17.10.2.w.3",
+        "text": "Ignore factory wind recommendations."
+      },
+      {
+        "id": "AFH.17.10.2.w.4",
+        "text": "Fly only during the day."
+      },
+      {
+        "id": "AFH.17.10.2.w.5",
+        "text": "Use larger airplanes for practice."
+      },
+      {
+        "id": "AFH.17.10.2.w.6",
+        "text": "Rely on visual flight rules only."
+      },
+      {
+        "id": "AFH.17.10.2.w.7",
+        "text": "Avoid flying over water."
+      },
+      {
+        "id": "AFH.17.10.2.w.8",
+        "text": "Use heavier airplanes for training."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17, Section 10",
+    "subjects": [
+      "Weather Considerations",
+      "Flight Risk Management",
+      "Light Sport Airplanes"
+    ]
+  },
+  {
+    "questionid": "AFH.17.11.1",
+    "question": "When transitioning to a light sport airplane (LSA), which of the following statements are correct regarding the flight environment?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.11.1.c.1",
+        "text": "Most skills learned in a standard airworthiness type certificated airplane are transferable to LSAs"
+      },
+      {
+        "id": "AFH.17.11.1.c.2",
+        "text": "Pilots should seek competent flight instruction prior to flying an LSA due to significant variations between aircraft"
+      },
+      {
+        "id": "AFH.17.11.1.c.3",
+        "text": "Pilots should refer to the airplane's POH for detailed and specific information before flying an LSA"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.11.1.w.1",
+        "text": "LSAs require a completely different set of flying skills with no overlap from standard certificated aircraft"
+      },
+      {
+        "id": "AFH.17.11.1.w.2",
+        "text": "All LSAs have identical performance characteristics, making a universal checklist sufficient"
+      },
+      {
+        "id": "AFH.17.11.1.w.3",
+        "text": "The techniques used to fly LSAs are exactly the same as those used in any other airplane with no variation"
+      },
+      {
+        "id": "AFH.17.11.1.w.4",
+        "text": "LSA pilots are not required to consult the POH if they hold a valid sport pilot certificate"
+      },
+      {
+        "id": "AFH.17.11.1.w.5",
+        "text": "Flight instruction is optional for experienced pilots transitioning to any LSA regardless of construction type"
+      },
+      {
+        "id": "AFH.17.11.1.w.6",
+        "text": "LSAs are standardized in equipment and systems, so aircraft-specific study is unnecessary"
+      },
+      {
+        "id": "AFH.17.11.1.w.7",
+        "text": "A sport pilot certificate automatically qualifies a pilot to fly any LSA without additional instruction or study"
+      },
+      {
+        "id": "AFH.17.11.1.w.8",
+        "text": "It is mainly about unrelated advanced turbine transition procedures not covered in flight environment."
+      }
+    ],
+    "source": "AFH Chapter 17, Section 17.11 – Flight Environment",
+    "subjects": [
+      "Light Sport Airplane Transition",
+      "Flight Environment",
+      "Pilot Competency"
+    ]
+  },
+  {
+    "questionid": "AFH.17.12.1",
+    "question": "What are essential steps in the preflight inspection of a Light Sport Airplane (LSA)?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.12.1.c.1",
+        "text": "Review the Pilot's Operating Handbook (POH)"
+      },
+      {
+        "id": "AFH.17.12.1.c.2",
+        "text": "Understand the airplane's limitations"
+      },
+      {
+        "id": "AFH.17.12.1.c.3",
+        "text": "Familiarize with emergency procedures"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.12.1.w.1",
+        "text": "Check the weather forecast"
+      },
+      {
+        "id": "AFH.17.12.1.w.2",
+        "text": "Inspect the runway conditions"
+      },
+      {
+        "id": "AFH.17.12.1.w.3",
+        "text": "Verify the flight plan"
+      },
+      {
+        "id": "AFH.17.12.1.w.4",
+        "text": "Ensure passenger comfort"
+      },
+      {
+        "id": "AFH.17.12.1.w.5",
+        "text": "Review air traffic control procedures"
+      },
+      {
+        "id": "AFH.17.12.1.w.6",
+        "text": "Check the fuel prices"
+      },
+      {
+        "id": "AFH.17.12.1.w.7",
+        "text": "Inspect the airport facilities"
+      },
+      {
+        "id": "AFH.17.12.1.w.8",
+        "text": "Review the flight itinerary"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17, Section 12",
+    "subjects": [
+      "Preflight Inspection",
+      "Light Sport Airplanes",
+      "Pilot Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.17.13.1",
+    "question": "What are some differences in preflight inspection for LSAs compared to other aircraft?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.13.1.c.1",
+        "text": "LSAs often have fixed seats"
+      },
+      {
+        "id": "AFH.17.13.1.c.2",
+        "text": "Rudder pedals are adjustable"
+      },
+      {
+        "id": "AFH.17.13.1.c.3",
+        "text": "Seats may be semi-reclined"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.13.1.w.1",
+        "text": "LSAs have adjustable seats"
+      },
+      {
+        "id": "AFH.17.13.1.w.2",
+        "text": "Rudder pedals are fixed"
+      },
+      {
+        "id": "AFH.17.13.1.w.3",
+        "text": "Seats are always upright"
+      },
+      {
+        "id": "AFH.17.13.1.w.4",
+        "text": "LSAs have no rudder pedals"
+      },
+      {
+        "id": "AFH.17.13.1.w.5",
+        "text": "LSAs use hydraulic seats"
+      },
+      {
+        "id": "AFH.17.13.1.w.6",
+        "text": "LSAs have no seats"
+      },
+      {
+        "id": "AFH.17.13.1.w.7",
+        "text": "LSAs have no flight controls"
+      },
+      {
+        "id": "AFH.17.13.1.w.8",
+        "text": "LSAs have no preflight inspection"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17",
+    "subjects": [
+      "Preflight Inspection",
+      "LSA Features"
+    ]
+  },
+  {
+    "questionid": "AFH.17.13.2",
+    "question": "What control systems might a pilot encounter in an LSA?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.13.2.c.1",
+        "text": "Conventional control stick"
+      },
+      {
+        "id": "AFH.17.13.2.c.2",
+        "text": "Yoke"
+      },
+      {
+        "id": "AFH.17.13.2.c.3",
+        "text": "Stoke"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.13.2.w.1",
+        "text": "Joystick"
+      },
+      {
+        "id": "AFH.17.13.2.w.2",
+        "text": "Pedal control"
+      },
+      {
+        "id": "AFH.17.13.2.w.3",
+        "text": "Voice control"
+      },
+      {
+        "id": "AFH.17.13.2.w.4",
+        "text": "Touchscreen control"
+      },
+      {
+        "id": "AFH.17.13.2.w.5",
+        "text": "Remote control"
+      },
+      {
+        "id": "AFH.17.13.2.w.6",
+        "text": "No control system"
+      },
+      {
+        "id": "AFH.17.13.2.w.7",
+        "text": "Automatic control"
+      },
+      {
+        "id": "AFH.17.13.2.w.8",
+        "text": "Foot control"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17",
+    "subjects": [
+      "Flight Controls",
+      "LSA Features"
+    ]
+  },
+  {
+    "questionid": "AFH.17.13.3",
+    "question": "How should a pilot check the flight controls during preflight inspection of an LSA?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.13.3.c.1",
+        "text": "Perform a full range of motion check"
+      },
+      {
+        "id": "AFH.17.13.3.c.2",
+        "text": "Verify control surface movement"
+      },
+      {
+        "id": "AFH.17.13.3.c.3",
+        "text": "Ensure controls move freely and smoothly"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.13.3.w.1",
+        "text": "Check only the ailerons"
+      },
+      {
+        "id": "AFH.17.13.3.w.2",
+        "text": "Ignore the rudder pedals"
+      },
+      {
+        "id": "AFH.17.13.3.w.3",
+        "text": "Check only the elevator"
+      },
+      {
+        "id": "AFH.17.13.3.w.4",
+        "text": "Perform a partial motion check"
+      },
+      {
+        "id": "AFH.17.13.3.w.5",
+        "text": "Check only the trim"
+      },
+      {
+        "id": "AFH.17.13.3.w.6",
+        "text": "Ignore the control surfaces"
+      },
+      {
+        "id": "AFH.17.13.3.w.7",
+        "text": "Check only the yoke"
+      },
+      {
+        "id": "AFH.17.13.3.w.8",
+        "text": "Perform no checks"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17",
+    "subjects": [
+      "Preflight Inspection",
+      "Flight Controls"
+    ]
+  },
+  {
+    "questionid": "AFH.17.13.4",
+    "question": "What is unique about aileron control geometry in some LSAs?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.13.4.c.1",
+        "text": "Highly differential movement"
+      },
+      {
+        "id": "AFH.17.13.4.c.2",
+        "text": "Minimizes adverse yaw"
+      },
+      {
+        "id": "AFH.17.13.4.c.3",
+        "text": "Little 'down' aileron compared to 'up' aileron"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.13.4.w.1",
+        "text": "Symmetrical movement"
+      },
+      {
+        "id": "AFH.17.13.4.w.2",
+        "text": "No differential movement"
+      },
+      {
+        "id": "AFH.17.13.4.w.3",
+        "text": "Maximizes adverse yaw"
+      },
+      {
+        "id": "AFH.17.13.4.w.4",
+        "text": "Equal 'up' and 'down' aileron"
+      },
+      {
+        "id": "AFH.17.13.4.w.5",
+        "text": "No aileron movement"
+      },
+      {
+        "id": "AFH.17.13.4.w.6",
+        "text": "Ailerons move in opposite directions"
+      },
+      {
+        "id": "AFH.17.13.4.w.7",
+        "text": "Ailerons are fixed"
+      },
+      {
+        "id": "AFH.17.13.4.w.8",
+        "text": "Ailerons are not used"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17",
+    "subjects": [
+      "Aileron Control",
+      "LSA Features"
+    ]
+  },
+  {
+    "questionid": "AFH.17.13.5",
+    "question": "What should pilots verify about the trim system during preflight inspection of an LSA?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.13.5.c.1",
+        "text": "Trim position is correctly set"
+      },
+      {
+        "id": "AFH.17.13.5.c.2",
+        "text": "Trim switch functions in both directions"
+      },
+      {
+        "id": "AFH.17.13.5.c.3",
+        "text": "Trim disconnect functions properly"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.13.5.w.1",
+        "text": "Trim is always set to neutral"
+      },
+      {
+        "id": "AFH.17.13.5.w.2",
+        "text": "Trim switch is ignored"
+      },
+      {
+        "id": "AFH.17.13.5.w.3",
+        "text": "Trim disconnect is unnecessary"
+      },
+      {
+        "id": "AFH.17.13.5.w.4",
+        "text": "Trim position is irrelevant"
+      },
+      {
+        "id": "AFH.17.13.5.w.5",
+        "text": "Trim is always set to maximum"
+      },
+      {
+        "id": "AFH.17.13.5.w.6",
+        "text": "Trim switch is not checked"
+      },
+      {
+        "id": "AFH.17.13.5.w.7",
+        "text": "Trim disconnect is not tested"
+      },
+      {
+        "id": "AFH.17.13.5.w.8",
+        "text": "Trim is always set to minimum"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17",
+    "subjects": [
+      "Preflight Inspection",
+      "Trim Systems"
+    ]
+  },
+  {
+    "questionid": "AFH.17.13.6",
+    "question": "What engine controls might be absent in some LSAs?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.13.6.c.1",
+        "text": "Mixture control"
+      },
+      {
+        "id": "AFH.17.13.6.c.2",
+        "text": "Carburetor heat"
+      },
+      {
+        "id": "AFH.17.13.6.c.3",
+        "text": "Throttle"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.13.6.w.1",
+        "text": "Choke control"
+      },
+      {
+        "id": "AFH.17.13.6.w.2",
+        "text": "Carburetor preheater"
+      },
+      {
+        "id": "AFH.17.13.6.w.3",
+        "text": "Fuel pump"
+      },
+      {
+        "id": "AFH.17.13.6.w.4",
+        "text": "Ignition switch"
+      },
+      {
+        "id": "AFH.17.13.6.w.5",
+        "text": "Propeller control"
+      },
+      {
+        "id": "AFH.17.13.6.w.6",
+        "text": "Oil pressure gauge"
+      },
+      {
+        "id": "AFH.17.13.6.w.7",
+        "text": "Fuel mixture gauge"
+      },
+      {
+        "id": "AFH.17.13.6.w.8",
+        "text": "Engine temperature gauge"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17",
+    "subjects": [
+      "Engine Controls",
+      "LSA Features"
+    ]
+  },
+  {
+    "questionid": "AFH.17.13.7",
+    "question": "What should a transitioning pilot become familiar with regarding LSA engine controls?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.13.7.c.1",
+        "text": "Specific engine installed"
+      },
+      {
+        "id": "AFH.17.13.7.c.2",
+        "text": "Operation of engine controls"
+      },
+      {
+        "id": "AFH.17.13.7.c.3",
+        "text": "Differences from conventional controls"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.13.7.w.1",
+        "text": "Only the throttle"
+      },
+      {
+        "id": "AFH.17.13.7.w.2",
+        "text": "Only the mixture control"
+      },
+      {
+        "id": "AFH.17.13.7.w.3",
+        "text": "Only the carburetor heat"
+      },
+      {
+        "id": "AFH.17.13.7.w.4",
+        "text": "Ignore engine controls"
+      },
+      {
+        "id": "AFH.17.13.7.w.5",
+        "text": "Only the choke control"
+      },
+      {
+        "id": "AFH.17.13.7.w.6",
+        "text": "Only the carburetor preheater"
+      },
+      {
+        "id": "AFH.17.13.7.w.7",
+        "text": "Only the ignition switch"
+      },
+      {
+        "id": "AFH.17.13.7.w.8",
+        "text": "Only the fuel pump"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17",
+    "subjects": [
+      "Engine Controls",
+      "Pilot Transition"
+    ]
+  },
+  {
+    "questionid": "AFH.17.14.1",
+    "question": "When preflighting an LSA equipped with ground adjustable composite propellers, what specific checks should a transitioning pilot perform?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.14.1.c.1",
+        "text": "Verify that the blades are tight against the hub."
+      },
+      {
+        "id": "AFH.17.14.1.c.2",
+        "text": "Snugly twist the blade at the root."
+      },
+      {
+        "id": "AFH.17.14.1.c.3",
+        "text": "Ensure there is no rotation of the blade at the hub."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.14.1.w.1",
+        "text": "Check for proper blade tracking."
+      },
+      {
+        "id": "AFH.17.14.1.w.2",
+        "text": "Inspect the propeller tips for erosion."
+      },
+      {
+        "id": "AFH.17.14.1.w.3",
+        "text": "Verify the propeller spinner is securely fastened."
+      },
+      {
+        "id": "AFH.17.14.1.w.4",
+        "text": "Check the propeller for nicks and gouges."
+      },
+      {
+        "id": "AFH.17.14.1.w.5",
+        "text": "Ensure the propeller pitch mechanism is lubricated."
+      },
+      {
+        "id": "AFH.17.14.1.w.6",
+        "text": "Check the propeller for balance weights."
+      },
+      {
+        "id": "AFH.17.14.1.w.7",
+        "text": "Inspect the propeller for delamination."
+      },
+      {
+        "id": "AFH.17.14.1.w.8",
+        "text": "Verify the propeller is free from oil leaks."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "LSA Preflight",
+      "Propeller Systems"
+    ]
+  },
+  {
+    "questionid": "AFH.17.14.2",
+    "question": "For an LSA equipped with a water-cooled engine, what components of the cooling system require specific preflight inspection by a transitioning pilot?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.14.2.c.1",
+        "text": "The radiator for condition, freedom from leaks, and coolant level."
+      },
+      {
+        "id": "AFH.17.14.2.c.2",
+        "text": "The coolant hoses for condition, freedom from leaks, and coolant level."
+      },
+      {
+        "id": "AFH.17.14.2.c.3",
+        "text": "The expansion tank for condition, freedom from leaks, and coolant level."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.14.2.w.1",
+        "text": "Engine oil level and pressure."
+      },
+      {
+        "id": "AFH.17.14.2.w.2",
+        "text": "Cylinder head temperature probes."
+      },
+      {
+        "id": "AFH.17.14.2.w.3",
+        "text": "Fuel lines for leaks."
+      },
+      {
+        "id": "AFH.17.14.2.w.4",
+        "text": "Spark plug condition."
+      },
+      {
+        "id": "AFH.17.14.2.w.5",
+        "text": "Air filter cleanliness."
+      },
+      {
+        "id": "AFH.17.14.2.w.6",
+        "text": "Exhaust system integrity."
+      },
+      {
+        "id": "AFH.17.14.2.w.7",
+        "text": "Magneto timing."
+      },
+      {
+        "id": "AFH.17.14.2.w.8",
+        "text": "Engine cowling fasteners."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "LSA Preflight",
+      "Engine Systems"
+    ]
+  },
+  {
+    "questionid": "AFH.17.15.1",
+    "question": "During the before start and engine starting procedures for a Light Sport Airplane (LSA), which of the following are correct practices or considerations?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.15.1.c.1",
+        "text": "The pilot should ensure rudder pedals can be exercised with full-range movement without over-reaching before starting"
+      },
+      {
+        "id": "AFH.17.15.1.c.2",
+        "text": "Newer generation LSA engines may only require pulling the choke and twisting the ignition switch to start"
+      },
+      {
+        "id": "AFH.17.15.1.c.3",
+        "text": "The canopy or doors of an LSA may have latching mechanisms quite different from standard airworthiness airplanes, requiring familiarization"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.15.1.w.1",
+        "text": "LSA preflight inspections do not require the use of POH checklists since the aircraft systems are simplified"
+      },
+      {
+        "id": "AFH.17.15.1.w.2",
+        "text": "Seat belts in an LSA do not need to be checked for security if the flight is conducted under Visual Flight Rules"
+      },
+      {
+        "id": "AFH.17.15.1.w.3",
+        "text": "A gull-wing door or sliding canopy opening in flight is a minor inconvenience that can be easily managed without declaring an emergency"
+      },
+      {
+        "id": "AFH.17.15.1.w.4",
+        "text": "LSA engines always use the same starting procedures as standard certificated engines regardless of generation"
+      },
+      {
+        "id": "AFH.17.15.1.w.5",
+        "text": "The pilot's seating position in an LSA is not critical to safe operation since the controls are lighter than standard aircraft"
+      },
+      {
+        "id": "AFH.17.15.1.w.6",
+        "text": "Latching and unlatching the canopy or doors of an LSA requires no special familiarization because mechanisms are standardized"
+      },
+      {
+        "id": "AFH.17.15.1.w.7",
+        "text": "If an LSA is equipped with a standard certificated engine, a unique non-standard starting procedure must be followed"
+      },
+      {
+        "id": "AFH.17.15.1.w.8",
+        "text": "Rudder pedal reach in an LSA is automatically adjusted and does not need to be verified before flight"
+      }
+    ],
+    "source": "AFH Chapter 17, Section 17.15: Before Start and Starting Engine",
+    "subjects": [
+      "LSA Before Start Procedures",
+      "LSA Engine Starting",
+      "LSA Canopy and Door Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.17.16.1",
+    "question": "What are important considerations when taxiing a Light Sport Airplane (LSA) with a full-castoring nose-wheel?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.16.1.c.1",
+        "text": "Use differential brakes to steer."
+      },
+      {
+        "id": "AFH.17.16.1.c.2",
+        "text": "Avoid excessive brake application to prevent tire wear."
+      },
+      {
+        "id": "AFH.17.16.1.c.3",
+        "text": "Practice is needed to maintain centerline."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.16.1.w.1",
+        "text": "Use a single brake for all steering needs."
+      },
+      {
+        "id": "AFH.17.16.1.w.2",
+        "text": "Taxi at high speeds to avoid stopping."
+      },
+      {
+        "id": "AFH.17.16.1.w.3",
+        "text": "Rely solely on rudder pedals for steering."
+      },
+      {
+        "id": "AFH.17.16.1.w.4",
+        "text": "Ignore wind conditions when taxiing."
+      },
+      {
+        "id": "AFH.17.16.1.w.5",
+        "text": "Apply brakes continuously for control."
+      },
+      {
+        "id": "AFH.17.16.1.w.6",
+        "text": "Use full throttle to maintain direction."
+      },
+      {
+        "id": "AFH.17.16.1.w.7",
+        "text": "Steer using only the nose-wheel without brakes."
+      },
+      {
+        "id": "AFH.17.16.1.w.8",
+        "text": "Taxi only in windy conditions for practice."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17: Transition to Light Sport Airplanes (LSA) Introduction, Section: Taxi",
+    "subjects": [
+      "Light Sport Airplanes",
+      "Taxiing Techniques",
+      "Aircraft Handling"
+    ]
+  },
+  {
+    "questionid": "AFH.17.17.1",
+    "question": "What are some characteristics of takeoff and climb performance in Light Sport Airplanes (LSAs)?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.17.1.c.1",
+        "text": "High horsepower-to-weight ratio"
+      },
+      {
+        "id": "AFH.17.17.1.c.2",
+        "text": "Low rotation and climb speeds"
+      },
+      {
+        "id": "AFH.17.17.1.c.3",
+        "text": "Impressive climb rates"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.17.1.w.1",
+        "text": "Heavy stick forces"
+      },
+      {
+        "id": "AFH.17.17.1.w.2",
+        "text": "High stall speeds"
+      },
+      {
+        "id": "AFH.17.17.1.w.3",
+        "text": "Slow acceleration"
+      },
+      {
+        "id": "AFH.17.17.1.w.4",
+        "text": "High rotation speeds"
+      },
+      {
+        "id": "AFH.17.17.1.w.5",
+        "text": "Low climb rates"
+      },
+      {
+        "id": "AFH.17.17.1.w.6",
+        "text": "Difficult to control"
+      },
+      {
+        "id": "AFH.17.17.1.w.7",
+        "text": "Heavy flight control pressures"
+      },
+      {
+        "id": "AFH.17.17.1.w.8",
+        "text": "High visibility over the nose"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17: Transition to Light Sport Airplanes (LSA) Introduction",
+    "subjects": [
+      "Aviation Performance",
+      "Aircraft Characteristics"
+    ]
+  },
+  {
+    "questionid": "AFH.17.17.2",
+    "question": "What should a pilot do to manage flight safety during climbs in LSAs?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.17.2.c.1",
+        "text": "Occasionally lower the nose"
+      },
+      {
+        "id": "AFH.17.17.2.c.2",
+        "text": "Perform shallow banked turns"
+      },
+      {
+        "id": "AFH.17.17.2.c.3",
+        "text": "Clear the airspace for traffic"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.17.2.w.1",
+        "text": "Increase climb speed"
+      },
+      {
+        "id": "AFH.17.17.2.w.2",
+        "text": "Ignore outside references"
+      },
+      {
+        "id": "AFH.17.17.2.w.3",
+        "text": "Use excessive control inputs"
+      },
+      {
+        "id": "AFH.17.17.2.w.4",
+        "text": "Fly with the airplane out of trim"
+      },
+      {
+        "id": "AFH.17.17.2.w.5",
+        "text": "Rely solely on instruments"
+      },
+      {
+        "id": "AFH.17.17.2.w.6",
+        "text": "Maintain a steep climb angle"
+      },
+      {
+        "id": "AFH.17.17.2.w.7",
+        "text": "Avoid using trim"
+      },
+      {
+        "id": "AFH.17.17.2.w.8",
+        "text": "Focus only on the horizon"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17: Transition to Light Sport Airplanes (LSA) Introduction",
+    "subjects": [
+      "Flight Safety",
+      "Pilot Techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.17.18.1",
+    "question": "What should a pilot do after leveling off at cruise altitude in a light sport airplane (LSA)?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.18.1.c.1",
+        "text": "Allow the airplane to accelerate to cruise speed"
+      },
+      {
+        "id": "AFH.17.18.1.c.2",
+        "text": "Reduce power to cruise rpm"
+      },
+      {
+        "id": "AFH.17.18.1.c.3",
+        "text": "Adjust pitch and trim off flight control pressures"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.18.1.w.1",
+        "text": "Increase power to maximum rpm"
+      },
+      {
+        "id": "AFH.17.18.1.w.2",
+        "text": "Ignore the cruise checklist"
+      },
+      {
+        "id": "AFH.17.18.1.w.3",
+        "text": "Use heavy control pressures"
+      },
+      {
+        "id": "AFH.17.18.1.w.4",
+        "text": "Wrap palm around the stick"
+      },
+      {
+        "id": "AFH.17.18.1.w.5",
+        "text": "Maintain high pitch attitude"
+      },
+      {
+        "id": "AFH.17.18.1.w.6",
+        "text": "Perform immediate steep turns"
+      },
+      {
+        "id": "AFH.17.18.1.w.7",
+        "text": "Ignore gear-reduction drive"
+      },
+      {
+        "id": "AFH.17.18.1.w.8",
+        "text": "Use aggressive rudder inputs"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17: Transition to Light Sport Airplanes (LSA) Introduction",
+    "subjects": [
+      "Cruise procedures",
+      "Flight control adjustments",
+      "Power management"
+    ]
+  },
+  {
+    "questionid": "AFH.17.18.2",
+    "question": "What is a common characteristic of stick forces in slower cruise flight for LSAs?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.18.2.c.1",
+        "text": "Stick forces are likely to be light"
+      },
+      {
+        "id": "AFH.17.18.2.c.2",
+        "text": "Correction to pitch and roll should be made with light pressures"
+      },
+      {
+        "id": "AFH.17.18.2.c.3",
+        "text": "Fingertip pressures should be used"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.18.2.w.1",
+        "text": "Stick forces are always heavy"
+      },
+      {
+        "id": "AFH.17.18.2.w.2",
+        "text": "Use wrapped palm for control"
+      },
+      {
+        "id": "AFH.17.18.2.w.3",
+        "text": "Heavy pressures are needed for corrections"
+      },
+      {
+        "id": "AFH.17.18.2.w.4",
+        "text": "Stick forces remain constant at all speeds"
+      },
+      {
+        "id": "AFH.17.18.2.w.5",
+        "text": "Use full hand grip for control"
+      },
+      {
+        "id": "AFH.17.18.2.w.6",
+        "text": "Ignore changes in airspeed"
+      },
+      {
+        "id": "AFH.17.18.2.w.7",
+        "text": "Use aggressive control inputs"
+      },
+      {
+        "id": "AFH.17.18.2.w.8",
+        "text": "Stick forces are unaffected by airspeed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17: Transition to Light Sport Airplanes (LSA) Introduction",
+    "subjects": [
+      "Control pressures",
+      "Airspeed effects",
+      "Pilot technique"
+    ]
+  },
+  {
+    "questionid": "AFH.17.18.3",
+    "question": "What should be practiced as part of a good transition training program for LSAs?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.18.3.c.1",
+        "text": "Steep turns"
+      },
+      {
+        "id": "AFH.17.18.3.c.2",
+        "text": "Slow flight"
+      },
+      {
+        "id": "AFH.17.18.3.c.3",
+        "text": "Stalls"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.18.3.w.1",
+        "text": "High-speed dives"
+      },
+      {
+        "id": "AFH.17.18.3.w.2",
+        "text": "Inverted flight"
+      },
+      {
+        "id": "AFH.17.18.3.w.3",
+        "text": "Aerobatic maneuvers"
+      },
+      {
+        "id": "AFH.17.18.3.w.4",
+        "text": "Formation flying"
+      },
+      {
+        "id": "AFH.17.18.3.w.5",
+        "text": "Night flying"
+      },
+      {
+        "id": "AFH.17.18.3.w.6",
+        "text": "Crosswind landings"
+      },
+      {
+        "id": "AFH.17.18.3.w.7",
+        "text": "Instrument approaches"
+      },
+      {
+        "id": "AFH.17.18.3.w.8",
+        "text": "Engine-out procedures"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17: Transition to Light Sport Airplanes (LSA) Introduction",
+    "subjects": [
+      "Transition training",
+      "Maneuver practice",
+      "Pilot skills"
+    ]
+  },
+  {
+    "questionid": "AFH.17.18.4",
+    "question": "What should a pilot understand about control pressures during recovery from power-off stalls in LSAs?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.18.4.c.1",
+        "text": "Control pressures tend to be light"
+      },
+      {
+        "id": "AFH.17.18.4.c.2",
+        "text": "Aggressive forward movement of the elevator is not required"
+      },
+      {
+        "id": "AFH.17.18.4.c.3",
+        "text": "Proper application of rudder is necessary"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.18.4.w.1",
+        "text": "Control pressures are heavy"
+      },
+      {
+        "id": "AFH.17.18.4.w.2",
+        "text": "Aggressive elevator movement is required"
+      },
+      {
+        "id": "AFH.17.18.4.w.3",
+        "text": "Rudder use is optional"
+      },
+      {
+        "id": "AFH.17.18.4.w.4",
+        "text": "Full power should be applied immediately"
+      },
+      {
+        "id": "AFH.17.18.4.w.5",
+        "text": "Ignore flap retraction limits"
+      },
+      {
+        "id": "AFH.17.18.4.w.6",
+        "text": "Use maximum pitch attitude"
+      },
+      {
+        "id": "AFH.17.18.4.w.7",
+        "text": "Apply full aileron deflection"
+      },
+      {
+        "id": "AFH.17.18.4.w.8",
+        "text": "Ignore propeller forces"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17: Transition to Light Sport Airplanes (LSA) Introduction",
+    "subjects": [
+      "Stall recovery",
+      "Control pressures",
+      "Rudder application"
+    ]
+  },
+  {
+    "questionid": "AFH.17.18.5",
+    "question": "What is a potential risk during power-on stalls in LSAs if aggressive pitch attitudes are used?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.18.5.c.1",
+        "text": "Spin entry is likely to be quick and aggressive"
+      },
+      {
+        "id": "AFH.17.18.5.c.2",
+        "text": "High nose-up attitude can occur"
+      },
+      {
+        "id": "AFH.17.18.5.c.3",
+        "text": "Uncoordinated rudder inputs increase risk"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.18.5.w.1",
+        "text": "Stall recovery is automatic"
+      },
+      {
+        "id": "AFH.17.18.5.w.2",
+        "text": "No risk of spin entry"
+      },
+      {
+        "id": "AFH.17.18.5.w.3",
+        "text": "Pitch attitudes have no effect"
+      },
+      {
+        "id": "AFH.17.18.5.w.4",
+        "text": "Rudder inputs are irrelevant"
+      },
+      {
+        "id": "AFH.17.18.5.w.5",
+        "text": "Stalls are always gentle"
+      },
+      {
+        "id": "AFH.17.18.5.w.6",
+        "text": "Spin entry is impossible"
+      },
+      {
+        "id": "AFH.17.18.5.w.7",
+        "text": "High nose-down attitude is common"
+      },
+      {
+        "id": "AFH.17.18.5.w.8",
+        "text": "Power-on stalls are not risky"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17: Transition to Light Sport Airplanes (LSA) Introduction",
+    "subjects": [
+      "Stall characteristics",
+      "Spin risk",
+      "Pitch and rudder control"
+    ]
+  },
+  {
+    "questionid": "AFH.17.19.1",
+    "question": "Which of the following statements are true regarding approach and landing in a Light Sport Airplane (LSA)?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.19.1.c.1",
+        "text": "Speeds in the pattern tend to be in the 60-knot range."
+      },
+      {
+        "id": "AFH.17.19.1.c.2",
+        "text": "Flap limit airspeeds tend to be lower in LSAs than standard airworthiness airplanes."
+      },
+      {
+        "id": "AFH.17.19.1.c.3",
+        "text": "Pitch and power application are the same in an LSA as in a standard airworthiness airplane."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.19.1.w.1",
+        "text": "Control application for crosswind technique changes significantly in an LSA."
+      },
+      {
+        "id": "AFH.17.19.1.w.2",
+        "text": "Heavy control forces require firm application of control pressures to avoid over-controlling."
+      },
+      {
+        "id": "AFH.17.19.1.w.3",
+        "text": "Managing airspeed is less critical due to robust flap systems in LSAs."
+      },
+      {
+        "id": "AFH.17.19.1.w.4",
+        "text": "The weight limit of LSAs makes crosswind landings less critical than in standard aircraft."
+      },
+      {
+        "id": "AFH.17.19.1.w.5",
+        "text": "Pilots should always attempt landings at the manufacturer's maximum demonstrated crosswind speed."
+      },
+      {
+        "id": "AFH.17.19.1.w.6",
+        "text": "Strong gusty crosswind conditions rarely exceed an LSA's control capability during landing."
+      },
+      {
+        "id": "AFH.17.19.1.w.7",
+        "text": "LSA's high landing speeds necessitate aggressive control deflections for crosswinds."
+      },
+      {
+        "id": "AFH.17.19.1.w.8",
+        "text": "Approach and landing in an LSA is generally complex and challenging due to its light weight."
+      }
+    ],
+    "source": "AFH-H-8083-3C Chapter 17",
+    "subjects": [
+      "LSA Operations",
+      "Approach and Landing",
+      "Flight Controls"
+    ]
+  },
+  {
+    "questionid": "AFH.17.20.1",
+    "question": "When responding to emergencies in a Light Sport Airplane (LSA), which of the following are correct procedures or considerations?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.20.1.c.1",
+        "text": "In a trim runaway, the pilot should locate and depress the trim disconnect or pull the trim power circuit breaker"
+      },
+      {
+        "id": "AFH.17.20.1.c.2",
+        "text": "If the EFIS blanks out and POH recovery procedures fail to reset it, the pilot may need to land without airspeed, altitude, or vertical speed information"
+      },
+      {
+        "id": "AFH.17.20.1.c.3",
+        "text": "During a trim runaway, the pilot may need to perform a no-flap landing due to the pitching moments associated with flap deployment"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.20.1.w.1",
+        "text": "A trim runaway always requires an immediate go-around before any corrective action can be taken"
+      },
+      {
+        "id": "AFH.17.20.1.w.2",
+        "text": "If the EFIS displays a red X across the airspeed tape, the flight must be immediately aborted regardless of conditions"
+      },
+      {
+        "id": "AFH.17.20.1.w.3",
+        "text": "LSA emergency procedures are standardized across all models and do not require reference to the individual aircraft POH"
+      },
+      {
+        "id": "AFH.17.20.1.w.4",
+        "text": "A trim runaway condition is resolved solely by reducing throttle to idle"
+      },
+      {
+        "id": "AFH.17.20.1.w.5",
+        "text": "Flaps must always be used during an emergency landing in an LSA to ensure the shortest stopping distance"
+      },
+      {
+        "id": "AFH.17.20.1.w.6",
+        "text": "The pilot is not required to memorize any immediate action items since all procedures are displayed on the EFIS"
+      },
+      {
+        "id": "AFH.17.20.1.w.7",
+        "text": "An EFIS red X across the airspeed tape indicates a complete electrical failure requiring immediate landing"
+      },
+      {
+        "id": "AFH.17.20.1.w.8",
+        "text": "Control system failure in an LSA automatically activates a backup mechanical system"
+      }
+    ],
+    "source": "AFH Chapter 17, Section: Emergencies",
+    "subjects": [
+      "LSA Emergency Procedures",
+      "Trim Runaway",
+      "EFIS Failure"
+    ]
+  },
+  {
+    "questionid": "AFH.17.21.1",
+    "question": "According to FAA-H-8083-3C Chapter 17, what are essential actions a pilot should take after the airplane has been shutdown, tied-down, and secured?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.21.1.c.1",
+        "text": "Conduct a complete post-flight inspection."
+      },
+      {
+        "id": "AFH.17.21.1.c.2",
+        "text": "Note and report any squawks or discrepancies to maintenance."
+      },
+      {
+        "id": "AFH.17.21.1.c.3",
+        "text": "Insist on a training debriefing where critique and planning for the next lesson takes place."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.21.1.w.1",
+        "text": "Immediately refuel the aircraft."
+      },
+      {
+        "id": "AFH.17.21.1.w.2",
+        "text": "Clean the interior of the cockpit."
+      },
+      {
+        "id": "AFH.17.21.1.w.3",
+        "text": "Prepare the flight plan for the next flight."
+      },
+      {
+        "id": "AFH.17.21.1.w.4",
+        "text": "Verify the aircraft's airworthiness certificate."
+      },
+      {
+        "id": "AFH.17.21.1.w.5",
+        "text": "Review weather forecasts for the next 24 hours."
+      },
+      {
+        "id": "AFH.17.21.1.w.6",
+        "text": "Contact air traffic control to close the flight plan."
+      },
+      {
+        "id": "AFH.17.21.1.w.7",
+        "text": "Calibrate the altimeter."
+      },
+      {
+        "id": "AFH.17.21.1.w.8",
+        "text": "Drain fuel sumps."
+      }
+    ],
+    "source": "afh.17.21",
+    "subjects": [
+      "Post-Flight",
+      "Pilot Responsibilities",
+      "Training"
+    ]
+  },
+  {
+    "questionid": "AFH.17.22.1",
+    "question": "What are some characteristics of Light Sport Airplanes (LSAs) that affect their aerodynamics?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.22.1.c.1",
+        "text": "Open flight deck"
+      },
+      {
+        "id": "AFH.17.22.1.c.2",
+        "text": "Low mass and inertia"
+      },
+      {
+        "id": "AFH.17.22.1.c.3",
+        "text": "High drag"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.22.1.w.1",
+        "text": "High fuel efficiency"
+      },
+      {
+        "id": "AFH.17.22.1.w.2",
+        "text": "Advanced avionics"
+      },
+      {
+        "id": "AFH.17.22.1.w.3",
+        "text": "Heavy build"
+      },
+      {
+        "id": "AFH.17.22.1.w.4",
+        "text": "High speed"
+      },
+      {
+        "id": "AFH.17.22.1.w.5",
+        "text": "Complex maintenance"
+      },
+      {
+        "id": "AFH.17.22.1.w.6",
+        "text": "High aerodynamic efficiency"
+      },
+      {
+        "id": "AFH.17.22.1.w.7",
+        "text": "Large size"
+      },
+      {
+        "id": "AFH.17.22.1.w.8",
+        "text": "High cost"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17, Section 22",
+    "subjects": [
+      "Aerodynamics",
+      "LSA Characteristics"
+    ]
+  },
+  {
+    "questionid": "AFH.17.22.2",
+    "question": "What should a pilot do to maintain control during a crosswind landing in a high-drag LSA?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.22.2.c.1",
+        "text": "Maintain airspeed"
+      },
+      {
+        "id": "AFH.17.22.2.c.2",
+        "text": "Lower the nose"
+      },
+      {
+        "id": "AFH.17.22.2.c.3",
+        "text": "Avoid rapid power reduction"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.22.2.w.1",
+        "text": "Increase pitch attitude"
+      },
+      {
+        "id": "AFH.17.22.2.w.2",
+        "text": "Use full flaps"
+      },
+      {
+        "id": "AFH.17.22.2.w.3",
+        "text": "Increase power"
+      },
+      {
+        "id": "AFH.17.22.2.w.4",
+        "text": "Perform a steep descent"
+      },
+      {
+        "id": "AFH.17.22.2.w.5",
+        "text": "Ignore wind direction"
+      },
+      {
+        "id": "AFH.17.22.2.w.6",
+        "text": "Use full rudder"
+      },
+      {
+        "id": "AFH.17.22.2.w.7",
+        "text": "Land with brakes applied"
+      },
+      {
+        "id": "AFH.17.22.2.w.8",
+        "text": "Perform a go-around"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17, Section 22",
+    "subjects": [
+      "Landing Techniques",
+      "Pilot Control"
+    ]
+  },
+  {
+    "questionid": "AFH.17.22.3",
+    "question": "How should a pilot respond to an engine failure in an LSA to prevent stalling?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.22.3.c.1",
+        "text": "Transition to nose-down attitude"
+      },
+      {
+        "id": "AFH.17.22.3.c.2",
+        "text": "Maintain airspeed"
+      },
+      {
+        "id": "AFH.17.22.3.c.3",
+        "text": "Decrease pitch attitude rapidly"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.22.3.w.1",
+        "text": "Increase pitch attitude"
+      },
+      {
+        "id": "AFH.17.22.3.w.2",
+        "text": "Climb to higher altitude"
+      },
+      {
+        "id": "AFH.17.22.3.w.3",
+        "text": "Perform a steep turn"
+      },
+      {
+        "id": "AFH.17.22.3.w.4",
+        "text": "Deploy parachute"
+      },
+      {
+        "id": "AFH.17.22.3.w.5",
+        "text": "Increase throttle"
+      },
+      {
+        "id": "AFH.17.22.3.w.6",
+        "text": "Use full flaps"
+      },
+      {
+        "id": "AFH.17.22.3.w.7",
+        "text": "Perform a barrel roll"
+      },
+      {
+        "id": "AFH.17.22.3.w.8",
+        "text": "Ignore the failure"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 17, Section 22",
+    "subjects": [
+      "Emergency Procedures",
+      "Stall Recovery"
+    ]
+  },
+  {
+    "questionid": "AFH.17.23.1",
+    "question": "According to the AFH Chapter 17 summary, which of the following are true regarding Light Sport Airplanes (LSAs) and transitioning to them?",
+    "correct_answers": [
+      {
+        "id": "AFH.17.23.1.c.1",
+        "text": "LSAs may include advanced systems such as parachutes, EFIS, and composite construction"
+      },
+      {
+        "id": "AFH.17.23.1.c.2",
+        "text": "Transition training should be led by a competent flight instructor-S or flight instructor-A"
+      },
+      {
+        "id": "AFH.17.23.1.c.3",
+        "text": "A pilot must develop appropriate knowledge, risk management, and skill to safely pilot an LSA"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.17.23.1.w.1",
+        "text": "LSAs are restricted to traditional analog instrumentation only"
+      },
+      {
+        "id": "AFH.17.23.1.w.2",
+        "text": "Transition to an LSA requires a minimum of 10 hours of dual instruction regardless of prior experience"
+      },
+      {
+        "id": "AFH.17.23.1.w.3",
+        "text": "Only a flight instructor-S is authorized to conduct LSA transition training"
+      },
+      {
+        "id": "AFH.17.23.1.w.4",
+        "text": "LSAs are prohibited from using composite construction materials"
+      },
+      {
+        "id": "AFH.17.23.1.w.5",
+        "text": "The transition to an LSA is considered highly difficult for most certificated pilots"
+      },
+      {
+        "id": "AFH.17.23.1.w.6",
+        "text": "Risk management is not a required competency for LSA pilots since the aircraft are lightweight"
+      },
+      {
+        "id": "AFH.17.23.1.w.7",
+        "text": "A sport pilot certificate is the only certificate that permits flying an LSA under any circumstances"
+      },
+      {
+        "id": "AFH.17.23.1.w.8",
+        "text": "Parachute systems are mandatory equipment on all certificated LSAs"
+      }
+    ],
+    "source": "AFH Chapter 17, Section: Chapter Summary",
+    "subjects": [
+      "Light Sport Airplane characteristics",
+      "LSA transition training requirements",
+      "LSA pilot risk management"
+    ]
+  }
+]

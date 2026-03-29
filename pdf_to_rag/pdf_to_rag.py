@@ -613,6 +613,143 @@ def detect_sections(
 # 4. JSON CONSTRUCTION
 # ---------------------------------------------------------------------------
 
+_SECTION_SPLIT_TARGET_WORDS = 850
+_SECTION_SPLIT_MAX_WORDS = 1200
+_SECTION_SPLIT_MIN_WORDS = 250
+
+
+def _count_words(text: str) -> int:
+    return len((text or "").split())
+
+
+def _split_paragraphs(text: str) -> list[str]:
+    return [part.strip() for part in re.split(r"\n\s*\n", text or "") if part.strip()]
+
+
+def _split_long_block(block: str, target_words: int, max_words: int) -> list[str]:
+    stripped = (block or "").strip()
+    if not stripped:
+        return []
+
+    if _count_words(stripped) <= max_words:
+        return [stripped]
+
+    sentences = [part.strip() for part in re.split(r"(?<=[.!?])\s+", stripped) if part.strip()]
+    if len(sentences) <= 1:
+        words = stripped.split()
+        chunks: list[str] = []
+        for idx in range(0, len(words), target_words):
+            chunk = " ".join(words[idx: idx + target_words]).strip()
+            if chunk:
+                chunks.append(chunk)
+        return chunks
+
+    chunks: list[str] = []
+    current: list[str] = []
+    current_words = 0
+    for sentence in sentences:
+        sentence_words = _count_words(sentence)
+        if current and current_words + sentence_words > max_words:
+            chunks.append(" ".join(current).strip())
+            current = [sentence]
+            current_words = sentence_words
+            continue
+
+        current.append(sentence)
+        current_words += sentence_words
+        if current_words >= target_words:
+            chunks.append(" ".join(current).strip())
+            current = []
+            current_words = 0
+
+    if current:
+        chunks.append(" ".join(current).strip())
+
+    return [chunk for chunk in chunks if chunk]
+
+
+def _chunk_blocks(blocks: list[str], target_words: int, max_words: int, min_words: int) -> list[str]:
+    pieces: list[str] = []
+    for block in blocks:
+        if _count_words(block) > max_words:
+            pieces.extend(_split_long_block(block, target_words, max_words))
+        elif block.strip():
+            pieces.append(block.strip())
+
+    chunks: list[str] = []
+    current: list[str] = []
+    current_words = 0
+    for piece in pieces:
+        piece_words = _count_words(piece)
+        if current and current_words + piece_words > max_words and current_words >= min_words:
+            chunks.append("\n\n".join(current).strip())
+            current = [piece]
+            current_words = piece_words
+            continue
+
+        current.append(piece)
+        current_words += piece_words
+
+    if current:
+        chunks.append("\n\n".join(current).strip())
+
+    if len(chunks) >= 2 and _count_words(chunks[-1]) < min_words:
+        chunks[-2] = "\n\n".join([chunks[-2], chunks[-1]]).strip()
+        chunks.pop()
+
+    return [chunk for chunk in chunks if chunk.strip()]
+
+
+def split_oversized_sections(
+    sections: list[dict],
+    target_words: int = _SECTION_SPLIT_TARGET_WORDS,
+    max_words: int = _SECTION_SPLIT_MAX_WORDS,
+    min_words: int = _SECTION_SPLIT_MIN_WORDS,
+) -> list[dict]:
+    split_sections: list[dict] = []
+
+    for original_index, sec in enumerate(sections, start=1):
+        title = re.sub(r"\s+", " ", f"{sec.get('title', '')}").strip() or f"Section {original_index}"
+        content = (sec.get("content") or "").strip()
+        word_count = int(sec.get("wordCount") or _count_words(content))
+
+        if not content or word_count <= max_words:
+            split_sections.append(
+                {
+                    "title": title,
+                    "content": content,
+                    "wordCount": word_count,
+                }
+            )
+            continue
+
+        chunks = _chunk_blocks(_split_paragraphs(content) or [content], target_words, max_words, min_words)
+        if len(chunks) <= 1:
+            split_sections.append(
+                {
+                    "title": title,
+                    "content": content,
+                    "wordCount": word_count,
+                }
+            )
+            continue
+
+        part_count = len(chunks)
+        for part_index, chunk in enumerate(chunks, start=1):
+            split_sections.append(
+                {
+                    "title": f"{title} (Part {part_index})",
+                    "content": chunk,
+                    "wordCount": _count_words(chunk),
+                    "parentSectionTitle": title,
+                    "parentSectionOrdinal": original_index,
+                    "splitPartIndex": part_index,
+                    "splitPartCount": part_count,
+                }
+            )
+
+    return split_sections
+
 def build_json(chapter_number: int, sections: list[dict], prefix: str = "") -> dict:
     """
     Assemble the final RAG JSON object.
@@ -657,22 +794,28 @@ def build_json(chapter_number: int, sections: list[dict], prefix: str = "") -> d
             # No "Chapter N:" line in the opening headings — use first heading as title
             chapter_title = re.sub(r"\s+", " ", sections[0]["title"]).strip()
             body_start = 1
-        body_sections = sections[body_start:]
+        body_sections = split_oversized_sections(sections[body_start:])
 
     id_prefix = prefix.strip() if prefix and prefix.strip() else str(chapter_number)
 
     numbered_sections = []
     for seq, sec in enumerate(body_sections, start=1):
-        numbered_sections.append(
-            {
-                "id": f"{id_prefix}.{seq}",
-                "title": sec["title"],
-                "content": sec["content"],
-                "wordCount": sec.get("wordCount", len(sec["content"].split())),
-                "sectionWeight": 0.0,
-                "tags": [],
-            }
-        )
+        entry = {
+            "id": f"{id_prefix}.{seq}",
+            "title": sec["title"],
+            "content": sec["content"],
+            "wordCount": sec.get("wordCount", len(sec["content"].split())),
+            "sectionWeight": 0.0,
+            "tags": [],
+        }
+        if sec.get("parentSectionOrdinal") is not None:
+            entry["parentSectionOrdinal"] = sec["parentSectionOrdinal"]
+        if sec.get("parentSectionTitle"):
+            entry["parentSectionTitle"] = sec["parentSectionTitle"]
+        if sec.get("splitPartCount"):
+            entry["splitPartIndex"] = sec.get("splitPartIndex", 1)
+            entry["splitPartCount"] = sec["splitPartCount"]
+        numbered_sections.append(entry)
 
     total_words = sum(s["wordCount"] for s in numbered_sections)
     safe_total = total_words if total_words > 0 else 1

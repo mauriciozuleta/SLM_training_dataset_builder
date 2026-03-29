@@ -1,18 +1,22 @@
 {
-  "outputFolder": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files",
+  "outputFolder": "C:\\Users\\donre\\Downloads",
+  "datasetName": "AFH 4",
   "outputPrefix": "",
-  "exportSourceFolder": "No folder selected",
+  "repairFastMode": true,
+  "exportSourceFolder": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files",
   "currentTaskMode": "generate",
   "selectedOutputs": {
     "docJson": true,
-    "summary": true,
-    "questions": true,
-    "deterministicPairs": true,
-    "conversationalPairs": true
+    "summary": false,
+    "questions": false,
+    "deterministicPairs": false,
+    "conversationalPairs": false
   },
-  "lastLoadedPdfName": "19_afh_ch18 EMERGENCY PROCEDURES.pdf",
+  "lastLoadedPdfName": "05_afh_ch4 ENERGY MANAGEMENT.pdf",
   "lastUsed": {
-    "outputFolder": "D:\\OneDrive\\0. software Lab\\pair generation\\test_output_files",
-    "outputPrefix": ""
+    "outputFolder": "C:\\Users\\donre\\Downloads",
+    "outputPrefix": "",
+    "datasetName": "AFH 4",
+    "repairFastMode": true
   }
 }

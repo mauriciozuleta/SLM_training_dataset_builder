@@ -6,6 +6,7 @@ const repairButton = document.getElementById('repairButton');
 const exportButton = document.getElementById('exportButton');
 const generateHint = document.getElementById('generateHint');
 const repairHint = document.getElementById('repairHint');
+const repairFastModeInput = document.getElementById('repairFastMode');
 const exportHint = document.getElementById('exportHint');
 const sharedOutputSubtitle = document.getElementById('sharedOutputSubtitle');
 const logWindow = document.getElementById('logWindow');
@@ -15,7 +16,9 @@ const modePanels = document.querySelectorAll('[data-mode-panel]');
 
 const outputFolderInput = document.getElementById('outputFolder');
 const outputFolderButton = document.querySelector('[data-select-folder="outputFolder"]');
+const datasetNameInput = document.getElementById('datasetName');
 const outputPrefixInput = document.getElementById('outputPrefix');
+const datasetNameCell = document.querySelector('[data-dataset-name-cell]');
 const commonPrefixCell = document.querySelector('[data-common-prefix-cell]');
 const exportSourceFolderInput = document.getElementById('exportSourceFolder');
 const exportSourceFolderButton = document.getElementById('exportSourceFolderButton');
@@ -106,6 +109,7 @@ const selectedFiles = { originalPdf: null, legacyFile: null, sourceDocumentJson:
 let lastLoadedPdfName = '';
 let lastUsedOutputFolder = '';
 let lastUsedOutputPrefix = '';
+let lastUsedDatasetName = '';
 let apiAvailable = false;
 let apiProviderCount = 0;
 let apiProviders = [];
@@ -117,6 +121,7 @@ let currentTaskMode = '';
 let repairInspection = null;
 let repairInspectionLoading = false;
 let repairInspectionRequestId = 0;
+let lastUsedRepairFastMode = true;
 let clearPrimaryPdf = async () => {};
 
 const getTimeStamp = () => new Date().toLocaleTimeString([], { hour12: false });
@@ -791,6 +796,29 @@ const ensureMarkdownExtension = (fileName, fallback) => {
   return base.toLowerCase().endsWith('.md') ? base : `${base}.md`;
 };
 
+const normalizeDatasetName = (value) => {
+  const raw = `${value || ''}`.trim();
+  return raw
+    .replace(/[^a-zA-Z0-9]+/g, '_')
+    .replace(/_+/g, '_')
+    .replace(/^_+|_+$/g, '');
+};
+
+const normalizePathForCompare = (value) => `${value || ''}`
+  .trim()
+  .replace(/\\+/g, '/')
+  .replace(/\/+$/g, '')
+  .toLowerCase();
+
+const isSameOrNestedPath = (candidatePath, basePath) => {
+  const candidate = normalizePathForCompare(candidatePath);
+  const base = normalizePathForCompare(basePath);
+  if (!candidate || !base) {
+    return false;
+  }
+  return candidate === base || candidate.startsWith(`${base}/`);
+};
+
 const buildPrefix = () => {
   const raw = (outputPrefixInput?.value || '').trim();
   if (!raw) {
@@ -1174,20 +1202,27 @@ const refreshTaskModeState = () => {
 
   if (sharedOutputSubtitle) {
     const subtitles = {
-      generate: 'Generate mode: choose destination folder and output prefix used for the next dataset run.',
-      repair: 'Repair mode: output prefix is ignored. The repaired file keeps its original filename and is overwritten in place.',
-      export: 'Export mode: output prefix is ignored. Export creates a folder named <selected-folder>_training_files.',
-      default: 'Shared for all tasks: choose a destination folder and output prefix/file name base.',
+      generate: 'Generate mode: choose destination folder and set Add output documents prefix for the next dataset run.',
+      repair: 'Repair mode: only the destination folder remains visible here. File naming is ignored and the repaired file is overwritten in place.',
+      export: 'Export mode: choose destination folder and set Name Dataset. Export uses that name for the export folder and bucket folders.',
+      default: 'Choose a task to reveal only the output settings that matter for that workflow.',
     };
     sharedOutputSubtitle.textContent = subtitles[currentTaskMode] || subtitles.default;
   }
 
   const isGenerateMode = currentTaskMode === 'generate' || currentTaskMode === '';
+  const isExplicitExportMode = currentTaskMode === 'export';
   if (commonPrefixCell) {
     commonPrefixCell.hidden = !isGenerateMode;
   }
   if (outputPrefixInput) {
     outputPrefixInput.disabled = !isGenerateMode;
+  }
+  if (datasetNameCell) {
+    datasetNameCell.hidden = !isExplicitExportMode;
+  }
+  if (datasetNameInput) {
+    datasetNameInput.disabled = !isExplicitExportMode;
   }
 };
 
@@ -1207,7 +1242,10 @@ const refreshExportState = () => {
   }
 
   const hasExportFolder = Boolean(exportSourceFolderInput?.value && exportSourceFolderInput.value !== 'No folder selected');
-  const ready = !generationInProgress && !repairInProgress && !exportInProgress && hasExportFolder;
+  const hasDestinationFolder = Boolean(outputFolderInput?.value && outputFolderInput.value !== 'No folder selected');
+  const normalizedDatasetName = normalizeDatasetName(datasetNameInput?.value || lastUsedDatasetName);
+  const hasDatasetName = Boolean(normalizedDatasetName);
+  const ready = !generationInProgress && !repairInProgress && !exportInProgress && hasExportFolder && hasDestinationFolder && hasDatasetName;
   exportButton.disabled = !ready;
   exportButton.textContent = exportInProgress ? 'Exporting...' : 'Export Training Files';
 
@@ -1217,12 +1255,22 @@ const refreshExportState = () => {
   }
 
   if (!hasExportFolder) {
-    exportHint.textContent = 'Select a root folder that contains generated output folders.';
+    exportHint.textContent = 'Select a root folder that contains generated output folders to scan.';
     return;
   }
 
-  const folderName = getBaseName(`${exportSourceFolderInput?.value || ''}`.replace(/[\\/]+$/g, '')) || 'selected_folder';
-  exportHint.textContent = `Ready to scan recursively and create ${folderName}_training_files with only questions and conversational files.`;
+  if (!hasDestinationFolder) {
+    exportHint.textContent = 'Select a destination folder where the export will be created (shared output folder setting above).';
+    return;
+  }
+
+  if (!hasDatasetName) {
+    exportHint.textContent = 'Set Name Dataset (Export only). It is used to name the export folder and subfolders.';
+    return;
+  }
+
+  const destFolder = getBaseName(`${outputFolderInput?.value || ''}`.replace(/[\\/]+$/g, '')) || 'output';
+  exportHint.textContent = `Ready to create ${normalizedDatasetName}_training_files inside ${destFolder} with ${normalizedDatasetName}_documents, ${normalizedDatasetName}_questions_training_pairs, and ${normalizedDatasetName}_conversational_training_pairs.`;
 };
 
 const refreshRepairState = () => {
@@ -1348,7 +1396,9 @@ const refreshGenerateState = () => {
 
 const collectSettings = () => ({
   outputFolder: outputFolderInput?.value || '',
+  datasetName: datasetNameInput?.value || '',
   outputPrefix: outputPrefixInput?.value || '',
+  repairFastMode: Boolean(repairFastModeInput?.checked ?? lastUsedRepairFastMode),
   exportSourceFolder: exportSourceFolderInput?.value || '',
   currentTaskMode,
   selectedOutputs: getSelectedOutputs(),
@@ -1356,6 +1406,8 @@ const collectSettings = () => ({
   lastUsed: {
     outputFolder: lastUsedOutputFolder,
     outputPrefix: lastUsedOutputPrefix,
+    datasetName: lastUsedDatasetName,
+    repairFastMode: lastUsedRepairFastMode,
   },
 });
 
@@ -1383,8 +1435,16 @@ const applySettings = (settings) => {
     outputPrefixInput.value = settings.outputPrefix;
   }
 
+  if (datasetNameInput && typeof settings.datasetName === 'string') {
+    datasetNameInput.value = settings.datasetName;
+  }
+
   if (exportSourceFolderInput && typeof settings.exportSourceFolder === 'string' && settings.exportSourceFolder.trim() !== '') {
     exportSourceFolderInput.value = settings.exportSourceFolder;
+  }
+
+  if (repairFastModeInput && typeof settings.repairFastMode === 'boolean') {
+    repairFastModeInput.checked = settings.repairFastMode;
   }
 
   if (typeof settings.lastLoadedPdfName === 'string') {
@@ -1398,6 +1458,12 @@ const applySettings = (settings) => {
     if (typeof settings.lastUsed.outputPrefix === 'string') {
       lastUsedOutputPrefix = settings.lastUsed.outputPrefix;
     }
+    if (typeof settings.lastUsed.datasetName === 'string') {
+      lastUsedDatasetName = settings.lastUsed.datasetName;
+    }
+    if (typeof settings.lastUsed.repairFastMode === 'boolean') {
+      lastUsedRepairFastMode = settings.lastUsed.repairFastMode;
+    }
   }
 
   if (outputFolderInput && (outputFolderInput.value === '' || outputFolderInput.value === 'No folder selected') && lastUsedOutputFolder) {
@@ -1406,6 +1472,14 @@ const applySettings = (settings) => {
 
   if (outputPrefixInput && outputPrefixInput.value.trim() === '' && lastUsedOutputPrefix) {
     outputPrefixInput.value = lastUsedOutputPrefix;
+  }
+
+  if (datasetNameInput && datasetNameInput.value.trim() === '' && lastUsedDatasetName) {
+    datasetNameInput.value = lastUsedDatasetName;
+  }
+
+  if (repairFastModeInput && typeof settings.repairFastMode !== 'boolean') {
+    repairFastModeInput.checked = lastUsedRepairFastMode;
   }
 
   if (settings.selectedOutputs && typeof settings.selectedOutputs === 'object') {
@@ -1901,6 +1975,24 @@ outputPrefixInput?.addEventListener('blur', () => {
   void persistSettings();
 });
 
+datasetNameInput?.addEventListener('change', () => {
+  lastUsedDatasetName = datasetNameInput.value.trim();
+  void persistSettings();
+  refreshGenerateState();
+});
+
+datasetNameInput?.addEventListener('blur', () => {
+  lastUsedDatasetName = datasetNameInput.value.trim();
+  void persistSettings();
+  refreshGenerateState();
+});
+
+repairFastModeInput?.addEventListener('change', () => {
+  lastUsedRepairFastMode = Boolean(repairFastModeInput.checked);
+  void persistSettings();
+  refreshGenerateState();
+});
+
 Object.values(checkboxIds).forEach((id) => {
   const input = document.getElementById(id);
   if (!input) {
@@ -1997,6 +2089,7 @@ repairButton?.addEventListener('click', async () => {
         sourceDocumentPath,
         repairArtifactPath,
         generationGuidance,
+        repairMode: repairFastModeInput?.checked ? 'fast' : 'deep',
       });
     } finally {
       unsubscribeRepairProgress();
@@ -2040,11 +2133,12 @@ exportButton?.addEventListener('click', async () => {
   }
 
   if (window.desktopApp?.showConfirm) {
+    const datasetName = normalizeDatasetName(datasetNameInput?.value || lastUsedDatasetName);
     const confirmed = await window.desktopApp.showConfirm({
       type: 'question',
       title: 'Confirm Export',
-      message: 'Create a fresh export folder with only questions and conversational training files?',
-      detail: `Scan root: ${rootFolder}\n\nThe app will scan this folder recursively and create ${getBaseName(rootFolder.replace(/[\\/]+$/g, ''))}_training_files. Relative subfolders are preserved for copied files.`,
+      message: 'Create a fresh export folder with documents, questions, and conversational buckets?',
+      detail: `Scan root: ${rootFolder}\n\nThe app will create ${datasetName || '<dataset_name>'}_training_files with:\n- ${datasetName || '<dataset_name>'}_documents\n- ${datasetName || '<dataset_name>'}_questions_training_pairs\n- ${datasetName || '<dataset_name>'}_conversational_training_pairs`,
       buttons: ['Export', 'Cancel'],
     });
 
@@ -2058,13 +2152,33 @@ exportButton?.addEventListener('click', async () => {
   try {
     exportInProgress = true;
     refreshGenerateState();
+    const destinationFolder = outputFolderInput?.value || lastUsedOutputFolder;
+    const datasetName = normalizeDatasetName(datasetNameInput?.value || lastUsedDatasetName);
+    if (!destinationFolder || destinationFolder === 'No folder selected') {
+      addLog('Export destination folder is required. Select an output folder first.', 'error');
+      refreshGenerateState();
+      return;
+    }
+    if (!datasetName) {
+      addLog('Name Dataset is required for export. Set it in Output Settings.', 'error');
+      refreshGenerateState();
+      return;
+    }
+
+    if (isSameOrNestedPath(destinationFolder, rootFolder) || isSameOrNestedPath(rootFolder, destinationFolder)) {
+      addLog('Export blocked: destination must not be the same as, inside, or parent of the scan root folder.', 'error');
+      refreshGenerateState();
+      return;
+    }
+
     addLog(`Scanning ${rootFolder} for training files...`, 'info');
-    const exportResult = await window.desktopApp.exportTrainingFiles({ rootFolder });
+    const exportResult = await window.desktopApp.exportTrainingFiles({ rootFolder, destinationFolder, datasetName });
     addLog(
-      `Export complete: ${Number(exportResult?.copiedCount || 0)} files copied (${Number(exportResult?.summary?.questions || 0)} questions, ${Number(exportResult?.summary?.conversationalPairs || 0)} conversational).`,
+      `Export complete: ${Number(exportResult?.copiedCount || 0)} files copied (${Number(exportResult?.summary?.questions || 0)} questions, ${Number(exportResult?.summary?.conversationalPairs || 0)} conversational, ${Number(exportResult?.summary?.document || 0)} documents). Totals: ${Number(exportResult?.summary?.totalQuestionPairs || 0)} question pairs, ${Number(exportResult?.summary?.totalConversationalPairs || 0)} conversational pairs.`,
       'success'
     );
     addLog(`Export folder created: ${exportResult?.exportFolder || ''}`, 'info');
+    addLog(`Summary created: ${exportResult?.summaryDocumentPath || ''}`, 'info');
     setTaskMode('export');
     await persistSettings();
   } catch (error) {

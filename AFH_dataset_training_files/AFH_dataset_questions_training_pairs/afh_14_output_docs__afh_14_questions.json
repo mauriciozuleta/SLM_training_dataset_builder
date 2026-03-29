@@ -1,0 +1,3052 @@
+[
+  {
+    "questionBank": {
+      "chapterId": "afh.14",
+      "bookId": "AFH",
+      "chapterNumber": 14,
+      "chapterTitle": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction",
+      "totalRequiredQuestions": 50,
+      "metadata": {
+        "generatedAtUtc": "2026-03-29T14:29:43.978Z",
+        "chapterId": "afh.14",
+        "chapterNumber": 14,
+        "totalSections": 23,
+        "totalRequiredQuestions": 50,
+        "providers": [
+          "openai",
+          "anthropic",
+          "gemini"
+        ],
+        "models": [
+          "gpt-4o",
+          "claude-sonnet-4-6",
+          "gemini-2.5-flash"
+        ],
+        "promptTokens": 9781,
+        "completionTokens": 7128,
+        "totalTokens": 16909,
+        "sectionQuestionSummary": [
+          {
+            "sectionId": "afh.14.1",
+            "sectionTitle": "Landing Gear",
+            "sectionOrdinal": 1,
+            "sectionWeightPercentage": 5.54,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.14.2",
+            "sectionTitle": "Instability",
+            "sectionOrdinal": 2,
+            "sectionWeightPercentage": 5.88,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.14.3",
+            "sectionTitle": "Angle of Attack",
+            "sectionOrdinal": 3,
+            "sectionWeightPercentage": 1.55,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.14.4",
+            "sectionTitle": "Taxiing",
+            "sectionOrdinal": 4,
+            "sectionWeightPercentage": 13.5,
+            "questionsGenerated": 7
+          },
+          {
+            "sectionId": "afh.14.5",
+            "sectionTitle": "Weathervaning",
+            "sectionOrdinal": 5,
+            "sectionWeightPercentage": 1.2,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.14.6",
+            "sectionTitle": "Visibility",
+            "sectionOrdinal": 6,
+            "sectionWeightPercentage": 2.53,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.14.7",
+            "sectionTitle": "Directional Control",
+            "sectionOrdinal": 7,
+            "sectionWeightPercentage": 1.87,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.14.8",
+            "sectionTitle": "Normal Takeoff Roll",
+            "sectionOrdinal": 8,
+            "sectionWeightPercentage": 6.03,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.14.9",
+            "sectionTitle": "Liftoff",
+            "sectionOrdinal": 9,
+            "sectionWeightPercentage": 4.72,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.14.10",
+            "sectionTitle": "Crosswind Takeoff",
+            "sectionOrdinal": 10,
+            "sectionWeightPercentage": 3.95,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.14.11",
+            "sectionTitle": "Short-Field Takeoff",
+            "sectionOrdinal": 11,
+            "sectionWeightPercentage": 1.55,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.14.12",
+            "sectionTitle": "Soft-Field Takeoff",
+            "sectionOrdinal": 12,
+            "sectionWeightPercentage": 5.02,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.14.13",
+            "sectionTitle": "Landing",
+            "sectionOrdinal": 13,
+            "sectionWeightPercentage": 2.79,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.14.14",
+            "sectionTitle": "Touchdown",
+            "sectionOrdinal": 14,
+            "sectionWeightPercentage": 3.69,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.14.15",
+            "sectionTitle": "Three-Point Landing",
+            "sectionOrdinal": 15,
+            "sectionWeightPercentage": 9.08,
+            "questionsGenerated": 5
+          },
+          {
+            "sectionId": "afh.14.16",
+            "sectionTitle": "Wheel Landing",
+            "sectionOrdinal": 16,
+            "sectionWeightPercentage": 5.43,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.14.17",
+            "sectionTitle": "Crosswinds",
+            "sectionOrdinal": 17,
+            "sectionWeightPercentage": 2.36,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.14.18",
+            "sectionTitle": "After-Landing Roll",
+            "sectionOrdinal": 18,
+            "sectionWeightPercentage": 9.55,
+            "questionsGenerated": 5
+          },
+          {
+            "sectionId": "afh.14.19",
+            "sectionTitle": "Crosswind After-Landing Roll",
+            "sectionOrdinal": 19,
+            "sectionWeightPercentage": 4.83,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.14.20",
+            "sectionTitle": "Short-Field Landing",
+            "sectionOrdinal": 20,
+            "sectionWeightPercentage": 1.12,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.14.21",
+            "sectionTitle": "Soft-Field Landing",
+            "sectionOrdinal": 21,
+            "sectionWeightPercentage": 2.1,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.14.22",
+            "sectionTitle": "Ground Loop",
+            "sectionOrdinal": 22,
+            "sectionWeightPercentage": 4.1,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.14.23",
+            "sectionTitle": "Chapter Summary",
+            "sectionOrdinal": 23,
+            "sectionWeightPercentage": 1.61,
+            "questionsGenerated": 1
+          }
+        ],
+        "buildStatus": "complete",
+        "buildStage": "questions",
+        "completedSections": 23,
+        "incompleteSections": [],
+        "failureReason": ""
+      }
+    }
+  },
+  {
+    "questionid": "AFH.14.1.1",
+    "question": "What are the primary functions of the tailwheel in a tailwheel-type airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.1.1.c.1",
+        "text": "Supports the airplane"
+      },
+      {
+        "id": "AFH.14.1.1.c.2",
+        "text": "Steering"
+      },
+      {
+        "id": "AFH.14.1.1.c.3",
+        "text": "Directional control"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.1.1.w.1",
+        "text": "Increases lift"
+      },
+      {
+        "id": "AFH.14.1.1.w.2",
+        "text": "Reduces drag"
+      },
+      {
+        "id": "AFH.14.1.1.w.3",
+        "text": "Enhances fuel efficiency"
+      },
+      {
+        "id": "AFH.14.1.1.w.4",
+        "text": "Provides thrust"
+      },
+      {
+        "id": "AFH.14.1.1.w.5",
+        "text": "Improves climb rate"
+      },
+      {
+        "id": "AFH.14.1.1.w.6",
+        "text": "Stabilizes altitude"
+      },
+      {
+        "id": "AFH.14.1.1.w.7",
+        "text": "Increases speed"
+      },
+      {
+        "id": "AFH.14.1.1.w.8",
+        "text": "Reduces noise"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction",
+    "subjects": [
+      "Landing Gear"
+    ]
+  },
+  {
+    "questionid": "AFH.14.1.2",
+    "question": "What are the three major handling differences between nose-wheel and tailwheel airplanes?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.1.2.c.1",
+        "text": "Directional instability"
+      },
+      {
+        "id": "AFH.14.1.2.c.2",
+        "text": "Angle of attack (AOA)"
+      },
+      {
+        "id": "AFH.14.1.2.c.3",
+        "text": "Crosswind weathervaning tendencies"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.1.2.w.1",
+        "text": "Increased lift"
+      },
+      {
+        "id": "AFH.14.1.2.w.2",
+        "text": "Reduced drag"
+      },
+      {
+        "id": "AFH.14.1.2.w.3",
+        "text": "Higher fuel consumption"
+      },
+      {
+        "id": "AFH.14.1.2.w.4",
+        "text": "Improved climb rate"
+      },
+      {
+        "id": "AFH.14.1.2.w.5",
+        "text": "Enhanced stability"
+      },
+      {
+        "id": "AFH.14.1.2.w.6",
+        "text": "Lower noise levels"
+      },
+      {
+        "id": "AFH.14.1.2.w.7",
+        "text": "Faster speeds"
+      },
+      {
+        "id": "AFH.14.1.2.w.8",
+        "text": "Better altitude control"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction",
+    "subjects": [
+      "Landing Gear"
+    ]
+  },
+  {
+    "questionid": "AFH.14.1.3",
+    "question": "How can steering be accomplished in a tailwheel airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.1.3.c.1",
+        "text": "Airflow on rudder"
+      },
+      {
+        "id": "AFH.14.1.3.c.2",
+        "text": "Propeller slipstream"
+      },
+      {
+        "id": "AFH.14.1.3.c.3",
+        "text": "Mechanical linkage"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.1.3.w.1",
+        "text": "Increased throttle"
+      },
+      {
+        "id": "AFH.14.1.3.w.2",
+        "text": "Elevator adjustment"
+      },
+      {
+        "id": "AFH.14.1.3.w.3",
+        "text": "Aileron movement"
+      },
+      {
+        "id": "AFH.14.1.3.w.4",
+        "text": "Flap deployment"
+      },
+      {
+        "id": "AFH.14.1.3.w.5",
+        "text": "Wing tilting"
+      },
+      {
+        "id": "AFH.14.1.3.w.6",
+        "text": "Fuel mixture change"
+      },
+      {
+        "id": "AFH.14.1.3.w.7",
+        "text": "Altitude adjustment"
+      },
+      {
+        "id": "AFH.14.1.3.w.8",
+        "text": "Speed reduction"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction",
+    "subjects": [
+      "Landing Gear"
+    ]
+  },
+  {
+    "questionid": "AFH.14.2.1",
+    "question": "Why are tailwheel aircraft considered inherently unstable on the ground?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.2.1.c.1",
+        "text": "The center of gravity is located aft of the main gear pivot point"
+      },
+      {
+        "id": "AFH.14.2.1.c.2",
+        "text": "Forward momentum acts to continue and tighten a turn without further steering input"
+      },
+      {
+        "id": "AFH.14.2.1.c.3",
+        "text": "Removing rudder pressure ordinarily does not stop a turn once it has been started"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.2.1.w.1",
+        "text": "The tailwheel is located forward of the main gear"
+      },
+      {
+        "id": "AFH.14.2.1.w.2",
+        "text": "The center of gravity is located ahead of the main gear"
+      },
+      {
+        "id": "AFH.14.2.1.w.3",
+        "text": "The aircraft lacks a rudder-pedal-operated steering mechanism"
+      },
+      {
+        "id": "AFH.14.2.1.w.4",
+        "text": "Braking action is insufficient to counteract forward momentum"
+      },
+      {
+        "id": "AFH.14.2.1.w.5",
+        "text": "The wide main gear track creates excessive pivot resistance"
+      },
+      {
+        "id": "AFH.14.2.1.w.6",
+        "text": "The tailwheel is fixed and cannot swivel during ground operations"
+      },
+      {
+        "id": "AFH.14.2.1.w.7",
+        "text": "Nose-heavy loading causes the aircraft to veer unpredictably"
+      },
+      {
+        "id": "AFH.14.2.1.w.8",
+        "text": "The propeller torque overwhelms directional control at low speeds"
+      }
+    ],
+    "source": "AFH Chapter 14, Section 14.2 – Instability",
+    "subjects": [
+      "Tailwheel Ground Handling",
+      "CG and Stability",
+      "Taxi Technique"
+    ]
+  },
+  {
+    "questionid": "AFH.14.2.2",
+    "question": "What is the purpose of a centering spring or similar device on a tailwheel airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.2.2.c.1",
+        "text": "It returns the tailwheel to a center position when rudder pedal input is relaxed"
+      },
+      {
+        "id": "AFH.14.2.2.c.2",
+        "text": "It assists pilots in regaining straight-line travel after a turn"
+      },
+      {
+        "id": "AFH.14.2.2.c.3",
+        "text": "It compensates for the tailwheel's tendency to remain deflected after steering input ceases"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.2.2.w.1",
+        "text": "It locks the tailwheel in a fixed position during takeoff roll"
+      },
+      {
+        "id": "AFH.14.2.2.w.2",
+        "text": "It automatically applies opposite rudder to stop an initiated turn"
+      },
+      {
+        "id": "AFH.14.2.2.w.3",
+        "text": "It prevents the tailwheel from swiveling beyond a set angle"
+      },
+      {
+        "id": "AFH.14.2.2.w.4",
+        "text": "It increases rudder pedal resistance to discourage abrupt steering inputs"
+      },
+      {
+        "id": "AFH.14.2.2.w.5",
+        "text": "It connects the tailwheel directly to the rudder for improved response"
+      },
+      {
+        "id": "AFH.14.2.2.w.6",
+        "text": "It dampens propeller torque effects during ground operations"
+      },
+      {
+        "id": "AFH.14.2.2.w.7",
+        "text": "It ensures the tailwheel remains aligned with the main gear at all times"
+      },
+      {
+        "id": "AFH.14.2.2.w.8",
+        "text": "It replaces differential braking as the primary directional control method"
+      }
+    ],
+    "source": "AFH Chapter 14, Section 14.2 – Instability",
+    "subjects": [
+      "Tailwheel Steering Mechanisms",
+      "Ground Handling Equipment",
+      "Directional Control"
+    ]
+  },
+  {
+    "questionid": "AFH.14.2.3",
+    "question": "What is the correct rudder technique for making a taxi turn in a tailwheel airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.2.3.c.1",
+        "text": "Apply rudder pressure to initiate the turn"
+      },
+      {
+        "id": "AFH.14.2.3.c.2",
+        "text": "Neutralize the rudder pedals as the turn continues"
+      },
+      {
+        "id": "AFH.14.2.3.c.3",
+        "text": "Apply opposite rudder input to stop the turn and regain straight-line travel"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.2.3.w.1",
+        "text": "Maintain continuous rudder pressure throughout the entire turn"
+      },
+      {
+        "id": "AFH.14.2.3.w.2",
+        "text": "Use differential braking alone without any rudder input"
+      },
+      {
+        "id": "AFH.14.2.3.w.3",
+        "text": "Apply full opposite rudder immediately after the turn begins"
+      },
+      {
+        "id": "AFH.14.2.3.w.4",
+        "text": "Release all rudder pressure to allow the centering spring to complete the turn"
+      },
+      {
+        "id": "AFH.14.2.3.w.5",
+        "text": "Increase engine power to counteract the tightening tendency during turns"
+      },
+      {
+        "id": "AFH.14.2.3.w.6",
+        "text": "Use nose-wheel steering techniques identical to those used in tricycle-gear aircraft"
+      },
+      {
+        "id": "AFH.14.2.3.w.7",
+        "text": "Apply rudder only after the desired heading is reached to stop the turn"
+      },
+      {
+        "id": "AFH.14.2.3.w.8",
+        "text": "Hold rudder pressure until the aircraft has fully stopped before neutralizing"
+      }
+    ],
+    "source": "AFH Chapter 14, Section 14.2 – Instability",
+    "subjects": [
+      "Taxi Technique",
+      "Rudder Control",
+      "Tailwheel Ground Handling"
+    ]
+  },
+  {
+    "questionid": "AFH.14.3.1",
+    "question": "Which statements accurately describe the generation of lift in tailwheel aircraft while on the ground?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.3.1.c.1",
+        "text": "Tailwheel aircraft generate lift on the ground when there is a relative headwind."
+      },
+      {
+        "id": "AFH.14.3.1.c.2",
+        "text": "The amount of lift generated by tailwheel aircraft on the ground depends on the wind speed."
+      },
+      {
+        "id": "AFH.14.3.1.c.3",
+        "text": "Wings and ailerons on tailwheel aircraft aid in liftoff even at slow taxi speeds."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.3.1.w.1",
+        "text": "Lift on the ground is exclusive to nose-wheel airplanes."
+      },
+      {
+        "id": "AFH.14.3.1.w.2",
+        "text": "Tailwheel aircraft only generate lift once airborne."
+      },
+      {
+        "id": "AFH.14.3.1.w.3",
+        "text": "Ailerons are not involved in ground lift generation."
+      },
+      {
+        "id": "AFH.14.3.1.w.4",
+        "text": "Ground lift in tailwheel aircraft is independent of wind speed."
+      },
+      {
+        "id": "AFH.14.3.1.w.5",
+        "text": "This phenomenon simplifies ground handling for tailwheel aircraft."
+      },
+      {
+        "id": "AFH.14.3.1.w.6",
+        "text": "Only the fuselage contributes to ground lift in tailwheel aircraft."
+      },
+      {
+        "id": "AFH.14.3.1.w.7",
+        "text": "Ground lift is primarily a concern during high-altitude flight."
+      },
+      {
+        "id": "AFH.14.3.1.w.8",
+        "text": "Nose-wheel pilots typically anticipate this characteristic."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Tailwheel Operations",
+      "Aerodynamics",
+      "Ground Handling"
+    ]
+  },
+  {
+    "questionid": "AFH.14.4.1",
+    "question": "What is the function of a steerable tailwheel in tailwheel-type airplanes during taxiing?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.4.1.c.1",
+        "text": "Facilitates directional control"
+      },
+      {
+        "id": "AFH.14.4.1.c.2",
+        "text": "Operates along with the rudder"
+      },
+      {
+        "id": "AFH.14.4.1.c.3",
+        "text": "Engages through an arc of about 30° each side of center"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.4.1.w.1",
+        "text": "Increases lift during takeoff"
+      },
+      {
+        "id": "AFH.14.4.1.w.2",
+        "text": "Reduces drag during flight"
+      },
+      {
+        "id": "AFH.14.4.1.w.3",
+        "text": "Enhances braking efficiency"
+      },
+      {
+        "id": "AFH.14.4.1.w.4",
+        "text": "Improves fuel efficiency"
+      },
+      {
+        "id": "AFH.14.4.1.w.5",
+        "text": "Provides additional thrust"
+      },
+      {
+        "id": "AFH.14.4.1.w.6",
+        "text": "Increases cruising speed"
+      },
+      {
+        "id": "AFH.14.4.1.w.7",
+        "text": "Reduces noise levels"
+      },
+      {
+        "id": "AFH.14.4.1.w.8",
+        "text": "Improves passenger comfort"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction",
+    "subjects": [
+      "Taxiing",
+      "Tailwheel Airplanes"
+    ]
+  },
+  {
+    "questionid": "AFH.14.4.2",
+    "question": "What should a pilot do immediately after beginning to taxi a tailwheel airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.4.2.c.1",
+        "text": "Test the brakes for proper operation"
+      },
+      {
+        "id": "AFH.14.4.2.c.2",
+        "text": "Apply power to start moving slowly"
+      },
+      {
+        "id": "AFH.14.4.2.c.3",
+        "text": "Retard the throttle and apply brakes smoothly"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.4.2.w.1",
+        "text": "Engage full throttle"
+      },
+      {
+        "id": "AFH.14.4.2.w.2",
+        "text": "Use ailerons to lift the wings"
+      },
+      {
+        "id": "AFH.14.4.2.w.3",
+        "text": "Activate autopilot"
+      },
+      {
+        "id": "AFH.14.4.2.w.4",
+        "text": "Deploy landing gear"
+      },
+      {
+        "id": "AFH.14.4.2.w.5",
+        "text": "Adjust flaps for takeoff"
+      },
+      {
+        "id": "AFH.14.4.2.w.6",
+        "text": "Engage reverse thrust"
+      },
+      {
+        "id": "AFH.14.4.2.w.7",
+        "text": "Activate de-icing systems"
+      },
+      {
+        "id": "AFH.14.4.2.w.8",
+        "text": "Adjust cabin pressure"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction",
+    "subjects": [
+      "Taxiing",
+      "Tailwheel Airplanes"
+    ]
+  },
+  {
+    "questionid": "AFH.14.4.3",
+    "question": "How should a pilot position the ailerons when taxiing in a quartering headwind?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.4.3.c.1",
+        "text": "Position ailerons into the wind"
+      },
+      {
+        "id": "AFH.14.4.3.c.2",
+        "text": "Hold the stick into the wind"
+      },
+      {
+        "id": "AFH.14.4.3.c.3",
+        "text": "Kill lift on the upwind wing"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.4.3.w.1",
+        "text": "Position ailerons away from the wind"
+      },
+      {
+        "id": "AFH.14.4.3.w.2",
+        "text": "Hold the stick away from the wind"
+      },
+      {
+        "id": "AFH.14.4.3.w.3",
+        "text": "Increase throttle to counteract wind"
+      },
+      {
+        "id": "AFH.14.4.3.w.4",
+        "text": "Use brakes to stabilize the aircraft"
+      },
+      {
+        "id": "AFH.14.4.3.w.5",
+        "text": "Deploy spoilers to reduce lift"
+      },
+      {
+        "id": "AFH.14.4.3.w.6",
+        "text": "Engage flaps to increase lift"
+      },
+      {
+        "id": "AFH.14.4.3.w.7",
+        "text": "Activate reverse thrust"
+      },
+      {
+        "id": "AFH.14.4.3.w.8",
+        "text": "Adjust rudder to counteract wind"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction",
+    "subjects": [
+      "Taxiing",
+      "Tailwheel Airplanes"
+    ]
+  },
+  {
+    "questionid": "AFH.14.4.4",
+    "question": "What is the recommended elevator position when taxiing with a quartering tailwind?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.4.4.c.1",
+        "text": "Hold the stick away from the crosswind"
+      },
+      {
+        "id": "AFH.14.4.4.c.2",
+        "text": "Position elevator full forward"
+      },
+      {
+        "id": "AFH.14.4.4.c.3",
+        "text": "Reduce upward deflection of elevator"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.4.4.w.1",
+        "text": "Hold the stick into the crosswind"
+      },
+      {
+        "id": "AFH.14.4.4.w.2",
+        "text": "Position elevator full back"
+      },
+      {
+        "id": "AFH.14.4.4.w.3",
+        "text": "Increase upward deflection of elevator"
+      },
+      {
+        "id": "AFH.14.4.4.w.4",
+        "text": "Deploy flaps to stabilize"
+      },
+      {
+        "id": "AFH.14.4.4.w.5",
+        "text": "Use brakes to control direction"
+      },
+      {
+        "id": "AFH.14.4.4.w.6",
+        "text": "Engage autopilot for stability"
+      },
+      {
+        "id": "AFH.14.4.4.w.7",
+        "text": "Activate spoilers to reduce lift"
+      },
+      {
+        "id": "AFH.14.4.4.w.8",
+        "text": "Adjust throttle to increase speed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction",
+    "subjects": [
+      "Taxiing",
+      "Tailwheel Airplanes"
+    ]
+  },
+  {
+    "questionid": "AFH.14.4.5",
+    "question": "What happens to the tailwheel when it is operated beyond its steering arc limit?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.4.5.c.1",
+        "text": "Breaks free and becomes full swiveling"
+      },
+      {
+        "id": "AFH.14.4.5.c.2",
+        "text": "Allows the airplane to pivot within its own length"
+      },
+      {
+        "id": "AFH.14.4.5.c.3",
+        "text": "No longer provides directional control"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.4.5.w.1",
+        "text": "Increases braking efficiency"
+      },
+      {
+        "id": "AFH.14.4.5.w.2",
+        "text": "Enhances rudder effectiveness"
+      },
+      {
+        "id": "AFH.14.4.5.w.3",
+        "text": "Locks in place for stability"
+      },
+      {
+        "id": "AFH.14.4.5.w.4",
+        "text": "Improves fuel efficiency"
+      },
+      {
+        "id": "AFH.14.4.5.w.5",
+        "text": "Reduces drag"
+      },
+      {
+        "id": "AFH.14.4.5.w.6",
+        "text": "Increases lift"
+      },
+      {
+        "id": "AFH.14.4.5.w.7",
+        "text": "Enhances passenger comfort"
+      },
+      {
+        "id": "AFH.14.4.5.w.8",
+        "text": "Reduces noise levels"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction",
+    "subjects": [
+      "Taxiing",
+      "Tailwheel Airplanes"
+    ]
+  },
+  {
+    "questionid": "AFH.14.4.6",
+    "question": "Why is it important to be aware of wind direction when taxiing a tailwheel airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.4.6.c.1",
+        "text": "Tailwheel airplanes are vulnerable to surface winds"
+      },
+      {
+        "id": "AFH.14.4.6.c.2",
+        "text": "Wind can lift a wing unexpectedly"
+      },
+      {
+        "id": "AFH.14.4.6.c.3",
+        "text": "Proper control positioning is essential"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.4.6.w.1",
+        "text": "Wind direction affects fuel consumption"
+      },
+      {
+        "id": "AFH.14.4.6.w.2",
+        "text": "Wind direction determines cruising speed"
+      },
+      {
+        "id": "AFH.14.4.6.w.3",
+        "text": "Wind direction impacts passenger comfort"
+      },
+      {
+        "id": "AFH.14.4.6.w.4",
+        "text": "Wind direction influences engine performance"
+      },
+      {
+        "id": "AFH.14.4.6.w.5",
+        "text": "Wind direction alters braking efficiency"
+      },
+      {
+        "id": "AFH.14.4.6.w.6",
+        "text": "Wind direction changes noise levels"
+      },
+      {
+        "id": "AFH.14.4.6.w.7",
+        "text": "Wind direction affects cabin pressure"
+      },
+      {
+        "id": "AFH.14.4.6.w.8",
+        "text": "Wind direction determines autopilot settings"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction",
+    "subjects": [
+      "Taxiing",
+      "Tailwheel Airplanes"
+    ]
+  },
+  {
+    "questionid": "AFH.14.4.7",
+    "question": "What should be done if braking action is unsatisfactory during taxiing?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.4.7.c.1",
+        "text": "Shut down the engine immediately"
+      },
+      {
+        "id": "AFH.14.4.7.c.2",
+        "text": "Retard the throttle"
+      },
+      {
+        "id": "AFH.14.4.7.c.3",
+        "text": "Apply pressure smoothly to both brakes"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.4.7.w.1",
+        "text": "Increase throttle to gain control"
+      },
+      {
+        "id": "AFH.14.4.7.w.2",
+        "text": "Use ailerons to stabilize"
+      },
+      {
+        "id": "AFH.14.4.7.w.3",
+        "text": "Engage autopilot for assistance"
+      },
+      {
+        "id": "AFH.14.4.7.w.4",
+        "text": "Deploy landing gear for stability"
+      },
+      {
+        "id": "AFH.14.4.7.w.5",
+        "text": "Adjust flaps to increase lift"
+      },
+      {
+        "id": "AFH.14.4.7.w.6",
+        "text": "Activate reverse thrust"
+      },
+      {
+        "id": "AFH.14.4.7.w.7",
+        "text": "Engage spoilers to reduce speed"
+      },
+      {
+        "id": "AFH.14.4.7.w.8",
+        "text": "Adjust cabin pressure"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction",
+    "subjects": [
+      "Taxiing",
+      "Tailwheel Airplanes"
+    ]
+  },
+  {
+    "questionid": "AFH.14.5.1",
+    "question": "Which of the following statements are true regarding weathervaning in tailwheel airplanes?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.5.1.c.1",
+        "text": "Tailwheel airplanes exhibit an exaggerated tendency to weathervane."
+      },
+      {
+        "id": "AFH.14.5.1.c.2",
+        "text": "Weathervaning describes the tendency of an aircraft to turn into the wind."
+      },
+      {
+        "id": "AFH.14.5.1.c.3",
+        "text": "The weathervaning tendency is most pronounced when taxiing with a direct crosswind."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.5.1.w.1",
+        "text": "Weathervaning is a tendency for an airplane to turn away from the wind."
+      },
+      {
+        "id": "AFH.14.5.1.w.2",
+        "text": "Nosewheel airplanes are more susceptible to weathervaning than tailwheel airplanes."
+      },
+      {
+        "id": "AFH.14.5.1.w.3",
+        "text": "The weathervaning tendency is most significant during flight."
+      },
+      {
+        "id": "AFH.14.5.1.w.4",
+        "text": "Weathervaning makes maintaining directional control easier."
+      },
+      {
+        "id": "AFH.14.5.1.w.5",
+        "text": "Weathervaning is primarily counteracted by increasing engine power."
+      },
+      {
+        "id": "AFH.14.5.1.w.6",
+        "text": "The tendency to weathervane is reduced when taxiing with a direct crosswind."
+      },
+      {
+        "id": "AFH.14.5.1.w.7",
+        "text": "Weathervaning is a phenomenon that only occurs during landing."
+      },
+      {
+        "id": "AFH.14.5.1.w.8",
+        "text": "Tailwheel steering is always sufficient to counteract weathervaning."
+      }
+    ],
+    "source": "AFH Chapter 14",
+    "subjects": [
+      "Tailwheel Operations",
+      "Ground Handling",
+      "Crosswind Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.14.6.1",
+    "question": "According to the Airplane Flying Handbook, when taxiing a tailwheel airplane with restricted forward visibility due to its nose-high attitude, what are recommended techniques and initial procedures?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.6.1.c.1",
+        "text": "Alternately turn the nose from one side to the other (zigzag)."
+      },
+      {
+        "id": "AFH.14.6.1.c.2",
+        "text": "Make a series of short S-turns."
+      },
+      {
+        "id": "AFH.14.6.1.c.3",
+        "text": "Start all taxi movements with a small turn to ensure no obstructions are directly under the nose."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.6.1.w.1",
+        "text": "Maintain a straight taxi path to minimize control inputs."
+      },
+      {
+        "id": "AFH.14.6.1.w.2",
+        "text": "Increase taxi speed to clear blind spots quickly."
+      },
+      {
+        "id": "AFH.14.6.1.w.3",
+        "text": "Rely primarily on wingtip clearance for obstacle avoidance."
+      },
+      {
+        "id": "AFH.14.6.1.w.4",
+        "text": "Keep the aircraft's nose pointed directly at the intended path."
+      },
+      {
+        "id": "AFH.14.6.1.w.5",
+        "text": "Perform a full 360-degree turn before every taxi segment."
+      },
+      {
+        "id": "AFH.14.6.1.w.6",
+        "text": "Use only rudder pedals for directional control without turning the nose."
+      },
+      {
+        "id": "AFH.14.6.1.w.7",
+        "text": "Prioritize maintaining high engine RPM during taxi."
+      },
+      {
+        "id": "AFH.14.6.1.w.8",
+        "text": "Wait for a ground marshaller to provide continuous guidance."
+      }
+    ],
+    "source": "afh.14.6",
+    "subjects": [
+      "Tailwheel Airplanes",
+      "Taxiing",
+      "Visibility"
+    ]
+  },
+  {
+    "questionid": "AFH.14.7.1",
+    "question": "What is a common misconception about maintaining directional control in tailwheel airplanes?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.7.1.c.1",
+        "text": "Limiting rudder inputs to avoid overcontrolling"
+      },
+      {
+        "id": "AFH.14.7.1.c.2",
+        "text": "Fear of overcontrolling leads to minimal rudder use"
+      },
+      {
+        "id": "AFH.14.7.1.c.3",
+        "text": "Assuming too much rudder use is damaging"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.7.1.w.1",
+        "text": "Tailwheel aircraft require no rudder input"
+      },
+      {
+        "id": "AFH.14.7.1.w.2",
+        "text": "Directional control is best achieved with ailerons"
+      },
+      {
+        "id": "AFH.14.7.1.w.3",
+        "text": "Tailwheel airplanes are self-correcting"
+      },
+      {
+        "id": "AFH.14.7.1.w.4",
+        "text": "Rudder inputs should always be minimal"
+      },
+      {
+        "id": "AFH.14.7.1.w.5",
+        "text": "Tailwheel aircraft are damaged by any rudder use"
+      },
+      {
+        "id": "AFH.14.7.1.w.6",
+        "text": "Directional control is maintained by reducing speed"
+      },
+      {
+        "id": "AFH.14.7.1.w.7",
+        "text": "Rudder inputs should be avoided entirely"
+      },
+      {
+        "id": "AFH.14.7.1.w.8",
+        "text": "Tailwheel airplanes do not require pilot input"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14, Section 7",
+    "subjects": [
+      "Directional Control",
+      "Tailwheel Airplanes",
+      "Rudder Inputs"
+    ]
+  },
+  {
+    "questionid": "AFH.14.8.1",
+    "question": "During the normal takeoff roll in a tailwheel airplane, which statements correctly describe the procedure for raising the tail?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.8.1.c.1",
+        "text": "Positive forward elevator should be applied to smoothly lift the tail after a brief period of acceleration"
+      },
+      {
+        "id": "AFH.14.8.1.c.2",
+        "text": "An abrupt pitch change should be avoided because the gyroscopic precession force is directly related to the rate the propeller axis is tilted"
+      },
+      {
+        "id": "AFH.14.8.1.c.3",
+        "text": "The goal of raising the tail is to improve forward visibility and produce a smooth transition to climbing flight"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.8.1.w.1",
+        "text": "The tail should be raised as quickly as possible to minimize time spent in the three-point attitude"
+      },
+      {
+        "id": "AFH.14.8.1.w.2",
+        "text": "Raising the tail has no effect on directional control because rudder authority is not yet established"
+      },
+      {
+        "id": "AFH.14.8.1.w.3",
+        "text": "The tail should remain on the ground until the airplane reaches rotation speed to prevent gyroscopic effects"
+      },
+      {
+        "id": "AFH.14.8.1.w.4",
+        "text": "Aft elevator should be applied during the initial roll to keep the tail down and improve propeller clearance"
+      },
+      {
+        "id": "AFH.14.8.1.w.5",
+        "text": "Gyroscopic precession from raising the tail produces a right yaw tendency that must be corrected with left rudder"
+      },
+      {
+        "id": "AFH.14.8.1.w.6",
+        "text": "The amount of precession force is unrelated to how quickly the tail is raised"
+      },
+      {
+        "id": "AFH.14.8.1.w.7",
+        "text": "Forward elevator should only be applied after the airplane has reached 70 percent of takeoff speed"
+      },
+      {
+        "id": "AFH.14.8.1.w.8",
+        "text": "Raising the tail reduces forward visibility and should be delayed as long as possible"
+      }
+    ],
+    "source": "AFH Chapter 14, Section 14.8 – Normal Takeoff Roll",
+    "subjects": [
+      "Tailwheel Takeoff Technique",
+      "Gyroscopic Precession",
+      "Elevator Control"
+    ]
+  },
+  {
+    "questionid": "AFH.14.8.2",
+    "question": "Which of the following statements accurately describe directional control requirements during the tailwheel airplane takeoff roll?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.8.2.c.1",
+        "text": "Directional control should be maintained with smooth, prompt, and positive rudder corrections"
+      },
+      {
+        "id": "AFH.14.8.2.c.2",
+        "text": "Nose-down pitch movement produces left yaw as a result of gyroscopic precession created by the propeller"
+      },
+      {
+        "id": "AFH.14.8.2.c.3",
+        "text": "The increased directional demands of tailwheel airplanes are likely to be unanticipated by pilots transitioning from nosewheel models"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.8.2.w.1",
+        "text": "Brake pressure should be used as the primary means of directional control during the takeoff roll"
+      },
+      {
+        "id": "AFH.14.8.2.w.2",
+        "text": "Directional control in tailwheel airplanes is easier than in nosewheel airplanes due to the aft center of gravity"
+      },
+      {
+        "id": "AFH.14.8.2.w.3",
+        "text": "Gyroscopic precession during tail raising produces a right yaw that requires left rudder correction"
+      },
+      {
+        "id": "AFH.14.8.2.w.4",
+        "text": "Rudder inputs are unnecessary during the takeoff roll because the tailwheel provides sufficient directional stability"
+      },
+      {
+        "id": "AFH.14.8.2.w.5",
+        "text": "Pilots transitioning from nosewheel airplanes typically find tailwheel directional control easier to manage"
+      },
+      {
+        "id": "AFH.14.8.2.w.6",
+        "text": "Left yaw from gyroscopic precession is corrected by applying left rudder pressure"
+      },
+      {
+        "id": "AFH.14.8.2.w.7",
+        "text": "Brake pressure should be applied smoothly throughout the takeoff roll to assist with directional control"
+      },
+      {
+        "id": "AFH.14.8.2.w.8",
+        "text": "Directional corrections should be made with abrupt, large rudder inputs to stay ahead of yaw tendencies"
+      }
+    ],
+    "source": "AFH Chapter 14, Section 14.8 – Normal Takeoff Roll",
+    "subjects": [
+      "Directional Control",
+      "Gyroscopic Precession",
+      "Rudder Technique"
+    ]
+  },
+  {
+    "questionid": "AFH.14.8.3",
+    "question": "Which statements correctly describe throttle and brake management during the normal tailwheel airplane takeoff roll?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.8.3.c.1",
+        "text": "The throttle should be smoothly and continuously advanced to takeoff power after releasing the brakes"
+      },
+      {
+        "id": "AFH.14.8.3.c.2",
+        "text": "The pilot should carefully avoid applying brake pressure during the takeoff roll"
+      },
+      {
+        "id": "AFH.14.8.3.c.3",
+        "text": "Wing flaps should be lowered prior to takeoff if recommended by the manufacturer"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.8.3.w.1",
+        "text": "Throttle should be advanced rapidly to full power to minimize the time spent at low speed on the runway"
+      },
+      {
+        "id": "AFH.14.8.3.w.2",
+        "text": "Light brake pressure may be applied throughout the roll to assist with directional control"
+      },
+      {
+        "id": "AFH.14.8.3.w.3",
+        "text": "Flaps should never be used for takeoff in tailwheel airplanes regardless of manufacturer guidance"
+      },
+      {
+        "id": "AFH.14.8.3.w.4",
+        "text": "The throttle should be held at partial power until the tail is raised before advancing to full power"
+      },
+      {
+        "id": "AFH.14.8.3.w.5",
+        "text": "Brakes should be held until full engine power is confirmed before releasing for the takeoff roll"
+      },
+      {
+        "id": "AFH.14.8.3.w.6",
+        "text": "Flap setting for takeoff is determined solely by runway length and is not addressed in the flight manual"
+      },
+      {
+        "id": "AFH.14.8.3.w.7",
+        "text": "Throttle advancement should be paused momentarily when the tail is raised to reduce gyroscopic effects"
+      },
+      {
+        "id": "AFH.14.8.3.w.8",
+        "text": "Brake pressure should be applied intermittently during the roll to maintain runway centerline tracking"
+      }
+    ],
+    "source": "AFH Chapter 14, Section 14.8 – Normal Takeoff Roll",
+    "subjects": [
+      "Throttle Management",
+      "Brake Usage",
+      "Pre-Takeoff Configuration"
+    ]
+  },
+  {
+    "questionid": "AFH.14.9.1",
+    "question": "What conditions are necessary for liftoff in a tailwheel airplane during takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.9.1.c.1",
+        "text": "Appropriate pitch attitude is maintained"
+      },
+      {
+        "id": "AFH.14.9.1.c.2",
+        "text": "AOA and airspeed combine to produce necessary lift"
+      },
+      {
+        "id": "AFH.14.9.1.c.3",
+        "text": "No additional 'rotation' input is needed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.9.1.w.1",
+        "text": "Exceeding critical AOA"
+      },
+      {
+        "id": "AFH.14.9.1.w.2",
+        "text": "High pitch attitude close to stall"
+      },
+      {
+        "id": "AFH.14.9.1.w.3",
+        "text": "Using maximum throttle"
+      },
+      {
+        "id": "AFH.14.9.1.w.4",
+        "text": "Abrupt pitch adjustments"
+      },
+      {
+        "id": "AFH.14.9.1.w.5",
+        "text": "Lifting off at any speed"
+      },
+      {
+        "id": "AFH.14.9.1.w.6",
+        "text": "Ignoring wind conditions"
+      },
+      {
+        "id": "AFH.14.9.1.w.7",
+        "text": "Leaving ground immediately"
+      },
+      {
+        "id": "AFH.14.9.1.w.8",
+        "text": "Using only rudder control"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction",
+    "subjects": [
+      "Tailwheel Airplanes",
+      "Takeoff Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.14.9.2",
+    "question": "What should a pilot do during takeoffs in strong, gusty winds?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.9.2.c.1",
+        "text": "Add an extra margin of speed"
+      },
+      {
+        "id": "AFH.14.9.2.c.2",
+        "text": "Hold the airplane on the ground longer"
+      },
+      {
+        "id": "AFH.14.9.2.c.3",
+        "text": "Make a smooth, positive rotation"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.9.2.w.1",
+        "text": "Take off at normal speed"
+      },
+      {
+        "id": "AFH.14.9.2.w.2",
+        "text": "Ignore wind conditions"
+      },
+      {
+        "id": "AFH.14.9.2.w.3",
+        "text": "Use maximum throttle"
+      },
+      {
+        "id": "AFH.14.9.2.w.4",
+        "text": "Lift off immediately"
+      },
+      {
+        "id": "AFH.14.9.2.w.5",
+        "text": "Rely solely on rudder control"
+      },
+      {
+        "id": "AFH.14.9.2.w.6",
+        "text": "Perform abrupt pitch adjustments"
+      },
+      {
+        "id": "AFH.14.9.2.w.7",
+        "text": "Exceed critical AOA"
+      },
+      {
+        "id": "AFH.14.9.2.w.8",
+        "text": "Maintain high pitch attitude"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction",
+    "subjects": [
+      "Tailwheel Airplanes",
+      "Windy Conditions"
+    ]
+  },
+  {
+    "questionid": "AFH.14.10.1",
+    "question": "What are essential actions for a crosswind takeoff in a tailwheel airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.10.1.c.1",
+        "text": "Apply aileron deflection into the wind"
+      },
+      {
+        "id": "AFH.14.10.1.c.2",
+        "text": "Use rudder to prevent weathervaning"
+      },
+      {
+        "id": "AFH.14.10.1.c.3",
+        "text": "Maintain a positive AOA during acceleration"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.10.1.w.1",
+        "text": "Apply aileron deflection away from the wind"
+      },
+      {
+        "id": "AFH.14.10.1.w.2",
+        "text": "Use rudder to align with the wind"
+      },
+      {
+        "id": "AFH.14.10.1.w.3",
+        "text": "Maintain a negative AOA during acceleration"
+      },
+      {
+        "id": "AFH.14.10.1.w.4",
+        "text": "Keep the wings level throughout the takeoff roll"
+      },
+      {
+        "id": "AFH.14.10.1.w.5",
+        "text": "Ignore pitch attitude adjustments"
+      },
+      {
+        "id": "AFH.14.10.1.w.6",
+        "text": "Focus solely on elevator control"
+      },
+      {
+        "id": "AFH.14.10.1.w.7",
+        "text": "Disregard crosswind corrections"
+      },
+      {
+        "id": "AFH.14.10.1.w.8",
+        "text": "Rely only on engine power for alignment"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes",
+    "subjects": [
+      "Crosswind Takeoff",
+      "Tailwheel Airplanes",
+      "Flight Control"
+    ]
+  },
+  {
+    "questionid": "AFH.14.11.1",
+    "question": "According to the provided text on short-field takeoffs, which of the following statements are true regarding the technique?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.11.1.c.1",
+        "text": "Flap settings should be as recommended by the manufacturer."
+      },
+      {
+        "id": "AFH.14.11.1.c.2",
+        "text": "Initial climb speed should be as recommended by the manufacturer."
+      },
+      {
+        "id": "AFH.14.11.1.c.3",
+        "text": "After liftoff, the pitch attitude should be adjusted for obstacle clearance."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.11.1.w.1",
+        "text": "There are significant differences between short-field and normal takeoff techniques in all aspects."
+      },
+      {
+        "id": "AFH.14.11.1.w.2",
+        "text": "A three-point attitude liftoff is universally recommended for all short-field takeoffs."
+      },
+      {
+        "id": "AFH.14.11.1.w.3",
+        "text": "Pilots should prioritize maximum airspeed over obstacle clearance after liftoff."
+      },
+      {
+        "id": "AFH.14.11.1.w.4",
+        "text": "Manufacturer recommendations for short-field takeoffs are optional guidelines."
+      },
+      {
+        "id": "AFH.14.11.1.w.5",
+        "text": "The landing gear should be retracted immediately upon rotation."
+      },
+      {
+        "id": "AFH.14.11.1.w.6",
+        "text": "Short-field takeoffs always require a specific amount of headwind."
+      },
+      {
+        "id": "AFH.14.11.1.w.7",
+        "text": "The primary goal after liftoff is to maintain a level flight attitude."
+      },
+      {
+        "id": "AFH.14.11.1.w.8",
+        "text": "Flap settings for short-field takeoffs are always at their maximum permissible setting."
+      }
+    ],
+    "source": "afh.14.11",
+    "subjects": [
+      "Short-Field Takeoff",
+      "Takeoff Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.14.12.1",
+    "question": "What is the purpose of lowering wing flaps before starting a soft-field takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.12.1.c.1",
+        "text": "To provide additional lift"
+      },
+      {
+        "id": "AFH.14.12.1.c.2",
+        "text": "To transfer weight from wheels to wings"
+      },
+      {
+        "id": "AFH.14.12.1.c.3",
+        "text": "To minimize drag caused by surface irregularities"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.12.1.w.1",
+        "text": "To increase engine power"
+      },
+      {
+        "id": "AFH.14.12.1.w.2",
+        "text": "To decrease takeoff speed"
+      },
+      {
+        "id": "AFH.14.12.1.w.3",
+        "text": "To improve fuel efficiency"
+      },
+      {
+        "id": "AFH.14.12.1.w.4",
+        "text": "To enhance braking capability"
+      },
+      {
+        "id": "AFH.14.12.1.w.5",
+        "text": "To reduce noise levels"
+      },
+      {
+        "id": "AFH.14.12.1.w.6",
+        "text": "To increase passenger comfort"
+      },
+      {
+        "id": "AFH.14.12.1.w.7",
+        "text": "To stabilize the aircraft"
+      },
+      {
+        "id": "AFH.14.12.1.w.8",
+        "text": "To improve visibility"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction, Section: Soft-Field Takeoff",
+    "subjects": [
+      "Soft-Field Takeoff"
+    ]
+  },
+  {
+    "questionid": "AFH.14.12.2",
+    "question": "Why should the airplane be kept in continuous motion on a soft surface during takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.12.2.c.1",
+        "text": "To prevent bogging down"
+      },
+      {
+        "id": "AFH.14.12.2.c.2",
+        "text": "To avoid tipping onto its nose"
+      },
+      {
+        "id": "AFH.14.12.2.c.3",
+        "text": "To maintain sufficient power"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.12.2.w.1",
+        "text": "To conserve fuel"
+      },
+      {
+        "id": "AFH.14.12.2.w.2",
+        "text": "To reduce noise pollution"
+      },
+      {
+        "id": "AFH.14.12.2.w.3",
+        "text": "To enhance passenger comfort"
+      },
+      {
+        "id": "AFH.14.12.2.w.4",
+        "text": "To improve navigation accuracy"
+      },
+      {
+        "id": "AFH.14.12.2.w.5",
+        "text": "To decrease takeoff distance"
+      },
+      {
+        "id": "AFH.14.12.2.w.6",
+        "text": "To increase climb rate"
+      },
+      {
+        "id": "AFH.14.12.2.w.7",
+        "text": "To stabilize the aircraft"
+      },
+      {
+        "id": "AFH.14.12.2.w.8",
+        "text": "To improve visibility"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction, Section: Soft-Field Takeoff",
+    "subjects": [
+      "Soft-Field Takeoff"
+    ]
+  },
+  {
+    "questionid": "AFH.14.12.3",
+    "question": "What should be done to maintain a positive angle of attack during a soft-field takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.12.3.c.1",
+        "text": "Keep the tail very low"
+      },
+      {
+        "id": "AFH.14.12.3.c.2",
+        "text": "Hold a nose-high attitude"
+      },
+      {
+        "id": "AFH.14.12.3.c.3",
+        "text": "Apply takeoff power smoothly"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.12.3.w.1",
+        "text": "Increase flap deflection"
+      },
+      {
+        "id": "AFH.14.12.3.w.2",
+        "text": "Reduce throttle quickly"
+      },
+      {
+        "id": "AFH.14.12.3.w.3",
+        "text": "Apply brakes intermittently"
+      },
+      {
+        "id": "AFH.14.12.3.w.4",
+        "text": "Use full rudder deflection"
+      },
+      {
+        "id": "AFH.14.12.3.w.5",
+        "text": "Lower the landing gear"
+      },
+      {
+        "id": "AFH.14.12.3.w.6",
+        "text": "Engage autopilot"
+      },
+      {
+        "id": "AFH.14.12.3.w.7",
+        "text": "Adjust ailerons for crosswind"
+      },
+      {
+        "id": "AFH.14.12.3.w.8",
+        "text": "Increase elevator trim"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction, Section: Soft-Field Takeoff",
+    "subjects": [
+      "Soft-Field Takeoff"
+    ]
+  },
+  {
+    "questionid": "AFH.14.13.1",
+    "question": "What are key differences in landing between nose-wheel and tailwheel airplanes?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.13.1.c.1",
+        "text": "Nose-wheel airplanes naturally reduce pitch attitude after touchdown."
+      },
+      {
+        "id": "AFH.14.13.1.c.2",
+        "text": "Tailwheel airplanes continue to 'fly' in the three-point attitude after touchdown."
+      },
+      {
+        "id": "AFH.14.13.1.c.3",
+        "text": "Tailwheel airplanes require careful attention to heading, roll, and pitch for an extended period."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.13.1.w.1",
+        "text": "Nose-wheel airplanes maintain a constant pitch attitude after touchdown."
+      },
+      {
+        "id": "AFH.14.13.1.w.2",
+        "text": "Tailwheel airplanes immediately transfer all weight to the tires after touchdown."
+      },
+      {
+        "id": "AFH.14.13.1.w.3",
+        "text": "Nose-wheel airplanes require more attention to heading and roll after touchdown."
+      },
+      {
+        "id": "AFH.14.13.1.w.4",
+        "text": "Tailwheel airplanes reduce AOA and remove wing lift immediately after touchdown."
+      },
+      {
+        "id": "AFH.14.13.1.w.5",
+        "text": "Nose-wheel airplanes continue to 'fly' in the three-point attitude after touchdown."
+      },
+      {
+        "id": "AFH.14.13.1.w.6",
+        "text": "Tailwheel airplanes naturally reduce pitch attitude after touchdown."
+      },
+      {
+        "id": "AFH.14.13.1.w.7",
+        "text": "Nose-wheel airplanes require careful attention to heading, roll, and pitch for an extended period."
+      },
+      {
+        "id": "AFH.14.13.1.w.8",
+        "text": "Tailwheel airplanes are designed so that the wings are beyond critical AOA in the three-point attitude."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction",
+    "subjects": [
+      "Aviation",
+      "Aircraft Design",
+      "Landing Techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.14.14.1",
+    "question": "What are important considerations when performing a touchdown in a tailwheel airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.14.1.c.1",
+        "text": "Ensure the airplane's longitudinal axis is parallel to the runway direction."
+      },
+      {
+        "id": "AFH.14.14.1.c.2",
+        "text": "Avoid touching down while in a crab or drifting."
+      },
+      {
+        "id": "AFH.14.14.1.c.3",
+        "text": "Use the three-point or wheel landing techniques appropriately."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.14.1.w.1",
+        "text": "Touch down with the airplane's nose pointed slightly off the runway direction."
+      },
+      {
+        "id": "AFH.14.14.1.w.2",
+        "text": "Allow the airplane to drift during touchdown."
+      },
+      {
+        "id": "AFH.14.14.1.w.3",
+        "text": "Use only the three-point landing technique."
+      },
+      {
+        "id": "AFH.14.14.1.w.4",
+        "text": "Touch down with the tailwheel first."
+      },
+      {
+        "id": "AFH.14.14.1.w.5",
+        "text": "Ignore crosswind conditions during landing."
+      },
+      {
+        "id": "AFH.14.14.1.w.6",
+        "text": "Touch down with the main gear and tailwheel at different times in three-point landings."
+      },
+      {
+        "id": "AFH.14.14.1.w.7",
+        "text": "Always use a high pitch attitude during touchdown."
+      },
+      {
+        "id": "AFH.14.14.1.w.8",
+        "text": "Rely solely on the wheel landing technique for all conditions."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction",
+    "subjects": [
+      "Tailwheel Airplanes",
+      "Landing Techniques",
+      "Directional Stability"
+    ]
+  },
+  {
+    "questionid": "AFH.14.15.1",
+    "question": "What is the primary goal when performing a three-point landing in a tailwheel aircraft?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.15.1.c.1",
+        "text": "Attain a steeper fuselage angle"
+      },
+      {
+        "id": "AFH.14.15.1.c.2",
+        "text": "Touch tailwheels and main wheels simultaneously"
+      },
+      {
+        "id": "AFH.14.15.1.c.3",
+        "text": "Maintain flight while slowing"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.15.1.w.1",
+        "text": "Touch main wheels first"
+      },
+      {
+        "id": "AFH.14.15.1.w.2",
+        "text": "Increase pitch attitude after touchdown"
+      },
+      {
+        "id": "AFH.14.15.1.w.3",
+        "text": "Keep nose down during landing"
+      },
+      {
+        "id": "AFH.14.15.1.w.4",
+        "text": "Avoid using elevator control"
+      },
+      {
+        "id": "AFH.14.15.1.w.5",
+        "text": "Touchdown with tail first"
+      },
+      {
+        "id": "AFH.14.15.1.w.6",
+        "text": "Maintain constant airspeed"
+      },
+      {
+        "id": "AFH.14.15.1.w.7",
+        "text": "Avoid deceleration"
+      },
+      {
+        "id": "AFH.14.15.1.w.8",
+        "text": "Keep wings level"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14",
+    "subjects": [
+      "Tailwheel Aircraft",
+      "Landing Techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.14.15.2",
+    "question": "What should a pilot do if the main wheels touch down early during a three-point landing attempt?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.15.2.c.1",
+        "text": "Re-flare the aircraft"
+      },
+      {
+        "id": "AFH.14.15.2.c.2",
+        "text": "Hold the plane off until three-point attitude"
+      },
+      {
+        "id": "AFH.14.15.2.c.3",
+        "text": "Execute a go-around if necessary"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.15.2.w.1",
+        "text": "Increase throttle immediately"
+      },
+      {
+        "id": "AFH.14.15.2.w.2",
+        "text": "Apply brakes hard"
+      },
+      {
+        "id": "AFH.14.15.2.w.3",
+        "text": "Lower the nose quickly"
+      },
+      {
+        "id": "AFH.14.15.2.w.4",
+        "text": "Ignore and continue landing"
+      },
+      {
+        "id": "AFH.14.15.2.w.5",
+        "text": "Use rudder to correct"
+      },
+      {
+        "id": "AFH.14.15.2.w.6",
+        "text": "Reduce airspeed drastically"
+      },
+      {
+        "id": "AFH.14.15.2.w.7",
+        "text": "Raise the flaps"
+      },
+      {
+        "id": "AFH.14.15.2.w.8",
+        "text": "Apply full back elevator"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14",
+    "subjects": [
+      "Landing Errors",
+      "Pilot Techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.14.15.3",
+    "question": "What is the consequence of holding the aircraft off the ground too long during a three-point landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.15.3.c.1",
+        "text": "Tail makes contact first"
+      },
+      {
+        "id": "AFH.14.15.3.c.2",
+        "text": "Plane pitches forward onto main wheels"
+      },
+      {
+        "id": "AFH.14.15.3.c.3",
+        "text": "Rollout proceeds normally"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.15.3.w.1",
+        "text": "Main wheels touch first"
+      },
+      {
+        "id": "AFH.14.15.3.w.2",
+        "text": "Aircraft bounces high"
+      },
+      {
+        "id": "AFH.14.15.3.w.3",
+        "text": "Immediate go-around required"
+      },
+      {
+        "id": "AFH.14.15.3.w.4",
+        "text": "Nosewheel touches first"
+      },
+      {
+        "id": "AFH.14.15.3.w.5",
+        "text": "Plane veers off runway"
+      },
+      {
+        "id": "AFH.14.15.3.w.6",
+        "text": "Loss of directional control"
+      },
+      {
+        "id": "AFH.14.15.3.w.7",
+        "text": "Elevator control becomes ineffective"
+      },
+      {
+        "id": "AFH.14.15.3.w.8",
+        "text": "Aircraft stalls"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14",
+    "subjects": [
+      "Landing Dynamics",
+      "Pilot Techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.14.15.4",
+    "question": "Why is it important to apply full back elevator after the tailwheel makes contact during a three-point landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.15.4.c.1",
+        "text": "Presses the tailwheel on the runway"
+      },
+      {
+        "id": "AFH.14.15.4.c.2",
+        "text": "Prevents lift on horizontal stabilizer"
+      },
+      {
+        "id": "AFH.14.15.4.c.3",
+        "text": "Maintains directional control"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.15.4.w.1",
+        "text": "Increases AOA for climb"
+      },
+      {
+        "id": "AFH.14.15.4.w.2",
+        "text": "Reduces airspeed"
+      },
+      {
+        "id": "AFH.14.15.4.w.3",
+        "text": "Lowers the nose"
+      },
+      {
+        "id": "AFH.14.15.4.w.4",
+        "text": "Increases ground speed"
+      },
+      {
+        "id": "AFH.14.15.4.w.5",
+        "text": "Prevents bounce"
+      },
+      {
+        "id": "AFH.14.15.4.w.6",
+        "text": "Reduces drag"
+      },
+      {
+        "id": "AFH.14.15.4.w.7",
+        "text": "Improves visibility"
+      },
+      {
+        "id": "AFH.14.15.4.w.8",
+        "text": "Enhances lift"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14",
+    "subjects": [
+      "Post-Landing Procedures",
+      "Directional Control"
+    ]
+  },
+  {
+    "questionid": "AFH.14.15.5",
+    "question": "What are the potential errors when attempting a three-point landing in a tailwheel aircraft?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.15.5.c.1",
+        "text": "Main wheels touch early"
+      },
+      {
+        "id": "AFH.14.15.5.c.2",
+        "text": "Tail held off too long"
+      },
+      {
+        "id": "AFH.14.15.5.c.3",
+        "text": "Tail touches first"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.15.5.w.1",
+        "text": "Nosewheel touches first"
+      },
+      {
+        "id": "AFH.14.15.5.w.2",
+        "text": "Excessive speed on approach"
+      },
+      {
+        "id": "AFH.14.15.5.w.3",
+        "text": "Incorrect flap setting"
+      },
+      {
+        "id": "AFH.14.15.5.w.4",
+        "text": "Improper alignment"
+      },
+      {
+        "id": "AFH.14.15.5.w.5",
+        "text": "Overuse of brakes"
+      },
+      {
+        "id": "AFH.14.15.5.w.6",
+        "text": "Incorrect throttle management"
+      },
+      {
+        "id": "AFH.14.15.5.w.7",
+        "text": "Incorrect rudder input"
+      },
+      {
+        "id": "AFH.14.15.5.w.8",
+        "text": "Excessive pitch attitude"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14",
+    "subjects": [
+      "Landing Errors",
+      "Tailwheel Aircraft"
+    ]
+  },
+  {
+    "questionid": "AFH.14.16.1",
+    "question": "What are key characteristics or purposes of a wheel landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.16.1.c.1",
+        "text": "Making contact with the runway at a higher airspeed than a three-point landing."
+      },
+      {
+        "id": "AFH.14.16.1.c.2",
+        "text": "Landing in a flatter pitch attitude on the main wheels only."
+      },
+      {
+        "id": "AFH.14.16.1.c.3",
+        "text": "Retaining control authority in some wind conditions."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.16.1.w.1",
+        "text": "Landing with the tailwheel touching first."
+      },
+      {
+        "id": "AFH.14.16.1.w.2",
+        "text": "Requiring a significantly steeper approach angle."
+      },
+      {
+        "id": "AFH.14.16.1.w.3",
+        "text": "Always involving a full forward elevator input immediately after touchdown."
+      },
+      {
+        "id": "AFH.14.16.1.w.4",
+        "text": "Primarily used for short-field landings."
+      },
+      {
+        "id": "AFH.14.16.1.w.5",
+        "text": "Having the tail forced down by its own weight for increased lift."
+      },
+      {
+        "id": "AFH.14.16.1.w.6",
+        "text": "Maintaining a constant back elevator pressure throughout the touchdown."
+      },
+      {
+        "id": "AFH.14.16.1.w.7",
+        "text": "Being identical to a three-point landing in terms of touchdown timing."
+      },
+      {
+        "id": "AFH.14.16.1.w.8",
+        "text": "Requiring a lower airspeed than a three-point landing."
+      }
+    ],
+    "source": "afh.14.16",
+    "subjects": [
+      "Wheel Landing Characteristics",
+      "Tailwheel Airplanes"
+    ]
+  },
+  {
+    "questionid": "AFH.14.16.2",
+    "question": "What are essential elements for a successful wheel landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.16.2.c.1",
+        "text": "A soft touchdown on the main wheels."
+      },
+      {
+        "id": "AFH.14.16.2.c.2",
+        "text": "A slight relaxation of back elevator just after the main wheels touch."
+      },
+      {
+        "id": "AFH.14.16.2.c.3",
+        "text": "Permitting the tail to drop on its own accord after main wheel contact."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.16.2.w.1",
+        "text": "Forcing the tail down immediately after main wheel contact."
+      },
+      {
+        "id": "AFH.14.16.2.w.2",
+        "text": "Maintaining a constant pitch attitude until the tailwheel touches."
+      },
+      {
+        "id": "AFH.14.16.2.w.3",
+        "text": "Pushing forward on the elevator to ensure tail contact."
+      },
+      {
+        "id": "AFH.14.16.2.w.4",
+        "text": "Initiating a go-around immediately after main wheel touchdown."
+      },
+      {
+        "id": "AFH.14.16.2.w.5",
+        "text": "Applying full aft elevator before the main wheels touch."
+      },
+      {
+        "id": "AFH.14.16.2.w.6",
+        "text": "Increasing back elevator pressure immediately after main wheel contact."
+      },
+      {
+        "id": "AFH.14.16.2.w.7",
+        "text": "Making contact with the runway at a lower airspeed than a three-point landing."
+      },
+      {
+        "id": "AFH.14.16.2.w.8",
+        "text": "Using a significantly different approach airspeed compared to a three-point landing."
+      }
+    ],
+    "source": "afh.14.16",
+    "subjects": [
+      "Wheel Landing Technique",
+      "Pilot Actions"
+    ]
+  },
+  {
+    "questionid": "AFH.14.16.3",
+    "question": "What are potential issues or recommended pilot responses related to wheel landings?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.16.3.c.1",
+        "text": "A high rate of descent can force the tail down, increasing lift."
+      },
+      {
+        "id": "AFH.14.16.3.c.2",
+        "text": "Pushing forward after a bounce can lead to pilot-induced oscillation."
+      },
+      {
+        "id": "AFH.14.16.3.c.3",
+        "text": "Initiating a go-around is a recommended response to a bounced wheel landing."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.16.3.w.1",
+        "text": "The tail is intentionally forced down by its own weight to increase lift."
+      },
+      {
+        "id": "AFH.14.16.3.w.2",
+        "text": "The pilot should always push forward to regain contact after a bounce."
+      },
+      {
+        "id": "AFH.14.16.3.w.3",
+        "text": "A wheel landing always requires a steeper approach angle."
+      },
+      {
+        "id": "AFH.14.16.3.w.4",
+        "text": "Deceleration should be immediate and aggressive after main wheel contact."
+      },
+      {
+        "id": "AFH.14.16.3.w.5",
+        "text": "The elevator should be brought to the full aft position before main wheel contact."
+      },
+      {
+        "id": "AFH.14.16.3.w.6",
+        "text": "There is a significant difference in approach airspeeds between wheel and three-point landings."
+      },
+      {
+        "id": "AFH.14.16.3.w.7",
+        "text": "The tail should be held off the ground indefinitely after main wheel contact."
+      },
+      {
+        "id": "AFH.14.16.3.w.8",
+        "text": "Converting to a three-point landing is never an option after a bounced wheel landing."
+      }
+    ],
+    "source": "afh.14.16",
+    "subjects": [
+      "Wheel Landing Hazards",
+      "Go-Around Procedures",
+      "Pilot-Induced Oscillation"
+    ]
+  },
+  {
+    "questionid": "AFH.14.17.1",
+    "question": "When landing a tailwheel airplane in a crosswind using a sideslip (wing-low) technique, which of the following statements are correct?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.17.1.c.1",
+        "text": "Only one main wheel makes initial contact at touchdown"
+      },
+      {
+        "id": "AFH.14.17.1.c.2",
+        "text": "Many tailwheel pilots prefer wheel landings in crosswinds because higher touchdown speed makes flight controls more effective"
+      },
+      {
+        "id": "AFH.14.17.1.c.3",
+        "text": "In some aircraft, rudder effectiveness can be reduced by the fuselage and flaps blocking airflow when the tail is low and on the ground"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.17.1.w.1",
+        "text": "Both main wheels must touch down simultaneously to maintain directional control in a crosswind"
+      },
+      {
+        "id": "AFH.14.17.1.w.2",
+        "text": "A crab angle should be maintained through touchdown to reduce side loads on the landing gear"
+      },
+      {
+        "id": "AFH.14.17.1.w.3",
+        "text": "Three-point landings are generally preferred over wheel landings in crosswind conditions because of better rudder authority"
+      },
+      {
+        "id": "AFH.14.17.1.w.4",
+        "text": "The tailwheel always makes first contact in a crosswind wheel landing"
+      },
+      {
+        "id": "AFH.14.17.1.w.5",
+        "text": "Lower touchdown speed in a wheel landing provides better control authority during crosswind landings"
+      },
+      {
+        "id": "AFH.14.17.1.w.6",
+        "text": "A sideslip approach requires the pilot to align the aircraft with the runway centerline using crab before touchdown"
+      },
+      {
+        "id": "AFH.14.17.1.w.7",
+        "text": "Flaps should always be fully retracted before touchdown in crosswind conditions to improve rudder effectiveness"
+      },
+      {
+        "id": "AFH.14.17.1.w.8",
+        "text": "The wing-low technique requires both main wheels and the tailwheel to contact simultaneously"
+      }
+    ],
+    "source": "AFH Chapter 14, Section 14.17 – Crosswinds",
+    "subjects": [
+      "Crosswind Landing Technique",
+      "Tailwheel Airplane Operations",
+      "Wheel Landing vs Three-Point Landing"
+    ]
+  },
+  {
+    "questionid": "AFH.14.18.1",
+    "question": "What should a pilot do with the elevator control during the after-landing roll?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.18.1.c.1",
+        "text": "Hold it back as far as possible"
+      },
+      {
+        "id": "AFH.14.18.1.c.2",
+        "text": "Hold it firmly"
+      },
+      {
+        "id": "AFH.14.18.1.c.3",
+        "text": "Maintain positive control"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.18.1.w.1",
+        "text": "Release it completely"
+      },
+      {
+        "id": "AFH.14.18.1.w.2",
+        "text": "Push it forward"
+      },
+      {
+        "id": "AFH.14.18.1.w.3",
+        "text": "Ignore it"
+      },
+      {
+        "id": "AFH.14.18.1.w.4",
+        "text": "Use it to steer"
+      },
+      {
+        "id": "AFH.14.18.1.w.5",
+        "text": "Adjust it constantly"
+      },
+      {
+        "id": "AFH.14.18.1.w.6",
+        "text": "Use it to increase speed"
+      },
+      {
+        "id": "AFH.14.18.1.w.7",
+        "text": "Use it to decrease speed"
+      },
+      {
+        "id": "AFH.14.18.1.w.8",
+        "text": "Use it to lift the nose"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction, Section: After-Landing Roll",
+    "subjects": [
+      "After-Landing Roll"
+    ]
+  },
+  {
+    "questionid": "AFH.14.18.2",
+    "question": "What can cause a ground loop during the after-landing roll?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.18.2.c.1",
+        "text": "Loss of directional control"
+      },
+      {
+        "id": "AFH.14.18.2.c.2",
+        "text": "Drift or crab"
+      },
+      {
+        "id": "AFH.14.18.2.c.3",
+        "text": "Aggravated, uncontrolled turn"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.18.2.w.1",
+        "text": "Excessive speed"
+      },
+      {
+        "id": "AFH.14.18.2.w.2",
+        "text": "Proper alignment"
+      },
+      {
+        "id": "AFH.14.18.2.w.3",
+        "text": "Smooth braking"
+      },
+      {
+        "id": "AFH.14.18.2.w.4",
+        "text": "Steady wind"
+      },
+      {
+        "id": "AFH.14.18.2.w.5",
+        "text": "Calm conditions"
+      },
+      {
+        "id": "AFH.14.18.2.w.6",
+        "text": "Balanced load"
+      },
+      {
+        "id": "AFH.14.18.2.w.7",
+        "text": "Correct rudder use"
+      },
+      {
+        "id": "AFH.14.18.2.w.8",
+        "text": "Straight landing"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction, Section: After-Landing Roll",
+    "subjects": [
+      "After-Landing Roll"
+    ]
+  },
+  {
+    "questionid": "AFH.14.18.3",
+    "question": "How should a pilot apply brakes during the after-landing roll?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.18.3.c.1",
+        "text": "Slide toes up from rudder pedals"
+      },
+      {
+        "id": "AFH.14.18.3.c.2",
+        "text": "Apply heel pressure if equipped"
+      },
+      {
+        "id": "AFH.14.18.3.c.3",
+        "text": "Avoid releasing rudder pressure"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.18.3.w.1",
+        "text": "Stomp on the brakes"
+      },
+      {
+        "id": "AFH.14.18.3.w.2",
+        "text": "Release rudder pressure first"
+      },
+      {
+        "id": "AFH.14.18.3.w.3",
+        "text": "Use only one brake"
+      },
+      {
+        "id": "AFH.14.18.3.w.4",
+        "text": "Apply brakes immediately"
+      },
+      {
+        "id": "AFH.14.18.3.w.5",
+        "text": "Ignore rudder control"
+      },
+      {
+        "id": "AFH.14.18.3.w.6",
+        "text": "Apply brakes at full speed"
+      },
+      {
+        "id": "AFH.14.18.3.w.7",
+        "text": "Use brakes to steer"
+      },
+      {
+        "id": "AFH.14.18.3.w.8",
+        "text": "Apply brakes continuously"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction, Section: After-Landing Roll",
+    "subjects": [
+      "After-Landing Roll"
+    ]
+  },
+  {
+    "questionid": "AFH.14.18.4",
+    "question": "What should be done if a wing starts to rise during the after-landing roll?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.18.4.c.1",
+        "text": "Apply aileron control toward the rising wing"
+      },
+      {
+        "id": "AFH.14.18.4.c.2",
+        "text": "Lower the rising wing"
+      },
+      {
+        "id": "AFH.14.18.4.c.3",
+        "text": "Adjust ailerons based on speed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.18.4.w.1",
+        "text": "Ignore the rising wing"
+      },
+      {
+        "id": "AFH.14.18.4.w.2",
+        "text": "Apply aileron control away from the rising wing"
+      },
+      {
+        "id": "AFH.14.18.4.w.3",
+        "text": "Increase speed"
+      },
+      {
+        "id": "AFH.14.18.4.w.4",
+        "text": "Use rudder to correct"
+      },
+      {
+        "id": "AFH.14.18.4.w.5",
+        "text": "Apply brakes immediately"
+      },
+      {
+        "id": "AFH.14.18.4.w.6",
+        "text": "Lift the opposite wing"
+      },
+      {
+        "id": "AFH.14.18.4.w.7",
+        "text": "Use elevator control"
+      },
+      {
+        "id": "AFH.14.18.4.w.8",
+        "text": "Continue without adjustment"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction, Section: After-Landing Roll",
+    "subjects": [
+      "After-Landing Roll"
+    ]
+  },
+  {
+    "questionid": "AFH.14.18.5",
+    "question": "When should the pilot retract the flaps after landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.18.5.c.1",
+        "text": "After the airplane is stopped"
+      },
+      {
+        "id": "AFH.14.18.5.c.2",
+        "text": "When clear of the landing area"
+      },
+      {
+        "id": "AFH.14.18.5.c.3",
+        "text": "After turning onto a taxiway"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.18.5.w.1",
+        "text": "Immediately after touchdown"
+      },
+      {
+        "id": "AFH.14.18.5.w.2",
+        "text": "During the landing roll"
+      },
+      {
+        "id": "AFH.14.18.5.w.3",
+        "text": "Before slowing down"
+      },
+      {
+        "id": "AFH.14.18.5.w.4",
+        "text": "While applying brakes"
+      },
+      {
+        "id": "AFH.14.18.5.w.5",
+        "text": "Before stopping"
+      },
+      {
+        "id": "AFH.14.18.5.w.6",
+        "text": "During a turn"
+      },
+      {
+        "id": "AFH.14.18.5.w.7",
+        "text": "While on the runway"
+      },
+      {
+        "id": "AFH.14.18.5.w.8",
+        "text": "Before turning onto a taxiway"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction, Section: After-Landing Roll",
+    "subjects": [
+      "After-Landing Roll"
+    ]
+  },
+  {
+    "questionid": "AFH.14.19.1",
+    "question": "During a crosswind after-landing roll in a tailwheel airplane, what actions are crucial for maintaining directional control and preventing the upwind wing from rising?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.19.1.c.1",
+        "text": "Using rudder for directional control."
+      },
+      {
+        "id": "AFH.14.19.1.c.2",
+        "text": "Using tailwheel steering for directional control."
+      },
+      {
+        "id": "AFH.14.19.1.c.3",
+        "text": "Applying aileron to keep the upwind wing from rising."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.19.1.w.1",
+        "text": "Decreasing aileron input as the airplane decelerates."
+      },
+      {
+        "id": "AFH.14.19.1.w.2",
+        "text": "Allowing the upwind wing to rise slightly to relieve stress."
+      },
+      {
+        "id": "AFH.14.19.1.w.3",
+        "text": "Holding aileron control neutral throughout the roll."
+      },
+      {
+        "id": "AFH.14.19.1.w.4",
+        "text": "Increasing engine power to improve rudder effectiveness."
+      },
+      {
+        "id": "AFH.14.19.1.w.5",
+        "text": "Relying solely on differential braking for directional control."
+      },
+      {
+        "id": "AFH.14.19.1.w.6",
+        "text": "Applying elevator control to maintain nose attitude."
+      },
+      {
+        "id": "AFH.14.19.1.w.7",
+        "text": "Reducing rudder input as the airplane slows down."
+      },
+      {
+        "id": "AFH.14.19.1.w.8",
+        "text": "Ignoring the crosswind component once on the ground."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction",
+    "subjects": [
+      "Crosswind After-Landing Roll"
+    ]
+  },
+  {
+    "questionid": "AFH.14.19.2",
+    "question": "Which statements accurately describe the characteristics and pilot actions during a crosswind after-landing roll in tailwheel airplanes?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.19.2.c.1",
+        "text": "The airplane tends to weathervane into the wind."
+      },
+      {
+        "id": "AFH.14.19.2.c.2",
+        "text": "Weathervaning tendency is more prevalent in tailwheel-type airplanes."
+      },
+      {
+        "id": "AFH.14.19.2.c.3",
+        "text": "Aileron control should be held fully toward the wind when the airplane is coming to a stop."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.19.2.w.1",
+        "text": "The airplane tends to turn away from the wind during the roll."
+      },
+      {
+        "id": "AFH.14.19.2.w.2",
+        "text": "Ailerons become more effective as the airplane decelerates."
+      },
+      {
+        "id": "AFH.14.19.2.w.3",
+        "text": "Less aileron input is required as the airplane slows down."
+      },
+      {
+        "id": "AFH.14.19.2.w.4",
+        "text": "The airplane's profile area is greater forward of the main landing gear."
+      },
+      {
+        "id": "AFH.14.19.2.w.5",
+        "text": "The crosswind component becomes less critical during deceleration."
+      },
+      {
+        "id": "AFH.14.19.2.w.6",
+        "text": "The main wheels act as a pivot point for the airplane's nose."
+      },
+      {
+        "id": "AFH.14.19.2.w.7",
+        "text": "The upwind wing experiences a decreasing lifting force from the crosswind."
+      },
+      {
+        "id": "AFH.14.19.2.w.8",
+        "text": "Pilots should operate in wind conditions exceeding the airplane's capability."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction",
+    "subjects": [
+      "Crosswind After-Landing Roll"
+    ]
+  },
+  {
+    "questionid": "AFH.14.20.1",
+    "question": "What are the key actions to perform during a short-field landing in a tailwheel airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.20.1.c.1",
+        "text": "Hold the airplane in a three-point attitude upon touchdown"
+      },
+      {
+        "id": "AFH.14.20.1.c.2",
+        "text": "Apply brakes evenly and firmly after touchdown"
+      },
+      {
+        "id": "AFH.14.20.1.c.3",
+        "text": "Close the throttle immediately upon touchdown"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.20.1.w.1",
+        "text": "Maintain a nose-high attitude upon touchdown"
+      },
+      {
+        "id": "AFH.14.20.1.w.2",
+        "text": "Apply brakes only after reaching taxi speed"
+      },
+      {
+        "id": "AFH.14.20.1.w.3",
+        "text": "Keep the throttle partially open after touchdown"
+      },
+      {
+        "id": "AFH.14.20.1.w.4",
+        "text": "Use only aerodynamic braking without applying brakes"
+      },
+      {
+        "id": "AFH.14.20.1.w.5",
+        "text": "Touch down with one wheel first"
+      },
+      {
+        "id": "AFH.14.20.1.w.6",
+        "text": "Rely solely on reverse thrust for stopping"
+      },
+      {
+        "id": "AFH.14.20.1.w.7",
+        "text": "Ignore the use of brakes to minimize roll"
+      },
+      {
+        "id": "AFH.14.20.1.w.8",
+        "text": "Apply brakes unevenly to steer the airplane"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes",
+    "subjects": [
+      "Short-Field Landing",
+      "Tailwheel Airplanes",
+      "Landing Techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.14.21.1",
+    "question": "During a soft-field landing in a tailwheel airplane, which of the following statements are correct?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.21.1.c.1",
+        "text": "The tailwheel should touch down simultaneously with or just before the main wheels"
+      },
+      {
+        "id": "AFH.14.21.1.c.2",
+        "text": "Firm back-elevator pressure should be maintained throughout the landing roll to prevent nosing over"
+      },
+      {
+        "id": "AFH.14.21.1.c.3",
+        "text": "The pilot may need to increase power after touchdown to prevent the airplane from becoming stuck in the soft surface"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.21.1.w.1",
+        "text": "The main wheels should touch down well before the tailwheel to improve directional control"
+      },
+      {
+        "id": "AFH.14.21.1.w.2",
+        "text": "Brakes should be applied firmly immediately after touchdown to minimize rollout distance"
+      },
+      {
+        "id": "AFH.14.21.1.w.3",
+        "text": "The tailwheel should be held off the surface as long as possible after the main wheels touch down"
+      },
+      {
+        "id": "AFH.14.21.1.w.4",
+        "text": "Forward elevator pressure should be applied during the landing roll to improve aerodynamic braking"
+      },
+      {
+        "id": "AFH.14.21.1.w.5",
+        "text": "Brakes are the primary means of slowing the airplane on a soft field"
+      },
+      {
+        "id": "AFH.14.21.1.w.6",
+        "text": "The throttle should be reduced to idle before touchdown to avoid propeller strike risk on soft terrain"
+      },
+      {
+        "id": "AFH.14.21.1.w.7",
+        "text": "Power should be reduced immediately after touchdown to prevent the airplane from becoming airborne again"
+      },
+      {
+        "id": "AFH.14.21.1.w.8",
+        "text": "A wheel landing technique is preferred over a three-point landing on soft fields"
+      }
+    ],
+    "source": "AFH Chapter 14, Section: Soft-Field Landing",
+    "subjects": [
+      "Soft-Field Landing",
+      "Tailwheel Airplane Technique",
+      "Landing Roll Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.14.22.1",
+    "question": "What factors can initiate a ground loop during ground operations in a tailwheel airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.22.1.c.1",
+        "text": "Side-load on landing"
+      },
+      {
+        "id": "AFH.14.22.1.c.2",
+        "text": "Taxi turn with excessive groundspeed"
+      },
+      {
+        "id": "AFH.14.22.1.c.3",
+        "text": "Uneven ground surface"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.22.1.w.1",
+        "text": "Excessive altitude"
+      },
+      {
+        "id": "AFH.14.22.1.w.2",
+        "text": "High airspeed during cruise"
+      },
+      {
+        "id": "AFH.14.22.1.w.3",
+        "text": "Engine failure"
+      },
+      {
+        "id": "AFH.14.22.1.w.4",
+        "text": "Incorrect flap setting"
+      },
+      {
+        "id": "AFH.14.22.1.w.5",
+        "text": "Low fuel levels"
+      },
+      {
+        "id": "AFH.14.22.1.w.6",
+        "text": "Pilot fatigue"
+      },
+      {
+        "id": "AFH.14.22.1.w.7",
+        "text": "Poor weather conditions"
+      },
+      {
+        "id": "AFH.14.22.1.w.8",
+        "text": "Incorrect radio frequency"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction",
+    "subjects": [
+      "Ground Loop"
+    ]
+  },
+  {
+    "questionid": "AFH.14.22.2",
+    "question": "What corrective actions should a pilot take to prevent a ground loop from developing?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.22.2.c.1",
+        "text": "Firm rudder input"
+      },
+      {
+        "id": "AFH.14.22.2.c.2",
+        "text": "Differential braking"
+      },
+      {
+        "id": "AFH.14.22.2.c.3",
+        "text": "Prompt removal of corrections"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.22.2.w.1",
+        "text": "Increase throttle"
+      },
+      {
+        "id": "AFH.14.22.2.w.2",
+        "text": "Deploy landing gear"
+      },
+      {
+        "id": "AFH.14.22.2.w.3",
+        "text": "Adjust ailerons"
+      },
+      {
+        "id": "AFH.14.22.2.w.4",
+        "text": "Use autopilot"
+      },
+      {
+        "id": "AFH.14.22.2.w.5",
+        "text": "Activate spoilers"
+      },
+      {
+        "id": "AFH.14.22.2.w.6",
+        "text": "Engage reverse thrust"
+      },
+      {
+        "id": "AFH.14.22.2.w.7",
+        "text": "Adjust elevator trim"
+      },
+      {
+        "id": "AFH.14.22.2.w.8",
+        "text": "Use flaps"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction",
+    "subjects": [
+      "Ground Loop"
+    ]
+  },
+  {
+    "questionid": "AFH.14.23.1",
+    "question": "What are some operational differences between tailwheel and nose-wheel airplanes discussed in the chapter?",
+    "correct_answers": [
+      {
+        "id": "AFH.14.23.1.c.1",
+        "text": "Ground operations"
+      },
+      {
+        "id": "AFH.14.23.1.c.2",
+        "text": "Takeoffs"
+      },
+      {
+        "id": "AFH.14.23.1.c.3",
+        "text": "Landings"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.14.23.1.w.1",
+        "text": "In-flight refueling"
+      },
+      {
+        "id": "AFH.14.23.1.w.2",
+        "text": "Cruise altitude"
+      },
+      {
+        "id": "AFH.14.23.1.w.3",
+        "text": "Cabin pressurization"
+      },
+      {
+        "id": "AFH.14.23.1.w.4",
+        "text": "Autopilot systems"
+      },
+      {
+        "id": "AFH.14.23.1.w.5",
+        "text": "In-flight entertainment"
+      },
+      {
+        "id": "AFH.14.23.1.w.6",
+        "text": "Weather radar"
+      },
+      {
+        "id": "AFH.14.23.1.w.7",
+        "text": "Fuel efficiency"
+      },
+      {
+        "id": "AFH.14.23.1.w.8",
+        "text": "Engine start procedures"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 14: Transition to Tailwheel Airplanes Introduction",
+    "subjects": [
+      "Tailwheel airplanes",
+      "Ground operations",
+      "Takeoffs and landings"
+    ]
+  }
+]

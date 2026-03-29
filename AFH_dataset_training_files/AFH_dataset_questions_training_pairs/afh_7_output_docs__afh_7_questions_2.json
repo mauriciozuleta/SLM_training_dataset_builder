@@ -1,0 +1,2988 @@
+[
+  {
+    "questionBank": {
+      "chapterId": "afh.7",
+      "bookId": "AFH",
+      "chapterNumber": 7,
+      "chapterTitle": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7: Ground Reference Maneuvers Introduction",
+      "totalRequiredQuestions": 50,
+      "metadata": {
+        "generatedAtUtc": "2026-03-27T18:10:59.008Z",
+        "chapterId": "afh.7",
+        "chapterNumber": 7,
+        "totalSections": 16,
+        "totalRequiredQuestions": 50,
+        "providers": [
+          "openai",
+          "gemini",
+          "anthropic"
+        ],
+        "models": [
+          "gpt-4o",
+          "gemini-2.5-flash",
+          "claude-sonnet-4-6"
+        ],
+        "promptTokens": 20154,
+        "completionTokens": 13262,
+        "totalTokens": 33416,
+        "sectionQuestionSummary": [
+          {
+            "sectionId": "afh.7.1",
+            "sectionTitle": "Maneuvering by Reference to Ground Objects",
+            "sectionOrdinal": 1,
+            "sectionWeightPercentage": 8.13,
+            "questionsGenerated": 4
+          },
+          {
+            "sectionId": "afh.7.2",
+            "sectionTitle": "Drift and Ground Track Control",
+            "sectionOrdinal": 2,
+            "sectionWeightPercentage": 2.99,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.7.3",
+            "sectionTitle": "Correcting Drift During Straight-and-Level Flight",
+            "sectionOrdinal": 3,
+            "sectionWeightPercentage": 6.19,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.7.4",
+            "sectionTitle": "Constant Radius During Turning Flight",
+            "sectionOrdinal": 4,
+            "sectionWeightPercentage": 7.84,
+            "questionsGenerated": 4
+          },
+          {
+            "sectionId": "afh.7.5",
+            "sectionTitle": "Tracking Over and Parallel to a Straight Line",
+            "sectionOrdinal": 5,
+            "sectionWeightPercentage": 2.26,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.7.6",
+            "sectionTitle": "Rectangular Course",
+            "sectionOrdinal": 6,
+            "sectionWeightPercentage": 11.21,
+            "questionsGenerated": 6
+          },
+          {
+            "sectionId": "afh.7.7",
+            "sectionTitle": "Turns Around a Point",
+            "sectionOrdinal": 7,
+            "sectionWeightPercentage": 8.76,
+            "questionsGenerated": 4
+          },
+          {
+            "sectionId": "afh.7.8",
+            "sectionTitle": "S-Turns",
+            "sectionOrdinal": 8,
+            "sectionWeightPercentage": 9.21,
+            "questionsGenerated": 5
+          },
+          {
+            "sectionId": "afh.7.9",
+            "sectionTitle": "Elementary Eights",
+            "sectionOrdinal": 9,
+            "sectionWeightPercentage": 3.03,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.7.10",
+            "sectionTitle": "Eights Along a Road",
+            "sectionOrdinal": 10,
+            "sectionWeightPercentage": 10.25,
+            "questionsGenerated": 5
+          },
+          {
+            "sectionId": "afh.7.11",
+            "sectionTitle": "Eights Across a Road",
+            "sectionOrdinal": 11,
+            "sectionWeightPercentage": 1.13,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.7.12",
+            "sectionTitle": "Eights Around Pylons",
+            "sectionOrdinal": 12,
+            "sectionWeightPercentage": 3.15,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.7.13",
+            "sectionTitle": "Common Errors",
+            "sectionOrdinal": 13,
+            "sectionWeightPercentage": 1.24,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.7.14",
+            "sectionTitle": "Eights on Pylons",
+            "sectionOrdinal": 14,
+            "sectionWeightPercentage": 20.29,
+            "questionsGenerated": 10
+          },
+          {
+            "sectionId": "afh.7.15",
+            "sectionTitle": "Common Errors",
+            "sectionOrdinal": 15,
+            "sectionWeightPercentage": 1.98,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.7.16",
+            "sectionTitle": "Chapter Summary",
+            "sectionOrdinal": 16,
+            "sectionWeightPercentage": 2.34,
+            "questionsGenerated": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "questionid": "AFH.7.1.1",
+    "question": "What is a common error for beginning pilots during ground reference maneuvers?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.1.1.c.1",
+        "text": "Fixating on a single reference"
+      },
+      {
+        "id": "AFH.7.1.1.c.2",
+        "text": "Losing ability to determine rate"
+      },
+      {
+        "id": "AFH.7.1.1.c.3",
+        "text": "Degrading performance"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.1.1.w.1",
+        "text": "Using multiple references"
+      },
+      {
+        "id": "AFH.7.1.1.w.2",
+        "text": "Maintaining desired ground track"
+      },
+      {
+        "id": "AFH.7.1.1.w.3",
+        "text": "Scanning across several references"
+      },
+      {
+        "id": "AFH.7.1.1.w.4",
+        "text": "Determining relative motion"
+      },
+      {
+        "id": "AFH.7.1.1.w.5",
+        "text": "Adjusting flight control surfaces"
+      },
+      {
+        "id": "AFH.7.1.1.w.6",
+        "text": "Considering wind direction"
+      },
+      {
+        "id": "AFH.7.1.1.w.7",
+        "text": "Selecting appropriate references"
+      },
+      {
+        "id": "AFH.7.1.1.w.8",
+        "text": "Executing maneuvers easily"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7, Section 1",
+    "subjects": [
+      "Pilot Training",
+      "Ground Reference Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.7.1.2",
+    "question": "How can prevailing visibility affect a pilot's perception of distance to a reference?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.1.2.c.1",
+        "text": "Excellent visibility makes objects appear closer"
+      },
+      {
+        "id": "AFH.7.1.2.c.2",
+        "text": "Poor visibility makes objects appear farther"
+      },
+      {
+        "id": "AFH.7.1.2.c.3",
+        "text": "Rain can create altitude illusions"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.1.2.w.1",
+        "text": "Visibility has no effect"
+      },
+      {
+        "id": "AFH.7.1.2.w.2",
+        "text": "Objects always appear the same distance"
+      },
+      {
+        "id": "AFH.7.1.2.w.3",
+        "text": "Hazy conditions make objects appear closer"
+      },
+      {
+        "id": "AFH.7.1.2.w.4",
+        "text": "Brighter objects appear farther"
+      },
+      {
+        "id": "AFH.7.1.2.w.5",
+        "text": "Dimmer objects appear closer"
+      },
+      {
+        "id": "AFH.7.1.2.w.6",
+        "text": "Visibility affects altitude but not distance"
+      },
+      {
+        "id": "AFH.7.1.2.w.7",
+        "text": "Visibility affects speed perception"
+      },
+      {
+        "id": "AFH.7.1.2.w.8",
+        "text": "Visibility affects only horizontal distance"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7, Section 1",
+    "subjects": [
+      "Visual Perception",
+      "Pilot Training"
+    ]
+  },
+  {
+    "questionid": "AFH.7.1.3",
+    "question": "What should a pilot consider when selecting a ground-based reference for maneuvers?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.1.3.c.1",
+        "text": "Type of maneuver"
+      },
+      {
+        "id": "AFH.7.1.3.c.2",
+        "text": "Wind direction"
+      },
+      {
+        "id": "AFH.7.1.3.c.3",
+        "text": "Type of airspace"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.1.3.w.1",
+        "text": "Color of reference"
+      },
+      {
+        "id": "AFH.7.1.3.w.2",
+        "text": "Size of reference"
+      },
+      {
+        "id": "AFH.7.1.3.w.3",
+        "text": "Distance to reference"
+      },
+      {
+        "id": "AFH.7.1.3.w.4",
+        "text": "Shape of reference"
+      },
+      {
+        "id": "AFH.7.1.3.w.5",
+        "text": "Reference elevation"
+      },
+      {
+        "id": "AFH.7.1.3.w.6",
+        "text": "Reference material"
+      },
+      {
+        "id": "AFH.7.1.3.w.7",
+        "text": "Reference texture"
+      },
+      {
+        "id": "AFH.7.1.3.w.8",
+        "text": "Reference temperature"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7, Section 1",
+    "subjects": [
+      "Pilot Training",
+      "Ground Reference Selection"
+    ]
+  },
+  {
+    "questionid": "AFH.7.1.4",
+    "question": "Why is it important for pilots to use multiple references during ground reference maneuvers?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.1.4.c.1",
+        "text": "To determine rate of closure"
+      },
+      {
+        "id": "AFH.7.1.4.c.2",
+        "text": "To maintain desired ground track"
+      },
+      {
+        "id": "AFH.7.1.4.c.3",
+        "text": "To determine relative motion"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.1.4.w.1",
+        "text": "To focus on a single point"
+      },
+      {
+        "id": "AFH.7.1.4.w.2",
+        "text": "To ignore visual illusions"
+      },
+      {
+        "id": "AFH.7.1.4.w.3",
+        "text": "To simplify maneuvers"
+      },
+      {
+        "id": "AFH.7.1.4.w.4",
+        "text": "To avoid using tactile feedback"
+      },
+      {
+        "id": "AFH.7.1.4.w.5",
+        "text": "To rely solely on instruments"
+      },
+      {
+        "id": "AFH.7.1.4.w.6",
+        "text": "To disregard wind effects"
+      },
+      {
+        "id": "AFH.7.1.4.w.7",
+        "text": "To minimize attention division"
+      },
+      {
+        "id": "AFH.7.1.4.w.8",
+        "text": "To reduce complexity"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7, Section 1",
+    "subjects": [
+      "Pilot Training",
+      "Ground Reference Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.7.2.1",
+    "question": "What factors should a pilot consider when selecting the maneuvering altitude for ground reference maneuvers?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.2.1.c.1",
+        "text": "The altitude should provide obstruction clearance of no less than 500 feet vertically above the obstruction and 2,000 feet horizontally."
+      },
+      {
+        "id": "AFH.7.2.1.c.2",
+        "text": "Drift should be easily recognizable from both sides of the airplane."
+      },
+      {
+        "id": "AFH.7.2.1.c.3",
+        "text": "The lower the maneuvering altitude, the faster the airplane appears to travel in relation to the ground."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.2.1.w.1",
+        "text": "The airplane should always fly at maximum speed."
+      },
+      {
+        "id": "AFH.7.2.1.w.2",
+        "text": "Wind direction does not affect ground track."
+      },
+      {
+        "id": "AFH.7.2.1.w.3",
+        "text": "Altitude should be as low as possible for better visibility."
+      },
+      {
+        "id": "AFH.7.2.1.w.4",
+        "text": "Engine failure considerations are irrelevant."
+      },
+      {
+        "id": "AFH.7.2.1.w.5",
+        "text": "The airplane should fly at 10,000 feet AGL for all maneuvers."
+      },
+      {
+        "id": "AFH.7.2.1.w.6",
+        "text": "Altitude should be chosen based on pilot preference alone."
+      },
+      {
+        "id": "AFH.7.2.1.w.7",
+        "text": "Drift is only a concern in still air."
+      },
+      {
+        "id": "AFH.7.2.1.w.8",
+        "text": "The airplane should maintain a constant heading regardless of wind."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7, Section 2: Drift and Ground Track Control",
+    "subjects": [
+      "Aviation",
+      "Flight Maneuvers",
+      "Pilot Training"
+    ]
+  },
+  {
+    "questionid": "AFH.7.3.1",
+    "question": "What is the preferred method to correct for wind drift during straight-and-level flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.3.1.c.1",
+        "text": "Angle the airplane into the wind"
+      },
+      {
+        "id": "AFH.7.3.1.c.2",
+        "text": "Use a wind correction angle"
+      },
+      {
+        "id": "AFH.7.3.1.c.3",
+        "text": "Cancel sideways drift"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.3.1.w.1",
+        "text": "Increase airspeed"
+      },
+      {
+        "id": "AFH.7.3.1.w.2",
+        "text": "Decrease altitude"
+      },
+      {
+        "id": "AFH.7.3.1.w.3",
+        "text": "Fly parallel to the wind"
+      },
+      {
+        "id": "AFH.7.3.1.w.4",
+        "text": "Use autopilot"
+      },
+      {
+        "id": "AFH.7.3.1.w.5",
+        "text": "Adjust flaps"
+      },
+      {
+        "id": "AFH.7.3.1.w.6",
+        "text": "Change heading frequently"
+      },
+      {
+        "id": "AFH.7.3.1.w.7",
+        "text": "Fly in a zigzag pattern"
+      },
+      {
+        "id": "AFH.7.3.1.w.8",
+        "text": "Ignore the wind"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7, Section 3",
+    "subjects": [
+      "Wind Drift Correction",
+      "Straight-and-Level Flight"
+    ]
+  },
+  {
+    "questionid": "AFH.7.3.2",
+    "question": "How does a crosswind affect an airplane's sideways drift?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.3.2.c.1",
+        "text": "Causes sideways drift"
+      },
+      {
+        "id": "AFH.7.3.2.c.2",
+        "text": "Increases drift speed"
+      },
+      {
+        "id": "AFH.7.3.2.c.3",
+        "text": "Acts on the airplane's mass"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.3.2.w.1",
+        "text": "Reduces airspeed"
+      },
+      {
+        "id": "AFH.7.3.2.w.2",
+        "text": "Increases altitude"
+      },
+      {
+        "id": "AFH.7.3.2.w.3",
+        "text": "Decreases drift speed"
+      },
+      {
+        "id": "AFH.7.3.2.w.4",
+        "text": "Stabilizes flight"
+      },
+      {
+        "id": "AFH.7.3.2.w.5",
+        "text": "Improves fuel efficiency"
+      },
+      {
+        "id": "AFH.7.3.2.w.6",
+        "text": "Enhances lift"
+      },
+      {
+        "id": "AFH.7.3.2.w.7",
+        "text": "Reduces drag"
+      },
+      {
+        "id": "AFH.7.3.2.w.8",
+        "text": "Increases engine power"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7, Section 3",
+    "subjects": [
+      "Crosswind Effects",
+      "Drift Dynamics"
+    ]
+  },
+  {
+    "questionid": "AFH.7.3.3",
+    "question": "What factors determine the required wind correction angle for an airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.3.3.c.1",
+        "text": "Wind speed"
+      },
+      {
+        "id": "AFH.7.3.3.c.2",
+        "text": "Angle between wind and airplane"
+      },
+      {
+        "id": "AFH.7.3.3.c.3",
+        "text": "Airspeed of the airplane"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.3.3.w.1",
+        "text": "Altitude"
+      },
+      {
+        "id": "AFH.7.3.3.w.2",
+        "text": "Temperature"
+      },
+      {
+        "id": "AFH.7.3.3.w.3",
+        "text": "Humidity"
+      },
+      {
+        "id": "AFH.7.3.3.w.4",
+        "text": "Engine power"
+      },
+      {
+        "id": "AFH.7.3.3.w.5",
+        "text": "Fuel type"
+      },
+      {
+        "id": "AFH.7.3.3.w.6",
+        "text": "Passenger weight"
+      },
+      {
+        "id": "AFH.7.3.3.w.7",
+        "text": "Wing shape"
+      },
+      {
+        "id": "AFH.7.3.3.w.8",
+        "text": "Landing gear position"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7, Section 3",
+    "subjects": [
+      "Wind Correction Angle",
+      "Flight Dynamics"
+    ]
+  },
+  {
+    "questionid": "AFH.7.4.1",
+    "question": "What happens to the radius of a turn over the ground when groundspeed increases?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.4.1.c.1",
+        "text": "The radius increases"
+      },
+      {
+        "id": "AFH.7.4.1.c.2",
+        "text": "The turn becomes wider"
+      },
+      {
+        "id": "AFH.7.4.1.c.3",
+        "text": "The distance covered in the turn grows"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.4.1.w.1",
+        "text": "The radius decreases"
+      },
+      {
+        "id": "AFH.7.4.1.w.2",
+        "text": "The turn becomes tighter"
+      },
+      {
+        "id": "AFH.7.4.1.w.3",
+        "text": "The distance covered in the turn shrinks"
+      },
+      {
+        "id": "AFH.7.4.1.w.4",
+        "text": "The radius remains constant"
+      },
+      {
+        "id": "AFH.7.4.1.w.5",
+        "text": "The turn becomes sharper"
+      },
+      {
+        "id": "AFH.7.4.1.w.6",
+        "text": "The radius is unaffected by groundspeed"
+      },
+      {
+        "id": "AFH.7.4.1.w.7",
+        "text": "The radius decreases with increased bank angle"
+      },
+      {
+        "id": "AFH.7.4.1.w.8",
+        "text": "The radius is only affected by airspeed"
+      }
+    ],
+    "source": "AFH Chapter 7, Section 4",
+    "subjects": [
+      "Ground Reference Maneuvers",
+      "Aerodynamics"
+    ]
+  },
+  {
+    "questionid": "AFH.7.4.2",
+    "question": "How does a pilot maintain a constant-radius turn over the ground in the presence of wind?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.4.2.c.1",
+        "text": "By varying the bank angle"
+      },
+      {
+        "id": "AFH.7.4.2.c.2",
+        "text": "By adjusting the bank angle according to groundspeed"
+      },
+      {
+        "id": "AFH.7.4.2.c.3",
+        "text": "By increasing bank angle with increased groundspeed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.4.2.w.1",
+        "text": "By maintaining a fixed bank angle"
+      },
+      {
+        "id": "AFH.7.4.2.w.2",
+        "text": "By adjusting airspeed only"
+      },
+      {
+        "id": "AFH.7.4.2.w.3",
+        "text": "By ignoring wind effects"
+      },
+      {
+        "id": "AFH.7.4.2.w.4",
+        "text": "By maintaining constant groundspeed"
+      },
+      {
+        "id": "AFH.7.4.2.w.5",
+        "text": "By using only rudder inputs"
+      },
+      {
+        "id": "AFH.7.4.2.w.6",
+        "text": "By flying at a constant altitude"
+      },
+      {
+        "id": "AFH.7.4.2.w.7",
+        "text": "By adjusting throttle settings"
+      },
+      {
+        "id": "AFH.7.4.2.w.8",
+        "text": "By using flaps"
+      }
+    ],
+    "source": "AFH Chapter 7, Section 4",
+    "subjects": [
+      "Ground Reference Maneuvers",
+      "Wind Effects"
+    ]
+  },
+  {
+    "questionid": "AFH.7.4.3",
+    "question": "What is the approximate bank angle required at the upwind point of a turn with a 10 knot wind and 100 knots groundspeed?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.4.3.c.1",
+        "text": "33°"
+      },
+      {
+        "id": "AFH.7.4.3.c.2",
+        "text": "Approximately 33 degrees"
+      },
+      {
+        "id": "AFH.7.4.3.c.3",
+        "text": "A shallower bank angle than downwind"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.4.3.w.1",
+        "text": "45°"
+      },
+      {
+        "id": "AFH.7.4.3.w.2",
+        "text": "24°"
+      },
+      {
+        "id": "AFH.7.4.3.w.3",
+        "text": "16°"
+      },
+      {
+        "id": "AFH.7.4.3.w.4",
+        "text": "A steeper bank angle than downwind"
+      },
+      {
+        "id": "AFH.7.4.3.w.5",
+        "text": "The same as downwind"
+      },
+      {
+        "id": "AFH.7.4.3.w.6",
+        "text": "90°"
+      },
+      {
+        "id": "AFH.7.4.3.w.7",
+        "text": "60°"
+      },
+      {
+        "id": "AFH.7.4.3.w.8",
+        "text": "Bank angle is irrelevant"
+      }
+    ],
+    "source": "AFH Chapter 7, Section 4",
+    "subjects": [
+      "Ground Reference Maneuvers",
+      "Bank Angle Calculations"
+    ]
+  },
+  {
+    "questionid": "AFH.7.4.4",
+    "question": "What should a pilot do when flying at a lower groundspeed to maintain a constant-radius turn?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.4.4.c.1",
+        "text": "Reduce the angle of bank"
+      },
+      {
+        "id": "AFH.7.4.4.c.2",
+        "text": "Decrease the rate of turn"
+      },
+      {
+        "id": "AFH.7.4.4.c.3",
+        "text": "Compensate for additional time taken"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.4.4.w.1",
+        "text": "Increase the angle of bank"
+      },
+      {
+        "id": "AFH.7.4.4.w.2",
+        "text": "Increase the rate of turn"
+      },
+      {
+        "id": "AFH.7.4.4.w.3",
+        "text": "Maintain the same bank angle"
+      },
+      {
+        "id": "AFH.7.4.4.w.4",
+        "text": "Ignore groundspeed changes"
+      },
+      {
+        "id": "AFH.7.4.4.w.5",
+        "text": "Fly at a higher altitude"
+      },
+      {
+        "id": "AFH.7.4.4.w.6",
+        "text": "Use more throttle"
+      },
+      {
+        "id": "AFH.7.4.4.w.7",
+        "text": "Use less throttle"
+      },
+      {
+        "id": "AFH.7.4.4.w.8",
+        "text": "Maintain constant airspeed"
+      }
+    ],
+    "source": "AFH Chapter 7, Section 4",
+    "subjects": [
+      "Ground Reference Maneuvers",
+      "Speed Management"
+    ]
+  },
+  {
+    "questionid": "AFH.7.5.1",
+    "question": "What are key steps in practicing tracking over and parallel to a straight line during ground reference maneuvers?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.5.1.c.1",
+        "text": "Correct for crosswind by angling the airplane's longitudinal axis into the wind."
+      },
+      {
+        "id": "AFH.7.5.1.c.2",
+        "text": "Scan between far and close references to maintain alignment."
+      },
+      {
+        "id": "AFH.7.5.1.c.3",
+        "text": "Practice flying a parallel path offset from the reference line."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.5.1.w.1",
+        "text": "Fly directly over the reference line without wind correction."
+      },
+      {
+        "id": "AFH.7.5.1.w.2",
+        "text": "Ignore the effects of crosswind during the maneuver."
+      },
+      {
+        "id": "AFH.7.5.1.w.3",
+        "text": "Use only one reference point for alignment."
+      },
+      {
+        "id": "AFH.7.5.1.w.4",
+        "text": "Offset parallel path should be more than three-fourths of a mile away."
+      },
+      {
+        "id": "AFH.7.5.1.w.5",
+        "text": "Maintain a fixed heading regardless of wind conditions."
+      },
+      {
+        "id": "AFH.7.5.1.w.6",
+        "text": "Focus only on the closest reference point."
+      },
+      {
+        "id": "AFH.7.5.1.w.7",
+        "text": "Choose a reference line that is very short."
+      },
+      {
+        "id": "AFH.7.5.1.w.8",
+        "text": "Practice without considering the wind direction."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7, Section 5",
+    "subjects": [
+      "Ground Reference Maneuvers",
+      "Crosswind Correction",
+      "Pilot Training"
+    ]
+  },
+  {
+    "questionid": "AFH.7.6.1",
+    "question": "What is the primary purpose of the rectangular course maneuver?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.6.1.c.1",
+        "text": "To replicate the airport traffic pattern"
+      },
+      {
+        "id": "AFH.7.6.1.c.2",
+        "text": "To practice maintaining a constant altitude and airspeed"
+      },
+      {
+        "id": "AFH.7.6.1.c.3",
+        "text": "To prepare for the airport traffic pattern and landing practice"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.6.1.w.1",
+        "text": "To practice emergency landings"
+      },
+      {
+        "id": "AFH.7.6.1.w.2",
+        "text": "To simulate mountain flying"
+      },
+      {
+        "id": "AFH.7.6.1.w.3",
+        "text": "To improve aerobatic skills"
+      },
+      {
+        "id": "AFH.7.6.1.w.4",
+        "text": "To enhance night flying techniques"
+      },
+      {
+        "id": "AFH.7.6.1.w.5",
+        "text": "To practice instrument approaches"
+      },
+      {
+        "id": "AFH.7.6.1.w.6",
+        "text": "To simulate turbulence conditions"
+      },
+      {
+        "id": "AFH.7.6.1.w.7",
+        "text": "To practice short field takeoffs"
+      },
+      {
+        "id": "AFH.7.6.1.w.8",
+        "text": "To improve crosswind landing skills"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7: Ground Reference Maneuvers Introduction",
+    "subjects": [
+      "Ground Reference Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.7.6.2",
+    "question": "What should a pilot do when entering the rectangular course maneuver?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.6.2.c.1",
+        "text": "Enter downwind"
+      },
+      {
+        "id": "AFH.7.6.2.c.2",
+        "text": "Use coordinated aileron and rudder pressures"
+      },
+      {
+        "id": "AFH.7.6.2.c.3",
+        "text": "Adjust bank angle for groundspeed changes"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.6.2.w.1",
+        "text": "Enter upwind"
+      },
+      {
+        "id": "AFH.7.6.2.w.2",
+        "text": "Fly directly over the field boundaries"
+      },
+      {
+        "id": "AFH.7.6.2.w.3",
+        "text": "Use only aileron pressure"
+      },
+      {
+        "id": "AFH.7.6.2.w.4",
+        "text": "Ignore wind correction angles"
+      },
+      {
+        "id": "AFH.7.6.2.w.5",
+        "text": "Maintain a steep bank throughout"
+      },
+      {
+        "id": "AFH.7.6.2.w.6",
+        "text": "Enter crosswind"
+      },
+      {
+        "id": "AFH.7.6.2.w.7",
+        "text": "Fly at maximum altitude"
+      },
+      {
+        "id": "AFH.7.6.2.w.8",
+        "text": "Enter with a shallow bank"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7: Ground Reference Maneuvers Introduction",
+    "subjects": [
+      "Ground Reference Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.7.6.3",
+    "question": "How should a pilot maintain the flight path during the rectangular course?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.6.3.c.1",
+        "text": "Fly parallel to the field boundaries"
+      },
+      {
+        "id": "AFH.7.6.3.c.2",
+        "text": "Maintain an equal distance from the ground references"
+      },
+      {
+        "id": "AFH.7.6.3.c.3",
+        "text": "Position the flight path outside the field boundaries"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.6.3.w.1",
+        "text": "Fly directly over the field boundaries"
+      },
+      {
+        "id": "AFH.7.6.3.w.2",
+        "text": "Use steep bank angles throughout"
+      },
+      {
+        "id": "AFH.7.6.3.w.3",
+        "text": "Ignore wind drift"
+      },
+      {
+        "id": "AFH.7.6.3.w.4",
+        "text": "Fly at varying altitudes"
+      },
+      {
+        "id": "AFH.7.6.3.w.5",
+        "text": "Maintain a constant heading"
+      },
+      {
+        "id": "AFH.7.6.3.w.6",
+        "text": "Fly directly into the wind"
+      },
+      {
+        "id": "AFH.7.6.3.w.7",
+        "text": "Use only visual references"
+      },
+      {
+        "id": "AFH.7.6.3.w.8",
+        "text": "Ignore airspeed changes"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7: Ground Reference Maneuvers Introduction",
+    "subjects": [
+      "Ground Reference Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.7.6.4",
+    "question": "What should a pilot be prepared for when turning from the downwind leg onto the base leg?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.6.4.c.1",
+        "text": "Lateral drift"
+      },
+      {
+        "id": "AFH.7.6.4.c.2",
+        "text": "A relatively steep bank angle"
+      },
+      {
+        "id": "AFH.7.6.4.c.3",
+        "text": "Wind correction"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.6.4.w.1",
+        "text": "Increased altitude"
+      },
+      {
+        "id": "AFH.7.6.4.w.2",
+        "text": "Decreased airspeed"
+      },
+      {
+        "id": "AFH.7.6.4.w.3",
+        "text": "No wind effect"
+      },
+      {
+        "id": "AFH.7.6.4.w.4",
+        "text": "Constant bank angle"
+      },
+      {
+        "id": "AFH.7.6.4.w.5",
+        "text": "Direct headwind"
+      },
+      {
+        "id": "AFH.7.6.4.w.6",
+        "text": "Immediate landing"
+      },
+      {
+        "id": "AFH.7.6.4.w.7",
+        "text": "Crosswind landing"
+      },
+      {
+        "id": "AFH.7.6.4.w.8",
+        "text": "Constant groundspeed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7: Ground Reference Maneuvers Introduction",
+    "subjects": [
+      "Ground Reference Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.7.6.5",
+    "question": "What is the effect of a tailwind on the airplane during the rectangular course?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.6.5.c.1",
+        "text": "Increased groundspeed"
+      },
+      {
+        "id": "AFH.7.6.5.c.2",
+        "text": "Requires drift correction"
+      },
+      {
+        "id": "AFH.7.6.5.c.3",
+        "text": "No wind correction angle if directly on tail"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.6.5.w.1",
+        "text": "Decreased groundspeed"
+      },
+      {
+        "id": "AFH.7.6.5.w.2",
+        "text": "Increased altitude"
+      },
+      {
+        "id": "AFH.7.6.5.w.3",
+        "text": "Requires steep bank angle"
+      },
+      {
+        "id": "AFH.7.6.5.w.4",
+        "text": "No effect on flight path"
+      },
+      {
+        "id": "AFH.7.6.5.w.5",
+        "text": "Decreased airspeed"
+      },
+      {
+        "id": "AFH.7.6.5.w.6",
+        "text": "Requires constant heading"
+      },
+      {
+        "id": "AFH.7.6.5.w.7",
+        "text": "Immediate descent"
+      },
+      {
+        "id": "AFH.7.6.5.w.8",
+        "text": "Requires no correction"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7: Ground Reference Maneuvers Introduction",
+    "subjects": [
+      "Ground Reference Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.7.6.6",
+    "question": "What should a pilot avoid when flying the rectangular course?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.6.6.c.1",
+        "text": "Flying too close to the references"
+      },
+      {
+        "id": "AFH.7.6.6.c.2",
+        "text": "Using very steep bank angles"
+      },
+      {
+        "id": "AFH.7.6.6.c.3",
+        "text": "Increasing aerodynamic load factor"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.6.6.w.1",
+        "text": "Flying at maximum speed"
+      },
+      {
+        "id": "AFH.7.6.6.w.2",
+        "text": "Entering the maneuver upwind"
+      },
+      {
+        "id": "AFH.7.6.6.w.3",
+        "text": "Ignoring wind drift"
+      },
+      {
+        "id": "AFH.7.6.6.w.4",
+        "text": "Using shallow bank angles"
+      },
+      {
+        "id": "AFH.7.6.6.w.5",
+        "text": "Flying directly over the field"
+      },
+      {
+        "id": "AFH.7.6.6.w.6",
+        "text": "Maintaining a constant heading"
+      },
+      {
+        "id": "AFH.7.6.6.w.7",
+        "text": "Flying at minimum altitude"
+      },
+      {
+        "id": "AFH.7.6.6.w.8",
+        "text": "Ignoring airspeed changes"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7: Ground Reference Maneuvers Introduction",
+    "subjects": [
+      "Ground Reference Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.7.7.1",
+    "question": "What are the objectives of turns around a point?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.7.1.c.1",
+        "text": "Adjusting bank angle during turns to maintain a constant radius turn"
+      },
+      {
+        "id": "AFH.7.7.1.c.2",
+        "text": "Establishing and adjusting the wind correction angle to maintain track over the ground"
+      },
+      {
+        "id": "AFH.7.7.1.c.3",
+        "text": "Developing the ability to compensate for drift in quickly-changing orientations"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.7.1.w.1",
+        "text": "Practicing straight-and-level flight at varying altitudes"
+      },
+      {
+        "id": "AFH.7.7.1.w.2",
+        "text": "Developing proficiency in emergency landing procedures"
+      },
+      {
+        "id": "AFH.7.7.1.w.3",
+        "text": "Improving ability to perform stall recoveries"
+      },
+      {
+        "id": "AFH.7.7.1.w.4",
+        "text": "Practicing crosswind takeoff and landing techniques"
+      },
+      {
+        "id": "AFH.7.7.1.w.5",
+        "text": "Developing awareness of traffic pattern entry procedures"
+      },
+      {
+        "id": "AFH.7.7.1.w.6",
+        "text": "Improving navigation using VOR radials"
+      },
+      {
+        "id": "AFH.7.7.1.w.7",
+        "text": "Practicing instrument approaches in simulated IMC"
+      },
+      {
+        "id": "AFH.7.7.1.w.8",
+        "text": "Developing proficiency in short-field takeoff procedures"
+      }
+    ],
+    "source": "AFH Chapter 7, Section 7.7 – Turns Around a Point",
+    "subjects": [
+      "Turns Around a Point",
+      "Ground Reference Maneuvers",
+      "Bank Angle Management"
+    ]
+  },
+  {
+    "questionid": "AFH.7.7.2",
+    "question": "When performing turns around a point, which of the following statements are correct regarding bank angle and groundspeed?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.7.2.c.1",
+        "text": "Higher groundspeeds require steeper bank angles to maintain a constant radius"
+      },
+      {
+        "id": "AFH.7.7.2.c.2",
+        "text": "Slower groundspeeds require shallower bank angles to maintain a constant radius"
+      },
+      {
+        "id": "AFH.7.7.2.c.3",
+        "text": "The radius of a turn is correlated to the bank angle"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.7.2.w.1",
+        "text": "Bank angle remains constant regardless of groundspeed changes"
+      },
+      {
+        "id": "AFH.7.7.2.w.2",
+        "text": "Steeper bank angles are required when groundspeed is slowest"
+      },
+      {
+        "id": "AFH.7.7.2.w.3",
+        "text": "Shallower bank angles are required when groundspeed is highest"
+      },
+      {
+        "id": "AFH.7.7.2.w.4",
+        "text": "Groundspeed has no effect on the required bank angle during turns"
+      },
+      {
+        "id": "AFH.7.7.2.w.5",
+        "text": "The pilot should use rudder alone to correct for groundspeed changes"
+      },
+      {
+        "id": "AFH.7.7.2.w.6",
+        "text": "A constant bank angle is maintained throughout the entire 360° turn"
+      },
+      {
+        "id": "AFH.7.7.2.w.7",
+        "text": "Bank angle adjustments are only necessary when flying upwind"
+      },
+      {
+        "id": "AFH.7.7.2.w.8",
+        "text": "Shallower banks are required at all times to ensure passenger comfort"
+      }
+    ],
+    "source": "AFH Chapter 7, Section 7.7 – Turns Around a Point",
+    "subjects": [
+      "Bank Angle",
+      "Groundspeed",
+      "Constant Radius Turn"
+    ]
+  },
+  {
+    "questionid": "AFH.7.7.3",
+    "question": "Which of the following correctly describe how to enter and perform a turn around a point?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.7.3.c.1",
+        "text": "The pilot should enter the maneuver downwind where groundspeed is at its fastest"
+      },
+      {
+        "id": "AFH.7.7.3.c.2",
+        "text": "The pilot should complete two or more 360° turns to properly assess wind direction and velocity"
+      },
+      {
+        "id": "AFH.7.7.3.c.3",
+        "text": "Bank angle adjustments should be made by applying coordinated aileron and rudder pressure throughout the turn"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.7.3.w.1",
+        "text": "The pilot should enter the maneuver upwind where groundspeed is slowest"
+      },
+      {
+        "id": "AFH.7.7.3.w.2",
+        "text": "Only one 360° turn is required to fully assess wind direction and velocity"
+      },
+      {
+        "id": "AFH.7.7.3.w.3",
+        "text": "The pilot should use rudder pressure alone to adjust the bank angle"
+      },
+      {
+        "id": "AFH.7.7.3.w.4",
+        "text": "The pilot should enter the maneuver crosswind to establish the initial bank angle"
+      },
+      {
+        "id": "AFH.7.7.3.w.5",
+        "text": "Bank angle adjustments are made only during the upwind portion of the turn"
+      },
+      {
+        "id": "AFH.7.7.3.w.6",
+        "text": "The pilot should maintain a fixed bank angle throughout the entire maneuver"
+      },
+      {
+        "id": "AFH.7.7.3.w.7",
+        "text": "The maneuver requires only a 180° turn to assess wind correction requirements"
+      },
+      {
+        "id": "AFH.7.7.3.w.8",
+        "text": "Aileron pressure alone is sufficient to maintain a constant radius turn"
+      }
+    ],
+    "source": "AFH Chapter 7, Section 7.7 – Turns Around a Point",
+    "subjects": [
+      "Maneuver Entry",
+      "Wind Correction",
+      "Coordinated Flight"
+    ]
+  },
+  {
+    "questionid": "AFH.7.7.4",
+    "question": "Which of the following statements about selecting a reference point and maintaining visibility during turns around a point are correct?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.7.4.c.1",
+        "text": "The pilot should select a prominent ground-based reference that is small enough to present a precise reference"
+      },
+      {
+        "id": "AFH.7.7.4.c.2",
+        "text": "In a high-wing airplane, the lowered wing may block the view of the reference point during a left turn"
+      },
+      {
+        "id": "AFH.7.7.4.c.3",
+        "text": "The pilot may need to change maneuvering altitude or turn radius to keep the reference point visible at all times"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.7.4.w.1",
+        "text": "The reference point should be large and spread out to make it easier to track"
+      },
+      {
+        "id": "AFH.7.7.4.w.2",
+        "text": "Visibility of the reference point is only required during the downwind portion of the turn"
+      },
+      {
+        "id": "AFH.7.7.4.w.3",
+        "text": "The reference point should be selected upwind of the aircraft's position at entry"
+      },
+      {
+        "id": "AFH.7.7.4.w.4",
+        "text": "A high-wing airplane has no visibility disadvantage compared to a low-wing airplane during turns"
+      },
+      {
+        "id": "AFH.7.7.4.w.5",
+        "text": "The pilot should always fly from the right seat to improve reference point visibility in left turns"
+      },
+      {
+        "id": "AFH.7.7.4.w.6",
+        "text": "The reference point need not be visible when the wing is lowered in a bank"
+      },
+      {
+        "id": "AFH.7.7.4.w.7",
+        "text": "Changing the turn radius is not an acceptable method for improving reference point visibility"
+      },
+      {
+        "id": "AFH.7.7.4.w.8",
+        "text": "The reference point should be selected directly beneath the aircraft at the start of the maneuver"
+      }
+    ],
+    "source": "AFH Chapter 7, Section 7.7 – Turns Around a Point",
+    "subjects": [
+      "Reference Point Selection",
+      "Visibility",
+      "High-Wing Aircraft"
+    ]
+  },
+  {
+    "questionid": "AFH.7.8.1",
+    "question": "What is the primary characteristic of an S-turn ground reference maneuver, and what is its practical application?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.8.1.c.1",
+        "text": "The airplane's ground track resembles two opposite but equal half-circles."
+      },
+      {
+        "id": "AFH.7.8.1.c.2",
+        "text": "It is performed on each side of a selected ground-based straight-line reference."
+      },
+      {
+        "id": "AFH.7.8.1.c.3",
+        "text": "It presents a practical application for the correction of wind during a turn."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.8.1.w.1",
+        "text": "It involves maintaining a constant heading while varying altitude."
+      },
+      {
+        "id": "AFH.7.8.1.w.2",
+        "text": "The ground track forms a perfect circle around a single point."
+      },
+      {
+        "id": "AFH.7.8.1.w.3",
+        "text": "It is primarily used for practicing emergency descents."
+      },
+      {
+        "id": "AFH.7.8.1.w.4",
+        "text": "The maneuver is designed to practice stalls at various bank angles."
+      },
+      {
+        "id": "AFH.7.8.1.w.5",
+        "text": "It involves flying a square pattern around a reference point."
+      },
+      {
+        "id": "AFH.7.8.1.w.6",
+        "text": "The primary application is to practice steep turns without wind."
+      },
+      {
+        "id": "AFH.7.8.1.w.7",
+        "text": "It is a maneuver to practice landing on a short field."
+      },
+      {
+        "id": "AFH.7.8.1.w.8",
+        "text": "The ground track consists of a series of straight lines and sharp angles."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "S-Turns",
+      "Ground Reference Maneuvers",
+      "Wind Correction"
+    ]
+  },
+  {
+    "questionid": "AFH.7.8.2",
+    "question": "What are the key objectives of performing S-turns across a road or line?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.8.2.c.1",
+        "text": "Adjusting the bank angle during turns to correct for groundspeed changes to maintain a constant-radius turn."
+      },
+      {
+        "id": "AFH.7.8.2.c.2",
+        "text": "Rolling out from a turn with the required wind correction angle to compensate for any drift."
+      },
+      {
+        "id": "AFH.7.8.2.c.3",
+        "text": "Establishing and correcting the wind correction angle in order to maintain the track over the ground."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.8.2.w.1",
+        "text": "Practicing rapid altitude changes while maintaining a constant heading."
+      },
+      {
+        "id": "AFH.7.8.2.w.2",
+        "text": "Developing the ability to perform aggressive, high-G turns."
+      },
+      {
+        "id": "AFH.7.8.2.w.3",
+        "text": "Maintaining a constant bank angle regardless of groundspeed."
+      },
+      {
+        "id": "AFH.7.8.2.w.4",
+        "text": "Practicing engine-out procedures at low altitude."
+      },
+      {
+        "id": "AFH.7.8.2.w.5",
+        "text": "Minimizing the use of wind correction angles throughout the maneuver."
+      },
+      {
+        "id": "AFH.7.8.2.w.6",
+        "text": "Arriving at random points on varying headings."
+      },
+      {
+        "id": "AFH.7.8.2.w.7",
+        "text": "Practicing instrument flight rules (IFR) procedures."
+      },
+      {
+        "id": "AFH.7.8.2.w.8",
+        "text": "Maximizing groundspeed during the entire maneuver."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "S-Turns",
+      "Maneuver Objectives",
+      "Bank Angle",
+      "Wind Correction Angle"
+    ]
+  },
+  {
+    "questionid": "AFH.7.8.3",
+    "question": "When initiating an S-turn maneuver from the downwind position, what are the correct procedures?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.8.3.c.1",
+        "text": "Cross a straight-line ground reference at a 90° angle."
+      },
+      {
+        "id": "AFH.7.8.3.c.2",
+        "text": "Immediately begin a 180° constant-radius turn."
+      },
+      {
+        "id": "AFH.7.8.3.c.3",
+        "text": "Adjust the roll rate and bank angle for drift effects and changes in groundspeed."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.8.3.w.1",
+        "text": "Cross the reference at a 45° angle."
+      },
+      {
+        "id": "AFH.7.8.3.w.2",
+        "text": "Immediately begin a 360° turn."
+      },
+      {
+        "id": "AFH.7.8.3.w.3",
+        "text": "Maintain a constant bank angle throughout the entire turn."
+      },
+      {
+        "id": "AFH.7.8.3.w.4",
+        "text": "Enter the maneuver from an upwind position."
+      },
+      {
+        "id": "AFH.7.8.3.w.5",
+        "text": "Begin by flying parallel to the ground reference."
+      },
+      {
+        "id": "AFH.7.8.3.w.6",
+        "text": "Perform a series of S-turns without re-crossing the reference."
+      },
+      {
+        "id": "AFH.7.8.3.w.7",
+        "text": "Increase bank angle as groundspeed decreases."
+      },
+      {
+        "id": "AFH.7.8.3.w.8",
+        "text": "Ignore drift effects during the initial turn."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "S-Turns",
+      "Maneuver Execution",
+      "Downwind Entry"
+    ]
+  },
+  {
+    "questionid": "AFH.7.8.4",
+    "question": "How should bank angle and roll rate be adjusted during an S-turn to ensure a constant radius turn, especially when entering downwind?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.8.4.c.1",
+        "text": "The bank angle should be steepest when initiating the turn."
+      },
+      {
+        "id": "AFH.7.8.4.c.2",
+        "text": "As the turn progresses, the bank angle should be decreased as the groundspeed decreases."
+      },
+      {
+        "id": "AFH.7.8.4.c.3",
+        "text": "The rate of rollout should be decreased as the groundspeed decreases."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.8.4.w.1",
+        "text": "Maintain a constant bank angle throughout the entire turn."
+      },
+      {
+        "id": "AFH.7.8.4.w.2",
+        "text": "Increase bank angle as groundspeed decreases."
+      },
+      {
+        "id": "AFH.7.8.4.w.3",
+        "text": "The roll into the turn should be aggressive and abrupt."
+      },
+      {
+        "id": "AFH.7.8.4.w.4",
+        "text": "The bank angle should be shallowest when initiating the turn."
+      },
+      {
+        "id": "AFH.7.8.4.w.5",
+        "text": "Increase the rate of rollout as groundspeed decreases."
+      },
+      {
+        "id": "AFH.7.8.4.w.6",
+        "text": "Adjustments are only necessary for altitude control."
+      },
+      {
+        "id": "AFH.7.8.4.w.7",
+        "text": "Bank angle is adjusted based on airspeed, not groundspeed."
+      },
+      {
+        "id": "AFH.7.8.4.w.8",
+        "text": "Roll rate should be constant regardless of groundspeed."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "S-Turns",
+      "Bank Angle",
+      "Roll Rate",
+      "Constant Radius Turn",
+      "Groundspeed"
+    ]
+  },
+  {
+    "questionid": "AFH.7.8.5",
+    "question": "Regarding the wind correction angle (WCA) during an S-turn, what statements are accurate according to the provided text?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.8.5.c.1",
+        "text": "The pilot should control the wind correction angle throughout the turn."
+      },
+      {
+        "id": "AFH.7.8.5.c.2",
+        "text": "Understanding WCA involves comprehending the difference between degrees turned over the ground versus degrees turned in the air."
+      },
+      {
+        "id": "AFH.7.8.5.c.3",
+        "text": "If a 10° WCA is required when crosswind at the 90° point, the airplane's heading would be 10° ahead."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.8.5.w.1",
+        "text": "WCA is only applied during straight-and-level flight, not turns."
+      },
+      {
+        "id": "AFH.7.8.5.w.2",
+        "text": "WCA is irrelevant in S-turns as they are ground reference maneuvers."
+      },
+      {
+        "id": "AFH.7.8.5.w.3",
+        "text": "The pilot should ignore WCA to maintain a constant bank."
+      },
+      {
+        "id": "AFH.7.8.5.w.4",
+        "text": "WCA is always equal to the bank angle."
+      },
+      {
+        "id": "AFH.7.8.5.w.5",
+        "text": "The number of degrees turned over the ground is always identical to the degrees turned in the air."
+      },
+      {
+        "id": "AFH.7.8.5.w.6",
+        "text": "A 10° WCA at the 90° point means the heading is 10° behind."
+      },
+      {
+        "id": "AFH.7.8.5.w.7",
+        "text": "WCA is primarily used for altitude adjustments."
+      },
+      {
+        "id": "AFH.7.8.5.w.8",
+        "text": "Controlling WCA during a turn is a simple concept to understand."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "S-Turns",
+      "Wind Correction Angle",
+      "Drift Compensation"
+    ]
+  },
+  {
+    "questionid": "AFH.7.9.1",
+    "question": "What are the purposes of practicing elementary eights in flight training?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.9.1.c.1",
+        "text": "Developing a pilot's ability to fly with precision"
+      },
+      {
+        "id": "AFH.7.9.1.c.2",
+        "text": "Improving division of attention between flightpath and ground references"
+      },
+      {
+        "id": "AFH.7.9.1.c.3",
+        "text": "Enhancing flight control coordination skills"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.9.1.w.1",
+        "text": "Increasing aircraft speed"
+      },
+      {
+        "id": "AFH.7.9.1.w.2",
+        "text": "Reducing fuel consumption"
+      },
+      {
+        "id": "AFH.7.9.1.w.3",
+        "text": "Improving aircraft maintenance skills"
+      },
+      {
+        "id": "AFH.7.9.1.w.4",
+        "text": "Enhancing passenger comfort"
+      },
+      {
+        "id": "AFH.7.9.1.w.5",
+        "text": "Developing navigation skills"
+      },
+      {
+        "id": "AFH.7.9.1.w.6",
+        "text": "Improving communication with air traffic control"
+      },
+      {
+        "id": "AFH.7.9.1.w.7",
+        "text": "Enhancing emergency landing skills"
+      },
+      {
+        "id": "AFH.7.9.1.w.8",
+        "text": "Increasing altitude awareness"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7, Section 9",
+    "subjects": [
+      "Flight Training",
+      "Pilot Skills",
+      "Ground Reference Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.7.10.1",
+    "question": "What is the primary objective of performing eights along a road?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.10.1.c.1",
+        "text": "Develop division of attention"
+      },
+      {
+        "id": "AFH.7.10.1.c.2",
+        "text": "Compensate for drift"
+      },
+      {
+        "id": "AFH.7.10.1.c.3",
+        "text": "Maintain constant altitude"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.10.1.w.1",
+        "text": "Increase airspeed"
+      },
+      {
+        "id": "AFH.7.10.1.w.2",
+        "text": "Perform aerobatic maneuvers"
+      },
+      {
+        "id": "AFH.7.10.1.w.3",
+        "text": "Improve takeoff skills"
+      },
+      {
+        "id": "AFH.7.10.1.w.4",
+        "text": "Enhance landing techniques"
+      },
+      {
+        "id": "AFH.7.10.1.w.5",
+        "text": "Increase fuel efficiency"
+      },
+      {
+        "id": "AFH.7.10.1.w.6",
+        "text": "Improve communication skills"
+      },
+      {
+        "id": "AFH.7.10.1.w.7",
+        "text": "Enhance navigation skills"
+      },
+      {
+        "id": "AFH.7.10.1.w.8",
+        "text": "Improve engine performance"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7: Ground Reference Maneuvers Introduction",
+    "subjects": [
+      "Ground Reference Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.7.10.2",
+    "question": "Which wind condition is specifically explained for eights along a road?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.10.2.c.1",
+        "text": "Perpendicular to the ground reference"
+      },
+      {
+        "id": "AFH.7.10.2.c.2",
+        "text": "An eight along a road is a ground reference maneuver in which the ground track consists of two opposite 360° adjacent turns."
+      },
+      {
+        "id": "AFH.7.10.2.c.3",
+        "text": "An imaginary line drawn through the center of each 360° turn is perpendicular to the straight-line ground reference (road, railroad tracks, fence line, pipeline right-of-way, etc.) as illustrated in Figure 7-7."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.10.2.w.1",
+        "text": "Parallel to the ground reference"
+      },
+      {
+        "id": "AFH.7.10.2.w.2",
+        "text": "Headwind"
+      },
+      {
+        "id": "AFH.7.10.2.w.3",
+        "text": "Tailwind"
+      },
+      {
+        "id": "AFH.7.10.2.w.4",
+        "text": "No wind"
+      },
+      {
+        "id": "AFH.7.10.2.w.5",
+        "text": "Gusty wind"
+      },
+      {
+        "id": "AFH.7.10.2.w.6",
+        "text": "Variable wind"
+      },
+      {
+        "id": "AFH.7.10.2.w.7",
+        "text": "Calm wind"
+      },
+      {
+        "id": "AFH.7.10.2.w.8",
+        "text": "Crosswind"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7: Ground Reference Maneuvers Introduction",
+    "subjects": [
+      "Wind Conditions"
+    ]
+  },
+  {
+    "questionid": "AFH.7.10.3",
+    "question": "What should a pilot do when the airplane is directly downwind during eights along a road?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.10.3.c.1",
+        "text": "Steepen the bank angle"
+      },
+      {
+        "id": "AFH.7.10.3.c.2",
+        "text": "Compensate for wind drift"
+      },
+      {
+        "id": "AFH.7.10.3.c.3",
+        "text": "Maintain orientation with ground references"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.10.3.w.1",
+        "text": "Increase altitude"
+      },
+      {
+        "id": "AFH.7.10.3.w.2",
+        "text": "Decrease airspeed"
+      },
+      {
+        "id": "AFH.7.10.3.w.3",
+        "text": "Perform a loop"
+      },
+      {
+        "id": "AFH.7.10.3.w.4",
+        "text": "Reduce throttle"
+      },
+      {
+        "id": "AFH.7.10.3.w.5",
+        "text": "Engage autopilot"
+      },
+      {
+        "id": "AFH.7.10.3.w.6",
+        "text": "Perform a roll"
+      },
+      {
+        "id": "AFH.7.10.3.w.7",
+        "text": "Increase flaps"
+      },
+      {
+        "id": "AFH.7.10.3.w.8",
+        "text": "Deploy landing gear"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7: Ground Reference Maneuvers Introduction",
+    "subjects": [
+      "Pilot Techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.7.10.4",
+    "question": "What happens to the airplane's groundspeed as it turns from downwind to crosswind?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.10.4.c.1",
+        "text": "Groundspeed decreases"
+      },
+      {
+        "id": "AFH.7.10.4.c.2",
+        "text": "An eight along a road is a ground reference maneuver in which the ground track consists of two opposite 360° adjacent turns."
+      },
+      {
+        "id": "AFH.7.10.4.c.3",
+        "text": "An imaginary line drawn through the center of each 360° turn is perpendicular to the straight-line ground reference (road, railroad tracks, fence line, pipeline right-of-way, etc.) as illustrated in Figure 7-7."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.10.4.w.1",
+        "text": "Groundspeed increases"
+      },
+      {
+        "id": "AFH.7.10.4.w.2",
+        "text": "Groundspeed remains constant"
+      },
+      {
+        "id": "AFH.7.10.4.w.3",
+        "text": "Groundspeed fluctuates"
+      },
+      {
+        "id": "AFH.7.10.4.w.4",
+        "text": "Groundspeed doubles"
+      },
+      {
+        "id": "AFH.7.10.4.w.5",
+        "text": "Groundspeed halves"
+      },
+      {
+        "id": "AFH.7.10.4.w.6",
+        "text": "Groundspeed triples"
+      },
+      {
+        "id": "AFH.7.10.4.w.7",
+        "text": "Groundspeed becomes zero"
+      },
+      {
+        "id": "AFH.7.10.4.w.8",
+        "text": "Groundspeed reverses"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7: Ground Reference Maneuvers Introduction",
+    "subjects": [
+      "Groundspeed Dynamics"
+    ]
+  },
+  {
+    "questionid": "AFH.7.10.5",
+    "question": "What should a pilot adjust as the airplane's groundspeed increases when turning crosswind again?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.10.5.c.1",
+        "text": "Bank angle"
+      },
+      {
+        "id": "AFH.7.10.5.c.2",
+        "text": "Rate of turn"
+      },
+      {
+        "id": "AFH.7.10.5.c.3",
+        "text": "Wind correction angle"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.10.5.w.1",
+        "text": "Throttle setting"
+      },
+      {
+        "id": "AFH.7.10.5.w.2",
+        "text": "Flap position"
+      },
+      {
+        "id": "AFH.7.10.5.w.3",
+        "text": "Altitude"
+      },
+      {
+        "id": "AFH.7.10.5.w.4",
+        "text": "Airspeed"
+      },
+      {
+        "id": "AFH.7.10.5.w.5",
+        "text": "Engine power"
+      },
+      {
+        "id": "AFH.7.10.5.w.6",
+        "text": "Rudder input"
+      },
+      {
+        "id": "AFH.7.10.5.w.7",
+        "text": "Elevator trim"
+      },
+      {
+        "id": "AFH.7.10.5.w.8",
+        "text": "Fuel mixture"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7: Ground Reference Maneuvers Introduction",
+    "subjects": [
+      "Pilot Adjustments"
+    ]
+  },
+  {
+    "questionid": "AFH.7.11.1",
+    "question": "What are key elements of performing the 'Eights Across a Road' maneuver?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.11.1.c.1",
+        "text": "Crossing a specific ground reference point at the completion of each loop"
+      },
+      {
+        "id": "AFH.7.11.1.c.2",
+        "text": "Ensuring the crossing angle is the same each time the reference is crossed"
+      },
+      {
+        "id": "AFH.7.11.1.c.3",
+        "text": "Keeping the wings level when crossing the reference point"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.11.1.w.1",
+        "text": "Performing loops parallel to the road"
+      },
+      {
+        "id": "AFH.7.11.1.w.2",
+        "text": "Maintaining a constant altitude throughout the maneuver"
+      },
+      {
+        "id": "AFH.7.11.1.w.3",
+        "text": "Executing the maneuver with the wind parallel to the loops"
+      },
+      {
+        "id": "AFH.7.11.1.w.4",
+        "text": "Crossing the reference point at different angles each time"
+      },
+      {
+        "id": "AFH.7.11.1.w.5",
+        "text": "Keeping the wings banked when crossing the reference point"
+      },
+      {
+        "id": "AFH.7.11.1.w.6",
+        "text": "Performing the maneuver without considering wind direction"
+      },
+      {
+        "id": "AFH.7.11.1.w.7",
+        "text": "Crossing the reference point only once"
+      },
+      {
+        "id": "AFH.7.11.1.w.8",
+        "text": "Rolling from one bank to the same bank over the reference"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7, Section 11: Eights Across a Road",
+    "subjects": [
+      "Ground Reference Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.7.12.1",
+    "question": "What are the key elements of the 'Eights Around Pylons' maneuver?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.12.1.c.1",
+        "text": "Utilizes two ground reference points called pylons"
+      },
+      {
+        "id": "AFH.7.12.1.c.2",
+        "text": "Involves flying downwind between the pylons"
+      },
+      {
+        "id": "AFH.7.12.1.c.3",
+        "text": "Requires turns in opposite directions to form a figure 8"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.12.1.w.1",
+        "text": "Involves only one pylon"
+      },
+      {
+        "id": "AFH.7.12.1.w.2",
+        "text": "Requires constant altitude throughout"
+      },
+      {
+        "id": "AFH.7.12.1.w.3",
+        "text": "Uses a triangular flight pattern"
+      },
+      {
+        "id": "AFH.7.12.1.w.4",
+        "text": "Starts with an upwind heading"
+      },
+      {
+        "id": "AFH.7.12.1.w.5",
+        "text": "Requires no wind correction"
+      },
+      {
+        "id": "AFH.7.12.1.w.6",
+        "text": "Involves only straight-and-level flight"
+      },
+      {
+        "id": "AFH.7.12.1.w.7",
+        "text": "Requires a constant bank angle"
+      },
+      {
+        "id": "AFH.7.12.1.w.8",
+        "text": "Involves a circular flight path"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7: Ground Reference Maneuvers Introduction, Section 12",
+    "subjects": [
+      "Ground Reference Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.7.12.2",
+    "question": "How does wind affect the 'Eights Around Pylons' maneuver?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.12.2.c.1",
+        "text": "Determines the initial angle of bank"
+      },
+      {
+        "id": "AFH.7.12.2.c.2",
+        "text": "Affects the rate of bank angle changes"
+      },
+      {
+        "id": "AFH.7.12.2.c.3",
+        "text": "Requires wind correction angle during rollout"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.12.2.w.1",
+        "text": "Has no effect on the maneuver"
+      },
+      {
+        "id": "AFH.7.12.2.w.2",
+        "text": "Requires constant speed adjustments"
+      },
+      {
+        "id": "AFH.7.12.2.w.3",
+        "text": "Eliminates the need for straight-and-level flight"
+      },
+      {
+        "id": "AFH.7.12.2.w.4",
+        "text": "Requires a fixed bank angle"
+      },
+      {
+        "id": "AFH.7.12.2.w.5",
+        "text": "Only affects altitude"
+      },
+      {
+        "id": "AFH.7.12.2.w.6",
+        "text": "Requires a change in pylon distance"
+      },
+      {
+        "id": "AFH.7.12.2.w.7",
+        "text": "Eliminates the need for ground reference points"
+      },
+      {
+        "id": "AFH.7.12.2.w.8",
+        "text": "Requires a constant heading"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7: Ground Reference Maneuvers Introduction, Section 12",
+    "subjects": [
+      "Ground Reference Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.7.13.1",
+    "question": "Which of the following are common errors encountered during the performance of elementary eights?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.13.1.c.1",
+        "text": "Failure to adequately clear the surrounding area for safety hazards."
+      },
+      {
+        "id": "AFH.7.13.1.c.2",
+        "text": "Poor selection of ground references."
+      },
+      {
+        "id": "AFH.7.13.1.c.3",
+        "text": "Failure to maintain adequate altitude control during the maneuver."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.13.1.w.1",
+        "text": "Excessive use of flaps during the maneuver."
+      },
+      {
+        "id": "AFH.7.13.1.w.2",
+        "text": "Failure to monitor engine instruments."
+      },
+      {
+        "id": "AFH.7.13.1.w.3",
+        "text": "Incorrect trim settings for cruise flight."
+      },
+      {
+        "id": "AFH.7.13.1.w.4",
+        "text": "Misinterpretation of airspace boundaries."
+      },
+      {
+        "id": "AFH.7.13.1.w.5",
+        "text": "Failure to complete pre-flight inspection."
+      },
+      {
+        "id": "AFH.7.13.1.w.6",
+        "text": "Ignoring air traffic control clearances."
+      },
+      {
+        "id": "AFH.7.13.1.w.7",
+        "text": "Improper use of navigation lights."
+      },
+      {
+        "id": "AFH.7.13.1.w.8",
+        "text": "Failure to adjust carburetor heat."
+      }
+    ],
+    "source": "afh.7.13",
+    "subjects": [
+      "Ground Reference Maneuvers",
+      "Common Errors",
+      "Elementary Eights"
+    ]
+  },
+  {
+    "questionid": "AFH.7.14.1",
+    "question": "What is the primary goal when performing eights on pylons?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.14.1.c.1",
+        "text": "Keep the visual reference line parallel to the lateral axis"
+      },
+      {
+        "id": "AFH.7.14.1.c.2",
+        "text": "Maintain lateral orientation to a specific spot on the ground"
+      },
+      {
+        "id": "AFH.7.14.1.c.3",
+        "text": "Develop intuitive control of the airplane"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.14.1.w.1",
+        "text": "Maintain a constant altitude"
+      },
+      {
+        "id": "AFH.7.14.1.w.2",
+        "text": "Use the wingtip as the visual reference"
+      },
+      {
+        "id": "AFH.7.14.1.w.3",
+        "text": "Fly a prescribed path over the ground"
+      },
+      {
+        "id": "AFH.7.14.1.w.4",
+        "text": "Correct for wind drift"
+      },
+      {
+        "id": "AFH.7.14.1.w.5",
+        "text": "Focus solely on the flightpath"
+      },
+      {
+        "id": "AFH.7.14.1.w.6",
+        "text": "Use the same reference line for all aircraft types"
+      },
+      {
+        "id": "AFH.7.14.1.w.7",
+        "text": "Rely on the wingtip for all maneuvers"
+      },
+      {
+        "id": "AFH.7.14.1.w.8",
+        "text": "Ignore the pivotal altitude"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7: Ground Reference Maneuvers Introduction",
+    "subjects": [
+      "Ground Reference Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.7.14.2",
+    "question": "How is the pivotal altitude determined for eights on pylons?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.14.2.c.1",
+        "text": "Square the groundspeed and divide by 15 for mph"
+      },
+      {
+        "id": "AFH.7.14.2.c.2",
+        "text": "Square the groundspeed and divide by 11.3 for knots"
+      },
+      {
+        "id": "AFH.7.14.2.c.3",
+        "text": "Add the mean sea level altitude of the ground reference"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.14.2.w.1",
+        "text": "Use a fixed altitude regardless of groundspeed"
+      },
+      {
+        "id": "AFH.7.14.2.w.2",
+        "text": "Adjust based on wind speed"
+      },
+      {
+        "id": "AFH.7.14.2.w.3",
+        "text": "Use the altitude of the nearest airport"
+      },
+      {
+        "id": "AFH.7.14.2.w.4",
+        "text": "Calculate using airspeed instead of groundspeed"
+      },
+      {
+        "id": "AFH.7.14.2.w.5",
+        "text": "Use the same altitude for all maneuvers"
+      },
+      {
+        "id": "AFH.7.14.2.w.6",
+        "text": "Determine by trial and error"
+      },
+      {
+        "id": "AFH.7.14.2.w.7",
+        "text": "Use the altitude of the highest pylon"
+      },
+      {
+        "id": "AFH.7.14.2.w.8",
+        "text": "Adjust based on aircraft weight"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7: Ground Reference Maneuvers Introduction",
+    "subjects": [
+      "Ground Reference Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.7.14.3",
+    "question": "What is incorrect about using the wingtip as a visual reference in eights on pylons?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.14.3.c.1",
+        "text": "Different aircraft have different wingtip angles"
+      },
+      {
+        "id": "AFH.7.14.3.c.2",
+        "text": "The visual reference line may not be on the wingtip"
+      },
+      {
+        "id": "AFH.7.14.3.c.3",
+        "text": "Wingtip reference varies with seating position"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.14.3.w.1",
+        "text": "The wingtip is always the best reference"
+      },
+      {
+        "id": "AFH.7.14.3.w.2",
+        "text": "All pilots should use the wingtip"
+      },
+      {
+        "id": "AFH.7.14.3.w.3",
+        "text": "Wingtip reference is consistent across all aircraft"
+      },
+      {
+        "id": "AFH.7.14.3.w.4",
+        "text": "Wingtip reference is unaffected by altitude"
+      },
+      {
+        "id": "AFH.7.14.3.w.5",
+        "text": "Wingtip reference is the same for tandem seating"
+      },
+      {
+        "id": "AFH.7.14.3.w.6",
+        "text": "Wingtip reference is the same for side-by-side seating"
+      },
+      {
+        "id": "AFH.7.14.3.w.7",
+        "text": "Wingtip reference is the same for all maneuvers"
+      },
+      {
+        "id": "AFH.7.14.3.w.8",
+        "text": "Wingtip reference is unaffected by groundspeed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7: Ground Reference Maneuvers Introduction",
+    "subjects": [
+      "Ground Reference Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.7.14.4",
+    "question": "What does the visual reference line represent in eights on pylons?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.14.4.c.1",
+        "text": "A line parallel to the airplane's lateral axis"
+      },
+      {
+        "id": "AFH.7.14.4.c.2",
+        "text": "The line from the pilot's eyes to the pylon"
+      },
+      {
+        "id": "AFH.7.14.4.c.3",
+        "text": "The line that should remain parallel during turns"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.14.4.w.1",
+        "text": "The path over the ground"
+      },
+      {
+        "id": "AFH.7.14.4.w.2",
+        "text": "The wingtip of the airplane"
+      },
+      {
+        "id": "AFH.7.14.4.w.3",
+        "text": "A fixed point on the wing"
+      },
+      {
+        "id": "AFH.7.14.4.w.4",
+        "text": "The altitude of the airplane"
+      },
+      {
+        "id": "AFH.7.14.4.w.5",
+        "text": "The direction of the wind"
+      },
+      {
+        "id": "AFH.7.14.4.w.6",
+        "text": "The airplane's heading"
+      },
+      {
+        "id": "AFH.7.14.4.w.7",
+        "text": "The angle of bank"
+      },
+      {
+        "id": "AFH.7.14.4.w.8",
+        "text": "The aircraft's nose direction"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7: Ground Reference Maneuvers Introduction",
+    "subjects": [
+      "Ground Reference Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.7.14.5",
+    "question": "Why is eights on pylons considered an advanced maneuver?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.14.5.c.1",
+        "text": "Requires intuitive control of the airplane"
+      },
+      {
+        "id": "AFH.7.14.5.c.2",
+        "text": "Involves varying altitude to maintain visual reference"
+      },
+      {
+        "id": "AFH.7.14.5.c.3",
+        "text": "Demands attention division between flightpath and pylons"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.14.5.w.1",
+        "text": "Involves constant altitude"
+      },
+      {
+        "id": "AFH.7.14.5.w.2",
+        "text": "Requires no wind correction"
+      },
+      {
+        "id": "AFH.7.14.5.w.3",
+        "text": "Is simpler than other ground maneuvers"
+      },
+      {
+        "id": "AFH.7.14.5.w.4",
+        "text": "Uses a fixed visual reference"
+      },
+      {
+        "id": "AFH.7.14.5.w.5",
+        "text": "Involves only one pylon"
+      },
+      {
+        "id": "AFH.7.14.5.w.6",
+        "text": "Requires less pilot skill"
+      },
+      {
+        "id": "AFH.7.14.5.w.7",
+        "text": "Is primarily a visual exercise"
+      },
+      {
+        "id": "AFH.7.14.5.w.8",
+        "text": "Focuses only on speed control"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7: Ground Reference Maneuvers Introduction",
+    "subjects": [
+      "Ground Reference Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.7.14.6",
+    "question": "What is the effect of groundspeed on pivotal altitude?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.14.6.c.1",
+        "text": "Higher groundspeed increases pivotal altitude"
+      },
+      {
+        "id": "AFH.7.14.6.c.2",
+        "text": "Pivotal altitude is calculated using groundspeed"
+      },
+      {
+        "id": "AFH.7.14.6.c.3",
+        "text": "Groundspeed affects the visual reference line"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.14.6.w.1",
+        "text": "Groundspeed has no effect"
+      },
+      {
+        "id": "AFH.7.14.6.w.2",
+        "text": "Pivotal altitude is fixed regardless of groundspeed"
+      },
+      {
+        "id": "AFH.7.14.6.w.3",
+        "text": "Groundspeed affects only wind correction"
+      },
+      {
+        "id": "AFH.7.14.6.w.4",
+        "text": "Groundspeed is irrelevant to altitude"
+      },
+      {
+        "id": "AFH.7.14.6.w.5",
+        "text": "Pivotal altitude decreases with higher groundspeed"
+      },
+      {
+        "id": "AFH.7.14.6.w.6",
+        "text": "Groundspeed affects only the flightpath"
+      },
+      {
+        "id": "AFH.7.14.6.w.7",
+        "text": "Groundspeed affects only the aircraft's heading"
+      },
+      {
+        "id": "AFH.7.14.6.w.8",
+        "text": "Groundspeed affects only the bank angle"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7: Ground Reference Maneuvers Introduction",
+    "subjects": [
+      "Ground Reference Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.7.14.7",
+    "question": "What is the role of the visual reference line in eights on pylons?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.14.7.c.1",
+        "text": "Helps maintain orientation to the pylon"
+      },
+      {
+        "id": "AFH.7.14.7.c.2",
+        "text": "Ensures the airplane pivots correctly"
+      },
+      {
+        "id": "AFH.7.14.7.c.3",
+        "text": "Aids in dividing attention between tasks"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.14.7.w.1",
+        "text": "Determines the altitude"
+      },
+      {
+        "id": "AFH.7.14.7.w.2",
+        "text": "Is used to correct for wind"
+      },
+      {
+        "id": "AFH.7.14.7.w.3",
+        "text": "Is fixed at the wingtip"
+      },
+      {
+        "id": "AFH.7.14.7.w.4",
+        "text": "Is irrelevant to the maneuver"
+      },
+      {
+        "id": "AFH.7.14.7.w.5",
+        "text": "Is used to maintain constant speed"
+      },
+      {
+        "id": "AFH.7.14.7.w.6",
+        "text": "Is used to maintain constant heading"
+      },
+      {
+        "id": "AFH.7.14.7.w.7",
+        "text": "Is used to maintain constant bank angle"
+      },
+      {
+        "id": "AFH.7.14.7.w.8",
+        "text": "Is used to maintain constant altitude"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7: Ground Reference Maneuvers Introduction",
+    "subjects": [
+      "Ground Reference Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.7.14.8",
+    "question": "What is a common misconception about the visual reference line in eights on pylons?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.14.8.c.1",
+        "text": "It is not necessarily on the wingtip"
+      },
+      {
+        "id": "AFH.7.14.8.c.2",
+        "text": "It varies with the pilot's seating position"
+      },
+      {
+        "id": "AFH.7.14.8.c.3",
+        "text": "It differs for each type of aircraft"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.14.8.w.1",
+        "text": "It is always on the wingtip"
+      },
+      {
+        "id": "AFH.7.14.8.w.2",
+        "text": "It is the same for all pilots"
+      },
+      {
+        "id": "AFH.7.14.8.w.3",
+        "text": "It is fixed regardless of aircraft type"
+      },
+      {
+        "id": "AFH.7.14.8.w.4",
+        "text": "It is unaffected by altitude"
+      },
+      {
+        "id": "AFH.7.14.8.w.5",
+        "text": "It is the same for all maneuvers"
+      },
+      {
+        "id": "AFH.7.14.8.w.6",
+        "text": "It is unaffected by groundspeed"
+      },
+      {
+        "id": "AFH.7.14.8.w.7",
+        "text": "It is the same for all seating positions"
+      },
+      {
+        "id": "AFH.7.14.8.w.8",
+        "text": "It is the same for all wing types"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7: Ground Reference Maneuvers Introduction",
+    "subjects": [
+      "Ground Reference Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.7.14.9",
+    "question": "What is the significance of the lateral axis in eights on pylons?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.14.9.c.1",
+        "text": "The visual reference line should be parallel to it"
+      },
+      {
+        "id": "AFH.7.14.9.c.2",
+        "text": "It helps in maintaining the correct pivot point"
+      },
+      {
+        "id": "AFH.7.14.9.c.3",
+        "text": "It is crucial for the maneuver's success"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.14.9.w.1",
+        "text": "It is irrelevant to the maneuver"
+      },
+      {
+        "id": "AFH.7.14.9.w.2",
+        "text": "It determines the altitude"
+      },
+      {
+        "id": "AFH.7.14.9.w.3",
+        "text": "It is used to correct for wind"
+      },
+      {
+        "id": "AFH.7.14.9.w.4",
+        "text": "It is used to maintain constant speed"
+      },
+      {
+        "id": "AFH.7.14.9.w.5",
+        "text": "It is used to maintain constant heading"
+      },
+      {
+        "id": "AFH.7.14.9.w.6",
+        "text": "It is used to maintain constant bank angle"
+      },
+      {
+        "id": "AFH.7.14.9.w.7",
+        "text": "It is used to maintain constant altitude"
+      },
+      {
+        "id": "AFH.7.14.9.w.8",
+        "text": "It is used to determine the flightpath"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7: Ground Reference Maneuvers Introduction",
+    "subjects": [
+      "Ground Reference Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.7.14.10",
+    "question": "What should pilots focus on when performing eights on pylons?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.14.10.c.1",
+        "text": "Maintaining the visual reference line"
+      },
+      {
+        "id": "AFH.7.14.10.c.2",
+        "text": "Adjusting altitude based on groundspeed"
+      },
+      {
+        "id": "AFH.7.14.10.c.3",
+        "text": "Dividing attention between flightpath and pylons"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.14.10.w.1",
+        "text": "Maintaining a constant altitude"
+      },
+      {
+        "id": "AFH.7.14.10.w.2",
+        "text": "Using the wingtip as the reference"
+      },
+      {
+        "id": "AFH.7.14.10.w.3",
+        "text": "Flying a prescribed ground path"
+      },
+      {
+        "id": "AFH.7.14.10.w.4",
+        "text": "Ignoring the pivotal altitude"
+      },
+      {
+        "id": "AFH.7.14.10.w.5",
+        "text": "Focusing solely on wind correction"
+      },
+      {
+        "id": "AFH.7.14.10.w.6",
+        "text": "Using a fixed visual reference"
+      },
+      {
+        "id": "AFH.7.14.10.w.7",
+        "text": "Maintaining constant speed"
+      },
+      {
+        "id": "AFH.7.14.10.w.8",
+        "text": "Maintaining constant heading"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 7: Ground Reference Maneuvers Introduction",
+    "subjects": [
+      "Ground Reference Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.7.15.1",
+    "question": "Which of the following are common errors in the performance of eights on pylons?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.15.1.c.1",
+        "text": "Skidding or slipping in turns"
+      },
+      {
+        "id": "AFH.7.15.1.c.2",
+        "text": "Failure to enter pylon turns into the wind"
+      },
+      {
+        "id": "AFH.7.15.1.c.3",
+        "text": "Inability to select pivotal altitude"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.15.1.w.1",
+        "text": "Applying inside rudder to yaw the wing forward when the reference line moves ahead of the pylon"
+      },
+      {
+        "id": "AFH.7.15.1.w.2",
+        "text": "Using aileron input to compensate for crosswind drift between pylons"
+      },
+      {
+        "id": "AFH.7.15.1.w.3",
+        "text": "Entering the maneuver at an excessively high airspeed"
+      },
+      {
+        "id": "AFH.7.15.1.w.4",
+        "text": "Failure to maintain a constant heading when approaching the first pylon"
+      },
+      {
+        "id": "AFH.7.15.1.w.5",
+        "text": "Applying back pressure during turns to maintain altitude at the expense of coordination"
+      },
+      {
+        "id": "AFH.7.15.1.w.6",
+        "text": "Selecting pylons that are too far apart for the aircraft's performance"
+      },
+      {
+        "id": "AFH.7.15.1.w.7",
+        "text": "Excessive use of trim to compensate for changing bank angles during the maneuver"
+      },
+      {
+        "id": "AFH.7.15.1.w.8",
+        "text": "It is mainly about unrelated advanced turbine transition procedures not covered in common errors."
+      }
+    ],
+    "source": "AFH Chapter 7, Section 7.15 – Common Errors",
+    "subjects": [
+      "Eights on Pylons",
+      "Ground Reference Maneuvers",
+      "Common Errors"
+    ]
+  },
+  {
+    "questionid": "AFH.7.16.1",
+    "question": "After mastering ground reference maneuvers, which of the following skills should a pilot be able to command or perform?",
+    "correct_answers": [
+      {
+        "id": "AFH.7.16.1.c.1",
+        "text": "Command the airplane to specific pitch, roll, and yaw attitudes."
+      },
+      {
+        "id": "AFH.7.16.1.c.2",
+        "text": "Correct for the effects of wind drift."
+      },
+      {
+        "id": "AFH.7.16.1.c.3",
+        "text": "Control the airplane’s orientation in relation to ground-based references."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.7.16.1.w.1",
+        "text": "Perform complex instrument approaches."
+      },
+      {
+        "id": "AFH.7.16.1.w.2",
+        "text": "Calculate precise weight and balance."
+      },
+      {
+        "id": "AFH.7.16.1.w.3",
+        "text": "Interpret weather radar data."
+      },
+      {
+        "id": "AFH.7.16.1.w.4",
+        "text": "Execute engine failure procedures."
+      },
+      {
+        "id": "AFH.7.16.1.w.5",
+        "text": "Identify different types of clouds."
+      },
+      {
+        "id": "AFH.7.16.1.w.6",
+        "text": "Manage aircraft systems during abnormal operations."
+      },
+      {
+        "id": "AFH.7.16.1.w.7",
+        "text": "Conduct thorough pre-flight inspections."
+      },
+      {
+        "id": "AFH.7.16.1.w.8",
+        "text": "Navigate solely by dead reckoning."
+      }
+    ],
+    "source": "AFH Chapter 7",
+    "subjects": [
+      "Ground Reference Maneuvers",
+      "Flight Skills"
+    ]
+  }
+]

@@ -1,0 +1,3767 @@
+[
+  {
+    "questionBank": {
+      "chapterId": "afh.glossary",
+      "bookId": "AFH",
+      "chapterNumber": 20,
+      "chapterTitle": "Airplane Flying Handbook (FAA-H-8083-3A)",
+      "totalRequiredQuestions": 63,
+      "metadata": {
+        "generatedAtUtc": "2026-03-27T17:43:55.217Z",
+        "chapterId": "afh.glossary",
+        "chapterNumber": 20,
+        "totalSections": 25,
+        "totalRequiredQuestions": 63,
+        "providers": [
+          "openai",
+          "gemini"
+        ],
+        "models": [
+          "gpt-4o",
+          "gemini-2.5-flash"
+        ],
+        "promptTokens": 31424,
+        "completionTokens": 12890,
+        "totalTokens": 44314,
+        "sectionQuestionSummary": [
+          {
+            "sectionId": "afh.glossary.1",
+            "sectionTitle": "Numbers and Symbols",
+            "sectionOrdinal": 1,
+            "sectionWeightPercentage": 0.38,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.glossary.2",
+            "sectionTitle": "A",
+            "sectionOrdinal": 2,
+            "sectionWeightPercentage": 10.13,
+            "questionsGenerated": 6
+          },
+          {
+            "sectionId": "afh.glossary.3",
+            "sectionTitle": "B",
+            "sectionOrdinal": 3,
+            "sectionWeightPercentage": 3.36,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.glossary.4",
+            "sectionTitle": "C",
+            "sectionOrdinal": 4,
+            "sectionWeightPercentage": 10.16,
+            "questionsGenerated": 6
+          },
+          {
+            "sectionId": "afh.glossary.5",
+            "sectionTitle": "D",
+            "sectionOrdinal": 5,
+            "sectionWeightPercentage": 4.37,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.glossary.6",
+            "sectionTitle": "E",
+            "sectionOrdinal": 6,
+            "sectionWeightPercentage": 4.42,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.glossary.7",
+            "sectionTitle": "F",
+            "sectionOrdinal": 7,
+            "sectionWeightPercentage": 5.4,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.glossary.8",
+            "sectionTitle": "G",
+            "sectionOrdinal": 8,
+            "sectionWeightPercentage": 3.3,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.glossary.9",
+            "sectionTitle": "H",
+            "sectionOrdinal": 9,
+            "sectionWeightPercentage": 2.8,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.glossary.10",
+            "sectionTitle": "I",
+            "sectionOrdinal": 10,
+            "sectionWeightPercentage": 4.27,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.glossary.11",
+            "sectionTitle": "J",
+            "sectionOrdinal": 11,
+            "sectionWeightPercentage": 0.08,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.glossary.12",
+            "sectionTitle": "K",
+            "sectionOrdinal": 12,
+            "sectionWeightPercentage": 0.2,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.glossary.13",
+            "sectionTitle": "L",
+            "sectionOrdinal": 13,
+            "sectionWeightPercentage": 3.3,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.glossary.14",
+            "sectionTitle": "M",
+            "sectionOrdinal": 14,
+            "sectionWeightPercentage": 4.42,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.glossary.15",
+            "sectionTitle": "N",
+            "sectionOrdinal": 15,
+            "sectionWeightPercentage": 1.77,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.glossary.16",
+            "sectionTitle": "O",
+            "sectionOrdinal": 16,
+            "sectionWeightPercentage": 1.19,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.glossary.17",
+            "sectionTitle": "P",
+            "sectionOrdinal": 17,
+            "sectionWeightPercentage": 5.17,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.glossary.18",
+            "sectionTitle": "R",
+            "sectionOrdinal": 18,
+            "sectionWeightPercentage": 4.85,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.glossary.19",
+            "sectionTitle": "S",
+            "sectionOrdinal": 19,
+            "sectionWeightPercentage": 9.29,
+            "questionsGenerated": 6
+          },
+          {
+            "sectionId": "afh.glossary.20",
+            "sectionTitle": "T",
+            "sectionOrdinal": 20,
+            "sectionWeightPercentage": 8.66,
+            "questionsGenerated": 5
+          },
+          {
+            "sectionId": "afh.glossary.21",
+            "sectionTitle": "U",
+            "sectionOrdinal": 21,
+            "sectionWeightPercentage": 1.18,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.glossary.22",
+            "sectionTitle": "V",
+            "sectionOrdinal": 22,
+            "sectionWeightPercentage": 7.1,
+            "questionsGenerated": 4
+          },
+          {
+            "sectionId": "afh.glossary.23",
+            "sectionTitle": "W",
+            "sectionOrdinal": 23,
+            "sectionWeightPercentage": 3.46,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.glossary.24",
+            "sectionTitle": "Y",
+            "sectionOrdinal": 24,
+            "sectionWeightPercentage": 0.25,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.glossary.25",
+            "sectionTitle": "Z",
+            "sectionOrdinal": 25,
+            "sectionWeightPercentage": 0.49,
+            "questionsGenerated": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "questionid": "AFH.20.1.1",
+    "question": "What is the 100-Hour Inspection in aviation regulations?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.1.1.c.1",
+        "text": "An inspection identical in scope to an annual inspection"
+      },
+      {
+        "id": "AFH.20.1.1.c.2",
+        "text": "Conducted every 100 hours of flight"
+      },
+      {
+        "id": "AFH.20.1.1.c.3",
+        "text": "Required for aircraft under 12,500 pounds used for hire"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.1.1.w.1",
+        "text": "Conducted every 50 hours of flight"
+      },
+      {
+        "id": "AFH.20.1.1.w.2",
+        "text": "Only required for private aircraft"
+      },
+      {
+        "id": "AFH.20.1.1.w.3",
+        "text": "Applies to aircraft over 12,500 pounds"
+      },
+      {
+        "id": "AFH.20.1.1.w.4",
+        "text": "Conducted every 200 hours of flight"
+      },
+      {
+        "id": "AFH.20.1.1.w.5",
+        "text": "Only required for cargo aircraft"
+      },
+      {
+        "id": "AFH.20.1.1.w.6",
+        "text": "Applies to helicopters only"
+      },
+      {
+        "id": "AFH.20.1.1.w.7",
+        "text": "Conducted every 150 hours of flight"
+      },
+      {
+        "id": "AFH.20.1.1.w.8",
+        "text": "Only required for military aircraft"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A), Numbers and Symbols",
+    "subjects": [
+      "Aviation Regulations"
+    ]
+  },
+  {
+    "questionid": "AFH.20.2.1",
+    "question": "What is the definition of absolute altitude?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.2.1.c.1",
+        "text": "The vertical distance of an airplane above the terrain"
+      },
+      {
+        "id": "AFH.20.2.1.c.2",
+        "text": "The vertical distance above ground level (AGL)"
+      },
+      {
+        "id": "AFH.20.2.1.c.3",
+        "text": "The height of an airplane above the surface"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.2.1.w.1",
+        "text": "The altitude at which a climb is no longer possible"
+      },
+      {
+        "id": "AFH.20.2.1.w.2",
+        "text": "The distance required to accelerate to V1"
+      },
+      {
+        "id": "AFH.20.2.1.w.3",
+        "text": "The distance required to stop an airplane"
+      },
+      {
+        "id": "AFH.20.2.1.w.4",
+        "text": "The force involved in overcoming inertia"
+      },
+      {
+        "id": "AFH.20.2.1.w.5",
+        "text": "The science of the action of air on an object"
+      },
+      {
+        "id": "AFH.20.2.1.w.6",
+        "text": "Primary flight control surfaces"
+      },
+      {
+        "id": "AFH.20.2.1.w.7",
+        "text": "The process of planning and controlling altitude"
+      },
+      {
+        "id": "AFH.20.2.1.w.8",
+        "text": "Journals containing a record of operating time"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Altitude"
+    ]
+  },
+  {
+    "questionid": "AFH.20.2.2",
+    "question": "What is the absolute ceiling of an airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.2.2.c.1",
+        "text": "The altitude at which a climb is no longer possible"
+      },
+      {
+        "id": "AFH.20.2.2.c.2",
+        "text": "The maximum altitude an airplane can reach"
+      },
+      {
+        "id": "AFH.20.2.2.c.3",
+        "text": "The highest point an airplane can sustain level flight"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.2.2.w.1",
+        "text": "The vertical distance above terrain"
+      },
+      {
+        "id": "AFH.20.2.2.w.2",
+        "text": "The distance required to accelerate to V1"
+      },
+      {
+        "id": "AFH.20.2.2.w.3",
+        "text": "The distance required to stop an airplane"
+      },
+      {
+        "id": "AFH.20.2.2.w.4",
+        "text": "The force involved in overcoming inertia"
+      },
+      {
+        "id": "AFH.20.2.2.w.5",
+        "text": "The science of the action of air on an object"
+      },
+      {
+        "id": "AFH.20.2.2.w.6",
+        "text": "Primary flight control surfaces"
+      },
+      {
+        "id": "AFH.20.2.2.w.7",
+        "text": "The process of planning and controlling altitude"
+      },
+      {
+        "id": "AFH.20.2.2.w.8",
+        "text": "Journals containing a record of operating time"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Ceiling"
+    ]
+  },
+  {
+    "questionid": "AFH.20.2.3",
+    "question": "What does accelerate-go distance refer to?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.2.3.c.1",
+        "text": "The distance to accelerate to V1 and continue takeoff"
+      },
+      {
+        "id": "AFH.20.2.3.c.2",
+        "text": "Includes distance to climb to 35 feet"
+      },
+      {
+        "id": "AFH.20.2.3.c.3",
+        "text": "V2 speed must be attained by 35 feet"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.2.3.w.1",
+        "text": "The distance required to stop an airplane"
+      },
+      {
+        "id": "AFH.20.2.3.w.2",
+        "text": "The altitude at which a climb is no longer possible"
+      },
+      {
+        "id": "AFH.20.2.3.w.3",
+        "text": "The vertical distance above terrain"
+      },
+      {
+        "id": "AFH.20.2.3.w.4",
+        "text": "The force involved in overcoming inertia"
+      },
+      {
+        "id": "AFH.20.2.3.w.5",
+        "text": "The science of the action of air on an object"
+      },
+      {
+        "id": "AFH.20.2.3.w.6",
+        "text": "Primary flight control surfaces"
+      },
+      {
+        "id": "AFH.20.2.3.w.7",
+        "text": "The process of planning and controlling altitude"
+      },
+      {
+        "id": "AFH.20.2.3.w.8",
+        "text": "Journals containing a record of operating time"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Takeoff"
+    ]
+  },
+  {
+    "questionid": "AFH.20.2.4",
+    "question": "What is the function of ailerons on an airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.2.4.c.1",
+        "text": "Control roll about the longitudinal axis"
+      },
+      {
+        "id": "AFH.20.2.4.c.2",
+        "text": "Mounted on the trailing edge of the wing"
+      },
+      {
+        "id": "AFH.20.2.4.c.3",
+        "text": "Primary flight control surfaces"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.2.4.w.1",
+        "text": "The distance required to accelerate to V1"
+      },
+      {
+        "id": "AFH.20.2.4.w.2",
+        "text": "The altitude at which a climb is no longer possible"
+      },
+      {
+        "id": "AFH.20.2.4.w.3",
+        "text": "The vertical distance above terrain"
+      },
+      {
+        "id": "AFH.20.2.4.w.4",
+        "text": "The force involved in overcoming inertia"
+      },
+      {
+        "id": "AFH.20.2.4.w.5",
+        "text": "The science of the action of air on an object"
+      },
+      {
+        "id": "AFH.20.2.4.w.6",
+        "text": "The process of planning and controlling altitude"
+      },
+      {
+        "id": "AFH.20.2.4.w.7",
+        "text": "Journals containing a record of operating time"
+      },
+      {
+        "id": "AFH.20.2.4.w.8",
+        "text": "The distance required to stop an airplane"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Flight Control"
+    ]
+  },
+  {
+    "questionid": "AFH.20.2.5",
+    "question": "What are aircraft logbooks used for?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.2.5.c.1",
+        "text": "Record of total operating time"
+      },
+      {
+        "id": "AFH.20.2.5.c.2",
+        "text": "Record of repairs and alterations"
+      },
+      {
+        "id": "AFH.20.2.5.c.3",
+        "text": "Record of inspections performed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.2.5.w.1",
+        "text": "The distance required to accelerate to V1"
+      },
+      {
+        "id": "AFH.20.2.5.w.2",
+        "text": "The altitude at which a climb is no longer possible"
+      },
+      {
+        "id": "AFH.20.2.5.w.3",
+        "text": "The vertical distance above terrain"
+      },
+      {
+        "id": "AFH.20.2.5.w.4",
+        "text": "The force involved in overcoming inertia"
+      },
+      {
+        "id": "AFH.20.2.5.w.5",
+        "text": "The science of the action of air on an object"
+      },
+      {
+        "id": "AFH.20.2.5.w.6",
+        "text": "Primary flight control surfaces"
+      },
+      {
+        "id": "AFH.20.2.5.w.7",
+        "text": "The process of planning and controlling altitude"
+      },
+      {
+        "id": "AFH.20.2.5.w.8",
+        "text": "The distance required to stop an airplane"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Maintenance"
+    ]
+  },
+  {
+    "questionid": "AFH.20.2.6",
+    "question": "What is adverse yaw in flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.2.6.c.1",
+        "text": "Nose tends to yaw toward the outside of the turn"
+      },
+      {
+        "id": "AFH.20.2.6.c.2",
+        "text": "Caused by higher induced drag on the outside wing"
+      },
+      {
+        "id": "AFH.20.2.6.c.3",
+        "text": "Induced drag is a by-product of lift"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.2.6.w.1",
+        "text": "The distance required to accelerate to V1"
+      },
+      {
+        "id": "AFH.20.2.6.w.2",
+        "text": "The altitude at which a climb is no longer possible"
+      },
+      {
+        "id": "AFH.20.2.6.w.3",
+        "text": "The vertical distance above terrain"
+      },
+      {
+        "id": "AFH.20.2.6.w.4",
+        "text": "The force involved in overcoming inertia"
+      },
+      {
+        "id": "AFH.20.2.6.w.5",
+        "text": "The science of the action of air on an object"
+      },
+      {
+        "id": "AFH.20.2.6.w.6",
+        "text": "Primary flight control surfaces"
+      },
+      {
+        "id": "AFH.20.2.6.w.7",
+        "text": "The process of planning and controlling altitude"
+      },
+      {
+        "id": "AFH.20.2.6.w.8",
+        "text": "Journals containing a record of operating time"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Aerodynamics"
+    ]
+  },
+  {
+    "questionid": "AFH.20.3.1",
+    "question": "What is the 'back side of the power curve' in aviation?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.3.1.c.1",
+        "text": "Flight regime where higher airspeed requires lower power to maintain altitude"
+      },
+      {
+        "id": "AFH.20.3.1.c.2",
+        "text": "Lower airspeed requires higher power to maintain altitude"
+      },
+      {
+        "id": "AFH.20.3.1.c.3",
+        "text": "Associated with maintaining altitude"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.3.1.w.1",
+        "text": "Flight regime where higher airspeed requires higher power to maintain altitude"
+      },
+      {
+        "id": "AFH.20.3.1.w.2",
+        "text": "Lower airspeed requires lower power to maintain altitude"
+      },
+      {
+        "id": "AFH.20.3.1.w.3",
+        "text": "Associated with descending"
+      },
+      {
+        "id": "AFH.20.3.1.w.4",
+        "text": "Used for takeoff procedures"
+      },
+      {
+        "id": "AFH.20.3.1.w.5",
+        "text": "Related to engine failure scenarios"
+      },
+      {
+        "id": "AFH.20.3.1.w.6",
+        "text": "Involves reducing drag"
+      },
+      {
+        "id": "AFH.20.3.1.w.7",
+        "text": "Primarily used in aerobatics"
+      },
+      {
+        "id": "AFH.20.3.1.w.8",
+        "text": "Linked to fuel efficiency"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Aerodynamics"
+    ]
+  },
+  {
+    "questionid": "AFH.20.3.2",
+    "question": "What is the function of a boost pump in an aircraft?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.3.2.c.1",
+        "text": "Provides fuel to the engine for starting"
+      },
+      {
+        "id": "AFH.20.3.2.c.2",
+        "text": "Pressurizes fuel lines to prevent vapor lock"
+      },
+      {
+        "id": "AFH.20.3.2.c.3",
+        "text": "Provides fuel pressure if engine-driven pump fails"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.3.2.w.1",
+        "text": "Used to increase airspeed"
+      },
+      {
+        "id": "AFH.20.3.2.w.2",
+        "text": "Regulates cabin pressure"
+      },
+      {
+        "id": "AFH.20.3.2.w.3",
+        "text": "Controls hydraulic systems"
+      },
+      {
+        "id": "AFH.20.3.2.w.4",
+        "text": "Monitors engine temperature"
+      },
+      {
+        "id": "AFH.20.3.2.w.5",
+        "text": "Adjusts wing flaps"
+      },
+      {
+        "id": "AFH.20.3.2.w.6",
+        "text": "Operates landing gear"
+      },
+      {
+        "id": "AFH.20.3.2.w.7",
+        "text": "Manages electrical systems"
+      },
+      {
+        "id": "AFH.20.3.2.w.8",
+        "text": "Controls aileron movement"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Aircraft Systems"
+    ]
+  },
+  {
+    "questionid": "AFH.20.4.1",
+    "question": "What is the purpose of cabin pressurization in an aircraft?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.4.1.c.1",
+        "text": "Simulates lower altitude pressure conditions"
+      },
+      {
+        "id": "AFH.20.4.1.c.2",
+        "text": "Increases occupant comfort"
+      },
+      {
+        "id": "AFH.20.4.1.c.3",
+        "text": "Prevents hypoxia"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.4.1.w.1",
+        "text": "Reduces fuel consumption"
+      },
+      {
+        "id": "AFH.20.4.1.w.2",
+        "text": "Increases engine efficiency"
+      },
+      {
+        "id": "AFH.20.4.1.w.3",
+        "text": "Improves aerodynamic performance"
+      },
+      {
+        "id": "AFH.20.4.1.w.4",
+        "text": "Enhances structural integrity"
+      },
+      {
+        "id": "AFH.20.4.1.w.5",
+        "text": "Reduces noise levels"
+      },
+      {
+        "id": "AFH.20.4.1.w.6",
+        "text": "Increases airspeed"
+      },
+      {
+        "id": "AFH.20.4.1.w.7",
+        "text": "Improves navigation accuracy"
+      },
+      {
+        "id": "AFH.20.4.1.w.8",
+        "text": "Enhances communication clarity"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Cabin pressurization"
+    ]
+  },
+  {
+    "questionid": "AFH.20.4.2",
+    "question": "What does calibrated airspeed (CAS) account for?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.4.2.c.1",
+        "text": "Installation error"
+      },
+      {
+        "id": "AFH.20.4.2.c.2",
+        "text": "Instrument error"
+      },
+      {
+        "id": "AFH.20.4.2.c.3",
+        "text": "Airspeed errors at low speeds"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.4.2.w.1",
+        "text": "Wind speed variations"
+      },
+      {
+        "id": "AFH.20.4.2.w.2",
+        "text": "Altitude changes"
+      },
+      {
+        "id": "AFH.20.4.2.w.3",
+        "text": "Temperature fluctuations"
+      },
+      {
+        "id": "AFH.20.4.2.w.4",
+        "text": "Humidity levels"
+      },
+      {
+        "id": "AFH.20.4.2.w.5",
+        "text": "Pilot input errors"
+      },
+      {
+        "id": "AFH.20.4.2.w.6",
+        "text": "Engine performance"
+      },
+      {
+        "id": "AFH.20.4.2.w.7",
+        "text": "Fuel efficiency"
+      },
+      {
+        "id": "AFH.20.4.2.w.8",
+        "text": "Navigation errors"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Calibrated airspeed"
+    ]
+  },
+  {
+    "questionid": "AFH.20.4.3",
+    "question": "What is a characteristic of a cambered airfoil?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.4.3.c.1",
+        "text": "Upper camber is more pronounced"
+      },
+      {
+        "id": "AFH.20.4.3.c.2",
+        "text": "Lower camber is comparatively flat"
+      },
+      {
+        "id": "AFH.20.4.3.c.3",
+        "text": "Higher airflow velocity above the wing"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.4.3.w.1",
+        "text": "Symmetrical upper and lower surfaces"
+      },
+      {
+        "id": "AFH.20.4.3.w.2",
+        "text": "Equal airflow velocity above and below"
+      },
+      {
+        "id": "AFH.20.4.3.w.3",
+        "text": "Increased drag"
+      },
+      {
+        "id": "AFH.20.4.3.w.4",
+        "text": "Decreased lift"
+      },
+      {
+        "id": "AFH.20.4.3.w.5",
+        "text": "Uniform pressure distribution"
+      },
+      {
+        "id": "AFH.20.4.3.w.6",
+        "text": "Constant angle of attack"
+      },
+      {
+        "id": "AFH.20.4.3.w.7",
+        "text": "Reduced stall speed"
+      },
+      {
+        "id": "AFH.20.4.3.w.8",
+        "text": "Enhanced stability"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Cambered airfoil"
+    ]
+  },
+  {
+    "questionid": "AFH.20.4.4",
+    "question": "What operational hazard does carburetor ice pose?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.4.4.c.1",
+        "text": "Cuts off fuel/air charge flow"
+      },
+      {
+        "id": "AFH.20.4.4.c.2",
+        "text": "Varies fuel/air ratio"
+      },
+      {
+        "id": "AFH.20.4.4.c.3",
+        "text": "Forms due to temperature drop"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.4.4.w.1",
+        "text": "Increases engine temperature"
+      },
+      {
+        "id": "AFH.20.4.4.w.2",
+        "text": "Enhances fuel efficiency"
+      },
+      {
+        "id": "AFH.20.4.4.w.3",
+        "text": "Improves combustion"
+      },
+      {
+        "id": "AFH.20.4.4.w.4",
+        "text": "Reduces engine noise"
+      },
+      {
+        "id": "AFH.20.4.4.w.5",
+        "text": "Increases airspeed"
+      },
+      {
+        "id": "AFH.20.4.4.w.6",
+        "text": "Improves throttle response"
+      },
+      {
+        "id": "AFH.20.4.4.w.7",
+        "text": "Enhances engine power"
+      },
+      {
+        "id": "AFH.20.4.4.w.8",
+        "text": "Reduces vibration"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Carburetor ice"
+    ]
+  },
+  {
+    "questionid": "AFH.20.4.5",
+    "question": "What is a feature of a pressure carburetor?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.4.5.c.1",
+        "text": "Closed feed system"
+      },
+      {
+        "id": "AFH.20.4.5.c.2",
+        "text": "Meters fuel through fixed jets"
+      },
+      {
+        "id": "AFH.20.4.5.c.3",
+        "text": "Discharges fuel under positive pressure"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.4.5.w.1",
+        "text": "Vented float chamber"
+      },
+      {
+        "id": "AFH.20.4.5.w.2",
+        "text": "Suction pickup from venturi tube"
+      },
+      {
+        "id": "AFH.20.4.5.w.3",
+        "text": "Open feed system"
+      },
+      {
+        "id": "AFH.20.4.5.w.4",
+        "text": "Variable fuel jets"
+      },
+      {
+        "id": "AFH.20.4.5.w.5",
+        "text": "Negative pressure discharge"
+      },
+      {
+        "id": "AFH.20.4.5.w.6",
+        "text": "Incorporates a throttle body"
+      },
+      {
+        "id": "AFH.20.4.5.w.7",
+        "text": "Uses a float mechanism"
+      },
+      {
+        "id": "AFH.20.4.5.w.8",
+        "text": "Regulates air intake"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Pressure carburetor"
+    ]
+  },
+  {
+    "questionid": "AFH.20.4.6",
+    "question": "What defines the center of gravity (CG) in an airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.4.6.c.1",
+        "text": "Point where airplane balances"
+      },
+      {
+        "id": "AFH.20.4.6.c.2",
+        "text": "Mass center of the airplane"
+      },
+      {
+        "id": "AFH.20.4.6.c.3",
+        "text": "Point where weight is concentrated"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.4.6.w.1",
+        "text": "Point of maximum lift"
+      },
+      {
+        "id": "AFH.20.4.6.w.2",
+        "text": "Point of minimum drag"
+      },
+      {
+        "id": "AFH.20.4.6.w.3",
+        "text": "Location of fuel tanks"
+      },
+      {
+        "id": "AFH.20.4.6.w.4",
+        "text": "Center of thrust"
+      },
+      {
+        "id": "AFH.20.4.6.w.5",
+        "text": "Point of maximum stability"
+      },
+      {
+        "id": "AFH.20.4.6.w.6",
+        "text": "Location of control surfaces"
+      },
+      {
+        "id": "AFH.20.4.6.w.7",
+        "text": "Point of maximum speed"
+      },
+      {
+        "id": "AFH.20.4.6.w.8",
+        "text": "Center of pressure"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Center of gravity"
+    ]
+  },
+  {
+    "questionid": "AFH.20.5.1",
+    "question": "What is the purpose of deicer boots on an aircraft?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.5.1.c.1",
+        "text": "To break away ice on the airfoil"
+      },
+      {
+        "id": "AFH.20.5.1.c.2",
+        "text": "To inflate and deflate sequentially"
+      },
+      {
+        "id": "AFH.20.5.1.c.3",
+        "text": "To remove ice after it has formed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.5.1.w.1",
+        "text": "To increase lift"
+      },
+      {
+        "id": "AFH.20.5.1.w.2",
+        "text": "To reduce drag"
+      },
+      {
+        "id": "AFH.20.5.1.w.3",
+        "text": "To enhance fuel efficiency"
+      },
+      {
+        "id": "AFH.20.5.1.w.4",
+        "text": "To stabilize the aircraft"
+      },
+      {
+        "id": "AFH.20.5.1.w.5",
+        "text": "To improve cabin pressure"
+      },
+      {
+        "id": "AFH.20.5.1.w.6",
+        "text": "To increase speed"
+      },
+      {
+        "id": "AFH.20.5.1.w.7",
+        "text": "To reduce noise"
+      },
+      {
+        "id": "AFH.20.5.1.w.8",
+        "text": "To enhance passenger comfort"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Aircraft Systems"
+    ]
+  },
+  {
+    "questionid": "AFH.20.5.2",
+    "question": "What factors contribute to density altitude being higher than pressure altitude?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.5.2.c.1",
+        "text": "Temperature above standard"
+      },
+      {
+        "id": "AFH.20.5.2.c.2",
+        "text": "Pressure altitude corrected for temperature"
+      },
+      {
+        "id": "AFH.20.5.2.c.3",
+        "text": "Direct relation to airplane performance"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.5.2.w.1",
+        "text": "High humidity"
+      },
+      {
+        "id": "AFH.20.5.2.w.2",
+        "text": "Low altitude"
+      },
+      {
+        "id": "AFH.20.5.2.w.3",
+        "text": "Strong winds"
+      },
+      {
+        "id": "AFH.20.5.2.w.4",
+        "text": "Increased airspeed"
+      },
+      {
+        "id": "AFH.20.5.2.w.5",
+        "text": "Decreased engine power"
+      },
+      {
+        "id": "AFH.20.5.2.w.6",
+        "text": "High pressure systems"
+      },
+      {
+        "id": "AFH.20.5.2.w.7",
+        "text": "Low fuel levels"
+      },
+      {
+        "id": "AFH.20.5.2.w.8",
+        "text": "Increased passenger load"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Meteorology",
+      "Performance"
+    ]
+  },
+  {
+    "questionid": "AFH.20.5.3",
+    "question": "What is the role of differential ailerons in flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.5.3.c.1",
+        "text": "Minimize adverse yaw"
+      },
+      {
+        "id": "AFH.20.5.3.c.2",
+        "text": "Produce extra parasite drag"
+      },
+      {
+        "id": "AFH.20.5.3.c.3",
+        "text": "Balance drag forces"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.5.3.w.1",
+        "text": "Increase lift"
+      },
+      {
+        "id": "AFH.20.5.3.w.2",
+        "text": "Reduce fuel consumption"
+      },
+      {
+        "id": "AFH.20.5.3.w.3",
+        "text": "Enhance engine performance"
+      },
+      {
+        "id": "AFH.20.5.3.w.4",
+        "text": "Stabilize the aircraft"
+      },
+      {
+        "id": "AFH.20.5.3.w.5",
+        "text": "Improve passenger comfort"
+      },
+      {
+        "id": "AFH.20.5.3.w.6",
+        "text": "Increase speed"
+      },
+      {
+        "id": "AFH.20.5.3.w.7",
+        "text": "Enhance visibility"
+      },
+      {
+        "id": "AFH.20.5.3.w.8",
+        "text": "Reduce noise"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Aerodynamics",
+      "Flight Control"
+    ]
+  },
+  {
+    "questionid": "AFH.20.6.1",
+    "question": "What are the components of the empennage in an airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.6.1.c.1",
+        "text": "Vertical stabilizer"
+      },
+      {
+        "id": "AFH.20.6.1.c.2",
+        "text": "Horizontal stabilizer"
+      },
+      {
+        "id": "AFH.20.6.1.c.3",
+        "text": "Associated control surfaces"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.6.1.w.1",
+        "text": "Engine"
+      },
+      {
+        "id": "AFH.20.6.1.w.2",
+        "text": "Wings"
+      },
+      {
+        "id": "AFH.20.6.1.w.3",
+        "text": "Fuselage"
+      },
+      {
+        "id": "AFH.20.6.1.w.4",
+        "text": "Landing gear"
+      },
+      {
+        "id": "AFH.20.6.1.w.5",
+        "text": "Cockpit"
+      },
+      {
+        "id": "AFH.20.6.1.w.6",
+        "text": "Ailerons"
+      },
+      {
+        "id": "AFH.20.6.1.w.7",
+        "text": "Flaps"
+      },
+      {
+        "id": "AFH.20.6.1.w.8",
+        "text": "Rudder"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Empennage"
+    ]
+  },
+  {
+    "questionid": "AFH.20.6.2",
+    "question": "Which frequencies can an emergency locator transmitter transmit on?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.6.2.c.1",
+        "text": "121.5 MHz"
+      },
+      {
+        "id": "AFH.20.6.2.c.2",
+        "text": "243.0 MHz"
+      },
+      {
+        "id": "AFH.20.6.2.c.3",
+        "text": "406.0 MHz"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.6.2.w.1",
+        "text": "108.0 MHz"
+      },
+      {
+        "id": "AFH.20.6.2.w.2",
+        "text": "118.0 MHz"
+      },
+      {
+        "id": "AFH.20.6.2.w.3",
+        "text": "225.0 MHz"
+      },
+      {
+        "id": "AFH.20.6.2.w.4",
+        "text": "300.0 MHz"
+      },
+      {
+        "id": "AFH.20.6.2.w.5",
+        "text": "500.0 MHz"
+      },
+      {
+        "id": "AFH.20.6.2.w.6",
+        "text": "700.0 MHz"
+      },
+      {
+        "id": "AFH.20.6.2.w.7",
+        "text": "1000.0 MHz"
+      },
+      {
+        "id": "AFH.20.6.2.w.8",
+        "text": "1500.0 MHz"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Emergency locator transmitter"
+    ]
+  },
+  {
+    "questionid": "AFH.20.6.3",
+    "question": "What does the energy balance equation describe in aviation?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.6.3.c.1",
+        "text": "Net transfer of mechanical energy"
+      },
+      {
+        "id": "AFH.20.6.3.c.2",
+        "text": "Function of thrust minus drag"
+      },
+      {
+        "id": "AFH.20.6.3.c.3",
+        "text": "Change in total mechanical energy"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.6.3.w.1",
+        "text": "Fuel consumption rate"
+      },
+      {
+        "id": "AFH.20.6.3.w.2",
+        "text": "Engine temperature"
+      },
+      {
+        "id": "AFH.20.6.3.w.3",
+        "text": "Pilot workload"
+      },
+      {
+        "id": "AFH.20.6.3.w.4",
+        "text": "Aircraft weight"
+      },
+      {
+        "id": "AFH.20.6.3.w.5",
+        "text": "Passenger comfort"
+      },
+      {
+        "id": "AFH.20.6.3.w.6",
+        "text": "Weather conditions"
+      },
+      {
+        "id": "AFH.20.6.3.w.7",
+        "text": "Navigation accuracy"
+      },
+      {
+        "id": "AFH.20.6.3.w.8",
+        "text": "Communication clarity"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Energy balance equation"
+    ]
+  },
+  {
+    "questionid": "AFH.20.7.1",
+    "question": "What is a feathering propeller?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.7.1.c.1",
+        "text": "A controllable pitch propeller"
+      },
+      {
+        "id": "AFH.20.7.1.c.2",
+        "text": "Allows blades to be turned parallel to the line of flight"
+      },
+      {
+        "id": "AFH.20.7.1.c.3",
+        "text": "Reduces drag and prevents engine damage"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.7.1.w.1",
+        "text": "A fixed-pitch propeller"
+      },
+      {
+        "id": "AFH.20.7.1.w.2",
+        "text": "Increases drag"
+      },
+      {
+        "id": "AFH.20.7.1.w.3",
+        "text": "Used only in helicopters"
+      },
+      {
+        "id": "AFH.20.7.1.w.4",
+        "text": "A type of jet engine"
+      },
+      {
+        "id": "AFH.20.7.1.w.5",
+        "text": "Increases engine power"
+      },
+      {
+        "id": "AFH.20.7.1.w.6",
+        "text": "Reduces lift"
+      },
+      {
+        "id": "AFH.20.7.1.w.7",
+        "text": "Used for takeoff only"
+      },
+      {
+        "id": "AFH.20.7.1.w.8",
+        "text": "A type of landing gear"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Propellers"
+    ]
+  },
+  {
+    "questionid": "AFH.20.7.2",
+    "question": "What is the function of flaps on an aircraft?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.7.2.c.1",
+        "text": "Change lift and drag on the wing"
+      },
+      {
+        "id": "AFH.20.7.2.c.2",
+        "text": "Hinged portion of the trailing edge"
+      },
+      {
+        "id": "AFH.20.7.2.c.3",
+        "text": "Interconnected with ailerons in some aircraft"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.7.2.w.1",
+        "text": "Increase engine power"
+      },
+      {
+        "id": "AFH.20.7.2.w.2",
+        "text": "Reduce fuel consumption"
+      },
+      {
+        "id": "AFH.20.7.2.w.3",
+        "text": "Used only during takeoff"
+      },
+      {
+        "id": "AFH.20.7.2.w.4",
+        "text": "Part of the landing gear"
+      },
+      {
+        "id": "AFH.20.7.2.w.5",
+        "text": "Increase airspeed"
+      },
+      {
+        "id": "AFH.20.7.2.w.6",
+        "text": "Control vertical movement"
+      },
+      {
+        "id": "AFH.20.7.2.w.7",
+        "text": "Part of the fuselage"
+      },
+      {
+        "id": "AFH.20.7.2.w.8",
+        "text": "Used only in emergencies"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Aircraft Components"
+    ]
+  },
+  {
+    "questionid": "AFH.20.7.3",
+    "question": "What is a fixed-shaft turboprop engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.7.3.c.1",
+        "text": "Gas producer spool directly connected to output shaft"
+      },
+      {
+        "id": "AFH.20.7.3.c.2",
+        "text": "Type of turboprop engine"
+      },
+      {
+        "id": "AFH.20.7.3.c.3",
+        "text": "Used in some aircraft"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.7.3.w.1",
+        "text": "Gas producer spool separate from output shaft"
+      },
+      {
+        "id": "AFH.20.7.3.w.2",
+        "text": "Used only in helicopters"
+      },
+      {
+        "id": "AFH.20.7.3.w.3",
+        "text": "A type of jet engine"
+      },
+      {
+        "id": "AFH.20.7.3.w.4",
+        "text": "Increases drag"
+      },
+      {
+        "id": "AFH.20.7.3.w.5",
+        "text": "Reduces engine power"
+      },
+      {
+        "id": "AFH.20.7.3.w.6",
+        "text": "Used for landing only"
+      },
+      {
+        "id": "AFH.20.7.3.w.7",
+        "text": "A type of landing gear"
+      },
+      {
+        "id": "AFH.20.7.3.w.8",
+        "text": "Increases lift"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Engines"
+    ]
+  },
+  {
+    "questionid": "AFH.20.8.1",
+    "question": "What components are generally included in the gas generator of a gas turbine engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.8.1.c.1",
+        "text": "Compressor"
+      },
+      {
+        "id": "AFH.20.8.1.c.2",
+        "text": "Diffuser"
+      },
+      {
+        "id": "AFH.20.8.1.c.3",
+        "text": "Combustor"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.8.1.w.1",
+        "text": "Inlet duct"
+      },
+      {
+        "id": "AFH.20.8.1.w.2",
+        "text": "Fan section"
+      },
+      {
+        "id": "AFH.20.8.1.w.3",
+        "text": "Free power turbines"
+      },
+      {
+        "id": "AFH.20.8.1.w.4",
+        "text": "Tailpipe"
+      },
+      {
+        "id": "AFH.20.8.1.w.5",
+        "text": "Propeller"
+      },
+      {
+        "id": "AFH.20.8.1.w.6",
+        "text": "Rotor system"
+      },
+      {
+        "id": "AFH.20.8.1.w.7",
+        "text": "Ground power unit"
+      },
+      {
+        "id": "AFH.20.8.1.w.8",
+        "text": "Auxiliary power unit"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A), Section G",
+    "subjects": [
+      "Gas turbine engine",
+      "Aircraft components"
+    ]
+  },
+  {
+    "questionid": "AFH.20.9.1",
+    "question": "Which of the following are true statements about gas turbine engine starts?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.9.1.c.1",
+        "text": "A hot start occurs when exhaust temperature exceeds limits."
+      },
+      {
+        "id": "AFH.20.9.1.c.2",
+        "text": "A hung start involves rpm remaining low after light off."
+      },
+      {
+        "id": "AFH.20.9.1.c.3",
+        "text": "Fuel must be terminated immediately during a hot start to prevent damage."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.9.1.w.1",
+        "text": "A hot start is caused by insufficient starter power."
+      },
+      {
+        "id": "AFH.20.9.1.w.2",
+        "text": "A hung start results in high exhaust temperatures."
+      },
+      {
+        "id": "AFH.20.9.1.w.3",
+        "text": "A hot start is resolved by increasing fuel flow."
+      },
+      {
+        "id": "AFH.20.9.1.w.4",
+        "text": "A hung start is resolved by reducing fuel flow."
+      },
+      {
+        "id": "AFH.20.9.1.w.5",
+        "text": "A hot start involves normal idle rpm."
+      },
+      {
+        "id": "AFH.20.9.1.w.6",
+        "text": "A hung start occurs when the engine fails to light off."
+      },
+      {
+        "id": "AFH.20.9.1.w.7",
+        "text": "A hot start is caused by a lean mixture."
+      },
+      {
+        "id": "AFH.20.9.1.w.8",
+        "text": "A hung start is resolved by increasing exhaust temperature."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Gas Turbine Engines",
+      "Engine Starts",
+      "Aircraft Systems"
+    ]
+  },
+  {
+    "questionid": "AFH.20.10.1",
+    "question": "What is the function of igniter plugs in a turbine engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.10.1.c.1",
+        "text": "Provide spark for combustion"
+      },
+      {
+        "id": "AFH.20.10.1.c.2",
+        "text": "Resemble spark plugs"
+      },
+      {
+        "id": "AFH.20.10.1.c.3",
+        "text": "Use resistance wire to glow red hot"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.10.1.w.1",
+        "text": "Measure fuel flow"
+      },
+      {
+        "id": "AFH.20.10.1.w.2",
+        "text": "Control airspeed"
+      },
+      {
+        "id": "AFH.20.10.1.w.3",
+        "text": "Indicate altitude"
+      },
+      {
+        "id": "AFH.20.10.1.w.4",
+        "text": "Reduce drag"
+      },
+      {
+        "id": "AFH.20.10.1.w.5",
+        "text": "Distribute intake air"
+      },
+      {
+        "id": "AFH.20.10.1.w.6",
+        "text": "Seal off fuel tanks"
+      },
+      {
+        "id": "AFH.20.10.1.w.7",
+        "text": "Reduce air temperature"
+      },
+      {
+        "id": "AFH.20.10.1.w.8",
+        "text": "Expand hot gases"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Igniter plugs"
+    ]
+  },
+  {
+    "questionid": "AFH.20.10.2",
+    "question": "What does indicated airspeed (IAS) represent?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.10.2.c.1",
+        "text": "Direct instrument reading"
+      },
+      {
+        "id": "AFH.20.10.2.c.2",
+        "text": "Uncorrected for atmospheric density"
+      },
+      {
+        "id": "AFH.20.10.2.c.3",
+        "text": "Basis for airplane performance"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.10.2.w.1",
+        "text": "Corrected for altitude"
+      },
+      {
+        "id": "AFH.20.10.2.w.2",
+        "text": "Adjusted for temperature"
+      },
+      {
+        "id": "AFH.20.10.2.w.3",
+        "text": "Used for fuel metering"
+      },
+      {
+        "id": "AFH.20.10.2.w.4",
+        "text": "Shows inclination"
+      },
+      {
+        "id": "AFH.20.10.2.w.5",
+        "text": "Measures centrifugal force"
+      },
+      {
+        "id": "AFH.20.10.2.w.6",
+        "text": "Indicates engine power"
+      },
+      {
+        "id": "AFH.20.10.2.w.7",
+        "text": "Reduces air temperature"
+      },
+      {
+        "id": "AFH.20.10.2.w.8",
+        "text": "Opposes motion change"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Indicated airspeed"
+    ]
+  },
+  {
+    "questionid": "AFH.20.10.3",
+    "question": "What is the purpose of an intercooler in an aircraft engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.10.3.c.1",
+        "text": "Reduce temperature of compressed air"
+      },
+      {
+        "id": "AFH.20.10.3.c.2",
+        "text": "Increase air density"
+      },
+      {
+        "id": "AFH.20.10.3.c.3",
+        "text": "Allow higher power setting"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.10.3.w.1",
+        "text": "Measure airspeed"
+      },
+      {
+        "id": "AFH.20.10.3.w.2",
+        "text": "Indicate altitude"
+      },
+      {
+        "id": "AFH.20.10.3.w.3",
+        "text": "Provide spark for combustion"
+      },
+      {
+        "id": "AFH.20.10.3.w.4",
+        "text": "Seal off fuel tanks"
+      },
+      {
+        "id": "AFH.20.10.3.w.5",
+        "text": "Distribute intake air"
+      },
+      {
+        "id": "AFH.20.10.3.w.6",
+        "text": "Oppose motion change"
+      },
+      {
+        "id": "AFH.20.10.3.w.7",
+        "text": "Show inclination"
+      },
+      {
+        "id": "AFH.20.10.3.w.8",
+        "text": "Measure centrifugal force"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Intercooler"
+    ]
+  },
+  {
+    "questionid": "AFH.20.11.1",
+    "question": "What are the types of engines that power a jet-powered airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.11.1.c.1",
+        "text": "Turbojet engine"
+      },
+      {
+        "id": "AFH.20.11.1.c.2",
+        "text": "Turbofan engine"
+      },
+      {
+        "id": "AFH.20.11.1.c.3",
+        "text": "Jet engine"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.11.1.w.1",
+        "text": "Piston engine"
+      },
+      {
+        "id": "AFH.20.11.1.w.2",
+        "text": "Rotary engine"
+      },
+      {
+        "id": "AFH.20.11.1.w.3",
+        "text": "Propeller engine"
+      },
+      {
+        "id": "AFH.20.11.1.w.4",
+        "text": "Radial engine"
+      },
+      {
+        "id": "AFH.20.11.1.w.5",
+        "text": "Turboprop engine"
+      },
+      {
+        "id": "AFH.20.11.1.w.6",
+        "text": "Electric engine"
+      },
+      {
+        "id": "AFH.20.11.1.w.7",
+        "text": "Hybrid engine"
+      },
+      {
+        "id": "AFH.20.11.1.w.8",
+        "text": "Rocket engine"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Jet-powered airplane",
+      "Aircraft engines"
+    ]
+  },
+  {
+    "questionid": "AFH.20.12.1",
+    "question": "What is kinetic energy in the context of aviation?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.12.1.c.1",
+        "text": "Amount of energy due to airspeed"
+      },
+      {
+        "id": "AFH.20.12.1.c.2",
+        "text": "Expressed as ½mV²"
+      },
+      {
+        "id": "AFH.20.12.1.c.3",
+        "text": "Depends on airplane's mass and airspeed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.12.1.w.1",
+        "text": "Energy due to altitude"
+      },
+      {
+        "id": "AFH.20.12.1.w.2",
+        "text": "Measured in horsepower"
+      },
+      {
+        "id": "AFH.20.12.1.w.3",
+        "text": "Related to fuel consumption"
+      },
+      {
+        "id": "AFH.20.12.1.w.4",
+        "text": "Depends on engine power"
+      },
+      {
+        "id": "AFH.20.12.1.w.5",
+        "text": "Expressed as mgh"
+      },
+      {
+        "id": "AFH.20.12.1.w.6",
+        "text": "Energy from propeller thrust"
+      },
+      {
+        "id": "AFH.20.12.1.w.7",
+        "text": "Measured in RPM"
+      },
+      {
+        "id": "AFH.20.12.1.w.8",
+        "text": "Related to wing area"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A), Section K",
+    "subjects": [
+      "Kinetic energy",
+      "Physics",
+      "Aviation"
+    ]
+  },
+  {
+    "questionid": "AFH.20.13.1",
+    "question": "Which of the following are characteristics or components related to the lateral axis of an airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.13.1.c.1",
+        "text": "Lateral stability (rolling)"
+      },
+      {
+        "id": "AFH.20.13.1.c.2",
+        "text": "Imaginary line from wingtip to wingtip"
+      },
+      {
+        "id": "AFH.20.13.1.c.3",
+        "text": "Stability about the longitudinal axis"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.13.1.w.1",
+        "text": "Lift coefficient"
+      },
+      {
+        "id": "AFH.20.13.1.w.2",
+        "text": "Leading edge devices"
+      },
+      {
+        "id": "AFH.20.13.1.w.3",
+        "text": "Longitudinal axis"
+      },
+      {
+        "id": "AFH.20.13.1.w.4",
+        "text": "Longitudinal stability (pitching)"
+      },
+      {
+        "id": "AFH.20.13.1.w.5",
+        "text": "Lift/drag ratio (L/D)"
+      },
+      {
+        "id": "AFH.20.13.1.w.6",
+        "text": "Licensed empty weight"
+      },
+      {
+        "id": "AFH.20.13.1.w.7",
+        "text": "Limit load factor"
+      },
+      {
+        "id": "AFH.20.13.1.w.8",
+        "text": "Load factor"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A), Section L",
+    "subjects": [
+      "Aerodynamics",
+      "Aircraft Stability",
+      "Aircraft Components"
+    ]
+  },
+  {
+    "questionid": "AFH.20.14.1",
+    "question": "What is Mach buffet?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.14.1.c.1",
+        "text": "Airflow separation behind a shock-wave pressure barrier"
+      },
+      {
+        "id": "AFH.20.14.1.c.2",
+        "text": "Caused by airflow over flight surfaces exceeding the speed of sound"
+      },
+      {
+        "id": "AFH.20.14.1.c.3",
+        "text": "Occurs in high-speed flight conditions"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.14.1.w.1",
+        "text": "A device to alert pilots of speed excursions"
+      },
+      {
+        "id": "AFH.20.14.1.w.2",
+        "text": "The speed at which airflow equals Mach 1.0"
+      },
+      {
+        "id": "AFH.20.14.1.w.3",
+        "text": "A condition causing the nose to tuck"
+      },
+      {
+        "id": "AFH.20.14.1.w.4",
+        "text": "A device for determining direction"
+      },
+      {
+        "id": "AFH.20.14.1.w.5",
+        "text": "The maximum speed for full control movement"
+      },
+      {
+        "id": "AFH.20.14.1.w.6",
+        "text": "The absolute pressure of the fuel/air mixture"
+      },
+      {
+        "id": "AFH.20.14.1.w.7",
+        "text": "The maximum allowable takeoff power"
+      },
+      {
+        "id": "AFH.20.14.1.w.8",
+        "text": "The greatest weight allowed at landing"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Aerodynamics",
+      "Flight Mechanics"
+    ]
+  },
+  {
+    "questionid": "AFH.20.14.2",
+    "question": "What is the function of a Mach compensating device?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.14.2.c.1",
+        "text": "Alerts the pilot of speed excursions"
+      },
+      {
+        "id": "AFH.20.14.2.c.2",
+        "text": "Prevents exceeding certified maximum speed"
+      },
+      {
+        "id": "AFH.20.14.2.c.3",
+        "text": "Enhances flight safety"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.14.2.w.1",
+        "text": "Causes airflow separation"
+      },
+      {
+        "id": "AFH.20.14.2.w.2",
+        "text": "Determines direction from magnetic north"
+      },
+      {
+        "id": "AFH.20.14.2.w.3",
+        "text": "Supports the aircraft's weight"
+      },
+      {
+        "id": "AFH.20.14.2.w.4",
+        "text": "Measures manifold pressure"
+      },
+      {
+        "id": "AFH.20.14.2.w.5",
+        "text": "Indicates maximum takeoff weight"
+      },
+      {
+        "id": "AFH.20.14.2.w.6",
+        "text": "Calculates moment index"
+      },
+      {
+        "id": "AFH.20.14.2.w.7",
+        "text": "Determines minimum drag speed"
+      },
+      {
+        "id": "AFH.20.14.2.w.8",
+        "text": "Measures mixture ratio"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Aircraft Systems",
+      "Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.20.14.3",
+    "question": "What is Mach tuck?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.14.3.c.1",
+        "text": "Occurs in swept-wing airplanes in transonic speed range"
+      },
+      {
+        "id": "AFH.20.14.3.c.2",
+        "text": "Shock wave forms in the wing root"
+      },
+      {
+        "id": "AFH.20.14.3.c.3",
+        "text": "Causes nose to tuck if uncorrected"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.14.3.w.1",
+        "text": "Airflow separation behind a shock-wave"
+      },
+      {
+        "id": "AFH.20.14.3.w.2",
+        "text": "Device to alert speed excursions"
+      },
+      {
+        "id": "AFH.20.14.3.w.3",
+        "text": "Speed at which airflow equals Mach 1.0"
+      },
+      {
+        "id": "AFH.20.14.3.w.4",
+        "text": "Device for determining direction"
+      },
+      {
+        "id": "AFH.20.14.3.w.5",
+        "text": "Maximum speed for full control movement"
+      },
+      {
+        "id": "AFH.20.14.3.w.6",
+        "text": "Absolute pressure of the fuel/air mixture"
+      },
+      {
+        "id": "AFH.20.14.3.w.7",
+        "text": "Maximum allowable takeoff power"
+      },
+      {
+        "id": "AFH.20.14.3.w.8",
+        "text": "Greatest weight allowed at landing"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Aerodynamics",
+      "Flight Dynamics"
+    ]
+  },
+  {
+    "questionid": "AFH.20.15.1",
+    "question": "What are the characteristics of N1, N2, and N3 in aircraft engines?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.15.1.c.1",
+        "text": "N1 is the fan speed or low pressure spool speed in turbofan engines."
+      },
+      {
+        "id": "AFH.20.15.1.c.2",
+        "text": "N2 is the high pressure spool speed in engines with two spools."
+      },
+      {
+        "id": "AFH.20.15.1.c.3",
+        "text": "N3 is the high pressure spool in engines with three spools."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.15.1.w.1",
+        "text": "N1 is the high pressure spool speed in all engines."
+      },
+      {
+        "id": "AFH.20.15.1.w.2",
+        "text": "N2 is the low pressure spool speed in turboprop engines."
+      },
+      {
+        "id": "AFH.20.15.1.w.3",
+        "text": "N3 is the medium pressure spool in engines with two spools."
+      },
+      {
+        "id": "AFH.20.15.1.w.4",
+        "text": "N1 is the gas producer speed in turbofan engines."
+      },
+      {
+        "id": "AFH.20.15.1.w.5",
+        "text": "N2 is the fan speed in turbojet engines."
+      },
+      {
+        "id": "AFH.20.15.1.w.6",
+        "text": "N3 is the gas producer speed in all engines."
+      },
+      {
+        "id": "AFH.20.15.1.w.7",
+        "text": "N1 is the nacelle speed in multiengine airplanes."
+      },
+      {
+        "id": "AFH.20.15.1.w.8",
+        "text": "N2 is the nacelle speed in single-engine airplanes."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A), Section N",
+    "subjects": [
+      "Aircraft Engines",
+      "Aviation Terminology"
+    ]
+  },
+  {
+    "questionid": "AFH.20.16.1",
+    "question": "According to the provided text, which of the following conditions can lead to internal damage to an engine or its components?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.16.1.c.1",
+        "text": "Overboost"
+      },
+      {
+        "id": "AFH.20.16.1.c.2",
+        "text": "Overtemp"
+      },
+      {
+        "id": "AFH.20.16.1.c.3",
+        "text": "Overtorque"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.16.1.w.1",
+        "text": "Octane"
+      },
+      {
+        "id": "AFH.20.16.1.w.2",
+        "text": "Overspeed"
+      },
+      {
+        "id": "AFH.20.16.1.w.3",
+        "text": "Manifold pressure"
+      },
+      {
+        "id": "AFH.20.16.1.w.4",
+        "text": "Engine RPM"
+      },
+      {
+        "id": "AFH.20.16.1.w.5",
+        "text": "Exhaust temperature"
+      },
+      {
+        "id": "AFH.20.16.1.w.6",
+        "text": "Antidetonating qualities"
+      },
+      {
+        "id": "AFH.20.16.1.w.7",
+        "text": "Propeller control"
+      },
+      {
+        "id": "AFH.20.16.1.w.8",
+        "text": "Aviation gasoline"
+      }
+    ],
+    "source": "AFH Chapter 20",
+    "subjects": [
+      "Engine Operations",
+      "Engine Malfunctions"
+    ]
+  },
+  {
+    "questionid": "AFH.20.17.1",
+    "question": "What is parasite drag and how does it behave with changes in airspeed?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.17.1.c.1",
+        "text": "Part of total drag created by airplane parts design"
+      },
+      {
+        "id": "AFH.20.17.1.c.2",
+        "text": "Increases with an increase in airspeed"
+      },
+      {
+        "id": "AFH.20.17.1.c.3",
+        "text": "Related to airplane shape"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.17.1.w.1",
+        "text": "Decreases with an increase in airspeed"
+      },
+      {
+        "id": "AFH.20.17.1.w.2",
+        "text": "Caused by engine thrust"
+      },
+      {
+        "id": "AFH.20.17.1.w.3",
+        "text": "Related to altitude"
+      },
+      {
+        "id": "AFH.20.17.1.w.4",
+        "text": "Part of lift generation"
+      },
+      {
+        "id": "AFH.20.17.1.w.5",
+        "text": "Caused by fuel consumption"
+      },
+      {
+        "id": "AFH.20.17.1.w.6",
+        "text": "Decreases with altitude"
+      },
+      {
+        "id": "AFH.20.17.1.w.7",
+        "text": "Increases with altitude"
+      },
+      {
+        "id": "AFH.20.17.1.w.8",
+        "text": "Caused by air density"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Aerodynamics"
+    ]
+  },
+  {
+    "questionid": "AFH.20.17.2",
+    "question": "What does the P-factor describe in aviation?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.17.2.c.1",
+        "text": "Yaw tendency due to propeller blade thrust difference"
+      },
+      {
+        "id": "AFH.20.17.2.c.2",
+        "text": "Occurs when aircraft is in climbing attitude"
+      },
+      {
+        "id": "AFH.20.17.2.c.3",
+        "text": "Yaw to the left with clockwise rotating propeller"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.17.2.w.1",
+        "text": "Yaw to the right with clockwise rotating propeller"
+      },
+      {
+        "id": "AFH.20.17.2.w.2",
+        "text": "Yaw tendency due to wind direction"
+      },
+      {
+        "id": "AFH.20.17.2.w.3",
+        "text": "Occurs during descent"
+      },
+      {
+        "id": "AFH.20.17.2.w.4",
+        "text": "Yaw to the left with counterclockwise rotating propeller"
+      },
+      {
+        "id": "AFH.20.17.2.w.5",
+        "text": "Yaw tendency due to engine power"
+      },
+      {
+        "id": "AFH.20.17.2.w.6",
+        "text": "Occurs only during takeoff"
+      },
+      {
+        "id": "AFH.20.17.2.w.7",
+        "text": "Yaw tendency due to wing shape"
+      },
+      {
+        "id": "AFH.20.17.2.w.8",
+        "text": "Occurs only during landing"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Aerodynamics",
+      "Propulsion"
+    ]
+  },
+  {
+    "questionid": "AFH.20.17.3",
+    "question": "What is the function of the pneumatic system in an aircraft?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.17.3.c.1",
+        "text": "Operates landing gear"
+      },
+      {
+        "id": "AFH.20.17.3.c.2",
+        "text": "Operates brakes"
+      },
+      {
+        "id": "AFH.20.17.3.c.3",
+        "text": "Operates wing flaps"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.17.3.w.1",
+        "text": "Operates engine cooling"
+      },
+      {
+        "id": "AFH.20.17.3.w.2",
+        "text": "Operates navigation lights"
+      },
+      {
+        "id": "AFH.20.17.3.w.3",
+        "text": "Operates communication systems"
+      },
+      {
+        "id": "AFH.20.17.3.w.4",
+        "text": "Operates fuel pumps"
+      },
+      {
+        "id": "AFH.20.17.3.w.5",
+        "text": "Operates cabin pressurization"
+      },
+      {
+        "id": "AFH.20.17.3.w.6",
+        "text": "Operates autopilot"
+      },
+      {
+        "id": "AFH.20.17.3.w.7",
+        "text": "Operates flight controls"
+      },
+      {
+        "id": "AFH.20.17.3.w.8",
+        "text": "Operates de-icing systems"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Aircraft Systems"
+    ]
+  },
+  {
+    "questionid": "AFH.20.18.1",
+    "question": "What are the characteristics of runway centerline lights?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.18.1.c.1",
+        "text": "Installed on some precision approach runways"
+      },
+      {
+        "id": "AFH.20.18.1.c.2",
+        "text": "Located along the runway centerline"
+      },
+      {
+        "id": "AFH.20.18.1.c.3",
+        "text": "White until the last 3,000 feet of the runway"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.18.1.w.1",
+        "text": "Used to outline the edges of runways"
+      },
+      {
+        "id": "AFH.20.18.1.w.2",
+        "text": "Spaced at 100-foot intervals"
+      },
+      {
+        "id": "AFH.20.18.1.w.3",
+        "text": "All lights are red for the entire runway"
+      },
+      {
+        "id": "AFH.20.18.1.w.4",
+        "text": "Are blue in color"
+      },
+      {
+        "id": "AFH.20.18.1.w.5",
+        "text": "Are only used during daylight"
+      },
+      {
+        "id": "AFH.20.18.1.w.6",
+        "text": "Are controlled by the pilot"
+      },
+      {
+        "id": "AFH.20.18.1.w.7",
+        "text": "Are found only at non-precision airports"
+      },
+      {
+        "id": "AFH.20.18.1.w.8",
+        "text": "The white lights begin to alternate with red for the last 1,000 feet"
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Runway Lighting",
+      "Airport Markings"
+    ]
+  },
+  {
+    "questionid": "AFH.20.18.2",
+    "question": "How does a reciprocating engine convert energy into motion?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.18.2.c.1",
+        "text": "Converts heat energy from burning fuel"
+      },
+      {
+        "id": "AFH.20.18.2.c.2",
+        "text": "Produces reciprocating movement of pistons"
+      },
+      {
+        "id": "AFH.20.18.2.c.3",
+        "text": "Converts piston movement into rotary motion by connecting rods and crankshaft"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.18.2.w.1",
+        "text": "Converts electrical energy into mechanical energy"
+      },
+      {
+        "id": "AFH.20.18.2.w.2",
+        "text": "Generates thrust directly from burning fuel"
+      },
+      {
+        "id": "AFH.20.18.2.w.3",
+        "text": "Uses a turbine to produce power"
+      },
+      {
+        "id": "AFH.20.18.2.w.4",
+        "text": "Relies on jet propulsion for movement"
+      },
+      {
+        "id": "AFH.20.18.2.w.5",
+        "text": "Creates lift for the aircraft"
+      },
+      {
+        "id": "AFH.20.18.2.w.6",
+        "text": "Powers the aircraft solely through propeller rotation without internal conversion"
+      },
+      {
+        "id": "AFH.20.18.2.w.7",
+        "text": "Uses a compressor and combustor to create thrust"
+      },
+      {
+        "id": "AFH.20.18.2.w.8",
+        "text": "Converts kinetic energy to potential energy"
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Aircraft Engines",
+      "Reciprocating Engines"
+    ]
+  },
+  {
+    "questionid": "AFH.20.18.3",
+    "question": "Which statements accurately describe the region of reverse command?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.18.3.c.1",
+        "text": "Flight at a higher airspeed requires a lower power setting"
+      },
+      {
+        "id": "AFH.20.18.3.c.2",
+        "text": "Flight at a lower airspeed requires a higher power setting"
+      },
+      {
+        "id": "AFH.20.18.3.c.3",
+        "text": "Occurs when maintaining altitude requires an inverse relationship between airspeed and power"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.18.3.w.1",
+        "text": "Flight at a higher airspeed requires a higher power setting"
+      },
+      {
+        "id": "AFH.20.18.3.w.2",
+        "text": "Flight at a lower airspeed requires a lower power setting"
+      },
+      {
+        "id": "AFH.20.18.3.w.3",
+        "text": "Is a condition primarily related to engine failure"
+      },
+      {
+        "id": "AFH.20.18.3.w.4",
+        "text": "Is a flight regime where power setting is directly proportional to airspeed"
+      },
+      {
+        "id": "AFH.20.18.3.w.5",
+        "text": "Occurs only during takeoff or landing"
+      },
+      {
+        "id": "AFH.20.18.3.w.6",
+        "text": "Is a phenomenon related to propeller pitch control"
+      },
+      {
+        "id": "AFH.20.18.3.w.7",
+        "text": "Describes a type of aerodynamic stall"
+      },
+      {
+        "id": "AFH.20.18.3.w.8",
+        "text": "Is a ground effect phenomenon"
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Aerodynamics",
+      "Flight Performance",
+      "Power Management"
+    ]
+  },
+  {
+    "questionid": "AFH.20.19.1",
+    "question": "What is the function of a safety (SQUAT) switch in an aircraft?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.19.1.c.1",
+        "text": "Senses when the weight of the aircraft is on the wheels"
+      },
+      {
+        "id": "AFH.20.19.1.c.2",
+        "text": "Mounted on landing gear struts"
+      },
+      {
+        "id": "AFH.20.19.1.c.3",
+        "text": "Used in electrical systems"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.19.1.w.1",
+        "text": "Measures fuel consumption"
+      },
+      {
+        "id": "AFH.20.19.1.w.2",
+        "text": "Controls cabin pressure"
+      },
+      {
+        "id": "AFH.20.19.1.w.3",
+        "text": "Regulates engine temperature"
+      },
+      {
+        "id": "AFH.20.19.1.w.4",
+        "text": "Monitors airspeed"
+      },
+      {
+        "id": "AFH.20.19.1.w.5",
+        "text": "Adjusts wing flaps"
+      },
+      {
+        "id": "AFH.20.19.1.w.6",
+        "text": "Detects engine failure"
+      },
+      {
+        "id": "AFH.20.19.1.w.7",
+        "text": "Controls landing gear retraction"
+      },
+      {
+        "id": "AFH.20.19.1.w.8",
+        "text": "Measures altitude"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Aircraft Systems"
+    ]
+  },
+  {
+    "questionid": "AFH.20.19.2",
+    "question": "What is a segmented circle used for in aviation?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.19.2.c.1",
+        "text": "Provides traffic pattern information"
+      },
+      {
+        "id": "AFH.20.19.2.c.2",
+        "text": "Ground-based visual structure"
+      },
+      {
+        "id": "AFH.20.19.2.c.3",
+        "text": "Assists pilots in determining airport traffic flow"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.19.2.w.1",
+        "text": "Measures wind speed"
+      },
+      {
+        "id": "AFH.20.19.2.w.2",
+        "text": "Indicates fuel levels"
+      },
+      {
+        "id": "AFH.20.19.2.w.3",
+        "text": "Monitors engine performance"
+      },
+      {
+        "id": "AFH.20.19.2.w.4",
+        "text": "Controls landing gear"
+      },
+      {
+        "id": "AFH.20.19.2.w.5",
+        "text": "Displays altitude"
+      },
+      {
+        "id": "AFH.20.19.2.w.6",
+        "text": "Regulates cabin pressure"
+      },
+      {
+        "id": "AFH.20.19.2.w.7",
+        "text": "Measures airspeed"
+      },
+      {
+        "id": "AFH.20.19.2.w.8",
+        "text": "Detects turbulence"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Airport Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.20.19.3",
+    "question": "What does the term 'service ceiling' refer to in aviation?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.19.3.c.1",
+        "text": "Maximum density altitude for 100 fpm climb"
+      },
+      {
+        "id": "AFH.20.19.3.c.2",
+        "text": "Best rate-of-climb airspeed"
+      },
+      {
+        "id": "AFH.20.19.3.c.3",
+        "text": "Clean configuration with maximum continuous power"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.19.3.w.1",
+        "text": "Maximum speed of the aircraft"
+      },
+      {
+        "id": "AFH.20.19.3.w.2",
+        "text": "Minimum landing distance"
+      },
+      {
+        "id": "AFH.20.19.3.w.3",
+        "text": "Fuel efficiency at altitude"
+      },
+      {
+        "id": "AFH.20.19.3.w.4",
+        "text": "Maximum takeoff weight"
+      },
+      {
+        "id": "AFH.20.19.3.w.5",
+        "text": "Minimum safe altitude"
+      },
+      {
+        "id": "AFH.20.19.3.w.6",
+        "text": "Maximum glide distance"
+      },
+      {
+        "id": "AFH.20.19.3.w.7",
+        "text": "Minimum airspeed for control"
+      },
+      {
+        "id": "AFH.20.19.3.w.8",
+        "text": "Maximum engine power"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Performance"
+    ]
+  },
+  {
+    "questionid": "AFH.20.19.4",
+    "question": "What is the purpose of a servo tab on an aircraft?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.19.4.c.1",
+        "text": "Provides aerodynamic assist"
+      },
+      {
+        "id": "AFH.20.19.4.c.2",
+        "text": "Moves opposite to primary control surface"
+      },
+      {
+        "id": "AFH.20.19.4.c.3",
+        "text": "Mounted on primary control surface"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.19.4.w.1",
+        "text": "Measures airspeed"
+      },
+      {
+        "id": "AFH.20.19.4.w.2",
+        "text": "Controls cabin pressure"
+      },
+      {
+        "id": "AFH.20.19.4.w.3",
+        "text": "Regulates fuel flow"
+      },
+      {
+        "id": "AFH.20.19.4.w.4",
+        "text": "Monitors engine temperature"
+      },
+      {
+        "id": "AFH.20.19.4.w.5",
+        "text": "Adjusts landing gear"
+      },
+      {
+        "id": "AFH.20.19.4.w.6",
+        "text": "Detects turbulence"
+      },
+      {
+        "id": "AFH.20.19.4.w.7",
+        "text": "Measures altitude"
+      },
+      {
+        "id": "AFH.20.19.4.w.8",
+        "text": "Controls wing flaps"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Aircraft Systems"
+    ]
+  },
+  {
+    "questionid": "AFH.20.19.5",
+    "question": "What is a sideslip in aviation?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.19.5.c.1",
+        "text": "Airplane moves sideways toward the low wing"
+      },
+      {
+        "id": "AFH.20.19.5.c.2",
+        "text": "Longitudinal axis remains parallel to original flightpath"
+      },
+      {
+        "id": "AFH.20.19.5.c.3",
+        "text": "Horizontal component of wing lift causes movement"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.19.5.w.1",
+        "text": "Airplane climbs vertically"
+      },
+      {
+        "id": "AFH.20.19.5.w.2",
+        "text": "Tail follows path outside the nose"
+      },
+      {
+        "id": "AFH.20.19.5.w.3",
+        "text": "Aircraft descends rapidly"
+      },
+      {
+        "id": "AFH.20.19.5.w.4",
+        "text": "Engine power increases"
+      },
+      {
+        "id": "AFH.20.19.5.w.5",
+        "text": "Airspeed increases"
+      },
+      {
+        "id": "AFH.20.19.5.w.6",
+        "text": "Aircraft spins"
+      },
+      {
+        "id": "AFH.20.19.5.w.7",
+        "text": "Nose points downward"
+      },
+      {
+        "id": "AFH.20.19.5.w.8",
+        "text": "Aircraft stalls"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.20.19.6",
+    "question": "What does specific fuel consumption measure in aviation?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.19.6.c.1",
+        "text": "Pounds of fuel per hour per horsepower"
+      },
+      {
+        "id": "AFH.20.19.6.c.2",
+        "text": "Efficiency of fuel usage"
+      },
+      {
+        "id": "AFH.20.19.6.c.3",
+        "text": "Fuel consumption rate"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.19.6.w.1",
+        "text": "Maximum fuel capacity"
+      },
+      {
+        "id": "AFH.20.19.6.w.2",
+        "text": "Minimum fuel requirement"
+      },
+      {
+        "id": "AFH.20.19.6.w.3",
+        "text": "Fuel tank size"
+      },
+      {
+        "id": "AFH.20.19.6.w.4",
+        "text": "Fuel type compatibility"
+      },
+      {
+        "id": "AFH.20.19.6.w.5",
+        "text": "Engine temperature"
+      },
+      {
+        "id": "AFH.20.19.6.w.6",
+        "text": "Altitude efficiency"
+      },
+      {
+        "id": "AFH.20.19.6.w.7",
+        "text": "Airspeed efficiency"
+      },
+      {
+        "id": "AFH.20.19.6.w.8",
+        "text": "Fuel pressure"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Performance"
+    ]
+  },
+  {
+    "questionid": "AFH.20.20.1",
+    "question": "What is the purpose of a thrust reverser in a jet engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.20.1.c.1",
+        "text": "Redirects jet exhaust flow to reverse thrust"
+      },
+      {
+        "id": "AFH.20.20.1.c.2",
+        "text": "Blocks outflow at the engine tailpipe"
+      },
+      {
+        "id": "AFH.20.20.1.c.3",
+        "text": "Uses clamshell doors to change thrust direction"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.20.1.w.1",
+        "text": "Increases engine speed"
+      },
+      {
+        "id": "AFH.20.20.1.w.2",
+        "text": "Enhances fuel efficiency"
+      },
+      {
+        "id": "AFH.20.20.1.w.3",
+        "text": "Reduces engine noise"
+      },
+      {
+        "id": "AFH.20.20.1.w.4",
+        "text": "Improves aerodynamics"
+      },
+      {
+        "id": "AFH.20.20.1.w.5",
+        "text": "Increases lift"
+      },
+      {
+        "id": "AFH.20.20.1.w.6",
+        "text": "Reduces drag"
+      },
+      {
+        "id": "AFH.20.20.1.w.7",
+        "text": "Enhances stability"
+      },
+      {
+        "id": "AFH.20.20.1.w.8",
+        "text": "Increases altitude"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Jet Engines",
+      "Thrust Reversers"
+    ]
+  },
+  {
+    "questionid": "AFH.20.20.2",
+    "question": "What color are taxiway lights?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.20.2.c.1",
+        "text": "Blue"
+      },
+      {
+        "id": "AFH.20.20.2.c.2",
+        "text": "See conventional landing gear."
+      },
+      {
+        "id": "AFH.20.20.2.c.3",
+        "text": "Takeoff roll (ground roll)."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.20.2.w.1",
+        "text": "Red"
+      },
+      {
+        "id": "AFH.20.20.2.w.2",
+        "text": "Green"
+      },
+      {
+        "id": "AFH.20.20.2.w.3",
+        "text": "White"
+      },
+      {
+        "id": "AFH.20.20.2.w.4",
+        "text": "Yellow"
+      },
+      {
+        "id": "AFH.20.20.2.w.5",
+        "text": "Orange"
+      },
+      {
+        "id": "AFH.20.20.2.w.6",
+        "text": "Purple"
+      },
+      {
+        "id": "AFH.20.20.2.w.7",
+        "text": "Pink"
+      },
+      {
+        "id": "AFH.20.20.2.w.8",
+        "text": "Brown"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Airport Lighting",
+      "Taxiway Lights"
+    ]
+  },
+  {
+    "questionid": "AFH.20.20.3",
+    "question": "What is the function of a tetrahedron near a runway?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.20.3.c.1",
+        "text": "Indicates wind direction"
+      },
+      {
+        "id": "AFH.20.20.3.c.2",
+        "text": "Aids in takeoffs"
+      },
+      {
+        "id": "AFH.20.20.3.c.3",
+        "text": "Aids in landings"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.20.3.w.1",
+        "text": "Measures wind speed"
+      },
+      {
+        "id": "AFH.20.20.3.w.2",
+        "text": "Provides runway lighting"
+      },
+      {
+        "id": "AFH.20.20.3.w.3",
+        "text": "Enhances runway visibility"
+      },
+      {
+        "id": "AFH.20.20.3.w.4",
+        "text": "Measures air pressure"
+      },
+      {
+        "id": "AFH.20.20.3.w.5",
+        "text": "Indicates runway length"
+      },
+      {
+        "id": "AFH.20.20.3.w.6",
+        "text": "Provides weather information"
+      },
+      {
+        "id": "AFH.20.20.3.w.7",
+        "text": "Enhances aircraft stability"
+      },
+      {
+        "id": "AFH.20.20.3.w.8",
+        "text": "Measures temperature"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Runway Indicators",
+      "Wind Direction"
+    ]
+  },
+  {
+    "questionid": "AFH.20.20.4",
+    "question": "What does a torque meter indicate in an aircraft?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.20.4.c.1",
+        "text": "Amount of torque produced by the engine"
+      },
+      {
+        "id": "AFH.20.20.4.c.2",
+        "text": "Used on large reciprocating engines"
+      },
+      {
+        "id": "AFH.20.20.4.c.3",
+        "text": "Used on turboprop engines"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.20.4.w.1",
+        "text": "Measures fuel consumption"
+      },
+      {
+        "id": "AFH.20.20.4.w.2",
+        "text": "Indicates airspeed"
+      },
+      {
+        "id": "AFH.20.20.4.w.3",
+        "text": "Measures altitude"
+      },
+      {
+        "id": "AFH.20.20.4.w.4",
+        "text": "Indicates engine temperature"
+      },
+      {
+        "id": "AFH.20.20.4.w.5",
+        "text": "Measures thrust"
+      },
+      {
+        "id": "AFH.20.20.4.w.6",
+        "text": "Indicates fuel level"
+      },
+      {
+        "id": "AFH.20.20.4.w.7",
+        "text": "Measures drag"
+      },
+      {
+        "id": "AFH.20.20.4.w.8",
+        "text": "Indicates cabin pressure"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Engine Instruments",
+      "Torque Measurement"
+    ]
+  },
+  {
+    "questionid": "AFH.20.20.5",
+    "question": "What is total drag in aviation?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.20.5.c.1",
+        "text": "Sum of parasite and induced drag"
+      },
+      {
+        "id": "AFH.20.20.5.c.2",
+        "text": "Affects aircraft performance"
+      },
+      {
+        "id": "AFH.20.20.5.c.3",
+        "text": "Opposes thrust"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.20.5.w.1",
+        "text": "Increases lift"
+      },
+      {
+        "id": "AFH.20.20.5.w.2",
+        "text": "Reduces fuel efficiency"
+      },
+      {
+        "id": "AFH.20.20.5.w.3",
+        "text": "Enhances stability"
+      },
+      {
+        "id": "AFH.20.20.5.w.4",
+        "text": "Increases speed"
+      },
+      {
+        "id": "AFH.20.20.5.w.5",
+        "text": "Improves aerodynamics"
+      },
+      {
+        "id": "AFH.20.20.5.w.6",
+        "text": "Reduces noise"
+      },
+      {
+        "id": "AFH.20.20.5.w.7",
+        "text": "Increases altitude"
+      },
+      {
+        "id": "AFH.20.20.5.w.8",
+        "text": "Improves visibility"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Aerodynamics",
+      "Drag"
+    ]
+  },
+  {
+    "questionid": "AFH.20.21.1",
+    "question": "According to the Airplane Flying Handbook, which of the following are components of an aircraft's useful load?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.21.1.c.1",
+        "text": "Pilot weight"
+      },
+      {
+        "id": "AFH.20.21.1.c.2",
+        "text": "Usable fuel"
+      },
+      {
+        "id": "AFH.20.21.1.c.3",
+        "text": "Baggage"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.21.1.w.1",
+        "text": "Unusable fuel"
+      },
+      {
+        "id": "AFH.20.21.1.w.2",
+        "text": "Basic empty weight"
+      },
+      {
+        "id": "AFH.20.21.1.w.3",
+        "text": "Ultimate load factor"
+      },
+      {
+        "id": "AFH.20.21.1.w.4",
+        "text": "Unfeathering accumulator"
+      },
+      {
+        "id": "AFH.20.21.1.w.5",
+        "text": "UNICOM"
+      },
+      {
+        "id": "AFH.20.21.1.w.6",
+        "text": "Maximum allowable gross weight"
+      },
+      {
+        "id": "AFH.20.21.1.w.7",
+        "text": "Aircraft component breakdown load"
+      },
+      {
+        "id": "AFH.20.21.1.w.8",
+        "text": "Limited acrobatic operation capability"
+      }
+    ],
+    "source": "AFH Chapter 20",
+    "subjects": [
+      "Useful Load",
+      "Aircraft Weight and Balance"
+    ]
+  },
+  {
+    "questionid": "AFH.20.22.1",
+    "question": "What is V1 in aviation terms?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.22.1.c.1",
+        "text": "Critical engine failure speed"
+      },
+      {
+        "id": "AFH.20.22.1.c.2",
+        "text": "Takeoff decision speed"
+      },
+      {
+        "id": "AFH.20.22.1.c.3",
+        "text": "Minimum speed to continue takeoff after engine failure"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.22.1.w.1",
+        "text": "Maximum landing speed"
+      },
+      {
+        "id": "AFH.20.22.1.w.2",
+        "text": "Cruise speed"
+      },
+      {
+        "id": "AFH.20.22.1.w.3",
+        "text": "Stall speed"
+      },
+      {
+        "id": "AFH.20.22.1.w.4",
+        "text": "Approach speed"
+      },
+      {
+        "id": "AFH.20.22.1.w.5",
+        "text": "VNE (Never Exceed Speed)"
+      },
+      {
+        "id": "AFH.20.22.1.w.6",
+        "text": "VNO (Maximum Structural Cruising Speed)"
+      },
+      {
+        "id": "AFH.20.22.1.w.7",
+        "text": "VY (Best Rate of Climb Speed)"
+      },
+      {
+        "id": "AFH.20.22.1.w.8",
+        "text": "VX (Best Angle of Climb Speed)"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "V1",
+      "Takeoff speeds"
+    ]
+  },
+  {
+    "questionid": "AFH.20.22.2",
+    "question": "What does the Vertical Speed Indicator (VSI) measure?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.22.2.c.1",
+        "text": "Rate of climb"
+      },
+      {
+        "id": "AFH.20.22.2.c.2",
+        "text": "Rate of descent"
+      },
+      {
+        "id": "AFH.20.22.2.c.3",
+        "text": "Feet per minute"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.22.2.w.1",
+        "text": "Horizontal speed"
+      },
+      {
+        "id": "AFH.20.22.2.w.2",
+        "text": "Ground speed"
+      },
+      {
+        "id": "AFH.20.22.2.w.3",
+        "text": "Airspeed"
+      },
+      {
+        "id": "AFH.20.22.2.w.4",
+        "text": "Fuel consumption rate"
+      },
+      {
+        "id": "AFH.20.22.2.w.5",
+        "text": "Engine RPM"
+      },
+      {
+        "id": "AFH.20.22.2.w.6",
+        "text": "Altitude"
+      },
+      {
+        "id": "AFH.20.22.2.w.7",
+        "text": "Yaw rate"
+      },
+      {
+        "id": "AFH.20.22.2.w.8",
+        "text": "Pitch angle"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Vertical Speed Indicator",
+      "Flight instruments"
+    ]
+  },
+  {
+    "questionid": "AFH.20.22.3",
+    "question": "What is the purpose of VFR Terminal Area Charts?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.22.3.c.1",
+        "text": "Depict Class B airspace"
+      },
+      {
+        "id": "AFH.20.22.3.c.2",
+        "text": "Provide topographic information"
+      },
+      {
+        "id": "AFH.20.22.3.c.3",
+        "text": "Include visual and radio aids to navigation"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.22.3.w.1",
+        "text": "Show international airspace boundaries"
+      },
+      {
+        "id": "AFH.20.22.3.w.2",
+        "text": "Depict Class C airspace"
+      },
+      {
+        "id": "AFH.20.22.3.w.3",
+        "text": "Provide weather forecasts"
+      },
+      {
+        "id": "AFH.20.22.3.w.4",
+        "text": "Include flight plans"
+      },
+      {
+        "id": "AFH.20.22.3.w.5",
+        "text": "Show airline routes"
+      },
+      {
+        "id": "AFH.20.22.3.w.6",
+        "text": "Depict Class D airspace"
+      },
+      {
+        "id": "AFH.20.22.3.w.7",
+        "text": "Provide maintenance schedules"
+      },
+      {
+        "id": "AFH.20.22.3.w.8",
+        "text": "Include passenger information"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "VFR Terminal Area Charts",
+      "Airspace navigation"
+    ]
+  },
+  {
+    "questionid": "AFH.20.22.4",
+    "question": "What does the V-G diagram relate in aviation?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.22.4.c.1",
+        "text": "Velocity to load factor"
+      },
+      {
+        "id": "AFH.20.22.4.c.2",
+        "text": "Safe load factor limits"
+      },
+      {
+        "id": "AFH.20.22.4.c.3",
+        "text": "Load factor at various speeds"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.22.4.w.1",
+        "text": "Velocity to altitude"
+      },
+      {
+        "id": "AFH.20.22.4.w.2",
+        "text": "Velocity to fuel consumption"
+      },
+      {
+        "id": "AFH.20.22.4.w.3",
+        "text": "Load factor to engine power"
+      },
+      {
+        "id": "AFH.20.22.4.w.4",
+        "text": "Velocity to temperature"
+      },
+      {
+        "id": "AFH.20.22.4.w.5",
+        "text": "Load factor to passenger capacity"
+      },
+      {
+        "id": "AFH.20.22.4.w.6",
+        "text": "Velocity to runway length"
+      },
+      {
+        "id": "AFH.20.22.4.w.7",
+        "text": "Load factor to wing span"
+      },
+      {
+        "id": "AFH.20.22.4.w.8",
+        "text": "Velocity to climb rate"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "V-G diagram",
+      "Aircraft performance"
+    ]
+  },
+  {
+    "questionid": "AFH.20.23.1",
+    "question": "Which statements accurately describe wake turbulence or wingtip vortices?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.23.1.c.1",
+        "text": "They are wingtip vortices created when an airplane generates lift."
+      },
+      {
+        "id": "AFH.20.23.1.c.2",
+        "text": "They are caused by air spilling over wingtips from high pressure below to low pressure above."
+      },
+      {
+        "id": "AFH.20.23.1.c.3",
+        "text": "Their intensity depends on the airplane's weight, speed, and configuration."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.23.1.w.1",
+        "text": "It is a sudden, drastic shift in wind speed, direction, or both."
+      },
+      {
+        "id": "AFH.20.23.1.w.2",
+        "text": "It is the tendency of the aircraft to turn into the relative wind."
+      },
+      {
+        "id": "AFH.20.23.1.w.3",
+        "text": "It is a condition caused when forward yoke pressure during takeoff causes the aircraft to ride on the nose-wheel alone."
+      },
+      {
+        "id": "AFH.20.23.1.w.4",
+        "text": "It is the total surface of the wing in square feet."
+      },
+      {
+        "id": "AFH.20.23.1.w.5",
+        "text": "It is a controllable valve in the tailpipe of an aircraft reciprocating engine equipped with a turbocharger."
+      },
+      {
+        "id": "AFH.20.23.1.w.6",
+        "text": "It is the force by which a body is attracted toward the center of the earth by gravity."
+      },
+      {
+        "id": "AFH.20.23.1.w.7",
+        "text": "It is when the air moving through a propeller creates rotational energy."
+      },
+      {
+        "id": "AFH.20.23.1.w.8",
+        "text": "It is a design feature incorporated into some wings to improve aileron control effectiveness."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Wake Turbulence",
+      "Wingtip Vortices"
+    ]
+  },
+  {
+    "questionid": "AFH.20.23.2",
+    "question": "Which statements correctly define or describe 'weight' as it pertains to an aircraft?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.23.2.c.1",
+        "text": "It is one of the four main forces acting on an aircraft."
+      },
+      {
+        "id": "AFH.20.23.2.c.2",
+        "text": "It acts downward through the aircraft’s center of gravity toward the center of the earth."
+      },
+      {
+        "id": "AFH.20.23.2.c.3",
+        "text": "It opposes lift."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.23.2.w.1",
+        "text": "It is the maximum distance from wingtip to wingtip."
+      },
+      {
+        "id": "AFH.20.23.2.w.2",
+        "text": "It is a condition caused when forward yoke pressure during takeoff or landing causes the aircraft to ride on the nose-wheel alone."
+      },
+      {
+        "id": "AFH.20.23.2.w.3",
+        "text": "It is a correction applied to the course to establish a heading so that track will coincide with course."
+      },
+      {
+        "id": "AFH.20.23.2.w.4",
+        "text": "It is the total surface of the wing, which includes control surfaces."
+      },
+      {
+        "id": "AFH.20.23.2.w.5",
+        "text": "It is a controllable valve in the tailpipe of an aircraft reciprocating engine equipped with a turbocharger."
+      },
+      {
+        "id": "AFH.20.23.2.w.6",
+        "text": "It is the tendency of the aircraft to turn into the relative wind."
+      },
+      {
+        "id": "AFH.20.23.2.w.7",
+        "text": "It is rapidly rotating whirlpools of air created when an airplane generates lift."
+      },
+      {
+        "id": "AFH.20.23.2.w.8",
+        "text": "It is a sudden, drastic shift in wind speed, direction, or both that may occur in the horizontal or vertical plane."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Weight",
+      "Forces of Flight"
+    ]
+  },
+  {
+    "questionid": "AFH.20.24.1",
+    "question": "What does a yaw string indicate when placed on an aircraft?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.24.1.c.1",
+        "text": "Slipping of the aircraft"
+      },
+      {
+        "id": "AFH.20.24.1.c.2",
+        "text": "Skidding of the aircraft"
+      },
+      {
+        "id": "AFH.20.24.1.c.3",
+        "text": "Yaw movement"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.24.1.w.1",
+        "text": "Pitch movement"
+      },
+      {
+        "id": "AFH.20.24.1.w.2",
+        "text": "Roll movement"
+      },
+      {
+        "id": "AFH.20.24.1.w.3",
+        "text": "Altitude change"
+      },
+      {
+        "id": "AFH.20.24.1.w.4",
+        "text": "Speed change"
+      },
+      {
+        "id": "AFH.20.24.1.w.5",
+        "text": "Engine performance"
+      },
+      {
+        "id": "AFH.20.24.1.w.6",
+        "text": "Fuel level"
+      },
+      {
+        "id": "AFH.20.24.1.w.7",
+        "text": "Cabin pressure"
+      },
+      {
+        "id": "AFH.20.24.1.w.8",
+        "text": "Temperature change"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A), Glossary Section Y",
+    "subjects": [
+      "Aircraft Instruments",
+      "Flight Dynamics"
+    ]
+  },
+  {
+    "questionid": "AFH.20.25.1",
+    "question": "What is the definition of zero fuel weight in aviation?",
+    "correct_answers": [
+      {
+        "id": "AFH.20.25.1.c.1",
+        "text": "The weight of the aircraft including all useful load except fuel"
+      },
+      {
+        "id": "AFH.20.25.1.c.2",
+        "text": "Excludes fuel from the aircraft's weight calculation"
+      },
+      {
+        "id": "AFH.20.25.1.c.3",
+        "text": "Includes passengers, cargo, and equipment but not fuel"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.20.25.1.w.1",
+        "text": "The total weight of the aircraft including fuel"
+      },
+      {
+        "id": "AFH.20.25.1.w.2",
+        "text": "The weight of the aircraft with only the pilot onboard"
+      },
+      {
+        "id": "AFH.20.25.1.w.3",
+        "text": "The maximum takeoff weight of the aircraft"
+      },
+      {
+        "id": "AFH.20.25.1.w.4",
+        "text": "The weight of the aircraft when fully fueled"
+      },
+      {
+        "id": "AFH.20.25.1.w.5",
+        "text": "The weight of the aircraft with no passengers or cargo"
+      },
+      {
+        "id": "AFH.20.25.1.w.6",
+        "text": "The weight of the aircraft including only the pilot and fuel"
+      },
+      {
+        "id": "AFH.20.25.1.w.7",
+        "text": "The weight of the aircraft with all engines running"
+      },
+      {
+        "id": "AFH.20.25.1.w.8",
+        "text": "The weight of the aircraft with all systems powered down"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3A)",
+    "subjects": [
+      "Aviation Terminology"
+    ]
+  }
+]

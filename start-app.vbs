@@ -9,7 +9,7 @@ If fso.FileExists(electronExe) Then
 	launchCmd = "cmd /c ""cd /d """" & appPath & """" && """" & electronExe & """" ."""
 	objShell.Run launchCmd, 0, False
 Else
-	setupCmd = "cmd /c """" & batchPath & """"
+	setupCmd = "cmd /c """ & batchPath & """"
 	exitCode = objShell.Run(setupCmd, 0, True)
 
 	If exitCode <> 0 Then

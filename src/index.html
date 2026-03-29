@@ -49,11 +49,21 @@
               <button class="destination-button" type="button" data-select-folder="outputFolder">Browse</button>
             </div>
           </article>
+          <article class="destination-cell" data-destination-cell data-dataset-name-cell>
+            <label for="datasetName">Name Dataset (Export only)</label>
+            <input id="datasetName" class="filename-input" type="text" value="" placeholder="Example: AFH dataset" spellcheck="false" />
+            <p class="prefix-hint">Example export folder: AFH_dataset_training_files</p>
+          </article>
           <article class="destination-cell" data-destination-cell data-common-prefix-cell>
             <label for="outputPrefix">Add output documents prefix (Generate only)</label>
             <input id="outputPrefix" class="filename-input" type="text" value="" placeholder="Example: AFH Chapter 1" spellcheck="false" />
             <p class="prefix-hint">Example output name: AFH_1_document.json</p>
           </article>
+        </div>
+        <div class="action-row" aria-label="Provider status">
+          <button id="openAiStatusButton" class="provider-status-button provider-status--connecting" type="button" title="OpenAI: connecting" disabled>OpenAI</button>
+          <button id="anthropicStatusButton" class="provider-status-button provider-status--connecting" type="button" title="Claude: connecting" disabled>Claude</button>
+          <button id="geminiStatusButton" class="provider-status-button provider-status--connecting" type="button" title="Gemini: connecting" disabled>Gemini</button>
         </div>
       </section>
 
@@ -89,9 +99,6 @@
           <div class="action-row">
             <button id="generateButton" class="generate-button" type="button" disabled>Generate</button>
             <button id="cancelButton" class="cancel-button" type="button" disabled>Cancel</button>
-            <button id="openAiStatusButton" class="provider-status-button provider-status--connecting" type="button" title="OpenAI: connecting" disabled>OpenAI</button>
-            <button id="anthropicStatusButton" class="provider-status-button provider-status--connecting" type="button" title="Claude: connecting" disabled>Claude</button>
-            <button id="geminiStatusButton" class="provider-status-button provider-status--connecting" type="button" title="Gemini: connecting" disabled>Gemini</button>
             <p id="generateHint" class="generate-hint">Select the PDF, output folder, and at least one output type.</p>
           </div>
         </section>
@@ -170,6 +177,11 @@
           </div>
           <div class="action-row repair-action-row">
             <button id="repairButton" class="repair-button" type="button" disabled>Repair Partial Artifact</button>
+            <label class="repair-mode-toggle" for="repairFastMode">
+              <input id="repairFastMode" type="checkbox" checked />
+              Fast repair mode
+            </label>
+            <span class="repair-mode-help">Fast = quicker retries. Deep = exhaustive retries.</span>
             <p id="repairHint" class="repair-hint">Select the source document JSON and a partial questions or conversational pairs JSON.</p>
           </div>
         </section>
@@ -178,7 +190,7 @@
       <section class="workflow-panel" data-mode-panel="export" aria-label="Export dataset workflow" hidden>
         <section class="destination-panel export-panel" aria-label="Export training files">
           <h3>Export Dataset</h3>
-          <p class="destination-subtitle">Pick a folder to scan recursively. The app will create a fresh export folder there and copy only question bank JSON files and conversational training pair JSON files.</p>
+          <p class="destination-subtitle">Pick a folder to scan recursively. Set Name Dataset in Output Settings. Export creates a fresh dataset-named folder with three dataset-named buckets (documents, questions, conversational), then writes the summary Markdown at that export root.</p>
           <div class="destination-grid export-grid">
             <article class="destination-cell" data-destination-cell>
               <label for="exportSourceFolder">Folder To Scan</label>

@@ -1,0 +1,3104 @@
+[
+  {
+    "questionBank": {
+      "chapterId": "afh.12",
+      "bookId": "AFH",
+      "chapterNumber": 12,
+      "chapterTitle": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12: Transition to Complex Airplanes Introduction",
+      "totalRequiredQuestions": 50,
+      "metadata": {
+        "generatedAtUtc": "2026-03-29T14:15:34.453Z",
+        "chapterId": "afh.12",
+        "chapterNumber": 12,
+        "totalSections": 26,
+        "totalRequiredQuestions": 50,
+        "providers": [
+          "openai",
+          "anthropic",
+          "gemini"
+        ],
+        "models": [
+          "gpt-4o",
+          "claude-sonnet-4-6",
+          "gemini-2.5-flash"
+        ],
+        "promptTokens": 13609,
+        "completionTokens": 6448,
+        "totalTokens": 20057,
+        "sectionQuestionSummary": [
+          {
+            "sectionId": "afh.12.1",
+            "sectionTitle": "Function of Flaps",
+            "sectionOrdinal": 1,
+            "sectionWeightPercentage": 3.42,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.12.2",
+            "sectionTitle": "Flap Effectiveness",
+            "sectionOrdinal": 2,
+            "sectionWeightPercentage": 4.07,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.12.3",
+            "sectionTitle": "Operational Procedures",
+            "sectionOrdinal": 3,
+            "sectionWeightPercentage": 11.35,
+            "questionsGenerated": 6
+          },
+          {
+            "sectionId": "afh.12.4",
+            "sectionTitle": "Controllable-Pitch Propeller",
+            "sectionOrdinal": 4,
+            "sectionWeightPercentage": 0.77,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.12.5",
+            "sectionTitle": "Constant-Speed Propeller",
+            "sectionOrdinal": 5,
+            "sectionWeightPercentage": 5.6,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.12.6",
+            "sectionTitle": "Takeoff, Climb, and Cruise",
+            "sectionOrdinal": 6,
+            "sectionWeightPercentage": 4.39,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.12.7",
+            "sectionTitle": "Blade Angle Control",
+            "sectionOrdinal": 7,
+            "sectionWeightPercentage": 3.22,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.12.8",
+            "sectionTitle": "Governing Range",
+            "sectionOrdinal": 8,
+            "sectionWeightPercentage": 2.18,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.12.9",
+            "sectionTitle": "Constant-Speed Propeller Operation",
+            "sectionOrdinal": 9,
+            "sectionWeightPercentage": 9.52,
+            "questionsGenerated": 5
+          },
+          {
+            "sectionId": "afh.12.10",
+            "sectionTitle": "Turbocharging",
+            "sectionOrdinal": 10,
+            "sectionWeightPercentage": 5.04,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.12.11",
+            "sectionTitle": "Ground Boosting Versus Altitude Turbocharging",
+            "sectionOrdinal": 11,
+            "sectionWeightPercentage": 2.62,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.12.12",
+            "sectionTitle": "Operating Characteristics",
+            "sectionOrdinal": 12,
+            "sectionWeightPercentage": 3.45,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.12.13",
+            "sectionTitle": "Heat Management",
+            "sectionOrdinal": 13,
+            "sectionWeightPercentage": 5.72,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.12.14",
+            "sectionTitle": "Turbocharger Failure",
+            "sectionOrdinal": 14,
+            "sectionWeightPercentage": 0.98,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.12.15",
+            "sectionTitle": "Over-Boost Condition",
+            "sectionOrdinal": 15,
+            "sectionWeightPercentage": 0.74,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.12.16",
+            "sectionTitle": "Low Manifold Pressure",
+            "sectionOrdinal": 16,
+            "sectionWeightPercentage": 1.1,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.12.17",
+            "sectionTitle": "Retractable Landing Gear",
+            "sectionOrdinal": 17,
+            "sectionWeightPercentage": 1.44,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.12.18",
+            "sectionTitle": "Landing Gear Systems",
+            "sectionOrdinal": 18,
+            "sectionWeightPercentage": 5.52,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.12.19",
+            "sectionTitle": "Controls and Position Indicators",
+            "sectionOrdinal": 19,
+            "sectionWeightPercentage": 2.8,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.12.20",
+            "sectionTitle": "Landing Gear Safety Devices",
+            "sectionOrdinal": 20,
+            "sectionWeightPercentage": 4.29,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.12.21",
+            "sectionTitle": "Emergency Gear Extension Systems",
+            "sectionOrdinal": 21,
+            "sectionWeightPercentage": 2.27,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.12.22",
+            "sectionTitle": "Operational Procedures",
+            "sectionOrdinal": 22,
+            "sectionWeightPercentage": 3.4,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.12.23",
+            "sectionTitle": "Takeoff and Climb",
+            "sectionOrdinal": 23,
+            "sectionWeightPercentage": 4.81,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.12.24",
+            "sectionTitle": "Approach and Landing",
+            "sectionOrdinal": 24,
+            "sectionWeightPercentage": 8.39,
+            "questionsGenerated": 4
+          },
+          {
+            "sectionId": "afh.12.25",
+            "sectionTitle": "Transition Training",
+            "sectionOrdinal": 25,
+            "sectionWeightPercentage": 2.07,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.12.26",
+            "sectionTitle": "Chapter Summary",
+            "sectionOrdinal": 26,
+            "sectionWeightPercentage": 0.84,
+            "questionsGenerated": 1
+          }
+        ],
+        "buildStatus": "complete",
+        "buildStage": "questions",
+        "completedSections": 26,
+        "incompleteSections": [],
+        "failureReason": ""
+      }
+    }
+  },
+  {
+    "questionid": "AFH.12.1.1",
+    "question": "What are the primary effects of flap deflection on an airplane's performance?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.1.1.c.1",
+        "text": "Increases the wing's lift coefficient"
+      },
+      {
+        "id": "AFH.12.1.1.c.2",
+        "text": "Produces a pitching moment about the lateral axis"
+      },
+      {
+        "id": "AFH.12.1.1.c.3",
+        "text": "Increases drag significantly beyond 15° deflection"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.1.1.w.1",
+        "text": "Increases the critical angle of attack"
+      },
+      {
+        "id": "AFH.12.1.1.w.2",
+        "text": "Decreases lift coefficient"
+      },
+      {
+        "id": "AFH.12.1.1.w.3",
+        "text": "Produces a rolling moment about the longitudinal axis"
+      },
+      {
+        "id": "AFH.12.1.1.w.4",
+        "text": "Decreases drag at all deflection angles"
+      },
+      {
+        "id": "AFH.12.1.1.w.5",
+        "text": "Always causes a nose-up pitch"
+      },
+      {
+        "id": "AFH.12.1.1.w.6",
+        "text": "Reduces the wing's surface area"
+      },
+      {
+        "id": "AFH.12.1.1.w.7",
+        "text": "Eliminates parasite drag"
+      },
+      {
+        "id": "AFH.12.1.1.w.8",
+        "text": "Increases lift without affecting drag"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12: Transition to Complex Airplanes Introduction, Section: Function of Flaps",
+    "subjects": [
+      "Aerodynamics",
+      "Aircraft Performance",
+      "Flight Mechanics"
+    ]
+  },
+  {
+    "questionid": "AFH.12.2.1",
+    "question": "Which statements correctly describe the split flap compared to other trailing-edge flap types?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.2.1.c.1",
+        "text": "It deflects only the lower or underside portion of the wing, leaving the upper trailing edge undisturbed"
+      },
+      {
+        "id": "AFH.12.2.1.c.2",
+        "text": "It produces more drag than the plain hinge flap"
+      },
+      {
+        "id": "AFH.12.2.1.c.3",
+        "text": "It is more useful for landing than for takeoff due to significant drag at small deflections"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.2.1.w.1",
+        "text": "It produces less drag than the plain hinge flap at all deflection angles"
+      },
+      {
+        "id": "AFH.12.2.1.w.2",
+        "text": "It has a gap between the wing and the flap leading edge to energize airflow"
+      },
+      {
+        "id": "AFH.12.2.1.w.3",
+        "text": "It deflects downward and aft to increase the total wing area"
+      },
+      {
+        "id": "AFH.12.2.1.w.4",
+        "text": "It provides a higher lift-drag ratio than the slotted flap"
+      },
+      {
+        "id": "AFH.12.2.1.w.5",
+        "text": "Airflow remains attached to the flap at small deflections, minimizing drag"
+      },
+      {
+        "id": "AFH.12.2.1.w.6",
+        "text": "It is the most complex of all trailing-edge flap systems"
+      },
+      {
+        "id": "AFH.12.2.1.w.7",
+        "text": "It is most commonly used on larger airplanes due to structural complexity"
+      },
+      {
+        "id": "AFH.12.2.1.w.8",
+        "text": "It produces less pitching moment than the plain hinge flap but also less lift"
+      }
+    ],
+    "source": "AFH Chapter 12, Section 12.2 – Flap Effectiveness",
+    "subjects": [
+      "Split Flap Characteristics",
+      "Flap Drag Comparison"
+    ]
+  },
+  {
+    "questionid": "AFH.12.2.2",
+    "question": "Which statements accurately describe the Fowler flap and slotted flap designs?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.2.2.c.1",
+        "text": "The Fowler flap deflects down and aft to increase the wing area"
+      },
+      {
+        "id": "AFH.12.2.2.c.2",
+        "text": "The slotted flap uses a gap to allow high-pressure airflow to energize lower pressure over the wing top, delaying flow separation"
+      },
+      {
+        "id": "AFH.12.2.2.c.3",
+        "text": "The Fowler flap can be multi-slotted and provides the maximum lift coefficient among trailing-edge flap types"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.2.2.w.1",
+        "text": "The slotted flap produces greater lift than the Fowler flap"
+      },
+      {
+        "id": "AFH.12.2.2.w.2",
+        "text": "The Fowler flap is most commonly used on light training aircraft due to its simplicity"
+      },
+      {
+        "id": "AFH.12.2.2.w.3",
+        "text": "The slotted flap has a lower lift-drag ratio than the split flap, making it unsuitable for takeoff"
+      },
+      {
+        "id": "AFH.12.2.2.w.4",
+        "text": "The Fowler flap leaves the upper trailing edge of the wing undisturbed during deflection"
+      },
+      {
+        "id": "AFH.12.2.2.w.5",
+        "text": "The slotted flap produces more drag than the split flap at small deflections"
+      },
+      {
+        "id": "AFH.12.2.2.w.6",
+        "text": "The Fowler flap functions identically to the plain hinge flap but with added area"
+      },
+      {
+        "id": "AFH.12.2.2.w.7",
+        "text": "The slotted flap cannot be used for takeoff because of excessive drag at small deflections"
+      },
+      {
+        "id": "AFH.12.2.2.w.8",
+        "text": "The Fowler flap gap energizes airflow in the same manner as a plain hinge flap"
+      }
+    ],
+    "source": "AFH Chapter 12, Section 12.2 – Flap Effectiveness",
+    "subjects": [
+      "Fowler Flap Design",
+      "Slotted Flap Aerodynamics"
+    ]
+  },
+  {
+    "questionid": "AFH.12.3.1",
+    "question": "What are key considerations for pilots regarding the operational use of flaps?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.3.1.c.1",
+        "text": "Referencing the Airplane Flight Manual and/or Pilot’s Operating Handbook (AFM/POH)."
+      },
+      {
+        "id": "AFH.12.3.1.c.2",
+        "text": "Exercising pilot judgment and error avoidance, especially when the airplane is close to the ground."
+      },
+      {
+        "id": "AFH.12.3.1.c.3",
+        "text": "Relating manufacturer's recommendations to aerodynamic effects of flaps."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.3.1.w.1",
+        "text": "Always extending flaps to maximum deflection for every landing."
+      },
+      {
+        "id": "AFH.12.3.1.w.2",
+        "text": "Ignoring the AFM/POH if personal experience suggests otherwise."
+      },
+      {
+        "id": "AFH.12.3.1.w.3",
+        "text": "Assuming all flap designs have identical operational procedures."
+      },
+      {
+        "id": "AFH.12.3.1.w.4",
+        "text": "Prioritizing passenger comfort over manufacturer's recommendations."
+      },
+      {
+        "id": "AFH.12.3.1.w.5",
+        "text": "Extending flaps only after the landing gear is fully down."
+      },
+      {
+        "id": "AFH.12.3.1.w.6",
+        "text": "Relying solely on air traffic control for flap extension timing."
+      },
+      {
+        "id": "AFH.12.3.1.w.7",
+        "text": "Using flaps primarily to increase airspeed during approach."
+      },
+      {
+        "id": "AFH.12.3.1.w.8",
+        "text": "Disregarding wind conditions when deciding on flap deflection."
+      }
+    ],
+    "source": "afh.12.3",
+    "subjects": [
+      "Flaps",
+      "AFM/POH",
+      "Pilot Judgment"
+    ]
+  },
+  {
+    "questionid": "AFH.12.3.2",
+    "question": "What factors should a pilot consider when making decisions about the degree and time of flap deflection?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.3.2.c.1",
+        "text": "Basic background knowledge of flap aerodynamics and geometry."
+      },
+      {
+        "id": "AFH.12.3.2.c.2",
+        "text": "Runway and approach conditions."
+      },
+      {
+        "id": "AFH.12.3.2.c.3",
+        "text": "Wind conditions."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.3.2.w.1",
+        "text": "The airplane's maximum certified altitude."
+      },
+      {
+        "id": "AFH.12.3.2.w.2",
+        "text": "The color of the runway lights."
+      },
+      {
+        "id": "AFH.12.3.2.w.3",
+        "text": "The number of passengers on board."
+      },
+      {
+        "id": "AFH.12.3.2.w.4",
+        "text": "The pilot's preferred landing technique regardless of conditions."
+      },
+      {
+        "id": "AFH.12.3.2.w.5",
+        "text": "The time of day."
+      },
+      {
+        "id": "AFH.12.3.2.w.6",
+        "text": "The amount of fuel remaining in the tanks."
+      },
+      {
+        "id": "AFH.12.3.2.w.7",
+        "text": "The last maintenance check date."
+      },
+      {
+        "id": "AFH.12.3.2.w.8",
+        "text": "The type of navigation system installed."
+      }
+    ],
+    "source": "afh.12.3",
+    "subjects": [
+      "Flaps",
+      "Aerodynamics",
+      "Decision Making"
+    ]
+  },
+  {
+    "questionid": "AFH.12.3.3",
+    "question": "What are the advantages and characteristics of extending flaps incrementally during the landing pattern?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.3.3.c.1",
+        "text": "Allows for smaller adjustments of pitch and power."
+      },
+      {
+        "id": "AFH.12.3.3.c.2",
+        "text": "Supports a stabilized approach."
+      },
+      {
+        "id": "AFH.12.3.3.c.3",
+        "text": "Avoids large lift changes that require significant pitch and power changes."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.3.3.w.1",
+        "text": "Significantly increases the airplane's cruising speed."
+      },
+      {
+        "id": "AFH.12.3.3.w.2",
+        "text": "Is only recommended for emergency landings."
+      },
+      {
+        "id": "AFH.12.3.3.w.3",
+        "text": "Eliminates the need for power adjustments."
+      },
+      {
+        "id": "AFH.12.3.3.w.4",
+        "text": "Causes the airplane to float down the runway."
+      },
+      {
+        "id": "AFH.12.3.3.w.5",
+        "text": "Is primarily used to reduce fuel consumption."
+      },
+      {
+        "id": "AFH.12.3.3.w.6",
+        "text": "Requires maximum flap deflection at the start of the downwind leg."
+      },
+      {
+        "id": "AFH.12.3.3.w.7",
+        "text": "Makes lateral control more difficult in crosswinds."
+      },
+      {
+        "id": "AFH.12.3.3.w.8",
+        "text": "Is a technique solely for short-field obstacle approaches."
+      }
+    ],
+    "source": "afh.12.3",
+    "subjects": [
+      "Flaps",
+      "Landing Pattern",
+      "Stabilized Approach"
+    ]
+  },
+  {
+    "questionid": "AFH.12.3.4",
+    "question": "What are the implications of flap extension, particularly beyond 30°, and how should a pilot manage them during an approach?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.3.4.c.1",
+        "text": "Results in significant levels of drag."
+      },
+      {
+        "id": "AFH.12.3.4.c.2",
+        "text": "Can produce a high sink rate."
+      },
+      {
+        "id": "AFH.12.3.4.c.3",
+        "text": "Requires the pilot to control the sink rate with power."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.3.4.w.1",
+        "text": "Decreases the airplane's stall speed significantly."
+      },
+      {
+        "id": "AFH.12.3.4.w.2",
+        "text": "Is only used for normal landings."
+      },
+      {
+        "id": "AFH.12.3.4.w.3",
+        "text": "Eliminates the need for a landing flare."
+      },
+      {
+        "id": "AFH.12.3.4.w.4",
+        "text": "Reduces the need for power during a steep approach."
+      },
+      {
+        "id": "AFH.12.3.4.w.5",
+        "text": "Causes the airplane to accelerate rapidly."
+      },
+      {
+        "id": "AFH.12.3.4.w.6",
+        "text": "Is primarily for increasing lift without increasing drag."
+      },
+      {
+        "id": "AFH.12.3.4.w.7",
+        "text": "Makes the airplane less susceptible to crosswind effects."
+      },
+      {
+        "id": "AFH.12.3.4.w.8",
+        "text": "Is a technique to increase visibility from the cockpit."
+      }
+    ],
+    "source": "afh.12.3",
+    "subjects": [
+      "Flaps",
+      "Drag",
+      "Power Management",
+      "Approach"
+    ]
+  },
+  {
+    "questionid": "AFH.12.3.5",
+    "question": "What are the critical outcomes associated with the timing of power reduction during the landing flare, especially when using power to offset flap drag?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.3.5.c.1",
+        "text": "Reducing power too early can result in a hard landing."
+      },
+      {
+        "id": "AFH.12.3.5.c.2",
+        "text": "Reducing power too early can lead to airplane damage."
+      },
+      {
+        "id": "AFH.12.3.5.c.3",
+        "text": "Reducing power too late causes the airplane to float down the runway."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.3.5.w.1",
+        "text": "Reducing power too early ensures a smooth touchdown."
+      },
+      {
+        "id": "AFH.12.3.5.w.2",
+        "text": "Reducing power too late prevents loss of control."
+      },
+      {
+        "id": "AFH.12.3.5.w.3",
+        "text": "The timing of power reduction has no effect on the flare."
+      },
+      {
+        "id": "AFH.12.3.5.w.4",
+        "text": "Power reduction is only critical during soft-field landings."
+      },
+      {
+        "id": "AFH.12.3.5.w.5",
+        "text": "Increasing power during the flare is always recommended."
+      },
+      {
+        "id": "AFH.12.3.5.w.6",
+        "text": "A hard landing is always caused by too much power."
+      },
+      {
+        "id": "AFH.12.3.5.w.7",
+        "text": "Floating down the runway is a sign of perfect power management."
+      },
+      {
+        "id": "AFH.12.3.5.w.8",
+        "text": "Loss of control is only possible with too much power."
+      }
+    ],
+    "source": "afh.12.3",
+    "subjects": [
+      "Landing Flare",
+      "Power Management",
+      "Error Avoidance"
+    ]
+  },
+  {
+    "questionid": "AFH.12.3.6",
+    "question": "How does the extension of flaps affect an airplane's behavior and control during crosswind conditions?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.3.6.c.1",
+        "text": "The upwind wing is more affected than the downwind wing."
+      },
+      {
+        "id": "AFH.12.3.6.c.2",
+        "text": "Lateral control becomes more difficult as flap extension reaches maximum and the crosswind is perpendicular."
+      },
+      {
+        "id": "AFH.12.3.6.c.3",
+        "text": "Crosswind effects on the wing become more pronounced as the airplane reaches the ground."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.3.6.w.1",
+        "text": "Flaps eliminate all crosswind effects."
+      },
+      {
+        "id": "AFH.12.3.6.w.2",
+        "text": "The downwind wing is always more affected."
+      },
+      {
+        "id": "AFH.12.3.6.w.3",
+        "text": "Lateral control is easier with maximum flap extension in a crosswind."
+      },
+      {
+        "id": "AFH.12.3.6.w.4",
+        "text": "Crosswind effects are reduced as the airplane reaches the ground."
+      },
+      {
+        "id": "AFH.12.3.6.w.5",
+        "text": "Flaps help align the airplane perfectly with the runway in a crosswind."
+      },
+      {
+        "id": "AFH.12.3.6.w.6",
+        "text": "The crabbed approach increases crosswind effects on flaps."
+      },
+      {
+        "id": "AFH.12.3.6.w.7",
+        "text": "A wing-low approach makes the upwind flap more susceptible to wind."
+      },
+      {
+        "id": "AFH.12.3.6.w.8",
+        "text": "Flaps primarily increase the airplane's resistance to crosswinds."
+      }
+    ],
+    "source": "afh.12.3",
+    "subjects": [
+      "Flaps",
+      "Crosswind",
+      "Lateral Control"
+    ]
+  },
+  {
+    "questionid": "AFH.12.4.1",
+    "question": "What are the advantages of a controllable-pitch propeller over a fixed-pitch propeller?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.4.1.c.1",
+        "text": "Improved efficiency over a wide range of airspeeds"
+      },
+      {
+        "id": "AFH.12.4.1.c.2",
+        "text": "Ability to adjust blade angle for different flight conditions"
+      },
+      {
+        "id": "AFH.12.4.1.c.3",
+        "text": "Enhanced performance at varying rpm settings"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.4.1.w.1",
+        "text": "Fixed efficiency at one rpm setting"
+      },
+      {
+        "id": "AFH.12.4.1.w.2",
+        "text": "Limited to a narrow range of airspeeds"
+      },
+      {
+        "id": "AFH.12.4.1.w.3",
+        "text": "No need for blade angle adjustments"
+      },
+      {
+        "id": "AFH.12.4.1.w.4",
+        "text": "Consistent performance regardless of conditions"
+      },
+      {
+        "id": "AFH.12.4.1.w.5",
+        "text": "Simpler design with fewer moving parts"
+      },
+      {
+        "id": "AFH.12.4.1.w.6",
+        "text": "Lower maintenance requirements"
+      },
+      {
+        "id": "AFH.12.4.1.w.7",
+        "text": "Better efficiency at a single airspeed"
+      },
+      {
+        "id": "AFH.12.4.1.w.8",
+        "text": "Fixed blade angle"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12, Section 4",
+    "subjects": [
+      "Aviation",
+      "Propeller Mechanics",
+      "Aircraft Performance"
+    ]
+  },
+  {
+    "questionid": "AFH.12.5.1",
+    "question": "What is the primary function of a constant-speed propeller?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.5.1.c.1",
+        "text": "Adjust blade angle for maximum efficiency"
+      },
+      {
+        "id": "AFH.12.5.1.c.2",
+        "text": "Maintain constant engine rpm"
+      },
+      {
+        "id": "AFH.12.5.1.c.3",
+        "text": "Balance opposing forces on the propeller"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.5.1.w.1",
+        "text": "Increase fuel efficiency"
+      },
+      {
+        "id": "AFH.12.5.1.w.2",
+        "text": "Reduce engine noise"
+      },
+      {
+        "id": "AFH.12.5.1.w.3",
+        "text": "Enhance aircraft stability"
+      },
+      {
+        "id": "AFH.12.5.1.w.4",
+        "text": "Improve climb rate"
+      },
+      {
+        "id": "AFH.12.5.1.w.5",
+        "text": "Decrease airspeed"
+      },
+      {
+        "id": "AFH.12.5.1.w.6",
+        "text": "Increase engine power"
+      },
+      {
+        "id": "AFH.12.5.1.w.7",
+        "text": "Reduce pilot workload"
+      },
+      {
+        "id": "AFH.12.5.1.w.8",
+        "text": "Enhance maneuverability"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12, Section 5",
+    "subjects": [
+      "Aerodynamics",
+      "Propeller Mechanics",
+      "Engine Management"
+    ]
+  },
+  {
+    "questionid": "AFH.12.5.2",
+    "question": "How does a pilot reduce engine rpm using a constant-speed propeller?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.5.2.c.1",
+        "text": "Move propeller control to high pitch/low rpm position"
+      },
+      {
+        "id": "AFH.12.5.2.c.2",
+        "text": "Increase air resistance on propeller"
+      },
+      {
+        "id": "AFH.12.5.2.c.3",
+        "text": "Adjust propeller blade pitch"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.5.2.w.1",
+        "text": "Decrease manifold pressure"
+      },
+      {
+        "id": "AFH.12.5.2.w.2",
+        "text": "Increase throttle setting"
+      },
+      {
+        "id": "AFH.12.5.2.w.3",
+        "text": "Use flaps"
+      },
+      {
+        "id": "AFH.12.5.2.w.4",
+        "text": "Adjust ailerons"
+      },
+      {
+        "id": "AFH.12.5.2.w.5",
+        "text": "Change aircraft altitude"
+      },
+      {
+        "id": "AFH.12.5.2.w.6",
+        "text": "Increase manifold pressure"
+      },
+      {
+        "id": "AFH.12.5.2.w.7",
+        "text": "Reduce throttle setting"
+      },
+      {
+        "id": "AFH.12.5.2.w.8",
+        "text": "Use rudder"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12, Section 5",
+    "subjects": [
+      "Propeller Mechanics",
+      "Pilot Controls",
+      "Engine Management"
+    ]
+  },
+  {
+    "questionid": "AFH.12.5.3",
+    "question": "What role does the propeller governor play in a constant-speed propeller system?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.5.3.c.1",
+        "text": "Senses engine rpm"
+      },
+      {
+        "id": "AFH.12.5.3.c.2",
+        "text": "Controls propeller AOA"
+      },
+      {
+        "id": "AFH.12.5.3.c.3",
+        "text": "Adjusts blade angle"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.5.3.w.1",
+        "text": "Increases fuel efficiency"
+      },
+      {
+        "id": "AFH.12.5.3.w.2",
+        "text": "Reduces engine noise"
+      },
+      {
+        "id": "AFH.12.5.3.w.3",
+        "text": "Enhances aircraft stability"
+      },
+      {
+        "id": "AFH.12.5.3.w.4",
+        "text": "Improves climb rate"
+      },
+      {
+        "id": "AFH.12.5.3.w.5",
+        "text": "Decreases airspeed"
+      },
+      {
+        "id": "AFH.12.5.3.w.6",
+        "text": "Increases engine power"
+      },
+      {
+        "id": "AFH.12.5.3.w.7",
+        "text": "Reduces pilot workload"
+      },
+      {
+        "id": "AFH.12.5.3.w.8",
+        "text": "Enhances maneuverability"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12, Section 5",
+    "subjects": [
+      "Propeller Mechanics",
+      "Engine Management",
+      "Aerodynamics"
+    ]
+  },
+  {
+    "questionid": "AFH.12.6.1",
+    "question": "What happens to the propeller blade pitch during takeoff in a complex airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.6.1.c.1",
+        "text": "The blade pitch is set to a low angle."
+      },
+      {
+        "id": "AFH.12.6.1.c.2",
+        "text": "The low blade angle keeps the blade angle of attack small."
+      },
+      {
+        "id": "AFH.12.6.1.c.3",
+        "text": "The low pitch allows the engine to turn at maximum rpm."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.6.1.w.1",
+        "text": "The blade pitch is set to a high angle."
+      },
+      {
+        "id": "AFH.12.6.1.w.2",
+        "text": "The blade angle of attack is increased."
+      },
+      {
+        "id": "AFH.12.6.1.w.3",
+        "text": "The engine rpm is minimized."
+      },
+      {
+        "id": "AFH.12.6.1.w.4",
+        "text": "The propeller handles a larger mass of air per revolution."
+      },
+      {
+        "id": "AFH.12.6.1.w.5",
+        "text": "The propeller thrust is minimized."
+      },
+      {
+        "id": "AFH.12.6.1.w.6",
+        "text": "The governor decreases the blade angle."
+      },
+      {
+        "id": "AFH.12.6.1.w.7",
+        "text": "The manifold pressure is increased."
+      },
+      {
+        "id": "AFH.12.6.1.w.8",
+        "text": "The slipstream velocity is maximized."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12: Transition to Complex Airplanes Introduction, Section: Takeoff, Climb, and Cruise",
+    "subjects": [
+      "Takeoff",
+      "Propeller Mechanics",
+      "Engine Performance"
+    ]
+  },
+  {
+    "questionid": "AFH.12.6.2",
+    "question": "How is propeller efficiency maintained during climb after takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.6.2.c.1",
+        "text": "The blade angle is increased to lower engine rpm."
+      },
+      {
+        "id": "AFH.12.6.2.c.2",
+        "text": "The manifold pressure is decreased to reduce power output."
+      },
+      {
+        "id": "AFH.12.6.2.c.3",
+        "text": "The propeller handles a greater mass of air per second."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.6.2.w.1",
+        "text": "The blade angle is decreased to increase engine rpm."
+      },
+      {
+        "id": "AFH.12.6.2.w.2",
+        "text": "The manifold pressure is increased to boost power output."
+      },
+      {
+        "id": "AFH.12.6.2.w.3",
+        "text": "The propeller handles a smaller mass of air per second."
+      },
+      {
+        "id": "AFH.12.6.2.w.4",
+        "text": "The slipstream velocity is increased."
+      },
+      {
+        "id": "AFH.12.6.2.w.5",
+        "text": "The blade angle is kept constant."
+      },
+      {
+        "id": "AFH.12.6.2.w.6",
+        "text": "The engine power is maximized."
+      },
+      {
+        "id": "AFH.12.6.2.w.7",
+        "text": "The blade angle of attack is increased."
+      },
+      {
+        "id": "AFH.12.6.2.w.8",
+        "text": "The governor decreases the blade angle."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12: Transition to Complex Airplanes Introduction, Section: Takeoff, Climb, and Cruise",
+    "subjects": [
+      "Climb",
+      "Propeller Efficiency",
+      "Engine Management"
+    ]
+  },
+  {
+    "questionid": "AFH.12.7.1",
+    "question": "What mechanisms are involved in adjusting the blade angle of a constant-speed propeller?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.7.1.c.1",
+        "text": "Oil pressure from the engine lubricating system"
+      },
+      {
+        "id": "AFH.12.7.1.c.2",
+        "text": "Centrifugal twisting moment of the blades"
+      },
+      {
+        "id": "AFH.12.7.1.c.3",
+        "text": "Counterweights attached to the blade shanks"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.7.1.w.1",
+        "text": "Electric motors"
+      },
+      {
+        "id": "AFH.12.7.1.w.2",
+        "text": "Hydraulic fluid from a separate reservoir"
+      },
+      {
+        "id": "AFH.12.7.1.w.3",
+        "text": "Manual adjustment by the pilot"
+      },
+      {
+        "id": "AFH.12.7.1.w.4",
+        "text": "Spring tension in the propeller hub"
+      },
+      {
+        "id": "AFH.12.7.1.w.5",
+        "text": "Magnetic force"
+      },
+      {
+        "id": "AFH.12.7.1.w.6",
+        "text": "Air pressure from the atmosphere"
+      },
+      {
+        "id": "AFH.12.7.1.w.7",
+        "text": "Gravity acting on the blades"
+      },
+      {
+        "id": "AFH.12.7.1.w.8",
+        "text": "Electronic sensors"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12, Section 7",
+    "subjects": [
+      "Aviation Mechanics",
+      "Propeller Systems",
+      "Aircraft Operation"
+    ]
+  },
+  {
+    "questionid": "AFH.12.8.1",
+    "question": "Regarding the governing range of a constant-speed propeller, which of the following statements are correct?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.8.1.c.1",
+        "text": "The governing range is defined by the range of blade angles between the high and low pitch stops"
+      },
+      {
+        "id": "AFH.12.8.1.c.2",
+        "text": "Once propeller blades contact the low pitch stop due to decreasing airspeed, further airspeed reduction causes engine rpm to decrease"
+      },
+      {
+        "id": "AFH.12.8.1.c.3",
+        "text": "If airspeed increases enough that the high pitch stop is reached, engine rpm will begin to increase beyond the selected value"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.8.1.w.1",
+        "text": "The governing range for constant-speed propellers is fixed at exactly 11.5° regardless of airspeed"
+      },
+      {
+        "id": "AFH.12.8.1.w.2",
+        "text": "Once the low pitch stop is contacted, further reduction in airspeed has no effect on engine rpm"
+      },
+      {
+        "id": "AFH.12.8.1.w.3",
+        "text": "A constant-speed propeller maintains selected rpm even after the blades contact a pitch stop"
+      },
+      {
+        "id": "AFH.12.8.1.w.4",
+        "text": "The blade angle range for constant-speed propellers varies from about 5° to 25°"
+      },
+      {
+        "id": "AFH.12.8.1.w.5",
+        "text": "Lower aircraft speeds result in a greater blade angle range for constant-speed propellers"
+      },
+      {
+        "id": "AFH.12.8.1.w.6",
+        "text": "Once the high pitch stop is reached due to increasing airspeed, engine rpm will decrease"
+      },
+      {
+        "id": "AFH.12.8.1.w.7",
+        "text": "When propeller blades operate within the governing range, rpm fluctuates with changes in airspeed similar to a fixed-pitch propeller"
+      },
+      {
+        "id": "AFH.12.8.1.w.8",
+        "text": "The propeller governing range only applies to the low pitch stop, not the high pitch stop"
+      }
+    ],
+    "source": "AFH Chapter 12, Section 12.8: Governing Range",
+    "subjects": [
+      "constant-speed propeller",
+      "governing range",
+      "propeller pitch stops"
+    ]
+  },
+  {
+    "questionid": "AFH.12.9.1",
+    "question": "What is the initial position of the propeller control when starting the engine in a complex airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.9.1.c.1",
+        "text": "Low pitch/high rpm position"
+      },
+      {
+        "id": "AFH.12.9.1.c.2",
+        "text": "Reduces load or drag"
+      },
+      {
+        "id": "AFH.12.9.1.c.3",
+        "text": "Easier starting and warm-up"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.9.1.w.1",
+        "text": "High pitch/low rpm position"
+      },
+      {
+        "id": "AFH.12.9.1.w.2",
+        "text": "Increases load or drag"
+      },
+      {
+        "id": "AFH.12.9.1.w.3",
+        "text": "Difficult starting"
+      },
+      {
+        "id": "AFH.12.9.1.w.4",
+        "text": "Increases engine wear"
+      },
+      {
+        "id": "AFH.12.9.1.w.5",
+        "text": "Reduces engine efficiency"
+      },
+      {
+        "id": "AFH.12.9.1.w.6",
+        "text": "Increases fuel consumption"
+      },
+      {
+        "id": "AFH.12.9.1.w.7",
+        "text": "Causes engine overheating"
+      },
+      {
+        "id": "AFH.12.9.1.w.8",
+        "text": "Increases noise levels"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12, Section 9",
+    "subjects": [
+      "Engine Start Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.12.9.2",
+    "question": "Why is it important to cycle the propeller control during engine warm-up?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.9.2.c.1",
+        "text": "Ensure system operation"
+      },
+      {
+        "id": "AFH.12.9.2.c.2",
+        "text": "Circulate fresh warm oil"
+      },
+      {
+        "id": "AFH.12.9.2.c.3",
+        "text": "Prevent engine over-speed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.9.2.w.1",
+        "text": "Increase engine power"
+      },
+      {
+        "id": "AFH.12.9.2.w.2",
+        "text": "Reduce fuel consumption"
+      },
+      {
+        "id": "AFH.12.9.2.w.3",
+        "text": "Enhance propeller efficiency"
+      },
+      {
+        "id": "AFH.12.9.2.w.4",
+        "text": "Improve aerodynamics"
+      },
+      {
+        "id": "AFH.12.9.2.w.5",
+        "text": "Decrease engine noise"
+      },
+      {
+        "id": "AFH.12.9.2.w.6",
+        "text": "Reduce vibration"
+      },
+      {
+        "id": "AFH.12.9.2.w.7",
+        "text": "Increase manifold pressure"
+      },
+      {
+        "id": "AFH.12.9.2.w.8",
+        "text": "Enhance cooling"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12, Section 9",
+    "subjects": [
+      "Engine Warm-Up Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.12.9.3",
+    "question": "How does a constant-speed propeller improve takeoff performance compared to a fixed-pitch propeller?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.9.3.c.1",
+        "text": "Develops maximum rated horsepower"
+      },
+      {
+        "id": "AFH.12.9.3.c.2",
+        "text": "Tachometer reaches red line quickly"
+      },
+      {
+        "id": "AFH.12.9.3.c.3",
+        "text": "Better takeoff performance"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.9.3.w.1",
+        "text": "Requires longer runway"
+      },
+      {
+        "id": "AFH.12.9.3.w.2",
+        "text": "Increases fuel consumption"
+      },
+      {
+        "id": "AFH.12.9.3.w.3",
+        "text": "Reduces engine lifespan"
+      },
+      {
+        "id": "AFH.12.9.3.w.4",
+        "text": "Decreases takeoff speed"
+      },
+      {
+        "id": "AFH.12.9.3.w.5",
+        "text": "Increases noise levels"
+      },
+      {
+        "id": "AFH.12.9.3.w.6",
+        "text": "Requires more maintenance"
+      },
+      {
+        "id": "AFH.12.9.3.w.7",
+        "text": "Reduces engine power"
+      },
+      {
+        "id": "AFH.12.9.3.w.8",
+        "text": "Increases drag"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12, Section 9",
+    "subjects": [
+      "Takeoff Performance"
+    ]
+  },
+  {
+    "questionid": "AFH.12.9.4",
+    "question": "What sequence should be followed when making power changes in a complex airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.9.4.c.1",
+        "text": "Increase rpm first when increasing power"
+      },
+      {
+        "id": "AFH.12.9.4.c.2",
+        "text": "Decrease manifold pressure first when decreasing power"
+      },
+      {
+        "id": "AFH.12.9.4.c.3",
+        "text": "Avoid high manifold pressure and low rpm"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.9.4.w.1",
+        "text": "Increase manifold pressure first"
+      },
+      {
+        "id": "AFH.12.9.4.w.2",
+        "text": "Decrease rpm first when decreasing power"
+      },
+      {
+        "id": "AFH.12.9.4.w.3",
+        "text": "Increase both simultaneously"
+      },
+      {
+        "id": "AFH.12.9.4.w.4",
+        "text": "Decrease both simultaneously"
+      },
+      {
+        "id": "AFH.12.9.4.w.5",
+        "text": "Ignore manifold pressure"
+      },
+      {
+        "id": "AFH.12.9.4.w.6",
+        "text": "Ignore rpm settings"
+      },
+      {
+        "id": "AFH.12.9.4.w.7",
+        "text": "Increase manifold pressure last"
+      },
+      {
+        "id": "AFH.12.9.4.w.8",
+        "text": "Decrease rpm last"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12, Section 9",
+    "subjects": [
+      "Power Management"
+    ]
+  },
+  {
+    "questionid": "AFH.12.9.5",
+    "question": "What should be consulted when selecting cruise power settings in a complex airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.9.5.c.1",
+        "text": "Cruise power charts in AFM/POH"
+      },
+      {
+        "id": "AFH.12.9.5.c.2",
+        "text": "Flight tested and approved settings"
+      },
+      {
+        "id": "AFH.12.9.5.c.3",
+        "text": "Manufacturer's recommendations"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.9.5.w.1",
+        "text": "Pilot's personal experience"
+      },
+      {
+        "id": "AFH.12.9.5.w.2",
+        "text": "Weather conditions"
+      },
+      {
+        "id": "AFH.12.9.5.w.3",
+        "text": "Fuel availability"
+      },
+      {
+        "id": "AFH.12.9.5.w.4",
+        "text": "Runway length"
+      },
+      {
+        "id": "AFH.12.9.5.w.5",
+        "text": "Passenger weight"
+      },
+      {
+        "id": "AFH.12.9.5.w.6",
+        "text": "Aircraft color"
+      },
+      {
+        "id": "AFH.12.9.5.w.7",
+        "text": "Engine noise levels"
+      },
+      {
+        "id": "AFH.12.9.5.w.8",
+        "text": "Propeller size"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12, Section 9",
+    "subjects": [
+      "Cruise Power Settings"
+    ]
+  },
+  {
+    "questionid": "AFH.12.10.1",
+    "question": "Which of the following are benefits of an aircraft engine equipped with a turbocharger?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.10.1.c.1",
+        "text": "Maintaining sufficient cruise power at high altitudes."
+      },
+      {
+        "id": "AFH.12.10.1.c.2",
+        "text": "Achieving faster true airspeeds due to less drag at high altitudes."
+      },
+      {
+        "id": "AFH.12.10.1.c.3",
+        "text": "Increasing range with improved fuel economy."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.10.1.w.1",
+        "text": "Reducing the need for a waste gate."
+      },
+      {
+        "id": "AFH.12.10.1.w.2",
+        "text": "Eliminating the need for a throttle control."
+      },
+      {
+        "id": "AFH.12.10.1.w.3",
+        "text": "Decreasing the density of induction air."
+      },
+      {
+        "id": "AFH.12.10.1.w.4",
+        "text": "Requiring horsepower from the engine to operate."
+      },
+      {
+        "id": "AFH.12.10.1.w.5",
+        "text": "Increasing fuel consumption at low altitudes compared to turbine engines."
+      },
+      {
+        "id": "AFH.12.10.1.w.6",
+        "text": "Simplifying the engine's overall mechanical design."
+      },
+      {
+        "id": "AFH.12.10.1.w.7",
+        "text": "Operating independently of the exhaust system."
+      },
+      {
+        "id": "AFH.12.10.1.w.8",
+        "text": "Lowering manifold pressure at high altitudes."
+      }
+    ],
+    "source": "afh.12.10",
+    "subjects": [
+      "Turbocharging",
+      "High Altitude Performance",
+      "Fuel Economy"
+    ]
+  },
+  {
+    "questionid": "AFH.12.10.2",
+    "question": "Regarding the mechanical operation and components of a turbocharger, which statements are accurate?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.10.2.c.1",
+        "text": "It is an exhaust-driven device."
+      },
+      {
+        "id": "AFH.12.10.2.c.2",
+        "text": "It consists of a compressor and a turbine connected by a common shaft."
+      },
+      {
+        "id": "AFH.12.10.2.c.3",
+        "text": "The turbine utilizes the flow of exhaust gases to drive the compressor."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.10.2.w.1",
+        "text": "The compressor is located within the exhaust system."
+      },
+      {
+        "id": "AFH.12.10.2.w.2",
+        "text": "It takes horsepower directly from the engine to operate."
+      },
+      {
+        "id": "AFH.12.10.2.w.3",
+        "text": "The turbine supplies pressurized air to the engine."
+      },
+      {
+        "id": "AFH.12.10.2.w.4",
+        "text": "It decreases the pressure and density of induction air."
+      },
+      {
+        "id": "AFH.12.10.2.w.5",
+        "text": "The common shaft connects the compressor to the engine crankshaft."
+      },
+      {
+        "id": "AFH.12.10.2.w.6",
+        "text": "The compressor housing is part of the exhaust system."
+      },
+      {
+        "id": "AFH.12.10.2.w.7",
+        "text": "It operates by diverting ambient air directly to the engine manifold."
+      },
+      {
+        "id": "AFH.12.10.2.w.8",
+        "text": "The turbocharger system is entirely independent of engine oil pressure."
+      }
+    ],
+    "source": "afh.12.10",
+    "subjects": [
+      "Turbocharging",
+      "Engine Components",
+      "Aircraft Systems"
+    ]
+  },
+  {
+    "questionid": "AFH.12.10.3",
+    "question": "How does the turbocharger system regulate manifold pressure, particularly concerning the waste gate and pressure controller?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.10.3.c.1",
+        "text": "The waste gate prevents the engine from exceeding maximum allowable manifold pressure."
+      },
+      {
+        "id": "AFH.12.10.3.c.2",
+        "text": "The pressure controller simplifies turbocharging to one control: the throttle."
+      },
+      {
+        "id": "AFH.12.10.3.c.3",
+        "text": "The waste gate actuator is a spring-loaded piston operated by engine oil pressure."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.10.3.w.1",
+        "text": "The waste gate increases manifold pressure by diverting all exhaust gases overboard."
+      },
+      {
+        "id": "AFH.12.10.3.w.2",
+        "text": "The pressure controller directly adjusts the waste gate position mechanically."
+      },
+      {
+        "id": "AFH.12.10.3.w.3",
+        "text": "When the waste gate is fully open, all exhaust gases pass through the turbine."
+      },
+      {
+        "id": "AFH.12.10.3.w.4",
+        "text": "The waste gate is primarily controlled by ambient air pressure."
+      },
+      {
+        "id": "AFH.12.10.3.w.5",
+        "text": "The pressure controller requires frequent throttle adjustments with changes in altitude."
+      },
+      {
+        "id": "AFH.12.10.3.w.6",
+        "text": "The turbine's output is regulated by the compressor's speed."
+      },
+      {
+        "id": "AFH.12.10.3.w.7",
+        "text": "The waste gate is a fixed component with no adjustable position."
+      },
+      {
+        "id": "AFH.12.10.3.w.8",
+        "text": "The turbocharger maintains manifold pressure by directly varying engine RPM."
+      }
+    ],
+    "source": "afh.12.10",
+    "subjects": [
+      "Turbocharging",
+      "Engine Control",
+      "Aircraft Systems"
+    ]
+  },
+  {
+    "questionid": "AFH.12.11.1",
+    "question": "What are some characteristics of altitude turbocharging in complex airplanes?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.11.1.c.1",
+        "text": "Maintains maximum allowable sea level manifold pressure up to a certain altitude"
+      },
+      {
+        "id": "AFH.12.11.1.c.2",
+        "text": "Referred to as the airplane’s critical altitude"
+      },
+      {
+        "id": "AFH.12.11.1.c.3",
+        "text": "Manifold pressure decreases above the critical altitude"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.11.1.w.1",
+        "text": "Uses more than 29 inches of manifold pressure in flight"
+      },
+      {
+        "id": "AFH.12.11.1.w.2",
+        "text": "Takeoff manifold pressures may go as high as 45 \"Hg"
+      },
+      {
+        "id": "AFH.12.11.1.w.3",
+        "text": "Maintains sea-level power without loss"
+      },
+      {
+        "id": "AFH.12.11.1.w.4",
+        "text": "Does not require a higher manifold pressure at altitude"
+      },
+      {
+        "id": "AFH.12.11.1.w.5",
+        "text": "Induction air is not heated by compression"
+      },
+      {
+        "id": "AFH.12.11.1.w.6",
+        "text": "Does not use a turbocharger"
+      },
+      {
+        "id": "AFH.12.11.1.w.7",
+        "text": "Maintains constant air density without a controller"
+      },
+      {
+        "id": "AFH.12.11.1.w.8",
+        "text": "Always results in sea-level horsepower output"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12: Transition to Complex Airplanes Introduction, Section 11: Ground Boosting Versus Altitude Turbocharging",
+    "subjects": [
+      "Aviation",
+      "Turbocharging",
+      "Complex Airplanes"
+    ]
+  },
+  {
+    "questionid": "AFH.12.12.1",
+    "question": "Regarding turbocharged engine operating characteristics, which of the following statements are correct?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.12.1.c.1",
+        "text": "When the waste gate is closed, an increase in engine rpm results in an increase in manifold pressure"
+      },
+      {
+        "id": "AFH.12.12.1.c.2",
+        "text": "Above the critical altitude where the waste gate is closed, an increase in airspeed causes a corresponding increase in manifold pressure"
+      },
+      {
+        "id": "AFH.12.12.1.c.3",
+        "text": "A boost pump provides positive pressure to push fuel and reduce the tendency to vaporize at high altitudes"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.12.1.w.1",
+        "text": "When the waste gate is closed, an increase in engine rpm results in a decrease in manifold pressure"
+      },
+      {
+        "id": "AFH.12.12.1.w.2",
+        "text": "When the waste gate is open, an increase in engine rpm causes manifold pressure to increase slightly"
+      },
+      {
+        "id": "AFH.12.12.1.w.3",
+        "text": "Above the critical altitude, changes in airspeed have no effect on manifold pressure"
+      },
+      {
+        "id": "AFH.12.12.1.w.4",
+        "text": "Engine-driven fuel pumps push fuel under positive pressure, making them resistant to vapor lock"
+      },
+      {
+        "id": "AFH.12.12.1.w.5",
+        "text": "Aggressive throttle movements on turbocharged engines reduce the risk of over-boosting"
+      },
+      {
+        "id": "AFH.12.12.1.w.6",
+        "text": "When the waste gate is open, a decrease in engine rpm causes manifold pressure to decrease slightly"
+      },
+      {
+        "id": "AFH.12.12.1.w.7",
+        "text": "Aviation gasoline at high altitudes tends to vaporize only after reaching the cylinder, not before"
+      },
+      {
+        "id": "AFH.12.12.1.w.8",
+        "text": "A boost pump pulls fuel from the tank, creating a vacuum that prevents vaporization"
+      }
+    ],
+    "source": "AFH Chapter 12, Section 12: Operating Characteristics",
+    "subjects": [
+      "turbocharged engine operations",
+      "waste gate behavior",
+      "fuel system vapor lock"
+    ]
+  },
+  {
+    "questionid": "AFH.12.13.1",
+    "question": "What are the key instruments for monitoring a turbocharged engine's condition?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.13.1.c.1",
+        "text": "Manifold pressure gauge"
+      },
+      {
+        "id": "AFH.12.13.1.c.2",
+        "text": "Tachometer"
+      },
+      {
+        "id": "AFH.12.13.1.c.3",
+        "text": "Exhaust gas temperature/turbine inlet temperature gauge"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.13.1.w.1",
+        "text": "Fuel flow meter"
+      },
+      {
+        "id": "AFH.12.13.1.w.2",
+        "text": "Oil pressure gauge"
+      },
+      {
+        "id": "AFH.12.13.1.w.3",
+        "text": "Altimeter"
+      },
+      {
+        "id": "AFH.12.13.1.w.4",
+        "text": "Vertical speed indicator"
+      },
+      {
+        "id": "AFH.12.13.1.w.5",
+        "text": "Airspeed indicator"
+      },
+      {
+        "id": "AFH.12.13.1.w.6",
+        "text": "Attitude indicator"
+      },
+      {
+        "id": "AFH.12.13.1.w.7",
+        "text": "Heading indicator"
+      },
+      {
+        "id": "AFH.12.13.1.w.8",
+        "text": "Turn coordinator"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12: Transition to Complex Airplanes Introduction, Section: Heat Management",
+    "subjects": [
+      "Turbocharged Engines",
+      "Engine Monitoring",
+      "Instrumentation"
+    ]
+  },
+  {
+    "questionid": "AFH.12.13.2",
+    "question": "Which factors contribute to the higher operating temperatures of turbocharged engines?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.13.2.c.1",
+        "text": "Heat of compression of induction air"
+      },
+      {
+        "id": "AFH.12.13.2.c.2",
+        "text": "High compressor turbine speeds"
+      },
+      {
+        "id": "AFH.12.13.2.c.3",
+        "text": "Higher power settings"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.13.2.w.1",
+        "text": "Lower altitude operation"
+      },
+      {
+        "id": "AFH.12.13.2.w.2",
+        "text": "Increased fuel efficiency"
+      },
+      {
+        "id": "AFH.12.13.2.w.3",
+        "text": "Reduced engine size"
+      },
+      {
+        "id": "AFH.12.13.2.w.4",
+        "text": "Lower airspeed"
+      },
+      {
+        "id": "AFH.12.13.2.w.5",
+        "text": "Decreased engine weight"
+      },
+      {
+        "id": "AFH.12.13.2.w.6",
+        "text": "Improved cooling systems"
+      },
+      {
+        "id": "AFH.12.13.2.w.7",
+        "text": "Enhanced fuel quality"
+      },
+      {
+        "id": "AFH.12.13.2.w.8",
+        "text": "Advanced engine materials"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12: Transition to Complex Airplanes Introduction, Section: Heat Management",
+    "subjects": [
+      "Turbocharged Engines",
+      "Engine Performance",
+      "Thermal Dynamics"
+    ]
+  },
+  {
+    "questionid": "AFH.12.13.3",
+    "question": "What actions can help manage heat in a turbocharged engine during descent?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.13.3.c.1",
+        "text": "Gradual reductions in power"
+      },
+      {
+        "id": "AFH.12.13.3.c.2",
+        "text": "Careful monitoring of temperatures"
+      },
+      {
+        "id": "AFH.12.13.3.c.3",
+        "text": "Extending the landing gear"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.13.3.w.1",
+        "text": "Increasing throttle abruptly"
+      },
+      {
+        "id": "AFH.12.13.3.w.2",
+        "text": "Closing cowl flaps completely"
+      },
+      {
+        "id": "AFH.12.13.3.w.3",
+        "text": "Leaning the mixture excessively"
+      },
+      {
+        "id": "AFH.12.13.3.w.4",
+        "text": "Reducing airspeed drastically"
+      },
+      {
+        "id": "AFH.12.13.3.w.5",
+        "text": "Ignoring temperature gauges"
+      },
+      {
+        "id": "AFH.12.13.3.w.6",
+        "text": "Using full rich mixture"
+      },
+      {
+        "id": "AFH.12.13.3.w.7",
+        "text": "Increasing propeller RPM"
+      },
+      {
+        "id": "AFH.12.13.3.w.8",
+        "text": "Descending rapidly"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12: Transition to Complex Airplanes Introduction, Section: Heat Management",
+    "subjects": [
+      "Turbocharged Engines",
+      "Descent Procedures",
+      "Heat Management"
+    ]
+  },
+  {
+    "questionid": "AFH.12.14.1",
+    "question": "What actions should be taken in the event of a turbocharger failure when manufacturer’s procedures are inadequate?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.14.1.c.1",
+        "text": "Treat the situation with extreme caution"
+      },
+      {
+        "id": "AFH.12.14.1.c.2",
+        "text": "Follow general safety procedures for turbocharger failure"
+      },
+      {
+        "id": "AFH.12.14.1.c.3",
+        "text": "Monitor engine parameters closely"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.14.1.w.1",
+        "text": "Ignore the malfunction"
+      },
+      {
+        "id": "AFH.12.14.1.w.2",
+        "text": "Increase engine power"
+      },
+      {
+        "id": "AFH.12.14.1.w.3",
+        "text": "Continue flying without adjustments"
+      },
+      {
+        "id": "AFH.12.14.1.w.4",
+        "text": "Shut down the engine immediately"
+      },
+      {
+        "id": "AFH.12.14.1.w.5",
+        "text": "Land immediately without assessing the situation"
+      },
+      {
+        "id": "AFH.12.14.1.w.6",
+        "text": "Rely solely on autopilot"
+      },
+      {
+        "id": "AFH.12.14.1.w.7",
+        "text": "Perform a steep climb"
+      },
+      {
+        "id": "AFH.12.14.1.w.8",
+        "text": "Descend rapidly without assessment"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12: Transition to Complex Airplanes Introduction, Section: Turbocharger Failure",
+    "subjects": [
+      "Turbocharger Failure",
+      "Safety Procedures",
+      "Engine Monitoring"
+    ]
+  },
+  {
+    "questionid": "AFH.12.15.1",
+    "question": "If an excessive rise in manifold pressure occurs during normal throttle advancement due to possible faulty waste gate operation, which of the following actions are correct?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.15.1.c.1",
+        "text": "Immediately retard the throttle smoothly to limit manifold pressure"
+      },
+      {
+        "id": "AFH.12.15.1.c.2",
+        "text": "Keep manifold pressure below the maximum for the rpm and mixture setting"
+      },
+      {
+        "id": "AFH.12.15.1.c.3",
+        "text": "Operate the engine to avoid a further over-boost condition"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.15.1.w.1",
+        "text": "Advance the throttle further to clear the waste gate fault"
+      },
+      {
+        "id": "AFH.12.15.1.w.2",
+        "text": "Immediately shut down the engine to prevent damage"
+      },
+      {
+        "id": "AFH.12.15.1.w.3",
+        "text": "Increase mixture richness to compensate for the excess manifold pressure"
+      },
+      {
+        "id": "AFH.12.15.1.w.4",
+        "text": "Increase rpm to match the elevated manifold pressure"
+      },
+      {
+        "id": "AFH.12.15.1.w.5",
+        "text": "Abruptly retard the throttle to idle to immediately reduce pressure"
+      },
+      {
+        "id": "AFH.12.15.1.w.6",
+        "text": "Ignore the condition if it self-corrects within a few seconds"
+      },
+      {
+        "id": "AFH.12.15.1.w.7",
+        "text": "Activate the primer to stabilize fuel flow during the over-boost"
+      },
+      {
+        "id": "AFH.12.15.1.w.8",
+        "text": "Switch to alternate air to reduce manifold pressure"
+      }
+    ],
+    "source": "AFH Chapter 12, Section 15: Over-Boost Condition",
+    "subjects": [
+      "Over-Boost Condition",
+      "Manifold Pressure Management",
+      "Turbocharged Engine Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.12.16.1",
+    "question": "What actions should be taken if a low manifold pressure is suspected due to a serious exhaust leak?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.16.1.c.1",
+        "text": "Shut down the engine following recommended procedures."
+      },
+      {
+        "id": "AFH.12.16.1.c.2",
+        "text": "Use the lowest power setting if the engine must continue running."
+      },
+      {
+        "id": "AFH.12.16.1.c.3",
+        "text": "Land as soon as practicable."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.16.1.w.1",
+        "text": "Increase engine power to compensate."
+      },
+      {
+        "id": "AFH.12.16.1.w.2",
+        "text": "Ignore the issue if the engine seems to run fine."
+      },
+      {
+        "id": "AFH.12.16.1.w.3",
+        "text": "Continue flying without any changes."
+      },
+      {
+        "id": "AFH.12.16.1.w.4",
+        "text": "Perform a mid-air repair of the exhaust system."
+      },
+      {
+        "id": "AFH.12.16.1.w.5",
+        "text": "Wait until the next scheduled maintenance to address the issue."
+      },
+      {
+        "id": "AFH.12.16.1.w.6",
+        "text": "Increase altitude to reduce pressure."
+      },
+      {
+        "id": "AFH.12.16.1.w.7",
+        "text": "Contact air traffic control for immediate landing clearance only if convenient."
+      },
+      {
+        "id": "AFH.12.16.1.w.8",
+        "text": "Continue the flight to the original destination without deviation."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12, Section 16",
+    "subjects": [
+      "Aviation Safety",
+      "Engine Management",
+      "Emergency Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.12.17.1",
+    "question": "What are the primary benefits of retractable landing gear systems?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.17.1.c.1",
+        "text": "Increased climb performance."
+      },
+      {
+        "id": "AFH.12.17.1.c.2",
+        "text": "Higher cruise airspeeds."
+      },
+      {
+        "id": "AFH.12.17.1.c.3",
+        "text": "A decrease in drag after gear retraction."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.17.1.w.1",
+        "text": "Reduced landing distances."
+      },
+      {
+        "id": "AFH.12.17.1.w.2",
+        "text": "Enhanced ground stability."
+      },
+      {
+        "id": "AFH.12.17.1.w.3",
+        "text": "Simplified system operation."
+      },
+      {
+        "id": "AFH.12.17.1.w.4",
+        "text": "Improved flight deck visibility."
+      },
+      {
+        "id": "AFH.12.17.1.w.5",
+        "text": "Decreased maintenance costs."
+      },
+      {
+        "id": "AFH.12.17.1.w.6",
+        "text": "Faster engine warm-up."
+      },
+      {
+        "id": "AFH.12.17.1.w.7",
+        "text": "Increased fuel efficiency during taxi."
+      },
+      {
+        "id": "AFH.12.17.1.w.8",
+        "text": "Greater passenger comfort."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12: Transition to Complex Airplanes Introduction, Retractable Landing Gear",
+    "subjects": [
+      "Retractable Landing Gear",
+      "Aircraft Performance",
+      "Aerodynamics"
+    ]
+  },
+  {
+    "questionid": "AFH.12.18.1",
+    "question": "What components are involved in the operation of an electrical landing gear retraction system?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.18.1.c.1",
+        "text": "Electric motor"
+      },
+      {
+        "id": "AFH.12.18.1.c.2",
+        "text": "Actuator screw"
+      },
+      {
+        "id": "AFH.12.18.1.c.3",
+        "text": "Torque tube"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.18.1.w.1",
+        "text": "Hydraulic fluid"
+      },
+      {
+        "id": "AFH.12.18.1.w.2",
+        "text": "Reservoir"
+      },
+      {
+        "id": "AFH.12.18.1.w.3",
+        "text": "Thermal expansion valve"
+      },
+      {
+        "id": "AFH.12.18.1.w.4",
+        "text": "Engine-driven pump"
+      },
+      {
+        "id": "AFH.12.18.1.w.5",
+        "text": "Electrohydraulic system"
+      },
+      {
+        "id": "AFH.12.18.1.w.6",
+        "text": "Sequenced valves"
+      },
+      {
+        "id": "AFH.12.18.1.w.7",
+        "text": "Downlocks"
+      },
+      {
+        "id": "AFH.12.18.1.w.8",
+        "text": "Gear actuating cylinders"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12, Section 18",
+    "subjects": [
+      "Electrical systems",
+      "Landing gear",
+      "Aircraft mechanics"
+    ]
+  },
+  {
+    "questionid": "AFH.12.18.2",
+    "question": "Which elements are part of a hydraulic landing gear retraction system?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.18.2.c.1",
+        "text": "Pressurized hydraulic fluid"
+      },
+      {
+        "id": "AFH.12.18.2.c.2",
+        "text": "Hydraulic reservoir"
+      },
+      {
+        "id": "AFH.12.18.2.c.3",
+        "text": "Relief valve"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.18.2.w.1",
+        "text": "Electric motor"
+      },
+      {
+        "id": "AFH.12.18.2.w.2",
+        "text": "Torque tube"
+      },
+      {
+        "id": "AFH.12.18.2.w.3",
+        "text": "Actuator screw"
+      },
+      {
+        "id": "AFH.12.18.2.w.4",
+        "text": "Drag strut linkages"
+      },
+      {
+        "id": "AFH.12.18.2.w.5",
+        "text": "Gear doors"
+      },
+      {
+        "id": "AFH.12.18.2.w.6",
+        "text": "Limit switch on gearbox"
+      },
+      {
+        "id": "AFH.12.18.2.w.7",
+        "text": "Electrically-driven jack"
+      },
+      {
+        "id": "AFH.12.18.2.w.8",
+        "text": "Shafts and gears"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12, Section 18",
+    "subjects": [
+      "Hydraulic systems",
+      "Landing gear",
+      "Aircraft mechanics"
+    ]
+  },
+  {
+    "questionid": "AFH.12.18.3",
+    "question": "What functions do limit switches serve in landing gear systems?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.18.3.c.1",
+        "text": "De-energize hydraulic pump"
+      },
+      {
+        "id": "AFH.12.18.3.c.2",
+        "text": "Prevent excessive pressure"
+      },
+      {
+        "id": "AFH.12.18.3.c.3",
+        "text": "Ensure gear cycle completion"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.18.3.w.1",
+        "text": "Activate electric motor"
+      },
+      {
+        "id": "AFH.12.18.3.w.2",
+        "text": "Pressurize hydraulic fluid"
+      },
+      {
+        "id": "AFH.12.18.3.w.3",
+        "text": "Open gear doors"
+      },
+      {
+        "id": "AFH.12.18.3.w.4",
+        "text": "Operate actuator screw"
+      },
+      {
+        "id": "AFH.12.18.3.w.5",
+        "text": "Transmit force to drag strut"
+      },
+      {
+        "id": "AFH.12.18.3.w.6",
+        "text": "Contain excess fluid"
+      },
+      {
+        "id": "AFH.12.18.3.w.7",
+        "text": "Provide system fluid level"
+      },
+      {
+        "id": "AFH.12.18.3.w.8",
+        "text": "Reverse motor direction"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12, Section 18",
+    "subjects": [
+      "Landing gear",
+      "Aircraft safety",
+      "Control systems"
+    ]
+  },
+  {
+    "questionid": "AFH.12.19.1",
+    "question": "What are some types of landing gear position indicators used in airplanes?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.19.1.c.1",
+        "text": "A group of three green lights indicating gear down and locked"
+      },
+      {
+        "id": "AFH.12.19.1.c.2",
+        "text": "A single green light for gear down and an amber light for gear up"
+      },
+      {
+        "id": "AFH.12.19.1.c.3",
+        "text": "Integrated electronic displays showing gear position"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.19.1.w.1",
+        "text": "A single red light for gear down"
+      },
+      {
+        "id": "AFH.12.19.1.w.2",
+        "text": "A blue light for gear up"
+      },
+      {
+        "id": "AFH.12.19.1.w.3",
+        "text": "A group of two red lights indicating gear down"
+      },
+      {
+        "id": "AFH.12.19.1.w.4",
+        "text": "A single white light for gear up"
+      },
+      {
+        "id": "AFH.12.19.1.w.5",
+        "text": "A flashing green light for gear in transit"
+      },
+      {
+        "id": "AFH.12.19.1.w.6",
+        "text": "A group of four amber lights for gear down"
+      },
+      {
+        "id": "AFH.12.19.1.w.7",
+        "text": "A single yellow light for gear locked"
+      },
+      {
+        "id": "AFH.12.19.1.w.8",
+        "text": "A group of three blue lights for gear up"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12, Section 19",
+    "subjects": [
+      "Aviation",
+      "Aircraft Systems",
+      "Flight Instruments"
+    ]
+  },
+  {
+    "questionid": "AFH.12.20.1",
+    "question": "What are some devices used to prevent accidental retraction of landing gear in airplanes?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.20.1.c.1",
+        "text": "Mechanical downlocks"
+      },
+      {
+        "id": "AFH.12.20.1.c.2",
+        "text": "Safety switches"
+      },
+      {
+        "id": "AFH.12.20.1.c.3",
+        "text": "Ground locks"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.20.1.w.1",
+        "text": "Throttle locks"
+      },
+      {
+        "id": "AFH.12.20.1.w.2",
+        "text": "Airspeed limiters"
+      },
+      {
+        "id": "AFH.12.20.1.w.3",
+        "text": "Flap locks"
+      },
+      {
+        "id": "AFH.12.20.1.w.4",
+        "text": "Hydraulic brakes"
+      },
+      {
+        "id": "AFH.12.20.1.w.5",
+        "text": "Engine cut-off switches"
+      },
+      {
+        "id": "AFH.12.20.1.w.6",
+        "text": "Rudder locks"
+      },
+      {
+        "id": "AFH.12.20.1.w.7",
+        "text": "Elevator locks"
+      },
+      {
+        "id": "AFH.12.20.1.w.8",
+        "text": "Aileron locks"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12: Transition to Complex Airplanes Introduction, Section: Landing Gear Safety Devices",
+    "subjects": [
+      "Aviation Safety",
+      "Aircraft Systems"
+    ]
+  },
+  {
+    "questionid": "AFH.12.20.2",
+    "question": "Which components are typically involved in the operation of a landing gear warning horn?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.20.2.c.1",
+        "text": "Throttle position"
+      },
+      {
+        "id": "AFH.12.20.2.c.2",
+        "text": "Flap position"
+      },
+      {
+        "id": "AFH.12.20.2.c.3",
+        "text": "Airspeed indicator"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.20.2.w.1",
+        "text": "Rudder pedals"
+      },
+      {
+        "id": "AFH.12.20.2.w.2",
+        "text": "Elevator trim"
+      },
+      {
+        "id": "AFH.12.20.2.w.3",
+        "text": "Fuel gauge"
+      },
+      {
+        "id": "AFH.12.20.2.w.4",
+        "text": "Altimeter"
+      },
+      {
+        "id": "AFH.12.20.2.w.5",
+        "text": "Vertical speed indicator"
+      },
+      {
+        "id": "AFH.12.20.2.w.6",
+        "text": "Engine RPM gauge"
+      },
+      {
+        "id": "AFH.12.20.2.w.7",
+        "text": "Oil pressure gauge"
+      },
+      {
+        "id": "AFH.12.20.2.w.8",
+        "text": "Cabin pressure gauge"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12: Transition to Complex Airplanes Introduction, Section: Landing Gear Safety Devices",
+    "subjects": [
+      "Aircraft Systems",
+      "Aviation Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.12.21.1",
+    "question": "Which of the following are recognized methods for emergency landing gear extension when the main power system fails?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.21.1.c.1",
+        "text": "Releasing uplocks via mechanical linkage allowing the gear to free fall under its own weight"
+      },
+      {
+        "id": "AFH.12.21.1.c.2",
+        "text": "Directing compressed gas to uplock release cylinders to release the gear"
+      },
+      {
+        "id": "AFH.12.21.1.c.3",
+        "text": "Using a manual hand crank to forcefully extend the gear in an emergency"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.21.1.w.1",
+        "text": "Activating the primary hydraulic pump through the normal gear selector switch"
+      },
+      {
+        "id": "AFH.12.21.1.w.2",
+        "text": "Using engine bleed air routed directly to the gear actuators for extension"
+      },
+      {
+        "id": "AFH.12.21.1.w.3",
+        "text": "Deploying a pyrotechnic charge to shear the uplock pins"
+      },
+      {
+        "id": "AFH.12.21.1.w.4",
+        "text": "Reversing the flap motor circuit to provide backup hydraulic pressure to the gear"
+      },
+      {
+        "id": "AFH.12.21.1.w.5",
+        "text": "Engaging an autopilot override that automatically lowers the gear below 1,000 feet AGL"
+      },
+      {
+        "id": "AFH.12.21.1.w.6",
+        "text": "Applying differential braking to mechanically release the main gear uplocks"
+      },
+      {
+        "id": "AFH.12.21.1.w.7",
+        "text": "Cycling the battery master switch off and on to reset the gear control solenoids"
+      },
+      {
+        "id": "AFH.12.21.1.w.8",
+        "text": "Pulling the stall warning vane to trigger an emergency gear-down signal"
+      }
+    ],
+    "source": "AFH Chapter 12, Section 12.21 – Emergency Gear Extension Systems",
+    "subjects": [
+      "Emergency Gear Extension",
+      "Landing Gear Systems",
+      "Complex Airplane Systems"
+    ]
+  },
+  {
+    "questionid": "AFH.12.22.1",
+    "question": "During the external preflight inspection of a complex airplane's retractable landing gear, which of the following items should be checked?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.22.1.c.1",
+        "text": "Check hydraulic lines for signs of chafing and leakage at attach points."
+      },
+      {
+        "id": "AFH.12.22.1.c.2",
+        "text": "Ensure shock struts are properly inflated and that the pistons are clean."
+      },
+      {
+        "id": "AFH.12.22.1.c.3",
+        "text": "Check main gear and nose gear uplock and downlock mechanisms for general condition."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.22.1.w.1",
+        "text": "Verify the landing gear selector switch is in the GEAR DOWN position."
+      },
+      {
+        "id": "AFH.12.22.1.w.2",
+        "text": "Turn on the battery master switch and ensure position indicators show gear down and locked."
+      },
+      {
+        "id": "AFH.12.22.1.w.3",
+        "text": "Inspect the propeller for nicks and cracks."
+      },
+      {
+        "id": "AFH.12.22.1.w.4",
+        "text": "Check the fuel quantity in the tanks."
+      },
+      {
+        "id": "AFH.12.22.1.w.5",
+        "text": "Ensure the cabin doors are securely latched."
+      },
+      {
+        "id": "AFH.12.22.1.w.6",
+        "text": "Adjust the altimeter setting."
+      },
+      {
+        "id": "AFH.12.22.1.w.7",
+        "text": "Check the oil level in the engine."
+      },
+      {
+        "id": "AFH.12.22.1.w.8",
+        "text": "Confirm the navigation lights are operational."
+      }
+    ],
+    "source": "AFH, Chapter 12, Section 22",
+    "subjects": [
+      "Preflight Inspection",
+      "Landing Gear",
+      "Complex Airplanes"
+    ]
+  },
+  {
+    "questionid": "AFH.12.23.1",
+    "question": "What factors should be considered when preplanning landing gear retraction after takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.23.1.c.1",
+        "text": "Length of the runway"
+      },
+      {
+        "id": "AFH.12.23.1.c.2",
+        "text": "Climb gradient"
+      },
+      {
+        "id": "AFH.12.23.1.c.3",
+        "text": "Obstacle clearance requirements"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.23.1.w.1",
+        "text": "Fuel efficiency"
+      },
+      {
+        "id": "AFH.12.23.1.w.2",
+        "text": "Passenger comfort"
+      },
+      {
+        "id": "AFH.12.23.1.w.3",
+        "text": "Weather conditions"
+      },
+      {
+        "id": "AFH.12.23.1.w.4",
+        "text": "Pilot experience"
+      },
+      {
+        "id": "AFH.12.23.1.w.5",
+        "text": "Aircraft color"
+      },
+      {
+        "id": "AFH.12.23.1.w.6",
+        "text": "Cabin pressure"
+      },
+      {
+        "id": "AFH.12.23.1.w.7",
+        "text": "In-flight entertainment"
+      },
+      {
+        "id": "AFH.12.23.1.w.8",
+        "text": "Seat configuration"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12, Section 23",
+    "subjects": [
+      "Landing Gear Retraction",
+      "Takeoff Procedures",
+      "Climb Considerations"
+    ]
+  },
+  {
+    "questionid": "AFH.12.23.2",
+    "question": "Why is it important to avoid premature landing gear retraction?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.23.2.c.1",
+        "text": "The airplane may settle back onto the runway"
+      },
+      {
+        "id": "AFH.12.23.2.c.2",
+        "text": "A positive rate of climb must be indicated"
+      },
+      {
+        "id": "AFH.12.23.2.c.3",
+        "text": "Inadvertent forward pressure on the yoke may occur"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.23.2.w.1",
+        "text": "It increases fuel consumption"
+      },
+      {
+        "id": "AFH.12.23.2.w.2",
+        "text": "It causes passenger discomfort"
+      },
+      {
+        "id": "AFH.12.23.2.w.3",
+        "text": "It affects cabin temperature"
+      },
+      {
+        "id": "AFH.12.23.2.w.4",
+        "text": "It changes the aircraft's color"
+      },
+      {
+        "id": "AFH.12.23.2.w.5",
+        "text": "It alters the in-flight entertainment system"
+      },
+      {
+        "id": "AFH.12.23.2.w.6",
+        "text": "It impacts the pilot's visibility"
+      },
+      {
+        "id": "AFH.12.23.2.w.7",
+        "text": "It modifies the seat configuration"
+      },
+      {
+        "id": "AFH.12.23.2.w.8",
+        "text": "It disrupts cabin pressure"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12, Section 23",
+    "subjects": [
+      "Landing Gear Retraction",
+      "Takeoff Safety",
+      "Climb Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.12.24.1",
+    "question": "What is the maximum landing extended speed (VLE)?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.24.1.c.1",
+        "text": "The maximum speed at which the airplane can be flown with the landing gear extended."
+      },
+      {
+        "id": "AFH.12.24.1.c.2",
+        "text": "A speed limit to prevent structural damage to the landing gear."
+      },
+      {
+        "id": "AFH.12.24.1.c.3",
+        "text": "Published in the AFM/POH for the particular airplane."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.24.1.w.1",
+        "text": "The speed at which the landing gear is retracted."
+      },
+      {
+        "id": "AFH.12.24.1.w.2",
+        "text": "The speed at which the landing gear is cycled."
+      },
+      {
+        "id": "AFH.12.24.1.w.3",
+        "text": "The minimum speed for safe landing."
+      },
+      {
+        "id": "AFH.12.24.1.w.4",
+        "text": "The speed at which the airplane stalls."
+      },
+      {
+        "id": "AFH.12.24.1.w.5",
+        "text": "The speed at which the airplane takes off."
+      },
+      {
+        "id": "AFH.12.24.1.w.6",
+        "text": "The speed at which the airplane climbs."
+      },
+      {
+        "id": "AFH.12.24.1.w.7",
+        "text": "The speed at which the airplane descends."
+      },
+      {
+        "id": "AFH.12.24.1.w.8",
+        "text": "The speed at which the airplane cruises."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12: Transition to Complex Airplanes Introduction",
+    "subjects": [
+      "Landing Gear Operation",
+      "Airspeed Limitations",
+      "Flight Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.12.24.2",
+    "question": "What should be done if abnormal sounds are heard during landing gear extension?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.24.2.c.1",
+        "text": "Be attentive to any abnormal sounds or feel."
+      },
+      {
+        "id": "AFH.12.24.2.c.2",
+        "text": "Confirm that the landing gear has extended and locked."
+      },
+      {
+        "id": "AFH.12.24.2.c.3",
+        "text": "Check gear position indicators in the flight deck."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.24.2.w.1",
+        "text": "Ignore the sounds and continue flying."
+      },
+      {
+        "id": "AFH.12.24.2.w.2",
+        "text": "Immediately retract the landing gear."
+      },
+      {
+        "id": "AFH.12.24.2.w.3",
+        "text": "Increase airspeed to resolve the issue."
+      },
+      {
+        "id": "AFH.12.24.2.w.4",
+        "text": "Land immediately without further checks."
+      },
+      {
+        "id": "AFH.12.24.2.w.5",
+        "text": "Turn off all electrical systems."
+      },
+      {
+        "id": "AFH.12.24.2.w.6",
+        "text": "Contact air traffic control for emergency landing."
+      },
+      {
+        "id": "AFH.12.24.2.w.7",
+        "text": "Perform a go-around maneuver."
+      },
+      {
+        "id": "AFH.12.24.2.w.8",
+        "text": "Abort the landing and climb to a safe altitude."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12: Transition to Complex Airplanes Introduction",
+    "subjects": [
+      "Landing Gear Operation",
+      "Flight Safety",
+      "Aircraft Systems"
+    ]
+  },
+  {
+    "questionid": "AFH.12.24.3",
+    "question": "What are some common pilot errors related to retractable landing gear?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.24.3.c.1",
+        "text": "Neglecting to extend landing gear."
+      },
+      {
+        "id": "AFH.12.24.3.c.2",
+        "text": "Inadvertently retracting landing gear."
+      },
+      {
+        "id": "AFH.12.24.3.c.3",
+        "text": "Activating gear but failing to check gear position."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.24.3.w.1",
+        "text": "Extending gear too early during takeoff."
+      },
+      {
+        "id": "AFH.12.24.3.w.2",
+        "text": "Using the wrong checklist for landing."
+      },
+      {
+        "id": "AFH.12.24.3.w.3",
+        "text": "Ignoring airspeed limitations during landing."
+      },
+      {
+        "id": "AFH.12.24.3.w.4",
+        "text": "Failing to communicate with air traffic control."
+      },
+      {
+        "id": "AFH.12.24.3.w.5",
+        "text": "Misjudging runway length for landing."
+      },
+      {
+        "id": "AFH.12.24.3.w.6",
+        "text": "Overloading the aircraft during landing."
+      },
+      {
+        "id": "AFH.12.24.3.w.7",
+        "text": "Flying with incorrect fuel levels."
+      },
+      {
+        "id": "AFH.12.24.3.w.8",
+        "text": "Ignoring weather conditions during landing."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12: Transition to Complex Airplanes Introduction",
+    "subjects": [
+      "Pilot Errors",
+      "Landing Gear Operation",
+      "Flight Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.12.24.4",
+    "question": "What is a recommended practice after landing to prevent gear mishaps?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.24.4.c.1",
+        "text": "Complete the landing roll and clear the runway before operating levers or switches."
+      },
+      {
+        "id": "AFH.12.24.4.c.2",
+        "text": "Focus attention on the after-landing checklist after rollout."
+      },
+      {
+        "id": "AFH.12.24.4.c.3",
+        "text": "Ensure positive identification of the proper controls."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.24.4.w.1",
+        "text": "Operate levers or switches during the landing roll."
+      },
+      {
+        "id": "AFH.12.24.4.w.2",
+        "text": "Ignore the after-landing checklist."
+      },
+      {
+        "id": "AFH.12.24.4.w.3",
+        "text": "Retract the landing gear immediately after touchdown."
+      },
+      {
+        "id": "AFH.12.24.4.w.4",
+        "text": "Focus on other cockpit tasks before clearing the runway."
+      },
+      {
+        "id": "AFH.12.24.4.w.5",
+        "text": "Use the emergency gear system unnecessarily."
+      },
+      {
+        "id": "AFH.12.24.4.w.6",
+        "text": "Perform a checklist review during the landing roll."
+      },
+      {
+        "id": "AFH.12.24.4.w.7",
+        "text": "Communicate with air traffic control before completing the landing roll."
+      },
+      {
+        "id": "AFH.12.24.4.w.8",
+        "text": "Operate the landing gear switch while still on the runway."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 12: Transition to Complex Airplanes Introduction",
+    "subjects": [
+      "Landing Procedures",
+      "Flight Safety",
+      "Aircraft Systems"
+    ]
+  },
+  {
+    "questionid": "AFH.12.25.1",
+    "question": "When transitioning to a complex or high-performance airplane, which statements accurately describe the structured training process according to the Airplane Flying Handbook?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.25.1.c.1",
+        "text": "Training should be accomplished in accordance with a ground and flight training syllabus"
+      },
+      {
+        "id": "AFH.12.25.1.c.2",
+        "text": "The arrangement of subject matter and emphasis may be adjusted to fit the pilot's qualifications and the airplane involved"
+      },
+      {
+        "id": "AFH.12.25.1.c.3",
+        "text": "Actual training times should be based on the capabilities of the individual pilot, not fixed syllabus times"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.25.1.w.1",
+        "text": "All transitioning pilots must complete identical training hours regardless of prior experience"
+      },
+      {
+        "id": "AFH.12.25.1.w.2",
+        "text": "Transition training may be self-administered without a flight instructor if the pilot holds a private certificate"
+      },
+      {
+        "id": "AFH.12.25.1.w.3",
+        "text": "Proficiency standards for transition training are set solely by the flight instructor conducting the course"
+      },
+      {
+        "id": "AFH.12.25.1.w.4",
+        "text": "The sample syllabus in Figure 12-16 represents mandatory fixed requirements that cannot be altered"
+      },
+      {
+        "id": "AFH.12.25.1.w.5",
+        "text": "Training times indicated in the syllabus are the minimum legal requirements for all transitioning pilots"
+      },
+      {
+        "id": "AFH.12.25.1.w.6",
+        "text": "A structured course of training is only required for high-performance airplanes, not complex airplanes"
+      },
+      {
+        "id": "AFH.12.25.1.w.7",
+        "text": "Pilots with higher qualifications must complete increased training periods to ensure safety margins"
+      },
+      {
+        "id": "AFH.12.25.1.w.8",
+        "text": "It is mainly about unrelated advanced turbine transition procedures not covered in transition training."
+      }
+    ],
+    "source": "AFH Chapter 12, Section: Transition Training",
+    "subjects": [
+      "Transition Training Requirements",
+      "Complex and High-Performance Airplane Training"
+    ]
+  },
+  {
+    "questionid": "AFH.12.26.1",
+    "question": "According to the Chapter Summary, what are essential considerations for pilots flying complex or high-performance airplanes?",
+    "correct_answers": [
+      {
+        "id": "AFH.12.26.1.c.1",
+        "text": "Pilots must further divide their attention during takeoff and landing."
+      },
+      {
+        "id": "AFH.12.26.1.c.2",
+        "text": "Knowledge, judgment, and piloting skills need to be developed."
+      },
+      {
+        "id": "AFH.12.26.1.c.3",
+        "text": "Adequate training is essential for a complete understanding of systems, their operation, and limitations."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.12.26.1.w.1",
+        "text": "Flight controls are simplified in complex airplanes."
+      },
+      {
+        "id": "AFH.12.26.1.w.2",
+        "text": "Emergency operations are less critical than normal operations."
+      },
+      {
+        "id": "AFH.12.26.1.w.3",
+        "text": "Operating limitations are less stringent for high-performance aircraft."
+      },
+      {
+        "id": "AFH.12.26.1.w.4",
+        "text": "Extensive pre-flight planning is optional."
+      },
+      {
+        "id": "AFH.12.26.1.w.5",
+        "text": "Only basic piloting skills are sufficient."
+      },
+      {
+        "id": "AFH.12.26.1.w.6",
+        "text": "System understanding is secondary to flight hours."
+      },
+      {
+        "id": "AFH.12.26.1.w.7",
+        "text": "Cruise flight demands the most divided attention."
+      },
+      {
+        "id": "AFH.12.26.1.w.8",
+        "text": "Training is only needed for new system installations."
+      }
+    ],
+    "source": "AFH.12.26",
+    "subjects": [
+      "Complex Airplanes"
+    ]
+  }
+]

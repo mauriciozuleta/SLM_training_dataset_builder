@@ -1,0 +1,2888 @@
+[
+  {
+    "questionBank": {
+      "chapterId": "afh.8",
+      "bookId": "AFH",
+      "chapterNumber": 8,
+      "chapterTitle": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 8: Airport Traffic Patterns Introduction",
+      "totalRequiredQuestions": 50,
+      "metadata": {
+        "generatedAtUtc": "2026-03-27T18:36:25.687Z",
+        "chapterId": "afh.8",
+        "chapterNumber": 8,
+        "totalSections": 5,
+        "totalRequiredQuestions": 50,
+        "providers": [
+          "openai",
+          "gemini"
+        ],
+        "models": [
+          "gpt-4o",
+          "gemini-2.5-flash"
+        ],
+        "promptTokens": 5612,
+        "completionTokens": 8600,
+        "totalTokens": 14212,
+        "sectionQuestionSummary": [
+          {
+            "sectionId": "afh.8.1",
+            "sectionTitle": "Airport Traffic Patterns and Operations",
+            "sectionOrdinal": 1,
+            "sectionWeightPercentage": 18.79,
+            "questionsGenerated": 9
+          },
+          {
+            "sectionId": "afh.8.2",
+            "sectionTitle": "Standard Airport Traffic Patterns",
+            "sectionOrdinal": 2,
+            "sectionWeightPercentage": 51.92,
+            "questionsGenerated": 26
+          },
+          {
+            "sectionId": "afh.8.3",
+            "sectionTitle": "Non-Towered Airports",
+            "sectionOrdinal": 3,
+            "sectionWeightPercentage": 14.07,
+            "questionsGenerated": 7
+          },
+          {
+            "sectionId": "afh.8.4",
+            "sectionTitle": "Safety Considerations",
+            "sectionOrdinal": 4,
+            "sectionWeightPercentage": 13.29,
+            "questionsGenerated": 7
+          },
+          {
+            "sectionId": "afh.8.5",
+            "sectionTitle": "Chapter Summary",
+            "sectionOrdinal": 5,
+            "sectionWeightPercentage": 1.93,
+            "questionsGenerated": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "questionid": "AFH.8.1.1",
+    "question": "What factors determine the runway in use at an airport?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.1.1.c.1",
+        "text": "Wind conditions"
+      },
+      {
+        "id": "AFH.8.1.1.c.2",
+        "text": "Obstructions"
+      },
+      {
+        "id": "AFH.8.1.1.c.3",
+        "text": "Traffic pattern layout"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.1.1.w.1",
+        "text": "Pilot preference"
+      },
+      {
+        "id": "AFH.8.1.1.w.2",
+        "text": "Aircraft size"
+      },
+      {
+        "id": "AFH.8.1.1.w.3",
+        "text": "Time of day"
+      },
+      {
+        "id": "AFH.8.1.1.w.4",
+        "text": "Airport size"
+      },
+      {
+        "id": "AFH.8.1.1.w.5",
+        "text": "Weather forecast"
+      },
+      {
+        "id": "AFH.8.1.1.w.6",
+        "text": "Runway length"
+      },
+      {
+        "id": "AFH.8.1.1.w.7",
+        "text": "Fuel availability"
+      },
+      {
+        "id": "AFH.8.1.1.w.8",
+        "text": "Control tower presence"
+      }
+    ],
+    "source": "Airport Traffic Patterns and Operations",
+    "subjects": [
+      "Airport Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.8.1.2",
+    "question": "What should pilots check in the Chart Supplements before using an airport?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.1.2.c.1",
+        "text": "Traffic pattern"
+      },
+      {
+        "id": "AFH.8.1.2.c.2",
+        "text": "Operating procedures"
+      },
+      {
+        "id": "AFH.8.1.2.c.3",
+        "text": "Visual markings"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.1.2.w.1",
+        "text": "Fuel prices"
+      },
+      {
+        "id": "AFH.8.1.2.w.2",
+        "text": "Runway length"
+      },
+      {
+        "id": "AFH.8.1.2.w.3",
+        "text": "Weather conditions"
+      },
+      {
+        "id": "AFH.8.1.2.w.4",
+        "text": "Aircraft parking"
+      },
+      {
+        "id": "AFH.8.1.2.w.5",
+        "text": "Terminal facilities"
+      },
+      {
+        "id": "AFH.8.1.2.w.6",
+        "text": "Passenger services"
+      },
+      {
+        "id": "AFH.8.1.2.w.7",
+        "text": "Baggage claim"
+      },
+      {
+        "id": "AFH.8.1.2.w.8",
+        "text": "Customs procedures"
+      }
+    ],
+    "source": "Airport Traffic Patterns and Operations",
+    "subjects": [
+      "Pre-flight Planning"
+    ]
+  },
+  {
+    "questionid": "AFH.8.1.3",
+    "question": "What is a pilot's responsibility when operating at an airport without a control tower?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.1.3.c.1",
+        "text": "Determine traffic pattern direction"
+      },
+      {
+        "id": "AFH.8.1.3.c.2",
+        "text": "Comply with traffic rules"
+      },
+      {
+        "id": "AFH.8.1.3.c.3",
+        "text": "Display common courtesy"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.1.3.w.1",
+        "text": "Request clearance"
+      },
+      {
+        "id": "AFH.8.1.3.w.2",
+        "text": "Follow tower instructions"
+      },
+      {
+        "id": "AFH.8.1.3.w.3",
+        "text": "Use radio communication"
+      },
+      {
+        "id": "AFH.8.1.3.w.4",
+        "text": "Monitor ATIS"
+      },
+      {
+        "id": "AFH.8.1.3.w.5",
+        "text": "File a flight plan"
+      },
+      {
+        "id": "AFH.8.1.3.w.6",
+        "text": "Contact ground control"
+      },
+      {
+        "id": "AFH.8.1.3.w.7",
+        "text": "Obtain weather briefing"
+      },
+      {
+        "id": "AFH.8.1.3.w.8",
+        "text": "Check NOTAMs"
+      }
+    ],
+    "source": "Airport Traffic Patterns and Operations",
+    "subjects": [
+      "Pilot Responsibilities"
+    ]
+  },
+  {
+    "questionid": "AFH.8.1.4",
+    "question": "What is the purpose of airport traffic patterns and procedures?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.1.4.c.1",
+        "text": "Minimize conflicts"
+      },
+      {
+        "id": "AFH.8.1.4.c.2",
+        "text": "Ensure safety"
+      },
+      {
+        "id": "AFH.8.1.4.c.3",
+        "text": "Enhance efficiency"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.1.4.w.1",
+        "text": "Increase traffic"
+      },
+      {
+        "id": "AFH.8.1.4.w.2",
+        "text": "Reduce noise"
+      },
+      {
+        "id": "AFH.8.1.4.w.3",
+        "text": "Improve fuel efficiency"
+      },
+      {
+        "id": "AFH.8.1.4.w.4",
+        "text": "Shorten flight times"
+      },
+      {
+        "id": "AFH.8.1.4.w.5",
+        "text": "Enhance comfort"
+      },
+      {
+        "id": "AFH.8.1.4.w.6",
+        "text": "Maximize runway use"
+      },
+      {
+        "id": "AFH.8.1.4.w.7",
+        "text": "Increase airport revenue"
+      },
+      {
+        "id": "AFH.8.1.4.w.8",
+        "text": "Reduce pilot workload"
+      }
+    ],
+    "source": "Airport Traffic Patterns and Operations",
+    "subjects": [
+      "Traffic Management"
+    ]
+  },
+  {
+    "questionid": "AFH.8.1.5",
+    "question": "What should pilots do when operating at an airport with a control tower?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.1.5.c.1",
+        "text": "Receive clearance"
+      },
+      {
+        "id": "AFH.8.1.5.c.2",
+        "text": "Follow tower instructions"
+      },
+      {
+        "id": "AFH.8.1.5.c.3",
+        "text": "Communicate by radio"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.1.5.w.1",
+        "text": "Determine traffic pattern"
+      },
+      {
+        "id": "AFH.8.1.5.w.2",
+        "text": "Ignore visual markings"
+      },
+      {
+        "id": "AFH.8.1.5.w.3",
+        "text": "Use hand signals"
+      },
+      {
+        "id": "AFH.8.1.5.w.4",
+        "text": "Rely on visual scanning"
+      },
+      {
+        "id": "AFH.8.1.5.w.5",
+        "text": "Follow other aircraft"
+      },
+      {
+        "id": "AFH.8.1.5.w.6",
+        "text": "Use personal judgment"
+      },
+      {
+        "id": "AFH.8.1.5.w.7",
+        "text": "Request priority landing"
+      },
+      {
+        "id": "AFH.8.1.5.w.8",
+        "text": "Avoid radio communication"
+      }
+    ],
+    "source": "Airport Traffic Patterns and Operations",
+    "subjects": [
+      "Controlled Airspace Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.8.1.6",
+    "question": "How do jets or heavy airplanes typically approach for landing?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.1.6.c.1",
+        "text": "Wider patterns"
+      },
+      {
+        "id": "AFH.8.1.6.c.2",
+        "text": "Higher patterns"
+      },
+      {
+        "id": "AFH.8.1.6.c.3",
+        "text": "Straight-in approach"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.1.6.w.1",
+        "text": "Tighter patterns"
+      },
+      {
+        "id": "AFH.8.1.6.w.2",
+        "text": "Lower patterns"
+      },
+      {
+        "id": "AFH.8.1.6.w.3",
+        "text": "Circular approach"
+      },
+      {
+        "id": "AFH.8.1.6.w.4",
+        "text": "Zigzag approach"
+      },
+      {
+        "id": "AFH.8.1.6.w.5",
+        "text": "Short final"
+      },
+      {
+        "id": "AFH.8.1.6.w.6",
+        "text": "Steep descent"
+      },
+      {
+        "id": "AFH.8.1.6.w.7",
+        "text": "Low pass"
+      },
+      {
+        "id": "AFH.8.1.6.w.8",
+        "text": "Touch-and-go"
+      }
+    ],
+    "source": "Airport Traffic Patterns and Operations",
+    "subjects": [
+      "Aircraft Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.8.1.7",
+    "question": "What should pilots do to avoid midair collisions at airports without control towers?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.1.7.c.1",
+        "text": "Adhere to rectangular pattern"
+      },
+      {
+        "id": "AFH.8.1.7.c.2",
+        "text": "Continue scanning"
+      },
+      {
+        "id": "AFH.8.1.7.c.3",
+        "text": "Follow traffic rules"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.1.7.w.1",
+        "text": "Ignore other aircraft"
+      },
+      {
+        "id": "AFH.8.1.7.w.2",
+        "text": "Rely on radio communication"
+      },
+      {
+        "id": "AFH.8.1.7.w.3",
+        "text": "Request priority"
+      },
+      {
+        "id": "AFH.8.1.7.w.4",
+        "text": "Use personal judgment"
+      },
+      {
+        "id": "AFH.8.1.7.w.5",
+        "text": "Fly erratically"
+      },
+      {
+        "id": "AFH.8.1.7.w.6",
+        "text": "Descend rapidly"
+      },
+      {
+        "id": "AFH.8.1.7.w.7",
+        "text": "Climb steeply"
+      },
+      {
+        "id": "AFH.8.1.7.w.8",
+        "text": "Perform aerobatics"
+      }
+    ],
+    "source": "Airport Traffic Patterns and Operations",
+    "subjects": [
+      "Collision Avoidance"
+    ]
+  },
+  {
+    "questionid": "AFH.8.1.8",
+    "question": "What is the basic traffic pattern layout most pilots should be familiar with?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.1.8.c.1",
+        "text": "Rectangular pattern"
+      },
+      {
+        "id": "AFH.8.1.8.c.2",
+        "text": "Standard pattern"
+      },
+      {
+        "id": "AFH.8.1.8.c.3",
+        "text": "Basic pattern"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.1.8.w.1",
+        "text": "Circular pattern"
+      },
+      {
+        "id": "AFH.8.1.8.w.2",
+        "text": "Zigzag pattern"
+      },
+      {
+        "id": "AFH.8.1.8.w.3",
+        "text": "Spiral pattern"
+      },
+      {
+        "id": "AFH.8.1.8.w.4",
+        "text": "Random pattern"
+      },
+      {
+        "id": "AFH.8.1.8.w.5",
+        "text": "Complex pattern"
+      },
+      {
+        "id": "AFH.8.1.8.w.6",
+        "text": "Irregular pattern"
+      },
+      {
+        "id": "AFH.8.1.8.w.7",
+        "text": "Triangular pattern"
+      },
+      {
+        "id": "AFH.8.1.8.w.8",
+        "text": "Hexagonal pattern"
+      }
+    ],
+    "source": "Airport Traffic Patterns and Operations",
+    "subjects": [
+      "Traffic Patterns"
+    ]
+  },
+  {
+    "questionid": "AFH.8.1.9",
+    "question": "What is not diminished by the use of traffic patterns, services, or procedures?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.1.9.c.1",
+        "text": "Pilot's responsibility"
+      },
+      {
+        "id": "AFH.8.1.9.c.2",
+        "text": "See and avoid other aircraft"
+      },
+      {
+        "id": "AFH.8.1.9.c.3",
+        "text": "Safety awareness"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.1.9.w.1",
+        "text": "Pilot's workload"
+      },
+      {
+        "id": "AFH.8.1.9.w.2",
+        "text": "Communication needs"
+      },
+      {
+        "id": "AFH.8.1.9.w.3",
+        "text": "Fuel consumption"
+      },
+      {
+        "id": "AFH.8.1.9.w.4",
+        "text": "Flight time"
+      },
+      {
+        "id": "AFH.8.1.9.w.5",
+        "text": "Aircraft maintenance"
+      },
+      {
+        "id": "AFH.8.1.9.w.6",
+        "text": "Passenger comfort"
+      },
+      {
+        "id": "AFH.8.1.9.w.7",
+        "text": "Runway usage"
+      },
+      {
+        "id": "AFH.8.1.9.w.8",
+        "text": "Weather dependency"
+      }
+    ],
+    "source": "Airport Traffic Patterns and Operations",
+    "subjects": [
+      "Pilot Responsibilities"
+    ]
+  },
+  {
+    "questionid": "AFH.8.2.1",
+    "question": "What is the standard altitude for a traffic pattern at most airports?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.2.1.c.1",
+        "text": "1,000 feet above airport elevation"
+      },
+      {
+        "id": "AFH.8.2.1.c.2",
+        "text": "1,000 feet AGL"
+      },
+      {
+        "id": "AFH.8.2.1.c.3",
+        "text": "1,000 feet above ground level"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.2.1.w.1",
+        "text": "500 feet above airport elevation"
+      },
+      {
+        "id": "AFH.8.2.1.w.2",
+        "text": "2,000 feet above airport elevation"
+      },
+      {
+        "id": "AFH.8.2.1.w.3",
+        "text": "1,500 feet AGL"
+      },
+      {
+        "id": "AFH.8.2.1.w.4",
+        "text": "2,500 feet AGL"
+      },
+      {
+        "id": "AFH.8.2.1.w.5",
+        "text": "3,000 feet AGL"
+      },
+      {
+        "id": "AFH.8.2.1.w.6",
+        "text": "500 feet AGL"
+      },
+      {
+        "id": "AFH.8.2.1.w.7",
+        "text": "750 feet above airport elevation"
+      },
+      {
+        "id": "AFH.8.2.1.w.8",
+        "text": "1,200 feet AGL"
+      }
+    ],
+    "source": "AFH Chapter 8, Section 8.2",
+    "subjects": [
+      "Traffic Pattern Altitude"
+    ]
+  },
+  {
+    "questionid": "AFH.8.2.2",
+    "question": "Which direction should turns be made in a standard traffic pattern unless otherwise indicated?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.2.2.c.1",
+        "text": "Left turns"
+      },
+      {
+        "id": "AFH.8.2.2.c.2",
+        "text": "Counterclockwise turns"
+      },
+      {
+        "id": "AFH.8.2.2.c.3",
+        "text": "Left-hand traffic pattern"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.2.2.w.1",
+        "text": "Right turns"
+      },
+      {
+        "id": "AFH.8.2.2.w.2",
+        "text": "Clockwise turns"
+      },
+      {
+        "id": "AFH.8.2.2.w.3",
+        "text": "Right-hand traffic pattern"
+      },
+      {
+        "id": "AFH.8.2.2.w.4",
+        "text": "Straight turns"
+      },
+      {
+        "id": "AFH.8.2.2.w.5",
+        "text": "No turns"
+      },
+      {
+        "id": "AFH.8.2.2.w.6",
+        "text": "Vertical turns"
+      },
+      {
+        "id": "AFH.8.2.2.w.7",
+        "text": "Diagonal turns"
+      },
+      {
+        "id": "AFH.8.2.2.w.8",
+        "text": "Reverse turns"
+      }
+    ],
+    "source": "AFH Chapter 8, Section 8.2",
+    "subjects": [
+      "Traffic Pattern Direction"
+    ]
+  },
+  {
+    "questionid": "AFH.8.2.3",
+    "question": "What is the maximum recommended airspeed for aircraft in a traffic pattern at airports with an operating control tower?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.2.3.c.1",
+        "text": "200 knots"
+      },
+      {
+        "id": "AFH.8.2.3.c.2",
+        "text": "230 mph"
+      },
+      {
+        "id": "AFH.8.2.3.c.3",
+        "text": "200 knots (230 mph)"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.2.3.w.1",
+        "text": "250 knots"
+      },
+      {
+        "id": "AFH.8.2.3.w.2",
+        "text": "180 knots"
+      },
+      {
+        "id": "AFH.8.2.3.w.3",
+        "text": "150 knots"
+      },
+      {
+        "id": "AFH.8.2.3.w.4",
+        "text": "300 knots"
+      },
+      {
+        "id": "AFH.8.2.3.w.5",
+        "text": "100 knots"
+      },
+      {
+        "id": "AFH.8.2.3.w.6",
+        "text": "350 knots"
+      },
+      {
+        "id": "AFH.8.2.3.w.7",
+        "text": "400 knots"
+      },
+      {
+        "id": "AFH.8.2.3.w.8",
+        "text": "500 knots"
+      }
+    ],
+    "source": "AFH Chapter 8, Section 8.2",
+    "subjects": [
+      "Traffic Pattern Airspeed"
+    ]
+  },
+  {
+    "questionid": "AFH.8.2.4",
+    "question": "How should a pilot enter the traffic pattern at an airport without an operating control tower?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.2.4.c.1",
+        "text": "Observe other aircraft in the pattern"
+      },
+      {
+        "id": "AFH.8.2.4.c.2",
+        "text": "Conform to the traffic pattern in use"
+      },
+      {
+        "id": "AFH.8.2.4.c.3",
+        "text": "Enter at a point clear of other aircraft"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.2.4.w.1",
+        "text": "Enter directly onto the runway"
+      },
+      {
+        "id": "AFH.8.2.4.w.2",
+        "text": "Descend rapidly into the pattern"
+      },
+      {
+        "id": "AFH.8.2.4.w.3",
+        "text": "Ignore other aircraft"
+      },
+      {
+        "id": "AFH.8.2.4.w.4",
+        "text": "Enter from any direction"
+      },
+      {
+        "id": "AFH.8.2.4.w.5",
+        "text": "Enter at high speed"
+      },
+      {
+        "id": "AFH.8.2.4.w.6",
+        "text": "Circle above the airport"
+      },
+      {
+        "id": "AFH.8.2.4.w.7",
+        "text": "Land without entering the pattern"
+      },
+      {
+        "id": "AFH.8.2.4.w.8",
+        "text": "Enter at a 90° angle"
+      }
+    ],
+    "source": "AFH Chapter 8, Section 8.2",
+    "subjects": [
+      "Traffic Pattern Entry"
+    ]
+  },
+  {
+    "questionid": "AFH.8.2.5",
+    "question": "What should a pilot do if no other aircraft are observed in the traffic pattern?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.2.5.c.1",
+        "text": "Check traffic indicators"
+      },
+      {
+        "id": "AFH.8.2.5.c.2",
+        "text": "Check wind indicators"
+      },
+      {
+        "id": "AFH.8.2.5.c.3",
+        "text": "Determine runway and pattern direction"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.2.5.w.1",
+        "text": "Land immediately"
+      },
+      {
+        "id": "AFH.8.2.5.w.2",
+        "text": "Ignore indicators"
+      },
+      {
+        "id": "AFH.8.2.5.w.3",
+        "text": "Enter the pattern at any altitude"
+      },
+      {
+        "id": "AFH.8.2.5.w.4",
+        "text": "Descend rapidly"
+      },
+      {
+        "id": "AFH.8.2.5.w.5",
+        "text": "Circle the airport"
+      },
+      {
+        "id": "AFH.8.2.5.w.6",
+        "text": "Wait for other aircraft"
+      },
+      {
+        "id": "AFH.8.2.5.w.7",
+        "text": "Enter the pattern at high speed"
+      },
+      {
+        "id": "AFH.8.2.5.w.8",
+        "text": "Use any runway"
+      }
+    ],
+    "source": "AFH Chapter 8, Section 8.2",
+    "subjects": [
+      "Traffic Pattern Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.8.2.6",
+    "question": "What is the purpose of the L-shaped traffic pattern indicators at some airports?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.2.6.c.1",
+        "text": "Show traffic pattern turn direction"
+      },
+      {
+        "id": "AFH.8.2.6.c.2",
+        "text": "Indicate runway in use"
+      },
+      {
+        "id": "AFH.8.2.6.c.3",
+        "text": "Assist in traffic pattern entry"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.2.6.w.1",
+        "text": "Indicate wind speed"
+      },
+      {
+        "id": "AFH.8.2.6.w.2",
+        "text": "Show airport elevation"
+      },
+      {
+        "id": "AFH.8.2.6.w.3",
+        "text": "Display airspeed limits"
+      },
+      {
+        "id": "AFH.8.2.6.w.4",
+        "text": "Indicate airport lighting"
+      },
+      {
+        "id": "AFH.8.2.6.w.5",
+        "text": "Show weather conditions"
+      },
+      {
+        "id": "AFH.8.2.6.w.6",
+        "text": "Display runway length"
+      },
+      {
+        "id": "AFH.8.2.6.w.7",
+        "text": "Indicate airport capacity"
+      },
+      {
+        "id": "AFH.8.2.6.w.8",
+        "text": "Show aircraft types"
+      }
+    ],
+    "source": "AFH Chapter 8, Section 8.2",
+    "subjects": [
+      "Traffic Pattern Indicators"
+    ]
+  },
+  {
+    "questionid": "AFH.8.2.7",
+    "question": "At what angle should the traffic pattern be entered relative to the downwind leg?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.2.7.c.1",
+        "text": "45° angle"
+      },
+      {
+        "id": "AFH.8.2.7.c.2",
+        "text": "45-degree entry"
+      },
+      {
+        "id": "AFH.8.2.7.c.3",
+        "text": "45° to downwind leg"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.2.7.w.1",
+        "text": "90° angle"
+      },
+      {
+        "id": "AFH.8.2.7.w.2",
+        "text": "30° angle"
+      },
+      {
+        "id": "AFH.8.2.7.w.3",
+        "text": "60° angle"
+      },
+      {
+        "id": "AFH.8.2.7.w.4",
+        "text": "Parallel entry"
+      },
+      {
+        "id": "AFH.8.2.7.w.5",
+        "text": "Perpendicular entry"
+      },
+      {
+        "id": "AFH.8.2.7.w.6",
+        "text": "Direct entry"
+      },
+      {
+        "id": "AFH.8.2.7.w.7",
+        "text": "180° angle"
+      },
+      {
+        "id": "AFH.8.2.7.w.8",
+        "text": "0° angle"
+      }
+    ],
+    "source": "AFH Chapter 8, Section 8.2",
+    "subjects": [
+      "Traffic Pattern Entry"
+    ]
+  },
+  {
+    "questionid": "AFH.8.2.8",
+    "question": "What should be completed on the downwind leg of the traffic pattern?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.2.8.c.1",
+        "text": "Before-landing checks"
+      },
+      {
+        "id": "AFH.8.2.8.c.2",
+        "text": "Extend landing gear"
+      },
+      {
+        "id": "AFH.8.2.8.c.3",
+        "text": "Prepare for landing"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.2.8.w.1",
+        "text": "Begin takeoff"
+      },
+      {
+        "id": "AFH.8.2.8.w.2",
+        "text": "Increase altitude"
+      },
+      {
+        "id": "AFH.8.2.8.w.3",
+        "text": "Perform aerobatics"
+      },
+      {
+        "id": "AFH.8.2.8.w.4",
+        "text": "Enter holding pattern"
+      },
+      {
+        "id": "AFH.8.2.8.w.5",
+        "text": "Climb to cruise altitude"
+      },
+      {
+        "id": "AFH.8.2.8.w.6",
+        "text": "Shut down engine"
+      },
+      {
+        "id": "AFH.8.2.8.w.7",
+        "text": "Deploy parachute"
+      },
+      {
+        "id": "AFH.8.2.8.w.8",
+        "text": "Perform emergency landing"
+      }
+    ],
+    "source": "AFH Chapter 8, Section 8.2",
+    "subjects": [
+      "Traffic Pattern Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.8.2.9",
+    "question": "What is the typical distance from the runway for the downwind leg in a traffic pattern?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.2.9.c.1",
+        "text": "1/2 to 1 mile"
+      },
+      {
+        "id": "AFH.8.2.9.c.2",
+        "text": "0.5 to 1 mile"
+      },
+      {
+        "id": "AFH.8.2.9.c.3",
+        "text": "Half to one mile"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.2.9.w.1",
+        "text": "2 to 3 miles"
+      },
+      {
+        "id": "AFH.8.2.9.w.2",
+        "text": "1 to 2 miles"
+      },
+      {
+        "id": "AFH.8.2.9.w.3",
+        "text": "3 to 4 miles"
+      },
+      {
+        "id": "AFH.8.2.9.w.4",
+        "text": "5 to 6 miles"
+      },
+      {
+        "id": "AFH.8.2.9.w.5",
+        "text": "10 miles"
+      },
+      {
+        "id": "AFH.8.2.9.w.6",
+        "text": "20 miles"
+      },
+      {
+        "id": "AFH.8.2.9.w.7",
+        "text": "0.1 mile"
+      },
+      {
+        "id": "AFH.8.2.9.w.8",
+        "text": "0.25 mile"
+      }
+    ],
+    "source": "AFH Chapter 8, Section 8.2",
+    "subjects": [
+      "Traffic Pattern Distance"
+    ]
+  },
+  {
+    "questionid": "AFH.8.2.10",
+    "question": "What should a pilot avoid when entering a traffic pattern?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.2.10.c.1",
+        "text": "Descending entries"
+      },
+      {
+        "id": "AFH.8.2.10.c.2",
+        "text": "Entering at high speed"
+      },
+      {
+        "id": "AFH.8.2.10.c.3",
+        "text": "Ignoring other aircraft"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.2.10.w.1",
+        "text": "Entering at a 45° angle"
+      },
+      {
+        "id": "AFH.8.2.10.w.2",
+        "text": "Checking wind indicators"
+      },
+      {
+        "id": "AFH.8.2.10.w.3",
+        "text": "Using the correct runway"
+      },
+      {
+        "id": "AFH.8.2.10.w.4",
+        "text": "Following traffic pattern indicators"
+      },
+      {
+        "id": "AFH.8.2.10.w.5",
+        "text": "Entering at pattern altitude"
+      },
+      {
+        "id": "AFH.8.2.10.w.6",
+        "text": "Completing before-landing checks"
+      },
+      {
+        "id": "AFH.8.2.10.w.7",
+        "text": "Extending landing gear"
+      },
+      {
+        "id": "AFH.8.2.10.w.8",
+        "text": "Observing other aircraft"
+      }
+    ],
+    "source": "AFH Chapter 8, Section 8.2",
+    "subjects": [
+      "Traffic Pattern Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.8.2.11",
+    "question": "What is the key factor in minimizing collision risk at airports without control towers?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.2.11.c.1",
+        "text": "Common altitude use"
+      },
+      {
+        "id": "AFH.8.2.11.c.2",
+        "text": "Standard traffic pattern"
+      },
+      {
+        "id": "AFH.8.2.11.c.3",
+        "text": "Observing other aircraft"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.2.11.w.1",
+        "text": "High-speed entries"
+      },
+      {
+        "id": "AFH.8.2.11.w.2",
+        "text": "Descending entries"
+      },
+      {
+        "id": "AFH.8.2.11.w.3",
+        "text": "Ignoring traffic indicators"
+      },
+      {
+        "id": "AFH.8.2.11.w.4",
+        "text": "Random altitude use"
+      },
+      {
+        "id": "AFH.8.2.11.w.5",
+        "text": "Entering at any angle"
+      },
+      {
+        "id": "AFH.8.2.11.w.6",
+        "text": "Using any runway"
+      },
+      {
+        "id": "AFH.8.2.11.w.7",
+        "text": "Ignoring wind indicators"
+      },
+      {
+        "id": "AFH.8.2.11.w.8",
+        "text": "Flying at maximum speed"
+      }
+    ],
+    "source": "AFH Chapter 8, Section 8.2",
+    "subjects": [
+      "Traffic Pattern Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.8.2.12",
+    "question": "What should a pilot do if the airport displays approved visual markings for right turns?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.2.12.c.1",
+        "text": "Make right turns"
+      },
+      {
+        "id": "AFH.8.2.12.c.2",
+        "text": "Follow visual markings"
+      },
+      {
+        "id": "AFH.8.2.12.c.3",
+        "text": "Adjust pattern direction"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.2.12.w.1",
+        "text": "Make left turns"
+      },
+      {
+        "id": "AFH.8.2.12.w.2",
+        "text": "Ignore markings"
+      },
+      {
+        "id": "AFH.8.2.12.w.3",
+        "text": "Continue with standard pattern"
+      },
+      {
+        "id": "AFH.8.2.12.w.4",
+        "text": "Descend rapidly"
+      },
+      {
+        "id": "AFH.8.2.12.w.5",
+        "text": "Enter at high speed"
+      },
+      {
+        "id": "AFH.8.2.12.w.6",
+        "text": "Use any runway"
+      },
+      {
+        "id": "AFH.8.2.12.w.7",
+        "text": "Ignore other aircraft"
+      },
+      {
+        "id": "AFH.8.2.12.w.8",
+        "text": "Fly at maximum speed"
+      }
+    ],
+    "source": "AFH Chapter 8, Section 8.2",
+    "subjects": [
+      "Traffic Pattern Direction"
+    ]
+  },
+  {
+    "questionid": "AFH.8.2.13",
+    "question": "What is the purpose of maintaining a common altitude in the traffic pattern?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.2.13.c.1",
+        "text": "Minimize collision risk"
+      },
+      {
+        "id": "AFH.8.2.13.c.2",
+        "text": "Ensure pattern uniformity"
+      },
+      {
+        "id": "AFH.8.2.13.c.3",
+        "text": "Facilitate safe operations"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.2.13.w.1",
+        "text": "Increase speed"
+      },
+      {
+        "id": "AFH.8.2.13.w.2",
+        "text": "Allow for aerobatics"
+      },
+      {
+        "id": "AFH.8.2.13.w.3",
+        "text": "Enable rapid descent"
+      },
+      {
+        "id": "AFH.8.2.13.w.4",
+        "text": "Permit high-speed entries"
+      },
+      {
+        "id": "AFH.8.2.13.w.5",
+        "text": "Facilitate random entries"
+      },
+      {
+        "id": "AFH.8.2.13.w.6",
+        "text": "Allow for any runway use"
+      },
+      {
+        "id": "AFH.8.2.13.w.7",
+        "text": "Enable high-altitude operations"
+      },
+      {
+        "id": "AFH.8.2.13.w.8",
+        "text": "Permit unrestricted maneuvers"
+      }
+    ],
+    "source": "AFH Chapter 8, Section 8.2",
+    "subjects": [
+      "Traffic Pattern Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.8.2.14",
+    "question": "What should a pilot do if they observe other aircraft in the traffic pattern?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.2.14.c.1",
+        "text": "Conform to the pattern"
+      },
+      {
+        "id": "AFH.8.2.14.c.2",
+        "text": "Enter at a clear point"
+      },
+      {
+        "id": "AFH.8.2.14.c.3",
+        "text": "Adjust speed accordingly"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.2.14.w.1",
+        "text": "Ignore other aircraft"
+      },
+      {
+        "id": "AFH.8.2.14.w.2",
+        "text": "Enter at high speed"
+      },
+      {
+        "id": "AFH.8.2.14.w.3",
+        "text": "Descend rapidly"
+      },
+      {
+        "id": "AFH.8.2.14.w.4",
+        "text": "Use any runway"
+      },
+      {
+        "id": "AFH.8.2.14.w.5",
+        "text": "Make right turns"
+      },
+      {
+        "id": "AFH.8.2.14.w.6",
+        "text": "Fly at maximum speed"
+      },
+      {
+        "id": "AFH.8.2.14.w.7",
+        "text": "Enter directly onto the runway"
+      },
+      {
+        "id": "AFH.8.2.14.w.8",
+        "text": "Perform aerobatics"
+      }
+    ],
+    "source": "AFH Chapter 8, Section 8.2",
+    "subjects": [
+      "Traffic Pattern Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.8.2.15",
+    "question": "What is the recommended action if no traffic pattern indicators are visible?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.2.15.c.1",
+        "text": "Check wind indicators"
+      },
+      {
+        "id": "AFH.8.2.15.c.2",
+        "text": "Determine runway direction"
+      },
+      {
+        "id": "AFH.8.2.15.c.3",
+        "text": "Use standard pattern"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.2.15.w.1",
+        "text": "Land immediately"
+      },
+      {
+        "id": "AFH.8.2.15.w.2",
+        "text": "Ignore wind conditions"
+      },
+      {
+        "id": "AFH.8.2.15.w.3",
+        "text": "Enter at any altitude"
+      },
+      {
+        "id": "AFH.8.2.15.w.4",
+        "text": "Descend rapidly"
+      },
+      {
+        "id": "AFH.8.2.15.w.5",
+        "text": "Circle the airport"
+      },
+      {
+        "id": "AFH.8.2.15.w.6",
+        "text": "Wait for other aircraft"
+      },
+      {
+        "id": "AFH.8.2.15.w.7",
+        "text": "Enter at high speed"
+      },
+      {
+        "id": "AFH.8.2.15.w.8",
+        "text": "Use any runway"
+      }
+    ],
+    "source": "AFH Chapter 8, Section 8.2",
+    "subjects": [
+      "Traffic Pattern Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.8.2.16",
+    "question": "What should be the pilot's focus when planning the entry leg of the traffic pattern?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.2.16.c.1",
+        "text": "Clear view of pattern"
+      },
+      {
+        "id": "AFH.8.2.16.c.2",
+        "text": "Adequate planning time"
+      },
+      {
+        "id": "AFH.8.2.16.c.3",
+        "text": "Safe entry path"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.2.16.w.1",
+        "text": "High-speed entry"
+      },
+      {
+        "id": "AFH.8.2.16.w.2",
+        "text": "Rapid descent"
+      },
+      {
+        "id": "AFH.8.2.16.w.3",
+        "text": "Ignoring other aircraft"
+      },
+      {
+        "id": "AFH.8.2.16.w.4",
+        "text": "Entering at any angle"
+      },
+      {
+        "id": "AFH.8.2.16.w.5",
+        "text": "Using any runway"
+      },
+      {
+        "id": "AFH.8.2.16.w.6",
+        "text": "Performing aerobatics"
+      },
+      {
+        "id": "AFH.8.2.16.w.7",
+        "text": "Descending into pattern"
+      },
+      {
+        "id": "AFH.8.2.16.w.8",
+        "text": "Entering directly onto runway"
+      }
+    ],
+    "source": "AFH Chapter 8, Section 8.2",
+    "subjects": [
+      "Traffic Pattern Planning"
+    ]
+  },
+  {
+    "questionid": "AFH.8.2.17",
+    "question": "What should a pilot do if the traffic pattern is not clearly visible?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.2.17.c.1",
+        "text": "Check from above pattern"
+      },
+      {
+        "id": "AFH.8.2.17.c.2",
+        "text": "Observe other aircraft"
+      },
+      {
+        "id": "AFH.8.2.17.c.3",
+        "text": "Use standard procedures"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.2.17.w.1",
+        "text": "Enter at high speed"
+      },
+      {
+        "id": "AFH.8.2.17.w.2",
+        "text": "Descend rapidly"
+      },
+      {
+        "id": "AFH.8.2.17.w.3",
+        "text": "Ignore other aircraft"
+      },
+      {
+        "id": "AFH.8.2.17.w.4",
+        "text": "Land immediately"
+      },
+      {
+        "id": "AFH.8.2.17.w.5",
+        "text": "Use any runway"
+      },
+      {
+        "id": "AFH.8.2.17.w.6",
+        "text": "Perform aerobatics"
+      },
+      {
+        "id": "AFH.8.2.17.w.7",
+        "text": "Enter directly onto runway"
+      },
+      {
+        "id": "AFH.8.2.17.w.8",
+        "text": "Make right turns"
+      }
+    ],
+    "source": "AFH Chapter 8, Section 8.2",
+    "subjects": [
+      "Traffic Pattern Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.8.2.18",
+    "question": "What is the purpose of the segmented circle at some airports?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.2.18.c.1",
+        "text": "Display traffic pattern direction"
+      },
+      {
+        "id": "AFH.8.2.18.c.2",
+        "text": "Indicate runway in use"
+      },
+      {
+        "id": "AFH.8.2.18.c.3",
+        "text": "Assist in pattern entry"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.2.18.w.1",
+        "text": "Show wind speed"
+      },
+      {
+        "id": "AFH.8.2.18.w.2",
+        "text": "Indicate airport elevation"
+      },
+      {
+        "id": "AFH.8.2.18.w.3",
+        "text": "Display airspeed limits"
+      },
+      {
+        "id": "AFH.8.2.18.w.4",
+        "text": "Indicate airport lighting"
+      },
+      {
+        "id": "AFH.8.2.18.w.5",
+        "text": "Show weather conditions"
+      },
+      {
+        "id": "AFH.8.2.18.w.6",
+        "text": "Display runway length"
+      },
+      {
+        "id": "AFH.8.2.18.w.7",
+        "text": "Indicate airport capacity"
+      },
+      {
+        "id": "AFH.8.2.18.w.8",
+        "text": "Show aircraft types"
+      }
+    ],
+    "source": "AFH Chapter 8, Section 8.2",
+    "subjects": [
+      "Traffic Pattern Indicators"
+    ]
+  },
+  {
+    "questionid": "AFH.8.2.19",
+    "question": "What should a pilot ensure before entering the traffic pattern?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.2.19.c.1",
+        "text": "Know traffic pattern altitude"
+      },
+      {
+        "id": "AFH.8.2.19.c.2",
+        "text": "Remain clear of traffic flow"
+      },
+      {
+        "id": "AFH.8.2.19.c.3",
+        "text": "Establish on entry leg"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.2.19.w.1",
+        "text": "Enter at high speed"
+      },
+      {
+        "id": "AFH.8.2.19.w.2",
+        "text": "Descend rapidly"
+      },
+      {
+        "id": "AFH.8.2.19.w.3",
+        "text": "Ignore other aircraft"
+      },
+      {
+        "id": "AFH.8.2.19.w.4",
+        "text": "Use any runway"
+      },
+      {
+        "id": "AFH.8.2.19.w.5",
+        "text": "Make right turns"
+      },
+      {
+        "id": "AFH.8.2.19.w.6",
+        "text": "Fly at maximum speed"
+      },
+      {
+        "id": "AFH.8.2.19.w.7",
+        "text": "Enter directly onto runway"
+      },
+      {
+        "id": "AFH.8.2.19.w.8",
+        "text": "Perform aerobatics"
+      }
+    ],
+    "source": "AFH Chapter 8, Section 8.2",
+    "subjects": [
+      "Traffic Pattern Entry"
+    ]
+  },
+  {
+    "questionid": "AFH.8.2.20",
+    "question": "What is the primary consideration when entering the traffic pattern?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.2.20.c.1",
+        "text": "Safety and collision avoidance"
+      },
+      {
+        "id": "AFH.8.2.20.c.2",
+        "text": "Conforming to pattern"
+      },
+      {
+        "id": "AFH.8.2.20.c.3",
+        "text": "Observing other aircraft"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.2.20.w.1",
+        "text": "High-speed entry"
+      },
+      {
+        "id": "AFH.8.2.20.w.2",
+        "text": "Rapid descent"
+      },
+      {
+        "id": "AFH.8.2.20.w.3",
+        "text": "Ignoring other aircraft"
+      },
+      {
+        "id": "AFH.8.2.20.w.4",
+        "text": "Using any runway"
+      },
+      {
+        "id": "AFH.8.2.20.w.5",
+        "text": "Performing aerobatics"
+      },
+      {
+        "id": "AFH.8.2.20.w.6",
+        "text": "Descending into pattern"
+      },
+      {
+        "id": "AFH.8.2.20.w.7",
+        "text": "Entering directly onto runway"
+      },
+      {
+        "id": "AFH.8.2.20.w.8",
+        "text": "Making right turns"
+      }
+    ],
+    "source": "AFH Chapter 8, Section 8.2",
+    "subjects": [
+      "Traffic Pattern Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.8.2.21",
+    "question": "What should be avoided when entering the traffic pattern?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.2.21.c.1",
+        "text": "Descending entries"
+      },
+      {
+        "id": "AFH.8.2.21.c.2",
+        "text": "High-speed entries"
+      },
+      {
+        "id": "AFH.8.2.21.c.3",
+        "text": "Ignoring other aircraft"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.2.21.w.1",
+        "text": "Entering at a 45° angle"
+      },
+      {
+        "id": "AFH.8.2.21.w.2",
+        "text": "Checking wind indicators"
+      },
+      {
+        "id": "AFH.8.2.21.w.3",
+        "text": "Using the correct runway"
+      },
+      {
+        "id": "AFH.8.2.21.w.4",
+        "text": "Following traffic pattern indicators"
+      },
+      {
+        "id": "AFH.8.2.21.w.5",
+        "text": "Entering at pattern altitude"
+      },
+      {
+        "id": "AFH.8.2.21.w.6",
+        "text": "Completing before-landing checks"
+      },
+      {
+        "id": "AFH.8.2.21.w.7",
+        "text": "Extending landing gear"
+      },
+      {
+        "id": "AFH.8.2.21.w.8",
+        "text": "Observing other aircraft"
+      }
+    ],
+    "source": "AFH Chapter 8, Section 8.2",
+    "subjects": [
+      "Traffic Pattern Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.8.2.22",
+    "question": "What is the purpose of the downwind leg in a traffic pattern?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.2.22.c.1",
+        "text": "Parallel to landing runway"
+      },
+      {
+        "id": "AFH.8.2.22.c.2",
+        "text": "Opposite landing direction"
+      },
+      {
+        "id": "AFH.8.2.22.c.3",
+        "text": "Prepare for landing"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.2.22.w.1",
+        "text": "Perpendicular to runway"
+      },
+      {
+        "id": "AFH.8.2.22.w.2",
+        "text": "Directly onto runway"
+      },
+      {
+        "id": "AFH.8.2.22.w.3",
+        "text": "High-speed approach"
+      },
+      {
+        "id": "AFH.8.2.22.w.4",
+        "text": "Aerobatic maneuvers"
+      },
+      {
+        "id": "AFH.8.2.22.w.5",
+        "text": "Random direction"
+      },
+      {
+        "id": "AFH.8.2.22.w.6",
+        "text": "Climb to cruise altitude"
+      },
+      {
+        "id": "AFH.8.2.22.w.7",
+        "text": "Emergency landing"
+      },
+      {
+        "id": "AFH.8.2.22.w.8",
+        "text": "Holding pattern"
+      }
+    ],
+    "source": "AFH Chapter 8, Section 8.2",
+    "subjects": [
+      "Traffic Pattern Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.8.2.23",
+    "question": "What should a pilot do if the traffic pattern is congested?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.2.23.c.1",
+        "text": "Enter at a clear point"
+      },
+      {
+        "id": "AFH.8.2.23.c.2",
+        "text": "Adjust speed to match traffic"
+      },
+      {
+        "id": "AFH.8.2.23.c.3",
+        "text": "Observe other aircraft"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.2.23.w.1",
+        "text": "Enter at high speed"
+      },
+      {
+        "id": "AFH.8.2.23.w.2",
+        "text": "Descend rapidly"
+      },
+      {
+        "id": "AFH.8.2.23.w.3",
+        "text": "Ignore other aircraft"
+      },
+      {
+        "id": "AFH.8.2.23.w.4",
+        "text": "Use any runway"
+      },
+      {
+        "id": "AFH.8.2.23.w.5",
+        "text": "Make right turns"
+      },
+      {
+        "id": "AFH.8.2.23.w.6",
+        "text": "Fly at maximum speed"
+      },
+      {
+        "id": "AFH.8.2.23.w.7",
+        "text": "Enter directly onto runway"
+      },
+      {
+        "id": "AFH.8.2.23.w.8",
+        "text": "Perform aerobatics"
+      }
+    ],
+    "source": "AFH Chapter 8, Section 8.2",
+    "subjects": [
+      "Traffic Pattern Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.8.2.24",
+    "question": "What is the role of wind indicators in traffic pattern entry?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.2.24.c.1",
+        "text": "Determine runway direction"
+      },
+      {
+        "id": "AFH.8.2.24.c.2",
+        "text": "Assist in pattern entry"
+      },
+      {
+        "id": "AFH.8.2.24.c.3",
+        "text": "Indicate wind conditions"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.2.24.w.1",
+        "text": "Show airspeed limits"
+      },
+      {
+        "id": "AFH.8.2.24.w.2",
+        "text": "Indicate airport elevation"
+      },
+      {
+        "id": "AFH.8.2.24.w.3",
+        "text": "Display traffic pattern direction"
+      },
+      {
+        "id": "AFH.8.2.24.w.4",
+        "text": "Indicate airport lighting"
+      },
+      {
+        "id": "AFH.8.2.24.w.5",
+        "text": "Show weather conditions"
+      },
+      {
+        "id": "AFH.8.2.24.w.6",
+        "text": "Display runway length"
+      },
+      {
+        "id": "AFH.8.2.24.w.7",
+        "text": "Indicate airport capacity"
+      },
+      {
+        "id": "AFH.8.2.24.w.8",
+        "text": "Show aircraft types"
+      }
+    ],
+    "source": "AFH Chapter 8, Section 8.2",
+    "subjects": [
+      "Traffic Pattern Indicators"
+    ]
+  },
+  {
+    "questionid": "AFH.8.2.25",
+    "question": "What is the recommended action if a pilot is unsure of the traffic pattern direction?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.2.25.c.1",
+        "text": "Check traffic indicators"
+      },
+      {
+        "id": "AFH.8.2.25.c.2",
+        "text": "Observe other aircraft"
+      },
+      {
+        "id": "AFH.8.2.25.c.3",
+        "text": "Use standard pattern"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.2.25.w.1",
+        "text": "Enter at high speed"
+      },
+      {
+        "id": "AFH.8.2.25.w.2",
+        "text": "Descend rapidly"
+      },
+      {
+        "id": "AFH.8.2.25.w.3",
+        "text": "Ignore other aircraft"
+      },
+      {
+        "id": "AFH.8.2.25.w.4",
+        "text": "Land immediately"
+      },
+      {
+        "id": "AFH.8.2.25.w.5",
+        "text": "Use any runway"
+      },
+      {
+        "id": "AFH.8.2.25.w.6",
+        "text": "Perform aerobatics"
+      },
+      {
+        "id": "AFH.8.2.25.w.7",
+        "text": "Enter directly onto runway"
+      },
+      {
+        "id": "AFH.8.2.25.w.8",
+        "text": "Make right turns"
+      }
+    ],
+    "source": "AFH Chapter 8, Section 8.2",
+    "subjects": [
+      "Traffic Pattern Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.8.2.26",
+    "question": "What should be the pilot's action if the traffic pattern altitude is unknown?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.2.26.c.1",
+        "text": "Check airport information"
+      },
+      {
+        "id": "AFH.8.2.26.c.2",
+        "text": "Remain clear of traffic flow"
+      },
+      {
+        "id": "AFH.8.2.26.c.3",
+        "text": "Establish on entry leg"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.2.26.w.1",
+        "text": "Enter at high speed"
+      },
+      {
+        "id": "AFH.8.2.26.w.2",
+        "text": "Descend rapidly"
+      },
+      {
+        "id": "AFH.8.2.26.w.3",
+        "text": "Ignore other aircraft"
+      },
+      {
+        "id": "AFH.8.2.26.w.4",
+        "text": "Use any runway"
+      },
+      {
+        "id": "AFH.8.2.26.w.5",
+        "text": "Make right turns"
+      },
+      {
+        "id": "AFH.8.2.26.w.6",
+        "text": "Fly at maximum speed"
+      },
+      {
+        "id": "AFH.8.2.26.w.7",
+        "text": "Enter directly onto runway"
+      },
+      {
+        "id": "AFH.8.2.26.w.8",
+        "text": "Perform aerobatics"
+      }
+    ],
+    "source": "AFH Chapter 8, Section 8.2",
+    "subjects": [
+      "Traffic Pattern Entry"
+    ]
+  },
+  {
+    "questionid": "AFH.8.3.1",
+    "question": "According to the Airplane Flying Handbook, what are the characteristics of the preferred method for entering a non-towered airport traffic pattern from the downwind leg side?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.3.1.c.1",
+        "text": "Approach the pattern on a course 45° to the downwind leg."
+      },
+      {
+        "id": "AFH.8.3.1.c.2",
+        "text": "Join the pattern at midfield."
+      },
+      {
+        "id": "AFH.8.3.1.c.3",
+        "text": "Entry is always at pattern altitude."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.3.1.w.1",
+        "text": "Approach on a course 90° to the downwind leg."
+      },
+      {
+        "id": "AFH.8.3.1.w.2",
+        "text": "Join the pattern at the beginning of the downwind leg."
+      },
+      {
+        "id": "AFH.8.3.1.w.3",
+        "text": "Enter 500 feet above pattern altitude."
+      },
+      {
+        "id": "AFH.8.3.1.w.4",
+        "text": "Enter directly onto the upwind leg."
+      },
+      {
+        "id": "AFH.8.3.1.w.5",
+        "text": "Approach on a course parallel to the downwind leg."
+      },
+      {
+        "id": "AFH.8.3.1.w.6",
+        "text": "Join the pattern at the end of the downwind leg."
+      },
+      {
+        "id": "AFH.8.3.1.w.7",
+        "text": "Enter 200 feet below pattern altitude."
+      },
+      {
+        "id": "AFH.8.3.1.w.8",
+        "text": "Enter on a midfield crosswind."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Non-towered operations",
+      "Traffic pattern entry",
+      "Downwind entry"
+    ]
+  },
+  {
+    "questionid": "AFH.8.3.2",
+    "question": "When entering a non-towered airport traffic pattern from the upwind leg side by crossing midfield, what actions are recommended?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.3.2.c.1",
+        "text": "Announce intentions."
+      },
+      {
+        "id": "AFH.8.3.2.c.2",
+        "text": "Cross over midfield at least 500 feet above pattern altitude."
+      },
+      {
+        "id": "AFH.8.3.2.c.3",
+        "text": "Descend to pattern altitude after being well clear of the pattern."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.3.2.w.1",
+        "text": "Cross over midfield at pattern altitude."
+      },
+      {
+        "id": "AFH.8.3.2.w.2",
+        "text": "Cross over midfield 200 feet below pattern altitude."
+      },
+      {
+        "id": "AFH.8.3.2.w.3",
+        "text": "Immediately turn downwind after crossing midfield."
+      },
+      {
+        "id": "AFH.8.3.2.w.4",
+        "text": "Do not announce intentions to avoid cluttering the frequency."
+      },
+      {
+        "id": "AFH.8.3.2.w.5",
+        "text": "Remain 500 feet above pattern altitude throughout the entire pattern."
+      },
+      {
+        "id": "AFH.8.3.2.w.6",
+        "text": "Cross midfield at the departure end of the runway."
+      },
+      {
+        "id": "AFH.8.3.2.w.7",
+        "text": "Descend to pattern altitude while still over the runway."
+      },
+      {
+        "id": "AFH.8.3.2.w.8",
+        "text": "Turn left to enter at 45° to the downwind leg."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Non-towered operations",
+      "Traffic pattern entry",
+      "Upwind entry"
+    ]
+  },
+  {
+    "questionid": "AFH.8.3.3",
+    "question": "What are the characteristics and considerations for the alternate method of entering a non-towered airport traffic pattern from the upwind leg side via a midfield crosswind?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.3.3.c.1",
+        "text": "Enter on a midfield crosswind at pattern altitude."
+      },
+      {
+        "id": "AFH.8.3.3.c.2",
+        "text": "Carefully scan for traffic."
+      },
+      {
+        "id": "AFH.8.3.3.c.3",
+        "text": "This technique should not be used if the pattern is busy."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.3.3.w.1",
+        "text": "Enter on a midfield crosswind 500 feet above pattern altitude."
+      },
+      {
+        "id": "AFH.8.3.3.w.2",
+        "text": "This technique is preferred when the pattern is busy."
+      },
+      {
+        "id": "AFH.8.3.3.w.3",
+        "text": "Announcing intentions is optional with this method."
+      },
+      {
+        "id": "AFH.8.3.3.w.4",
+        "text": "Turn directly onto the final approach after the crosswind."
+      },
+      {
+        "id": "AFH.8.3.3.w.5",
+        "text": "Enter on a midfield crosswind 200 feet below pattern altitude."
+      },
+      {
+        "id": "AFH.8.3.3.w.6",
+        "text": "This method is only for turbine aircraft."
+      },
+      {
+        "id": "AFH.8.3.3.w.7",
+        "text": "No need to scan for traffic if intentions are announced."
+      },
+      {
+        "id": "AFH.8.3.3.w.8",
+        "text": "Turn left to enter the downwind leg."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Non-towered operations",
+      "Traffic pattern entry",
+      "Midfield crosswind"
+    ]
+  },
+  {
+    "questionid": "AFH.8.3.4",
+    "question": "Regardless of the specific entry method, what are vital actions for a pilot entering a non-towered airport traffic pattern?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.3.4.c.1",
+        "text": "Announce intentions."
+      },
+      {
+        "id": "AFH.8.3.4.c.2",
+        "text": "Scan outside for traffic."
+      },
+      {
+        "id": "AFH.8.3.4.c.3",
+        "text": "Make course and speed adjustments for a successful pattern entry."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.3.4.w.1",
+        "text": "Maintain a constant speed regardless of traffic."
+      },
+      {
+        "id": "AFH.8.3.4.w.2",
+        "text": "Assume other aircraft will see you."
+      },
+      {
+        "id": "AFH.8.3.4.w.3",
+        "text": "Only announce intentions if the pattern is busy."
+      },
+      {
+        "id": "AFH.8.3.4.w.4",
+        "text": "Prioritize speed over course adjustments."
+      },
+      {
+        "id": "AFH.8.3.4.w.5",
+        "text": "Avoid scanning outside to focus on instruments."
+      },
+      {
+        "id": "AFH.8.3.4.w.6",
+        "text": "Enter the pattern at any altitude if no other traffic is visible."
+      },
+      {
+        "id": "AFH.8.3.4.w.7",
+        "text": "Do not give way to aircraft on a 45° entry."
+      },
+      {
+        "id": "AFH.8.3.4.w.8",
+        "text": "Wait for air traffic control clearance."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Non-towered operations",
+      "Traffic pattern procedures",
+      "Pilot responsibilities"
+    ]
+  },
+  {
+    "questionid": "AFH.8.3.5",
+    "question": "What are the advantages of using the preferred 45° entry into a non-towered airport traffic pattern?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.3.5.c.1",
+        "text": "Allows the pilot to continue turning away from the downwind if traffic conflicts."
+      },
+      {
+        "id": "AFH.8.3.5.c.2",
+        "text": "Provides an option to fly a safe distance away and return for another attempt."
+      },
+      {
+        "id": "AFH.8.3.5.c.3",
+        "text": "Facilitates continuous scanning for traffic during the maneuver."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.3.5.w.1",
+        "text": "It is the fastest way to enter the pattern."
+      },
+      {
+        "id": "AFH.8.3.5.w.2",
+        "text": "It eliminates the need to announce intentions."
+      },
+      {
+        "id": "AFH.8.3.5.w.3",
+        "text": "It guarantees no conflicting traffic."
+      },
+      {
+        "id": "AFH.8.3.5.w.4",
+        "text": "It allows entry at an altitude above pattern altitude."
+      },
+      {
+        "id": "AFH.8.3.5.w.5",
+        "text": "It is only for turbine aircraft."
+      },
+      {
+        "id": "AFH.8.3.5.w.6",
+        "text": "It is primarily used for departing aircraft."
+      },
+      {
+        "id": "AFH.8.3.5.w.7",
+        "text": "It reduces the need to scan for traffic."
+      },
+      {
+        "id": "AFH.8.3.5.w.8",
+        "text": "It allows for immediate landing without further pattern adjustments."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Non-towered operations",
+      "Traffic pattern entry",
+      "Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.8.3.6",
+    "question": "Regarding speed management in a non-towered airport traffic pattern, what guidelines should a pilot follow?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.3.6.c.1",
+        "text": "Adjust course or speed to fit the traffic before joining the downwind leg."
+      },
+      {
+        "id": "AFH.8.3.6.c.2",
+        "text": "Adjust power on the downwind leg to avoid flying too fast or too slow."
+      },
+      {
+        "id": "AFH.8.3.6.c.3",
+        "text": "Use speeds recommended by the airplane manufacturer."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.3.6.w.1",
+        "text": "Maintain a constant speed of 100 knots for all aircraft types."
+      },
+      {
+        "id": "AFH.8.3.6.w.2",
+        "text": "Always fly at the maximum possible speed on the downwind leg."
+      },
+      {
+        "id": "AFH.8.3.6.w.3",
+        "text": "Speed adjustments are only necessary on final approach."
+      },
+      {
+        "id": "AFH.8.3.6.w.4",
+        "text": "Ignore manufacturer recommendations and use a standard 80 knots."
+      },
+      {
+        "id": "AFH.8.3.6.w.5",
+        "text": "Adjust speed only after joining the downwind leg."
+      },
+      {
+        "id": "AFH.8.3.6.w.6",
+        "text": "Increase speed significantly if the pattern is busy."
+      },
+      {
+        "id": "AFH.8.3.6.w.7",
+        "text": "Power adjustments are not critical on the downwind leg."
+      },
+      {
+        "id": "AFH.8.3.6.w.8",
+        "text": "Speeds generally fall between 50 to 60 knots for piston single-engine airplanes."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Non-towered operations",
+      "Traffic pattern procedures",
+      "Aircraft performance"
+    ]
+  },
+  {
+    "questionid": "AFH.8.3.7",
+    "question": "When entering a non-towered airport traffic pattern from the upwind leg side by crossing midfield, what are the specific altitude considerations?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.3.7.c.1",
+        "text": "Cross over midfield at least 500 feet above pattern altitude."
+      },
+      {
+        "id": "AFH.8.3.7.c.2",
+        "text": "If large or turbine aircraft operate, it is best to remain 2,000 feet AGL."
+      },
+      {
+        "id": "AFH.8.3.7.c.3",
+        "text": "Descend to pattern altitude after being well clear of the pattern (approximately 2 miles)."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.3.7.w.1",
+        "text": "Always cross midfield at pattern altitude."
+      },
+      {
+        "id": "AFH.8.3.7.w.2",
+        "text": "Remain 500 feet AGL regardless of aircraft type."
+      },
+      {
+        "id": "AFH.8.3.7.w.3",
+        "text": "Descend to pattern altitude immediately after crossing midfield."
+      },
+      {
+        "id": "AFH.8.3.7.w.4",
+        "text": "Cross midfield at 1,000 feet AGL for all situations."
+      },
+      {
+        "id": "AFH.8.3.7.w.5",
+        "text": "The 2,000 feet AGL recommendation applies only to piston aircraft."
+      },
+      {
+        "id": "AFH.8.3.7.w.6",
+        "text": "Climb to 2,500 feet AGL after crossing midfield."
+      },
+      {
+        "id": "AFH.8.3.7.w.7",
+        "text": "Pattern altitude is normally 1,000 feet AGL, so cross at 1,500 feet AGL for all cases."
+      },
+      {
+        "id": "AFH.8.3.7.w.8",
+        "text": "It is acceptable to cross midfield 200 feet below pattern altitude."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Non-towered operations",
+      "Traffic pattern entry",
+      "Altitude management"
+    ]
+  },
+  {
+    "questionid": "AFH.8.4.1",
+    "question": "What is the most probable cause of mid-air collisions according to the NTSB?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.4.1.c.1",
+        "text": "Pilot failing to see and avoid other aircraft"
+      },
+      {
+        "id": "AFH.8.4.1.c.2",
+        "text": "Restricted visibility due to aircraft structures"
+      },
+      {
+        "id": "AFH.8.4.1.c.3",
+        "text": "Failure to scan blind spots"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.4.1.w.1",
+        "text": "Poor weather conditions"
+      },
+      {
+        "id": "AFH.8.4.1.w.2",
+        "text": "Mechanical failure"
+      },
+      {
+        "id": "AFH.8.4.1.w.3",
+        "text": "Pilot fatigue"
+      },
+      {
+        "id": "AFH.8.4.1.w.4",
+        "text": "Inadequate flight planning"
+      },
+      {
+        "id": "AFH.8.4.1.w.5",
+        "text": "Lack of communication with ATC"
+      },
+      {
+        "id": "AFH.8.4.1.w.6",
+        "text": "Excessive speed"
+      },
+      {
+        "id": "AFH.8.4.1.w.7",
+        "text": "Improper use of navigation aids"
+      },
+      {
+        "id": "AFH.8.4.1.w.8",
+        "text": "Flying at night"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 8, Section 4",
+    "subjects": [
+      "Mid-air Collisions",
+      "Pilot Awareness"
+    ]
+  },
+  {
+    "questionid": "AFH.8.4.2",
+    "question": "What are some important procedures for pilots flying in a traffic pattern?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.4.2.c.1",
+        "text": "Tune and verify radio frequencies"
+      },
+      {
+        "id": "AFH.8.4.2.c.2",
+        "text": "Monitor the correct CTAF"
+      },
+      {
+        "id": "AFH.8.4.2.c.3",
+        "text": "Report position 10 miles out"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.4.2.w.1",
+        "text": "Fly at maximum speed"
+      },
+      {
+        "id": "AFH.8.4.2.w.2",
+        "text": "Ignore radio communications"
+      },
+      {
+        "id": "AFH.8.4.2.w.3",
+        "text": "Descend rapidly without checking altitude"
+      },
+      {
+        "id": "AFH.8.4.2.w.4",
+        "text": "Perform aerobatic maneuvers"
+      },
+      {
+        "id": "AFH.8.4.2.w.5",
+        "text": "Rely solely on autopilot"
+      },
+      {
+        "id": "AFH.8.4.2.w.6",
+        "text": "Avoid using exterior lights"
+      },
+      {
+        "id": "AFH.8.4.2.w.7",
+        "text": "Enter pattern at any altitude"
+      },
+      {
+        "id": "AFH.8.4.2.w.8",
+        "text": "Ignore other aircraft"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 8, Section 4",
+    "subjects": [
+      "Traffic Pattern Procedures",
+      "Pilot Communication"
+    ]
+  },
+  {
+    "questionid": "AFH.8.4.3",
+    "question": "What should pilots do to uncover blind spots while flying?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.4.3.c.1",
+        "text": "Bank from time to time"
+      },
+      {
+        "id": "AFH.8.4.3.c.2",
+        "text": "Look to the rear of the airplane"
+      },
+      {
+        "id": "AFH.8.4.3.c.3",
+        "text": "Scan for other aircraft"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.4.3.w.1",
+        "text": "Fly in a straight line"
+      },
+      {
+        "id": "AFH.8.4.3.w.2",
+        "text": "Rely on instruments only"
+      },
+      {
+        "id": "AFH.8.4.3.w.3",
+        "text": "Ignore blind spots"
+      },
+      {
+        "id": "AFH.8.4.3.w.4",
+        "text": "Focus solely on the front view"
+      },
+      {
+        "id": "AFH.8.4.3.w.5",
+        "text": "Use autopilot to monitor blind spots"
+      },
+      {
+        "id": "AFH.8.4.3.w.6",
+        "text": "Only check blind spots on the ground"
+      },
+      {
+        "id": "AFH.8.4.3.w.7",
+        "text": "Rely on co-pilot for all scanning"
+      },
+      {
+        "id": "AFH.8.4.3.w.8",
+        "text": "Ignore rear view"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 8, Section 4",
+    "subjects": [
+      "Pilot Visibility",
+      "Blind Spot Management"
+    ]
+  },
+  {
+    "questionid": "AFH.8.4.4",
+    "question": "Where do nearly all mid-air collisions occur?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.4.4.c.1",
+        "text": "At or near uncontrolled airports"
+      },
+      {
+        "id": "AFH.8.4.4.c.2",
+        "text": "At altitudes below 1,000 feet"
+      },
+      {
+        "id": "AFH.8.4.4.c.3",
+        "text": "Under good visibility conditions"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.4.4.w.1",
+        "text": "In controlled airspace"
+      },
+      {
+        "id": "AFH.8.4.4.w.2",
+        "text": "At high altitudes"
+      },
+      {
+        "id": "AFH.8.4.4.w.3",
+        "text": "During poor visibility"
+      },
+      {
+        "id": "AFH.8.4.4.w.4",
+        "text": "Over water"
+      },
+      {
+        "id": "AFH.8.4.4.w.5",
+        "text": "In mountainous regions"
+      },
+      {
+        "id": "AFH.8.4.4.w.6",
+        "text": "During night flights"
+      },
+      {
+        "id": "AFH.8.4.4.w.7",
+        "text": "In urban areas"
+      },
+      {
+        "id": "AFH.8.4.4.w.8",
+        "text": "During severe weather"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 8, Section 4",
+    "subjects": [
+      "Mid-air Collision Locations",
+      "Flight Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.8.4.5",
+    "question": "What is the likelihood of mid-air collisions occurring during different times of the day?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.4.5.c.1",
+        "text": "56% in the afternoon"
+      },
+      {
+        "id": "AFH.8.4.5.c.2",
+        "text": "32% in the morning"
+      },
+      {
+        "id": "AFH.8.4.5.c.3",
+        "text": "2% at night, dusk, or dawn"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.4.5.w.1",
+        "text": "50% at night"
+      },
+      {
+        "id": "AFH.8.4.5.w.2",
+        "text": "40% in the evening"
+      },
+      {
+        "id": "AFH.8.4.5.w.3",
+        "text": "10% at dawn"
+      },
+      {
+        "id": "AFH.8.4.5.w.4",
+        "text": "25% at dusk"
+      },
+      {
+        "id": "AFH.8.4.5.w.5",
+        "text": "60% in the morning"
+      },
+      {
+        "id": "AFH.8.4.5.w.6",
+        "text": "30% in the afternoon"
+      },
+      {
+        "id": "AFH.8.4.5.w.7",
+        "text": "5% at midnight"
+      },
+      {
+        "id": "AFH.8.4.5.w.8",
+        "text": "15% at noon"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 8, Section 4",
+    "subjects": [
+      "Collision Timing",
+      "Flight Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.8.4.6",
+    "question": "What should pilots be aware of when flying in the vicinity of an airport?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.4.6.c.1",
+        "text": "Aircraft in the pattern without radios"
+      },
+      {
+        "id": "AFH.8.4.6.c.2",
+        "text": "Maintain a constant visual scan"
+      },
+      {
+        "id": "AFH.8.4.6.c.3",
+        "text": "Use exterior lights to improve visibility"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.4.6.w.1",
+        "text": "Ignore aircraft without radios"
+      },
+      {
+        "id": "AFH.8.4.6.w.2",
+        "text": "Rely solely on radio communication"
+      },
+      {
+        "id": "AFH.8.4.6.w.3",
+        "text": "Turn off exterior lights"
+      },
+      {
+        "id": "AFH.8.4.6.w.4",
+        "text": "Focus only on landing"
+      },
+      {
+        "id": "AFH.8.4.6.w.5",
+        "text": "Ignore visual scanning"
+      },
+      {
+        "id": "AFH.8.4.6.w.6",
+        "text": "Depend on ATC for all information"
+      },
+      {
+        "id": "AFH.8.4.6.w.7",
+        "text": "Use interior lights only"
+      },
+      {
+        "id": "AFH.8.4.6.w.8",
+        "text": "Fly without checking surroundings"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 8, Section 4",
+    "subjects": [
+      "Airport Vicinity Awareness",
+      "Pilot Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.8.4.7",
+    "question": "What is the worst-case scenario for visibility between two types of airplanes?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.4.7.c.1",
+        "text": "Low-wing airplane flying above a high-wing airplane"
+      },
+      {
+        "id": "AFH.8.4.7.c.2",
+        "text": "High-wing airplane has restricted visibility above"
+      },
+      {
+        "id": "AFH.8.4.7.c.3",
+        "text": "Low-wing airplane has limited visibility below"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.4.7.w.1",
+        "text": "High-wing airplane flying below a low-wing airplane"
+      },
+      {
+        "id": "AFH.8.4.7.w.2",
+        "text": "Both airplanes flying at the same altitude"
+      },
+      {
+        "id": "AFH.8.4.7.w.3",
+        "text": "Low-wing airplane flying below a high-wing airplane"
+      },
+      {
+        "id": "AFH.8.4.7.w.4",
+        "text": "High-wing airplane with clear visibility above"
+      },
+      {
+        "id": "AFH.8.4.7.w.5",
+        "text": "Low-wing airplane with clear visibility below"
+      },
+      {
+        "id": "AFH.8.4.7.w.6",
+        "text": "Both airplanes have unrestricted visibility"
+      },
+      {
+        "id": "AFH.8.4.7.w.7",
+        "text": "High-wing airplane flying in front of a low-wing airplane"
+      },
+      {
+        "id": "AFH.8.4.7.w.8",
+        "text": "Low-wing airplane flying behind a high-wing airplane"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 8, Section 4",
+    "subjects": [
+      "Aircraft Visibility",
+      "Flight Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.8.5.1",
+    "question": "What are the benefits of properly executed airport traffic patterns?",
+    "correct_answers": [
+      {
+        "id": "AFH.8.5.1.c.1",
+        "text": "Improve the flow of traffic at an airport"
+      },
+      {
+        "id": "AFH.8.5.1.c.2",
+        "text": "Enhance safety"
+      },
+      {
+        "id": "AFH.8.5.1.c.3",
+        "text": "Reduce the risk of mid-air collisions"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.8.5.1.w.1",
+        "text": "Increase airport congestion"
+      },
+      {
+        "id": "AFH.8.5.1.w.2",
+        "text": "Lengthen flight times"
+      },
+      {
+        "id": "AFH.8.5.1.w.3",
+        "text": "Cause more noise pollution"
+      },
+      {
+        "id": "AFH.8.5.1.w.4",
+        "text": "Complicate pilot communication"
+      },
+      {
+        "id": "AFH.8.5.1.w.5",
+        "text": "Require more air traffic controllers"
+      },
+      {
+        "id": "AFH.8.5.1.w.6",
+        "text": "Increase fuel consumption"
+      },
+      {
+        "id": "AFH.8.5.1.w.7",
+        "text": "Create more delays"
+      },
+      {
+        "id": "AFH.8.5.1.w.8",
+        "text": "Lead to more runway incursions"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 8: Airport Traffic Patterns Introduction",
+    "subjects": [
+      "Airport Traffic Patterns",
+      "Aviation Safety"
+    ]
+  }
+]

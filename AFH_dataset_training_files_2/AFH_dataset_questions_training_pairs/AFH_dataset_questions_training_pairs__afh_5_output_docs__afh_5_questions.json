@@ -1,0 +1,4265 @@
+[
+  {
+    "questionBank": {
+      "chapterId": "afh.5",
+      "bookId": "AFH",
+      "chapterNumber": 5,
+      "chapterTitle": "Introduction",
+      "totalRequiredQuestions": 68,
+      "metadata": {
+        "generatedAtUtc": "2026-03-27T17:24:03.659Z",
+        "chapterId": "afh.5",
+        "chapterNumber": 5,
+        "totalSections": 51,
+        "totalRequiredQuestions": 68,
+        "providers": [
+          "openai"
+        ],
+        "models": [
+          "gpt-4o"
+        ],
+        "promptTokens": 28965,
+        "completionTokens": 8457,
+        "totalTokens": 37422,
+        "sectionQuestionSummary": [
+          {
+            "sectionId": "afh.5.1",
+            "sectionTitle": "Defining an Airplane Upset",
+            "sectionOrdinal": 1,
+            "sectionWeightPercentage": 1.77,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.2",
+            "sectionTitle": "Upset Prevention and Recovery",
+            "sectionOrdinal": 2,
+            "sectionWeightPercentage": 0.57,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.3",
+            "sectionTitle": "Unusual Attitudes Versus Upsets",
+            "sectionOrdinal": 3,
+            "sectionWeightPercentage": 0.98,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.4",
+            "sectionTitle": "Environmental Factors",
+            "sectionOrdinal": 4,
+            "sectionWeightPercentage": 0.65,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.5",
+            "sectionTitle": "Mechanical Factors",
+            "sectionOrdinal": 5,
+            "sectionWeightPercentage": 1.09,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.6",
+            "sectionTitle": "Human Factors VMC to IMC",
+            "sectionOrdinal": 6,
+            "sectionWeightPercentage": 0.36,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.7",
+            "sectionTitle": "Diversion of Attention",
+            "sectionOrdinal": 7,
+            "sectionWeightPercentage": 0.48,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.8",
+            "sectionTitle": "Task Saturation",
+            "sectionOrdinal": 8,
+            "sectionWeightPercentage": 0.83,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.9",
+            "sectionTitle": "Sensory Overload/Deprivation",
+            "sectionOrdinal": 9,
+            "sectionWeightPercentage": 1.04,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.10",
+            "sectionTitle": "Spatial Disorientation",
+            "sectionOrdinal": 10,
+            "sectionWeightPercentage": 1.89,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.11",
+            "sectionTitle": "Surprise and Startle Response",
+            "sectionOrdinal": 11,
+            "sectionWeightPercentage": 1.09,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.12",
+            "sectionTitle": "Upset Prevention and Recovery Training (UPRT)",
+            "sectionOrdinal": 12,
+            "sectionWeightPercentage": 1.83,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.13",
+            "sectionTitle": "UPRT Training Core Concepts",
+            "sectionOrdinal": 13,
+            "sectionWeightPercentage": 3.7,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.14",
+            "sectionTitle": "Academic Material (Knowledge and Risk Management)",
+            "sectionOrdinal": 14,
+            "sectionWeightPercentage": 0.6,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.15",
+            "sectionTitle": "Prevention Through ADM and Risk Management",
+            "sectionOrdinal": 15,
+            "sectionWeightPercentage": 1.76,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.16",
+            "sectionTitle": "Prevention Through Proportional Counter-Response",
+            "sectionOrdinal": 16,
+            "sectionWeightPercentage": 0.76,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.17",
+            "sectionTitle": "Recovery",
+            "sectionOrdinal": 17,
+            "sectionWeightPercentage": 1.23,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.18",
+            "sectionTitle": "Roles of FSTDs and Airplanes in UPRT",
+            "sectionOrdinal": 18,
+            "sectionWeightPercentage": 0.64,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.19",
+            "sectionTitle": "Airplane-Based UPRT",
+            "sectionOrdinal": 19,
+            "sectionWeightPercentage": 1.9,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.20",
+            "sectionTitle": "All-Attitude/All-Envelope Flight Training Methods",
+            "sectionOrdinal": 20,
+            "sectionWeightPercentage": 0.75,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.21",
+            "sectionTitle": "FSTD–based UPRT",
+            "sectionOrdinal": 21,
+            "sectionWeightPercentage": 0.44,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.22",
+            "sectionTitle": "Coordinated Flight",
+            "sectionOrdinal": 22,
+            "sectionWeightPercentage": 0.45,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.23",
+            "sectionTitle": "Angle of Attack",
+            "sectionOrdinal": 23,
+            "sectionWeightPercentage": 2.07,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.24",
+            "sectionTitle": "Slow Flight",
+            "sectionOrdinal": 24,
+            "sectionWeightPercentage": 4.61,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.5.25",
+            "sectionTitle": "Performing the Slow Flight Maneuver",
+            "sectionOrdinal": 25,
+            "sectionWeightPercentage": 3.03,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.26",
+            "sectionTitle": "Maneuvering in Slow Flight",
+            "sectionOrdinal": 26,
+            "sectionWeightPercentage": 2.28,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.27",
+            "sectionTitle": "Stalls",
+            "sectionOrdinal": 27,
+            "sectionWeightPercentage": 1.91,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.28",
+            "sectionTitle": "Stall Recognition",
+            "sectionOrdinal": 28,
+            "sectionWeightPercentage": 2.16,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.29",
+            "sectionTitle": "Angle of Attack Indicators",
+            "sectionOrdinal": 29,
+            "sectionWeightPercentage": 4.32,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.5.30",
+            "sectionTitle": "Stall Characteristics",
+            "sectionOrdinal": 30,
+            "sectionWeightPercentage": 2.44,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.31",
+            "sectionTitle": "Fundamentals of Stall Recovery",
+            "sectionOrdinal": 31,
+            "sectionWeightPercentage": 4.79,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.5.32",
+            "sectionTitle": "Stall Training",
+            "sectionOrdinal": 32,
+            "sectionWeightPercentage": 1.6,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.33",
+            "sectionTitle": "Approaches to Stalls (Impending Stalls), Power-On or Power-Off",
+            "sectionOrdinal": 33,
+            "sectionWeightPercentage": 1.94,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.34",
+            "sectionTitle": "Full Stalls, Power-Off",
+            "sectionOrdinal": 34,
+            "sectionWeightPercentage": 3.86,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.5.35",
+            "sectionTitle": "Full Stalls, Power-On",
+            "sectionOrdinal": 35,
+            "sectionWeightPercentage": 2.85,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.36",
+            "sectionTitle": "Secondary Stall",
+            "sectionOrdinal": 36,
+            "sectionWeightPercentage": 1.39,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.37",
+            "sectionTitle": "Accelerated Stalls",
+            "sectionOrdinal": 37,
+            "sectionWeightPercentage": 5.8,
+            "questionsGenerated": 4
+          },
+          {
+            "sectionId": "afh.5.38",
+            "sectionTitle": "Cross-Control Stall",
+            "sectionOrdinal": 38,
+            "sectionWeightPercentage": 4.33,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.5.39",
+            "sectionTitle": "Elevator Trim Stall",
+            "sectionOrdinal": 39,
+            "sectionWeightPercentage": 4.46,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.5.40",
+            "sectionTitle": "Spin Awareness",
+            "sectionOrdinal": 40,
+            "sectionWeightPercentage": 3.09,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.41",
+            "sectionTitle": "Spin Procedures",
+            "sectionOrdinal": 41,
+            "sectionWeightPercentage": 2.15,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.42",
+            "sectionTitle": "Entry Phase",
+            "sectionOrdinal": 42,
+            "sectionWeightPercentage": 0.66,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.43",
+            "sectionTitle": "Incipient Phase",
+            "sectionOrdinal": 43,
+            "sectionWeightPercentage": 1.33,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.44",
+            "sectionTitle": "Developed Phase",
+            "sectionOrdinal": 44,
+            "sectionWeightPercentage": 0.75,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.45",
+            "sectionTitle": "Recovery Phase",
+            "sectionOrdinal": 45,
+            "sectionWeightPercentage": 3.7,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.5.46",
+            "sectionTitle": "Intentional Spins",
+            "sectionOrdinal": 46,
+            "sectionWeightPercentage": 0.55,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.47",
+            "sectionTitle": "MANEUVERS INCLUDING SPINS APPROVED”)",
+            "sectionOrdinal": 47,
+            "sectionWeightPercentage": 1.66,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.48",
+            "sectionTitle": "Weight and Balance Requirement Related to Spins",
+            "sectionOrdinal": 48,
+            "sectionWeightPercentage": 2.02,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.49",
+            "sectionTitle": "Spiral Dive",
+            "sectionOrdinal": 49,
+            "sectionWeightPercentage": 3.43,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.50",
+            "sectionTitle": "UPRT Summary",
+            "sectionOrdinal": 50,
+            "sectionWeightPercentage": 0.6,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.5.51",
+            "sectionTitle": "Chapter Summary",
+            "sectionOrdinal": 51,
+            "sectionWeightPercentage": 1.41,
+            "questionsGenerated": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "questionid": "AFH.5.1.1",
+    "question": "What parameters define an airplane upset according to the FAA?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.1.1.c.1",
+        "text": "Pitch attitude greater than 25° nose up"
+      },
+      {
+        "id": "AFH.5.1.1.c.2",
+        "text": "Pitch attitude greater than 10° nose down"
+      },
+      {
+        "id": "AFH.5.1.1.c.3",
+        "text": "Bank angle greater than 45°"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.1.1.w.1",
+        "text": "Pitch attitude less than 15° nose up"
+      },
+      {
+        "id": "AFH.5.1.1.w.2",
+        "text": "Pitch attitude less than 5° nose down"
+      },
+      {
+        "id": "AFH.5.1.1.w.3",
+        "text": "Bank angle less than 30°"
+      },
+      {
+        "id": "AFH.5.1.1.w.4",
+        "text": "Flying at appropriate airspeeds"
+      },
+      {
+        "id": "AFH.5.1.1.w.5",
+        "text": "Angle of attack greater than 15°"
+      },
+      {
+        "id": "AFH.5.1.1.w.6",
+        "text": "Pitch attitude greater than 30° nose up"
+      },
+      {
+        "id": "AFH.5.1.1.w.7",
+        "text": "Bank angle less than 20°"
+      },
+      {
+        "id": "AFH.5.1.1.w.8",
+        "text": "Pitch attitude greater than 20° nose down"
+      }
+    ],
+    "source": "Pilot Guide to Airplane Upset Recovery",
+    "subjects": [
+      "Aviation Safety",
+      "Flight Training",
+      "Aerodynamics"
+    ]
+  },
+  {
+    "questionid": "AFH.5.2.1",
+    "question": "What are key components of training for unusual attitudes in instrument flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.2.1.c.1",
+        "text": "Recognition of unusual attitudes"
+      },
+      {
+        "id": "AFH.5.2.1.c.2",
+        "text": "Recovery techniques for unusual attitudes"
+      },
+      {
+        "id": "AFH.5.2.1.c.3",
+        "text": "Conditions causing unusual attitudes"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.2.1.w.1",
+        "text": "Advanced aerobatic maneuvers"
+      },
+      {
+        "id": "AFH.5.2.1.w.2",
+        "text": "Navigation skills"
+      },
+      {
+        "id": "AFH.5.2.1.w.3",
+        "text": "Weather pattern analysis"
+      },
+      {
+        "id": "AFH.5.2.1.w.4",
+        "text": "Fuel management"
+      },
+      {
+        "id": "AFH.5.2.1.w.5",
+        "text": "Passenger communication"
+      },
+      {
+        "id": "AFH.5.2.1.w.6",
+        "text": "Engine troubleshooting"
+      },
+      {
+        "id": "AFH.5.2.1.w.7",
+        "text": "Flight planning"
+      },
+      {
+        "id": "AFH.5.2.1.w.8",
+        "text": "Cabin pressure management"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 5.2",
+    "subjects": [
+      "Upset Prevention and Recovery"
+    ]
+  },
+  {
+    "questionid": "AFH.5.3.1",
+    "question": "What are some key distinctions between an unusual attitude and an upset in aviation?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.3.1.c.1",
+        "text": "Upsets include stall events"
+      },
+      {
+        "id": "AFH.5.3.1.c.2",
+        "text": "Upsets include overspeeds"
+      },
+      {
+        "id": "AFH.5.3.1.c.3",
+        "text": "Upsets have defined parameters"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.3.1.w.1",
+        "text": "Unusual attitudes always involve a 30° bank"
+      },
+      {
+        "id": "AFH.5.3.1.w.2",
+        "text": "Upsets are always intentional"
+      },
+      {
+        "id": "AFH.5.3.1.w.3",
+        "text": "Unusual attitudes never involve a startle effect"
+      },
+      {
+        "id": "AFH.5.3.1.w.4",
+        "text": "Upsets exclude environmental factors"
+      },
+      {
+        "id": "AFH.5.3.1.w.5",
+        "text": "Unusual attitudes are not used in training"
+      },
+      {
+        "id": "AFH.5.3.1.w.6",
+        "text": "Upsets are only caused by human factors"
+      },
+      {
+        "id": "AFH.5.3.1.w.7",
+        "text": "Unusual attitudes always involve closing eyes"
+      },
+      {
+        "id": "AFH.5.3.1.w.8",
+        "text": "Upsets are always mechanical issues"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 5.3",
+    "subjects": [
+      "Aviation Safety",
+      "Flight Training"
+    ]
+  },
+  {
+    "questionid": "AFH.5.4.1",
+    "question": "What environmental factors can lead to upset and loss of control in-flight (LOC-I)?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.4.1.c.1",
+        "text": "Clear air turbulence"
+      },
+      {
+        "id": "AFH.5.4.1.c.2",
+        "text": "Mountain waves"
+      },
+      {
+        "id": "AFH.5.4.1.c.3",
+        "text": "Wind shear"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.4.1.w.1",
+        "text": "High humidity"
+      },
+      {
+        "id": "AFH.5.4.1.w.2",
+        "text": "Low visibility"
+      },
+      {
+        "id": "AFH.5.4.1.w.3",
+        "text": "High altitude"
+      },
+      {
+        "id": "AFH.5.4.1.w.4",
+        "text": "Heavy rain"
+      },
+      {
+        "id": "AFH.5.4.1.w.5",
+        "text": "Cold temperatures"
+      },
+      {
+        "id": "AFH.5.4.1.w.6",
+        "text": "Fog"
+      },
+      {
+        "id": "AFH.5.4.1.w.7",
+        "text": "Calm winds"
+      },
+      {
+        "id": "AFH.5.4.1.w.8",
+        "text": "High pressure systems"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 4",
+    "subjects": [
+      "Aviation Safety",
+      "Meteorology"
+    ]
+  },
+  {
+    "questionid": "AFH.5.5.1",
+    "question": "What actions can a pilot take to address mechanical anomalies in flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.5.1.c.1",
+        "text": "Disengage the autopilot"
+      },
+      {
+        "id": "AFH.5.5.1.c.2",
+        "text": "Disengage the autothrottles"
+      },
+      {
+        "id": "AFH.5.5.1.c.3",
+        "text": "Manually fly the airplane"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.5.1.w.1",
+        "text": "Increase throttle settings"
+      },
+      {
+        "id": "AFH.5.5.1.w.2",
+        "text": "Engage the autopilot"
+      },
+      {
+        "id": "AFH.5.5.1.w.3",
+        "text": "Rely solely on primary instruments"
+      },
+      {
+        "id": "AFH.5.5.1.w.4",
+        "text": "Ignore the anomaly"
+      },
+      {
+        "id": "AFH.5.5.1.w.5",
+        "text": "Wait for the anomaly to resolve itself"
+      },
+      {
+        "id": "AFH.5.5.1.w.6",
+        "text": "Use only the autothrottles"
+      },
+      {
+        "id": "AFH.5.5.1.w.7",
+        "text": "Rely on automation to fix the issue"
+      },
+      {
+        "id": "AFH.5.5.1.w.8",
+        "text": "Continue normal operations without changes"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 5: Mechanical Factors",
+    "subjects": [
+      "Aviation Safety",
+      "Flight Operations",
+      "Aircraft Systems"
+    ]
+  },
+  {
+    "questionid": "AFH.5.6.1",
+    "question": "What factors contribute to Loss of Control In-flight (LOC-I) when transitioning from VMC to IMC?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.6.1.c.1",
+        "text": "Continued VFR flight into IMC"
+      },
+      {
+        "id": "AFH.5.6.1.c.2",
+        "text": "Loss of the natural horizon"
+      },
+      {
+        "id": "AFH.5.6.1.c.3",
+        "text": "Encountering vertigo or spatial disorientation"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.6.1.w.1",
+        "text": "Improved visibility"
+      },
+      {
+        "id": "AFH.5.6.1.w.2",
+        "text": "Stable weather conditions"
+      },
+      {
+        "id": "AFH.5.6.1.w.3",
+        "text": "Clear skies"
+      },
+      {
+        "id": "AFH.5.6.1.w.4",
+        "text": "Increased situational awareness"
+      },
+      {
+        "id": "AFH.5.6.1.w.5",
+        "text": "Enhanced pilot confidence"
+      },
+      {
+        "id": "AFH.5.6.1.w.6",
+        "text": "Reduced workload"
+      },
+      {
+        "id": "AFH.5.6.1.w.7",
+        "text": "Consistent altitude"
+      },
+      {
+        "id": "AFH.5.6.1.w.8",
+        "text": "Uninterrupted communication"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 6: Human Factors VMC to IMC",
+    "subjects": [
+      "Aviation Safety",
+      "Human Factors",
+      "Meteorological Conditions"
+    ]
+  },
+  {
+    "questionid": "AFH.5.7.1",
+    "question": "What are potential causes of a pilot's diversion of attention during flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.7.1.c.1",
+        "text": "In-flight anomaly or malfunction"
+      },
+      {
+        "id": "AFH.5.7.1.c.2",
+        "text": "Efforts to set avionics or navigation equipment"
+      },
+      {
+        "id": "AFH.5.7.1.c.3",
+        "text": "Over-reliance on automated systems"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.7.1.w.1",
+        "text": "Strong wind conditions"
+      },
+      {
+        "id": "AFH.5.7.1.w.2",
+        "text": "High altitude flying"
+      },
+      {
+        "id": "AFH.5.7.1.w.3",
+        "text": "Turbulent weather"
+      },
+      {
+        "id": "AFH.5.7.1.w.4",
+        "text": "Passenger distractions"
+      },
+      {
+        "id": "AFH.5.7.1.w.5",
+        "text": "Radio communication with ATC"
+      },
+      {
+        "id": "AFH.5.7.1.w.6",
+        "text": "Fatigue from long flights"
+      },
+      {
+        "id": "AFH.5.7.1.w.7",
+        "text": "Engine noise"
+      },
+      {
+        "id": "AFH.5.7.1.w.8",
+        "text": "Cabin pressure changes"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 7: Diversion of Attention",
+    "subjects": [
+      "Aviation Safety",
+      "Pilot Responsibilities"
+    ]
+  },
+  {
+    "questionid": "AFH.5.8.1",
+    "question": "What are some scenarios that could lead to a loss of control in-flight (LOC-I) due to task saturation?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.8.1.c.1",
+        "text": "Rolling an airplane from near-inverted to upright orientation beyond primary training skills"
+      },
+      {
+        "id": "AFH.5.8.1.c.2",
+        "text": "Fatigued pilot encountering IMC at night with a vacuum pump failure"
+      },
+      {
+        "id": "AFH.5.8.1.c.3",
+        "text": "Pilot failing to engage pitot heat while flying in IMC"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.8.1.w.1",
+        "text": "Flying with a fully functional autopilot in clear weather"
+      },
+      {
+        "id": "AFH.5.8.1.w.2",
+        "text": "Performing a routine pre-flight inspection"
+      },
+      {
+        "id": "AFH.5.8.1.w.3",
+        "text": "Using a GPS for navigation in VMC"
+      },
+      {
+        "id": "AFH.5.8.1.w.4",
+        "text": "Communicating with air traffic control during a standard approach"
+      },
+      {
+        "id": "AFH.5.8.1.w.5",
+        "text": "Flying at a safe altitude with no distractions"
+      },
+      {
+        "id": "AFH.5.8.1.w.6",
+        "text": "Practicing maneuvers with an instructor"
+      },
+      {
+        "id": "AFH.5.8.1.w.7",
+        "text": "Flying with a co-pilot in good weather"
+      },
+      {
+        "id": "AFH.5.8.1.w.8",
+        "text": "Using checklists during all phases of flight"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 8",
+    "subjects": [
+      "Aviation Safety",
+      "Pilot Training",
+      "Flight Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.5.9.1",
+    "question": "What are some cues a pilot can use to avert a stall if the stall warning system fails?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.9.1.c.1",
+        "text": "Aerodynamic buffet"
+      },
+      {
+        "id": "AFH.5.9.1.c.2",
+        "text": "Loss of roll authority"
+      },
+      {
+        "id": "AFH.5.9.1.c.3",
+        "text": "Inability to arrest a descent"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.9.1.w.1",
+        "text": "Increased engine noise"
+      },
+      {
+        "id": "AFH.5.9.1.w.2",
+        "text": "Sudden increase in altitude"
+      },
+      {
+        "id": "AFH.5.9.1.w.3",
+        "text": "Rapid acceleration"
+      },
+      {
+        "id": "AFH.5.9.1.w.4",
+        "text": "Increase in fuel consumption"
+      },
+      {
+        "id": "AFH.5.9.1.w.5",
+        "text": "Change in cabin pressure"
+      },
+      {
+        "id": "AFH.5.9.1.w.6",
+        "text": "Sudden temperature drop"
+      },
+      {
+        "id": "AFH.5.9.1.w.7",
+        "text": "Increase in passenger discomfort"
+      },
+      {
+        "id": "AFH.5.9.1.w.8",
+        "text": "Unexpected autopilot engagement"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 9",
+    "subjects": [
+      "Aviation Safety",
+      "Pilot Training"
+    ]
+  },
+  {
+    "questionid": "AFH.5.10.1",
+    "question": "What are some ways a pilot may experience spatial disorientation?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.10.1.c.1",
+        "text": "Recognized spatial disorientation"
+      },
+      {
+        "id": "AFH.5.10.1.c.2",
+        "text": "Unrecognized spatial disorientation"
+      },
+      {
+        "id": "AFH.5.10.1.c.3",
+        "text": "Incapacitating spatial disorientation"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.10.1.w.1",
+        "text": "Visual spatial disorientation"
+      },
+      {
+        "id": "AFH.5.10.1.w.2",
+        "text": "Auditory spatial disorientation"
+      },
+      {
+        "id": "AFH.5.10.1.w.3",
+        "text": "Tactile spatial disorientation"
+      },
+      {
+        "id": "AFH.5.10.1.w.4",
+        "text": "Cognitive spatial disorientation"
+      },
+      {
+        "id": "AFH.5.10.1.w.5",
+        "text": "Emotional spatial disorientation"
+      },
+      {
+        "id": "AFH.5.10.1.w.6",
+        "text": "Mechanical spatial disorientation"
+      },
+      {
+        "id": "AFH.5.10.1.w.7",
+        "text": "Thermal spatial disorientation"
+      },
+      {
+        "id": "AFH.5.10.1.w.8",
+        "text": "Chemical spatial disorientation"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 10: Spatial Disorientation",
+    "subjects": [
+      "Aviation Safety",
+      "Human Factors"
+    ]
+  },
+  {
+    "questionid": "AFH.5.11.1",
+    "question": "What are effective methods for pilots to mitigate surprise and startle responses during flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.11.1.c.1",
+        "text": "Scenario-based training"
+      },
+      {
+        "id": "AFH.5.11.1.c.2",
+        "text": "Incorporating realistic distractions"
+      },
+      {
+        "id": "AFH.5.11.1.c.3",
+        "text": "Training with perception of risk"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.11.1.w.1",
+        "text": "Ignoring the startle response"
+      },
+      {
+        "id": "AFH.5.11.1.w.2",
+        "text": "Avoiding stress-inducing scenarios"
+      },
+      {
+        "id": "AFH.5.11.1.w.3",
+        "text": "Relying solely on theoretical knowledge"
+      },
+      {
+        "id": "AFH.5.11.1.w.4",
+        "text": "Practicing only in calm conditions"
+      },
+      {
+        "id": "AFH.5.11.1.w.5",
+        "text": "Using only automated systems"
+      },
+      {
+        "id": "AFH.5.11.1.w.6",
+        "text": "Focusing on routine maneuvers"
+      },
+      {
+        "id": "AFH.5.11.1.w.7",
+        "text": "Avoiding unexpected events"
+      },
+      {
+        "id": "AFH.5.11.1.w.8",
+        "text": "Relying on co-pilot reactions"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 11",
+    "subjects": [
+      "Aviation Human Factors"
+    ]
+  },
+  {
+    "questionid": "AFH.5.12.1",
+    "question": "What are the key components of Upset Prevention and Recovery Training (UPRT)?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.12.1.c.1",
+        "text": "Prevention of upsets"
+      },
+      {
+        "id": "AFH.5.12.1.c.2",
+        "text": "Recovery from upsets"
+      },
+      {
+        "id": "AFH.5.12.1.c.3",
+        "text": "Early recognition of upset scenarios"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.12.1.w.1",
+        "text": "Intentional flight maneuvers"
+      },
+      {
+        "id": "AFH.5.12.1.w.2",
+        "text": "Abrupt muscular effort"
+      },
+      {
+        "id": "AFH.5.12.1.w.3",
+        "text": "Increased airspeed"
+      },
+      {
+        "id": "AFH.5.12.1.w.4",
+        "text": "Low altitude maneuvers"
+      },
+      {
+        "id": "AFH.5.12.1.w.5",
+        "text": "Turbulent condition handling"
+      },
+      {
+        "id": "AFH.5.12.1.w.6",
+        "text": "Excessive speed control"
+      },
+      {
+        "id": "AFH.5.12.1.w.7",
+        "text": "Ground contact avoidance"
+      },
+      {
+        "id": "AFH.5.12.1.w.8",
+        "text": "Instinctive reactions"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 12",
+    "subjects": [
+      "Aviation Safety",
+      "Pilot Training",
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.5.13.1",
+    "question": "What are the core concepts emphasized in Upset Prevention and Recovery Training (UPRT)?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.13.1.c.1",
+        "text": "Recognizing divergence from intended flightpath or airspeed"
+      },
+      {
+        "id": "AFH.5.13.1.c.2",
+        "text": "Cross-checking visual cues and instrument indications"
+      },
+      {
+        "id": "AFH.5.13.1.c.3",
+        "text": "Continuous reinforcement through training"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.13.1.w.1",
+        "text": "Performing aerobatic maneuvers"
+      },
+      {
+        "id": "AFH.5.13.1.w.2",
+        "text": "Ignoring instrument errors"
+      },
+      {
+        "id": "AFH.5.13.1.w.3",
+        "text": "Focusing solely on visual conditions"
+      },
+      {
+        "id": "AFH.5.13.1.w.4",
+        "text": "Avoiding training in flight simulation devices"
+      },
+      {
+        "id": "AFH.5.13.1.w.5",
+        "text": "Relying on panic responses"
+      },
+      {
+        "id": "AFH.5.13.1.w.6",
+        "text": "Disregarding spatial disorientation"
+      },
+      {
+        "id": "AFH.5.13.1.w.7",
+        "text": "Training only in clear weather conditions"
+      },
+      {
+        "id": "AFH.5.13.1.w.8",
+        "text": "Assuming all upsets are recoverable without training"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 13: UPRT Training Core Concepts",
+    "subjects": [
+      "Aviation Safety",
+      "Pilot Training",
+      "Flight Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.5.14.1",
+    "question": "What are key components of academic preparation in UPRT according to the AFH section on Knowledge and Risk Management?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.14.1.c.1",
+        "text": "Development of situational awareness"
+      },
+      {
+        "id": "AFH.5.14.1.c.2",
+        "text": "Emphasis on basic concepts"
+      },
+      {
+        "id": "AFH.5.14.1.c.3",
+        "text": "Integration with practical experience"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.14.1.w.1",
+        "text": "Focus solely on theoretical knowledge"
+      },
+      {
+        "id": "AFH.5.14.1.w.2",
+        "text": "Avoidance of ADM concepts"
+      },
+      {
+        "id": "AFH.5.14.1.w.3",
+        "text": "Exclusion of risk management"
+      },
+      {
+        "id": "AFH.5.14.1.w.4",
+        "text": "Emphasis on rote memorization"
+      },
+      {
+        "id": "AFH.5.14.1.w.5",
+        "text": "Neglect of practical skill development"
+      },
+      {
+        "id": "AFH.5.14.1.w.6",
+        "text": "Concentration on specific details first"
+      },
+      {
+        "id": "AFH.5.14.1.w.7",
+        "text": "Isolation from practical application"
+      },
+      {
+        "id": "AFH.5.14.1.w.8",
+        "text": "Disregard for long-term retention"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 14",
+    "subjects": [
+      "UPRT",
+      "Knowledge Management",
+      "Risk Management"
+    ]
+  },
+  {
+    "questionid": "AFH.5.15.1",
+    "question": "What are key components of effective ADM and risk management in aviation?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.15.1.c.1",
+        "text": "Analysis and awareness"
+      },
+      {
+        "id": "AFH.5.15.1.c.2",
+        "text": "Resource management"
+      },
+      {
+        "id": "AFH.5.15.1.c.3",
+        "text": "Interrupting the error chain"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.15.1.w.1",
+        "text": "Ignoring weather conditions"
+      },
+      {
+        "id": "AFH.5.15.1.w.2",
+        "text": "Relying solely on autopilot"
+      },
+      {
+        "id": "AFH.5.15.1.w.3",
+        "text": "Avoiding communication"
+      },
+      {
+        "id": "AFH.5.15.1.w.4",
+        "text": "Disregarding crew input"
+      },
+      {
+        "id": "AFH.5.15.1.w.5",
+        "text": "Neglecting situational awareness"
+      },
+      {
+        "id": "AFH.5.15.1.w.6",
+        "text": "Overloading the aircraft"
+      },
+      {
+        "id": "AFH.5.15.1.w.7",
+        "text": "Performing uncoordinated flight"
+      },
+      {
+        "id": "AFH.5.15.1.w.8",
+        "text": "Ignoring steep turns"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 15: Prevention Through ADM and Risk Management",
+    "subjects": [
+      "Aviation Decision Making",
+      "Risk Management",
+      "Crew Resource Management"
+    ]
+  },
+  {
+    "questionid": "AFH.5.16.1",
+    "question": "What is the primary goal of a proportional counter-response in aviation?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.16.1.c.1",
+        "text": "To manage unintended flight attitude excursions"
+      },
+      {
+        "id": "AFH.5.16.1.c.2",
+        "text": "To prevent a fully-developed upset"
+      },
+      {
+        "id": "AFH.5.16.1.c.3",
+        "text": "To take proportionally-appropriate avoidance actions"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.16.1.w.1",
+        "text": "To increase flight speed"
+      },
+      {
+        "id": "AFH.5.16.1.w.2",
+        "text": "To perform aerobatic maneuvers"
+      },
+      {
+        "id": "AFH.5.16.1.w.3",
+        "text": "To reduce fuel consumption"
+      },
+      {
+        "id": "AFH.5.16.1.w.4",
+        "text": "To enhance passenger comfort"
+      },
+      {
+        "id": "AFH.5.16.1.w.5",
+        "text": "To improve communication with air traffic control"
+      },
+      {
+        "id": "AFH.5.16.1.w.6",
+        "text": "To extend flight range"
+      },
+      {
+        "id": "AFH.5.16.1.w.7",
+        "text": "To decrease aircraft weight"
+      },
+      {
+        "id": "AFH.5.16.1.w.8",
+        "text": "To optimize flight path for efficiency"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 16",
+    "subjects": [
+      "Aviation Safety",
+      "Flight Control",
+      "Upset Prevention"
+    ]
+  },
+  {
+    "questionid": "AFH.5.17.1",
+    "question": "What are some common errors associated with upset recoveries in aviation?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.17.1.c.1",
+        "text": "Incorrect assessment of what kind of upset the airplane is in"
+      },
+      {
+        "id": "AFH.5.17.1.c.2",
+        "text": "Failure to disconnect the wing leveler or autopilot"
+      },
+      {
+        "id": "AFH.5.17.1.c.3",
+        "text": "Failure to unload the airplane, if necessary"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.17.1.w.1",
+        "text": "Correctly identifying the type of upset"
+      },
+      {
+        "id": "AFH.5.17.1.w.2",
+        "text": "Properly managing airspeed during recovery"
+      },
+      {
+        "id": "AFH.5.17.1.w.3",
+        "text": "Rolling in the correct direction"
+      },
+      {
+        "id": "AFH.5.17.1.w.4",
+        "text": "Using flight instruments effectively"
+      },
+      {
+        "id": "AFH.5.17.1.w.5",
+        "text": "Following AFM/POH procedures accurately"
+      },
+      {
+        "id": "AFH.5.17.1.w.6",
+        "text": "Maintaining situational awareness"
+      },
+      {
+        "id": "AFH.5.17.1.w.7",
+        "text": "Disconnecting autopilot when necessary"
+      },
+      {
+        "id": "AFH.5.17.1.w.8",
+        "text": "Unloading the airplane when required"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 17",
+    "subjects": [
+      "Aviation Safety",
+      "Upset Recovery",
+      "Pilot Training"
+    ]
+  },
+  {
+    "questionid": "AFH.5.18.1",
+    "question": "Which devices are considered satisfactory substitutions for developing UPRT skills in the actual aircraft?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.18.1.c.1",
+        "text": "Level C FFS"
+      },
+      {
+        "id": "AFH.5.18.1.c.2",
+        "text": "Level D FFS"
+      },
+      {
+        "id": "AFH.5.18.1.c.3",
+        "text": "Higher fidelity devices"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.18.1.w.1",
+        "text": "Basic aviation training devices"
+      },
+      {
+        "id": "AFH.5.18.1.w.2",
+        "text": "Advanced aviation training devices"
+      },
+      {
+        "id": "AFH.5.18.1.w.3",
+        "text": "Flight training devices (FTD)"
+      },
+      {
+        "id": "AFH.5.18.1.w.4",
+        "text": "Level A FFS"
+      },
+      {
+        "id": "AFH.5.18.1.w.5",
+        "text": "Level B FFS"
+      },
+      {
+        "id": "AFH.5.18.1.w.6",
+        "text": "Non-fidelity devices"
+      },
+      {
+        "id": "AFH.5.18.1.w.7",
+        "text": "Initial skill development devices"
+      },
+      {
+        "id": "AFH.5.18.1.w.8",
+        "text": "General aviation devices"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 18",
+    "subjects": [
+      "Flight Simulation Training Devices",
+      "Upset Prevention and Recovery Training"
+    ]
+  },
+  {
+    "questionid": "AFH.5.19.1",
+    "question": "What are some limitations of airplane-based UPRT?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.19.1.c.1",
+        "text": "Limited by maneuvers approved for the airplane"
+      },
+      {
+        "id": "AFH.5.19.1.c.2",
+        "text": "Dependent on flight instructor's UPRT capabilities"
+      },
+      {
+        "id": "AFH.5.19.1.c.3",
+        "text": "Requires instructors with specialized UPRT experience"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.19.1.w.1",
+        "text": "Always provides complete learning experience"
+      },
+      {
+        "id": "AFH.5.19.1.w.2",
+        "text": "Can be conducted in any airplane without restrictions"
+      },
+      {
+        "id": "AFH.5.19.1.w.3",
+        "text": "Does not require specialized instructor skills"
+      },
+      {
+        "id": "AFH.5.19.1.w.4",
+        "text": "Is unaffected by the type of airplane used"
+      },
+      {
+        "id": "AFH.5.19.1.w.5",
+        "text": "Always results in positive learning outcomes"
+      },
+      {
+        "id": "AFH.5.19.1.w.6",
+        "text": "Does not involve any risk of negative learning"
+      },
+      {
+        "id": "AFH.5.19.1.w.7",
+        "text": "Can be conducted by any flight instructor"
+      },
+      {
+        "id": "AFH.5.19.1.w.8",
+        "text": "Is equally effective in simulators"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 19",
+    "subjects": [
+      "Aviation Training",
+      "Upset Prevention and Recovery Training"
+    ]
+  },
+  {
+    "questionid": "AFH.5.20.1",
+    "question": "What are the primary focuses of a comprehensive UPRT program?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.20.1.c.1",
+        "text": "Avoidance of upsets"
+      },
+      {
+        "id": "AFH.5.20.1.c.2",
+        "text": "Safe recovery from upsets"
+      },
+      {
+        "id": "AFH.5.20.1.c.3",
+        "text": "Operation in a wide range of flight attitudes"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.20.1.w.1",
+        "text": "Specific airplane model training"
+      },
+      {
+        "id": "AFH.5.20.1.w.2",
+        "text": "Advanced aerobatic maneuvers"
+      },
+      {
+        "id": "AFH.5.20.1.w.3",
+        "text": "Fuel efficiency techniques"
+      },
+      {
+        "id": "AFH.5.20.1.w.4",
+        "text": "Passenger comfort strategies"
+      },
+      {
+        "id": "AFH.5.20.1.w.5",
+        "text": "Weather pattern analysis"
+      },
+      {
+        "id": "AFH.5.20.1.w.6",
+        "text": "Navigation system upgrades"
+      },
+      {
+        "id": "AFH.5.20.1.w.7",
+        "text": "Engine performance optimization"
+      },
+      {
+        "id": "AFH.5.20.1.w.8",
+        "text": "Cabin crew coordination"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 20",
+    "subjects": [
+      "UPRT",
+      "Flight Training"
+    ]
+  },
+  {
+    "questionid": "AFH.5.21.1",
+    "question": "What are the requirements for UPRT in FSTDs for pilots seeking a multiengine airplane ATP certificate?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.21.1.c.1",
+        "text": "Training must be conducted in high fidelity devices like Level C and D FFS."
+      },
+      {
+        "id": "AFH.5.21.1.c.2",
+        "text": "The training course must be FAA approved."
+      },
+      {
+        "id": "AFH.5.21.1.c.3",
+        "text": "It is required by 14 CFR part 61, section 61.156."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.21.1.w.1",
+        "text": "Training can be conducted in any type of FSTD."
+      },
+      {
+        "id": "AFH.5.21.1.w.2",
+        "text": "The training is optional for ATP certification."
+      },
+      {
+        "id": "AFH.5.21.1.w.3",
+        "text": "It is only required for single-engine ATP certificates."
+      },
+      {
+        "id": "AFH.5.21.1.w.4",
+        "text": "The course does not need FAA approval."
+      },
+      {
+        "id": "AFH.5.21.1.w.5",
+        "text": "Training is only for private pilot certificates."
+      },
+      {
+        "id": "AFH.5.21.1.w.6",
+        "text": "UPRT is not necessary for multiengine ATP certification."
+      },
+      {
+        "id": "AFH.5.21.1.w.7",
+        "text": "Training is only required for international pilots."
+      },
+      {
+        "id": "AFH.5.21.1.w.8",
+        "text": "The training can be self-conducted without an instructor."
+      }
+    ],
+    "source": "AFH Chapter 5, Section 21",
+    "subjects": [
+      "Aviation Training",
+      "Pilot Certification"
+    ]
+  },
+  {
+    "questionid": "AFH.5.22.1",
+    "question": "What conditions indicate an airplane is in coordinated flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.22.1.c.1",
+        "text": "The airplane's nose is yawed directly into the relative wind."
+      },
+      {
+        "id": "AFH.5.22.1.c.2",
+        "text": "The ball is centered in the slip/skid indicator."
+      },
+      {
+        "id": "AFH.5.22.1.c.3",
+        "text": "Pilot is correcting for yaw effects associated with power and aileron inputs."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.22.1.w.1",
+        "text": "The airplane is climbing at maximum rate."
+      },
+      {
+        "id": "AFH.5.22.1.w.2",
+        "text": "The airplane is descending rapidly."
+      },
+      {
+        "id": "AFH.5.22.1.w.3",
+        "text": "The airplane is in a steep bank."
+      },
+      {
+        "id": "AFH.5.22.1.w.4",
+        "text": "The airplane's nose is yawed away from the relative wind."
+      },
+      {
+        "id": "AFH.5.22.1.w.5",
+        "text": "The ball is off-center in the slip/skid indicator."
+      },
+      {
+        "id": "AFH.5.22.1.w.6",
+        "text": "The airplane is in a stall condition."
+      },
+      {
+        "id": "AFH.5.22.1.w.7",
+        "text": "The airplane is flying at maximum speed."
+      },
+      {
+        "id": "AFH.5.22.1.w.8",
+        "text": "The airplane is in a spin."
+      }
+    ],
+    "source": "AFH Chapter 5, Section 22",
+    "subjects": [
+      "Aviation"
+    ]
+  },
+  {
+    "questionid": "AFH.5.23.1",
+    "question": "What happens when the angle of attack exceeds the wing's critical angle?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.23.1.c.1",
+        "text": "Airflow separates from the upper surface of the wing"
+      },
+      {
+        "id": "AFH.5.23.1.c.2",
+        "text": "Lift decreases"
+      },
+      {
+        "id": "AFH.5.23.1.c.3",
+        "text": "Drag increases"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.23.1.w.1",
+        "text": "Airflow becomes smoother"
+      },
+      {
+        "id": "AFH.5.23.1.w.2",
+        "text": "Lift increases"
+      },
+      {
+        "id": "AFH.5.23.1.w.3",
+        "text": "Drag decreases"
+      },
+      {
+        "id": "AFH.5.23.1.w.4",
+        "text": "The aircraft accelerates"
+      },
+      {
+        "id": "AFH.5.23.1.w.5",
+        "text": "The aircraft climbs"
+      },
+      {
+        "id": "AFH.5.23.1.w.6",
+        "text": "The load factor decreases"
+      },
+      {
+        "id": "AFH.5.23.1.w.7",
+        "text": "The aircraft descends smoothly"
+      },
+      {
+        "id": "AFH.5.23.1.w.8",
+        "text": "The wing becomes more efficient"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 23",
+    "subjects": [
+      "Aerodynamics",
+      "Flight Mechanics"
+    ]
+  },
+  {
+    "questionid": "AFH.5.24.1",
+    "question": "What are the main objectives of maneuvering in slow flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.24.1.c.1",
+        "text": "Develop ability to fly at low speeds and high AOAs"
+      },
+      {
+        "id": "AFH.5.24.1.c.2",
+        "text": "Familiarize with feel, sound, and visual cues"
+      },
+      {
+        "id": "AFH.5.24.1.c.3",
+        "text": "Manage coordinated flight control inputs"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.24.1.w.1",
+        "text": "Increase airspeed"
+      },
+      {
+        "id": "AFH.5.24.1.w.2",
+        "text": "Perform aerobatic maneuvers"
+      },
+      {
+        "id": "AFH.5.24.1.w.3",
+        "text": "Enhance fuel efficiency"
+      },
+      {
+        "id": "AFH.5.24.1.w.4",
+        "text": "Improve high-speed handling"
+      },
+      {
+        "id": "AFH.5.24.1.w.5",
+        "text": "Maximize climb rate"
+      },
+      {
+        "id": "AFH.5.24.1.w.6",
+        "text": "Reduce stall speed"
+      },
+      {
+        "id": "AFH.5.24.1.w.7",
+        "text": "Increase load factor"
+      },
+      {
+        "id": "AFH.5.24.1.w.8",
+        "text": "Enhance autopilot functionality"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 24: Slow Flight",
+    "subjects": [
+      "Aerodynamics",
+      "Pilot Training"
+    ]
+  },
+  {
+    "questionid": "AFH.5.24.2",
+    "question": "What should pilots do when a stall warning occurs during slow flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.24.2.c.1",
+        "text": "Make prompt appropriate correction"
+      },
+      {
+        "id": "AFH.5.24.2.c.2",
+        "text": "React to and correct for stall indication"
+      },
+      {
+        "id": "AFH.5.24.2.c.3",
+        "text": "Manage coordinated flight control inputs"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.24.2.w.1",
+        "text": "Ignore the warning"
+      },
+      {
+        "id": "AFH.5.24.2.w.2",
+        "text": "Increase angle of attack"
+      },
+      {
+        "id": "AFH.5.24.2.w.3",
+        "text": "Reduce power to idle"
+      },
+      {
+        "id": "AFH.5.24.2.w.4",
+        "text": "Perform a steep turn"
+      },
+      {
+        "id": "AFH.5.24.2.w.5",
+        "text": "Initiate a climb"
+      },
+      {
+        "id": "AFH.5.24.2.w.6",
+        "text": "Descend rapidly"
+      },
+      {
+        "id": "AFH.5.24.2.w.7",
+        "text": "Engage autopilot"
+      },
+      {
+        "id": "AFH.5.24.2.w.8",
+        "text": "Continue current maneuver"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 24: Slow Flight",
+    "subjects": [
+      "Stall Recovery",
+      "Pilot Training"
+    ]
+  },
+  {
+    "questionid": "AFH.5.24.3",
+    "question": "What factors can lead to a stall warning during slow flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.24.3.c.1",
+        "text": "Increase in angle of attack"
+      },
+      {
+        "id": "AFH.5.24.3.c.2",
+        "text": "Increase in load factor"
+      },
+      {
+        "id": "AFH.5.24.3.c.3",
+        "text": "Reduction in power"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.24.3.w.1",
+        "text": "Decrease in altitude"
+      },
+      {
+        "id": "AFH.5.24.3.w.2",
+        "text": "Increase in airspeed"
+      },
+      {
+        "id": "AFH.5.24.3.w.3",
+        "text": "Engaging autopilot"
+      },
+      {
+        "id": "AFH.5.24.3.w.4",
+        "text": "Performing a go-around"
+      },
+      {
+        "id": "AFH.5.24.3.w.5",
+        "text": "Level flight at high speed"
+      },
+      {
+        "id": "AFH.5.24.3.w.6",
+        "text": "Reducing load factor"
+      },
+      {
+        "id": "AFH.5.24.3.w.7",
+        "text": "Maintaining constant power"
+      },
+      {
+        "id": "AFH.5.24.3.w.8",
+        "text": "Decreasing angle of attack"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 24: Slow Flight",
+    "subjects": [
+      "Stall Dynamics",
+      "Aerodynamics"
+    ]
+  },
+  {
+    "questionid": "AFH.5.25.1",
+    "question": "What are key elements of performing the slow flight maneuver in a single-engine airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.25.1.c.1",
+        "text": "Slowing the airplane smoothly from cruising to approach speeds without altitude change"
+      },
+      {
+        "id": "AFH.5.25.1.c.2",
+        "text": "Extending landing gear and adding flaps while maintaining heading and altitude"
+      },
+      {
+        "id": "AFH.5.25.1.c.3",
+        "text": "Turning while maintaining altitude"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.25.1.w.1",
+        "text": "Performing aerobatic maneuvers"
+      },
+      {
+        "id": "AFH.5.25.1.w.2",
+        "text": "Flying at maximum cruise speed"
+      },
+      {
+        "id": "AFH.5.25.1.w.3",
+        "text": "Descending rapidly without control"
+      },
+      {
+        "id": "AFH.5.25.1.w.4",
+        "text": "Ignoring stall warnings"
+      },
+      {
+        "id": "AFH.5.25.1.w.5",
+        "text": "Using only left rudder input"
+      },
+      {
+        "id": "AFH.5.25.1.w.6",
+        "text": "Flying below 1,500 feet AGL"
+      },
+      {
+        "id": "AFH.5.25.1.w.7",
+        "text": "Maintaining pre-maneuver trim settings"
+      },
+      {
+        "id": "AFH.5.25.1.w.8",
+        "text": "Reducing power to idle"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 25: Performing the Slow Flight Maneuver",
+    "subjects": [
+      "Aviation Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.5.26.1",
+    "question": "What are some common errors when performing slow flight maneuvers?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.26.1.c.1",
+        "text": "Failure to adequately clear the area"
+      },
+      {
+        "id": "AFH.5.26.1.c.2",
+        "text": "Inadequate back-elevator pressure as power is reduced, resulting in altitude loss"
+      },
+      {
+        "id": "AFH.5.26.1.c.3",
+        "text": "Excessive back-elevator pressure as power is reduced, resulting in a climb followed by rapid reduction in airspeed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.26.1.w.1",
+        "text": "Excessive forward pressure causing a dive"
+      },
+      {
+        "id": "AFH.5.26.1.w.2",
+        "text": "Overuse of ailerons causing roll instability"
+      },
+      {
+        "id": "AFH.5.26.1.w.3",
+        "text": "Ignoring rudder input entirely"
+      },
+      {
+        "id": "AFH.5.26.1.w.4",
+        "text": "Failure to monitor fuel levels"
+      },
+      {
+        "id": "AFH.5.26.1.w.5",
+        "text": "Incorrect radio communication procedures"
+      },
+      {
+        "id": "AFH.5.26.1.w.6",
+        "text": "Improper use of autopilot"
+      },
+      {
+        "id": "AFH.5.26.1.w.7",
+        "text": "Failure to check weather conditions"
+      },
+      {
+        "id": "AFH.5.26.1.w.8",
+        "text": "Incorrect use of navigation systems"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 26: Maneuvering in Slow Flight",
+    "subjects": [
+      "Aviation Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.5.27.1",
+    "question": "What are the indications of a full stall in an aircraft?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.27.1.c.1",
+        "text": "Uncommanded nose down pitch"
+      },
+      {
+        "id": "AFH.5.27.1.c.2",
+        "text": "Uncommanded rolling motion"
+      },
+      {
+        "id": "AFH.5.27.1.c.3",
+        "text": "Activation of stick pusher"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.27.1.w.1",
+        "text": "Increased airspeed"
+      },
+      {
+        "id": "AFH.5.27.1.w.2",
+        "text": "Smooth airflow over wings"
+      },
+      {
+        "id": "AFH.5.27.1.w.3",
+        "text": "Decreased angle of attack"
+      },
+      {
+        "id": "AFH.5.27.1.w.4",
+        "text": "Stable altitude"
+      },
+      {
+        "id": "AFH.5.27.1.w.5",
+        "text": "Increased lift"
+      },
+      {
+        "id": "AFH.5.27.1.w.6",
+        "text": "Decreased drag"
+      },
+      {
+        "id": "AFH.5.27.1.w.7",
+        "text": "Smooth control inputs"
+      },
+      {
+        "id": "AFH.5.27.1.w.8",
+        "text": "Stable flight attitude"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 27",
+    "subjects": [
+      "Aerodynamics",
+      "Flight Training"
+    ]
+  },
+  {
+    "questionid": "AFH.5.28.1",
+    "question": "What are some indicators of an impending stall that a pilot should recognize?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.28.1.c.1",
+        "text": "Aural alert from stall warning device"
+      },
+      {
+        "id": "AFH.5.28.1.c.2",
+        "text": "Pre-stall buffeting"
+      },
+      {
+        "id": "AFH.5.28.1.c.3",
+        "text": "Change in sound made by air flow"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.28.1.w.1",
+        "text": "Increase in engine power"
+      },
+      {
+        "id": "AFH.5.28.1.w.2",
+        "text": "Decrease in altitude"
+      },
+      {
+        "id": "AFH.5.28.1.w.3",
+        "text": "Increase in airspeed"
+      },
+      {
+        "id": "AFH.5.28.1.w.4",
+        "text": "Sudden drop in temperature"
+      },
+      {
+        "id": "AFH.5.28.1.w.5",
+        "text": "Increase in control surface resistance"
+      },
+      {
+        "id": "AFH.5.28.1.w.6",
+        "text": "Improved aircraft stability"
+      },
+      {
+        "id": "AFH.5.28.1.w.7",
+        "text": "Decrease in aircraft weight"
+      },
+      {
+        "id": "AFH.5.28.1.w.8",
+        "text": "Increase in fuel efficiency"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 28",
+    "subjects": [
+      "Aviation",
+      "Flight Safety",
+      "Stall Recognition"
+    ]
+  },
+  {
+    "questionid": "AFH.5.29.1",
+    "question": "What is the primary purpose of an Angle of Attack (AOA) indicator?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.29.1.c.1",
+        "text": "To provide situational awareness of the aerodynamic health of the airfoil"
+      },
+      {
+        "id": "AFH.5.29.1.c.2",
+        "text": "To indicate the proximity to the critical AOA"
+      },
+      {
+        "id": "AFH.5.29.1.c.3",
+        "text": "To help prevent loss of control scenarios"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.29.1.w.1",
+        "text": "To measure airspeed directly"
+      },
+      {
+        "id": "AFH.5.29.1.w.2",
+        "text": "To replace stall warning devices"
+      },
+      {
+        "id": "AFH.5.29.1.w.3",
+        "text": "To control the aircraft automatically"
+      },
+      {
+        "id": "AFH.5.29.1.w.4",
+        "text": "To indicate fuel levels"
+      },
+      {
+        "id": "AFH.5.29.1.w.5",
+        "text": "To measure altitude"
+      },
+      {
+        "id": "AFH.5.29.1.w.6",
+        "text": "To replace the need for pilot training"
+      },
+      {
+        "id": "AFH.5.29.1.w.7",
+        "text": "To provide weather updates"
+      },
+      {
+        "id": "AFH.5.29.1.w.8",
+        "text": "To serve as a primary navigation tool"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 29",
+    "subjects": [
+      "Aerodynamics",
+      "Flight Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.5.29.2",
+    "question": "What are some limitations of AOA indicators that pilots should be aware of?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.29.2.c.1",
+        "text": "Calibration techniques"
+      },
+      {
+        "id": "AFH.5.29.2.c.2",
+        "text": "Probes or vanes not being heated"
+      },
+      {
+        "id": "AFH.5.29.2.c.3",
+        "text": "Flap setting"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.29.2.w.1",
+        "text": "They cannot measure altitude"
+      },
+      {
+        "id": "AFH.5.29.2.w.2",
+        "text": "They are not affected by wing contamination"
+      },
+      {
+        "id": "AFH.5.29.2.w.3",
+        "text": "They provide real-time weather updates"
+      },
+      {
+        "id": "AFH.5.29.2.w.4",
+        "text": "They replace the need for autopilots"
+      },
+      {
+        "id": "AFH.5.29.2.w.5",
+        "text": "They are always accurate regardless of conditions"
+      },
+      {
+        "id": "AFH.5.29.2.w.6",
+        "text": "They can be used as a primary navigation tool"
+      },
+      {
+        "id": "AFH.5.29.2.w.7",
+        "text": "They measure fuel efficiency"
+      },
+      {
+        "id": "AFH.5.29.2.w.8",
+        "text": "They are unaffected by the type of indicator used"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 29",
+    "subjects": [
+      "Aerodynamics",
+      "Aircraft Systems"
+    ]
+  },
+  {
+    "questionid": "AFH.5.29.3",
+    "question": "What factors are considered by some AOA indicators to provide accurate readings?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.29.3.c.1",
+        "text": "Flap position"
+      },
+      {
+        "id": "AFH.5.29.3.c.2",
+        "text": "Current angle of attack"
+      },
+      {
+        "id": "AFH.5.29.3.c.3",
+        "text": "Proximity to critical AOA"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.29.3.w.1",
+        "text": "Fuel consumption"
+      },
+      {
+        "id": "AFH.5.29.3.w.2",
+        "text": "Engine temperature"
+      },
+      {
+        "id": "AFH.5.29.3.w.3",
+        "text": "Cabin pressure"
+      },
+      {
+        "id": "AFH.5.29.3.w.4",
+        "text": "Weather conditions"
+      },
+      {
+        "id": "AFH.5.29.3.w.5",
+        "text": "Pilot's input"
+      },
+      {
+        "id": "AFH.5.29.3.w.6",
+        "text": "Aircraft weight"
+      },
+      {
+        "id": "AFH.5.29.3.w.7",
+        "text": "Navigation data"
+      },
+      {
+        "id": "AFH.5.29.3.w.8",
+        "text": "Altitude"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 29",
+    "subjects": [
+      "Aerodynamics",
+      "Aircraft Systems"
+    ]
+  },
+  {
+    "questionid": "AFH.5.30.1",
+    "question": "What factors can affect the stall characteristics of an airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.30.1.c.1",
+        "text": "Geometry"
+      },
+      {
+        "id": "AFH.5.30.1.c.2",
+        "text": "CG"
+      },
+      {
+        "id": "AFH.5.30.1.c.3",
+        "text": "Wing design"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.30.1.w.1",
+        "text": "Engine type"
+      },
+      {
+        "id": "AFH.5.30.1.w.2",
+        "text": "Fuel type"
+      },
+      {
+        "id": "AFH.5.30.1.w.3",
+        "text": "Pilot experience"
+      },
+      {
+        "id": "AFH.5.30.1.w.4",
+        "text": "Altitude"
+      },
+      {
+        "id": "AFH.5.30.1.w.5",
+        "text": "Weather conditions"
+      },
+      {
+        "id": "AFH.5.30.1.w.6",
+        "text": "Landing gear type"
+      },
+      {
+        "id": "AFH.5.30.1.w.7",
+        "text": "Cockpit design"
+      },
+      {
+        "id": "AFH.5.30.1.w.8",
+        "text": "Passenger load"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 30",
+    "subjects": [
+      "Aviation",
+      "Aerodynamics"
+    ]
+  },
+  {
+    "questionid": "AFH.5.31.1",
+    "question": "What is the most important action to take during an impending stall or a full stall?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.31.1.c.1",
+        "text": "Reduce the angle of attack (AOA)"
+      },
+      {
+        "id": "AFH.5.31.1.c.2",
+        "text": "Pitch nose-down control"
+      },
+      {
+        "id": "AFH.5.31.1.c.3",
+        "text": "Trim nose-down pitch"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.31.1.w.1",
+        "text": "Add thrust/power"
+      },
+      {
+        "id": "AFH.5.31.1.w.2",
+        "text": "Roll wings level"
+      },
+      {
+        "id": "AFH.5.31.1.w.3",
+        "text": "Retract speedbrakes/spoilers"
+      },
+      {
+        "id": "AFH.5.31.1.w.4",
+        "text": "Maintain altitude"
+      },
+      {
+        "id": "AFH.5.31.1.w.5",
+        "text": "Disconnect the autopilot"
+      },
+      {
+        "id": "AFH.5.31.1.w.6",
+        "text": "Control bank angle"
+      },
+      {
+        "id": "AFH.5.31.1.w.7",
+        "text": "Use excessive pitch trim"
+      },
+      {
+        "id": "AFH.5.31.1.w.8",
+        "text": "Focus on maintaining airspeed"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 31",
+    "subjects": [
+      "Stall Recovery"
+    ]
+  },
+  {
+    "questionid": "AFH.5.31.2",
+    "question": "Which actions are part of the generic stall recovery procedure for light general aviation aircraft?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.31.2.c.1",
+        "text": "Disconnect the wing leveler or autopilot"
+      },
+      {
+        "id": "AFH.5.31.2.c.2",
+        "text": "Roll wings level"
+      },
+      {
+        "id": "AFH.5.31.2.c.3",
+        "text": "Add thrust/power"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.31.2.w.1",
+        "text": "Maintain altitude"
+      },
+      {
+        "id": "AFH.5.31.2.w.2",
+        "text": "Increase AOA"
+      },
+      {
+        "id": "AFH.5.31.2.w.3",
+        "text": "Use excessive pitch trim"
+      },
+      {
+        "id": "AFH.5.31.2.w.4",
+        "text": "Ignore yaw control"
+      },
+      {
+        "id": "AFH.5.31.2.w.5",
+        "text": "Focus solely on airspeed"
+      },
+      {
+        "id": "AFH.5.31.2.w.6",
+        "text": "Retract landing gear"
+      },
+      {
+        "id": "AFH.5.31.2.w.7",
+        "text": "Engage autopilot"
+      },
+      {
+        "id": "AFH.5.31.2.w.8",
+        "text": "Increase bank angle"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 31",
+    "subjects": [
+      "Stall Recovery"
+    ]
+  },
+  {
+    "questionid": "AFH.5.31.3",
+    "question": "What should be done to prevent a stall from progressing into a spin during recovery?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.31.3.c.1",
+        "text": "Roll wings level"
+      },
+      {
+        "id": "AFH.5.31.3.c.2",
+        "text": "Use rudder to cancel yaw"
+      },
+      {
+        "id": "AFH.5.31.3.c.3",
+        "text": "Reduce AOA"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.31.3.w.1",
+        "text": "Add thrust/power immediately"
+      },
+      {
+        "id": "AFH.5.31.3.w.2",
+        "text": "Engage autopilot"
+      },
+      {
+        "id": "AFH.5.31.3.w.3",
+        "text": "Maintain current flightpath"
+      },
+      {
+        "id": "AFH.5.31.3.w.4",
+        "text": "Increase pitch"
+      },
+      {
+        "id": "AFH.5.31.3.w.5",
+        "text": "Ignore yaw"
+      },
+      {
+        "id": "AFH.5.31.3.w.6",
+        "text": "Focus on altitude"
+      },
+      {
+        "id": "AFH.5.31.3.w.7",
+        "text": "Retract flaps"
+      },
+      {
+        "id": "AFH.5.31.3.w.8",
+        "text": "Increase bank angle"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 31",
+    "subjects": [
+      "Stall Recovery"
+    ]
+  },
+  {
+    "questionid": "AFH.5.32.1",
+    "question": "What are the recommended practices for stall training in single-engine airplanes?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.32.1.c.1",
+        "text": "Practice both power-on and power-off stalls"
+      },
+      {
+        "id": "AFH.5.32.1.c.2",
+        "text": "Ensure area is clear of other air traffic"
+      },
+      {
+        "id": "AFH.5.32.1.c.3",
+        "text": "Recover no lower than 1,500 feet AGL"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.32.1.w.1",
+        "text": "Practice stalls only at high altitudes"
+      },
+      {
+        "id": "AFH.5.32.1.w.2",
+        "text": "Ignore air traffic during stall practice"
+      },
+      {
+        "id": "AFH.5.32.1.w.3",
+        "text": "Recover at any altitude"
+      },
+      {
+        "id": "AFH.5.32.1.w.4",
+        "text": "Focus only on power-on stalls"
+      },
+      {
+        "id": "AFH.5.32.1.w.5",
+        "text": "Practice stalls only in calm weather"
+      },
+      {
+        "id": "AFH.5.32.1.w.6",
+        "text": "Recover below 1,000 feet AGL"
+      },
+      {
+        "id": "AFH.5.32.1.w.7",
+        "text": "Practice stalls without checking AFM/POH"
+      },
+      {
+        "id": "AFH.5.32.1.w.8",
+        "text": "Ignore altitude loss during recovery"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 32",
+    "subjects": [
+      "Stall Training"
+    ]
+  },
+  {
+    "questionid": "AFH.5.33.1",
+    "question": "What are key actions a pilot should take when an impending stall is recognized?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.33.1.c.1",
+        "text": "Reduce angle of attack immediately"
+      },
+      {
+        "id": "AFH.5.33.1.c.2",
+        "text": "Level the wings and maintain coordinated flight"
+      },
+      {
+        "id": "AFH.5.33.1.c.3",
+        "text": "Apply additional power to return to desired flightpath"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.33.1.w.1",
+        "text": "Allow the airplane to reach critical AOA"
+      },
+      {
+        "id": "AFH.5.33.1.w.2",
+        "text": "Ignore stall warning device activation"
+      },
+      {
+        "id": "AFH.5.33.1.w.3",
+        "text": "Increase angle of attack"
+      },
+      {
+        "id": "AFH.5.33.1.w.4",
+        "text": "Perform a full stall"
+      },
+      {
+        "id": "AFH.5.33.1.w.5",
+        "text": "Reduce power to idle"
+      },
+      {
+        "id": "AFH.5.33.1.w.6",
+        "text": "Initiate a spin recovery"
+      },
+      {
+        "id": "AFH.5.33.1.w.7",
+        "text": "Maintain current flightpath without changes"
+      },
+      {
+        "id": "AFH.5.33.1.w.8",
+        "text": "Increase pitch attitude excessively"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 33",
+    "subjects": [
+      "Aviation Safety",
+      "Pilot Training",
+      "Stall Recovery"
+    ]
+  },
+  {
+    "questionid": "AFH.5.34.1",
+    "question": "What are the correct steps to set up the entry for a straight-ahead power-off stall?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.34.1.c.1",
+        "text": "Extend the landing gear"
+      },
+      {
+        "id": "AFH.5.34.1.c.2",
+        "text": "Apply carburetor heat if applicable"
+      },
+      {
+        "id": "AFH.5.34.1.c.3",
+        "text": "Retard the throttle sufficiently"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.34.1.w.1",
+        "text": "Increase airspeed to maximum"
+      },
+      {
+        "id": "AFH.5.34.1.w.2",
+        "text": "Retract the landing gear"
+      },
+      {
+        "id": "AFH.5.34.1.w.3",
+        "text": "Apply full throttle"
+      },
+      {
+        "id": "AFH.5.34.1.w.4",
+        "text": "Ignore carburetor heat"
+      },
+      {
+        "id": "AFH.5.34.1.w.5",
+        "text": "Pitch up aggressively"
+      },
+      {
+        "id": "AFH.5.34.1.w.6",
+        "text": "Maintain high altitude"
+      },
+      {
+        "id": "AFH.5.34.1.w.7",
+        "text": "Use only ailerons for control"
+      },
+      {
+        "id": "AFH.5.34.1.w.8",
+        "text": "Initiate a steep bank"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 34",
+    "subjects": [
+      "Stall Recovery",
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.5.34.2",
+    "question": "What actions should a pilot take to recover from a power-off stall?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.34.2.c.1",
+        "text": "Reduce the angle of attack"
+      },
+      {
+        "id": "AFH.5.34.2.c.2",
+        "text": "Apply nose-down control input"
+      },
+      {
+        "id": "AFH.5.34.2.c.3",
+        "text": "Level the wings"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.34.2.w.1",
+        "text": "Increase the angle of attack"
+      },
+      {
+        "id": "AFH.5.34.2.w.2",
+        "text": "Apply full throttle immediately"
+      },
+      {
+        "id": "AFH.5.34.2.w.3",
+        "text": "Ignore rudder input"
+      },
+      {
+        "id": "AFH.5.34.2.w.4",
+        "text": "Maintain pitch attitude"
+      },
+      {
+        "id": "AFH.5.34.2.w.5",
+        "text": "Retract flaps instantly"
+      },
+      {
+        "id": "AFH.5.34.2.w.6",
+        "text": "Perform a steep turn"
+      },
+      {
+        "id": "AFH.5.34.2.w.7",
+        "text": "Ignore stall warning"
+      },
+      {
+        "id": "AFH.5.34.2.w.8",
+        "text": "Increase bank angle"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 34",
+    "subjects": [
+      "Stall Recovery",
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.5.34.3",
+    "question": "During the practice of power-off stalls, what should a pilot do to maintain coordinated flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.34.3.c.1",
+        "text": "Use coordinated aileron and rudder inputs"
+      },
+      {
+        "id": "AFH.5.34.3.c.2",
+        "text": "Maintain constant bank angle"
+      },
+      {
+        "id": "AFH.5.34.3.c.3",
+        "text": "Ensure the airplane remains coordinated"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.34.3.w.1",
+        "text": "Ignore rudder input"
+      },
+      {
+        "id": "AFH.5.34.3.w.2",
+        "text": "Increase bank angle abruptly"
+      },
+      {
+        "id": "AFH.5.34.3.w.3",
+        "text": "Allow the airplane to slip"
+      },
+      {
+        "id": "AFH.5.34.3.w.4",
+        "text": "Focus only on aileron input"
+      },
+      {
+        "id": "AFH.5.34.3.w.5",
+        "text": "Pitch up aggressively"
+      },
+      {
+        "id": "AFH.5.34.3.w.6",
+        "text": "Ignore bank angle"
+      },
+      {
+        "id": "AFH.5.34.3.w.7",
+        "text": "Use only throttle for control"
+      },
+      {
+        "id": "AFH.5.34.3.w.8",
+        "text": "Perform a steep climb"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 34",
+    "subjects": [
+      "Stall Recovery",
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.5.35.1",
+    "question": "What are the correct procedures for recovering from a power-on stall?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.35.1.c.1",
+        "text": "Reduce the angle of attack immediately"
+      },
+      {
+        "id": "AFH.5.35.1.c.2",
+        "text": "Level the wings with ailerons"
+      },
+      {
+        "id": "AFH.5.35.1.c.3",
+        "text": "Smoothly advance the power as needed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.35.1.w.1",
+        "text": "Increase the angle of attack"
+      },
+      {
+        "id": "AFH.5.35.1.w.2",
+        "text": "Apply left rudder pressure"
+      },
+      {
+        "id": "AFH.5.35.1.w.3",
+        "text": "Retract the flaps immediately"
+      },
+      {
+        "id": "AFH.5.35.1.w.4",
+        "text": "Maintain the climb attitude"
+      },
+      {
+        "id": "AFH.5.35.1.w.5",
+        "text": "Decrease the throttle to idle"
+      },
+      {
+        "id": "AFH.5.35.1.w.6",
+        "text": "Ignore the stall warning"
+      },
+      {
+        "id": "AFH.5.35.1.w.7",
+        "text": "Perform a steep turn"
+      },
+      {
+        "id": "AFH.5.35.1.w.8",
+        "text": "Descend rapidly"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 35",
+    "subjects": [
+      "Aviation",
+      "Flight Training",
+      "Stall Recovery"
+    ]
+  },
+  {
+    "questionid": "AFH.5.36.1",
+    "question": "What actions should a pilot take to recover from a secondary stall?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.36.1.c.1",
+        "text": "Apply nose-down elevator pressure"
+      },
+      {
+        "id": "AFH.5.36.1.c.2",
+        "text": "Level the wings with ailerons"
+      },
+      {
+        "id": "AFH.5.36.1.c.3",
+        "text": "Coordinate with rudder"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.36.1.w.1",
+        "text": "Increase pitch attitude immediately"
+      },
+      {
+        "id": "AFH.5.36.1.w.2",
+        "text": "Use power only to break the stall"
+      },
+      {
+        "id": "AFH.5.36.1.w.3",
+        "text": "Ignore stall warning"
+      },
+      {
+        "id": "AFH.5.36.1.w.4",
+        "text": "Apply full throttle immediately"
+      },
+      {
+        "id": "AFH.5.36.1.w.5",
+        "text": "Pull back on the yoke"
+      },
+      {
+        "id": "AFH.5.36.1.w.6",
+        "text": "Ignore ailerons"
+      },
+      {
+        "id": "AFH.5.36.1.w.7",
+        "text": "Increase angle of attack"
+      },
+      {
+        "id": "AFH.5.36.1.w.8",
+        "text": "Maintain current flightpath"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 36",
+    "subjects": [
+      "Aviation Safety",
+      "Stall Recovery"
+    ]
+  },
+  {
+    "questionid": "AFH.5.37.1",
+    "question": "What are the objectives of demonstrating an accelerated stall?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.37.1.c.1",
+        "text": "Determine stall characteristics"
+      },
+      {
+        "id": "AFH.5.37.1.c.2",
+        "text": "Experience stalls at speeds greater than +1G stall speed"
+      },
+      {
+        "id": "AFH.5.37.1.c.3",
+        "text": "Develop ability to recover at onset of stalls"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.37.1.w.1",
+        "text": "Practice stalls with wing flaps extended"
+      },
+      {
+        "id": "AFH.5.37.1.w.2",
+        "text": "Perform stalls at any speed"
+      },
+      {
+        "id": "AFH.5.37.1.w.3",
+        "text": "Ignore airplane configuration"
+      },
+      {
+        "id": "AFH.5.37.1.w.4",
+        "text": "Disregard CG location"
+      },
+      {
+        "id": "AFH.5.37.1.w.5",
+        "text": "Neglect power setting"
+      },
+      {
+        "id": "AFH.5.37.1.w.6",
+        "text": "Overlook environmental conditions"
+      },
+      {
+        "id": "AFH.5.37.1.w.7",
+        "text": "Perform stalls with any bank angle"
+      },
+      {
+        "id": "AFH.5.37.1.w.8",
+        "text": "Ignore VA or VO"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 37",
+    "subjects": [
+      "Accelerated Stalls"
+    ]
+  },
+  {
+    "questionid": "AFH.5.37.2",
+    "question": "Under what conditions can an airplane stall at a higher indicated airspeed?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.37.2.c.1",
+        "text": "Acceleration greater than +1G"
+      },
+      {
+        "id": "AFH.5.37.2.c.2",
+        "text": "During turning maneuvers"
+      },
+      {
+        "id": "AFH.5.37.2.c.3",
+        "text": "Pulling up abruptly"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.37.2.w.1",
+        "text": "Steady-state unaccelerated flight"
+      },
+      {
+        "id": "AFH.5.37.2.w.2",
+        "text": "With wing flaps extended"
+      },
+      {
+        "id": "AFH.5.37.2.w.3",
+        "text": "At constant altitude"
+      },
+      {
+        "id": "AFH.5.37.2.w.4",
+        "text": "During level flight"
+      },
+      {
+        "id": "AFH.5.37.2.w.5",
+        "text": "With no control input"
+      },
+      {
+        "id": "AFH.5.37.2.w.6",
+        "text": "At low speeds"
+      },
+      {
+        "id": "AFH.5.37.2.w.7",
+        "text": "In calm weather"
+      },
+      {
+        "id": "AFH.5.37.2.w.8",
+        "text": "With low G-load"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 37",
+    "subjects": [
+      "Accelerated Stalls"
+    ]
+  },
+  {
+    "questionid": "AFH.5.37.3",
+    "question": "What situations can inadvertently lead to an accelerated stall?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.37.3.c.1",
+        "text": "Improperly executed turns"
+      },
+      {
+        "id": "AFH.5.37.3.c.2",
+        "text": "Pullouts from steep dives"
+      },
+      {
+        "id": "AFH.5.37.3.c.3",
+        "text": "Overshooting a base to final turn"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.37.3.w.1",
+        "text": "Level flight"
+      },
+      {
+        "id": "AFH.5.37.3.w.2",
+        "text": "Slow flight"
+      },
+      {
+        "id": "AFH.5.37.3.w.3",
+        "text": "Climbing turns"
+      },
+      {
+        "id": "AFH.5.37.3.w.4",
+        "text": "Descending turns"
+      },
+      {
+        "id": "AFH.5.37.3.w.5",
+        "text": "Normal takeoff"
+      },
+      {
+        "id": "AFH.5.37.3.w.6",
+        "text": "Cruise flight"
+      },
+      {
+        "id": "AFH.5.37.3.w.7",
+        "text": "Landing flare"
+      },
+      {
+        "id": "AFH.5.37.3.w.8",
+        "text": "Taxiing"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 37",
+    "subjects": [
+      "Accelerated Stalls"
+    ]
+  },
+  {
+    "questionid": "AFH.5.37.4",
+    "question": "Why should accelerated stalls not be practiced with wing flaps extended?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.37.4.c.1",
+        "text": "Lower design G-load limitations"
+      },
+      {
+        "id": "AFH.5.37.4.c.2",
+        "text": "Risk of structural damage"
+      },
+      {
+        "id": "AFH.5.37.4.c.3",
+        "text": "Increased stall speed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.37.4.w.1",
+        "text": "Improved lift"
+      },
+      {
+        "id": "AFH.5.37.4.w.2",
+        "text": "Better control"
+      },
+      {
+        "id": "AFH.5.37.4.w.3",
+        "text": "Higher maneuverability"
+      },
+      {
+        "id": "AFH.5.37.4.w.4",
+        "text": "Reduced drag"
+      },
+      {
+        "id": "AFH.5.37.4.w.5",
+        "text": "Enhanced stability"
+      },
+      {
+        "id": "AFH.5.37.4.w.6",
+        "text": "Increased safety"
+      },
+      {
+        "id": "AFH.5.37.4.w.7",
+        "text": "Lower stall speed"
+      },
+      {
+        "id": "AFH.5.37.4.w.8",
+        "text": "More predictable behavior"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 37",
+    "subjects": [
+      "Accelerated Stalls"
+    ]
+  },
+  {
+    "questionid": "AFH.5.38.1",
+    "question": "What is the primary objective of the cross-control stall demonstration?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.38.1.c.1",
+        "text": "To show the effects of uncoordinated flight on stall behavior"
+      },
+      {
+        "id": "AFH.5.38.1.c.2",
+        "text": "To emphasize the importance of maintaining coordinated flight while making turns"
+      },
+      {
+        "id": "AFH.5.38.1.c.3",
+        "text": "To familiarize pilots with situations that can lead to a cross-control stall"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.38.1.w.1",
+        "text": "To practice emergency landings"
+      },
+      {
+        "id": "AFH.5.38.1.w.2",
+        "text": "To improve takeoff performance"
+      },
+      {
+        "id": "AFH.5.38.1.w.3",
+        "text": "To demonstrate advanced aerobatic maneuvers"
+      },
+      {
+        "id": "AFH.5.38.1.w.4",
+        "text": "To enhance fuel efficiency"
+      },
+      {
+        "id": "AFH.5.38.1.w.5",
+        "text": "To increase cruising speed"
+      },
+      {
+        "id": "AFH.5.38.1.w.6",
+        "text": "To reduce aircraft noise"
+      },
+      {
+        "id": "AFH.5.38.1.w.7",
+        "text": "To test engine performance"
+      },
+      {
+        "id": "AFH.5.38.1.w.8",
+        "text": "To evaluate landing gear functionality"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 38",
+    "subjects": [
+      "Aerodynamics",
+      "Flight Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.5.38.2",
+    "question": "What actions should a pilot take to recover from a cross-control stall?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.38.2.c.1",
+        "text": "Reduce the angle of attack until the stall warning is eliminated"
+      },
+      {
+        "id": "AFH.5.38.2.c.2",
+        "text": "Roll wings level using ailerons"
+      },
+      {
+        "id": "AFH.5.38.2.c.3",
+        "text": "Coordinate with rudder inputs"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.38.2.w.1",
+        "text": "Increase throttle to maximum"
+      },
+      {
+        "id": "AFH.5.38.2.w.2",
+        "text": "Deploy full flaps"
+      },
+      {
+        "id": "AFH.5.38.2.w.3",
+        "text": "Engage autopilot"
+      },
+      {
+        "id": "AFH.5.38.2.w.4",
+        "text": "Perform a barrel roll"
+      },
+      {
+        "id": "AFH.5.38.2.w.5",
+        "text": "Increase bank angle"
+      },
+      {
+        "id": "AFH.5.38.2.w.6",
+        "text": "Pull back on the elevator"
+      },
+      {
+        "id": "AFH.5.38.2.w.7",
+        "text": "Turn off avionics"
+      },
+      {
+        "id": "AFH.5.38.2.w.8",
+        "text": "Extend landing gear"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 38",
+    "subjects": [
+      "Aerodynamics",
+      "Flight Recovery"
+    ]
+  },
+  {
+    "questionid": "AFH.5.38.3",
+    "question": "In what flight situation is a cross-control stall most likely to occur?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.38.3.c.1",
+        "text": "During a poorly planned base-to-final approach turn"
+      },
+      {
+        "id": "AFH.5.38.3.c.2",
+        "text": "When there is an unrecognized tailwind component"
+      },
+      {
+        "id": "AFH.5.38.3.c.3",
+        "text": "When the airplane overshoots the runway centerline"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.38.3.w.1",
+        "text": "During a straight-and-level flight"
+      },
+      {
+        "id": "AFH.5.38.3.w.2",
+        "text": "While climbing to cruise altitude"
+      },
+      {
+        "id": "AFH.5.38.3.w.3",
+        "text": "During a stabilized descent"
+      },
+      {
+        "id": "AFH.5.38.3.w.4",
+        "text": "In a steep climb"
+      },
+      {
+        "id": "AFH.5.38.3.w.5",
+        "text": "While taxiing on the runway"
+      },
+      {
+        "id": "AFH.5.38.3.w.6",
+        "text": "During a normal takeoff"
+      },
+      {
+        "id": "AFH.5.38.3.w.7",
+        "text": "In a holding pattern"
+      },
+      {
+        "id": "AFH.5.38.3.w.8",
+        "text": "While performing a touch-and-go"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 38",
+    "subjects": [
+      "Flight Maneuvers",
+      "Safety Precautions"
+    ]
+  },
+  {
+    "questionid": "AFH.5.39.1",
+    "question": "What are the key actions to prevent an elevator trim stall during a go-around?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.39.1.c.1",
+        "text": "Apply smooth power applications"
+      },
+      {
+        "id": "AFH.5.39.1.c.2",
+        "text": "Maintain positive control of the airplane"
+      },
+      {
+        "id": "AFH.5.39.1.c.3",
+        "text": "Use proper and timely trim techniques"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.39.1.w.1",
+        "text": "Ignore trim settings"
+      },
+      {
+        "id": "AFH.5.39.1.w.2",
+        "text": "Rely solely on airspeed indicator"
+      },
+      {
+        "id": "AFH.5.39.1.w.3",
+        "text": "Apply abrupt control inputs"
+      },
+      {
+        "id": "AFH.5.39.1.w.4",
+        "text": "Neglect to clear the area"
+      },
+      {
+        "id": "AFH.5.39.1.w.5",
+        "text": "Focus only on slip-skid indicator"
+      },
+      {
+        "id": "AFH.5.39.1.w.6",
+        "text": "Delay throttle adjustments"
+      },
+      {
+        "id": "AFH.5.39.1.w.7",
+        "text": "Overlook stall warnings"
+      },
+      {
+        "id": "AFH.5.39.1.w.8",
+        "text": "Perform rapid control movements"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 39",
+    "subjects": [
+      "Aviation Safety",
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.5.39.2",
+    "question": "During an elevator trim stall demonstration, what should a pilot do when the airplane approaches a stall?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.39.2.c.1",
+        "text": "Apply forward elevator pressure"
+      },
+      {
+        "id": "AFH.5.39.2.c.2",
+        "text": "Reduce angle of attack"
+      },
+      {
+        "id": "AFH.5.39.2.c.3",
+        "text": "Adjust trim to relieve control pressures"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.39.2.w.1",
+        "text": "Ignore the stall warning"
+      },
+      {
+        "id": "AFH.5.39.2.w.2",
+        "text": "Increase throttle abruptly"
+      },
+      {
+        "id": "AFH.5.39.2.w.3",
+        "text": "Pull back on the controls"
+      },
+      {
+        "id": "AFH.5.39.2.w.4",
+        "text": "Rely on autopilot"
+      },
+      {
+        "id": "AFH.5.39.2.w.5",
+        "text": "Focus on instruments only"
+      },
+      {
+        "id": "AFH.5.39.2.w.6",
+        "text": "Maintain current pitch attitude"
+      },
+      {
+        "id": "AFH.5.39.2.w.7",
+        "text": "Delay corrective actions"
+      },
+      {
+        "id": "AFH.5.39.2.w.8",
+        "text": "Perform a full stall recovery"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 39",
+    "subjects": [
+      "Aviation Safety",
+      "Stall Recovery"
+    ]
+  },
+  {
+    "questionid": "AFH.5.39.3",
+    "question": "What are common errors in performing intentional stalls?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.39.3.c.1",
+        "text": "Failure to adequately clear the area"
+      },
+      {
+        "id": "AFH.5.39.3.c.2",
+        "text": "Over-reliance on airspeed indicator"
+      },
+      {
+        "id": "AFH.5.39.3.c.3",
+        "text": "Inability to recognize an impending stall condition"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.39.3.w.1",
+        "text": "Ignoring trim settings"
+      },
+      {
+        "id": "AFH.5.39.3.w.2",
+        "text": "Applying smooth control inputs"
+      },
+      {
+        "id": "AFH.5.39.3.w.3",
+        "text": "Maintaining positive control"
+      },
+      {
+        "id": "AFH.5.39.3.w.4",
+        "text": "Using proper trim techniques"
+      },
+      {
+        "id": "AFH.5.39.3.w.5",
+        "text": "Clearing the area thoroughly"
+      },
+      {
+        "id": "AFH.5.39.3.w.6",
+        "text": "Recognizing stall conditions early"
+      },
+      {
+        "id": "AFH.5.39.3.w.7",
+        "text": "Taking timely corrective actions"
+      },
+      {
+        "id": "AFH.5.39.3.w.8",
+        "text": "Avoiding full stall conditions"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 39",
+    "subjects": [
+      "Aviation Safety",
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.5.40.1",
+    "question": "What conditions must be present for an airplane to enter a spin?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.40.1.c.1",
+        "text": "The airplane must be stalled."
+      },
+      {
+        "id": "AFH.5.40.1.c.2",
+        "text": "There must be yaw acting on the airplane."
+      },
+      {
+        "id": "AFH.5.40.1.c.3",
+        "text": "At least one wing must exceed the critical AOA."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.40.1.w.1",
+        "text": "The airplane must be in level flight."
+      },
+      {
+        "id": "AFH.5.40.1.w.2",
+        "text": "The airplane must be at maximum speed."
+      },
+      {
+        "id": "AFH.5.40.1.w.3",
+        "text": "Both wings must be unstalled."
+      },
+      {
+        "id": "AFH.5.40.1.w.4",
+        "text": "The airplane must be in a climb."
+      },
+      {
+        "id": "AFH.5.40.1.w.5",
+        "text": "The airplane must have no yaw."
+      },
+      {
+        "id": "AFH.5.40.1.w.6",
+        "text": "The airplane must be in a descent."
+      },
+      {
+        "id": "AFH.5.40.1.w.7",
+        "text": "The airplane must be in coordinated flight."
+      },
+      {
+        "id": "AFH.5.40.1.w.8",
+        "text": "The airplane must be at low altitude."
+      }
+    ],
+    "source": "AFH Chapter 5, Section 40: Spin Awareness",
+    "subjects": [
+      "Aviation Safety",
+      "Aerodynamics"
+    ]
+  },
+  {
+    "questionid": "AFH.5.41.1",
+    "question": "What are essential steps to take before attempting a spin in an airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.41.1.c.1",
+        "text": "Review the airplane's AFM/POH limitations section"
+      },
+      {
+        "id": "AFH.5.41.1.c.2",
+        "text": "Ensure the airplane is within CG limitations"
+      },
+      {
+        "id": "AFH.5.41.1.c.3",
+        "text": "Conduct a thorough preflight inspection"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.41.1.w.1",
+        "text": "Ignore parachute requirements"
+      },
+      {
+        "id": "AFH.5.41.1.w.2",
+        "text": "Disregard weight and balance limitations"
+      },
+      {
+        "id": "AFH.5.41.1.w.3",
+        "text": "Overlook slack control cables"
+      },
+      {
+        "id": "AFH.5.41.1.w.4",
+        "text": "Skip checking for loose items"
+      },
+      {
+        "id": "AFH.5.41.1.w.5",
+        "text": "Neglect clearing the flight area"
+      },
+      {
+        "id": "AFH.5.41.1.w.6",
+        "text": "Begin spins below 1,500 feet AGL"
+      },
+      {
+        "id": "AFH.5.41.1.w.7",
+        "text": "Avoid practicing stalls"
+      },
+      {
+        "id": "AFH.5.41.1.w.8",
+        "text": "Ignore altitude loss during spins"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 41",
+    "subjects": [
+      "Spin Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.5.42.1",
+    "question": "What are the correct procedures for entering a spin during the entry phase?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.42.1.c.1",
+        "text": "Slowly reduce power to idle"
+      },
+      {
+        "id": "AFH.5.42.1.c.2",
+        "text": "Raise the nose to a pitch attitude that ensures a stall"
+      },
+      {
+        "id": "AFH.5.42.1.c.3",
+        "text": "Apply full rudder in the direction of the desired spin rotation"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.42.1.w.1",
+        "text": "Increase power to full"
+      },
+      {
+        "id": "AFH.5.42.1.w.2",
+        "text": "Lower the nose to prevent a stall"
+      },
+      {
+        "id": "AFH.5.42.1.w.3",
+        "text": "Apply opposite rudder to the desired spin rotation"
+      },
+      {
+        "id": "AFH.5.42.1.w.4",
+        "text": "Use full aileron deflection"
+      },
+      {
+        "id": "AFH.5.42.1.w.5",
+        "text": "Maintain a high power setting"
+      },
+      {
+        "id": "AFH.5.42.1.w.6",
+        "text": "Apply forward (down) elevator"
+      },
+      {
+        "id": "AFH.5.42.1.w.7",
+        "text": "Use partial rudder input"
+      },
+      {
+        "id": "AFH.5.42.1.w.8",
+        "text": "Keep ailerons deflected to one side"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 42",
+    "subjects": [
+      "Aviation",
+      "Flight Maneuvers",
+      "Spin Entry"
+    ]
+  },
+  {
+    "questionid": "AFH.5.43.1",
+    "question": "What actions should a pilot take during the incipient phase of a spin?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.43.1.c.1",
+        "text": "Initiate incipient spin recovery procedures before 360° of rotation"
+      },
+      {
+        "id": "AFH.5.43.1.c.2",
+        "text": "Apply full rudder opposite the direction of rotation"
+      },
+      {
+        "id": "AFH.5.43.1.c.3",
+        "text": "Use the turn indicator to determine the direction of the spin"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.43.1.w.1",
+        "text": "Use the slip/skid ball to determine spin direction"
+      },
+      {
+        "id": "AFH.5.43.1.w.2",
+        "text": "Wait for the spin to fully develop before taking action"
+      },
+      {
+        "id": "AFH.5.43.1.w.3",
+        "text": "Apply full rudder in the direction of rotation"
+      },
+      {
+        "id": "AFH.5.43.1.w.4",
+        "text": "Ignore the turn indicator during the spin"
+      },
+      {
+        "id": "AFH.5.43.1.w.5",
+        "text": "Rely on the ball position for spin direction"
+      },
+      {
+        "id": "AFH.5.43.1.w.6",
+        "text": "Allow the spin to complete two full turns before recovery"
+      },
+      {
+        "id": "AFH.5.43.1.w.7",
+        "text": "Use ailerons to correct the spin"
+      },
+      {
+        "id": "AFH.5.43.1.w.8",
+        "text": "Stabilize airspeed before taking recovery action"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 43",
+    "subjects": [
+      "Aviation",
+      "Flight Training",
+      "Spin Recovery"
+    ]
+  },
+  {
+    "questionid": "AFH.5.44.1",
+    "question": "What characterizes the developed phase of a spin in an airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.44.1.c.1",
+        "text": "Angular rotation rate is stabilized"
+      },
+      {
+        "id": "AFH.5.44.1.c.2",
+        "text": "Airspeed is stabilized"
+      },
+      {
+        "id": "AFH.5.44.1.c.3",
+        "text": "Vertical speed is stabilized"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.44.1.w.1",
+        "text": "Airplane is accelerating"
+      },
+      {
+        "id": "AFH.5.44.1.w.2",
+        "text": "G load is rapidly increasing"
+      },
+      {
+        "id": "AFH.5.44.1.w.3",
+        "text": "Airplane is in a spiral dive"
+      },
+      {
+        "id": "AFH.5.44.1.w.4",
+        "text": "Airspeed is decreasing"
+      },
+      {
+        "id": "AFH.5.44.1.w.5",
+        "text": "Vertical speed is decreasing"
+      },
+      {
+        "id": "AFH.5.44.1.w.6",
+        "text": "Angular rotation rate is decreasing"
+      },
+      {
+        "id": "AFH.5.44.1.w.7",
+        "text": "Airplane is in equilibrium during a spiral dive"
+      },
+      {
+        "id": "AFH.5.44.1.w.8",
+        "text": "Training airplanes always enter the developed phase"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 44",
+    "subjects": [
+      "Aviation",
+      "Aerodynamics",
+      "Flight Dynamics"
+    ]
+  },
+  {
+    "questionid": "AFH.5.45.1",
+    "question": "What is the first step in the six-step spin recovery procedure?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.45.1.c.1",
+        "text": "Reduce the power (throttle) to idle"
+      },
+      {
+        "id": "AFH.5.45.1.c.2",
+        "text": "Power aggravates spin characteristics"
+      },
+      {
+        "id": "AFH.5.45.1.c.3",
+        "text": "Power can result in a flatter spin attitude"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.45.1.w.1",
+        "text": "Position the ailerons to neutral"
+      },
+      {
+        "id": "AFH.5.45.1.w.2",
+        "text": "Apply full opposite rudder"
+      },
+      {
+        "id": "AFH.5.45.1.w.3",
+        "text": "Apply forward elevator"
+      },
+      {
+        "id": "AFH.5.45.1.w.4",
+        "text": "Neutralize the rudder"
+      },
+      {
+        "id": "AFH.5.45.1.w.5",
+        "text": "Apply back elevator pressure"
+      },
+      {
+        "id": "AFH.5.45.1.w.6",
+        "text": "Retract flaps and landing gear"
+      },
+      {
+        "id": "AFH.5.45.1.w.7",
+        "text": "Follow manufacturer's procedures"
+      },
+      {
+        "id": "AFH.5.45.1.w.8",
+        "text": "Ensure ailerons are neutral"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 45",
+    "subjects": [
+      "Aviation Safety",
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.5.45.2",
+    "question": "Why should ailerons be positioned to neutral during spin recovery?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.45.2.c.1",
+        "text": "Ailerons may have an adverse effect on spin recovery"
+      },
+      {
+        "id": "AFH.5.45.2.c.2",
+        "text": "Aileron control in the direction of the spin may accelerate rotation"
+      },
+      {
+        "id": "AFH.5.45.2.c.3",
+        "text": "Aileron control opposite the spin may cause flattening of the spin"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.45.2.w.1",
+        "text": "Ailerons help stabilize the aircraft"
+      },
+      {
+        "id": "AFH.5.45.2.w.2",
+        "text": "Ailerons increase lift during recovery"
+      },
+      {
+        "id": "AFH.5.45.2.w.3",
+        "text": "Ailerons should be used to counteract spin"
+      },
+      {
+        "id": "AFH.5.45.2.w.4",
+        "text": "Ailerons are not important in spin recovery"
+      },
+      {
+        "id": "AFH.5.45.2.w.5",
+        "text": "Ailerons should be fully deflected"
+      },
+      {
+        "id": "AFH.5.45.2.w.6",
+        "text": "Ailerons control the rate of descent"
+      },
+      {
+        "id": "AFH.5.45.2.w.7",
+        "text": "Ailerons should be used to steer out of the spin"
+      },
+      {
+        "id": "AFH.5.45.2.w.8",
+        "text": "Ailerons should be used to increase speed"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 45",
+    "subjects": [
+      "Aviation Safety",
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.5.45.3",
+    "question": "What should be done immediately after applying full opposite rudder in spin recovery?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.45.3.c.1",
+        "text": "Apply positive, brisk, and straight-forward elevator"
+      },
+      {
+        "id": "AFH.5.45.3.c.2",
+        "text": "Decrease the AOA to drive the airplane toward unstalled flight"
+      },
+      {
+        "id": "AFH.5.45.3.c.3",
+        "text": "Full forward elevator may be required for recovery"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.45.3.w.1",
+        "text": "Wait for the rotation to stop"
+      },
+      {
+        "id": "AFH.5.45.3.w.2",
+        "text": "Neutralize the rudder"
+      },
+      {
+        "id": "AFH.5.45.3.w.3",
+        "text": "Apply back elevator pressure"
+      },
+      {
+        "id": "AFH.5.45.3.w.4",
+        "text": "Increase throttle to regain speed"
+      },
+      {
+        "id": "AFH.5.45.3.w.5",
+        "text": "Use ailerons to stabilize"
+      },
+      {
+        "id": "AFH.5.45.3.w.6",
+        "text": "Retract landing gear"
+      },
+      {
+        "id": "AFH.5.45.3.w.7",
+        "text": "Check airspeed indicator"
+      },
+      {
+        "id": "AFH.5.45.3.w.8",
+        "text": "Adjust flaps for lift"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 45",
+    "subjects": [
+      "Aviation Safety",
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.5.46.1",
+    "question": "What are the official sources for determining if a spin maneuver is approved for an aircraft?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.46.1.c.1",
+        "text": "Type Certificate Data Sheets or the aircraft specifications"
+      },
+      {
+        "id": "AFH.5.46.1.c.2",
+        "text": "The limitation section of the FAA-approved AFM/POH"
+      },
+      {
+        "id": "AFH.5.46.1.c.3",
+        "text": "A placard located in clear view of the pilot"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.46.1.w.1",
+        "text": "Pilot's personal logbook"
+      },
+      {
+        "id": "AFH.5.46.1.w.2",
+        "text": "Maintenance manual"
+      },
+      {
+        "id": "AFH.5.46.1.w.3",
+        "text": "Weather reports"
+      },
+      {
+        "id": "AFH.5.46.1.w.4",
+        "text": "Flight instructor's opinion"
+      },
+      {
+        "id": "AFH.5.46.1.w.5",
+        "text": "Passenger briefing card"
+      },
+      {
+        "id": "AFH.5.46.1.w.6",
+        "text": "Aircraft's exterior paint scheme"
+      },
+      {
+        "id": "AFH.5.46.1.w.7",
+        "text": "ATC clearance"
+      },
+      {
+        "id": "AFH.5.46.1.w.8",
+        "text": "Flight plan"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 46",
+    "subjects": [
+      "Aviation Regulations",
+      "Aircraft Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.5.47.1",
+    "question": "What are the reasons pilots should avoid intentional spins in airplanes placarded against spins?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.47.1.c.1",
+        "text": "No assurance of recovery from a fully developed spin"
+      },
+      {
+        "id": "AFH.5.47.1.c.2",
+        "text": "Certification may not require recovery from fully developed spins"
+      },
+      {
+        "id": "AFH.5.47.1.c.3",
+        "text": "Airplanes may become uncontrollable in a spin"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.47.1.w.1",
+        "text": "Spins are always safe in certified airplanes"
+      },
+      {
+        "id": "AFH.5.47.1.w.2",
+        "text": "All airplanes are tested for full spin recovery"
+      },
+      {
+        "id": "AFH.5.47.1.w.3",
+        "text": "Placards are only suggestions"
+      },
+      {
+        "id": "AFH.5.47.1.w.4",
+        "text": "Spin restrictions are outdated"
+      },
+      {
+        "id": "AFH.5.47.1.w.5",
+        "text": "All airplanes can recover from any spin"
+      },
+      {
+        "id": "AFH.5.47.1.w.6",
+        "text": "Spin testing is mandatory for all airplanes"
+      },
+      {
+        "id": "AFH.5.47.1.w.7",
+        "text": "Spins are part of regular flight training"
+      },
+      {
+        "id": "AFH.5.47.1.w.8",
+        "text": "Placards do not apply to experienced pilots"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 47",
+    "subjects": [
+      "Aviation Safety",
+      "Aircraft Certification",
+      "Pilot Training"
+    ]
+  },
+  {
+    "questionid": "AFH.5.48.1",
+    "question": "What are some common errors in the performance of intentional spins?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.48.1.c.1",
+        "text": "Failure to apply full rudder pressure in the desired spin direction during spin entry"
+      },
+      {
+        "id": "AFH.5.48.1.c.2",
+        "text": "Failure to achieve a fully-stalled condition prior to spin entry"
+      },
+      {
+        "id": "AFH.5.48.1.c.3",
+        "text": "Failure to neutralize the rudder after rotation stops"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.48.1.w.1",
+        "text": "Applying excessive forward-elevator pressure during spin entry"
+      },
+      {
+        "id": "AFH.5.48.1.w.2",
+        "text": "Maintaining neutral rudder during spin entry"
+      },
+      {
+        "id": "AFH.5.48.1.w.3",
+        "text": "Applying full aileron pressure during recovery"
+      },
+      {
+        "id": "AFH.5.48.1.w.4",
+        "text": "Applying full throttle during spin entry"
+      },
+      {
+        "id": "AFH.5.48.1.w.5",
+        "text": "Applying brakes during spin recovery"
+      },
+      {
+        "id": "AFH.5.48.1.w.6",
+        "text": "Using flaps during spin entry"
+      },
+      {
+        "id": "AFH.5.48.1.w.7",
+        "text": "Applying excessive rudder pressure against the spin during entry"
+      },
+      {
+        "id": "AFH.5.48.1.w.8",
+        "text": "Applying excessive back-elevator pressure during spin entry"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 48",
+    "subjects": [
+      "Aviation",
+      "Flight Maneuvers",
+      "Safety Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.5.49.1",
+    "question": "What are the correct steps to recover from a spiral dive?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.49.1.c.1",
+        "text": "Reduce power to idle"
+      },
+      {
+        "id": "AFH.5.49.1.c.2",
+        "text": "Roll to wings level using coordinated aileron and rudder inputs"
+      },
+      {
+        "id": "AFH.5.49.1.c.3",
+        "text": "Gently raise the nose to level flight"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.49.1.w.1",
+        "text": "Increase power immediately"
+      },
+      {
+        "id": "AFH.5.49.1.w.2",
+        "text": "Pull back rapidly on the yoke"
+      },
+      {
+        "id": "AFH.5.49.1.w.3",
+        "text": "Ignore flight instruments"
+      },
+      {
+        "id": "AFH.5.49.1.w.4",
+        "text": "Maintain current power setting"
+      },
+      {
+        "id": "AFH.5.49.1.w.5",
+        "text": "Roll wings level without reducing G-load"
+      },
+      {
+        "id": "AFH.5.49.1.w.6",
+        "text": "Apply full elevator back pressure"
+      },
+      {
+        "id": "AFH.5.49.1.w.7",
+        "text": "Descend further to gain speed"
+      },
+      {
+        "id": "AFH.5.49.1.w.8",
+        "text": "Ignore the nose-low attitude"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 49",
+    "subjects": [
+      "Aviation Safety",
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.5.50.1",
+    "question": "What are key considerations for effective UPRT training?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.50.1.c.1",
+        "text": "Repetition to establish mental models"
+      },
+      {
+        "id": "AFH.5.50.1.c.2",
+        "text": "Recurrent practice/training"
+      },
+      {
+        "id": "AFH.5.50.1.c.3",
+        "text": "Understanding procedure applicability"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.50.1.w.1",
+        "text": "Focusing only on type-specific procedures"
+      },
+      {
+        "id": "AFH.5.50.1.w.2",
+        "text": "Ignoring the context of UPRT implementation"
+      },
+      {
+        "id": "AFH.5.50.1.w.3",
+        "text": "Practicing without repetition"
+      },
+      {
+        "id": "AFH.5.50.1.w.4",
+        "text": "Avoiding recurrent training"
+      },
+      {
+        "id": "AFH.5.50.1.w.5",
+        "text": "Using a narrow approach initially"
+      },
+      {
+        "id": "AFH.5.50.1.w.6",
+        "text": "Disregarding mental model development"
+      },
+      {
+        "id": "AFH.5.50.1.w.7",
+        "text": "Applying procedures without understanding"
+      },
+      {
+        "id": "AFH.5.50.1.w.8",
+        "text": "Starting with type-specific requirements"
+      }
+    ],
+    "source": "AFH Chapter 5, Section UPRT Summary",
+    "subjects": [
+      "UPRT Training"
+    ]
+  },
+  {
+    "questionid": "AFH.5.51.1",
+    "question": "What are key areas of proficiency development emphasized in initial flight training?",
+    "correct_answers": [
+      {
+        "id": "AFH.5.51.1.c.1",
+        "text": "Slow flight"
+      },
+      {
+        "id": "AFH.5.51.1.c.2",
+        "text": "Stall recoveries"
+      },
+      {
+        "id": "AFH.5.51.1.c.3",
+        "text": "Spin awareness"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.5.51.1.w.1",
+        "text": "Instrument navigation"
+      },
+      {
+        "id": "AFH.5.51.1.w.2",
+        "text": "Weather forecasting"
+      },
+      {
+        "id": "AFH.5.51.1.w.3",
+        "text": "Engine maintenance"
+      },
+      {
+        "id": "AFH.5.51.1.w.4",
+        "text": "Flight planning"
+      },
+      {
+        "id": "AFH.5.51.1.w.5",
+        "text": "Passenger management"
+      },
+      {
+        "id": "AFH.5.51.1.w.6",
+        "text": "Radio communication"
+      },
+      {
+        "id": "AFH.5.51.1.w.7",
+        "text": "Fuel management"
+      },
+      {
+        "id": "AFH.5.51.1.w.8",
+        "text": "Emergency landing procedures"
+      }
+    ],
+    "source": "AFH Chapter 5, Section 51",
+    "subjects": [
+      "Flight Training",
+      "Aircraft Control"
+    ]
+  }
+]

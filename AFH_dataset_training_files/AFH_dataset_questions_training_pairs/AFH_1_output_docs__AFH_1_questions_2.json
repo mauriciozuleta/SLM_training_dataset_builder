@@ -1,0 +1,2952 @@
+[
+  {
+    "questionBank": {
+      "chapterId": "AFH.1",
+      "bookId": "AFH",
+      "chapterNumber": 1,
+      "chapterTitle": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1: Introduction to Flight Training Introduction",
+      "totalRequiredQuestions": 50,
+      "metadata": {
+        "generatedAtUtc": "2026-03-27T02:58:44.382Z",
+        "chapterId": "AFH.1",
+        "chapterNumber": 1,
+        "totalSections": 14,
+        "totalRequiredQuestions": 50,
+        "providers": [
+          "openai"
+        ],
+        "models": [
+          "gpt-4o"
+        ],
+        "promptTokens": 8316,
+        "completionTokens": 5673,
+        "totalTokens": 13989,
+        "sectionQuestionSummary": [
+          {
+            "sectionId": "AFH.1.1",
+            "sectionTitle": "Role of the FAA",
+            "sectionOrdinal": 1,
+            "sectionWeightPercentage": 15.87,
+            "questionsGenerated": 8
+          },
+          {
+            "sectionId": "AFH.1.2",
+            "sectionTitle": "Flight Standards Service",
+            "sectionOrdinal": 2,
+            "sectionWeightPercentage": 5.24,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "AFH.1.3",
+            "sectionTitle": "Role of the Pilot Examiner",
+            "sectionOrdinal": 3,
+            "sectionWeightPercentage": 7.16,
+            "questionsGenerated": 4
+          },
+          {
+            "sectionId": "AFH.1.4",
+            "sectionTitle": "Role of the Flight Instructor",
+            "sectionOrdinal": 4,
+            "sectionWeightPercentage": 10.88,
+            "questionsGenerated": 5
+          },
+          {
+            "sectionId": "AFH.1.5",
+            "sectionTitle": "Sources of Flight Training",
+            "sectionOrdinal": 5,
+            "sectionWeightPercentage": 9.01,
+            "questionsGenerated": 5
+          },
+          {
+            "sectionId": "AFH.1.6",
+            "sectionTitle": "Airman Certification Standards (ACS) and Practical Test Standards (PTS)",
+            "sectionOrdinal": 6,
+            "sectionWeightPercentage": 6.35,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "AFH.1.7",
+            "sectionTitle": "Safety Considerations",
+            "sectionOrdinal": 7,
+            "sectionWeightPercentage": 1.52,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "AFH.1.8",
+            "sectionTitle": "Collision Avoidance",
+            "sectionOrdinal": 8,
+            "sectionWeightPercentage": 17.25,
+            "questionsGenerated": 9
+          },
+          {
+            "sectionId": "AFH.1.9",
+            "sectionTitle": "Runway Incursion Avoidance",
+            "sectionOrdinal": 9,
+            "sectionWeightPercentage": 5.65,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "AFH.1.10",
+            "sectionTitle": "Stall Awareness",
+            "sectionOrdinal": 10,
+            "sectionWeightPercentage": 6.17,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "AFH.1.11",
+            "sectionTitle": "Use of Checklists",
+            "sectionOrdinal": 11,
+            "sectionWeightPercentage": 9.5,
+            "questionsGenerated": 5
+          },
+          {
+            "sectionId": "AFH.1.12",
+            "sectionTitle": "Continuing Education",
+            "sectionOrdinal": 12,
+            "sectionWeightPercentage": 0.88,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "AFH.1.13",
+            "sectionTitle": "FAA WINGS Program",
+            "sectionOrdinal": 13,
+            "sectionWeightPercentage": 3.39,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "AFH.1.14",
+            "sectionTitle": "Chapter Summary",
+            "sectionOrdinal": 14,
+            "sectionWeightPercentage": 1.13,
+            "questionsGenerated": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "questionid": "AFH.1.1.1",
+    "question": "What is the primary role of the Federal Aviation Administration (FAA) as empowered by the U.S. Congress?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.1.1.c.1",
+        "text": "Promote aviation safety"
+      },
+      {
+        "id": "AFH.1.1.1.c.2",
+        "text": "Prescribe safety standards for civil aviation"
+      },
+      {
+        "id": "AFH.1.1.1.c.3",
+        "text": "Certify airmen and aircraft"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.1.1.w.1",
+        "text": "Manage air traffic control"
+      },
+      {
+        "id": "AFH.1.1.1.w.2",
+        "text": "Design aircraft"
+      },
+      {
+        "id": "AFH.1.1.1.w.3",
+        "text": "Operate commercial airlines"
+      },
+      {
+        "id": "AFH.1.1.1.w.4",
+        "text": "Provide pilot training"
+      },
+      {
+        "id": "AFH.1.1.1.w.5",
+        "text": "Manufacture aircraft parts"
+      },
+      {
+        "id": "AFH.1.1.1.w.6",
+        "text": "Conduct flight tests"
+      },
+      {
+        "id": "AFH.1.1.1.w.7",
+        "text": "Issue pilot licenses"
+      },
+      {
+        "id": "AFH.1.1.1.w.8",
+        "text": "Regulate international flights"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1: Introduction to Flight Training Introduction",
+    "subjects": [
+      "Aviation Regulations"
+    ]
+  },
+  {
+    "questionid": "AFH.1.1.2",
+    "question": "Which part of the Code of Federal Regulations (CFR) is dedicated to the FAA?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.1.2.c.1",
+        "text": "14 CFR Chapter 1"
+      },
+      {
+        "id": "AFH.1.1.2.c.2",
+        "text": "Title 14 of the CFR"
+      },
+      {
+        "id": "AFH.1.1.2.c.3",
+        "text": "Aeronautics and Space"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.1.2.w.1",
+        "text": "Title 49 of the CFR"
+      },
+      {
+        "id": "AFH.1.1.2.w.2",
+        "text": "14 CFR Chapter 2"
+      },
+      {
+        "id": "AFH.1.1.2.w.3",
+        "text": "Title 15 of the CFR"
+      },
+      {
+        "id": "AFH.1.1.2.w.4",
+        "text": "14 CFR Chapter 3"
+      },
+      {
+        "id": "AFH.1.1.2.w.5",
+        "text": "Title 10 of the CFR"
+      },
+      {
+        "id": "AFH.1.1.2.w.6",
+        "text": "14 CFR Chapter 4"
+      },
+      {
+        "id": "AFH.1.1.2.w.7",
+        "text": "Title 18 of the CFR"
+      },
+      {
+        "id": "AFH.1.1.2.w.8",
+        "text": "14 CFR Chapter 5"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1: Introduction to Flight Training Introduction",
+    "subjects": [
+      "Aviation Regulations"
+    ]
+  },
+  {
+    "questionid": "AFH.1.1.3",
+    "question": "What does 14 CFR part 21 prescribe?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.1.3.c.1",
+        "text": "Procedural requirements for issuing airworthiness certificates"
+      },
+      {
+        "id": "AFH.1.1.3.c.2",
+        "text": "Airworthiness approvals for aircraft and parts"
+      },
+      {
+        "id": "AFH.1.1.3.c.3",
+        "text": "Requirements for standard airworthiness certificates"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.1.3.w.1",
+        "text": "Pilot certification standards"
+      },
+      {
+        "id": "AFH.1.1.3.w.2",
+        "text": "Aircraft operation rules"
+      },
+      {
+        "id": "AFH.1.1.3.w.3",
+        "text": "Air traffic control procedures"
+      },
+      {
+        "id": "AFH.1.1.3.w.4",
+        "text": "Flight training requirements"
+      },
+      {
+        "id": "AFH.1.1.3.w.5",
+        "text": "Aircraft design standards"
+      },
+      {
+        "id": "AFH.1.1.3.w.6",
+        "text": "Noise abatement procedures"
+      },
+      {
+        "id": "AFH.1.1.3.w.7",
+        "text": "Environmental impact assessments"
+      },
+      {
+        "id": "AFH.1.1.3.w.8",
+        "text": "Passenger safety protocols"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1: Introduction to Flight Training Introduction",
+    "subjects": [
+      "Aviation Regulations"
+    ]
+  },
+  {
+    "questionid": "AFH.1.1.4",
+    "question": "What is the purpose of 14 CFR part 39?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.1.4.c.1",
+        "text": "Issue Airworthiness Directives (ADs)"
+      },
+      {
+        "id": "AFH.1.1.4.c.2",
+        "text": "Address unsafe conditions in aircraft"
+      },
+      {
+        "id": "AFH.1.1.4.c.3",
+        "text": "Ensure safety in type design"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.1.4.w.1",
+        "text": "Certify pilots"
+      },
+      {
+        "id": "AFH.1.1.4.w.2",
+        "text": "Regulate air traffic"
+      },
+      {
+        "id": "AFH.1.1.4.w.3",
+        "text": "Manage airport operations"
+      },
+      {
+        "id": "AFH.1.1.4.w.4",
+        "text": "Approve flight schools"
+      },
+      {
+        "id": "AFH.1.1.4.w.5",
+        "text": "Control aircraft noise"
+      },
+      {
+        "id": "AFH.1.1.4.w.6",
+        "text": "Monitor weather conditions"
+      },
+      {
+        "id": "AFH.1.1.4.w.7",
+        "text": "Inspect aircraft interiors"
+      },
+      {
+        "id": "AFH.1.1.4.w.8",
+        "text": "Oversee airline schedules"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1: Introduction to Flight Training Introduction",
+    "subjects": [
+      "Aviation Regulations"
+    ]
+  },
+  {
+    "questionid": "AFH.1.1.5",
+    "question": "What does 14 CFR part 43 govern?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.1.5.c.1",
+        "text": "Maintenance of U.S. airworthiness certified aircraft"
+      },
+      {
+        "id": "AFH.1.1.5.c.2",
+        "text": "Preventive maintenance rules"
+      },
+      {
+        "id": "AFH.1.1.5.c.3",
+        "text": "Alteration of aircraft components"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.1.5.w.1",
+        "text": "Pilot training programs"
+      },
+      {
+        "id": "AFH.1.1.5.w.2",
+        "text": "Air traffic control operations"
+      },
+      {
+        "id": "AFH.1.1.5.w.3",
+        "text": "Aircraft design specifications"
+      },
+      {
+        "id": "AFH.1.1.5.w.4",
+        "text": "Flight operation procedures"
+      },
+      {
+        "id": "AFH.1.1.5.w.5",
+        "text": "Passenger safety measures"
+      },
+      {
+        "id": "AFH.1.1.5.w.6",
+        "text": "Environmental regulations"
+      },
+      {
+        "id": "AFH.1.1.5.w.7",
+        "text": "Noise control standards"
+      },
+      {
+        "id": "AFH.1.1.5.w.8",
+        "text": "Airport security protocols"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1: Introduction to Flight Training Introduction",
+    "subjects": [
+      "Aviation Regulations"
+    ]
+  },
+  {
+    "questionid": "AFH.1.1.6",
+    "question": "What is required by 14 CFR part 45?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.1.6.c.1",
+        "text": "Identification of aircraft and parts"
+      },
+      {
+        "id": "AFH.1.1.6.c.2",
+        "text": "Nationality and registration marking"
+      },
+      {
+        "id": "AFH.1.1.6.c.3",
+        "text": "Marking of engines and propellers"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.1.6.w.1",
+        "text": "Pilot certification"
+      },
+      {
+        "id": "AFH.1.1.6.w.2",
+        "text": "Air traffic control procedures"
+      },
+      {
+        "id": "AFH.1.1.6.w.3",
+        "text": "Flight operation rules"
+      },
+      {
+        "id": "AFH.1.1.6.w.4",
+        "text": "Maintenance scheduling"
+      },
+      {
+        "id": "AFH.1.1.6.w.5",
+        "text": "Passenger safety protocols"
+      },
+      {
+        "id": "AFH.1.1.6.w.6",
+        "text": "Aircraft design approval"
+      },
+      {
+        "id": "AFH.1.1.6.w.7",
+        "text": "Noise abatement measures"
+      },
+      {
+        "id": "AFH.1.1.6.w.8",
+        "text": "Environmental compliance"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1: Introduction to Flight Training Introduction",
+    "subjects": [
+      "Aviation Regulations"
+    ]
+  },
+  {
+    "questionid": "AFH.1.1.7",
+    "question": "What does 14 CFR part 91 outline?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.1.7.c.1",
+        "text": "Aircraft certifications and equipment requirements"
+      },
+      {
+        "id": "AFH.1.1.7.c.2",
+        "text": "Rules for aircraft operation in U.S. airspace"
+      },
+      {
+        "id": "AFH.1.1.7.c.3",
+        "text": "Maintenance and alteration regulations"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.1.7.w.1",
+        "text": "Pilot licensing procedures"
+      },
+      {
+        "id": "AFH.1.1.7.w.2",
+        "text": "Air traffic control guidelines"
+      },
+      {
+        "id": "AFH.1.1.7.w.3",
+        "text": "Aircraft design standards"
+      },
+      {
+        "id": "AFH.1.1.7.w.4",
+        "text": "Flight training requirements"
+      },
+      {
+        "id": "AFH.1.1.7.w.5",
+        "text": "Noise control measures"
+      },
+      {
+        "id": "AFH.1.1.7.w.6",
+        "text": "Environmental impact assessments"
+      },
+      {
+        "id": "AFH.1.1.7.w.7",
+        "text": "Passenger safety protocols"
+      },
+      {
+        "id": "AFH.1.1.7.w.8",
+        "text": "Airport operation rules"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1: Introduction to Flight Training Introduction",
+    "subjects": [
+      "Aviation Regulations"
+    ]
+  },
+  {
+    "questionid": "AFH.1.1.8",
+    "question": "What must be displayed in the aircraft according to 14 CFR part 91, section 91.203(b)?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.1.8.c.1",
+        "text": "Standard airworthiness certificate"
+      },
+      {
+        "id": "AFH.1.1.8.c.2",
+        "text": "FAA Form 8100-2"
+      },
+      {
+        "id": "AFH.1.1.8.c.3",
+        "text": "Certificate for type certificated aircraft"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.1.8.w.1",
+        "text": "Pilot license"
+      },
+      {
+        "id": "AFH.1.1.8.w.2",
+        "text": "Flight manual"
+      },
+      {
+        "id": "AFH.1.1.8.w.3",
+        "text": "Maintenance logbook"
+      },
+      {
+        "id": "AFH.1.1.8.w.4",
+        "text": "Passenger safety card"
+      },
+      {
+        "id": "AFH.1.1.8.w.5",
+        "text": "Noise compliance certificate"
+      },
+      {
+        "id": "AFH.1.1.8.w.6",
+        "text": "Environmental impact report"
+      },
+      {
+        "id": "AFH.1.1.8.w.7",
+        "text": "Aircraft registration"
+      },
+      {
+        "id": "AFH.1.1.8.w.8",
+        "text": "Insurance documentation"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1: Introduction to Flight Training Introduction",
+    "subjects": [
+      "Aviation Regulations"
+    ]
+  },
+  {
+    "questionid": "AFH.1.2.1",
+    "question": "What are the primary responsibilities of the Flight Standards District Office (FSDO)?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.2.1.c.1",
+        "text": "Certification of air carriers and air operators"
+      },
+      {
+        "id": "AFH.1.2.1.c.2",
+        "text": "Surveillance of flight schools and training centers"
+      },
+      {
+        "id": "AFH.1.2.1.c.3",
+        "text": "Investigation of general aviation accidents"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.2.1.w.1",
+        "text": "Designing aircraft engines"
+      },
+      {
+        "id": "AFH.1.2.1.w.2",
+        "text": "Manufacturing aircraft parts"
+      },
+      {
+        "id": "AFH.1.2.1.w.3",
+        "text": "Providing weather forecasts"
+      },
+      {
+        "id": "AFH.1.2.1.w.4",
+        "text": "Managing air traffic control"
+      },
+      {
+        "id": "AFH.1.2.1.w.5",
+        "text": "Developing aviation software"
+      },
+      {
+        "id": "AFH.1.2.1.w.6",
+        "text": "Conducting airline marketing"
+      },
+      {
+        "id": "AFH.1.2.1.w.7",
+        "text": "Selling aviation insurance"
+      },
+      {
+        "id": "AFH.1.2.1.w.8",
+        "text": "Training cabin crew"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1: Introduction to Flight Training Introduction, Section: Flight Standards Service",
+    "subjects": [
+      "Aviation Standards",
+      "Flight Operations",
+      "General Aviation"
+    ]
+  },
+  {
+    "questionid": "AFH.1.3.1",
+    "question": "What is the role of a Designated Pilot Examiner (DPE)?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.3.1.c.1",
+        "text": "Conduct practical tests"
+      },
+      {
+        "id": "AFH.1.3.1.c.2",
+        "text": "Accept applications for pilot certificates"
+      },
+      {
+        "id": "AFH.1.3.1.c.3",
+        "text": "Operate under FSDO supervision"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.3.1.w.1",
+        "text": "Initiate enforcement actions"
+      },
+      {
+        "id": "AFH.1.3.1.w.2",
+        "text": "Investigate accidents"
+      },
+      {
+        "id": "AFH.1.3.1.w.3",
+        "text": "Perform surveillance activities"
+      },
+      {
+        "id": "AFH.1.3.1.w.4",
+        "text": "Issue pilot certificates directly"
+      },
+      {
+        "id": "AFH.1.3.1.w.5",
+        "text": "Work as FAA employees"
+      },
+      {
+        "id": "AFH.1.3.1.w.6",
+        "text": "Conduct theoretical knowledge tests"
+      },
+      {
+        "id": "AFH.1.3.1.w.7",
+        "text": "Administer tests at the FSDO level"
+      },
+      {
+        "id": "AFH.1.3.1.w.8",
+        "text": "Supervise FAA ASIs"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 3",
+    "subjects": [
+      "Pilot Certification",
+      "FAA Regulations"
+    ]
+  },
+  {
+    "questionid": "AFH.1.3.2",
+    "question": "What qualifications are required for an individual to be selected as a DPE?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.3.2.c.1",
+        "text": "Good industry reputation"
+      },
+      {
+        "id": "AFH.1.3.2.c.2",
+        "text": "High integrity"
+      },
+      {
+        "id": "AFH.1.3.2.c.3",
+        "text": "Adherence to FAA policies"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.3.2.w.1",
+        "text": "FAA employment"
+      },
+      {
+        "id": "AFH.1.3.2.w.2",
+        "text": "Ability to investigate accidents"
+      },
+      {
+        "id": "AFH.1.3.2.w.3",
+        "text": "Surveillance skills"
+      },
+      {
+        "id": "AFH.1.3.2.w.4",
+        "text": "Enforcement authority"
+      },
+      {
+        "id": "AFH.1.3.2.w.5",
+        "text": "Direct FAA supervision"
+      },
+      {
+        "id": "AFH.1.3.2.w.6",
+        "text": "Experience in theoretical testing"
+      },
+      {
+        "id": "AFH.1.3.2.w.7",
+        "text": "Ability to issue certificates directly"
+      },
+      {
+        "id": "AFH.1.3.2.w.8",
+        "text": "FSDO employment"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 3",
+    "subjects": [
+      "Pilot Certification",
+      "FAA Regulations"
+    ]
+  },
+  {
+    "questionid": "AFH.1.3.3",
+    "question": "What limitations are placed on a DPE's authority?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.3.3.c.1",
+        "text": "Cannot initiate enforcement actions"
+      },
+      {
+        "id": "AFH.1.3.3.c.2",
+        "text": "Cannot investigate accidents"
+      },
+      {
+        "id": "AFH.1.3.3.c.3",
+        "text": "Cannot perform surveillance activities"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.3.3.w.1",
+        "text": "Can issue pilot certificates directly"
+      },
+      {
+        "id": "AFH.1.3.3.w.2",
+        "text": "Can conduct theoretical tests"
+      },
+      {
+        "id": "AFH.1.3.3.w.3",
+        "text": "Can supervise FAA ASIs"
+      },
+      {
+        "id": "AFH.1.3.3.w.4",
+        "text": "Can work as an FAA employee"
+      },
+      {
+        "id": "AFH.1.3.3.w.5",
+        "text": "Can administer tests at the FSDO level"
+      },
+      {
+        "id": "AFH.1.3.3.w.6",
+        "text": "Can charge any fee they choose"
+      },
+      {
+        "id": "AFH.1.3.3.w.7",
+        "text": "Can operate independently of FSDO"
+      },
+      {
+        "id": "AFH.1.3.3.w.8",
+        "text": "Can perform all FAA duties"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 3",
+    "subjects": [
+      "Pilot Certification",
+      "FAA Regulations"
+    ]
+  },
+  {
+    "questionid": "AFH.1.3.4",
+    "question": "Under whose supervision does a DPE operate?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.3.4.c.1",
+        "text": "FSDO that holds the examiner’s designation file"
+      },
+      {
+        "id": "AFH.1.3.4.c.2",
+        "text": "Direct supervision of FSDO"
+      },
+      {
+        "id": "AFH.1.3.4.c.3",
+        "text": "Assigned FSDO inspector"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.3.4.w.1",
+        "text": "FAA headquarters"
+      },
+      {
+        "id": "AFH.1.3.4.w.2",
+        "text": "Independent of any supervision"
+      },
+      {
+        "id": "AFH.1.3.4.w.3",
+        "text": "Another DPE"
+      },
+      {
+        "id": "AFH.1.3.4.w.4",
+        "text": "FAA ASI"
+      },
+      {
+        "id": "AFH.1.3.4.w.5",
+        "text": "Local airport authority"
+      },
+      {
+        "id": "AFH.1.3.4.w.6",
+        "text": "Pilot training schools"
+      },
+      {
+        "id": "AFH.1.3.4.w.7",
+        "text": "FAA regional office"
+      },
+      {
+        "id": "AFH.1.3.4.w.8",
+        "text": "Private aviation companies"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 3",
+    "subjects": [
+      "Pilot Certification",
+      "FAA Regulations"
+    ]
+  },
+  {
+    "questionid": "AFH.1.4.1",
+    "question": "What are the primary responsibilities of a flight instructor according to the FAA?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.4.1.c.1",
+        "text": "Provide training in all knowledge areas and skills"
+      },
+      {
+        "id": "AFH.1.4.1.c.2",
+        "text": "Ensure safe and competent operation in the NAS"
+      },
+      {
+        "id": "AFH.1.4.1.c.3",
+        "text": "Teach airmanship skills and pilot judgment"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.4.1.w.1",
+        "text": "Conduct aircraft maintenance"
+      },
+      {
+        "id": "AFH.1.4.1.w.2",
+        "text": "Manage air traffic control"
+      },
+      {
+        "id": "AFH.1.4.1.w.3",
+        "text": "Design aircraft"
+      },
+      {
+        "id": "AFH.1.4.1.w.4",
+        "text": "Certify aircraft"
+      },
+      {
+        "id": "AFH.1.4.1.w.5",
+        "text": "Operate airport facilities"
+      },
+      {
+        "id": "AFH.1.4.1.w.6",
+        "text": "Handle baggage"
+      },
+      {
+        "id": "AFH.1.4.1.w.7",
+        "text": "Schedule flights"
+      },
+      {
+        "id": "AFH.1.4.1.w.8",
+        "text": "Sell aviation insurance"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 4",
+    "subjects": [
+      "Flight Training",
+      "Aviation Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.1.4.2",
+    "question": "What qualifications must a flight instructor meet before being certificated?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.4.2.c.1",
+        "text": "Broad flying experience"
+      },
+      {
+        "id": "AFH.1.4.2.c.2",
+        "text": "Pass rigid knowledge and practical tests"
+      },
+      {
+        "id": "AFH.1.4.2.c.3",
+        "text": "Demonstrate recommended teaching techniques"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.4.2.w.1",
+        "text": "Hold a commercial pilot license"
+      },
+      {
+        "id": "AFH.1.4.2.w.2",
+        "text": "Have a degree in aviation"
+      },
+      {
+        "id": "AFH.1.4.2.w.3",
+        "text": "Be a certified aircraft mechanic"
+      },
+      {
+        "id": "AFH.1.4.2.w.4",
+        "text": "Have 10 years of flying experience"
+      },
+      {
+        "id": "AFH.1.4.2.w.5",
+        "text": "Own an aircraft"
+      },
+      {
+        "id": "AFH.1.4.2.w.6",
+        "text": "Work for an airline"
+      },
+      {
+        "id": "AFH.1.4.2.w.7",
+        "text": "Be a member of a flying club"
+      },
+      {
+        "id": "AFH.1.4.2.w.8",
+        "text": "Have a private pilot license"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 4",
+    "subjects": [
+      "Flight Instructor Certification",
+      "Aviation Training"
+    ]
+  },
+  {
+    "questionid": "AFH.1.4.3",
+    "question": "What teaching method is emphasized by flight instructors for effective learning?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.4.3.c.1",
+        "text": "Building block method"
+      },
+      {
+        "id": "AFH.1.4.3.c.2",
+        "text": "Systematic progression from known to unknown"
+      },
+      {
+        "id": "AFH.1.4.3.c.3",
+        "text": "Use of a syllabus"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.4.3.w.1",
+        "text": "Randomized learning"
+      },
+      {
+        "id": "AFH.1.4.3.w.2",
+        "text": "Self-directed study"
+      },
+      {
+        "id": "AFH.1.4.3.w.3",
+        "text": "Lecture-based instruction"
+      },
+      {
+        "id": "AFH.1.4.3.w.4",
+        "text": "Online courses"
+      },
+      {
+        "id": "AFH.1.4.3.w.5",
+        "text": "Video tutorials"
+      },
+      {
+        "id": "AFH.1.4.3.w.6",
+        "text": "Group discussions"
+      },
+      {
+        "id": "AFH.1.4.3.w.7",
+        "text": "Peer teaching"
+      },
+      {
+        "id": "AFH.1.4.3.w.8",
+        "text": "Project-based learning"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 4",
+    "subjects": [
+      "Instructional Techniques",
+      "Learning Processes"
+    ]
+  },
+  {
+    "questionid": "AFH.1.4.4",
+    "question": "How do flight instructors influence aviation safety?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.4.4.c.1",
+        "text": "By being paragons of flying proficiency"
+      },
+      {
+        "id": "AFH.1.4.4.c.2",
+        "text": "By meticulously observing safety practices"
+      },
+      {
+        "id": "AFH.1.4.4.c.3",
+        "text": "By participating in the Wings program"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.4.4.w.1",
+        "text": "By designing new aircraft"
+      },
+      {
+        "id": "AFH.1.4.4.w.2",
+        "text": "By controlling air traffic"
+      },
+      {
+        "id": "AFH.1.4.4.w.3",
+        "text": "By managing airports"
+      },
+      {
+        "id": "AFH.1.4.4.w.4",
+        "text": "By inspecting aircraft"
+      },
+      {
+        "id": "AFH.1.4.4.w.5",
+        "text": "By flying commercial airlines"
+      },
+      {
+        "id": "AFH.1.4.4.w.6",
+        "text": "By conducting aviation research"
+      },
+      {
+        "id": "AFH.1.4.4.w.7",
+        "text": "By writing aviation textbooks"
+      },
+      {
+        "id": "AFH.1.4.4.w.8",
+        "text": "By developing flight simulators"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 4",
+    "subjects": [
+      "Aviation Safety",
+      "Instructor Influence"
+    ]
+  },
+  {
+    "questionid": "AFH.1.4.5",
+    "question": "What distinguishes a Gold Seal Flight Instructor?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.4.5.c.1",
+        "text": "High level of performance"
+      },
+      {
+        "id": "AFH.1.4.5.c.2",
+        "text": "Active and successful instructor"
+      },
+      {
+        "id": "AFH.1.4.5.c.3",
+        "text": "Participation in the Wings program"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.4.5.w.1",
+        "text": "Holding a commercial pilot license"
+      },
+      {
+        "id": "AFH.1.4.5.w.2",
+        "text": "Owning an aircraft"
+      },
+      {
+        "id": "AFH.1.4.5.w.3",
+        "text": "Having a degree in aviation"
+      },
+      {
+        "id": "AFH.1.4.5.w.4",
+        "text": "Being a certified aircraft mechanic"
+      },
+      {
+        "id": "AFH.1.4.5.w.5",
+        "text": "Working for an airline"
+      },
+      {
+        "id": "AFH.1.4.5.w.6",
+        "text": "Having 10 years of flying experience"
+      },
+      {
+        "id": "AFH.1.4.5.w.7",
+        "text": "Being a member of a flying club"
+      },
+      {
+        "id": "AFH.1.4.5.w.8",
+        "text": "Having a private pilot license"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 4",
+    "subjects": [
+      "Flight Instructor Certification",
+      "Aviation Training"
+    ]
+  },
+  {
+    "questionid": "AFH.1.5.1",
+    "question": "What are the major sources of flight training in the United States?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.5.1.c.1",
+        "text": "FAA-approved pilot schools"
+      },
+      {
+        "id": "AFH.1.5.1.c.2",
+        "text": "Non-certificated flying schools"
+      },
+      {
+        "id": "AFH.1.5.1.c.3",
+        "text": "Independent flight instructors"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.5.1.w.1",
+        "text": "Military flight schools"
+      },
+      {
+        "id": "AFH.1.5.1.w.2",
+        "text": "International flight academies"
+      },
+      {
+        "id": "AFH.1.5.1.w.3",
+        "text": "Online aviation courses"
+      },
+      {
+        "id": "AFH.1.5.1.w.4",
+        "text": "Community colleges"
+      },
+      {
+        "id": "AFH.1.5.1.w.5",
+        "text": "Private aviation clubs"
+      },
+      {
+        "id": "AFH.1.5.1.w.6",
+        "text": "Corporate flight departments"
+      },
+      {
+        "id": "AFH.1.5.1.w.7",
+        "text": "Airline training programs"
+      },
+      {
+        "id": "AFH.1.5.1.w.8",
+        "text": "University aviation programs"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 5",
+    "subjects": [
+      "Flight Training"
+    ]
+  },
+  {
+    "questionid": "AFH.1.5.2",
+    "question": "What certification do FAA-approved pilot schools operate under?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.5.2.c.1",
+        "text": "14 CFR part 141"
+      },
+      {
+        "id": "AFH.1.5.2.c.2",
+        "text": "FAA Air Agency certificate"
+      },
+      {
+        "id": "AFH.1.5.2.c.3",
+        "text": "Approved training course outline (TCO)"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.5.2.w.1",
+        "text": "14 CFR part 61"
+      },
+      {
+        "id": "AFH.1.5.2.w.2",
+        "text": "14 CFR part 142"
+      },
+      {
+        "id": "AFH.1.5.2.w.3",
+        "text": "FAA Flight Instructor certificate"
+      },
+      {
+        "id": "AFH.1.5.2.w.4",
+        "text": "Pilot Certificate Authority"
+      },
+      {
+        "id": "AFH.1.5.2.w.5",
+        "text": "Aviation Training License"
+      },
+      {
+        "id": "AFH.1.5.2.w.6",
+        "text": "Flight School Accreditation"
+      },
+      {
+        "id": "AFH.1.5.2.w.7",
+        "text": "Pilot Training Endorsement"
+      },
+      {
+        "id": "AFH.1.5.2.w.8",
+        "text": "Flight Education Certificate"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 5",
+    "subjects": [
+      "Flight Training"
+    ]
+  },
+  {
+    "questionid": "AFH.1.5.3",
+    "question": "What is required for a school to maintain its FAA-approved status?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.5.3.c.1",
+        "text": "Renewal every 2 years"
+      },
+      {
+        "id": "AFH.1.5.3.c.2",
+        "text": "Proof of high quality instruction"
+      },
+      {
+        "id": "AFH.1.5.3.c.3",
+        "text": "Minimum level of instructional activity"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.5.3.w.1",
+        "text": "Annual FAA inspection"
+      },
+      {
+        "id": "AFH.1.5.3.w.2",
+        "text": "Student satisfaction surveys"
+      },
+      {
+        "id": "AFH.1.5.3.w.3",
+        "text": "Partnership with airlines"
+      },
+      {
+        "id": "AFH.1.5.3.w.4",
+        "text": "International accreditation"
+      },
+      {
+        "id": "AFH.1.5.3.w.5",
+        "text": "Online course offerings"
+      },
+      {
+        "id": "AFH.1.5.3.w.6",
+        "text": "Advanced simulator technology"
+      },
+      {
+        "id": "AFH.1.5.3.w.7",
+        "text": "Community outreach programs"
+      },
+      {
+        "id": "AFH.1.5.3.w.8",
+        "text": "Environmental sustainability initiatives"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 5",
+    "subjects": [
+      "Flight Training"
+    ]
+  },
+  {
+    "questionid": "AFH.1.5.4",
+    "question": "What distinguishes FAA-approved training centers under 14 CFR part 142?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.5.4.c.1",
+        "text": "Use of flight simulation"
+      },
+      {
+        "id": "AFH.1.5.4.c.2",
+        "text": "Structured environment"
+      },
+      {
+        "id": "AFH.1.5.4.c.3",
+        "text": "Approved courses and curricula"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.5.4.w.1",
+        "text": "Focus on glider training"
+      },
+      {
+        "id": "AFH.1.5.4.w.2",
+        "text": "Exclusive helicopter training"
+      },
+      {
+        "id": "AFH.1.5.4.w.3",
+        "text": "In-flight training only"
+      },
+      {
+        "id": "AFH.1.5.4.w.4",
+        "text": "Partnership with airlines"
+      },
+      {
+        "id": "AFH.1.5.4.w.5",
+        "text": "Online training modules"
+      },
+      {
+        "id": "AFH.1.5.4.w.6",
+        "text": "International student programs"
+      },
+      {
+        "id": "AFH.1.5.4.w.7",
+        "text": "Community-based learning"
+      },
+      {
+        "id": "AFH.1.5.4.w.8",
+        "text": "Weekend-only classes"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 5",
+    "subjects": [
+      "Flight Training"
+    ]
+  },
+  {
+    "questionid": "AFH.1.5.5",
+    "question": "What is a characteristic of non-certificated flying schools?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.5.5.c.1",
+        "text": "Operate under 14 CFR part 61"
+      },
+      {
+        "id": "AFH.1.5.5.c.2",
+        "text": "May exceed FAA standards"
+      },
+      {
+        "id": "AFH.1.5.5.c.3",
+        "text": "Employ certified flight instructors"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.5.5.w.1",
+        "text": "Require FAA certification"
+      },
+      {
+        "id": "AFH.1.5.5.w.2",
+        "text": "Operate under 14 CFR part 141"
+      },
+      {
+        "id": "AFH.1.5.5.w.3",
+        "text": "Use only simulators"
+      },
+      {
+        "id": "AFH.1.5.5.w.4",
+        "text": "Offer only private pilot training"
+      },
+      {
+        "id": "AFH.1.5.5.w.5",
+        "text": "Have examining authority"
+      },
+      {
+        "id": "AFH.1.5.5.w.6",
+        "text": "Require international accreditation"
+      },
+      {
+        "id": "AFH.1.5.5.w.7",
+        "text": "Offer government-funded programs"
+      },
+      {
+        "id": "AFH.1.5.5.w.8",
+        "text": "Focus solely on commercial pilot training"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 5",
+    "subjects": [
+      "Flight Training"
+    ]
+  },
+  {
+    "questionid": "AFH.1.6.1",
+    "question": "What documents are used by FAA inspectors and DPEs to administer practical tests for pilot certificates?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.6.1.c.1",
+        "text": "Airman Certification Standards (ACS)"
+      },
+      {
+        "id": "AFH.1.6.1.c.2",
+        "text": "Practical Test Standards (PTS)"
+      },
+      {
+        "id": "AFH.1.6.1.c.3",
+        "text": "14 CFR part 61, section 61.43"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.6.1.w.1",
+        "text": "Pilot Training Manuals"
+      },
+      {
+        "id": "AFH.1.6.1.w.2",
+        "text": "Flight Instructor Guides"
+      },
+      {
+        "id": "AFH.1.6.1.w.3",
+        "text": "Aircraft Operating Manuals"
+      },
+      {
+        "id": "AFH.1.6.1.w.4",
+        "text": "Pilot Operating Handbooks"
+      },
+      {
+        "id": "AFH.1.6.1.w.5",
+        "text": "Flight Safety Regulations"
+      },
+      {
+        "id": "AFH.1.6.1.w.6",
+        "text": "Air Traffic Control Procedures"
+      },
+      {
+        "id": "AFH.1.6.1.w.7",
+        "text": "Weather Observation Standards"
+      },
+      {
+        "id": "AFH.1.6.1.w.8",
+        "text": "Emergency Response Guidelines"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 6",
+    "subjects": [
+      "FAA Certification",
+      "Practical Test Standards"
+    ]
+  },
+  {
+    "questionid": "AFH.1.6.2",
+    "question": "What is the role of a flight instructor in relation to the ACS and PTS?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.6.2.c.1",
+        "text": "Train pilot applicants to acceptable standards"
+      },
+      {
+        "id": "AFH.1.6.2.c.2",
+        "text": "Ensure proficiency in subject matter areas"
+      },
+      {
+        "id": "AFH.1.6.2.c.3",
+        "text": "Guide applicants in maneuvers and procedures"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.6.2.w.1",
+        "text": "Administer practical tests"
+      },
+      {
+        "id": "AFH.1.6.2.w.2",
+        "text": "Issue pilot certificates"
+      },
+      {
+        "id": "AFH.1.6.2.w.3",
+        "text": "Develop ACS and PTS"
+      },
+      {
+        "id": "AFH.1.6.2.w.4",
+        "text": "Conduct aircraft maintenance"
+      },
+      {
+        "id": "AFH.1.6.2.w.5",
+        "text": "Approve flight plans"
+      },
+      {
+        "id": "AFH.1.6.2.w.6",
+        "text": "Monitor air traffic"
+      },
+      {
+        "id": "AFH.1.6.2.w.7",
+        "text": "Provide weather forecasts"
+      },
+      {
+        "id": "AFH.1.6.2.w.8",
+        "text": "Manage airport operations"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 6",
+    "subjects": [
+      "Flight Training",
+      "Instructor Responsibilities"
+    ]
+  },
+  {
+    "questionid": "AFH.1.6.3",
+    "question": "What must a pilot applicant demonstrate to pass the FAA practical test?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.6.3.c.1",
+        "text": "Mastery of the aircraft"
+      },
+      {
+        "id": "AFH.1.6.3.c.2",
+        "text": "Proficiency within approved standards"
+      },
+      {
+        "id": "AFH.1.6.3.c.3",
+        "text": "Sound judgment"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.6.3.w.1",
+        "text": "Ability to fly in all weather conditions"
+      },
+      {
+        "id": "AFH.1.6.3.w.2",
+        "text": "Experience with international flights"
+      },
+      {
+        "id": "AFH.1.6.3.w.3",
+        "text": "Knowledge of all aircraft types"
+      },
+      {
+        "id": "AFH.1.6.3.w.4",
+        "text": "Understanding of air traffic control systems"
+      },
+      {
+        "id": "AFH.1.6.3.w.5",
+        "text": "Completion of a flight instructor course"
+      },
+      {
+        "id": "AFH.1.6.3.w.6",
+        "text": "Experience in commercial aviation"
+      },
+      {
+        "id": "AFH.1.6.3.w.7",
+        "text": "Knowledge of aviation law"
+      },
+      {
+        "id": "AFH.1.6.3.w.8",
+        "text": "Ability to perform aerobatic maneuvers"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 6",
+    "subjects": [
+      "Pilot Certification",
+      "Practical Test Requirements"
+    ]
+  },
+  {
+    "questionid": "AFH.1.7.1",
+    "question": "What are some basic flight safety practices emphasized during initial flight training?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.7.1.c.1",
+        "text": "Collision avoidance procedures"
+      },
+      {
+        "id": "AFH.1.7.1.c.2",
+        "text": "Runway incursion avoidance"
+      },
+      {
+        "id": "AFH.1.7.1.c.3",
+        "text": "Stall awareness"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.7.1.w.1",
+        "text": "Advanced aerobatic maneuvers"
+      },
+      {
+        "id": "AFH.1.7.1.w.2",
+        "text": "Instrument flight rules (IFR) navigation"
+      },
+      {
+        "id": "AFH.1.7.1.w.3",
+        "text": "Weather pattern analysis"
+      },
+      {
+        "id": "AFH.1.7.1.w.4",
+        "text": "Engine maintenance procedures"
+      },
+      {
+        "id": "AFH.1.7.1.w.5",
+        "text": "Passenger briefing techniques"
+      },
+      {
+        "id": "AFH.1.7.1.w.6",
+        "text": "Fuel management strategies"
+      },
+      {
+        "id": "AFH.1.7.1.w.7",
+        "text": "Emergency evacuation drills"
+      },
+      {
+        "id": "AFH.1.7.1.w.8",
+        "text": "Aircraft weight and balance calculations"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 7",
+    "subjects": [
+      "Flight Safety",
+      "Flight Training"
+    ]
+  },
+  {
+    "questionid": "AFH.1.8.1",
+    "question": "What is the primary concept set forth by 14 CFR part 91 to prevent midair collisions?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.8.1.c.1",
+        "text": "See and avoid"
+      },
+      {
+        "id": "AFH.1.8.1.c.2",
+        "text": "All pilots should be alert to the potential for midair collision and impending loss of separation."
+      },
+      {
+        "id": "AFH.1.8.1.c.3",
+        "text": "The general operating and flight rules in 14 CFR part 91 set forth the concept of “see and avoid.” This concept requires that vigilance shall be maintained at all times by each person operating an aircraft regardless of whether the operation is conducted under IFR or VFR."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.8.1.w.1",
+        "text": "Use of radar"
+      },
+      {
+        "id": "AFH.1.8.1.w.2",
+        "text": "Relying on air traffic control"
+      },
+      {
+        "id": "AFH.1.8.1.w.3",
+        "text": "Instrument flight rules"
+      },
+      {
+        "id": "AFH.1.8.1.w.4",
+        "text": "Visual flight rules"
+      },
+      {
+        "id": "AFH.1.8.1.w.5",
+        "text": "Automatic collision avoidance systems"
+      },
+      {
+        "id": "AFH.1.8.1.w.6",
+        "text": "Pilotless aircraft technology"
+      },
+      {
+        "id": "AFH.1.8.1.w.7",
+        "text": "Weather monitoring systems"
+      },
+      {
+        "id": "AFH.1.8.1.w.8",
+        "text": "Ground-based navigation aids"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 8",
+    "subjects": [
+      "Collision Avoidance"
+    ]
+  },
+  {
+    "questionid": "AFH.1.8.2",
+    "question": "Where do most midair collision accidents occur?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.8.2.c.1",
+        "text": "Within 5 miles of an airport"
+      },
+      {
+        "id": "AFH.1.8.2.c.2",
+        "text": "Near navigation aids"
+      },
+      {
+        "id": "AFH.1.8.2.c.3",
+        "text": "In good VFR weather conditions"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.8.2.w.1",
+        "text": "In IFR conditions"
+      },
+      {
+        "id": "AFH.1.8.2.w.2",
+        "text": "At high altitudes"
+      },
+      {
+        "id": "AFH.1.8.2.w.3",
+        "text": "Over oceans"
+      },
+      {
+        "id": "AFH.1.8.2.w.4",
+        "text": "In mountainous regions"
+      },
+      {
+        "id": "AFH.1.8.2.w.5",
+        "text": "In controlled airspace"
+      },
+      {
+        "id": "AFH.1.8.2.w.6",
+        "text": "During nighttime"
+      },
+      {
+        "id": "AFH.1.8.2.w.7",
+        "text": "In poor visibility conditions"
+      },
+      {
+        "id": "AFH.1.8.2.w.8",
+        "text": "In urban areas"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 8",
+    "subjects": [
+      "Collision Avoidance"
+    ]
+  },
+  {
+    "questionid": "AFH.1.8.3",
+    "question": "What factors can degrade effective visual scanning?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.8.3.c.1",
+        "text": "Fatigue"
+      },
+      {
+        "id": "AFH.1.8.3.c.2",
+        "text": "Boredom"
+      },
+      {
+        "id": "AFH.1.8.3.c.3",
+        "text": "Anxiety"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.8.3.w.1",
+        "text": "High altitude"
+      },
+      {
+        "id": "AFH.1.8.3.w.2",
+        "text": "Cold weather"
+      },
+      {
+        "id": "AFH.1.8.3.w.3",
+        "text": "Turbulence"
+      },
+      {
+        "id": "AFH.1.8.3.w.4",
+        "text": "High speed"
+      },
+      {
+        "id": "AFH.1.8.3.w.5",
+        "text": "Low fuel"
+      },
+      {
+        "id": "AFH.1.8.3.w.6",
+        "text": "Radio interference"
+      },
+      {
+        "id": "AFH.1.8.3.w.7",
+        "text": "Engine noise"
+      },
+      {
+        "id": "AFH.1.8.3.w.8",
+        "text": "Bright sunlight"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 8",
+    "subjects": [
+      "Collision Avoidance"
+    ]
+  },
+  {
+    "questionid": "AFH.1.8.4",
+    "question": "What is the recommended maximum angle for each eye movement during scanning?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.8.4.c.1",
+        "text": "10 degrees"
+      },
+      {
+        "id": "AFH.1.8.4.c.2",
+        "text": "All pilots should be alert to the potential for midair collision and impending loss of separation."
+      },
+      {
+        "id": "AFH.1.8.4.c.3",
+        "text": "The general operating and flight rules in 14 CFR part 91 set forth the concept of “see and avoid.” This concept requires that vigilance shall be maintained at all times by each person operating an aircraft regardless of whether the operation is conducted under IFR or VFR."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.8.4.w.1",
+        "text": "5 degrees"
+      },
+      {
+        "id": "AFH.1.8.4.w.2",
+        "text": "15 degrees"
+      },
+      {
+        "id": "AFH.1.8.4.w.3",
+        "text": "20 degrees"
+      },
+      {
+        "id": "AFH.1.8.4.w.4",
+        "text": "25 degrees"
+      },
+      {
+        "id": "AFH.1.8.4.w.5",
+        "text": "30 degrees"
+      },
+      {
+        "id": "AFH.1.8.4.w.6",
+        "text": "35 degrees"
+      },
+      {
+        "id": "AFH.1.8.4.w.7",
+        "text": "40 degrees"
+      },
+      {
+        "id": "AFH.1.8.4.w.8",
+        "text": "45 degrees"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 8",
+    "subjects": [
+      "Collision Avoidance"
+    ]
+  },
+  {
+    "questionid": "AFH.1.8.5",
+    "question": "How long should each area be observed during visual scanning to enable detection?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.8.5.c.1",
+        "text": "At least 1 second"
+      },
+      {
+        "id": "AFH.1.8.5.c.2",
+        "text": "All pilots should be alert to the potential for midair collision and impending loss of separation."
+      },
+      {
+        "id": "AFH.1.8.5.c.3",
+        "text": "The general operating and flight rules in 14 CFR part 91 set forth the concept of “see and avoid.” This concept requires that vigilance shall be maintained at all times by each person operating an aircraft regardless of whether the operation is conducted under IFR or VFR."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.8.5.w.1",
+        "text": "0.5 seconds"
+      },
+      {
+        "id": "AFH.1.8.5.w.2",
+        "text": "2 seconds"
+      },
+      {
+        "id": "AFH.1.8.5.w.3",
+        "text": "3 seconds"
+      },
+      {
+        "id": "AFH.1.8.5.w.4",
+        "text": "4 seconds"
+      },
+      {
+        "id": "AFH.1.8.5.w.5",
+        "text": "5 seconds"
+      },
+      {
+        "id": "AFH.1.8.5.w.6",
+        "text": "10 seconds"
+      },
+      {
+        "id": "AFH.1.8.5.w.7",
+        "text": "15 seconds"
+      },
+      {
+        "id": "AFH.1.8.5.w.8",
+        "text": "20 seconds"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 8",
+    "subjects": [
+      "Collision Avoidance"
+    ]
+  },
+  {
+    "questionid": "AFH.1.8.6",
+    "question": "What is the role of peripheral vision in collision avoidance?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.8.6.c.1",
+        "text": "Detecting movement"
+      },
+      {
+        "id": "AFH.1.8.6.c.2",
+        "text": "Spotting collision threats"
+      },
+      {
+        "id": "AFH.1.8.6.c.3",
+        "text": "Enhancing target acquisition"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.8.6.w.1",
+        "text": "Improving night vision"
+      },
+      {
+        "id": "AFH.1.8.6.w.2",
+        "text": "Enhancing color perception"
+      },
+      {
+        "id": "AFH.1.8.6.w.3",
+        "text": "Reducing glare"
+      },
+      {
+        "id": "AFH.1.8.6.w.4",
+        "text": "Improving depth perception"
+      },
+      {
+        "id": "AFH.1.8.6.w.5",
+        "text": "Enhancing focus"
+      },
+      {
+        "id": "AFH.1.8.6.w.6",
+        "text": "Reducing eye strain"
+      },
+      {
+        "id": "AFH.1.8.6.w.7",
+        "text": "Improving visual acuity"
+      },
+      {
+        "id": "AFH.1.8.6.w.8",
+        "text": "Enhancing contrast"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 8",
+    "subjects": [
+      "Collision Avoidance"
+    ]
+  },
+  {
+    "questionid": "AFH.1.8.7",
+    "question": "What should pilots do to compensate for the limitations of the human eye?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.8.7.c.1",
+        "text": "Use proper visual scanning techniques"
+      },
+      {
+        "id": "AFH.1.8.7.c.2",
+        "text": "Shift glances and refocus at intervals"
+      },
+      {
+        "id": "AFH.1.8.7.c.3",
+        "text": "Develop a comfortable scanning pattern"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.8.7.w.1",
+        "text": "Rely on instruments only"
+      },
+      {
+        "id": "AFH.1.8.7.w.2",
+        "text": "Use binoculars"
+      },
+      {
+        "id": "AFH.1.8.7.w.3",
+        "text": "Depend on autopilot"
+      },
+      {
+        "id": "AFH.1.8.7.w.4",
+        "text": "Use sunglasses"
+      },
+      {
+        "id": "AFH.1.8.7.w.5",
+        "text": "Rely on co-pilot"
+      },
+      {
+        "id": "AFH.1.8.7.w.6",
+        "text": "Use radar systems"
+      },
+      {
+        "id": "AFH.1.8.7.w.7",
+        "text": "Depend on air traffic control"
+      },
+      {
+        "id": "AFH.1.8.7.w.8",
+        "text": "Use night vision goggles"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 8",
+    "subjects": [
+      "Collision Avoidance"
+    ]
+  },
+  {
+    "questionid": "AFH.1.8.8",
+    "question": "What is a common characteristic of most midair collision incidents?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.8.8.c.1",
+        "text": "Occur during daylight"
+      },
+      {
+        "id": "AFH.1.8.8.c.2",
+        "text": "Happen in good weather"
+      },
+      {
+        "id": "AFH.1.8.8.c.3",
+        "text": "Involve high closure rates"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.8.8.w.1",
+        "text": "Occur at night"
+      },
+      {
+        "id": "AFH.1.8.8.w.2",
+        "text": "Happen in poor weather"
+      },
+      {
+        "id": "AFH.1.8.8.w.3",
+        "text": "Involve low-speed aircraft"
+      },
+      {
+        "id": "AFH.1.8.8.w.4",
+        "text": "Occur over water"
+      },
+      {
+        "id": "AFH.1.8.8.w.5",
+        "text": "Happen in mountainous areas"
+      },
+      {
+        "id": "AFH.1.8.8.w.6",
+        "text": "Involve military aircraft"
+      },
+      {
+        "id": "AFH.1.8.8.w.7",
+        "text": "Occur in controlled airspace"
+      },
+      {
+        "id": "AFH.1.8.8.w.8",
+        "text": "Happen during IFR conditions"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 8",
+    "subjects": [
+      "Collision Avoidance"
+    ]
+  },
+  {
+    "questionid": "AFH.1.8.9",
+    "question": "What is a key responsibility of pilots to prevent midair collisions?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.8.9.c.1",
+        "text": "Maintain a vigilant lookout"
+      },
+      {
+        "id": "AFH.1.8.9.c.2",
+        "text": "Continuously scan the visual field"
+      },
+      {
+        "id": "AFH.1.8.9.c.3",
+        "text": "Be aware of traffic movement"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.8.9.w.1",
+        "text": "Rely on air traffic control"
+      },
+      {
+        "id": "AFH.1.8.9.w.2",
+        "text": "Use only instruments"
+      },
+      {
+        "id": "AFH.1.8.9.w.3",
+        "text": "Focus solely on navigation aids"
+      },
+      {
+        "id": "AFH.1.8.9.w.4",
+        "text": "Depend on weather reports"
+      },
+      {
+        "id": "AFH.1.8.9.w.5",
+        "text": "Use autopilot systems"
+      },
+      {
+        "id": "AFH.1.8.9.w.6",
+        "text": "Rely on ground-based radar"
+      },
+      {
+        "id": "AFH.1.8.9.w.7",
+        "text": "Depend on co-pilot"
+      },
+      {
+        "id": "AFH.1.8.9.w.8",
+        "text": "Use flight simulators"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 8",
+    "subjects": [
+      "Collision Avoidance"
+    ]
+  },
+  {
+    "questionid": "AFH.1.9.1",
+    "question": "What are the three major areas contributing to runway incursions?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.9.1.c.1",
+        "text": "Communications"
+      },
+      {
+        "id": "AFH.1.9.1.c.2",
+        "text": "Airport knowledge"
+      },
+      {
+        "id": "AFH.1.9.1.c.3",
+        "text": "Flight deck procedures"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.9.1.w.1",
+        "text": "Weather conditions"
+      },
+      {
+        "id": "AFH.1.9.1.w.2",
+        "text": "Aircraft maintenance"
+      },
+      {
+        "id": "AFH.1.9.1.w.3",
+        "text": "Pilot fatigue"
+      },
+      {
+        "id": "AFH.1.9.1.w.4",
+        "text": "Runway length"
+      },
+      {
+        "id": "AFH.1.9.1.w.5",
+        "text": "Aircraft speed"
+      },
+      {
+        "id": "AFH.1.9.1.w.6",
+        "text": "Passenger distractions"
+      },
+      {
+        "id": "AFH.1.9.1.w.7",
+        "text": "Fuel management"
+      },
+      {
+        "id": "AFH.1.9.1.w.8",
+        "text": "Navigation systems"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 9",
+    "subjects": [
+      "Runway Incursion Avoidance"
+    ]
+  },
+  {
+    "questionid": "AFH.1.9.2",
+    "question": "What should flight instructors emphasize during taxi operations to avoid runway incursions?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.9.2.c.1",
+        "text": "Vigilance"
+      },
+      {
+        "id": "AFH.1.9.2.c.2",
+        "text": "Situational awareness"
+      },
+      {
+        "id": "AFH.1.9.2.c.3",
+        "text": "Clear communications"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.9.2.w.1",
+        "text": "Fuel efficiency"
+      },
+      {
+        "id": "AFH.1.9.2.w.2",
+        "text": "Passenger comfort"
+      },
+      {
+        "id": "AFH.1.9.2.w.3",
+        "text": "Weather updates"
+      },
+      {
+        "id": "AFH.1.9.2.w.4",
+        "text": "In-flight entertainment"
+      },
+      {
+        "id": "AFH.1.9.2.w.5",
+        "text": "Cabin temperature"
+      },
+      {
+        "id": "AFH.1.9.2.w.6",
+        "text": "Altitude monitoring"
+      },
+      {
+        "id": "AFH.1.9.2.w.7",
+        "text": "Engine performance"
+      },
+      {
+        "id": "AFH.1.9.2.w.8",
+        "text": "Seatbelt usage"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 9",
+    "subjects": [
+      "Runway Incursion Avoidance"
+    ]
+  },
+  {
+    "questionid": "AFH.1.9.3",
+    "question": "What actions can reduce the potential for surface incidents during airport operations?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.9.3.c.1",
+        "text": "Planning"
+      },
+      {
+        "id": "AFH.1.9.3.c.2",
+        "text": "Enhanced situational awareness"
+      },
+      {
+        "id": "AFH.1.9.3.c.3",
+        "text": "Standard taxi operating procedures"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.9.3.w.1",
+        "text": "Increasing speed"
+      },
+      {
+        "id": "AFH.1.9.3.w.2",
+        "text": "Reducing communication"
+      },
+      {
+        "id": "AFH.1.9.3.w.3",
+        "text": "Ignoring ground vehicles"
+      },
+      {
+        "id": "AFH.1.9.3.w.4",
+        "text": "Focusing on in-flight procedures"
+      },
+      {
+        "id": "AFH.1.9.3.w.5",
+        "text": "Relying solely on autopilot"
+      },
+      {
+        "id": "AFH.1.9.3.w.6",
+        "text": "Minimizing crew involvement"
+      },
+      {
+        "id": "AFH.1.9.3.w.7",
+        "text": "Avoiding non-tower airports"
+      },
+      {
+        "id": "AFH.1.9.3.w.8",
+        "text": "Skipping pre-flight checks"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 9",
+    "subjects": [
+      "Runway Incursion Avoidance"
+    ]
+  },
+  {
+    "questionid": "AFH.1.10.1",
+    "question": "What is the direct cause of every stall in an airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.10.1.c.1",
+        "text": "Excessive angle of attack (AOA)"
+      },
+      {
+        "id": "AFH.1.10.1.c.2",
+        "text": "Critical AOA exceeded"
+      },
+      {
+        "id": "AFH.1.10.1.c.3",
+        "text": "High AOA"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.10.1.w.1",
+        "text": "Low airspeed"
+      },
+      {
+        "id": "AFH.1.10.1.w.2",
+        "text": "High pitch attitude"
+      },
+      {
+        "id": "AFH.1.10.1.w.3",
+        "text": "Vertical flight"
+      },
+      {
+        "id": "AFH.1.10.1.w.4",
+        "text": "Low altitude"
+      },
+      {
+        "id": "AFH.1.10.1.w.5",
+        "text": "High load factor"
+      },
+      {
+        "id": "AFH.1.10.1.w.6",
+        "text": "Power setting"
+      },
+      {
+        "id": "AFH.1.10.1.w.7",
+        "text": "Aircraft configuration"
+      },
+      {
+        "id": "AFH.1.10.1.w.8",
+        "text": "Relative wind"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1: Introduction to Flight Training Introduction, Stall Awareness",
+    "subjects": [
+      "Stall Awareness"
+    ]
+  },
+  {
+    "questionid": "AFH.1.10.2",
+    "question": "What should a student pilot understand about the angle of attack (AOA) during stall training?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.10.2.c.1",
+        "text": "AOA can be excessive at any speed"
+      },
+      {
+        "id": "AFH.1.10.2.c.2",
+        "text": "Stall occurs when AOA becomes excessive"
+      },
+      {
+        "id": "AFH.1.10.2.c.3",
+        "text": "Critical AOA varies from 16°–20°"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.10.2.w.1",
+        "text": "Stalls only occur at low speed"
+      },
+      {
+        "id": "AFH.1.10.2.w.2",
+        "text": "High pitch attitude always indicates a stall"
+      },
+      {
+        "id": "AFH.1.10.2.w.3",
+        "text": "AOA is irrelevant to stalls"
+      },
+      {
+        "id": "AFH.1.10.2.w.4",
+        "text": "Stalls occur only during turns"
+      },
+      {
+        "id": "AFH.1.10.2.w.5",
+        "text": "AOA is constant for all maneuvers"
+      },
+      {
+        "id": "AFH.1.10.2.w.6",
+        "text": "Stalls are caused by low altitude"
+      },
+      {
+        "id": "AFH.1.10.2.w.7",
+        "text": "Stalls are caused by high airspeed"
+      },
+      {
+        "id": "AFH.1.10.2.w.8",
+        "text": "Stalls are caused by engine failure"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1: Introduction to Flight Training Introduction, Stall Awareness",
+    "subjects": [
+      "Stall Awareness"
+    ]
+  },
+  {
+    "questionid": "AFH.1.10.3",
+    "question": "What factors should a pilot consider to visualize the wing's angle of attack (AOA)?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.10.3.c.1",
+        "text": "Airspeed"
+      },
+      {
+        "id": "AFH.1.10.3.c.2",
+        "text": "Pitch attitude"
+      },
+      {
+        "id": "AFH.1.10.3.c.3",
+        "text": "Load factor"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.10.3.w.1",
+        "text": "Altitude"
+      },
+      {
+        "id": "AFH.1.10.3.w.2",
+        "text": "Engine power"
+      },
+      {
+        "id": "AFH.1.10.3.w.3",
+        "text": "Fuel level"
+      },
+      {
+        "id": "AFH.1.10.3.w.4",
+        "text": "Weather conditions"
+      },
+      {
+        "id": "AFH.1.10.3.w.5",
+        "text": "Passenger weight"
+      },
+      {
+        "id": "AFH.1.10.3.w.6",
+        "text": "Flight duration"
+      },
+      {
+        "id": "AFH.1.10.3.w.7",
+        "text": "Navigation route"
+      },
+      {
+        "id": "AFH.1.10.3.w.8",
+        "text": "Aircraft color"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1: Introduction to Flight Training Introduction, Stall Awareness",
+    "subjects": [
+      "Stall Awareness"
+    ]
+  },
+  {
+    "questionid": "AFH.1.11.1",
+    "question": "What is the primary purpose of using checklists in flight operations?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.11.1.c.1",
+        "text": "To ensure critical items are not overlooked"
+      },
+      {
+        "id": "AFH.1.11.1.c.2",
+        "text": "To serve as a memory aid"
+      },
+      {
+        "id": "AFH.1.11.1.c.3",
+        "text": "To enhance flight deck safety"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.11.1.w.1",
+        "text": "To replace pilot training"
+      },
+      {
+        "id": "AFH.1.11.1.w.2",
+        "text": "To increase flight time"
+      },
+      {
+        "id": "AFH.1.11.1.w.3",
+        "text": "To reduce pilot workload"
+      },
+      {
+        "id": "AFH.1.11.1.w.4",
+        "text": "To eliminate the need for communication"
+      },
+      {
+        "id": "AFH.1.11.1.w.5",
+        "text": "To serve as a legal document"
+      },
+      {
+        "id": "AFH.1.11.1.w.6",
+        "text": "To replace flight instructors"
+      },
+      {
+        "id": "AFH.1.11.1.w.7",
+        "text": "To ensure faster takeoffs"
+      },
+      {
+        "id": "AFH.1.11.1.w.8",
+        "text": "To minimize fuel consumption"
+      }
+    ],
+    "source": "AFH.1.11",
+    "subjects": [
+      "Flight Training",
+      "Checklist Usage"
+    ]
+  },
+  {
+    "questionid": "AFH.1.11.2",
+    "question": "What should a pilot do after completing the necessary actions during a flight phase?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.11.2.c.1",
+        "text": "Use the checklist to ensure all tasks are completed"
+      },
+      {
+        "id": "AFH.1.11.2.c.2",
+        "text": "Emphasize the 'check' in checklist"
+      },
+      {
+        "id": "AFH.1.11.2.c.3",
+        "text": "Verify actions with the checklist"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.11.2.w.1",
+        "text": "Skip the checklist if confident"
+      },
+      {
+        "id": "AFH.1.11.2.w.2",
+        "text": "Rely solely on memory"
+      },
+      {
+        "id": "AFH.1.11.2.w.3",
+        "text": "Ask the co-pilot to verify"
+      },
+      {
+        "id": "AFH.1.11.2.w.4",
+        "text": "Proceed to the next phase without checking"
+      },
+      {
+        "id": "AFH.1.11.2.w.5",
+        "text": "Use the checklist only if unsure"
+      },
+      {
+        "id": "AFH.1.11.2.w.6",
+        "text": "Ignore the checklist if in a hurry"
+      },
+      {
+        "id": "AFH.1.11.2.w.7",
+        "text": "Rely on experience instead"
+      },
+      {
+        "id": "AFH.1.11.2.w.8",
+        "text": "Wait for the instructor's confirmation"
+      }
+    ],
+    "source": "AFH.1.11",
+    "subjects": [
+      "Flight Training",
+      "Checklist Usage"
+    ]
+  },
+  {
+    "questionid": "AFH.1.11.3",
+    "question": "Which phases of flight should have prepared checklists at a minimum?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.11.3.c.1",
+        "text": "Preflight inspection"
+      },
+      {
+        "id": "AFH.1.11.3.c.2",
+        "text": "Before takeoff"
+      },
+      {
+        "id": "AFH.1.11.3.c.3",
+        "text": "Engine shutdown and securing"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.11.3.w.1",
+        "text": "During taxiing"
+      },
+      {
+        "id": "AFH.1.11.3.w.2",
+        "text": "After engine start"
+      },
+      {
+        "id": "AFH.1.11.3.w.3",
+        "text": "During climb"
+      },
+      {
+        "id": "AFH.1.11.3.w.4",
+        "text": "During approach"
+      },
+      {
+        "id": "AFH.1.11.3.w.5",
+        "text": "During final descent"
+      },
+      {
+        "id": "AFH.1.11.3.w.6",
+        "text": "During emergency procedures"
+      },
+      {
+        "id": "AFH.1.11.3.w.7",
+        "text": "During refueling"
+      },
+      {
+        "id": "AFH.1.11.3.w.8",
+        "text": "During passenger boarding"
+      }
+    ],
+    "source": "AFH.1.11",
+    "subjects": [
+      "Flight Training",
+      "Checklist Usage"
+    ]
+  },
+  {
+    "questionid": "AFH.1.11.4",
+    "question": "What is a recommended procedure for the exchange of flight controls between a learner and an instructor?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.11.4.c.1",
+        "text": "Use a three-step verbal confirmation"
+      },
+      {
+        "id": "AFH.1.11.4.c.2",
+        "text": "Include a visual check"
+      },
+      {
+        "id": "AFH.1.11.4.c.3",
+        "text": "Ensure clear communication"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.11.4.w.1",
+        "text": "Rely on non-verbal cues"
+      },
+      {
+        "id": "AFH.1.11.4.w.2",
+        "text": "Use hand signals only"
+      },
+      {
+        "id": "AFH.1.11.4.w.3",
+        "text": "Exchange controls silently"
+      },
+      {
+        "id": "AFH.1.11.4.w.4",
+        "text": "Use a checklist for control exchange"
+      },
+      {
+        "id": "AFH.1.11.4.w.5",
+        "text": "Wait for the instructor's nod"
+      },
+      {
+        "id": "AFH.1.11.4.w.6",
+        "text": "Assume control without confirmation"
+      },
+      {
+        "id": "AFH.1.11.4.w.7",
+        "text": "Rely on intuition"
+      },
+      {
+        "id": "AFH.1.11.4.w.8",
+        "text": "Use a written agreement"
+      }
+    ],
+    "source": "AFH.1.11",
+    "subjects": [
+      "Flight Training",
+      "Communication"
+    ]
+  },
+  {
+    "questionid": "AFH.1.11.5",
+    "question": "Why is it important for flight instructors to promote a positive attitude towards checklist usage?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.11.5.c.1",
+        "text": "To establish beneficial habit patterns"
+      },
+      {
+        "id": "AFH.1.11.5.c.2",
+        "text": "To prevent complacency"
+      },
+      {
+        "id": "AFH.1.11.5.c.3",
+        "text": "To ensure consistent checklist use"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.11.5.w.1",
+        "text": "To reduce training time"
+      },
+      {
+        "id": "AFH.1.11.5.w.2",
+        "text": "To simplify flight operations"
+      },
+      {
+        "id": "AFH.1.11.5.w.3",
+        "text": "To minimize instructor workload"
+      },
+      {
+        "id": "AFH.1.11.5.w.4",
+        "text": "To increase aircraft performance"
+      },
+      {
+        "id": "AFH.1.11.5.w.5",
+        "text": "To enhance pilot independence"
+      },
+      {
+        "id": "AFH.1.11.5.w.6",
+        "text": "To eliminate the need for supervision"
+      },
+      {
+        "id": "AFH.1.11.5.w.7",
+        "text": "To speed up the learning process"
+      },
+      {
+        "id": "AFH.1.11.5.w.8",
+        "text": "To reduce the number of checklists"
+      }
+    ],
+    "source": "AFH.1.11",
+    "subjects": [
+      "Flight Training",
+      "Checklist Usage"
+    ]
+  },
+  {
+    "questionid": "AFH.1.12.1",
+    "question": "What are some ways professionals continue their education to improve performance and safety?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.12.1.c.1",
+        "text": "Receive feedback"
+      },
+      {
+        "id": "AFH.1.12.1.c.2",
+        "text": "Read journals"
+      },
+      {
+        "id": "AFH.1.12.1.c.3",
+        "text": "Practice techniques"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.12.1.w.1",
+        "text": "Ignore feedback"
+      },
+      {
+        "id": "AFH.1.12.1.w.2",
+        "text": "Avoid training"
+      },
+      {
+        "id": "AFH.1.12.1.w.3",
+        "text": "Disregard new techniques"
+      },
+      {
+        "id": "AFH.1.12.1.w.4",
+        "text": "Rely solely on experience"
+      },
+      {
+        "id": "AFH.1.12.1.w.5",
+        "text": "Neglect peer reviews"
+      },
+      {
+        "id": "AFH.1.12.1.w.6",
+        "text": "Skip practice sessions"
+      },
+      {
+        "id": "AFH.1.12.1.w.7",
+        "text": "Avoid coaching"
+      },
+      {
+        "id": "AFH.1.12.1.w.8",
+        "text": "Discontinue learning"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1: Introduction to Flight Training Introduction, Section: Continuing Education",
+    "subjects": [
+      "Flight Training",
+      "Professional Development"
+    ]
+  },
+  {
+    "questionid": "AFH.1.13.1",
+    "question": "What are some benefits of participating in the FAA WINGS program?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.13.1.c.1",
+        "text": "Access to the latest information on aviation technology"
+      },
+      {
+        "id": "AFH.1.13.1.c.2",
+        "text": "Documentation of targeted skill development"
+      },
+      {
+        "id": "AFH.1.13.1.c.3",
+        "text": "Potential discounts on flight insurance policies"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.13.1.w.1",
+        "text": "Guaranteed pilot license renewal"
+      },
+      {
+        "id": "AFH.1.13.1.w.2",
+        "text": "Free flight hours"
+      },
+      {
+        "id": "AFH.1.13.1.w.3",
+        "text": "Automatic compliance with all FAA regulations"
+      },
+      {
+        "id": "AFH.1.13.1.w.4",
+        "text": "Exemption from 14 CFR part 61 requirements"
+      },
+      {
+        "id": "AFH.1.13.1.w.5",
+        "text": "Unlimited access to flight simulators"
+      },
+      {
+        "id": "AFH.1.13.1.w.6",
+        "text": "Direct mentorship from FAA officials"
+      },
+      {
+        "id": "AFH.1.13.1.w.7",
+        "text": "Priority boarding on commercial flights"
+      },
+      {
+        "id": "AFH.1.13.1.w.8",
+        "text": "Free aviation equipment"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1, Section 13",
+    "subjects": [
+      "FAA WINGS Program",
+      "Pilot Training",
+      "Aviation Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.1.14.1",
+    "question": "What are some of the key topics covered in the introduction to flight training chapter?",
+    "correct_answers": [
+      {
+        "id": "AFH.1.14.1.c.1",
+        "text": "Concepts and goals of primary and intermediate flight training"
+      },
+      {
+        "id": "AFH.1.14.1.c.2",
+        "text": "Explanation of regulatory requirements"
+      },
+      {
+        "id": "AFH.1.14.1.c.3",
+        "text": "Recommended techniques for developing pilot proficiency"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.1.14.1.w.1",
+        "text": "Advanced aerobatic maneuvers"
+      },
+      {
+        "id": "AFH.1.14.1.w.2",
+        "text": "History of aviation"
+      },
+      {
+        "id": "AFH.1.14.1.w.3",
+        "text": "Meteorological phenomena"
+      },
+      {
+        "id": "AFH.1.14.1.w.4",
+        "text": "Aircraft maintenance procedures"
+      },
+      {
+        "id": "AFH.1.14.1.w.5",
+        "text": "Global air traffic control systems"
+      },
+      {
+        "id": "AFH.1.14.1.w.6",
+        "text": "Space flight operations"
+      },
+      {
+        "id": "AFH.1.14.1.w.7",
+        "text": "Helicopter flight dynamics"
+      },
+      {
+        "id": "AFH.1.14.1.w.8",
+        "text": "Military aviation tactics"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 1: Introduction to Flight Training Introduction",
+    "subjects": [
+      "Flight Training",
+      "Regulatory Requirements",
+      "Pilot Proficiency"
+    ]
+  }
+]

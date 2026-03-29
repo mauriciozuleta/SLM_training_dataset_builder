@@ -1,0 +1,2949 @@
+[
+  {
+    "questionBank": {
+      "chapterId": "afh.4",
+      "bookId": "AFH",
+      "chapterNumber": 4,
+      "chapterTitle": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4: Energy Management: Mastering Altitude and Airspeed Control Introduction",
+      "totalRequiredQuestions": 50,
+      "metadata": {
+        "generatedAtUtc": "2026-03-27T16:42:40.616Z",
+        "chapterId": "afh.4",
+        "chapterNumber": 4,
+        "totalSections": 15,
+        "totalRequiredQuestions": 50,
+        "providers": [
+          "openai"
+        ],
+        "models": [
+          "gpt-4o"
+        ],
+        "promptTokens": 9373,
+        "completionTokens": 5590,
+        "totalTokens": 14963,
+        "sectionQuestionSummary": [
+          {
+            "sectionId": "afh.4.1",
+            "sectionTitle": "Importance of Energy Management",
+            "sectionOrdinal": 1,
+            "sectionWeightPercentage": 2.11,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.4.2",
+            "sectionTitle": "Viewing the Airplane as an Energy System",
+            "sectionOrdinal": 2,
+            "sectionWeightPercentage": 1.57,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.4.3",
+            "sectionTitle": "A Frame of Reference for Managing Energy State",
+            "sectionOrdinal": 3,
+            "sectionWeightPercentage": 9.03,
+            "questionsGenerated": 5
+          },
+          {
+            "sectionId": "afh.4.4",
+            "sectionTitle": "PS = (T – D)V/W T = Thrust",
+            "sectionOrdinal": 4,
+            "sectionWeightPercentage": 4.25,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.4.5",
+            "sectionTitle": "Role of the Controls to Manage Energy State",
+            "sectionOrdinal": 5,
+            "sectionWeightPercentage": 1.29,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.4.6",
+            "sectionTitle": "Primary Energy Role of the Throttle and Elevator",
+            "sectionOrdinal": 6,
+            "sectionWeightPercentage": 5.92,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.4.7",
+            "sectionTitle": "Additional Role for the Elevator",
+            "sectionOrdinal": 7,
+            "sectionWeightPercentage": 6.69,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.4.8",
+            "sectionTitle": "Rules of Energy Control",
+            "sectionOrdinal": 8,
+            "sectionWeightPercentage": 1.05,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.4.9",
+            "sectionTitle": "Visualizing the Airplane’s Ability to “Move” Between Energy States",
+            "sectionOrdinal": 9,
+            "sectionWeightPercentage": 10.7,
+            "questionsGenerated": 5
+          },
+          {
+            "sectionId": "afh.4.10",
+            "sectionTitle": "Three Basic Rules of Energy Control",
+            "sectionOrdinal": 10,
+            "sectionWeightPercentage": 15.91,
+            "questionsGenerated": 8
+          },
+          {
+            "sectionId": "afh.4.11",
+            "sectionTitle": "Mitigating Risks from Mismanagement of Energy",
+            "sectionOrdinal": 11,
+            "sectionWeightPercentage": 1.76,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.4.12",
+            "sectionTitle": "Scenario 1",
+            "sectionOrdinal": 12,
+            "sectionWeightPercentage": 0.51,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.4.13",
+            "sectionTitle": "Scenario 2",
+            "sectionOrdinal": 13,
+            "sectionWeightPercentage": 0.87,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.4.14",
+            "sectionTitle": "Managing Energy Errors",
+            "sectionOrdinal": 14,
+            "sectionWeightPercentage": 36.63,
+            "questionsGenerated": 18
+          },
+          {
+            "sectionId": "afh.4.15",
+            "sectionTitle": "Chapter Summary",
+            "sectionOrdinal": 15,
+            "sectionWeightPercentage": 1.71,
+            "questionsGenerated": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "questionid": "AFH.4.1.1",
+    "question": "What are the key components of energy management for pilots?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.1.1.c.1",
+        "text": "Managing altitude and airspeed"
+      },
+      {
+        "id": "AFH.4.1.1.c.2",
+        "text": "Achieving desired vertical flight path"
+      },
+      {
+        "id": "AFH.4.1.1.c.3",
+        "text": "Transitioning between flight profiles"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.1.1.w.1",
+        "text": "Increasing engine power"
+      },
+      {
+        "id": "AFH.4.1.1.w.2",
+        "text": "Reducing fuel consumption"
+      },
+      {
+        "id": "AFH.4.1.1.w.3",
+        "text": "Enhancing passenger comfort"
+      },
+      {
+        "id": "AFH.4.1.1.w.4",
+        "text": "Improving cabin pressurization"
+      },
+      {
+        "id": "AFH.4.1.1.w.5",
+        "text": "Maximizing flight duration"
+      },
+      {
+        "id": "AFH.4.1.1.w.6",
+        "text": "Optimizing fuel efficiency"
+      },
+      {
+        "id": "AFH.4.1.1.w.7",
+        "text": "Enhancing in-flight entertainment"
+      },
+      {
+        "id": "AFH.4.1.1.w.8",
+        "text": "Increasing aircraft speed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4: Energy Management: Mastering Altitude and Airspeed Control Introduction",
+    "subjects": [
+      "Energy Management",
+      "Flight Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.4.2.1",
+    "question": "What constitutes the total mechanical energy of an airplane in flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.2.1.c.1",
+        "text": "Potential energy from altitude"
+      },
+      {
+        "id": "AFH.4.2.1.c.2",
+        "text": "Kinetic energy from airspeed"
+      },
+      {
+        "id": "AFH.4.2.1.c.3",
+        "text": "Sum of mgh and ½ mV²"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.2.1.w.1",
+        "text": "Only potential energy"
+      },
+      {
+        "id": "AFH.4.2.1.w.2",
+        "text": "Only kinetic energy"
+      },
+      {
+        "id": "AFH.4.2.1.w.3",
+        "text": "Potential energy from fuel"
+      },
+      {
+        "id": "AFH.4.2.1.w.4",
+        "text": "Kinetic energy from engine"
+      },
+      {
+        "id": "AFH.4.2.1.w.5",
+        "text": "Potential energy from weight"
+      },
+      {
+        "id": "AFH.4.2.1.w.6",
+        "text": "Kinetic energy from drag"
+      },
+      {
+        "id": "AFH.4.2.1.w.7",
+        "text": "Sum of mgh and ½ mV"
+      },
+      {
+        "id": "AFH.4.2.1.w.8",
+        "text": "Sum of mgh and mV²"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 2",
+    "subjects": [
+      "Energy Management",
+      "Altitude Control",
+      "Airspeed Control"
+    ]
+  },
+  {
+    "questionid": "AFH.4.3.1",
+    "question": "What determines the energy state of an airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.3.1.c.1",
+        "text": "Total amount and distribution of energy stored as altitude and airspeed"
+      },
+      {
+        "id": "AFH.4.3.1.c.2",
+        "text": "Indicated altitude and indicated airspeed"
+      },
+      {
+        "id": "AFH.4.3.1.c.3",
+        "text": "Function of indicated altitude and airspeed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.3.1.w.1",
+        "text": "Height above ground level (AGL)"
+      },
+      {
+        "id": "AFH.4.3.1.w.2",
+        "text": "Groundspeed"
+      },
+      {
+        "id": "AFH.4.3.1.w.3",
+        "text": "Terrain elevation"
+      },
+      {
+        "id": "AFH.4.3.1.w.4",
+        "text": "Wind speed"
+      },
+      {
+        "id": "AFH.4.3.1.w.5",
+        "text": "Wind direction"
+      },
+      {
+        "id": "AFH.4.3.1.w.6",
+        "text": "External factors"
+      },
+      {
+        "id": "AFH.4.3.1.w.7",
+        "text": "Pilot's perception"
+      },
+      {
+        "id": "AFH.4.3.1.w.8",
+        "text": "Weather conditions"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 3",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.3.2",
+    "question": "How is potential energy in an airplane determined?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.3.2.c.1",
+        "text": "Based on indicated altitude"
+      },
+      {
+        "id": "AFH.4.3.2.c.2",
+        "text": "Height above mean sea level (MSL)"
+      },
+      {
+        "id": "AFH.4.3.2.c.3",
+        "text": "Displayed in the altimeter"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.3.2.w.1",
+        "text": "Height above ground level (AGL)"
+      },
+      {
+        "id": "AFH.4.3.2.w.2",
+        "text": "Groundspeed"
+      },
+      {
+        "id": "AFH.4.3.2.w.3",
+        "text": "Wind speed"
+      },
+      {
+        "id": "AFH.4.3.2.w.4",
+        "text": "Terrain elevation"
+      },
+      {
+        "id": "AFH.4.3.2.w.5",
+        "text": "Pilot's control inputs"
+      },
+      {
+        "id": "AFH.4.3.2.w.6",
+        "text": "External factors"
+      },
+      {
+        "id": "AFH.4.3.2.w.7",
+        "text": "Weather conditions"
+      },
+      {
+        "id": "AFH.4.3.2.w.8",
+        "text": "Pilot's perception"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 3",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.3.3",
+    "question": "What happens when thrust exceeds drag in an airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.3.3.c.1",
+        "text": "Total mechanical energy increases"
+      },
+      {
+        "id": "AFH.4.3.3.c.2",
+        "text": "Surplus energy can be stored as increased altitude"
+      },
+      {
+        "id": "AFH.4.3.3.c.3",
+        "text": "Surplus energy can be stored as increased airspeed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.3.3.w.1",
+        "text": "Total mechanical energy decreases"
+      },
+      {
+        "id": "AFH.4.3.3.w.2",
+        "text": "Airplane descends at constant airspeed"
+      },
+      {
+        "id": "AFH.4.3.3.w.3",
+        "text": "Airplane slows down while maintaining altitude"
+      },
+      {
+        "id": "AFH.4.3.3.w.4",
+        "text": "Energy deficit occurs"
+      },
+      {
+        "id": "AFH.4.3.3.w.5",
+        "text": "All thrust is spent on drag"
+      },
+      {
+        "id": "AFH.4.3.3.w.6",
+        "text": "Mechanical energy remains constant"
+      },
+      {
+        "id": "AFH.4.3.3.w.7",
+        "text": "Energy is lost to external factors"
+      },
+      {
+        "id": "AFH.4.3.3.w.8",
+        "text": "Pilot loses control"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 3",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.3.4",
+    "question": "What is the result when drag exceeds thrust in an airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.3.4.c.1",
+        "text": "Total mechanical energy decreases"
+      },
+      {
+        "id": "AFH.4.3.4.c.2",
+        "text": "Airplane may descend at constant airspeed"
+      },
+      {
+        "id": "AFH.4.3.4.c.3",
+        "text": "Airplane may slow down while maintaining altitude"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.3.4.w.1",
+        "text": "Total mechanical energy increases"
+      },
+      {
+        "id": "AFH.4.3.4.w.2",
+        "text": "Surplus energy stored as increased altitude"
+      },
+      {
+        "id": "AFH.4.3.4.w.3",
+        "text": "Surplus energy stored as increased airspeed"
+      },
+      {
+        "id": "AFH.4.3.4.w.4",
+        "text": "Energy gained equals energy lost"
+      },
+      {
+        "id": "AFH.4.3.4.w.5",
+        "text": "Mechanical energy remains constant"
+      },
+      {
+        "id": "AFH.4.3.4.w.6",
+        "text": "All thrust is spent on drag"
+      },
+      {
+        "id": "AFH.4.3.4.w.7",
+        "text": "Pilot gains control"
+      },
+      {
+        "id": "AFH.4.3.4.w.8",
+        "text": "Energy is unaffected by external factors"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 3",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.3.5",
+    "question": "What occurs when energy gained equals energy lost in an airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.3.5.c.1",
+        "text": "Total mechanical energy remains constant"
+      },
+      {
+        "id": "AFH.4.3.5.c.2",
+        "text": "Altitude and airspeed remain constant"
+      },
+      {
+        "id": "AFH.4.3.5.c.3",
+        "text": "All thrust is spent on drag"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.3.5.w.1",
+        "text": "Total mechanical energy increases"
+      },
+      {
+        "id": "AFH.4.3.5.w.2",
+        "text": "Total mechanical energy decreases"
+      },
+      {
+        "id": "AFH.4.3.5.w.3",
+        "text": "Airplane accelerates"
+      },
+      {
+        "id": "AFH.4.3.5.w.4",
+        "text": "Airplane decelerates"
+      },
+      {
+        "id": "AFH.4.3.5.w.5",
+        "text": "Surplus energy stored as increased altitude"
+      },
+      {
+        "id": "AFH.4.3.5.w.6",
+        "text": "Surplus energy stored as increased airspeed"
+      },
+      {
+        "id": "AFH.4.3.5.w.7",
+        "text": "Energy deficit occurs"
+      },
+      {
+        "id": "AFH.4.3.5.w.8",
+        "text": "Pilot loses control"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 3",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.4.1",
+    "question": "What does the left side of the airplane's energy balance equation represent?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.4.1.c.1",
+        "text": "Net energy flow"
+      },
+      {
+        "id": "AFH.4.4.1.c.2",
+        "text": "Difference between thrust and drag"
+      },
+      {
+        "id": "AFH.4.4.1.c.3",
+        "text": "Pilot-controlled changes in total energy"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.4.1.w.1",
+        "text": "Energy stored as altitude"
+      },
+      {
+        "id": "AFH.4.4.1.w.2",
+        "text": "Energy stored as airspeed"
+      },
+      {
+        "id": "AFH.4.4.1.w.3",
+        "text": "Specific excess power"
+      },
+      {
+        "id": "AFH.4.4.1.w.4",
+        "text": "Aircraft weight"
+      },
+      {
+        "id": "AFH.4.4.1.w.5",
+        "text": "Long-term mechanical energy changes"
+      },
+      {
+        "id": "AFH.4.4.1.w.6",
+        "text": "Fuel burn effects"
+      },
+      {
+        "id": "AFH.4.4.1.w.7",
+        "text": "Range and endurance"
+      },
+      {
+        "id": "AFH.4.4.1.w.8",
+        "text": "Throttle and elevator coordination"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 4",
+    "subjects": [
+      "Aviation Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.5.1",
+    "question": "In the context of energy management in flight, what roles do throttle and elevator inputs play?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.5.1.c.1",
+        "text": "Throttle affects the airplane's total mechanical energy."
+      },
+      {
+        "id": "AFH.4.5.1.c.2",
+        "text": "Elevator inputs affect the distribution of energy over altitude and speed."
+      },
+      {
+        "id": "AFH.4.5.1.c.3",
+        "text": "Throttle and elevator inputs manage the airplane's energy state."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.5.1.w.1",
+        "text": "Throttle controls only airspeed."
+      },
+      {
+        "id": "AFH.4.5.1.w.2",
+        "text": "Elevator controls only altitude."
+      },
+      {
+        "id": "AFH.4.5.1.w.3",
+        "text": "Throttle has no effect on altitude."
+      },
+      {
+        "id": "AFH.4.5.1.w.4",
+        "text": "Elevator has no effect on airspeed."
+      },
+      {
+        "id": "AFH.4.5.1.w.5",
+        "text": "Throttle is unrelated to energy management."
+      },
+      {
+        "id": "AFH.4.5.1.w.6",
+        "text": "Elevator is unrelated to energy management."
+      },
+      {
+        "id": "AFH.4.5.1.w.7",
+        "text": "Throttle and elevator inputs are interchangeable."
+      },
+      {
+        "id": "AFH.4.5.1.w.8",
+        "text": "Throttle controls only altitude."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 5",
+    "subjects": [
+      "Energy Management",
+      "Flight Controls"
+    ]
+  },
+  {
+    "questionid": "AFH.4.6.1",
+    "question": "What is the primary role of the throttle in energy management during flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.6.1.c.1",
+        "text": "Regulates changes in total mechanical energy"
+      },
+      {
+        "id": "AFH.4.6.1.c.2",
+        "text": "Controls the net total energy flow"
+      },
+      {
+        "id": "AFH.4.6.1.c.3",
+        "text": "Increases or decreases engine thrust against drag"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.6.1.w.1",
+        "text": "Controls altitude independently"
+      },
+      {
+        "id": "AFH.4.6.1.w.2",
+        "text": "Controls airspeed independently"
+      },
+      {
+        "id": "AFH.4.6.1.w.3",
+        "text": "Distributes energy between altitude and airspeed"
+      },
+      {
+        "id": "AFH.4.6.1.w.4",
+        "text": "Adjusts pitch attitude"
+      },
+      {
+        "id": "AFH.4.6.1.w.5",
+        "text": "Varies drag significantly"
+      },
+      {
+        "id": "AFH.4.6.1.w.6",
+        "text": "Acts as an energy exchanger"
+      },
+      {
+        "id": "AFH.4.6.1.w.7",
+        "text": "Sets the appropriate pitch attitude"
+      },
+      {
+        "id": "AFH.4.6.1.w.8",
+        "text": "Controls energy distribution"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 6",
+    "subjects": [
+      "Energy Management",
+      "Throttle Control"
+    ]
+  },
+  {
+    "questionid": "AFH.4.6.2",
+    "question": "How does the elevator function in the context of energy management?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.6.2.c.1",
+        "text": "Acts as an energy exchanger"
+      },
+      {
+        "id": "AFH.4.6.2.c.2",
+        "text": "Distributes energy between altitude and airspeed"
+      },
+      {
+        "id": "AFH.4.6.2.c.3",
+        "text": "Adjusts pitch attitude to maintain energy distribution"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.6.2.w.1",
+        "text": "Regulates changes in total mechanical energy"
+      },
+      {
+        "id": "AFH.4.6.2.w.2",
+        "text": "Controls the net total energy flow"
+      },
+      {
+        "id": "AFH.4.6.2.w.3",
+        "text": "Increases or decreases engine thrust against drag"
+      },
+      {
+        "id": "AFH.4.6.2.w.4",
+        "text": "Controls altitude independently"
+      },
+      {
+        "id": "AFH.4.6.2.w.5",
+        "text": "Controls airspeed independently"
+      },
+      {
+        "id": "AFH.4.6.2.w.6",
+        "text": "Varies drag significantly"
+      },
+      {
+        "id": "AFH.4.6.2.w.7",
+        "text": "Sets engine thrust"
+      },
+      {
+        "id": "AFH.4.6.2.w.8",
+        "text": "Controls total energy"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 6",
+    "subjects": [
+      "Energy Management",
+      "Elevator Control"
+    ]
+  },
+  {
+    "questionid": "AFH.4.7.1",
+    "question": "What happens when the elevator is pulled back on the front side of the power required curve?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.7.1.c.1",
+        "text": "The airplane climbs briefly."
+      },
+      {
+        "id": "AFH.4.7.1.c.2",
+        "text": "Airspeed decreases."
+      },
+      {
+        "id": "AFH.4.7.1.c.3",
+        "text": "Total drag is reduced."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.7.1.w.1",
+        "text": "The airplane descends."
+      },
+      {
+        "id": "AFH.4.7.1.w.2",
+        "text": "Airspeed increases."
+      },
+      {
+        "id": "AFH.4.7.1.w.3",
+        "text": "Total drag increases."
+      },
+      {
+        "id": "AFH.4.7.1.w.4",
+        "text": "Excess power decreases."
+      },
+      {
+        "id": "AFH.4.7.1.w.5",
+        "text": "The airplane stalls."
+      },
+      {
+        "id": "AFH.4.7.1.w.6",
+        "text": "The load factor decreases."
+      },
+      {
+        "id": "AFH.4.7.1.w.7",
+        "text": "The airplane turns left."
+      },
+      {
+        "id": "AFH.4.7.1.w.8",
+        "text": "The airplane turns right."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 7",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.7.2",
+    "question": "What is the effect of pushing the elevator forward on the backside of the power required curve?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.7.2.c.1",
+        "text": "The airplane accelerates."
+      },
+      {
+        "id": "AFH.4.7.2.c.2",
+        "text": "Airspeed increases."
+      },
+      {
+        "id": "AFH.4.7.2.c.3",
+        "text": "Total drag is reduced."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.7.2.w.1",
+        "text": "The airplane climbs."
+      },
+      {
+        "id": "AFH.4.7.2.w.2",
+        "text": "Airspeed decreases."
+      },
+      {
+        "id": "AFH.4.7.2.w.3",
+        "text": "Total drag increases."
+      },
+      {
+        "id": "AFH.4.7.2.w.4",
+        "text": "Excess power decreases."
+      },
+      {
+        "id": "AFH.4.7.2.w.5",
+        "text": "The airplane stalls."
+      },
+      {
+        "id": "AFH.4.7.2.w.6",
+        "text": "The load factor decreases."
+      },
+      {
+        "id": "AFH.4.7.2.w.7",
+        "text": "The airplane turns left."
+      },
+      {
+        "id": "AFH.4.7.2.w.8",
+        "text": "The airplane turns right."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 7",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.7.3",
+    "question": "How does the elevator assist in managing energy during a level turn?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.7.3.c.1",
+        "text": "Increases induced drag."
+      },
+      {
+        "id": "AFH.4.7.3.c.2",
+        "text": "Increases power required."
+      },
+      {
+        "id": "AFH.4.7.3.c.3",
+        "text": "Slows the airplane down."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.7.3.w.1",
+        "text": "Decreases induced drag."
+      },
+      {
+        "id": "AFH.4.7.3.w.2",
+        "text": "Decreases power required."
+      },
+      {
+        "id": "AFH.4.7.3.w.3",
+        "text": "Speeds the airplane up."
+      },
+      {
+        "id": "AFH.4.7.3.w.4",
+        "text": "Reduces load factor."
+      },
+      {
+        "id": "AFH.4.7.3.w.5",
+        "text": "Increases airspeed."
+      },
+      {
+        "id": "AFH.4.7.3.w.6",
+        "text": "Reduces total lift."
+      },
+      {
+        "id": "AFH.4.7.3.w.7",
+        "text": "Increases excess power."
+      },
+      {
+        "id": "AFH.4.7.3.w.8",
+        "text": "Decreases total drag."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 7",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.8.1",
+    "question": "What are the key components for managing an airplane's energy state according to the rules of energy control?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.8.1.c.1",
+        "text": "Coordinated throttle inputs"
+      },
+      {
+        "id": "AFH.4.8.1.c.2",
+        "text": "Coordinated elevator inputs"
+      },
+      {
+        "id": "AFH.4.8.1.c.3",
+        "text": "Pitch plus power controls energy state"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.8.1.w.1",
+        "text": "Aileron adjustments"
+      },
+      {
+        "id": "AFH.4.8.1.w.2",
+        "text": "Rudder inputs"
+      },
+      {
+        "id": "AFH.4.8.1.w.3",
+        "text": "Flap settings"
+      },
+      {
+        "id": "AFH.4.8.1.w.4",
+        "text": "Landing gear position"
+      },
+      {
+        "id": "AFH.4.8.1.w.5",
+        "text": "Trim adjustments"
+      },
+      {
+        "id": "AFH.4.8.1.w.6",
+        "text": "Fuel mixture control"
+      },
+      {
+        "id": "AFH.4.8.1.w.7",
+        "text": "Autopilot settings"
+      },
+      {
+        "id": "AFH.4.8.1.w.8",
+        "text": "Wing angle of attack"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 8",
+    "subjects": [
+      "Energy Management",
+      "Altitude Control",
+      "Airspeed Control"
+    ]
+  },
+  {
+    "questionid": "AFH.4.9.1",
+    "question": "What variables define the energy state of an airplane in an altitude-airspeed map?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.9.1.c.1",
+        "text": "Altitude"
+      },
+      {
+        "id": "AFH.4.9.1.c.2",
+        "text": "Airspeed"
+      },
+      {
+        "id": "AFH.4.9.1.c.3",
+        "text": "Total specific energy"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.9.1.w.1",
+        "text": "Latitude"
+      },
+      {
+        "id": "AFH.4.9.1.w.2",
+        "text": "Longitude"
+      },
+      {
+        "id": "AFH.4.9.1.w.3",
+        "text": "Fuel level"
+      },
+      {
+        "id": "AFH.4.9.1.w.4",
+        "text": "Engine power"
+      },
+      {
+        "id": "AFH.4.9.1.w.5",
+        "text": "Wing area"
+      },
+      {
+        "id": "AFH.4.9.1.w.6",
+        "text": "Temperature"
+      },
+      {
+        "id": "AFH.4.9.1.w.7",
+        "text": "Humidity"
+      },
+      {
+        "id": "AFH.4.9.1.w.8",
+        "text": "Pressure"
+      }
+    ],
+    "source": "AFH Chapter 4, Section 9",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.9.2",
+    "question": "What does the term 'energy height' refer to in the context of airplane energy management?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.9.2.c.1",
+        "text": "Maximum height achievable by trading speed for altitude"
+      },
+      {
+        "id": "AFH.4.9.2.c.2",
+        "text": "Sum of potential and kinetic energies divided by aircraft weight"
+      },
+      {
+        "id": "AFH.4.9.2.c.3",
+        "text": "Total specific energy expressed in height"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.9.2.w.1",
+        "text": "Altitude above sea level"
+      },
+      {
+        "id": "AFH.4.9.2.w.2",
+        "text": "Distance traveled horizontally"
+      },
+      {
+        "id": "AFH.4.9.2.w.3",
+        "text": "Fuel efficiency"
+      },
+      {
+        "id": "AFH.4.9.2.w.4",
+        "text": "Engine thrust"
+      },
+      {
+        "id": "AFH.4.9.2.w.5",
+        "text": "Wing lift"
+      },
+      {
+        "id": "AFH.4.9.2.w.6",
+        "text": "Drag coefficient"
+      },
+      {
+        "id": "AFH.4.9.2.w.7",
+        "text": "Rate of climb"
+      },
+      {
+        "id": "AFH.4.9.2.w.8",
+        "text": "Descent rate"
+      }
+    ],
+    "source": "AFH Chapter 4, Section 9",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.9.3",
+    "question": "How can an airplane move along lines of constant energy height?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.9.3.c.1",
+        "text": "By exchanging altitude and airspeed"
+      },
+      {
+        "id": "AFH.4.9.3.c.2",
+        "text": "Through energy exchange"
+      },
+      {
+        "id": "AFH.4.9.3.c.3",
+        "text": "Maintaining constant total energy"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.9.3.w.1",
+        "text": "Increasing engine power"
+      },
+      {
+        "id": "AFH.4.9.3.w.2",
+        "text": "Decreasing drag"
+      },
+      {
+        "id": "AFH.4.9.3.w.3",
+        "text": "Adjusting fuel mixture"
+      },
+      {
+        "id": "AFH.4.9.3.w.4",
+        "text": "Changing wing configuration"
+      },
+      {
+        "id": "AFH.4.9.3.w.5",
+        "text": "Altering cabin pressure"
+      },
+      {
+        "id": "AFH.4.9.3.w.6",
+        "text": "Modifying control surfaces"
+      },
+      {
+        "id": "AFH.4.9.3.w.7",
+        "text": "Using autopilot"
+      },
+      {
+        "id": "AFH.4.9.3.w.8",
+        "text": "Engaging reverse thrust"
+      }
+    ],
+    "source": "AFH Chapter 4, Section 9",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.9.4",
+    "question": "What is required for an airplane to move across energy height lines?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.9.4.c.1",
+        "text": "Increase or decrease total energy"
+      },
+      {
+        "id": "AFH.4.9.4.c.2",
+        "text": "Redistribute energy between altitude and airspeed"
+      },
+      {
+        "id": "AFH.4.9.4.c.3",
+        "text": "Specific excess power"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.9.4.w.1",
+        "text": "Change in fuel consumption"
+      },
+      {
+        "id": "AFH.4.9.4.w.2",
+        "text": "Modification of wing shape"
+      },
+      {
+        "id": "AFH.4.9.4.w.3",
+        "text": "Adjustment of cabin altitude"
+      },
+      {
+        "id": "AFH.4.9.4.w.4",
+        "text": "Alteration of engine RPM"
+      },
+      {
+        "id": "AFH.4.9.4.w.5",
+        "text": "Variation in passenger load"
+      },
+      {
+        "id": "AFH.4.9.4.w.6",
+        "text": "Change in weather conditions"
+      },
+      {
+        "id": "AFH.4.9.4.w.7",
+        "text": "Modification of landing gear position"
+      },
+      {
+        "id": "AFH.4.9.4.w.8",
+        "text": "Adjustment of flight path"
+      }
+    ],
+    "source": "AFH Chapter 4, Section 9",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.9.5",
+    "question": "What does specific excess power (PS) measure in the context of airplane energy management?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.9.5.c.1",
+        "text": "Rate of change in distance or height"
+      },
+      {
+        "id": "AFH.4.9.5.c.2",
+        "text": "Ability to move between energy height lines"
+      },
+      {
+        "id": "AFH.4.9.5.c.3",
+        "text": "Function of energy change distribution"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.9.5.w.1",
+        "text": "Fuel consumption rate"
+      },
+      {
+        "id": "AFH.4.9.5.w.2",
+        "text": "Engine efficiency"
+      },
+      {
+        "id": "AFH.4.9.5.w.3",
+        "text": "Lift-to-drag ratio"
+      },
+      {
+        "id": "AFH.4.9.5.w.4",
+        "text": "Passenger capacity"
+      },
+      {
+        "id": "AFH.4.9.5.w.5",
+        "text": "Cargo weight"
+      },
+      {
+        "id": "AFH.4.9.5.w.6",
+        "text": "Weather impact"
+      },
+      {
+        "id": "AFH.4.9.5.w.7",
+        "text": "Navigation accuracy"
+      },
+      {
+        "id": "AFH.4.9.5.w.8",
+        "text": "Communication range"
+      }
+    ],
+    "source": "AFH Chapter 4, Section 9",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.10.1",
+    "question": "What does the energy-control map depict in the context of airplane energy management?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.10.1.c.1",
+        "text": "Trajectories of an airplane transitioning between energy states"
+      },
+      {
+        "id": "AFH.4.10.1.c.2",
+        "text": "Changes in energy caused by throttle and elevator"
+      },
+      {
+        "id": "AFH.4.10.1.c.3",
+        "text": "The edge of the sustainable energy state envelope"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.10.1.w.1",
+        "text": "Fuel consumption rates"
+      },
+      {
+        "id": "AFH.4.10.1.w.2",
+        "text": "Weather conditions"
+      },
+      {
+        "id": "AFH.4.10.1.w.3",
+        "text": "Pilot fatigue levels"
+      },
+      {
+        "id": "AFH.4.10.1.w.4",
+        "text": "Engine temperature variations"
+      },
+      {
+        "id": "AFH.4.10.1.w.5",
+        "text": "Passenger comfort levels"
+      },
+      {
+        "id": "AFH.4.10.1.w.6",
+        "text": "Aircraft maintenance schedules"
+      },
+      {
+        "id": "AFH.4.10.1.w.7",
+        "text": "Navigation routes"
+      },
+      {
+        "id": "AFH.4.10.1.w.8",
+        "text": "Communication frequencies"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 10",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.10.2",
+    "question": "How does the throttle affect the airplane's energy state according to the energy-control map?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.10.2.c.1",
+        "text": "Adds total energy with increased throttle"
+      },
+      {
+        "id": "AFH.4.10.2.c.2",
+        "text": "Subtracts total energy with decreased throttle"
+      },
+      {
+        "id": "AFH.4.10.2.c.3",
+        "text": "Changes total energy demanded by the target state"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.10.2.w.1",
+        "text": "Changes only potential energy"
+      },
+      {
+        "id": "AFH.4.10.2.w.2",
+        "text": "Affects only kinetic energy"
+      },
+      {
+        "id": "AFH.4.10.2.w.3",
+        "text": "Controls only pitch attitude"
+      },
+      {
+        "id": "AFH.4.10.2.w.4",
+        "text": "Determines aircraft weight"
+      },
+      {
+        "id": "AFH.4.10.2.w.5",
+        "text": "Adjusts only altitude"
+      },
+      {
+        "id": "AFH.4.10.2.w.6",
+        "text": "Influences only airspeed"
+      },
+      {
+        "id": "AFH.4.10.2.w.7",
+        "text": "Regulates cabin pressure"
+      },
+      {
+        "id": "AFH.4.10.2.w.8",
+        "text": "Modifies only fuel efficiency"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 10",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.10.3",
+    "question": "What role does the elevator play in energy distribution on the energy-control map?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.10.3.c.1",
+        "text": "Distributes total energy between potential and kinetic energies"
+      },
+      {
+        "id": "AFH.4.10.3.c.2",
+        "text": "Changes energy distribution through pitch attitude adjustments"
+      },
+      {
+        "id": "AFH.4.10.3.c.3",
+        "text": "Extends along lines of constant total energy"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.10.3.w.1",
+        "text": "Alters only throttle settings"
+      },
+      {
+        "id": "AFH.4.10.3.w.2",
+        "text": "Controls only engine power"
+      },
+      {
+        "id": "AFH.4.10.3.w.3",
+        "text": "Regulates fuel flow"
+      },
+      {
+        "id": "AFH.4.10.3.w.4",
+        "text": "Determines aircraft weight"
+      },
+      {
+        "id": "AFH.4.10.3.w.5",
+        "text": "Adjusts cabin pressure"
+      },
+      {
+        "id": "AFH.4.10.3.w.6",
+        "text": "Influences navigation systems"
+      },
+      {
+        "id": "AFH.4.10.3.w.7",
+        "text": "Modifies communication frequencies"
+      },
+      {
+        "id": "AFH.4.10.3.w.8",
+        "text": "Changes only altitude"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 10",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.10.4",
+    "question": "What is required to transition to a higher altitude at a constant speed according to the energy-control map?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.10.4.c.1",
+        "text": "Increased throttle"
+      },
+      {
+        "id": "AFH.4.10.4.c.2",
+        "text": "Up-elevator"
+      },
+      {
+        "id": "AFH.4.10.4.c.3",
+        "text": "Re-trimming to relieve elevator control pressures"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.10.4.w.1",
+        "text": "Decreased throttle"
+      },
+      {
+        "id": "AFH.4.10.4.w.2",
+        "text": "Down-elevator"
+      },
+      {
+        "id": "AFH.4.10.4.w.3",
+        "text": "Increased fuel flow"
+      },
+      {
+        "id": "AFH.4.10.4.w.4",
+        "text": "Reduced airspeed"
+      },
+      {
+        "id": "AFH.4.10.4.w.5",
+        "text": "Lowering landing gear"
+      },
+      {
+        "id": "AFH.4.10.4.w.6",
+        "text": "Activating spoilers"
+      },
+      {
+        "id": "AFH.4.10.4.w.7",
+        "text": "Deploying flaps"
+      },
+      {
+        "id": "AFH.4.10.4.w.8",
+        "text": "Engaging autopilot"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 10",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.10.5",
+    "question": "What is necessary to transition to a faster airspeed at a constant altitude?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.10.5.c.1",
+        "text": "Increased throttle"
+      },
+      {
+        "id": "AFH.4.10.5.c.2",
+        "text": "Gradual down-elevator"
+      },
+      {
+        "id": "AFH.4.10.5.c.3",
+        "text": "Re-trimming as needed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.10.5.w.1",
+        "text": "Decreased throttle"
+      },
+      {
+        "id": "AFH.4.10.5.w.2",
+        "text": "Up-elevator"
+      },
+      {
+        "id": "AFH.4.10.5.w.3",
+        "text": "Deploying flaps"
+      },
+      {
+        "id": "AFH.4.10.5.w.4",
+        "text": "Lowering landing gear"
+      },
+      {
+        "id": "AFH.4.10.5.w.5",
+        "text": "Reducing engine power"
+      },
+      {
+        "id": "AFH.4.10.5.w.6",
+        "text": "Activating spoilers"
+      },
+      {
+        "id": "AFH.4.10.5.w.7",
+        "text": "Engaging autopilot"
+      },
+      {
+        "id": "AFH.4.10.5.w.8",
+        "text": "Increasing fuel flow"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 10",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.10.6",
+    "question": "What does the line of constant total energy represent on the energy-control map?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.10.6.c.1",
+        "text": "Divides areas requiring more or less total energy"
+      },
+      {
+        "id": "AFH.4.10.6.c.2",
+        "text": "Depicted relative to the initial energy state"
+      },
+      {
+        "id": "AFH.4.10.6.c.3",
+        "text": "Separates blue and red areas on the map"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.10.6.w.1",
+        "text": "Indicates fuel consumption rates"
+      },
+      {
+        "id": "AFH.4.10.6.w.2",
+        "text": "Shows weather conditions"
+      },
+      {
+        "id": "AFH.4.10.6.w.3",
+        "text": "Represents pilot fatigue levels"
+      },
+      {
+        "id": "AFH.4.10.6.w.4",
+        "text": "Displays engine temperature variations"
+      },
+      {
+        "id": "AFH.4.10.6.w.5",
+        "text": "Marks passenger comfort levels"
+      },
+      {
+        "id": "AFH.4.10.6.w.6",
+        "text": "Denotes aircraft maintenance schedules"
+      },
+      {
+        "id": "AFH.4.10.6.w.7",
+        "text": "Highlights navigation routes"
+      },
+      {
+        "id": "AFH.4.10.6.w.8",
+        "text": "Illustrates communication frequencies"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 10",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.10.7",
+    "question": "How are energy trajectories between two states determined on the energy-control map?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.10.7.c.1",
+        "text": "By changes in total energy via throttle"
+      },
+      {
+        "id": "AFH.4.10.7.c.2",
+        "text": "By changes in energy distribution via elevator"
+      },
+      {
+        "id": "AFH.4.10.7.c.3",
+        "text": "By the direction of energy arrows"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.10.7.w.1",
+        "text": "By fuel consumption rates"
+      },
+      {
+        "id": "AFH.4.10.7.w.2",
+        "text": "By weather conditions"
+      },
+      {
+        "id": "AFH.4.10.7.w.3",
+        "text": "By pilot fatigue levels"
+      },
+      {
+        "id": "AFH.4.10.7.w.4",
+        "text": "By engine temperature variations"
+      },
+      {
+        "id": "AFH.4.10.7.w.5",
+        "text": "By passenger comfort levels"
+      },
+      {
+        "id": "AFH.4.10.7.w.6",
+        "text": "By aircraft maintenance schedules"
+      },
+      {
+        "id": "AFH.4.10.7.w.7",
+        "text": "By navigation routes"
+      },
+      {
+        "id": "AFH.4.10.7.w.8",
+        "text": "By communication frequencies"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 10",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.10.8",
+    "question": "What is indicated by the blue and red areas on the energy-control map?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.10.8.c.1",
+        "text": "Blue area requires more total energy"
+      },
+      {
+        "id": "AFH.4.10.8.c.2",
+        "text": "Red area requires less total energy"
+      },
+      {
+        "id": "AFH.4.10.8.c.3",
+        "text": "Depicted relative to the initial energy state"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.10.8.w.1",
+        "text": "Indicates fuel consumption rates"
+      },
+      {
+        "id": "AFH.4.10.8.w.2",
+        "text": "Shows weather conditions"
+      },
+      {
+        "id": "AFH.4.10.8.w.3",
+        "text": "Represents pilot fatigue levels"
+      },
+      {
+        "id": "AFH.4.10.8.w.4",
+        "text": "Displays engine temperature variations"
+      },
+      {
+        "id": "AFH.4.10.8.w.5",
+        "text": "Marks passenger comfort levels"
+      },
+      {
+        "id": "AFH.4.10.8.w.6",
+        "text": "Denotes aircraft maintenance schedules"
+      },
+      {
+        "id": "AFH.4.10.8.w.7",
+        "text": "Highlights navigation routes"
+      },
+      {
+        "id": "AFH.4.10.8.w.8",
+        "text": "Illustrates communication frequencies"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 10",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.11.1",
+    "question": "What are two major risks associated with mismanagement of energy in flight according to the Airplane Flying Handbook?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.11.1.c.1",
+        "text": "Unwanted deviations from the desired energy state"
+      },
+      {
+        "id": "AFH.4.11.1.c.2",
+        "text": "Unintentional, irreversible deceleration"
+      },
+      {
+        "id": "AFH.4.11.1.c.3",
+        "text": "Unintentional sink rate causing depletion of mechanical energy"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.11.1.w.1",
+        "text": "Excessive fuel consumption"
+      },
+      {
+        "id": "AFH.4.11.1.w.2",
+        "text": "Overheating of the engine"
+      },
+      {
+        "id": "AFH.4.11.1.w.3",
+        "text": "Loss of cabin pressure"
+      },
+      {
+        "id": "AFH.4.11.1.w.4",
+        "text": "Increased drag"
+      },
+      {
+        "id": "AFH.4.11.1.w.5",
+        "text": "Uncontrolled ascent"
+      },
+      {
+        "id": "AFH.4.11.1.w.6",
+        "text": "Loss of communication"
+      },
+      {
+        "id": "AFH.4.11.1.w.7",
+        "text": "Navigation errors"
+      },
+      {
+        "id": "AFH.4.11.1.w.8",
+        "text": "Excessive vibration"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 11",
+    "subjects": [
+      "Energy Management",
+      "Risk Mitigation",
+      "Flight Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.4.12.1",
+    "question": "What actions should a pilot take to correct an unintentional descent below the desired glideslope on final approach?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.12.1.c.1",
+        "text": "Pitch up"
+      },
+      {
+        "id": "AFH.4.12.1.c.2",
+        "text": "Throttle up"
+      },
+      {
+        "id": "AFH.4.12.1.c.3",
+        "text": "Both pitch up and throttle up"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.12.1.w.1",
+        "text": "Pitch down"
+      },
+      {
+        "id": "AFH.4.12.1.w.2",
+        "text": "Throttle down"
+      },
+      {
+        "id": "AFH.4.12.1.w.3",
+        "text": "Maintain current pitch"
+      },
+      {
+        "id": "AFH.4.12.1.w.4",
+        "text": "Maintain current throttle"
+      },
+      {
+        "id": "AFH.4.12.1.w.5",
+        "text": "Increase flaps"
+      },
+      {
+        "id": "AFH.4.12.1.w.6",
+        "text": "Decrease flaps"
+      },
+      {
+        "id": "AFH.4.12.1.w.7",
+        "text": "Retract landing gear"
+      },
+      {
+        "id": "AFH.4.12.1.w.8",
+        "text": "Extend landing gear"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 12",
+    "subjects": [
+      "Energy Management",
+      "Altitude Control",
+      "Airspeed Control"
+    ]
+  },
+  {
+    "questionid": "AFH.4.13.1",
+    "question": "What actions can a pilot take to prevent a crash when flying toward rising terrain?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.13.1.c.1",
+        "text": "Increase climb rate to gain altitude."
+      },
+      {
+        "id": "AFH.4.13.1.c.2",
+        "text": "Execute a 180-degree turn to avoid terrain."
+      },
+      {
+        "id": "AFH.4.13.1.c.3",
+        "text": "Use maximum power to enhance climb performance."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.13.1.w.1",
+        "text": "Descend to gain speed."
+      },
+      {
+        "id": "AFH.4.13.1.w.2",
+        "text": "Maintain current altitude and speed."
+      },
+      {
+        "id": "AFH.4.13.1.w.3",
+        "text": "Reduce power to conserve fuel."
+      },
+      {
+        "id": "AFH.4.13.1.w.4",
+        "text": "Ignore terrain warnings."
+      },
+      {
+        "id": "AFH.4.13.1.w.5",
+        "text": "Continue on the same heading without adjustments."
+      },
+      {
+        "id": "AFH.4.13.1.w.6",
+        "text": "Wait for ATC instructions before taking action."
+      },
+      {
+        "id": "AFH.4.13.1.w.7",
+        "text": "Rely solely on autopilot adjustments."
+      },
+      {
+        "id": "AFH.4.13.1.w.8",
+        "text": "Reduce climb rate to save engine wear."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 13",
+    "subjects": [
+      "Energy Management",
+      "Altitude Control",
+      "Airspeed Control"
+    ]
+  },
+  {
+    "questionid": "AFH.4.14.1",
+    "question": "What are the two types of energy errors in flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.14.1.c.1",
+        "text": "Total energy errors"
+      },
+      {
+        "id": "AFH.4.14.1.c.2",
+        "text": "Energy distribution errors"
+      },
+      {
+        "id": "AFH.4.14.1.c.3",
+        "text": "In addition to learning effective techniques for maintaining stabilized path-speed profiles (e.g., tracking the glideslope) and transitioning from one profile to another during flight (e.g., leveling off from a descent), pilots should develop skills for managing unwanted deviations in vertical flight path and airspeed—returning the airplane to its target energy state."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.14.1.w.1",
+        "text": "Altitude errors"
+      },
+      {
+        "id": "AFH.4.14.1.w.2",
+        "text": "Speed errors"
+      },
+      {
+        "id": "AFH.4.14.1.w.3",
+        "text": "Navigation errors"
+      },
+      {
+        "id": "AFH.4.14.1.w.4",
+        "text": "Fuel errors"
+      },
+      {
+        "id": "AFH.4.14.1.w.5",
+        "text": "Weather errors"
+      },
+      {
+        "id": "AFH.4.14.1.w.6",
+        "text": "Communication errors"
+      },
+      {
+        "id": "AFH.4.14.1.w.7",
+        "text": "Instrument errors"
+      },
+      {
+        "id": "AFH.4.14.1.w.8",
+        "text": "Structural errors"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 14",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.14.2",
+    "question": "How can a pilot correct total energy errors?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.14.2.c.1",
+        "text": "By increasing or decreasing energy using the throttle"
+      },
+      {
+        "id": "AFH.4.14.2.c.2",
+        "text": "In addition to learning effective techniques for maintaining stabilized path-speed profiles (e.g., tracking the glideslope) and transitioning from one profile to another during flight (e.g., leveling off from a descent), pilots should develop skills for managing unwanted deviations in vertical flight path and airspeed—returning the airplane to its target energy state."
+      },
+      {
+        "id": "AFH.4.14.2.c.3",
+        "text": "Since many inflight “energy crises” start as undetected, ignored or poorly managed path-speed deviations, pilots need the skills to recognize, correct and prevent these deviations."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.14.2.w.1",
+        "text": "By adjusting the rudder"
+      },
+      {
+        "id": "AFH.4.14.2.w.2",
+        "text": "By changing the flaps"
+      },
+      {
+        "id": "AFH.4.14.2.w.3",
+        "text": "By altering the landing gear"
+      },
+      {
+        "id": "AFH.4.14.2.w.4",
+        "text": "By modifying the ailerons"
+      },
+      {
+        "id": "AFH.4.14.2.w.5",
+        "text": "By using the autopilot"
+      },
+      {
+        "id": "AFH.4.14.2.w.6",
+        "text": "By adjusting the trim"
+      },
+      {
+        "id": "AFH.4.14.2.w.7",
+        "text": "By changing the fuel mixture"
+      },
+      {
+        "id": "AFH.4.14.2.w.8",
+        "text": "By altering the cabin pressure"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 14",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.14.3",
+    "question": "What should a pilot monitor to distinguish between total energy errors and energy distribution errors?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.14.3.c.1",
+        "text": "Altimeter"
+      },
+      {
+        "id": "AFH.4.14.3.c.2",
+        "text": "Airspeed indicator"
+      },
+      {
+        "id": "AFH.4.14.3.c.3",
+        "text": "In addition to learning effective techniques for maintaining stabilized path-speed profiles (e.g., tracking the glideslope) and transitioning from one profile to another during flight (e.g., leveling off from a descent), pilots should develop skills for managing unwanted deviations in vertical flight path and airspeed—returning the airplane to its target energy state."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.14.3.w.1",
+        "text": "Vertical speed indicator"
+      },
+      {
+        "id": "AFH.4.14.3.w.2",
+        "text": "Heading indicator"
+      },
+      {
+        "id": "AFH.4.14.3.w.3",
+        "text": "Turn coordinator"
+      },
+      {
+        "id": "AFH.4.14.3.w.4",
+        "text": "Fuel gauge"
+      },
+      {
+        "id": "AFH.4.14.3.w.5",
+        "text": "Oil pressure gauge"
+      },
+      {
+        "id": "AFH.4.14.3.w.6",
+        "text": "Temperature gauge"
+      },
+      {
+        "id": "AFH.4.14.3.w.7",
+        "text": "Compass"
+      },
+      {
+        "id": "AFH.4.14.3.w.8",
+        "text": "Clock"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 14",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.14.4",
+    "question": "In energy distribution errors, how do altitude and speed deviate?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.14.4.c.1",
+        "text": "In opposite directions"
+      },
+      {
+        "id": "AFH.4.14.4.c.2",
+        "text": "In addition to learning effective techniques for maintaining stabilized path-speed profiles (e.g., tracking the glideslope) and transitioning from one profile to another during flight (e.g., leveling off from a descent), pilots should develop skills for managing unwanted deviations in vertical flight path and airspeed—returning the airplane to its target energy state."
+      },
+      {
+        "id": "AFH.4.14.4.c.3",
+        "text": "Since many inflight “energy crises” start as undetected, ignored or poorly managed path-speed deviations, pilots need the skills to recognize, correct and prevent these deviations."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.14.4.w.1",
+        "text": "In the same direction"
+      },
+      {
+        "id": "AFH.4.14.4.w.2",
+        "text": "Randomly"
+      },
+      {
+        "id": "AFH.4.14.4.w.3",
+        "text": "Not at all"
+      },
+      {
+        "id": "AFH.4.14.4.w.4",
+        "text": "Only altitude changes"
+      },
+      {
+        "id": "AFH.4.14.4.w.5",
+        "text": "Only speed changes"
+      },
+      {
+        "id": "AFH.4.14.4.w.6",
+        "text": "In a circular pattern"
+      },
+      {
+        "id": "AFH.4.14.4.w.7",
+        "text": "In a zigzag pattern"
+      },
+      {
+        "id": "AFH.4.14.4.w.8",
+        "text": "In a linear pattern"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 14",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.14.5",
+    "question": "What is the primary control used to correct energy distribution errors?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.14.5.c.1",
+        "text": "Elevator"
+      },
+      {
+        "id": "AFH.4.14.5.c.2",
+        "text": "In addition to learning effective techniques for maintaining stabilized path-speed profiles (e.g., tracking the glideslope) and transitioning from one profile to another during flight (e.g., leveling off from a descent), pilots should develop skills for managing unwanted deviations in vertical flight path and airspeed—returning the airplane to its target energy state."
+      },
+      {
+        "id": "AFH.4.14.5.c.3",
+        "text": "Since many inflight “energy crises” start as undetected, ignored or poorly managed path-speed deviations, pilots need the skills to recognize, correct and prevent these deviations."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.14.5.w.1",
+        "text": "Throttle"
+      },
+      {
+        "id": "AFH.4.14.5.w.2",
+        "text": "Rudder"
+      },
+      {
+        "id": "AFH.4.14.5.w.3",
+        "text": "Ailerons"
+      },
+      {
+        "id": "AFH.4.14.5.w.4",
+        "text": "Flaps"
+      },
+      {
+        "id": "AFH.4.14.5.w.5",
+        "text": "Trim"
+      },
+      {
+        "id": "AFH.4.14.5.w.6",
+        "text": "Autopilot"
+      },
+      {
+        "id": "AFH.4.14.5.w.7",
+        "text": "Landing gear"
+      },
+      {
+        "id": "AFH.4.14.5.w.8",
+        "text": "Fuel mixture"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 14",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.14.6",
+    "question": "What scenario requires advancing the throttle forward to regain total energy?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.14.6.c.1",
+        "text": "Lower-and-slower"
+      },
+      {
+        "id": "AFH.4.14.6.c.2",
+        "text": "In addition to learning effective techniques for maintaining stabilized path-speed profiles (e.g., tracking the glideslope) and transitioning from one profile to another during flight (e.g., leveling off from a descent), pilots should develop skills for managing unwanted deviations in vertical flight path and airspeed—returning the airplane to its target energy state."
+      },
+      {
+        "id": "AFH.4.14.6.c.3",
+        "text": "Since many inflight “energy crises” start as undetected, ignored or poorly managed path-speed deviations, pilots need the skills to recognize, correct and prevent these deviations."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.14.6.w.1",
+        "text": "Higher-and-faster"
+      },
+      {
+        "id": "AFH.4.14.6.w.2",
+        "text": "Higher-and-slower"
+      },
+      {
+        "id": "AFH.4.14.6.w.3",
+        "text": "Lower-and-faster"
+      },
+      {
+        "id": "AFH.4.14.6.w.4",
+        "text": "On-target speed"
+      },
+      {
+        "id": "AFH.4.14.6.w.5",
+        "text": "On-target altitude"
+      },
+      {
+        "id": "AFH.4.14.6.w.6",
+        "text": "Descending too fast"
+      },
+      {
+        "id": "AFH.4.14.6.w.7",
+        "text": "Ascending too slow"
+      },
+      {
+        "id": "AFH.4.14.6.w.8",
+        "text": "Level flight"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 14",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.14.7",
+    "question": "What should a pilot do if the airplane is lower than desired but on target speed?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.14.7.c.1",
+        "text": "Check airspeed"
+      },
+      {
+        "id": "AFH.4.14.7.c.2",
+        "text": "Consider energy state"
+      },
+      {
+        "id": "AFH.4.14.7.c.3",
+        "text": "Evaluate flight path"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.14.7.w.1",
+        "text": "Immediately pitch up"
+      },
+      {
+        "id": "AFH.4.14.7.w.2",
+        "text": "Throttle down"
+      },
+      {
+        "id": "AFH.4.14.7.w.3",
+        "text": "Deploy flaps"
+      },
+      {
+        "id": "AFH.4.14.7.w.4",
+        "text": "Retract landing gear"
+      },
+      {
+        "id": "AFH.4.14.7.w.5",
+        "text": "Engage autopilot"
+      },
+      {
+        "id": "AFH.4.14.7.w.6",
+        "text": "Adjust rudder"
+      },
+      {
+        "id": "AFH.4.14.7.w.7",
+        "text": "Change heading"
+      },
+      {
+        "id": "AFH.4.14.7.w.8",
+        "text": "Turn off instruments"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 14",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.14.8",
+    "question": "What is the goal when correcting deviations in altitude and/or airspeed?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.14.8.c.1",
+        "text": "Return to correct energy state"
+      },
+      {
+        "id": "AFH.4.14.8.c.2",
+        "text": "In addition to learning effective techniques for maintaining stabilized path-speed profiles (e.g., tracking the glideslope) and transitioning from one profile to another during flight (e.g., leveling off from a descent), pilots should develop skills for managing unwanted deviations in vertical flight path and airspeed—returning the airplane to its target energy state."
+      },
+      {
+        "id": "AFH.4.14.8.c.3",
+        "text": "Since many inflight “energy crises” start as undetected, ignored or poorly managed path-speed deviations, pilots need the skills to recognize, correct and prevent these deviations."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.14.8.w.1",
+        "text": "Increase altitude"
+      },
+      {
+        "id": "AFH.4.14.8.w.2",
+        "text": "Decrease speed"
+      },
+      {
+        "id": "AFH.4.14.8.w.3",
+        "text": "Maintain current heading"
+      },
+      {
+        "id": "AFH.4.14.8.w.4",
+        "text": "Adjust fuel consumption"
+      },
+      {
+        "id": "AFH.4.14.8.w.5",
+        "text": "Change flight path"
+      },
+      {
+        "id": "AFH.4.14.8.w.6",
+        "text": "Engage autopilot"
+      },
+      {
+        "id": "AFH.4.14.8.w.7",
+        "text": "Deploy landing gear"
+      },
+      {
+        "id": "AFH.4.14.8.w.8",
+        "text": "Retract flaps"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 14",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.14.9",
+    "question": "In which scenario does the airplane have the correct amount of total energy but incorrect distribution?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.14.9.c.1",
+        "text": "Energy distribution errors"
+      },
+      {
+        "id": "AFH.4.14.9.c.2",
+        "text": "In addition to learning effective techniques for maintaining stabilized path-speed profiles (e.g., tracking the glideslope) and transitioning from one profile to another during flight (e.g., leveling off from a descent), pilots should develop skills for managing unwanted deviations in vertical flight path and airspeed—returning the airplane to its target energy state."
+      },
+      {
+        "id": "AFH.4.14.9.c.3",
+        "text": "Since many inflight “energy crises” start as undetected, ignored or poorly managed path-speed deviations, pilots need the skills to recognize, correct and prevent these deviations."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.14.9.w.1",
+        "text": "Total energy errors"
+      },
+      {
+        "id": "AFH.4.14.9.w.2",
+        "text": "Altitude errors"
+      },
+      {
+        "id": "AFH.4.14.9.w.3",
+        "text": "Speed errors"
+      },
+      {
+        "id": "AFH.4.14.9.w.4",
+        "text": "Navigation errors"
+      },
+      {
+        "id": "AFH.4.14.9.w.5",
+        "text": "Fuel errors"
+      },
+      {
+        "id": "AFH.4.14.9.w.6",
+        "text": "Weather errors"
+      },
+      {
+        "id": "AFH.4.14.9.w.7",
+        "text": "Communication errors"
+      },
+      {
+        "id": "AFH.4.14.9.w.8",
+        "text": "Instrument errors"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 14",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.14.10",
+    "question": "What action is required for a 'lower-and-faster' scenario?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.14.10.c.1",
+        "text": "Pull back on the yoke/stick"
+      },
+      {
+        "id": "AFH.4.14.10.c.2",
+        "text": "In addition to learning effective techniques for maintaining stabilized path-speed profiles (e.g., tracking the glideslope) and transitioning from one profile to another during flight (e.g., leveling off from a descent), pilots should develop skills for managing unwanted deviations in vertical flight path and airspeed—returning the airplane to its target energy state."
+      },
+      {
+        "id": "AFH.4.14.10.c.3",
+        "text": "Since many inflight “energy crises” start as undetected, ignored or poorly managed path-speed deviations, pilots need the skills to recognize, correct and prevent these deviations."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.14.10.w.1",
+        "text": "Advance the throttle"
+      },
+      {
+        "id": "AFH.4.14.10.w.2",
+        "text": "Deploy flaps"
+      },
+      {
+        "id": "AFH.4.14.10.w.3",
+        "text": "Retract landing gear"
+      },
+      {
+        "id": "AFH.4.14.10.w.4",
+        "text": "Engage autopilot"
+      },
+      {
+        "id": "AFH.4.14.10.w.5",
+        "text": "Adjust rudder"
+      },
+      {
+        "id": "AFH.4.14.10.w.6",
+        "text": "Change heading"
+      },
+      {
+        "id": "AFH.4.14.10.w.7",
+        "text": "Throttle down"
+      },
+      {
+        "id": "AFH.4.14.10.w.8",
+        "text": "Increase altitude"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 14",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.14.11",
+    "question": "What does the pilot need to translate altitude-speed deviations into?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.14.11.c.1",
+        "text": "Energy errors"
+      },
+      {
+        "id": "AFH.4.14.11.c.2",
+        "text": "In addition to learning effective techniques for maintaining stabilized path-speed profiles (e.g., tracking the glideslope) and transitioning from one profile to another during flight (e.g., leveling off from a descent), pilots should develop skills for managing unwanted deviations in vertical flight path and airspeed—returning the airplane to its target energy state."
+      },
+      {
+        "id": "AFH.4.14.11.c.3",
+        "text": "Since many inflight “energy crises” start as undetected, ignored or poorly managed path-speed deviations, pilots need the skills to recognize, correct and prevent these deviations."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.14.11.w.1",
+        "text": "Navigation errors"
+      },
+      {
+        "id": "AFH.4.14.11.w.2",
+        "text": "Fuel errors"
+      },
+      {
+        "id": "AFH.4.14.11.w.3",
+        "text": "Weather conditions"
+      },
+      {
+        "id": "AFH.4.14.11.w.4",
+        "text": "Communication issues"
+      },
+      {
+        "id": "AFH.4.14.11.w.5",
+        "text": "Instrument readings"
+      },
+      {
+        "id": "AFH.4.14.11.w.6",
+        "text": "Structural problems"
+      },
+      {
+        "id": "AFH.4.14.11.w.7",
+        "text": "Mechanical failures"
+      },
+      {
+        "id": "AFH.4.14.11.w.8",
+        "text": "Pilot errors"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 14",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.14.12",
+    "question": "What is the result of total energy errors in terms of altitude and speed?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.14.12.c.1",
+        "text": "Altitude and speed deviate in the same direction"
+      },
+      {
+        "id": "AFH.4.14.12.c.2",
+        "text": "In addition to learning effective techniques for maintaining stabilized path-speed profiles (e.g., tracking the glideslope) and transitioning from one profile to another during flight (e.g., leveling off from a descent), pilots should develop skills for managing unwanted deviations in vertical flight path and airspeed—returning the airplane to its target energy state."
+      },
+      {
+        "id": "AFH.4.14.12.c.3",
+        "text": "Since many inflight “energy crises” start as undetected, ignored or poorly managed path-speed deviations, pilots need the skills to recognize, correct and prevent these deviations."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.14.12.w.1",
+        "text": "Altitude and speed deviate in opposite directions"
+      },
+      {
+        "id": "AFH.4.14.12.w.2",
+        "text": "Only altitude changes"
+      },
+      {
+        "id": "AFH.4.14.12.w.3",
+        "text": "Only speed changes"
+      },
+      {
+        "id": "AFH.4.14.12.w.4",
+        "text": "Altitude increases, speed decreases"
+      },
+      {
+        "id": "AFH.4.14.12.w.5",
+        "text": "Altitude decreases, speed increases"
+      },
+      {
+        "id": "AFH.4.14.12.w.6",
+        "text": "No change in altitude or speed"
+      },
+      {
+        "id": "AFH.4.14.12.w.7",
+        "text": "Random changes in altitude and speed"
+      },
+      {
+        "id": "AFH.4.14.12.w.8",
+        "text": "Altitude and speed remain constant"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 14",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.14.13",
+    "question": "What is the primary tool for correcting a combination of total energy and distribution errors?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.14.13.c.1",
+        "text": "Both throttle and elevator"
+      },
+      {
+        "id": "AFH.4.14.13.c.2",
+        "text": "In addition to learning effective techniques for maintaining stabilized path-speed profiles (e.g., tracking the glideslope) and transitioning from one profile to another during flight (e.g., leveling off from a descent), pilots should develop skills for managing unwanted deviations in vertical flight path and airspeed—returning the airplane to its target energy state."
+      },
+      {
+        "id": "AFH.4.14.13.c.3",
+        "text": "Since many inflight “energy crises” start as undetected, ignored or poorly managed path-speed deviations, pilots need the skills to recognize, correct and prevent these deviations."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.14.13.w.1",
+        "text": "Only throttle"
+      },
+      {
+        "id": "AFH.4.14.13.w.2",
+        "text": "Only elevator"
+      },
+      {
+        "id": "AFH.4.14.13.w.3",
+        "text": "Rudder and ailerons"
+      },
+      {
+        "id": "AFH.4.14.13.w.4",
+        "text": "Flaps and trim"
+      },
+      {
+        "id": "AFH.4.14.13.w.5",
+        "text": "Autopilot and rudder"
+      },
+      {
+        "id": "AFH.4.14.13.w.6",
+        "text": "Landing gear and flaps"
+      },
+      {
+        "id": "AFH.4.14.13.w.7",
+        "text": "Fuel mixture and trim"
+      },
+      {
+        "id": "AFH.4.14.13.w.8",
+        "text": "Navigation systems"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 14",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.14.14",
+    "question": "What should a pilot do when the airplane is higher-and-slower than desired?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.14.14.c.1",
+        "text": "Exchange energy between altitude and speed"
+      },
+      {
+        "id": "AFH.4.14.14.c.2",
+        "text": "In addition to learning effective techniques for maintaining stabilized path-speed profiles (e.g., tracking the glideslope) and transitioning from one profile to another during flight (e.g., leveling off from a descent), pilots should develop skills for managing unwanted deviations in vertical flight path and airspeed—returning the airplane to its target energy state."
+      },
+      {
+        "id": "AFH.4.14.14.c.3",
+        "text": "Since many inflight “energy crises” start as undetected, ignored or poorly managed path-speed deviations, pilots need the skills to recognize, correct and prevent these deviations."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.14.14.w.1",
+        "text": "Increase throttle"
+      },
+      {
+        "id": "AFH.4.14.14.w.2",
+        "text": "Decrease throttle"
+      },
+      {
+        "id": "AFH.4.14.14.w.3",
+        "text": "Deploy flaps"
+      },
+      {
+        "id": "AFH.4.14.14.w.4",
+        "text": "Retract landing gear"
+      },
+      {
+        "id": "AFH.4.14.14.w.5",
+        "text": "Engage autopilot"
+      },
+      {
+        "id": "AFH.4.14.14.w.6",
+        "text": "Adjust rudder"
+      },
+      {
+        "id": "AFH.4.14.14.w.7",
+        "text": "Change heading"
+      },
+      {
+        "id": "AFH.4.14.14.w.8",
+        "text": "Throttle down"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 14",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.14.15",
+    "question": "What is the primary focus when managing energy errors in flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.14.15.c.1",
+        "text": "Maintaining correct energy state"
+      },
+      {
+        "id": "AFH.4.14.15.c.2",
+        "text": "In addition to learning effective techniques for maintaining stabilized path-speed profiles (e.g., tracking the glideslope) and transitioning from one profile to another during flight (e.g., leveling off from a descent), pilots should develop skills for managing unwanted deviations in vertical flight path and airspeed—returning the airplane to its target energy state."
+      },
+      {
+        "id": "AFH.4.14.15.c.3",
+        "text": "Since many inflight “energy crises” start as undetected, ignored or poorly managed path-speed deviations, pilots need the skills to recognize, correct and prevent these deviations."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.14.15.w.1",
+        "text": "Increasing altitude"
+      },
+      {
+        "id": "AFH.4.14.15.w.2",
+        "text": "Decreasing speed"
+      },
+      {
+        "id": "AFH.4.14.15.w.3",
+        "text": "Maintaining heading"
+      },
+      {
+        "id": "AFH.4.14.15.w.4",
+        "text": "Adjusting fuel consumption"
+      },
+      {
+        "id": "AFH.4.14.15.w.5",
+        "text": "Changing flight path"
+      },
+      {
+        "id": "AFH.4.14.15.w.6",
+        "text": "Engaging autopilot"
+      },
+      {
+        "id": "AFH.4.14.15.w.7",
+        "text": "Deploying landing gear"
+      },
+      {
+        "id": "AFH.4.14.15.w.8",
+        "text": "Retracting flaps"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 14",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.14.16",
+    "question": "What does a 'lower-and-slower' condition indicate in terms of energy?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.14.16.c.1",
+        "text": "Too little total energy"
+      },
+      {
+        "id": "AFH.4.14.16.c.2",
+        "text": "In addition to learning effective techniques for maintaining stabilized path-speed profiles (e.g., tracking the glideslope) and transitioning from one profile to another during flight (e.g., leveling off from a descent), pilots should develop skills for managing unwanted deviations in vertical flight path and airspeed—returning the airplane to its target energy state."
+      },
+      {
+        "id": "AFH.4.14.16.c.3",
+        "text": "Since many inflight “energy crises” start as undetected, ignored or poorly managed path-speed deviations, pilots need the skills to recognize, correct and prevent these deviations."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.14.16.w.1",
+        "text": "Too much total energy"
+      },
+      {
+        "id": "AFH.4.14.16.w.2",
+        "text": "Correct total energy"
+      },
+      {
+        "id": "AFH.4.14.16.w.3",
+        "text": "Incorrect energy distribution"
+      },
+      {
+        "id": "AFH.4.14.16.w.4",
+        "text": "Optimal energy state"
+      },
+      {
+        "id": "AFH.4.14.16.w.5",
+        "text": "Excessive energy"
+      },
+      {
+        "id": "AFH.4.14.16.w.6",
+        "text": "Deficient energy"
+      },
+      {
+        "id": "AFH.4.14.16.w.7",
+        "text": "Balanced energy"
+      },
+      {
+        "id": "AFH.4.14.16.w.8",
+        "text": "It is mainly about unrelated advanced turbine transition procedures not covered in managing energy errors."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 14",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.14.17",
+    "question": "What is the effect of energy distribution errors on flight path?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.14.17.c.1",
+        "text": "Altitude and speed deviate in opposite directions"
+      },
+      {
+        "id": "AFH.4.14.17.c.2",
+        "text": "In addition to learning effective techniques for maintaining stabilized path-speed profiles (e.g., tracking the glideslope) and transitioning from one profile to another during flight (e.g., leveling off from a descent), pilots should develop skills for managing unwanted deviations in vertical flight path and airspeed—returning the airplane to its target energy state."
+      },
+      {
+        "id": "AFH.4.14.17.c.3",
+        "text": "Since many inflight “energy crises” start as undetected, ignored or poorly managed path-speed deviations, pilots need the skills to recognize, correct and prevent these deviations."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.14.17.w.1",
+        "text": "Altitude and speed deviate in the same direction"
+      },
+      {
+        "id": "AFH.4.14.17.w.2",
+        "text": "Only altitude changes"
+      },
+      {
+        "id": "AFH.4.14.17.w.3",
+        "text": "Only speed changes"
+      },
+      {
+        "id": "AFH.4.14.17.w.4",
+        "text": "Altitude increases, speed decreases"
+      },
+      {
+        "id": "AFH.4.14.17.w.5",
+        "text": "Altitude decreases, speed increases"
+      },
+      {
+        "id": "AFH.4.14.17.w.6",
+        "text": "No change in altitude or speed"
+      },
+      {
+        "id": "AFH.4.14.17.w.7",
+        "text": "Random changes in altitude and speed"
+      },
+      {
+        "id": "AFH.4.14.17.w.8",
+        "text": "Altitude and speed remain constant"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 14",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.14.18",
+    "question": "What should a pilot consider when the airplane descends below its intended flight path?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.14.18.c.1",
+        "text": "Check airspeed"
+      },
+      {
+        "id": "AFH.4.14.18.c.2",
+        "text": "Evaluate energy state"
+      },
+      {
+        "id": "AFH.4.14.18.c.3",
+        "text": "Consider corrective actions"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.14.18.w.1",
+        "text": "Immediately pitch up"
+      },
+      {
+        "id": "AFH.4.14.18.w.2",
+        "text": "Throttle down"
+      },
+      {
+        "id": "AFH.4.14.18.w.3",
+        "text": "Deploy flaps"
+      },
+      {
+        "id": "AFH.4.14.18.w.4",
+        "text": "Retract landing gear"
+      },
+      {
+        "id": "AFH.4.14.18.w.5",
+        "text": "Engage autopilot"
+      },
+      {
+        "id": "AFH.4.14.18.w.6",
+        "text": "Adjust rudder"
+      },
+      {
+        "id": "AFH.4.14.18.w.7",
+        "text": "Change heading"
+      },
+      {
+        "id": "AFH.4.14.18.w.8",
+        "text": "Turn off instruments"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4, Section 14",
+    "subjects": [
+      "Energy Management"
+    ]
+  },
+  {
+    "questionid": "AFH.4.15.1",
+    "question": "What are the objectives of mastering energy management in aviation according to the Airplane Flying Handbook?",
+    "correct_answers": [
+      {
+        "id": "AFH.4.15.1.c.1",
+        "text": "Gain an understanding of basic energy management concepts"
+      },
+      {
+        "id": "AFH.4.15.1.c.2",
+        "text": "Learn the energy role of the controls for managing the airplane’s energy state"
+      },
+      {
+        "id": "AFH.4.15.1.c.3",
+        "text": "Develop the ability to identify, assess, and mitigate risks associated with failure to manage the airplane’s energy state"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.4.15.1.w.1",
+        "text": "Improve communication skills with air traffic control"
+      },
+      {
+        "id": "AFH.4.15.1.w.2",
+        "text": "Enhance navigation skills using GPS"
+      },
+      {
+        "id": "AFH.4.15.1.w.3",
+        "text": "Increase knowledge of aircraft maintenance procedures"
+      },
+      {
+        "id": "AFH.4.15.1.w.4",
+        "text": "Develop advanced aerobatic skills"
+      },
+      {
+        "id": "AFH.4.15.1.w.5",
+        "text": "Understand the history of aviation"
+      },
+      {
+        "id": "AFH.4.15.1.w.6",
+        "text": "Learn about different types of aircraft engines"
+      },
+      {
+        "id": "AFH.4.15.1.w.7",
+        "text": "Improve passenger comfort during flights"
+      },
+      {
+        "id": "AFH.4.15.1.w.8",
+        "text": "Enhance skills in emergency medical procedures"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 4: Energy Management: Mastering Altitude and Airspeed Control Introduction",
+    "subjects": [
+      "Energy Management",
+      "Aviation Safety"
+    ]
+  }
+]

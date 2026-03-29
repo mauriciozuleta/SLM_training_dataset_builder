@@ -1,0 +1,2895 @@
+[
+  {
+    "questionBank": {
+      "chapterId": "afh.10",
+      "bookId": "AFH",
+      "chapterNumber": 10,
+      "chapterTitle": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+      "totalRequiredQuestions": 50,
+      "metadata": {
+        "generatedAtUtc": "2026-03-28T14:08:19.561Z",
+        "chapterId": "afh.10",
+        "chapterNumber": 10,
+        "totalSections": 5,
+        "totalRequiredQuestions": 50,
+        "providers": [
+          "openai",
+          "gemini",
+          "anthropic"
+        ],
+        "models": [
+          "gpt-4o",
+          "gemini-2.5-flash",
+          "claude-sonnet-4-6"
+        ],
+        "promptTokens": 5852,
+        "completionTokens": 11294,
+        "totalTokens": 17146,
+        "sectionQuestionSummary": [
+          {
+            "sectionId": "afh.10.1",
+            "sectionTitle": "Steep Turns",
+            "sectionOrdinal": 1,
+            "sectionWeightPercentage": 32.83,
+            "questionsGenerated": 17
+          },
+          {
+            "sectionId": "afh.10.2",
+            "sectionTitle": "Steep Spiral",
+            "sectionOrdinal": 2,
+            "sectionWeightPercentage": 14.88,
+            "questionsGenerated": 7
+          },
+          {
+            "sectionId": "afh.10.3",
+            "sectionTitle": "Chandelle",
+            "sectionOrdinal": 3,
+            "sectionWeightPercentage": 21.76,
+            "questionsGenerated": 11
+          },
+          {
+            "sectionId": "afh.10.4",
+            "sectionTitle": "Lazy Eight",
+            "sectionOrdinal": 4,
+            "sectionWeightPercentage": 28.13,
+            "questionsGenerated": 14
+          },
+          {
+            "sectionId": "afh.10.5",
+            "sectionTitle": "Chapter Summary",
+            "sectionOrdinal": 5,
+            "sectionWeightPercentage": 2.4,
+            "questionsGenerated": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "questionid": "AFH.10.1.1",
+    "question": "What is the primary objective of performing steep turns?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.1.1.c.1",
+        "text": "Develop pilot's skill in flight control smoothness"
+      },
+      {
+        "id": "AFH.10.1.1.c.2",
+        "text": "Enhance coordination"
+      },
+      {
+        "id": "AFH.10.1.1.c.3",
+        "text": "Increase awareness of airplane's orientation"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.1.1.w.1",
+        "text": "Reduce fuel consumption"
+      },
+      {
+        "id": "AFH.10.1.1.w.2",
+        "text": "Increase cruising speed"
+      },
+      {
+        "id": "AFH.10.1.1.w.3",
+        "text": "Improve takeoff performance"
+      },
+      {
+        "id": "AFH.10.1.1.w.4",
+        "text": "Enhance landing techniques"
+      },
+      {
+        "id": "AFH.10.1.1.w.5",
+        "text": "Decrease airframe stress"
+      },
+      {
+        "id": "AFH.10.1.1.w.6",
+        "text": "Minimize noise pollution"
+      },
+      {
+        "id": "AFH.10.1.1.w.7",
+        "text": "Reduce pilot workload"
+      },
+      {
+        "id": "AFH.10.1.1.w.8",
+        "text": "Increase passenger comfort"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Steep Turns"
+    ]
+  },
+  {
+    "questionid": "AFH.10.1.2",
+    "question": "What bank angle range is used for steep turns?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.1.2.c.1",
+        "text": "Between 45° and 60°"
+      },
+      {
+        "id": "AFH.10.1.2.c.2",
+        "text": "Steep turns consist of single to multiple 360° and 720° turns, in either or both directions, using a bank angle between 45° and 60°."
+      },
+      {
+        "id": "AFH.10.1.2.c.3",
+        "text": "The objective of the steep turn is to develop a pilot’s skill in flight control smoothness and coordination, an awareness of the airplane’s orientation to outside references, division of attention between flight control applications, and the constant need to scan for hazards and other traffic in the area."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.1.2.w.1",
+        "text": "Between 30° and 45°"
+      },
+      {
+        "id": "AFH.10.1.2.w.2",
+        "text": "Between 60° and 75°"
+      },
+      {
+        "id": "AFH.10.1.2.w.3",
+        "text": "Between 15° and 30°"
+      },
+      {
+        "id": "AFH.10.1.2.w.4",
+        "text": "Between 75° and 90°"
+      },
+      {
+        "id": "AFH.10.1.2.w.5",
+        "text": "Between 10° and 20°"
+      },
+      {
+        "id": "AFH.10.1.2.w.6",
+        "text": "Between 5° and 15°"
+      },
+      {
+        "id": "AFH.10.1.2.w.7",
+        "text": "Between 20° and 35°"
+      },
+      {
+        "id": "AFH.10.1.2.w.8",
+        "text": "Between 35° and 50°"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Steep Turns"
+    ]
+  },
+  {
+    "questionid": "AFH.10.1.3",
+    "question": "What happens to the load factor during a 60° banked turn?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.1.3.c.1",
+        "text": "Load factor becomes 2.0"
+      },
+      {
+        "id": "AFH.10.1.3.c.2",
+        "text": "Effective weight of aircraft doubles"
+      },
+      {
+        "id": "AFH.10.1.3.c.3",
+        "text": "Increased centrifugal force"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.1.3.w.1",
+        "text": "Load factor becomes 1.0"
+      },
+      {
+        "id": "AFH.10.1.3.w.2",
+        "text": "Effective weight of aircraft halves"
+      },
+      {
+        "id": "AFH.10.1.3.w.3",
+        "text": "Decreased centrifugal force"
+      },
+      {
+        "id": "AFH.10.1.3.w.4",
+        "text": "Load factor becomes 3.0"
+      },
+      {
+        "id": "AFH.10.1.3.w.5",
+        "text": "Effective weight of aircraft triples"
+      },
+      {
+        "id": "AFH.10.1.3.w.6",
+        "text": "Load factor becomes 1.5"
+      },
+      {
+        "id": "AFH.10.1.3.w.7",
+        "text": "Load factor becomes 2.5"
+      },
+      {
+        "id": "AFH.10.1.3.w.8",
+        "text": "Effective weight of aircraft remains constant"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Steep Turns"
+    ]
+  },
+  {
+    "questionid": "AFH.10.1.4",
+    "question": "What is a significant challenge when performing steep turns?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.1.4.c.1",
+        "text": "Higher G-forces"
+      },
+      {
+        "id": "AFH.10.1.4.c.2",
+        "text": "Overbanking tendency"
+      },
+      {
+        "id": "AFH.10.1.4.c.3",
+        "text": "Loss of vertical lift component"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.1.4.w.1",
+        "text": "Reduced G-forces"
+      },
+      {
+        "id": "AFH.10.1.4.w.2",
+        "text": "Underbanking tendency"
+      },
+      {
+        "id": "AFH.10.1.4.w.3",
+        "text": "Increased vertical lift component"
+      },
+      {
+        "id": "AFH.10.1.4.w.4",
+        "text": "Decreased pitch control pressures"
+      },
+      {
+        "id": "AFH.10.1.4.w.5",
+        "text": "Reduced need for additional power"
+      },
+      {
+        "id": "AFH.10.1.4.w.6",
+        "text": "Lower airspeed requirements"
+      },
+      {
+        "id": "AFH.10.1.4.w.7",
+        "text": "Decreased load factor"
+      },
+      {
+        "id": "AFH.10.1.4.w.8",
+        "text": "Increased altitude gain"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Steep Turns"
+    ]
+  },
+  {
+    "questionid": "AFH.10.1.5",
+    "question": "Why is additional power needed during steep turns?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.1.5.c.1",
+        "text": "To maintain altitude"
+      },
+      {
+        "id": "AFH.10.1.5.c.2",
+        "text": "To counteract loss of lift"
+      },
+      {
+        "id": "AFH.10.1.5.c.3",
+        "text": "To maintain constant airspeed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.1.5.w.1",
+        "text": "To decrease altitude"
+      },
+      {
+        "id": "AFH.10.1.5.w.2",
+        "text": "To increase drag"
+      },
+      {
+        "id": "AFH.10.1.5.w.3",
+        "text": "To reduce airspeed"
+      },
+      {
+        "id": "AFH.10.1.5.w.4",
+        "text": "To increase lift"
+      },
+      {
+        "id": "AFH.10.1.5.w.5",
+        "text": "To decrease load factor"
+      },
+      {
+        "id": "AFH.10.1.5.w.6",
+        "text": "To increase bank angle"
+      },
+      {
+        "id": "AFH.10.1.5.w.7",
+        "text": "To reduce G-forces"
+      },
+      {
+        "id": "AFH.10.1.5.w.8",
+        "text": "To maintain level flight"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Steep Turns"
+    ]
+  },
+  {
+    "questionid": "AFH.10.1.6",
+    "question": "What is the effect of a steep turn on stalling speed?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.1.6.c.1",
+        "text": "Stalling speed increases"
+      },
+      {
+        "id": "AFH.10.1.6.c.2",
+        "text": "Stalling speed is higher at 60° bank"
+      },
+      {
+        "id": "AFH.10.1.6.c.3",
+        "text": "Stalling speed increases with load factor"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.1.6.w.1",
+        "text": "Stalling speed decreases"
+      },
+      {
+        "id": "AFH.10.1.6.w.2",
+        "text": "Stalling speed remains constant"
+      },
+      {
+        "id": "AFH.10.1.6.w.3",
+        "text": "Stalling speed is lower at 60° bank"
+      },
+      {
+        "id": "AFH.10.1.6.w.4",
+        "text": "Stalling speed decreases with load factor"
+      },
+      {
+        "id": "AFH.10.1.6.w.5",
+        "text": "Stalling speed is unaffected by bank angle"
+      },
+      {
+        "id": "AFH.10.1.6.w.6",
+        "text": "Stalling speed is lower at 45° bank"
+      },
+      {
+        "id": "AFH.10.1.6.w.7",
+        "text": "Stalling speed decreases with altitude"
+      },
+      {
+        "id": "AFH.10.1.6.w.8",
+        "text": "Stalling speed is unaffected by load factor"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Steep Turns"
+    ]
+  },
+  {
+    "questionid": "AFH.10.1.7",
+    "question": "What should pilots be cautious of when performing steep turns beyond 60° of bank?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.1.7.c.1",
+        "text": "Dramatic increase in load factors"
+      },
+      {
+        "id": "AFH.10.1.7.c.2",
+        "text": "Exceeding structural limitations"
+      },
+      {
+        "id": "AFH.10.1.7.c.3",
+        "text": "Potential for stalling"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.1.7.w.1",
+        "text": "Decrease in load factors"
+      },
+      {
+        "id": "AFH.10.1.7.w.2",
+        "text": "Improved fuel efficiency"
+      },
+      {
+        "id": "AFH.10.1.7.w.3",
+        "text": "Reduced risk of stalling"
+      },
+      {
+        "id": "AFH.10.1.7.w.4",
+        "text": "Enhanced structural integrity"
+      },
+      {
+        "id": "AFH.10.1.7.w.5",
+        "text": "Increased maneuverability"
+      },
+      {
+        "id": "AFH.10.1.7.w.6",
+        "text": "Decreased airspeed"
+      },
+      {
+        "id": "AFH.10.1.7.w.7",
+        "text": "Improved lift"
+      },
+      {
+        "id": "AFH.10.1.7.w.8",
+        "text": "Reduced G-forces"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Steep Turns"
+    ]
+  },
+  {
+    "questionid": "AFH.10.1.8",
+    "question": "What is the load factor in a level altitude 45° banked turn?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.1.8.c.1",
+        "text": "1.41"
+      },
+      {
+        "id": "AFH.10.1.8.c.2",
+        "text": "Steep turns consist of single to multiple 360° and 720° turns, in either or both directions, using a bank angle between 45° and 60°."
+      },
+      {
+        "id": "AFH.10.1.8.c.3",
+        "text": "The objective of the steep turn is to develop a pilot’s skill in flight control smoothness and coordination, an awareness of the airplane’s orientation to outside references, division of attention between flight control applications, and the constant need to scan for hazards and other traffic in the area."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.1.8.w.1",
+        "text": "1.0"
+      },
+      {
+        "id": "AFH.10.1.8.w.2",
+        "text": "2.0"
+      },
+      {
+        "id": "AFH.10.1.8.w.3",
+        "text": "1.5"
+      },
+      {
+        "id": "AFH.10.1.8.w.4",
+        "text": "2.5"
+      },
+      {
+        "id": "AFH.10.1.8.w.5",
+        "text": "1.2"
+      },
+      {
+        "id": "AFH.10.1.8.w.6",
+        "text": "1.8"
+      },
+      {
+        "id": "AFH.10.1.8.w.7",
+        "text": "2.2"
+      },
+      {
+        "id": "AFH.10.1.8.w.8",
+        "text": "1.7"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Steep Turns"
+    ]
+  },
+  {
+    "questionid": "AFH.10.1.9",
+    "question": "What is the relationship between bank angle and load factor?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.1.9.c.1",
+        "text": "Load factor increases with bank angle"
+      },
+      {
+        "id": "AFH.10.1.9.c.2",
+        "text": "Higher bank angles result in higher load factors"
+      },
+      {
+        "id": "AFH.10.1.9.c.3",
+        "text": "Load factor affects stalling speed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.1.9.w.1",
+        "text": "Load factor decreases with bank angle"
+      },
+      {
+        "id": "AFH.10.1.9.w.2",
+        "text": "Higher bank angles result in lower load factors"
+      },
+      {
+        "id": "AFH.10.1.9.w.3",
+        "text": "Load factor is unaffected by bank angle"
+      },
+      {
+        "id": "AFH.10.1.9.w.4",
+        "text": "Load factor decreases stalling speed"
+      },
+      {
+        "id": "AFH.10.1.9.w.5",
+        "text": "Load factor remains constant regardless of bank angle"
+      },
+      {
+        "id": "AFH.10.1.9.w.6",
+        "text": "Load factor is independent of stalling speed"
+      },
+      {
+        "id": "AFH.10.1.9.w.7",
+        "text": "Load factor decreases with altitude"
+      },
+      {
+        "id": "AFH.10.1.9.w.8",
+        "text": "Load factor is unaffected by airspeed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Steep Turns"
+    ]
+  },
+  {
+    "questionid": "AFH.10.1.10",
+    "question": "Why should steep turns be performed below the airplane's design maneuvering speed?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.1.10.c.1",
+        "text": "To avoid exceeding structural limits"
+      },
+      {
+        "id": "AFH.10.1.10.c.2",
+        "text": "To prevent stalling"
+      },
+      {
+        "id": "AFH.10.1.10.c.3",
+        "text": "To ensure safety during high load factors"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.1.10.w.1",
+        "text": "To increase speed"
+      },
+      {
+        "id": "AFH.10.1.10.w.2",
+        "text": "To reduce fuel consumption"
+      },
+      {
+        "id": "AFH.10.1.10.w.3",
+        "text": "To enhance maneuverability"
+      },
+      {
+        "id": "AFH.10.1.10.w.4",
+        "text": "To decrease load factor"
+      },
+      {
+        "id": "AFH.10.1.10.w.5",
+        "text": "To improve lift"
+      },
+      {
+        "id": "AFH.10.1.10.w.6",
+        "text": "To reduce G-forces"
+      },
+      {
+        "id": "AFH.10.1.10.w.7",
+        "text": "To increase altitude"
+      },
+      {
+        "id": "AFH.10.1.10.w.8",
+        "text": "To decrease drag"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Steep Turns"
+    ]
+  },
+  {
+    "questionid": "AFH.10.1.11",
+    "question": "What happens to the effective weight of the aircraft during a 60° banked turn?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.1.11.c.1",
+        "text": "Doubles"
+      },
+      {
+        "id": "AFH.10.1.11.c.2",
+        "text": "Increases due to load factor"
+      },
+      {
+        "id": "AFH.10.1.11.c.3",
+        "text": "Increases with bank angle"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.1.11.w.1",
+        "text": "Halves"
+      },
+      {
+        "id": "AFH.10.1.11.w.2",
+        "text": "Decreases due to load factor"
+      },
+      {
+        "id": "AFH.10.1.11.w.3",
+        "text": "Remains constant"
+      },
+      {
+        "id": "AFH.10.1.11.w.4",
+        "text": "Decreases with bank angle"
+      },
+      {
+        "id": "AFH.10.1.11.w.5",
+        "text": "Triples"
+      },
+      {
+        "id": "AFH.10.1.11.w.6",
+        "text": "Quadruples"
+      },
+      {
+        "id": "AFH.10.1.11.w.7",
+        "text": "Decreases with altitude"
+      },
+      {
+        "id": "AFH.10.1.11.w.8",
+        "text": "Remains unaffected by bank angle"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Steep Turns"
+    ]
+  },
+  {
+    "questionid": "AFH.10.1.12",
+    "question": "What is the effect of a steep turn on the vertical component of lift?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.1.12.c.1",
+        "text": "Significant loss"
+      },
+      {
+        "id": "AFH.10.1.12.c.2",
+        "text": "Decreases with bank angle"
+      },
+      {
+        "id": "AFH.10.1.12.c.3",
+        "text": "Requires increased angle of attack"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.1.12.w.1",
+        "text": "Significant gain"
+      },
+      {
+        "id": "AFH.10.1.12.w.2",
+        "text": "Increases with bank angle"
+      },
+      {
+        "id": "AFH.10.1.12.w.3",
+        "text": "Remains constant"
+      },
+      {
+        "id": "AFH.10.1.12.w.4",
+        "text": "Decreases with altitude"
+      },
+      {
+        "id": "AFH.10.1.12.w.5",
+        "text": "Increases with altitude"
+      },
+      {
+        "id": "AFH.10.1.12.w.6",
+        "text": "Remains unaffected by bank angle"
+      },
+      {
+        "id": "AFH.10.1.12.w.7",
+        "text": "Increases with airspeed"
+      },
+      {
+        "id": "AFH.10.1.12.w.8",
+        "text": "Decreases with airspeed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Steep Turns"
+    ]
+  },
+  {
+    "questionid": "AFH.10.1.13",
+    "question": "What is the maximum load factor a standard category general aviation airplane can accommodate?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.1.13.c.1",
+        "text": "3.8"
+      },
+      {
+        "id": "AFH.10.1.13.c.2",
+        "text": "Steep turns consist of single to multiple 360° and 720° turns, in either or both directions, using a bank angle between 45° and 60°."
+      },
+      {
+        "id": "AFH.10.1.13.c.3",
+        "text": "The objective of the steep turn is to develop a pilot’s skill in flight control smoothness and coordination, an awareness of the airplane’s orientation to outside references, division of attention between flight control applications, and the constant need to scan for hazards and other traffic in the area."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.1.13.w.1",
+        "text": "2.0"
+      },
+      {
+        "id": "AFH.10.1.13.w.2",
+        "text": "4.0"
+      },
+      {
+        "id": "AFH.10.1.13.w.3",
+        "text": "3.0"
+      },
+      {
+        "id": "AFH.10.1.13.w.4",
+        "text": "5.0"
+      },
+      {
+        "id": "AFH.10.1.13.w.5",
+        "text": "2.5"
+      },
+      {
+        "id": "AFH.10.1.13.w.6",
+        "text": "4.5"
+      },
+      {
+        "id": "AFH.10.1.13.w.7",
+        "text": "3.5"
+      },
+      {
+        "id": "AFH.10.1.13.w.8",
+        "text": "4.8"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Steep Turns"
+    ]
+  },
+  {
+    "questionid": "AFH.10.1.14",
+    "question": "What is the relationship between stalling speed and load factor?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.1.14.c.1",
+        "text": "Stalling speed increases with load factor"
+      },
+      {
+        "id": "AFH.10.1.14.c.2",
+        "text": "Higher load factors increase stalling speed"
+      },
+      {
+        "id": "AFH.10.1.14.c.3",
+        "text": "Stalling speed is affected by load factor"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.1.14.w.1",
+        "text": "Stalling speed decreases with load factor"
+      },
+      {
+        "id": "AFH.10.1.14.w.2",
+        "text": "Stalling speed is unaffected by load factor"
+      },
+      {
+        "id": "AFH.10.1.14.w.3",
+        "text": "Higher load factors decrease stalling speed"
+      },
+      {
+        "id": "AFH.10.1.14.w.4",
+        "text": "Stalling speed remains constant regardless of load factor"
+      },
+      {
+        "id": "AFH.10.1.14.w.5",
+        "text": "Stalling speed decreases with altitude"
+      },
+      {
+        "id": "AFH.10.1.14.w.6",
+        "text": "Stalling speed increases with altitude"
+      },
+      {
+        "id": "AFH.10.1.14.w.7",
+        "text": "Stalling speed is independent of load factor"
+      },
+      {
+        "id": "AFH.10.1.14.w.8",
+        "text": "Stalling speed decreases with airspeed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Steep Turns"
+    ]
+  },
+  {
+    "questionid": "AFH.10.1.15",
+    "question": "What is the purpose of increasing the angle of attack during a steep turn?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.1.15.c.1",
+        "text": "To maintain altitude"
+      },
+      {
+        "id": "AFH.10.1.15.c.2",
+        "text": "To counteract loss of lift"
+      },
+      {
+        "id": "AFH.10.1.15.c.3",
+        "text": "To ensure sufficient vertical lift component"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.1.15.w.1",
+        "text": "To decrease altitude"
+      },
+      {
+        "id": "AFH.10.1.15.w.2",
+        "text": "To increase drag"
+      },
+      {
+        "id": "AFH.10.1.15.w.3",
+        "text": "To reduce airspeed"
+      },
+      {
+        "id": "AFH.10.1.15.w.4",
+        "text": "To increase lift"
+      },
+      {
+        "id": "AFH.10.1.15.w.5",
+        "text": "To decrease load factor"
+      },
+      {
+        "id": "AFH.10.1.15.w.6",
+        "text": "To increase bank angle"
+      },
+      {
+        "id": "AFH.10.1.15.w.7",
+        "text": "To reduce G-forces"
+      },
+      {
+        "id": "AFH.10.1.15.w.8",
+        "text": "To maintain level flight"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Steep Turns"
+    ]
+  },
+  {
+    "questionid": "AFH.10.1.16",
+    "question": "What is the effect of a steep turn on pitch control pressures?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.1.16.c.1",
+        "text": "Substantial increase"
+      },
+      {
+        "id": "AFH.10.1.16.c.2",
+        "text": "Requires more input"
+      },
+      {
+        "id": "AFH.10.1.16.c.3",
+        "text": "Increases with bank angle"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.1.16.w.1",
+        "text": "Substantial decrease"
+      },
+      {
+        "id": "AFH.10.1.16.w.2",
+        "text": "Requires less input"
+      },
+      {
+        "id": "AFH.10.1.16.w.3",
+        "text": "Decreases with bank angle"
+      },
+      {
+        "id": "AFH.10.1.16.w.4",
+        "text": "Remains constant"
+      },
+      {
+        "id": "AFH.10.1.16.w.5",
+        "text": "Decreases with altitude"
+      },
+      {
+        "id": "AFH.10.1.16.w.6",
+        "text": "Increases with altitude"
+      },
+      {
+        "id": "AFH.10.1.16.w.7",
+        "text": "Remains unaffected by bank angle"
+      },
+      {
+        "id": "AFH.10.1.16.w.8",
+        "text": "Decreases with airspeed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Steep Turns"
+    ]
+  },
+  {
+    "questionid": "AFH.10.1.17",
+    "question": "What is the effect of a steep turn on the horizontal component of lift?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.1.17.c.1",
+        "text": "Provides necessary force to turn"
+      },
+      {
+        "id": "AFH.10.1.17.c.2",
+        "text": "Increases with bank angle"
+      },
+      {
+        "id": "AFH.10.1.17.c.3",
+        "text": "Essential for turning the airplane"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.1.17.w.1",
+        "text": "Decreases with bank angle"
+      },
+      {
+        "id": "AFH.10.1.17.w.2",
+        "text": "Unnecessary for turning"
+      },
+      {
+        "id": "AFH.10.1.17.w.3",
+        "text": "Remains constant"
+      },
+      {
+        "id": "AFH.10.1.17.w.4",
+        "text": "Decreases with altitude"
+      },
+      {
+        "id": "AFH.10.1.17.w.5",
+        "text": "Increases with altitude"
+      },
+      {
+        "id": "AFH.10.1.17.w.6",
+        "text": "Remains unaffected by bank angle"
+      },
+      {
+        "id": "AFH.10.1.17.w.7",
+        "text": "Decreases with airspeed"
+      },
+      {
+        "id": "AFH.10.1.17.w.8",
+        "text": "Increases with airspeed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Steep Turns"
+    ]
+  },
+  {
+    "questionid": "AFH.10.2.1",
+    "question": "What are the primary objectives of the steep spiral maneuver?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.2.1.c.1",
+        "text": "Rapidly dissipating substantial amounts of altitude"
+      },
+      {
+        "id": "AFH.10.2.1.c.2",
+        "text": "Remaining over a selected surface reference point"
+      },
+      {
+        "id": "AFH.10.2.1.c.3",
+        "text": "Providing a useful technique during an emergency landing"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.2.1.w.1",
+        "text": "Practicing maximum performance climbs"
+      },
+      {
+        "id": "AFH.10.2.1.w.2",
+        "text": "Demonstrating slow flight characteristics"
+      },
+      {
+        "id": "AFH.10.2.1.w.3",
+        "text": "Building proficiency in stall recovery"
+      },
+      {
+        "id": "AFH.10.2.1.w.4",
+        "text": "Practicing crosswind landing techniques"
+      },
+      {
+        "id": "AFH.10.2.1.w.5",
+        "text": "Developing skills for instrument approaches"
+      },
+      {
+        "id": "AFH.10.2.1.w.6",
+        "text": "Increasing cruise altitude efficiently"
+      },
+      {
+        "id": "AFH.10.2.1.w.7",
+        "text": "Practicing engine-out glide ratio calculations"
+      },
+      {
+        "id": "AFH.10.2.1.w.8",
+        "text": "Demonstrating steep turn coordination at altitude"
+      }
+    ],
+    "source": "AFH Chapter 10, Section 10.2 – Steep Spiral",
+    "subjects": [
+      "Steep Spiral Objectives",
+      "Emergency Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.10.2.2",
+    "question": "Which conditions must be met when initiating a steep spiral?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.2.2.c.1",
+        "text": "The throttle is closed to idle"
+      },
+      {
+        "id": "AFH.10.2.2.c.2",
+        "text": "Carburetor heat is applied if the aircraft is equipped"
+      },
+      {
+        "id": "AFH.10.2.2.c.3",
+        "text": "Gliding speed is established before rolling into the turn"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.2.2.w.1",
+        "text": "Full flaps are extended immediately"
+      },
+      {
+        "id": "AFH.10.2.2.w.2",
+        "text": "Maximum bank angle of 45° is established at entry"
+      },
+      {
+        "id": "AFH.10.2.2.w.3",
+        "text": "Engine power is set to cruise before descending"
+      },
+      {
+        "id": "AFH.10.2.2.w.4",
+        "text": "The maneuver begins at 500 feet AGL"
+      },
+      {
+        "id": "AFH.10.2.2.w.5",
+        "text": "Airspeed is increased above cruise before entry"
+      },
+      {
+        "id": "AFH.10.2.2.w.6",
+        "text": "The pilot selects a moving reference point on the ground"
+      },
+      {
+        "id": "AFH.10.2.2.w.7",
+        "text": "Mixture is set to full rich before initiating the spiral"
+      },
+      {
+        "id": "AFH.10.2.2.w.8",
+        "text": "The pilot climbs to a specific altitude before closing the throttle"
+      }
+    ],
+    "source": "AFH Chapter 10, Section 10.2 – Steep Spiral",
+    "subjects": [
+      "Steep Spiral Entry Procedure",
+      "Engine Management"
+    ]
+  },
+  {
+    "questionid": "AFH.10.2.3",
+    "question": "What are the requirements regarding turns and altitude during a steep spiral?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.2.3.c.1",
+        "text": "The maneuver must consist of at least three 360° turns"
+      },
+      {
+        "id": "AFH.10.2.3.c.2",
+        "text": "The maneuver should conclude no lower than 1,500 feet AGL"
+      },
+      {
+        "id": "AFH.10.2.3.c.3",
+        "text": "Sufficient altitude must be selected before beginning the maneuver"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.2.3.w.1",
+        "text": "The maneuver must consist of at least five 360° turns"
+      },
+      {
+        "id": "AFH.10.2.3.w.2",
+        "text": "The maneuver should conclude no lower than 500 feet AGL"
+      },
+      {
+        "id": "AFH.10.2.3.w.3",
+        "text": "The maneuver must be completed within two 360° turns"
+      },
+      {
+        "id": "AFH.10.2.3.w.4",
+        "text": "The maneuver should conclude no lower than 3,000 feet AGL"
+      },
+      {
+        "id": "AFH.10.2.3.w.5",
+        "text": "The pilot must maintain a minimum of 2,000 feet AGL throughout"
+      },
+      {
+        "id": "AFH.10.2.3.w.6",
+        "text": "Only one 360° turn is required for the maneuver to be complete"
+      },
+      {
+        "id": "AFH.10.2.3.w.7",
+        "text": "The maneuver concludes no lower than 1,000 feet AGL"
+      },
+      {
+        "id": "AFH.10.2.3.w.8",
+        "text": "The maneuver requires exactly four 360° turns"
+      }
+    ],
+    "source": "AFH Chapter 10, Section 10.2 – Steep Spiral",
+    "subjects": [
+      "Steep Spiral Requirements",
+      "Altitude Management"
+    ]
+  },
+  {
+    "questionid": "AFH.10.2.4",
+    "question": "How does a pilot maintain a constant radius during a steep spiral in wind conditions?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.2.4.c.1",
+        "text": "By steepening the bank angle on downwind headings"
+      },
+      {
+        "id": "AFH.10.2.4.c.2",
+        "text": "By shallowing the bank angle on upwind headings"
+      },
+      {
+        "id": "AFH.10.2.4.c.3",
+        "text": "By continually correcting for changes in wind direction and velocity"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.2.4.w.1",
+        "text": "By maintaining a fixed bank angle throughout the maneuver"
+      },
+      {
+        "id": "AFH.10.2.4.w.2",
+        "text": "By increasing airspeed on downwind headings"
+      },
+      {
+        "id": "AFH.10.2.4.w.3",
+        "text": "By reducing airspeed on upwind headings"
+      },
+      {
+        "id": "AFH.10.2.4.w.4",
+        "text": "By applying rudder only to compensate for wind drift"
+      },
+      {
+        "id": "AFH.10.2.4.w.5",
+        "text": "By adjusting throttle to counteract wind effects"
+      },
+      {
+        "id": "AFH.10.2.4.w.6",
+        "text": "By steepening the bank angle on upwind headings"
+      },
+      {
+        "id": "AFH.10.2.4.w.7",
+        "text": "By shallowing the bank angle on downwind headings"
+      },
+      {
+        "id": "AFH.10.2.4.w.8",
+        "text": "By selecting a reference point directly upwind of the aircraft"
+      }
+    ],
+    "source": "AFH Chapter 10, Section 10.2 – Steep Spiral",
+    "subjects": [
+      "Wind Correction",
+      "Constant Radius Turns"
+    ]
+  },
+  {
+    "questionid": "AFH.10.2.5",
+    "question": "What risks are associated with operating the engine at idle for prolonged periods during a steep spiral?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.2.5.c.1",
+        "text": "Excessive engine cooling"
+      },
+      {
+        "id": "AFH.10.2.5.c.2",
+        "text": "Spark plug fouling"
+      },
+      {
+        "id": "AFH.10.2.5.c.3",
+        "text": "Carburetor ice formation"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.2.5.w.1",
+        "text": "Excessive oil pressure buildup"
+      },
+      {
+        "id": "AFH.10.2.5.w.2",
+        "text": "Overheating of the exhaust system"
+      },
+      {
+        "id": "AFH.10.2.5.w.3",
+        "text": "Loss of fuel pressure due to vapor lock"
+      },
+      {
+        "id": "AFH.10.2.5.w.4",
+        "text": "Premature detonation in the cylinders"
+      },
+      {
+        "id": "AFH.10.2.5.w.5",
+        "text": "Hydraulic system failure"
+      },
+      {
+        "id": "AFH.10.2.5.w.6",
+        "text": "Alternator overload from reduced RPM"
+      },
+      {
+        "id": "AFH.10.2.5.w.7",
+        "text": "Magneto timing drift at low power settings"
+      },
+      {
+        "id": "AFH.10.2.5.w.8",
+        "text": "Fuel contamination from condensation"
+      }
+    ],
+    "source": "AFH Chapter 10, Section 10.2 – Steep Spiral",
+    "subjects": [
+      "Engine Management",
+      "Idle Power Risks"
+    ]
+  },
+  {
+    "questionid": "AFH.10.2.6",
+    "question": "What actions should a pilot take to manage engine health during a prolonged steep spiral glide?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.2.6.c.1",
+        "text": "Periodically advance the throttle and sustain it for a few seconds"
+      },
+      {
+        "id": "AFH.10.2.6.c.2",
+        "text": "Monitor cylinder head temperature gauges if available"
+      },
+      {
+        "id": "AFH.10.2.6.c.3",
+        "text": "Adjust pitch attitude to maintain constant airspeed when advancing the throttle"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.2.6.w.1",
+        "text": "Apply full power continuously throughout the descent"
+      },
+      {
+        "id": "AFH.10.2.6.w.2",
+        "text": "Switch fuel tanks every 360° turn to prevent fuel imbalance"
+      },
+      {
+        "id": "AFH.10.2.6.w.3",
+        "text": "Reduce mixture to lean best power during the glide"
+      },
+      {
+        "id": "AFH.10.2.6.w.4",
+        "text": "Retard the throttle completely and leave it closed until rollout"
+      },
+      {
+        "id": "AFH.10.2.6.w.5",
+        "text": "Increase RPM by lowering the nose to maintain engine temperature"
+      },
+      {
+        "id": "AFH.10.2.6.w.6",
+        "text": "Apply carburetor heat only after completing the final turn"
+      },
+      {
+        "id": "AFH.10.2.6.w.7",
+        "text": "Shut down the engine to simulate an actual emergency"
+      },
+      {
+        "id": "AFH.10.2.6.w.8",
+        "text": "Advance the throttle only when the aircraft is on a downwind heading"
+      }
+    ],
+    "source": "AFH Chapter 10, Section 10.2 – Steep Spiral",
+    "subjects": [
+      "Engine Management",
+      "Throttle Technique"
+    ]
+  },
+  {
+    "questionid": "AFH.10.2.7",
+    "question": "What skills and practices are emphasized during steep spiral training to prepare a pilot for actual emergencies?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.2.7.c.1",
+        "text": "Rolling out on a heading perpendicular to or directly into the wind"
+      },
+      {
+        "id": "AFH.10.2.7.c.2",
+        "text": "Noting the altitude lost during each revolution of the spiral"
+      },
+      {
+        "id": "AFH.10.2.7.c.3",
+        "text": "Maintaining a constant airspeed throughout the maneuver as bank angle varies"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.2.7.w.1",
+        "text": "Practicing the maneuver exclusively over water for safety"
+      },
+      {
+        "id": "AFH.10.2.7.w.2",
+        "text": "Executing the rollout only toward a specific ground object"
+      },
+      {
+        "id": "AFH.10.2.7.w.3",
+        "text": "Maintaining a constant bank angle regardless of wind conditions"
+      },
+      {
+        "id": "AFH.10.2.7.w.4",
+        "text": "Completing the maneuver without reference to a ground point"
+      },
+      {
+        "id": "AFH.10.2.7.w.5",
+        "text": "Practicing the maneuver only during calm wind conditions"
+      },
+      {
+        "id": "AFH.10.2.7.w.6",
+        "text": "Rolling out exclusively on a downwind heading for consistency"
+      },
+      {
+        "id": "AFH.10.2.7.w.7",
+        "text": "Ignoring altitude loss per revolution to focus on heading accuracy"
+      },
+      {
+        "id": "AFH.10.2.7.w.8",
+        "text": "Limiting practice to two 360° turns to conserve altitude"
+      }
+    ],
+    "source": "AFH Chapter 10, Section 10.2 – Steep Spiral",
+    "subjects": [
+      "Emergency Preparedness",
+      "Steep Spiral Training Techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.10.3.1",
+    "question": "Which of the following accurately describe the characteristics of a chandelle?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.3.1.c.1",
+        "text": "It is a maximum performance climbing turn."
+      },
+      {
+        "id": "AFH.10.3.1.c.2",
+        "text": "It involves a 180° change in heading."
+      },
+      {
+        "id": "AFH.10.3.1.c.3",
+        "text": "It concludes with the airplane just above stall speed."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.3.1.w.1",
+        "text": "It is a minimum performance maneuver."
+      },
+      {
+        "id": "AFH.10.3.1.w.2",
+        "text": "It is a 360° climbing turn."
+      },
+      {
+        "id": "AFH.10.3.1.w.3",
+        "text": "It ends with the airplane in a steep bank."
+      },
+      {
+        "id": "AFH.10.3.1.w.4",
+        "text": "It maintains a constant airspeed throughout."
+      },
+      {
+        "id": "AFH.10.3.1.w.5",
+        "text": "It begins from a steep climb."
+      },
+      {
+        "id": "AFH.10.3.1.w.6",
+        "text": "It is primarily a descending maneuver."
+      },
+      {
+        "id": "AFH.10.3.1.w.7",
+        "text": "It concludes at cruise speed."
+      },
+      {
+        "id": "AFH.10.3.1.w.8",
+        "text": "It is a constant altitude maneuver."
+      }
+    ],
+    "source": "AFH Chapter 10: Performance Maneuvers Introduction - Chandelle",
+    "subjects": [
+      "Chandelle",
+      "Performance Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.10.3.2",
+    "question": "What is the primary goal and the standard used to judge a chandelle?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.3.2.c.1",
+        "text": "The goal is to gain the most altitude possible for a given bank angle and power setting."
+      },
+      {
+        "id": "AFH.10.3.2.c.2",
+        "text": "The standard is the pilot’s proficiency in maximizing climb performance."
+      },
+      {
+        "id": "AFH.10.3.2.c.3",
+        "text": "The standard is the skill demonstrated by the pilot."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.3.2.w.1",
+        "text": "The goal is to maintain a constant altitude."
+      },
+      {
+        "id": "AFH.10.3.2.w.2",
+        "text": "The standard is the amount of altitude gained."
+      },
+      {
+        "id": "AFH.10.3.2.w.3",
+        "text": "The goal is to achieve minimum airspeed."
+      },
+      {
+        "id": "AFH.10.3.2.w.4",
+        "text": "The standard is maintaining a specific bank angle."
+      },
+      {
+        "id": "AFH.10.3.2.w.5",
+        "text": "The goal is to complete a 360° turn."
+      },
+      {
+        "id": "AFH.10.3.2.w.6",
+        "text": "The standard is the time taken to complete the maneuver."
+      },
+      {
+        "id": "AFH.10.3.2.w.7",
+        "text": "The goal is to practice stalls."
+      },
+      {
+        "id": "AFH.10.3.2.w.8",
+        "text": "The standard is the lowest airspeed achieved."
+      }
+    ],
+    "source": "AFH Chapter 10: Performance Maneuvers Introduction - Chandelle",
+    "subjects": [
+      "Chandelle",
+      "Performance Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.10.3.3",
+    "question": "How are the two specific phases of a chandelle described?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.3.3.c.1",
+        "text": "The first 90° of turn is constant bank and continuously increasing pitch."
+      },
+      {
+        "id": "AFH.10.3.3.c.2",
+        "text": "The second 90° of turn is constant pitch and continuously decreasing bank."
+      },
+      {
+        "id": "AFH.10.3.3.c.3",
+        "text": "Maximum pitch-up occurs at the completion of the first 90°."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.3.3.w.1",
+        "text": "The first 90° of turn is increasing bank and constant pitch."
+      },
+      {
+        "id": "AFH.10.3.3.w.2",
+        "text": "The second 90° of turn is increasing pitch and decreasing bank."
+      },
+      {
+        "id": "AFH.10.3.3.w.3",
+        "text": "Both phases involve constant pitch."
+      },
+      {
+        "id": "AFH.10.3.3.w.4",
+        "text": "Both phases involve constant bank."
+      },
+      {
+        "id": "AFH.10.3.3.w.5",
+        "text": "The first 90° is decreasing pitch."
+      },
+      {
+        "id": "AFH.10.3.3.w.6",
+        "text": "The second 90° is increasing bank."
+      },
+      {
+        "id": "AFH.10.3.3.w.7",
+        "text": "The first 90° is constant airspeed."
+      },
+      {
+        "id": "AFH.10.3.3.w.8",
+        "text": "The second 90° is constant altitude."
+      }
+    ],
+    "source": "AFH Chapter 10: Performance Maneuvers Introduction - Chandelle",
+    "subjects": [
+      "Chandelle",
+      "Flight Phases"
+    ]
+  },
+  {
+    "questionid": "AFH.10.3.4",
+    "question": "During the first 90° of a chandelle, what actions should the pilot perform?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.3.4.c.1",
+        "text": "Set the desired bank angle."
+      },
+      {
+        "id": "AFH.10.3.4.c.2",
+        "text": "Increase engine power."
+      },
+      {
+        "id": "AFH.10.3.4.c.3",
+        "text": "Increase pitch attitude at a rate such that maximum pitch-up occurs at the 90° mark."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.3.4.w.1",
+        "text": "Decrease engine power."
+      },
+      {
+        "id": "AFH.10.3.4.w.2",
+        "text": "Decrease pitch attitude."
+      },
+      {
+        "id": "AFH.10.3.4.w.3",
+        "text": "Begin a slow rollout."
+      },
+      {
+        "id": "AFH.10.3.4.w.4",
+        "text": "Maintain constant airspeed."
+      },
+      {
+        "id": "AFH.10.3.4.w.5",
+        "text": "Decrease bank angle."
+      },
+      {
+        "id": "AFH.10.3.4.w.6",
+        "text": "Maintain constant pitch."
+      },
+      {
+        "id": "AFH.10.3.4.w.7",
+        "text": "Increase airspeed."
+      },
+      {
+        "id": "AFH.10.3.4.w.8",
+        "text": "Retract flaps during the turn."
+      }
+    ],
+    "source": "AFH Chapter 10: Performance Maneuvers Introduction - Chandelle",
+    "subjects": [
+      "Chandelle",
+      "Flight Controls"
+    ]
+  },
+  {
+    "questionid": "AFH.10.3.5",
+    "question": "What are the potential consequences of incorrect pitch attitude during the first 90° of a chandelle?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.3.5.c.1",
+        "text": "If pitch attitude is set too low, the airspeed will not decrease to just above stall speed."
+      },
+      {
+        "id": "AFH.10.3.5.c.2",
+        "text": "If pitch attitude is set too high, the airplane may aerodynamically stall prior to completion."
+      },
+      {
+        "id": "AFH.10.3.5.c.3",
+        "text": "The maximum pitch-up attitude should be achieved at the 90° mark."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.3.5.w.1",
+        "text": "If pitch attitude is set too low, the airplane will stall."
+      },
+      {
+        "id": "AFH.10.3.5.w.2",
+        "text": "If pitch attitude is set too high, the airspeed will increase rapidly."
+      },
+      {
+        "id": "AFH.10.3.5.w.3",
+        "text": "If pitch attitude is set too low, the airplane will exceed the 180° turn."
+      },
+      {
+        "id": "AFH.10.3.5.w.4",
+        "text": "If pitch attitude is set too high, the airplane will maintain constant airspeed."
+      },
+      {
+        "id": "AFH.10.3.5.w.5",
+        "text": "If pitch attitude is set too low, the wings will level prematurely."
+      },
+      {
+        "id": "AFH.10.3.5.w.6",
+        "text": "If pitch attitude is set too high, the engine will overspeed."
+      },
+      {
+        "id": "AFH.10.3.5.w.7",
+        "text": "If pitch attitude is set too low, the turn will be too slow."
+      },
+      {
+        "id": "AFH.10.3.5.w.8",
+        "text": "If pitch attitude is set too high, the turn will be too fast."
+      }
+    ],
+    "source": "AFH Chapter 10: Performance Maneuvers Introduction - Chandelle",
+    "subjects": [
+      "Chandelle",
+      "Aerodynamics",
+      "Flight Errors"
+    ]
+  },
+  {
+    "questionid": "AFH.10.3.6",
+    "question": "Which actions characterize the second 90° of a chandelle?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.3.6.c.1",
+        "text": "Maintaining the pitch attitude set at the end of the first 90°."
+      },
+      {
+        "id": "AFH.10.3.6.c.2",
+        "text": "Beginning a slow and coordinated constant rate rollout."
+      },
+      {
+        "id": "AFH.10.3.6.c.3",
+        "text": "Having the wings level when the airplane is at the 180° point."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.3.6.w.1",
+        "text": "Continuously increasing pitch attitude."
+      },
+      {
+        "id": "AFH.10.3.6.w.2",
+        "text": "Increasing bank angle."
+      },
+      {
+        "id": "AFH.10.3.6.w.3",
+        "text": "Rapidly rolling out."
+      },
+      {
+        "id": "AFH.10.3.6.w.4",
+        "text": "Decreasing engine power."
+      },
+      {
+        "id": "AFH.10.3.6.w.5",
+        "text": "Increasing airspeed."
+      },
+      {
+        "id": "AFH.10.3.6.w.6",
+        "text": "Maintaining constant bank."
+      },
+      {
+        "id": "AFH.10.3.6.w.7",
+        "text": "Initiating a dive."
+      },
+      {
+        "id": "AFH.10.3.6.w.8",
+        "text": "Extending flaps."
+      }
+    ],
+    "source": "AFH Chapter 10: Performance Maneuvers Introduction - Chandelle",
+    "subjects": [
+      "Chandelle",
+      "Flight Controls"
+    ]
+  },
+  {
+    "questionid": "AFH.10.3.7",
+    "question": "What can occur if the rate of rollout is incorrect during the second 90° of a chandelle?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.3.7.c.1",
+        "text": "If the rate of rollout is too rapid, the airplane exceeds the 180° turn."
+      },
+      {
+        "id": "AFH.10.3.7.c.2",
+        "text": "If the rate of rollout is too sluggish, the airplane does not complete the turn."
+      },
+      {
+        "id": "AFH.10.3.7.c.3",
+        "text": "The wings should be level at the 180° point."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.3.7.w.1",
+        "text": "If the rate of rollout is too rapid, the airplane stalls."
+      },
+      {
+        "id": "AFH.10.3.7.w.2",
+        "text": "If the rate of rollout is too sluggish, airspeed increases too much."
+      },
+      {
+        "id": "AFH.10.3.7.w.3",
+        "text": "If the rate of rollout is too rapid, pitch attitude decreases."
+      },
+      {
+        "id": "AFH.10.3.7.w.4",
+        "text": "If the rate of rollout is too sluggish, pitch attitude increases."
+      },
+      {
+        "id": "AFH.10.3.7.w.5",
+        "text": "If the rate of rollout is too rapid, power decreases."
+      },
+      {
+        "id": "AFH.10.3.7.w.6",
+        "text": "If the rate of rollout is too sluggish, bank angle increases."
+      },
+      {
+        "id": "AFH.10.3.7.w.7",
+        "text": "If the rate of rollout is too rapid, altitude is lost."
+      },
+      {
+        "id": "AFH.10.3.7.w.8",
+        "text": "If the rate of rollout is too sluggish, the turn is too tight."
+      }
+    ],
+    "source": "AFH Chapter 10: Performance Maneuvers Introduction - Chandelle",
+    "subjects": [
+      "Chandelle",
+      "Flight Errors"
+    ]
+  },
+  {
+    "questionid": "AFH.10.3.8",
+    "question": "What are important considerations prior to starting and during the entry of a chandelle?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.3.8.c.1",
+        "text": "Flaps and landing gear (if retractable) should be in the UP position."
+      },
+      {
+        "id": "AFH.10.3.8.c.2",
+        "text": "The airspace should be properly cleared for air traffic and hazards."
+      },
+      {
+        "id": "AFH.10.3.8.c.3",
+        "text": "The maneuver should be entered at an airspeed recommended by the manufacturer (VA or VO)."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.3.8.w.1",
+        "text": "Flaps should be extended to the takeoff position."
+      },
+      {
+        "id": "AFH.10.3.8.w.2",
+        "text": "Landing gear should be down."
+      },
+      {
+        "id": "AFH.10.3.8.w.3",
+        "text": "Airspace clearance is optional for this maneuver."
+      },
+      {
+        "id": "AFH.10.3.8.w.4",
+        "text": "Entry airspeed should be minimum control speed."
+      },
+      {
+        "id": "AFH.10.3.8.w.5",
+        "text": "Entry airspeed should be maximum cruise speed."
+      },
+      {
+        "id": "AFH.10.3.8.w.6",
+        "text": "Enter from a steep climb."
+      },
+      {
+        "id": "AFH.10.3.8.w.7",
+        "text": "Enter from a steep dive."
+      },
+      {
+        "id": "AFH.10.3.8.w.8",
+        "text": "Flaps should be in the landing position."
+      }
+    ],
+    "source": "AFH Chapter 10: Performance Maneuvers Introduction - Chandelle",
+    "subjects": [
+      "Chandelle",
+      "Pre-flight",
+      "Entry Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.10.3.9",
+    "question": "How is a chandelle initiated, and what are the initial power and control inputs?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.3.9.c.1",
+        "text": "Smoothly entering a coordinated turn to the desired angle of bank."
+      },
+      {
+        "id": "AFH.10.3.9.c.2",
+        "text": "Smoothly applying elevator back pressure at a constant rate."
+      },
+      {
+        "id": "AFH.10.3.9.c.3",
+        "text": "Simultaneously increasing engine power to the recommended setting."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.3.9.w.1",
+        "text": "Rapidly entering a steep bank."
+      },
+      {
+        "id": "AFH.10.3.9.w.2",
+        "text": "Decreasing engine power."
+      },
+      {
+        "id": "AFH.10.3.9.w.3",
+        "text": "Applying forward elevator pressure."
+      },
+      {
+        "id": "AFH.10.3.9.w.4",
+        "text": "Entering an uncoordinated turn."
+      },
+      {
+        "id": "AFH.10.3.9.w.5",
+        "text": "Maintaining constant power."
+      },
+      {
+        "id": "AFH.10.3.9.w.6",
+        "text": "Decreasing bank angle."
+      },
+      {
+        "id": "AFH.10.3.9.w.7",
+        "text": "Extending flaps."
+      },
+      {
+        "id": "AFH.10.3.9.w.8",
+        "text": "Increasing airspeed rapidly."
+      }
+    ],
+    "source": "AFH Chapter 10: Performance Maneuvers Introduction - Chandelle",
+    "subjects": [
+      "Chandelle",
+      "Flight Controls",
+      "Power Management"
+    ]
+  },
+  {
+    "questionid": "AFH.10.3.10",
+    "question": "How should power be managed for different propeller types during a chandelle?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.3.10.c.1",
+        "text": "In airplanes with a fixed-pitch propeller, the throttle should be set to not exceed rpm limitations."
+      },
+      {
+        "id": "AFH.10.3.10.c.2",
+        "text": "In airplanes with constant-speed propellers, power may be set at the normal cruise setting."
+      },
+      {
+        "id": "AFH.10.3.10.c.3",
+        "text": "In airplanes with constant-speed propellers, power may be set at the normal climb setting."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.3.10.w.1",
+        "text": "Fixed-pitch props should use maximum rpm."
+      },
+      {
+        "id": "AFH.10.3.10.w.2",
+        "text": "Constant-speed props should use minimum rpm."
+      },
+      {
+        "id": "AFH.10.3.10.w.3",
+        "text": "Fixed-pitch props should use minimum throttle."
+      },
+      {
+        "id": "AFH.10.3.10.w.4",
+        "text": "Constant-speed props should use maximum throttle."
+      },
+      {
+        "id": "AFH.10.3.10.w.5",
+        "text": "Fixed-pitch props should use cruise setting only."
+      },
+      {
+        "id": "AFH.10.3.10.w.6",
+        "text": "Constant-speed props should use idle setting."
+      },
+      {
+        "id": "AFH.10.3.10.w.7",
+        "text": "Fixed-pitch props should use climb setting only."
+      },
+      {
+        "id": "AFH.10.3.10.w.8",
+        "text": "Constant-speed props should use takeoff setting."
+      }
+    ],
+    "source": "AFH Chapter 10: Performance Maneuvers Introduction - Chandelle",
+    "subjects": [
+      "Chandelle",
+      "Power Management",
+      "Propeller Systems"
+    ]
+  },
+  {
+    "questionid": "AFH.10.3.11",
+    "question": "How is coordinated flight maintained during a chandelle, especially as airspeed decreases?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.3.11.c.1",
+        "text": "Progressively increasing right rudder pressure."
+      },
+      {
+        "id": "AFH.10.3.11.c.2",
+        "text": "Sensing physical slipping or skidding."
+      },
+      {
+        "id": "AFH.10.3.11.c.3",
+        "text": "Glancing at the ball in the turn-and-slip or turn coordinator."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.3.11.w.1",
+        "text": "Progressively increasing left rudder pressure."
+      },
+      {
+        "id": "AFH.10.3.11.w.2",
+        "text": "Decreasing right rudder pressure."
+      },
+      {
+        "id": "AFH.10.3.11.w.3",
+        "text": "Maintaining constant rudder pressure."
+      },
+      {
+        "id": "AFH.10.3.11.w.4",
+        "text": "Ignoring the turn coordinator."
+      },
+      {
+        "id": "AFH.10.3.11.w.5",
+        "text": "Increasing left aileron."
+      },
+      {
+        "id": "AFH.10.3.11.w.6",
+        "text": "Decreasing right aileron."
+      },
+      {
+        "id": "AFH.10.3.11.w.7",
+        "text": "Increasing airspeed to reduce P-factor."
+      },
+      {
+        "id": "AFH.10.3.11.w.8",
+        "text": "Using only visual cues outside the aircraft."
+      }
+    ],
+    "source": "AFH Chapter 10: Performance Maneuvers Introduction - Chandelle",
+    "subjects": [
+      "Chandelle",
+      "Flight Coordination",
+      "Aerodynamics"
+    ]
+  },
+  {
+    "questionid": "AFH.10.4.1",
+    "question": "What is the primary purpose of the lazy eight maneuver?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.4.1.c.1",
+        "text": "Develop proper coordination of flight controls"
+      },
+      {
+        "id": "AFH.10.4.1.c.2",
+        "text": "Experience changing flight control pressures"
+      },
+      {
+        "id": "AFH.10.4.1.c.3",
+        "text": "Practice climbing and descending turns"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.4.1.w.1",
+        "text": "Increase airspeed"
+      },
+      {
+        "id": "AFH.10.4.1.w.2",
+        "text": "Perform aerobatic stunts"
+      },
+      {
+        "id": "AFH.10.4.1.w.3",
+        "text": "Improve fuel efficiency"
+      },
+      {
+        "id": "AFH.10.4.1.w.4",
+        "text": "Enhance passenger comfort"
+      },
+      {
+        "id": "AFH.10.4.1.w.5",
+        "text": "Reduce aircraft noise"
+      },
+      {
+        "id": "AFH.10.4.1.w.6",
+        "text": "Maximize altitude gain"
+      },
+      {
+        "id": "AFH.10.4.1.w.7",
+        "text": "Minimize turn radius"
+      },
+      {
+        "id": "AFH.10.4.1.w.8",
+        "text": "Achieve maximum speed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.10.4.2",
+    "question": "How does the lazy eight maneuver differ from S-turns across the road?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.4.2.c.1",
+        "text": "Includes a climb and descent in each 180° turn"
+      },
+      {
+        "id": "AFH.10.4.2.c.2",
+        "text": "Traces a symmetrical eight on its side"
+      },
+      {
+        "id": "AFH.10.4.2.c.3",
+        "text": "Requires coordination of aileron and rudder"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.4.2.w.1",
+        "text": "Performed at constant altitude"
+      },
+      {
+        "id": "AFH.10.4.2.w.2",
+        "text": "Involves only left turns"
+      },
+      {
+        "id": "AFH.10.4.2.w.3",
+        "text": "Focuses on maintaining airspeed"
+      },
+      {
+        "id": "AFH.10.4.2.w.4",
+        "text": "Uses only aileron control"
+      },
+      {
+        "id": "AFH.10.4.2.w.5",
+        "text": "Executed in a straight line"
+      },
+      {
+        "id": "AFH.10.4.2.w.6",
+        "text": "Requires no reference points"
+      },
+      {
+        "id": "AFH.10.4.2.w.7",
+        "text": "Involves rapid roll rates"
+      },
+      {
+        "id": "AFH.10.4.2.w.8",
+        "text": "Performed at maximum speed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.10.4.3",
+    "question": "What should the pilot do at the 45° reference point during a lazy eight?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.4.3.c.1",
+        "text": "Reach maximum pitch-up attitude"
+      },
+      {
+        "id": "AFH.10.4.3.c.2",
+        "text": "Have an approximate bank angle of 15°"
+      },
+      {
+        "id": "AFH.10.4.3.c.3",
+        "text": "Begin decreasing pitch attitude"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.4.3.w.1",
+        "text": "Reach maximum airspeed"
+      },
+      {
+        "id": "AFH.10.4.3.w.2",
+        "text": "Level the wings"
+      },
+      {
+        "id": "AFH.10.4.3.w.3",
+        "text": "Initiate descent"
+      },
+      {
+        "id": "AFH.10.4.3.w.4",
+        "text": "Maintain constant altitude"
+      },
+      {
+        "id": "AFH.10.4.3.w.5",
+        "text": "Perform a steep turn"
+      },
+      {
+        "id": "AFH.10.4.3.w.6",
+        "text": "Increase throttle"
+      },
+      {
+        "id": "AFH.10.4.3.w.7",
+        "text": "Reduce bank angle"
+      },
+      {
+        "id": "AFH.10.4.3.w.8",
+        "text": "Stabilize airspeed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.10.4.4",
+    "question": "What is the role of reference points in performing a lazy eight?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.4.4.c.1",
+        "text": "Aid in performing symmetrical climbing/descending turns"
+      },
+      {
+        "id": "AFH.10.4.4.c.2",
+        "text": "Help maintain orientation during the maneuver"
+      },
+      {
+        "id": "AFH.10.4.4.c.3",
+        "text": "Provide visual cues for pitch and bank changes"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.4.4.w.1",
+        "text": "Ensure constant airspeed"
+      },
+      {
+        "id": "AFH.10.4.4.w.2",
+        "text": "Indicate maximum altitude"
+      },
+      {
+        "id": "AFH.10.4.4.w.3",
+        "text": "Guide throttle adjustments"
+      },
+      {
+        "id": "AFH.10.4.4.w.4",
+        "text": "Determine roll rate"
+      },
+      {
+        "id": "AFH.10.4.4.w.5",
+        "text": "Mark the end of the maneuver"
+      },
+      {
+        "id": "AFH.10.4.4.w.6",
+        "text": "Signal when to level off"
+      },
+      {
+        "id": "AFH.10.4.4.w.7",
+        "text": "Indicate when to descend"
+      },
+      {
+        "id": "AFH.10.4.4.w.8",
+        "text": "Guide rudder input"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.10.4.5",
+    "question": "What happens to airspeed during the initial climb of a lazy eight?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.4.5.c.1",
+        "text": "Airspeed decreases"
+      },
+      {
+        "id": "AFH.10.4.5.c.2",
+        "text": "Rate of turn increases"
+      },
+      {
+        "id": "AFH.10.4.5.c.3",
+        "text": "Pitch attitude is raised"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.4.5.w.1",
+        "text": "Airspeed remains constant"
+      },
+      {
+        "id": "AFH.10.4.5.w.2",
+        "text": "Airspeed increases"
+      },
+      {
+        "id": "AFH.10.4.5.w.3",
+        "text": "Rate of turn decreases"
+      },
+      {
+        "id": "AFH.10.4.5.w.4",
+        "text": "Pitch attitude is lowered"
+      },
+      {
+        "id": "AFH.10.4.5.w.5",
+        "text": "Bank angle decreases"
+      },
+      {
+        "id": "AFH.10.4.5.w.6",
+        "text": "Throttle is increased"
+      },
+      {
+        "id": "AFH.10.4.5.w.7",
+        "text": "Altitude remains constant"
+      },
+      {
+        "id": "AFH.10.4.5.w.8",
+        "text": "Roll rate increases"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.10.4.6",
+    "question": "What is the significance of the 90° reference point in a lazy eight?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.4.6.c.1",
+        "text": "Pitch attitude passes through level"
+      },
+      {
+        "id": "AFH.10.4.6.c.2",
+        "text": "Marks the transition from climb to descent"
+      },
+      {
+        "id": "AFH.10.4.6.c.3",
+        "text": "Indicates midpoint of the maneuver"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.4.6.w.1",
+        "text": "Maximum bank angle is reached"
+      },
+      {
+        "id": "AFH.10.4.6.w.2",
+        "text": "Airspeed is at its highest"
+      },
+      {
+        "id": "AFH.10.4.6.w.3",
+        "text": "Throttle is reduced"
+      },
+      {
+        "id": "AFH.10.4.6.w.4",
+        "text": "Roll rate is maximized"
+      },
+      {
+        "id": "AFH.10.4.6.w.5",
+        "text": "Altitude is at its peak"
+      },
+      {
+        "id": "AFH.10.4.6.w.6",
+        "text": "Descent is completed"
+      },
+      {
+        "id": "AFH.10.4.6.w.7",
+        "text": "Rudder input is minimized"
+      },
+      {
+        "id": "AFH.10.4.6.w.8",
+        "text": "Bank angle is zero"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.10.4.7",
+    "question": "What is the maximum bank angle typically reached during a lazy eight?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.4.7.c.1",
+        "text": "15° at the 45° reference point"
+      },
+      {
+        "id": "AFH.10.4.7.c.2",
+        "text": "Gradually increases beyond 45°"
+      },
+      {
+        "id": "AFH.10.4.7.c.3",
+        "text": "Varies with pitch attitude"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.4.7.w.1",
+        "text": "30° throughout the maneuver"
+      },
+      {
+        "id": "AFH.10.4.7.w.2",
+        "text": "45° at the 90° reference point"
+      },
+      {
+        "id": "AFH.10.4.7.w.3",
+        "text": "60° at the start"
+      },
+      {
+        "id": "AFH.10.4.7.w.4",
+        "text": "Constant at 10°"
+      },
+      {
+        "id": "AFH.10.4.7.w.5",
+        "text": "Fixed at 20°"
+      },
+      {
+        "id": "AFH.10.4.7.w.6",
+        "text": "Decreases to 5°"
+      },
+      {
+        "id": "AFH.10.4.7.w.7",
+        "text": "Remains at 0°"
+      },
+      {
+        "id": "AFH.10.4.7.w.8",
+        "text": "Peaks at 25°"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.10.4.8",
+    "question": "How does the lazy eight maneuver appear from the pilot's perspective?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.4.8.c.1",
+        "text": "Traces a symmetrical eight on its side"
+      },
+      {
+        "id": "AFH.10.4.8.c.2",
+        "text": "Segments above and below the horizon"
+      },
+      {
+        "id": "AFH.10.4.8.c.3",
+        "text": "Involves two 180° turns"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.4.8.w.1",
+        "text": "Appears as a straight line"
+      },
+      {
+        "id": "AFH.10.4.8.w.2",
+        "text": "Consists of only left turns"
+      },
+      {
+        "id": "AFH.10.4.8.w.3",
+        "text": "Forms a perfect circle"
+      },
+      {
+        "id": "AFH.10.4.8.w.4",
+        "text": "Involves rapid altitude changes"
+      },
+      {
+        "id": "AFH.10.4.8.w.5",
+        "text": "Maintains constant altitude"
+      },
+      {
+        "id": "AFH.10.4.8.w.6",
+        "text": "Focuses on speed increase"
+      },
+      {
+        "id": "AFH.10.4.8.w.7",
+        "text": "Requires no visual reference"
+      },
+      {
+        "id": "AFH.10.4.8.w.8",
+        "text": "Appears as a zigzag pattern"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.10.4.9",
+    "question": "What is the primary challenge in performing a lazy eight?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.4.9.c.1",
+        "text": "Coordinating aileron and rudder"
+      },
+      {
+        "id": "AFH.10.4.9.c.2",
+        "text": "Managing changing flight control pressures"
+      },
+      {
+        "id": "AFH.10.4.9.c.3",
+        "text": "Executing symmetrical climbing/descending turns"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.4.9.w.1",
+        "text": "Maintaining constant airspeed"
+      },
+      {
+        "id": "AFH.10.4.9.w.2",
+        "text": "Achieving maximum altitude"
+      },
+      {
+        "id": "AFH.10.4.9.w.3",
+        "text": "Performing rapid rolls"
+      },
+      {
+        "id": "AFH.10.4.9.w.4",
+        "text": "Executing steep turns"
+      },
+      {
+        "id": "AFH.10.4.9.w.5",
+        "text": "Maintaining level flight"
+      },
+      {
+        "id": "AFH.10.4.9.w.6",
+        "text": "Increasing throttle smoothly"
+      },
+      {
+        "id": "AFH.10.4.9.w.7",
+        "text": "Reducing drag"
+      },
+      {
+        "id": "AFH.10.4.9.w.8",
+        "text": "Maximizing speed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.10.4.10",
+    "question": "What should the pilot focus on beyond the 45° reference point in a lazy eight?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.4.10.c.1",
+        "text": "Decreasing pitch-up attitude"
+      },
+      {
+        "id": "AFH.10.4.10.c.2",
+        "text": "Increasing bank angle"
+      },
+      {
+        "id": "AFH.10.4.10.c.3",
+        "text": "Approaching the horizon"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.4.10.w.1",
+        "text": "Maintaining maximum pitch-up"
+      },
+      {
+        "id": "AFH.10.4.10.w.2",
+        "text": "Reducing bank angle"
+      },
+      {
+        "id": "AFH.10.4.10.w.3",
+        "text": "Increasing airspeed"
+      },
+      {
+        "id": "AFH.10.4.10.w.4",
+        "text": "Holding constant altitude"
+      },
+      {
+        "id": "AFH.10.4.10.w.5",
+        "text": "Maximizing throttle"
+      },
+      {
+        "id": "AFH.10.4.10.w.6",
+        "text": "Leveling wings"
+      },
+      {
+        "id": "AFH.10.4.10.w.7",
+        "text": "Completing the maneuver"
+      },
+      {
+        "id": "AFH.10.4.10.w.8",
+        "text": "Initiating descent"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.10.4.11",
+    "question": "What is the purpose of selecting prominent reference points during a lazy eight?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.4.11.c.1",
+        "text": "Aid in maintaining symmetry"
+      },
+      {
+        "id": "AFH.10.4.11.c.2",
+        "text": "Guide pitch and bank changes"
+      },
+      {
+        "id": "AFH.10.4.11.c.3",
+        "text": "Assist in orientation"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.4.11.w.1",
+        "text": "Ensure constant speed"
+      },
+      {
+        "id": "AFH.10.4.11.w.2",
+        "text": "Determine maximum altitude"
+      },
+      {
+        "id": "AFH.10.4.11.w.3",
+        "text": "Guide throttle adjustments"
+      },
+      {
+        "id": "AFH.10.4.11.w.4",
+        "text": "Indicate roll rate"
+      },
+      {
+        "id": "AFH.10.4.11.w.5",
+        "text": "Mark maneuver completion"
+      },
+      {
+        "id": "AFH.10.4.11.w.6",
+        "text": "Signal descent initiation"
+      },
+      {
+        "id": "AFH.10.4.11.w.7",
+        "text": "Guide rudder input"
+      },
+      {
+        "id": "AFH.10.4.11.w.8",
+        "text": "Indicate level flight"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.10.4.12",
+    "question": "What is the effect of increasing pitch attitude during the lazy eight?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.4.12.c.1",
+        "text": "Airspeed decreases"
+      },
+      {
+        "id": "AFH.10.4.12.c.2",
+        "text": "Rate of turn increases"
+      },
+      {
+        "id": "AFH.10.4.12.c.3",
+        "text": "Bank angle increases"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.4.12.w.1",
+        "text": "Airspeed increases"
+      },
+      {
+        "id": "AFH.10.4.12.w.2",
+        "text": "Rate of turn decreases"
+      },
+      {
+        "id": "AFH.10.4.12.w.3",
+        "text": "Bank angle decreases"
+      },
+      {
+        "id": "AFH.10.4.12.w.4",
+        "text": "Throttle is increased"
+      },
+      {
+        "id": "AFH.10.4.12.w.5",
+        "text": "Altitude remains constant"
+      },
+      {
+        "id": "AFH.10.4.12.w.6",
+        "text": "Roll rate decreases"
+      },
+      {
+        "id": "AFH.10.4.12.w.7",
+        "text": "Rudder input is minimized"
+      },
+      {
+        "id": "AFH.10.4.12.w.8",
+        "text": "Pitch attitude stabilizes"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.10.4.13",
+    "question": "How is the lazy eight maneuver initiated?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.4.13.c.1",
+        "text": "From level flight"
+      },
+      {
+        "id": "AFH.10.4.13.c.2",
+        "text": "With a gradual climbing turn"
+      },
+      {
+        "id": "AFH.10.4.13.c.3",
+        "text": "Toward a 45° reference point"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.4.13.w.1",
+        "text": "From a steep descent"
+      },
+      {
+        "id": "AFH.10.4.13.w.2",
+        "text": "With a rapid roll"
+      },
+      {
+        "id": "AFH.10.4.13.w.3",
+        "text": "Toward a 90° reference point"
+      },
+      {
+        "id": "AFH.10.4.13.w.4",
+        "text": "From a banked turn"
+      },
+      {
+        "id": "AFH.10.4.13.w.5",
+        "text": "With maximum throttle"
+      },
+      {
+        "id": "AFH.10.4.13.w.6",
+        "text": "Toward a 180° reference point"
+      },
+      {
+        "id": "AFH.10.4.13.w.7",
+        "text": "From a stabilized climb"
+      },
+      {
+        "id": "AFH.10.4.13.w.8",
+        "text": "With a sharp pitch down"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.10.4.14",
+    "question": "What is the visual outcome of completing a lazy eight maneuver?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.4.14.c.1",
+        "text": "A symmetrical eight traced on its side"
+      },
+      {
+        "id": "AFH.10.4.14.c.2",
+        "text": "Segments above and below the horizon"
+      },
+      {
+        "id": "AFH.10.4.14.c.3",
+        "text": "Two 180° turns completed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.4.14.w.1",
+        "text": "A straight line drawn"
+      },
+      {
+        "id": "AFH.10.4.14.w.2",
+        "text": "A perfect circle formed"
+      },
+      {
+        "id": "AFH.10.4.14.w.3",
+        "text": "Rapid altitude changes observed"
+      },
+      {
+        "id": "AFH.10.4.14.w.4",
+        "text": "Constant altitude maintained"
+      },
+      {
+        "id": "AFH.10.4.14.w.5",
+        "text": "Speed increased significantly"
+      },
+      {
+        "id": "AFH.10.4.14.w.6",
+        "text": "No visual reference used"
+      },
+      {
+        "id": "AFH.10.4.14.w.7",
+        "text": "A zigzag pattern created"
+      },
+      {
+        "id": "AFH.10.4.14.w.8",
+        "text": "Only left turns executed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 10: Performance Maneuvers Introduction",
+    "subjects": [
+      "Flight Maneuvers"
+    ]
+  },
+  {
+    "questionid": "AFH.10.5.1",
+    "question": "According to the Chapter Summary, what are the primary purposes and benefits of performance maneuvers in developing a pilot's skills?",
+    "correct_answers": [
+      {
+        "id": "AFH.10.5.1.c.1",
+        "text": "To develop a pilot’s skills in coordinating the flight control’s use and effect."
+      },
+      {
+        "id": "AFH.10.5.1.c.2",
+        "text": "To enhance the pilot’s ability to divide attention across the various demands of flight."
+      },
+      {
+        "id": "AFH.10.5.1.c.3",
+        "text": "To further develop a pilot’s application and correlation of the fundamentals of flight."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.10.5.1.w.1",
+        "text": "To reduce the overall fuel consumption during flight operations."
+      },
+      {
+        "id": "AFH.10.5.1.w.2",
+        "text": "To solely prepare pilots for advanced aerobatic competitions."
+      },
+      {
+        "id": "AFH.10.5.1.w.3",
+        "text": "To minimize the required pre-flight inspection time for an aircraft."
+      },
+      {
+        "id": "AFH.10.5.1.w.4",
+        "text": "To increase the maximum cruising speed of various aircraft types."
+      },
+      {
+        "id": "AFH.10.5.1.w.5",
+        "text": "To simplify the process of obtaining an instrument rating."
+      },
+      {
+        "id": "AFH.10.5.1.w.6",
+        "text": "To decrease the frequency of required aircraft maintenance checks."
+      },
+      {
+        "id": "AFH.10.5.1.w.7",
+        "text": "To exclusively practice straight-and-level flight techniques."
+      },
+      {
+        "id": "AFH.10.5.1.w.8",
+        "text": "To certify new aircraft designs for commercial use."
+      }
+    ],
+    "source": "afh.10.5",
+    "subjects": [
+      "Performance Maneuvers",
+      "Pilot Skills",
+      "Flight Controls",
+      "Attention Division",
+      "Fundamentals of Flight"
+    ]
+  }
+]

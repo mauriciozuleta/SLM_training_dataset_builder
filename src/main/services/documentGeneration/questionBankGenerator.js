@@ -3,6 +3,8 @@ function createQuestionBankGenerator({ api, common }) {
   const REQUIRED_WRONG_ANSWERS = 8;
   const MAX_SECTION_CONTENT_CHARS = 3200;
   const MAX_GUIDANCE_CHARS = 900;
+  const DEFAULT_QUESTIONS_PER_PASS = 12;
+  const MIN_QUESTIONS_PER_PASS = 4;
 
   const cleanText = (value) => `${value || ''}`.replace(/\s+/g, ' ').trim();
 
@@ -167,52 +169,82 @@ function createQuestionBankGenerator({ api, common }) {
     preferredProvider = null,
     requestOptions = {},
   }) => {
+    const maxQuestionsPerPass = Math.max(
+      MIN_QUESTIONS_PER_PASS,
+      Number(requestOptions?.maxQuestionsPerPass || DEFAULT_QUESTIONS_PER_PASS)
+    );
+    const targetCount = Math.max(1, Number(questionCount || 1) || 1);
     const sectionTitle = cleanText(section?.title) || `Section ${sectionOrdinal}`;
     const guidance = cleanText(requestOptions?.generationGuidance).slice(0, MAX_GUIDANCE_CHARS);
-
-    const prompt = [
-      'You are an aviation exam item generator.',
-      'Generate questions for exactly one section.',
-      'Return strict JSON only with shape:',
-      '{"questions":[{"question":string,"correct_answers":[string,string,string],"wrong_answers":[string,string,string,string,string,string,string,string],"source":string,"subjects":[string]}]}',
-      `Generate exactly ${questionCount} questions.`,
-      `Each question MUST have exactly ${REQUIRED_CORRECT_ANSWERS} correct answers and ${REQUIRED_WRONG_ANSWERS} wrong answers.`,
-      'All answers must be concise, factual, and non-duplicated.',
-      'Use only the provided section content; do not invent outside facts.',
-      guidance ? `Regeneration guidance from prior audit findings: ${guidance}` : '',
-    ].join(' ');
-
-    const payload = {
-      bookId,
-      chapter: chapterNumber,
-      chapterTitle: cleanText(documentJson?.title),
-      sectionId: cleanText(section?.id),
-      sectionOrdinal,
-      sectionTitle,
-      sectionWeightPercentage: Number(sectionWeightPercentage || 0),
-      questionCount,
-      sectionWordCount: Number(section?.wordCount) || 0,
-      sectionContent: truncateForPrompt(section?.content, MAX_SECTION_CONTENT_CHARS),
-      requiredShape: {
-        question: 'string',
-        correct_answers: [REQUIRED_CORRECT_ANSWERS],
-        wrong_answers: [REQUIRED_WRONG_ANSWERS],
-      },
+    const sectionWordCount = Number(section?.wordCount) || 0;
+    const passCount = Math.max(1, Math.ceil(targetCount / maxQuestionsPerPass));
+    const generated = [];
+    const aggregateUsage = {
+      prompt_tokens: 0,
+      completion_tokens: 0,
     };
+    let modelUsed = '';
+    let modelVersion = '';
 
-    const result = preferredProvider
-      ? await api.callApiJson(preferredProvider, prompt, payload, null, requestOptions)
-      : await api.callPreferredApiJson(prompt, payload, null, requestOptions);
+    for (let passIndex = 0; passIndex < passCount; passIndex += 1) {
+      const remaining = targetCount - generated.length;
+      if (remaining <= 0) {
+        break;
+      }
+      const passTarget = Math.min(maxQuestionsPerPass, remaining);
+      const prompt = [
+        'You are an aviation exam item generator.',
+        'Generate questions for exactly one section.',
+        'Return strict JSON only with shape:',
+        '{"questions":[{"question":string,"correct_answers":[string,string,string],"wrong_answers":[string,string,string,string,string,string,string,string],"source":string,"subjects":[string]}]}',
+        `Generate exactly ${passTarget} questions.`,
+        `Each question MUST have exactly ${REQUIRED_CORRECT_ANSWERS} correct answers and ${REQUIRED_WRONG_ANSWERS} wrong answers.`,
+        `This is pass ${passIndex + 1} of ${passCount} for this section; avoid repeating earlier prompts and distractors.`,
+        'All answers must be concise, factual, and non-duplicated.',
+        'Use only the provided section content; do not invent outside facts.',
+        guidance ? `Regeneration guidance from prior audit findings: ${guidance}` : '',
+      ].join(' ');
 
-    const generated = Array.isArray(result?.json?.questions) ? result.json.questions : [];
+      const payload = {
+        bookId,
+        chapter: chapterNumber,
+        chapterTitle: cleanText(documentJson?.title),
+        sectionId: cleanText(section?.id),
+        sectionOrdinal,
+        sectionTitle,
+        sectionWeightPercentage: Number(sectionWeightPercentage || 0),
+        questionCount: passTarget,
+        sectionWordCount,
+        sectionContent: truncateForPrompt(section?.content, MAX_SECTION_CONTENT_CHARS),
+        requiredShape: {
+          question: 'string',
+          correct_answers: [REQUIRED_CORRECT_ANSWERS],
+          wrong_answers: [REQUIRED_WRONG_ANSWERS],
+        },
+      };
+
+      const result = preferredProvider
+        ? await api.callApiJson(preferredProvider, prompt, payload, null, requestOptions)
+        : await api.callPreferredApiJson(prompt, payload, null, requestOptions);
+
+      if (!modelUsed) {
+        modelUsed = cleanText(result?.modelUsed);
+      }
+      if (!modelVersion) {
+        modelVersion = cleanText(result?.modelVersion);
+      }
+
+      aggregateUsage.prompt_tokens += Number(result?.usage?.prompt_tokens || 0);
+      aggregateUsage.completion_tokens += Number(result?.usage?.completion_tokens || 0);
+      const passQuestions = Array.isArray(result?.json?.questions) ? result.json.questions : [];
+      generated.push(...passQuestions.slice(0, passTarget));
+    }
+
     return {
-      questions: generated,
-      modelUsed: cleanText(result?.modelUsed),
-      modelVersion: cleanText(result?.modelVersion),
-      usage: {
-        prompt_tokens: Number(result?.usage?.prompt_tokens || 0),
-        completion_tokens: Number(result?.usage?.completion_tokens || 0),
-      },
+      questions: generated.slice(0, targetCount),
+      modelUsed,
+      modelVersion,
+      usage: aggregateUsage,
     };
   };
 
@@ -267,6 +299,22 @@ function createQuestionBankGenerator({ api, common }) {
     return providers;
   };
 
+  const getSectionQuestionPassCap = ({ plannedQuestions = 1, sectionWordCount = 0 }) => {
+    const planned = Math.max(1, Number(plannedQuestions || 0) || 1);
+    const words = Math.max(0, Number(sectionWordCount || 0) || 0);
+
+    if (planned >= 96 || words >= 1800) {
+      return 8;
+    }
+    if (planned >= 60 || words >= 1200) {
+      return 10;
+    }
+    if (planned >= 30 || words >= 700) {
+      return 12;
+    }
+    return 16;
+  };
+
   async function buildQuestionBank(documentJson, options = {}) {
     const sections = Array.isArray(documentJson?.sections) ? documentJson.sections : [];
     const idContext = common.parseIdContextFromPrefix(documentJson?.prefix || '', documentJson);
@@ -282,18 +330,29 @@ function createQuestionBankGenerator({ api, common }) {
           })
           .filter(Boolean)
       );
+      const requiredPassCapBySectionId = new Map(
+        repairSectionPlan
+          .map((entry) => {
+            const sectionId = cleanText(entry?.sectionId);
+            const passCap = Math.max(4, Number(entry?.passCap || 0) || 0);
+            return sectionId ? [sectionId, passCap] : null;
+          })
+          .filter(Boolean)
+      );
 
       const sectionBlueprints = sectionBlueprintInfo.sectionBlueprints.map((blueprint, index) => {
         const section = sections[index] || {};
         const sectionId = cleanText(section?.id) || cleanText(blueprint?.sectionId);
         const plannedQuestions = requiredQuestionsBySectionId.get(sectionId);
-        if (!plannedQuestions) {
+        const passCap = requiredPassCapBySectionId.get(sectionId) || 0;
+        if (!plannedQuestions && !passCap) {
           return blueprint;
         }
 
         return {
           ...blueprint,
-          requiredQuestions: plannedQuestions,
+          requiredQuestions: plannedQuestions || blueprint?.requiredQuestions,
+          passCap,
         };
       });
 
@@ -332,19 +391,40 @@ function createQuestionBankGenerator({ api, common }) {
     } else if (externalAbortSignal) {
       externalAbortSignal.addEventListener('abort', () => runAbortController.abort(), { once: true });
     }
-    const PRIMARY_TIMEOUT_MS = 30000;
-    const SECONDARY_TIMEOUT_MS = 60000;
-    const SWITCH_WINDOW_MS = 60000;
-    const SECTION_REBUILD_PASSES = 2;
+    const isRepairRun = Array.isArray(options?.repairSectionPlan) && options.repairSectionPlan.length > 0;
+    const repairRetryMode = `${options?.repairRetryMode || ''}`.trim().toLowerCase() === 'deep' ? 'deep' : 'fast';
+    const useFastRepairProfile = isRepairRun && repairRetryMode === 'fast';
+    const MAX_ATTEMPTS_PER_PROVIDER = 2;
+    const PRIMARY_TIMEOUT_MS = useFastRepairProfile ? 25000 : 30000;
+    const SECONDARY_TIMEOUT_MS = useFastRepairProfile ? 30000 : 60000;
+    const SWITCH_WINDOW_MS = useFastRepairProfile ? 45000 : 60000;
+    const SECTION_REBUILD_PASSES = useFastRepairProfile ? 1 : 2;
+    const formatMs = (ms) => {
+      const seconds = Math.max(1, Math.round(Number(ms || 0) / 1000));
+      return `${seconds}s`;
+    };
     const getPrimaryTimeoutMs = (provider) => {
       const normalized = `${provider || ''}`.trim().toLowerCase();
       if (normalized === 'anthropic') {
-        return 60000;
+        return useFastRepairProfile ? 30000 : 60000;
       }
       if (normalized === 'gemini') {
-        return 45000;
+        return useFastRepairProfile ? 30000 : 45000;
       }
       return PRIMARY_TIMEOUT_MS;
+    };
+    const getRepairTimeoutBoostMs = (plannedQuestions) => {
+      if (!isRepairRun) {
+        return 0;
+      }
+      const count = Math.max(1, Number(plannedQuestions || 0) || 1);
+      if (count >= 20) {
+        return 12000;
+      }
+      if (count >= 10) {
+        return 6000;
+      }
+      return 0;
     };
 
     const isAborted = () => Boolean(runAbortSignal?.aborted || externalAbortSignal?.aborted);
@@ -424,12 +504,21 @@ function createQuestionBankGenerator({ api, common }) {
             ? sectionBlueprintInfo.sectionBlueprints[sectionIndex]
             : null;
           const isFailedSection = Number(failedSection?.sectionIndex) === sectionIndex;
+          const plannedQuestions = Math.max(1, Number(blueprint?.requiredQuestions || 1));
+          const sectionWordCount = Number(section?.wordCount) || 0;
+          const passCap = getSectionQuestionPassCap({
+            plannedQuestions,
+            sectionWordCount,
+          });
+          const plannedPasses = Math.max(1, Math.ceil(plannedQuestions / passCap));
 
           return {
             sectionOrdinal,
             sectionId: cleanText(section?.id) || `section.${sectionOrdinal}`,
             sectionTitle,
-            plannedQuestions: Math.max(1, Number(blueprint?.requiredQuestions || 1)),
+            plannedQuestions,
+            passCap,
+            plannedPasses,
             status: isFailedSection ? 'failed' : 'pending',
             attemptedProviders: isFailedSection ? (failedSection?.attemptedProviders || []) : [],
             error: isFailedSection ? `${failedSection?.error || failureReason || 'Unknown API error.'}` : '',
@@ -494,6 +583,13 @@ function createQuestionBankGenerator({ api, common }) {
         : null;
 
       const plannedCount = Math.max(1, Number(blueprint?.requiredQuestions || 1));
+      const sectionWordCount = Number(section?.wordCount) || 0;
+      const computedPassCap = getSectionQuestionPassCap({
+        plannedQuestions: plannedCount,
+        sectionWordCount,
+      });
+      const sectionPassCap = Math.max(4, Number(blueprint?.passCap || 0) || computedPassCap);
+      const plannedPasses = Math.max(1, Math.ceil(plannedCount / sectionPassCap));
       const sectionWeightPercentage = Number(
         blueprint?.weightPercentage ?? section?.sectionWeight ?? 0
       ) || 0;
@@ -502,6 +598,7 @@ function createQuestionBankGenerator({ api, common }) {
       let apiResult = null;
       let lastError = null;
       const attemptedProviders = [];
+      const providerAttemptCounts = {};
 
       const now = Date.now();
       if (canUseSecondary && routingState.primaryRecoveryPending && now >= routingState.switchedToSecondaryUntil) {
@@ -536,8 +633,15 @@ function createQuestionBankGenerator({ api, common }) {
 
         for (let attemptIndex = 0; attemptIndex < providerAttempts.length; attemptIndex += 1) {
           const provider = providerAttempts[attemptIndex];
+          const attemptsForProvider = Number(providerAttemptCounts[provider] || 0);
+          if (attemptsForProvider >= MAX_ATTEMPTS_PER_PROVIDER) {
+            continue;
+          }
+          providerAttemptCounts[provider] = attemptsForProvider + 1;
           const isFirstAttempt = pass === 0 && attemptIndex === 0;
-          const timeoutMs = isFirstAttempt ? getPrimaryTimeoutMs(provider) : SECONDARY_TIMEOUT_MS;
+          const timeoutMs = isFirstAttempt
+            ? getPrimaryTimeoutMs(provider) + getRepairTimeoutBoostMs(plannedCount)
+            : SECONDARY_TIMEOUT_MS;
           assertNotAborted();
           try {
             apiResult = await buildSectionQuestionsFromApi({
@@ -553,6 +657,7 @@ function createQuestionBankGenerator({ api, common }) {
                 signal: runAbortSignal,
                 timeoutMs,
                 generationGuidance,
+                maxQuestionsPerPass: sectionPassCap,
               },
             });
             resolvedProvider = provider;
@@ -571,7 +676,10 @@ function createQuestionBankGenerator({ api, common }) {
             if (provider === preferredProvider && canUseSecondary) {
               routingState.switchedToSecondaryUntil = Date.now() + SWITCH_WINDOW_MS;
               routingState.primaryRecoveryPending = true;
-              log('Primary API was unresponsive for 30s. Switching question generation to backup API for 1 minute.', 'warning');
+              log(
+                `Primary API was unresponsive for ${formatMs(timeoutMs)}. Switching question generation to backup API for ${formatMs(SWITCH_WINDOW_MS)}.`,
+                'warning'
+              );
             }
           }
         }
@@ -610,6 +718,8 @@ function createQuestionBankGenerator({ api, common }) {
           sectionId: sectionRef,
           sectionTitle,
           plannedQuestions: plannedCount,
+          passCap: sectionPassCap,
+          plannedPasses,
           attemptedProviders,
           error: errorMsg,
         };
@@ -649,6 +759,8 @@ function createQuestionBankGenerator({ api, common }) {
           sectionOrdinal,
           sectionWeightPercentage: Number(sectionWeightPercentage.toFixed(2)),
           questionsGenerated: normalizedQuestions.length,
+          passCap: sectionPassCap,
+          plannedPasses,
         },
         modelUsed: apiResult?.modelUsed || '',
         modelVersion: apiResult?.modelVersion || '',
@@ -657,6 +769,8 @@ function createQuestionBankGenerator({ api, common }) {
           completion_tokens: Number(apiResult?.usage?.completion_tokens || 0),
         },
         resolvedProvider,
+        passCap: sectionPassCap,
+        plannedPasses,
       };
     };
 

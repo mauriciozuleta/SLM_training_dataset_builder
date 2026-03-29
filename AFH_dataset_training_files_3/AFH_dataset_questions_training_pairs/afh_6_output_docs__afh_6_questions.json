@@ -1,0 +1,2937 @@
+[
+  {
+    "questionBank": {
+      "chapterId": "afh.6",
+      "bookId": "AFH",
+      "chapterNumber": 6,
+      "chapterTitle": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6: Takeoffs and Departure Climbs Introduction",
+      "totalRequiredQuestions": 50,
+      "metadata": {
+        "generatedAtUtc": "2026-03-27T17:58:07.743Z",
+        "chapterId": "afh.6",
+        "chapterNumber": 6,
+        "totalSections": 11,
+        "totalRequiredQuestions": 50,
+        "providers": [
+          "openai"
+        ],
+        "models": [
+          "gpt-4o"
+        ],
+        "promptTokens": 15922,
+        "completionTokens": 12028,
+        "totalTokens": 27950,
+        "sectionQuestionSummary": [
+          {
+            "sectionId": "afh.6.1",
+            "sectionTitle": "Terms and Definitions",
+            "sectionOrdinal": 1,
+            "sectionWeightPercentage": 2.15,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.6.2",
+            "sectionTitle": "Prior to Takeoff",
+            "sectionOrdinal": 2,
+            "sectionWeightPercentage": 4.9,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.6.3",
+            "sectionTitle": "Normal Takeoff",
+            "sectionOrdinal": 3,
+            "sectionWeightPercentage": 31.94,
+            "questionsGenerated": 17
+          },
+          {
+            "sectionId": "afh.6.4",
+            "sectionTitle": "Common Errors",
+            "sectionOrdinal": 4,
+            "sectionWeightPercentage": 2.52,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.6.5",
+            "sectionTitle": "Crosswind Takeoff",
+            "sectionOrdinal": 5,
+            "sectionWeightPercentage": 17.32,
+            "questionsGenerated": 9
+          },
+          {
+            "sectionId": "afh.6.6",
+            "sectionTitle": "Ground Effect on Takeoff",
+            "sectionOrdinal": 6,
+            "sectionWeightPercentage": 9.71,
+            "questionsGenerated": 5
+          },
+          {
+            "sectionId": "afh.6.7",
+            "sectionTitle": "Short-Field Takeoff and Maximum Performance Climb",
+            "sectionOrdinal": 7,
+            "sectionWeightPercentage": 12.05,
+            "questionsGenerated": 6
+          },
+          {
+            "sectionId": "afh.6.8",
+            "sectionTitle": "Soft/Rough-Field Takeoff and Climb",
+            "sectionOrdinal": 8,
+            "sectionWeightPercentage": 10.74,
+            "questionsGenerated": 5
+          },
+          {
+            "sectionId": "afh.6.9",
+            "sectionTitle": "Rejected Takeoff/Engine Failure",
+            "sectionOrdinal": 9,
+            "sectionWeightPercentage": 4.89,
+            "questionsGenerated": 2
+          },
+          {
+            "sectionId": "afh.6.10",
+            "sectionTitle": "Noise Abatement",
+            "sectionOrdinal": 10,
+            "sectionWeightPercentage": 2.89,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.6.11",
+            "sectionTitle": "Chapter Summary",
+            "sectionOrdinal": 11,
+            "sectionWeightPercentage": 0.89,
+            "questionsGenerated": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "questionid": "AFH.6.1.1",
+    "question": "What are the three steps of the takeoff and climb maneuver as defined in the Airplane Flying Handbook?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.1.1.c.1",
+        "text": "Takeoff roll"
+      },
+      {
+        "id": "AFH.6.1.1.c.2",
+        "text": "Lift-off"
+      },
+      {
+        "id": "AFH.6.1.1.c.3",
+        "text": "Initial climb"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.1.1.w.1",
+        "text": "Cruise climb"
+      },
+      {
+        "id": "AFH.6.1.1.w.2",
+        "text": "Descent"
+      },
+      {
+        "id": "AFH.6.1.1.w.3",
+        "text": "Final approach"
+      },
+      {
+        "id": "AFH.6.1.1.w.4",
+        "text": "Touchdown"
+      },
+      {
+        "id": "AFH.6.1.1.w.5",
+        "text": "Taxiing"
+      },
+      {
+        "id": "AFH.6.1.1.w.6",
+        "text": "Landing roll"
+      },
+      {
+        "id": "AFH.6.1.1.w.7",
+        "text": "Flare"
+      },
+      {
+        "id": "AFH.6.1.1.w.8",
+        "text": "Crosswind correction"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 1",
+    "subjects": [
+      "Takeoff procedures",
+      "Climb maneuvers",
+      "Flight phases"
+    ]
+  },
+  {
+    "questionid": "AFH.6.2.1",
+    "question": "What should a pilot check before going to the airplane for takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.2.1.c.1",
+        "text": "POH/AFM performance charts"
+      },
+      {
+        "id": "AFH.6.2.1.c.2",
+        "text": "Engine instruments for proper indications"
+      },
+      {
+        "id": "AFH.6.2.1.c.3",
+        "text": "Controls for full, free, and correct movement"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.2.1.w.1",
+        "text": "Passenger seatbelts"
+      },
+      {
+        "id": "AFH.6.2.1.w.2",
+        "text": "Fuel tank levels"
+      },
+      {
+        "id": "AFH.6.2.1.w.3",
+        "text": "Weather forecast"
+      },
+      {
+        "id": "AFH.6.2.1.w.4",
+        "text": "Runway length"
+      },
+      {
+        "id": "AFH.6.2.1.w.5",
+        "text": "Aircraft registration"
+      },
+      {
+        "id": "AFH.6.2.1.w.6",
+        "text": "Pilot's license"
+      },
+      {
+        "id": "AFH.6.2.1.w.7",
+        "text": "Flight plan"
+      },
+      {
+        "id": "AFH.6.2.1.w.8",
+        "text": "Emergency exits"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6: Takeoffs and Departure Climbs Introduction",
+    "subjects": [
+      "Pre-flight preparation"
+    ]
+  },
+  {
+    "questionid": "AFH.6.2.2",
+    "question": "What actions should a pilot take at a nontowered airport before takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.2.2.c.1",
+        "text": "Announce intentions on CTAF"
+      },
+      {
+        "id": "AFH.6.2.2.c.2",
+        "text": "Ensure approach and takeoff paths are clear"
+      },
+      {
+        "id": "AFH.6.2.2.c.3",
+        "text": "Consider options for engine failure after takeoff"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.2.2.w.1",
+        "text": "Contact tower operator for clearance"
+      },
+      {
+        "id": "AFH.6.2.2.w.2",
+        "text": "Check passenger manifest"
+      },
+      {
+        "id": "AFH.6.2.2.w.3",
+        "text": "Adjust seat position"
+      },
+      {
+        "id": "AFH.6.2.2.w.4",
+        "text": "Verify autopilot settings"
+      },
+      {
+        "id": "AFH.6.2.2.w.5",
+        "text": "Activate transponder"
+      },
+      {
+        "id": "AFH.6.2.2.w.6",
+        "text": "Review flight log"
+      },
+      {
+        "id": "AFH.6.2.2.w.7",
+        "text": "Inspect landing gear"
+      },
+      {
+        "id": "AFH.6.2.2.w.8",
+        "text": "Check cabin pressure"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6: Takeoffs and Departure Climbs Introduction",
+    "subjects": [
+      "Airport operations"
+    ]
+  },
+  {
+    "questionid": "AFH.6.3.1",
+    "question": "What are the benefits of taking off into the wind?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.3.1.c.1",
+        "text": "Provides additional airspeed"
+      },
+      {
+        "id": "AFH.6.3.1.c.2",
+        "text": "Decreases ground speed needed for flying speed"
+      },
+      {
+        "id": "AFH.6.3.1.c.3",
+        "text": "Reduces wear on landing gear"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.3.1.w.1",
+        "text": "Increases fuel consumption"
+      },
+      {
+        "id": "AFH.6.3.1.w.2",
+        "text": "Requires longer runway"
+      },
+      {
+        "id": "AFH.6.3.1.w.3",
+        "text": "Increases engine power"
+      },
+      {
+        "id": "AFH.6.3.1.w.4",
+        "text": "Causes more turbulence"
+      },
+      {
+        "id": "AFH.6.3.1.w.5",
+        "text": "Increases takeoff distance"
+      },
+      {
+        "id": "AFH.6.3.1.w.6",
+        "text": "Reduces climb rate"
+      },
+      {
+        "id": "AFH.6.3.1.w.7",
+        "text": "Increases stress on wings"
+      },
+      {
+        "id": "AFH.6.3.1.w.8",
+        "text": "Requires more rudder input"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6: Takeoffs and Departure Climbs Introduction",
+    "subjects": [
+      "Aerodynamics",
+      "Takeoff Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.6.3.2",
+    "question": "What should a pilot check before attempting a takeoff with a tailwind?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.3.2.c.1",
+        "text": "POH/AFM approval"
+      },
+      {
+        "id": "AFH.6.3.2.c.2",
+        "text": "Sufficient runway length"
+      },
+      {
+        "id": "AFH.6.3.2.c.3",
+        "text": "Aircraft performance capability"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.3.2.w.1",
+        "text": "Weather forecast"
+      },
+      {
+        "id": "AFH.6.3.2.w.2",
+        "text": "Passenger weight"
+      },
+      {
+        "id": "AFH.6.3.2.w.3",
+        "text": "Fuel levels"
+      },
+      {
+        "id": "AFH.6.3.2.w.4",
+        "text": "Engine oil temperature"
+      },
+      {
+        "id": "AFH.6.3.2.w.5",
+        "text": "Landing gear condition"
+      },
+      {
+        "id": "AFH.6.3.2.w.6",
+        "text": "Cabin pressure"
+      },
+      {
+        "id": "AFH.6.3.2.w.7",
+        "text": "Navigation lights"
+      },
+      {
+        "id": "AFH.6.3.2.w.8",
+        "text": "Radio frequency"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6: Takeoffs and Departure Climbs Introduction",
+    "subjects": [
+      "Pre-Flight Checks",
+      "Takeoff Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.6.3.3",
+    "question": "Why is it important to align the airplane with the runway centerline during takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.3.3.c.1",
+        "text": "Ensures straight takeoff path"
+      },
+      {
+        "id": "AFH.6.3.3.c.2",
+        "text": "Reduces risk of veering off runway"
+      },
+      {
+        "id": "AFH.6.3.3.c.3",
+        "text": "Improves directional control"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.3.3.w.1",
+        "text": "Increases takeoff speed"
+      },
+      {
+        "id": "AFH.6.3.3.w.2",
+        "text": "Reduces fuel consumption"
+      },
+      {
+        "id": "AFH.6.3.3.w.3",
+        "text": "Enhances passenger comfort"
+      },
+      {
+        "id": "AFH.6.3.3.w.4",
+        "text": "Improves radio communication"
+      },
+      {
+        "id": "AFH.6.3.3.w.5",
+        "text": "Increases engine efficiency"
+      },
+      {
+        "id": "AFH.6.3.3.w.6",
+        "text": "Reduces noise pollution"
+      },
+      {
+        "id": "AFH.6.3.3.w.7",
+        "text": "Improves visibility"
+      },
+      {
+        "id": "AFH.6.3.3.w.8",
+        "text": "Enhances autopilot function"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6: Takeoffs and Departure Climbs Introduction",
+    "subjects": [
+      "Takeoff Procedures",
+      "Flight Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.6.3.4",
+    "question": "What is the effect of applying unnecessary elevator pressure during takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.3.4.c.1",
+        "text": "Aggravates the takeoff"
+      },
+      {
+        "id": "AFH.6.3.4.c.2",
+        "text": "Prevents recognizing needed pressure"
+      },
+      {
+        "id": "AFH.6.3.4.c.3",
+        "text": "Disrupts takeoff attitude"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.3.4.w.1",
+        "text": "Increases lift"
+      },
+      {
+        "id": "AFH.6.3.4.w.2",
+        "text": "Reduces drag"
+      },
+      {
+        "id": "AFH.6.3.4.w.3",
+        "text": "Improves climb rate"
+      },
+      {
+        "id": "AFH.6.3.4.w.4",
+        "text": "Enhances stability"
+      },
+      {
+        "id": "AFH.6.3.4.w.5",
+        "text": "Increases speed"
+      },
+      {
+        "id": "AFH.6.3.4.w.6",
+        "text": "Reduces fuel consumption"
+      },
+      {
+        "id": "AFH.6.3.4.w.7",
+        "text": "Improves passenger comfort"
+      },
+      {
+        "id": "AFH.6.3.4.w.8",
+        "text": "Enhances visibility"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6: Takeoffs and Departure Climbs Introduction",
+    "subjects": [
+      "Flight Control",
+      "Takeoff Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.6.3.5",
+    "question": "How should a pilot handle the throttle during takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.3.5.c.1",
+        "text": "Advance smoothly"
+      },
+      {
+        "id": "AFH.6.3.5.c.2",
+        "text": "Advance continuously"
+      },
+      {
+        "id": "AFH.6.3.5.c.3",
+        "text": "Avoid abrupt application"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.3.5.w.1",
+        "text": "Advance rapidly"
+      },
+      {
+        "id": "AFH.6.3.5.w.2",
+        "text": "Use full throttle immediately"
+      },
+      {
+        "id": "AFH.6.3.5.w.3",
+        "text": "Throttle back during roll"
+      },
+      {
+        "id": "AFH.6.3.5.w.4",
+        "text": "Use partial throttle"
+      },
+      {
+        "id": "AFH.6.3.5.w.5",
+        "text": "Advance in stages"
+      },
+      {
+        "id": "AFH.6.3.5.w.6",
+        "text": "Reverse throttle"
+      },
+      {
+        "id": "AFH.6.3.5.w.7",
+        "text": "Use idle throttle"
+      },
+      {
+        "id": "AFH.6.3.5.w.8",
+        "text": "Throttle up after lift-off"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6: Takeoffs and Departure Climbs Introduction",
+    "subjects": [
+      "Engine Management",
+      "Takeoff Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.6.3.6",
+    "question": "What should a pilot do if engine instruments indicate a malfunction during takeoff roll?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.3.6.c.1",
+        "text": "Abort takeoff"
+      },
+      {
+        "id": "AFH.6.3.6.c.2",
+        "text": "Reduce throttle"
+      },
+      {
+        "id": "AFH.6.3.6.c.3",
+        "text": "Apply brakes"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.3.6.w.1",
+        "text": "Continue takeoff"
+      },
+      {
+        "id": "AFH.6.3.6.w.2",
+        "text": "Increase throttle"
+      },
+      {
+        "id": "AFH.6.3.6.w.3",
+        "text": "Ignore indications"
+      },
+      {
+        "id": "AFH.6.3.6.w.4",
+        "text": "Adjust ailerons"
+      },
+      {
+        "id": "AFH.6.3.6.w.5",
+        "text": "Use autopilot"
+      },
+      {
+        "id": "AFH.6.3.6.w.6",
+        "text": "Contact ATC"
+      },
+      {
+        "id": "AFH.6.3.6.w.7",
+        "text": "Check fuel levels"
+      },
+      {
+        "id": "AFH.6.3.6.w.8",
+        "text": "Adjust rudder"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6: Takeoffs and Departure Climbs Introduction",
+    "subjects": [
+      "Emergency Procedures",
+      "Takeoff Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.6.3.7",
+    "question": "What is the role of rudder pedals during takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.3.7.c.1",
+        "text": "Steer nose-wheel"
+      },
+      {
+        "id": "AFH.6.3.7.c.2",
+        "text": "Correct for engine torque"
+      },
+      {
+        "id": "AFH.6.3.7.c.3",
+        "text": "Maintain runway alignment"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.3.7.w.1",
+        "text": "Increase lift"
+      },
+      {
+        "id": "AFH.6.3.7.w.2",
+        "text": "Control altitude"
+      },
+      {
+        "id": "AFH.6.3.7.w.3",
+        "text": "Adjust speed"
+      },
+      {
+        "id": "AFH.6.3.7.w.4",
+        "text": "Enhance visibility"
+      },
+      {
+        "id": "AFH.6.3.7.w.5",
+        "text": "Reduce drag"
+      },
+      {
+        "id": "AFH.6.3.7.w.6",
+        "text": "Control ailerons"
+      },
+      {
+        "id": "AFH.6.3.7.w.7",
+        "text": "Adjust elevator"
+      },
+      {
+        "id": "AFH.6.3.7.w.8",
+        "text": "Control flaps"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6: Takeoffs and Departure Climbs Introduction",
+    "subjects": [
+      "Flight Control",
+      "Takeoff Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.6.3.8",
+    "question": "Why should brakes not be used for steering during takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.3.8.c.1",
+        "text": "Slows acceleration"
+      },
+      {
+        "id": "AFH.6.3.8.c.2",
+        "text": "Lengthens takeoff distance"
+      },
+      {
+        "id": "AFH.6.3.8.c.3",
+        "text": "Causes severe swerving"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.3.8.w.1",
+        "text": "Increases lift"
+      },
+      {
+        "id": "AFH.6.3.8.w.2",
+        "text": "Reduces drag"
+      },
+      {
+        "id": "AFH.6.3.8.w.3",
+        "text": "Improves climb rate"
+      },
+      {
+        "id": "AFH.6.3.8.w.4",
+        "text": "Enhances stability"
+      },
+      {
+        "id": "AFH.6.3.8.w.5",
+        "text": "Increases speed"
+      },
+      {
+        "id": "AFH.6.3.8.w.6",
+        "text": "Reduces fuel consumption"
+      },
+      {
+        "id": "AFH.6.3.8.w.7",
+        "text": "Improves passenger comfort"
+      },
+      {
+        "id": "AFH.6.3.8.w.8",
+        "text": "Enhances visibility"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6: Takeoffs and Departure Climbs Introduction",
+    "subjects": [
+      "Flight Control",
+      "Takeoff Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.6.3.9",
+    "question": "What effect does a headwind have on takeoff ground roll distance?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.3.9.c.1",
+        "text": "Shortens ground roll"
+      },
+      {
+        "id": "AFH.6.3.9.c.2",
+        "text": "Allows use of shorter runways"
+      },
+      {
+        "id": "AFH.6.3.9.c.3",
+        "text": "Reduces ground speed needed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.3.9.w.1",
+        "text": "Increases ground roll"
+      },
+      {
+        "id": "AFH.6.3.9.w.2",
+        "text": "Requires longer runways"
+      },
+      {
+        "id": "AFH.6.3.9.w.3",
+        "text": "Increases fuel consumption"
+      },
+      {
+        "id": "AFH.6.3.9.w.4",
+        "text": "Increases engine power"
+      },
+      {
+        "id": "AFH.6.3.9.w.5",
+        "text": "Causes more turbulence"
+      },
+      {
+        "id": "AFH.6.3.9.w.6",
+        "text": "Increases takeoff distance"
+      },
+      {
+        "id": "AFH.6.3.9.w.7",
+        "text": "Reduces climb rate"
+      },
+      {
+        "id": "AFH.6.3.9.w.8",
+        "text": "Increases stress on wings"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6: Takeoffs and Departure Climbs Introduction",
+    "subjects": [
+      "Aerodynamics",
+      "Takeoff Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.6.3.10",
+    "question": "What should be checked regarding takeoff surfaces before takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.3.10.c.1",
+        "text": "Firmness"
+      },
+      {
+        "id": "AFH.6.3.10.c.2",
+        "text": "Sufficient length"
+      },
+      {
+        "id": "AFH.6.3.10.c.3",
+        "text": "No obstructions"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.3.10.w.1",
+        "text": "Color"
+      },
+      {
+        "id": "AFH.6.3.10.w.2",
+        "text": "Temperature"
+      },
+      {
+        "id": "AFH.6.3.10.w.3",
+        "text": "Moisture level"
+      },
+      {
+        "id": "AFH.6.3.10.w.4",
+        "text": "Grass height"
+      },
+      {
+        "id": "AFH.6.3.10.w.5",
+        "text": "Surface texture"
+      },
+      {
+        "id": "AFH.6.3.10.w.6",
+        "text": "Surface material"
+      },
+      {
+        "id": "AFH.6.3.10.w.7",
+        "text": "Surface slope"
+      },
+      {
+        "id": "AFH.6.3.10.w.8",
+        "text": "Surface width"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6: Takeoffs and Departure Climbs Introduction",
+    "subjects": [
+      "Pre-Flight Checks",
+      "Takeoff Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.6.3.11",
+    "question": "What happens to flight controls as takeoff roll speed increases?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.3.11.c.1",
+        "text": "Become more effective"
+      },
+      {
+        "id": "AFH.6.3.11.c.2",
+        "text": "Allow maneuvering"
+      },
+      {
+        "id": "AFH.6.3.11.c.3",
+        "text": "Increase control pressure"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.3.11.w.1",
+        "text": "Become less effective"
+      },
+      {
+        "id": "AFH.6.3.11.w.2",
+        "text": "Reduce control pressure"
+      },
+      {
+        "id": "AFH.6.3.11.w.3",
+        "text": "Decrease maneuverability"
+      },
+      {
+        "id": "AFH.6.3.11.w.4",
+        "text": "Increase drag"
+      },
+      {
+        "id": "AFH.6.3.11.w.5",
+        "text": "Reduce lift"
+      },
+      {
+        "id": "AFH.6.3.11.w.6",
+        "text": "Enhance stability"
+      },
+      {
+        "id": "AFH.6.3.11.w.7",
+        "text": "Decrease speed"
+      },
+      {
+        "id": "AFH.6.3.11.w.8",
+        "text": "Increase fuel consumption"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6: Takeoffs and Departure Climbs Introduction",
+    "subjects": [
+      "Flight Control",
+      "Takeoff Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.6.3.12",
+    "question": "What is the effect of engine torque during takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.3.12.c.1",
+        "text": "Pulls nose to the left"
+      },
+      {
+        "id": "AFH.6.3.12.c.2",
+        "text": "Requires rudder correction"
+      },
+      {
+        "id": "AFH.6.3.12.c.3",
+        "text": "Affects initial speeds"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.3.12.w.1",
+        "text": "Increases lift"
+      },
+      {
+        "id": "AFH.6.3.12.w.2",
+        "text": "Reduces drag"
+      },
+      {
+        "id": "AFH.6.3.12.w.3",
+        "text": "Improves climb rate"
+      },
+      {
+        "id": "AFH.6.3.12.w.4",
+        "text": "Enhances stability"
+      },
+      {
+        "id": "AFH.6.3.12.w.5",
+        "text": "Increases speed"
+      },
+      {
+        "id": "AFH.6.3.12.w.6",
+        "text": "Reduces fuel consumption"
+      },
+      {
+        "id": "AFH.6.3.12.w.7",
+        "text": "Improves passenger comfort"
+      },
+      {
+        "id": "AFH.6.3.12.w.8",
+        "text": "Enhances visibility"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6: Takeoffs and Departure Climbs Introduction",
+    "subjects": [
+      "Aerodynamics",
+      "Takeoff Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.6.3.13",
+    "question": "How should a pilot use aileron controls during a crosswind takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.3.13.c.1",
+        "text": "Into the wind"
+      },
+      {
+        "id": "AFH.6.3.13.c.2",
+        "text": "Keep airplane centered"
+      },
+      {
+        "id": "AFH.6.3.13.c.3",
+        "text": "Maintain runway alignment"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.3.13.w.1",
+        "text": "Away from the wind"
+      },
+      {
+        "id": "AFH.6.3.13.w.2",
+        "text": "Neutral position"
+      },
+      {
+        "id": "AFH.6.3.13.w.3",
+        "text": "Full deflection"
+      },
+      {
+        "id": "AFH.6.3.13.w.4",
+        "text": "No aileron input"
+      },
+      {
+        "id": "AFH.6.3.13.w.5",
+        "text": "Use opposite aileron"
+      },
+      {
+        "id": "AFH.6.3.13.w.6",
+        "text": "Use rudder instead"
+      },
+      {
+        "id": "AFH.6.3.13.w.7",
+        "text": "Adjust after lift-off"
+      },
+      {
+        "id": "AFH.6.3.13.w.8",
+        "text": "Use autopilot"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6: Takeoffs and Departure Climbs Introduction",
+    "subjects": [
+      "Flight Control",
+      "Takeoff Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.6.3.14",
+    "question": "What is the purpose of checking engine instruments during takeoff roll?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.3.14.c.1",
+        "text": "Detect malfunctions"
+      },
+      {
+        "id": "AFH.6.3.14.c.2",
+        "text": "Ensure engine performance"
+      },
+      {
+        "id": "AFH.6.3.14.c.3",
+        "text": "Monitor engine health"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.3.14.w.1",
+        "text": "Increase speed"
+      },
+      {
+        "id": "AFH.6.3.14.w.2",
+        "text": "Reduce drag"
+      },
+      {
+        "id": "AFH.6.3.14.w.3",
+        "text": "Improve climb rate"
+      },
+      {
+        "id": "AFH.6.3.14.w.4",
+        "text": "Enhance stability"
+      },
+      {
+        "id": "AFH.6.3.14.w.5",
+        "text": "Increase lift"
+      },
+      {
+        "id": "AFH.6.3.14.w.6",
+        "text": "Reduce fuel consumption"
+      },
+      {
+        "id": "AFH.6.3.14.w.7",
+        "text": "Improve passenger comfort"
+      },
+      {
+        "id": "AFH.6.3.14.w.8",
+        "text": "Enhance visibility"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6: Takeoffs and Departure Climbs Introduction",
+    "subjects": [
+      "Engine Management",
+      "Takeoff Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.6.3.15",
+    "question": "What should a pilot do with their feet during takeoff roll?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.3.15.c.1",
+        "text": "Keep on rudder pedals"
+      },
+      {
+        "id": "AFH.6.3.15.c.2",
+        "text": "Avoid brake pressure"
+      },
+      {
+        "id": "AFH.6.3.15.c.3",
+        "text": "Use rudder for steering"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.3.15.w.1",
+        "text": "Press brakes"
+      },
+      {
+        "id": "AFH.6.3.15.w.2",
+        "text": "Lift feet off pedals"
+      },
+      {
+        "id": "AFH.6.3.15.w.3",
+        "text": "Use autopilot"
+      },
+      {
+        "id": "AFH.6.3.15.w.4",
+        "text": "Adjust ailerons"
+      },
+      {
+        "id": "AFH.6.3.15.w.5",
+        "text": "Use elevator"
+      },
+      {
+        "id": "AFH.6.3.15.w.6",
+        "text": "Apply full throttle"
+      },
+      {
+        "id": "AFH.6.3.15.w.7",
+        "text": "Adjust flaps"
+      },
+      {
+        "id": "AFH.6.3.15.w.8",
+        "text": "Use trim"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6: Takeoffs and Departure Climbs Introduction",
+    "subjects": [
+      "Flight Control",
+      "Takeoff Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.6.3.16",
+    "question": "What is the effect of P-factor during takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.3.16.c.1",
+        "text": "Causes yaw to the left"
+      },
+      {
+        "id": "AFH.6.3.16.c.2",
+        "text": "Requires rudder correction"
+      },
+      {
+        "id": "AFH.6.3.16.c.3",
+        "text": "Affects initial speeds"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.3.16.w.1",
+        "text": "Increases lift"
+      },
+      {
+        "id": "AFH.6.3.16.w.2",
+        "text": "Reduces drag"
+      },
+      {
+        "id": "AFH.6.3.16.w.3",
+        "text": "Improves climb rate"
+      },
+      {
+        "id": "AFH.6.3.16.w.4",
+        "text": "Enhances stability"
+      },
+      {
+        "id": "AFH.6.3.16.w.5",
+        "text": "Increases speed"
+      },
+      {
+        "id": "AFH.6.3.16.w.6",
+        "text": "Reduces fuel consumption"
+      },
+      {
+        "id": "AFH.6.3.16.w.7",
+        "text": "Improves passenger comfort"
+      },
+      {
+        "id": "AFH.6.3.16.w.8",
+        "text": "Enhances visibility"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6: Takeoffs and Departure Climbs Introduction",
+    "subjects": [
+      "Aerodynamics",
+      "Takeoff Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.6.3.17",
+    "question": "What should be avoided when advancing the throttle during takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.3.17.c.1",
+        "text": "Abrupt application"
+      },
+      {
+        "id": "AFH.6.3.17.c.2",
+        "text": "Uneven throttle increase"
+      },
+      {
+        "id": "AFH.6.3.17.c.3",
+        "text": "Sudden power changes"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.3.17.w.1",
+        "text": "Smooth application"
+      },
+      {
+        "id": "AFH.6.3.17.w.2",
+        "text": "Continuous increase"
+      },
+      {
+        "id": "AFH.6.3.17.w.3",
+        "text": "Gradual power changes"
+      },
+      {
+        "id": "AFH.6.3.17.w.4",
+        "text": "Full throttle immediately"
+      },
+      {
+        "id": "AFH.6.3.17.w.5",
+        "text": "Throttle back during roll"
+      },
+      {
+        "id": "AFH.6.3.17.w.6",
+        "text": "Use partial throttle"
+      },
+      {
+        "id": "AFH.6.3.17.w.7",
+        "text": "Advance in stages"
+      },
+      {
+        "id": "AFH.6.3.17.w.8",
+        "text": "Throttle up after lift-off"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6: Takeoffs and Departure Climbs Introduction",
+    "subjects": [
+      "Engine Management",
+      "Takeoff Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.6.4.1",
+    "question": "What are common errors during normal takeoffs and departure climbs?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.4.1.c.1",
+        "text": "Failure to adequately clear the area prior to taxiing into position on the active runway."
+      },
+      {
+        "id": "AFH.6.4.1.c.2",
+        "text": "Abrupt use of the throttle."
+      },
+      {
+        "id": "AFH.6.4.1.c.3",
+        "text": "Failure to check engine instruments for signs of malfunction after applying takeoff power."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.4.1.w.1",
+        "text": "Failure to use flaps during takeoff."
+      },
+      {
+        "id": "AFH.6.4.1.w.2",
+        "text": "Incorrect use of rudder pedals during taxiing."
+      },
+      {
+        "id": "AFH.6.4.1.w.3",
+        "text": "Failure to retract landing gear after takeoff."
+      },
+      {
+        "id": "AFH.6.4.1.w.4",
+        "text": "Incorrect radio communication procedures."
+      },
+      {
+        "id": "AFH.6.4.1.w.5",
+        "text": "Failure to use navigation lights during daytime."
+      },
+      {
+        "id": "AFH.6.4.1.w.6",
+        "text": "Incorrect use of autopilot during climb."
+      },
+      {
+        "id": "AFH.6.4.1.w.7",
+        "text": "Failure to set altimeter before takeoff."
+      },
+      {
+        "id": "AFH.6.4.1.w.8",
+        "text": "Incorrect use of ailerons during takeoff."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 4",
+    "subjects": [
+      "Aviation",
+      "Flight Training",
+      "Pilot Errors"
+    ]
+  },
+  {
+    "questionid": "AFH.6.5.1",
+    "question": "What is the primary purpose of applying aileron pressure into the crosswind during takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.5.1.c.1",
+        "text": "To counteract the lifting force of the crosswind"
+      },
+      {
+        "id": "AFH.6.5.1.c.2",
+        "text": "To prevent the upwind wing from rising"
+      },
+      {
+        "id": "AFH.6.5.1.c.3",
+        "text": "To maintain lateral alignment with the runway"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.5.1.w.1",
+        "text": "To increase takeoff speed"
+      },
+      {
+        "id": "AFH.6.5.1.w.2",
+        "text": "To reduce drag"
+      },
+      {
+        "id": "AFH.6.5.1.w.3",
+        "text": "To enhance engine performance"
+      },
+      {
+        "id": "AFH.6.5.1.w.4",
+        "text": "To improve fuel efficiency"
+      },
+      {
+        "id": "AFH.6.5.1.w.5",
+        "text": "To decrease yaw tendency"
+      },
+      {
+        "id": "AFH.6.5.1.w.6",
+        "text": "To stabilize vertical lift"
+      },
+      {
+        "id": "AFH.6.5.1.w.7",
+        "text": "To enhance passenger comfort"
+      },
+      {
+        "id": "AFH.6.5.1.w.8",
+        "text": "To reduce noise pollution"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 5",
+    "subjects": [
+      "Crosswind Takeoff"
+    ]
+  },
+  {
+    "questionid": "AFH.6.5.2",
+    "question": "Why is it necessary to apply rudder pressure during a crosswind takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.5.2.c.1",
+        "text": "To maintain a straight takeoff path"
+      },
+      {
+        "id": "AFH.6.5.2.c.2",
+        "text": "To counteract weathervaning tendency"
+      },
+      {
+        "id": "AFH.6.5.2.c.3",
+        "text": "To keep the airplane's longitudinal axis parallel to the runway"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.5.2.w.1",
+        "text": "To increase lift"
+      },
+      {
+        "id": "AFH.6.5.2.w.2",
+        "text": "To reduce drag"
+      },
+      {
+        "id": "AFH.6.5.2.w.3",
+        "text": "To enhance engine thrust"
+      },
+      {
+        "id": "AFH.6.5.2.w.4",
+        "text": "To improve fuel efficiency"
+      },
+      {
+        "id": "AFH.6.5.2.w.5",
+        "text": "To stabilize vertical lift"
+      },
+      {
+        "id": "AFH.6.5.2.w.6",
+        "text": "To enhance passenger comfort"
+      },
+      {
+        "id": "AFH.6.5.2.w.7",
+        "text": "To reduce noise pollution"
+      },
+      {
+        "id": "AFH.6.5.2.w.8",
+        "text": "To increase takeoff speed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 5",
+    "subjects": [
+      "Crosswind Takeoff"
+    ]
+  },
+  {
+    "questionid": "AFH.6.5.3",
+    "question": "What should a pilot check before initiating a crosswind takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.5.3.c.1",
+        "text": "Windsock"
+      },
+      {
+        "id": "AFH.6.5.3.c.2",
+        "text": "Wind direction indicators"
+      },
+      {
+        "id": "AFH.6.5.3.c.3",
+        "text": "Presence of a crosswind"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.5.3.w.1",
+        "text": "Fuel levels"
+      },
+      {
+        "id": "AFH.6.5.3.w.2",
+        "text": "Engine temperature"
+      },
+      {
+        "id": "AFH.6.5.3.w.3",
+        "text": "Passenger seatbelts"
+      },
+      {
+        "id": "AFH.6.5.3.w.4",
+        "text": "Altitude"
+      },
+      {
+        "id": "AFH.6.5.3.w.5",
+        "text": "Navigation systems"
+      },
+      {
+        "id": "AFH.6.5.3.w.6",
+        "text": "Weather radar"
+      },
+      {
+        "id": "AFH.6.5.3.w.7",
+        "text": "Flight plan"
+      },
+      {
+        "id": "AFH.6.5.3.w.8",
+        "text": "Radio frequencies"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 5",
+    "subjects": [
+      "Crosswind Takeoff"
+    ]
+  },
+  {
+    "questionid": "AFH.6.5.4",
+    "question": "How does a crosswind affect an airplane during takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.5.4.c.1",
+        "text": "It can cause the airplane to weathervane into the wind"
+      },
+      {
+        "id": "AFH.6.5.4.c.2",
+        "text": "It increases drag due to aileron and rudder deflection"
+      },
+      {
+        "id": "AFH.6.5.4.c.3",
+        "text": "It may cause the airplane to skip if not properly managed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.5.4.w.1",
+        "text": "It increases fuel efficiency"
+      },
+      {
+        "id": "AFH.6.5.4.w.2",
+        "text": "It enhances engine thrust"
+      },
+      {
+        "id": "AFH.6.5.4.w.3",
+        "text": "It stabilizes vertical lift"
+      },
+      {
+        "id": "AFH.6.5.4.w.4",
+        "text": "It reduces noise pollution"
+      },
+      {
+        "id": "AFH.6.5.4.w.5",
+        "text": "It improves passenger comfort"
+      },
+      {
+        "id": "AFH.6.5.4.w.6",
+        "text": "It decreases yaw tendency"
+      },
+      {
+        "id": "AFH.6.5.4.w.7",
+        "text": "It increases takeoff speed"
+      },
+      {
+        "id": "AFH.6.5.4.w.8",
+        "text": "It reduces drag"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 5",
+    "subjects": [
+      "Crosswind Takeoff"
+    ]
+  },
+  {
+    "questionid": "AFH.6.5.5",
+    "question": "What happens if the upwind wing rises during a crosswind takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.5.5.c.1",
+        "text": "The airplane may lose lateral alignment with the runway"
+      },
+      {
+        "id": "AFH.6.5.5.c.2",
+        "text": "The airplane may skip"
+      },
+      {
+        "id": "AFH.6.5.5.c.3",
+        "text": "The wing surface exposed to the crosswind increases"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.5.5.w.1",
+        "text": "The airplane gains speed"
+      },
+      {
+        "id": "AFH.6.5.5.w.2",
+        "text": "The airplane stabilizes"
+      },
+      {
+        "id": "AFH.6.5.5.w.3",
+        "text": "The airplane reduces drag"
+      },
+      {
+        "id": "AFH.6.5.5.w.4",
+        "text": "The airplane improves fuel efficiency"
+      },
+      {
+        "id": "AFH.6.5.5.w.5",
+        "text": "The airplane enhances passenger comfort"
+      },
+      {
+        "id": "AFH.6.5.5.w.6",
+        "text": "The airplane reduces noise pollution"
+      },
+      {
+        "id": "AFH.6.5.5.w.7",
+        "text": "The airplane increases lift"
+      },
+      {
+        "id": "AFH.6.5.5.w.8",
+        "text": "The airplane decreases yaw tendency"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 5",
+    "subjects": [
+      "Crosswind Takeoff"
+    ]
+  },
+  {
+    "questionid": "AFH.6.5.6",
+    "question": "What is the effect of P-factor during a crosswind takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.5.6.c.1",
+        "text": "It causes the airplane to yaw to the left"
+      },
+      {
+        "id": "AFH.6.5.6.c.2",
+        "text": "It may counteract weathervaning in a right crosswind"
+      },
+      {
+        "id": "AFH.6.5.6.c.3",
+        "text": "It may aggravate weathervaning in a left crosswind"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.5.6.w.1",
+        "text": "It increases lift"
+      },
+      {
+        "id": "AFH.6.5.6.w.2",
+        "text": "It reduces drag"
+      },
+      {
+        "id": "AFH.6.5.6.w.3",
+        "text": "It enhances engine thrust"
+      },
+      {
+        "id": "AFH.6.5.6.w.4",
+        "text": "It improves fuel efficiency"
+      },
+      {
+        "id": "AFH.6.5.6.w.5",
+        "text": "It stabilizes vertical lift"
+      },
+      {
+        "id": "AFH.6.5.6.w.6",
+        "text": "It enhances passenger comfort"
+      },
+      {
+        "id": "AFH.6.5.6.w.7",
+        "text": "It reduces noise pollution"
+      },
+      {
+        "id": "AFH.6.5.6.w.8",
+        "text": "It increases takeoff speed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 5",
+    "subjects": [
+      "Crosswind Takeoff"
+    ]
+  },
+  {
+    "questionid": "AFH.6.5.7",
+    "question": "What should a pilot do as the airplane accelerates during a crosswind takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.5.7.c.1",
+        "text": "Maintain aileron pressure into the wind"
+      },
+      {
+        "id": "AFH.6.5.7.c.2",
+        "text": "Use rudder to maintain a straight path"
+      },
+      {
+        "id": "AFH.6.5.7.c.3",
+        "text": "Adjust control inputs as ailerons become effective"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.5.7.w.1",
+        "text": "Increase engine power"
+      },
+      {
+        "id": "AFH.6.5.7.w.2",
+        "text": "Reduce aileron pressure"
+      },
+      {
+        "id": "AFH.6.5.7.w.3",
+        "text": "Enhance passenger comfort"
+      },
+      {
+        "id": "AFH.6.5.7.w.4",
+        "text": "Stabilize vertical lift"
+      },
+      {
+        "id": "AFH.6.5.7.w.5",
+        "text": "Improve fuel efficiency"
+      },
+      {
+        "id": "AFH.6.5.7.w.6",
+        "text": "Reduce noise pollution"
+      },
+      {
+        "id": "AFH.6.5.7.w.7",
+        "text": "Increase takeoff speed"
+      },
+      {
+        "id": "AFH.6.5.7.w.8",
+        "text": "Enhance engine thrust"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 5",
+    "subjects": [
+      "Crosswind Takeoff"
+    ]
+  },
+  {
+    "questionid": "AFH.6.5.8",
+    "question": "What is the consequence of not maintaining aileron pressure during a crosswind takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.5.8.c.1",
+        "text": "The airplane may skip"
+      },
+      {
+        "id": "AFH.6.5.8.c.2",
+        "text": "The airplane may lose lateral alignment"
+      },
+      {
+        "id": "AFH.6.5.8.c.3",
+        "text": "The upwind wing may rise"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.5.8.w.1",
+        "text": "The airplane will gain speed"
+      },
+      {
+        "id": "AFH.6.5.8.w.2",
+        "text": "The airplane will stabilize"
+      },
+      {
+        "id": "AFH.6.5.8.w.3",
+        "text": "The airplane will reduce drag"
+      },
+      {
+        "id": "AFH.6.5.8.w.4",
+        "text": "The airplane will improve fuel efficiency"
+      },
+      {
+        "id": "AFH.6.5.8.w.5",
+        "text": "The airplane will enhance passenger comfort"
+      },
+      {
+        "id": "AFH.6.5.8.w.6",
+        "text": "The airplane will reduce noise pollution"
+      },
+      {
+        "id": "AFH.6.5.8.w.7",
+        "text": "The airplane will increase lift"
+      },
+      {
+        "id": "AFH.6.5.8.w.8",
+        "text": "The airplane will decrease yaw tendency"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 5",
+    "subjects": [
+      "Crosswind Takeoff"
+    ]
+  },
+  {
+    "questionid": "AFH.6.5.9",
+    "question": "What is the role of ailerons during a crosswind takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.5.9.c.1",
+        "text": "To impose a downward force on the upwind wing"
+      },
+      {
+        "id": "AFH.6.5.9.c.2",
+        "text": "To counteract the lifting force of the crosswind"
+      },
+      {
+        "id": "AFH.6.5.9.c.3",
+        "text": "To maintain wings level"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.5.9.w.1",
+        "text": "To increase takeoff speed"
+      },
+      {
+        "id": "AFH.6.5.9.w.2",
+        "text": "To reduce drag"
+      },
+      {
+        "id": "AFH.6.5.9.w.3",
+        "text": "To enhance engine performance"
+      },
+      {
+        "id": "AFH.6.5.9.w.4",
+        "text": "To improve fuel efficiency"
+      },
+      {
+        "id": "AFH.6.5.9.w.5",
+        "text": "To stabilize vertical lift"
+      },
+      {
+        "id": "AFH.6.5.9.w.6",
+        "text": "To enhance passenger comfort"
+      },
+      {
+        "id": "AFH.6.5.9.w.7",
+        "text": "To reduce noise pollution"
+      },
+      {
+        "id": "AFH.6.5.9.w.8",
+        "text": "To decrease yaw tendency"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 5",
+    "subjects": [
+      "Crosswind Takeoff"
+    ]
+  },
+  {
+    "questionid": "AFH.6.6.1",
+    "question": "What is ground effect in aviation?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.6.1.c.1",
+        "text": "Improved performance near the ground"
+      },
+      {
+        "id": "AFH.6.6.1.c.2",
+        "text": "Occurs up to one wingspan above the surface"
+      },
+      {
+        "id": "AFH.6.6.1.c.3",
+        "text": "Reduces induced drag"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.6.1.w.1",
+        "text": "Increases induced drag"
+      },
+      {
+        "id": "AFH.6.6.1.w.2",
+        "text": "Occurs only during landing"
+      },
+      {
+        "id": "AFH.6.6.1.w.3",
+        "text": "Increases wingtip vortices"
+      },
+      {
+        "id": "AFH.6.6.1.w.4",
+        "text": "Occurs at high altitudes"
+      },
+      {
+        "id": "AFH.6.6.1.w.5",
+        "text": "Increases upwash and downwash"
+      },
+      {
+        "id": "AFH.6.6.1.w.6",
+        "text": "Reduces static pressure"
+      },
+      {
+        "id": "AFH.6.6.1.w.7",
+        "text": "Increases parasite drag"
+      },
+      {
+        "id": "AFH.6.6.1.w.8",
+        "text": "Occurs only during takeoff"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 6",
+    "subjects": [
+      "Ground Effect"
+    ]
+  },
+  {
+    "questionid": "AFH.6.6.2",
+    "question": "How does ground effect influence the airplane's instruments?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.6.2.c.1",
+        "text": "Airspeed indicator shows lower values"
+      },
+      {
+        "id": "AFH.6.6.2.c.2",
+        "text": "Altimeter indicates lower values"
+      },
+      {
+        "id": "AFH.6.6.2.c.3",
+        "text": "Vertical speed indicator shows descent"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.6.2.w.1",
+        "text": "Airspeed indicator shows higher values"
+      },
+      {
+        "id": "AFH.6.6.2.w.2",
+        "text": "Altimeter indicates higher values"
+      },
+      {
+        "id": "AFH.6.6.2.w.3",
+        "text": "Vertical speed indicator shows ascent"
+      },
+      {
+        "id": "AFH.6.6.2.w.4",
+        "text": "Instruments are unaffected"
+      },
+      {
+        "id": "AFH.6.6.2.w.5",
+        "text": "Airspeed indicator shows no change"
+      },
+      {
+        "id": "AFH.6.6.2.w.6",
+        "text": "Altimeter shows no change"
+      },
+      {
+        "id": "AFH.6.6.2.w.7",
+        "text": "Vertical speed indicator shows no change"
+      },
+      {
+        "id": "AFH.6.6.2.w.8",
+        "text": "Instruments show random values"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 6",
+    "subjects": [
+      "Ground Effect",
+      "Instrumentation"
+    ]
+  },
+  {
+    "questionid": "AFH.6.6.3",
+    "question": "What happens as an airplane climbs out of ground effect?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.6.3.c.1",
+        "text": "Increase in induced drag"
+      },
+      {
+        "id": "AFH.6.6.3.c.2",
+        "text": "Increase in thrust required"
+      },
+      {
+        "id": "AFH.6.6.3.c.3",
+        "text": "Reduction in static source pressure"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.6.3.w.1",
+        "text": "Decrease in induced drag"
+      },
+      {
+        "id": "AFH.6.6.3.w.2",
+        "text": "Decrease in thrust required"
+      },
+      {
+        "id": "AFH.6.6.3.w.3",
+        "text": "Increase in static source pressure"
+      },
+      {
+        "id": "AFH.6.6.3.w.4",
+        "text": "No change in drag"
+      },
+      {
+        "id": "AFH.6.6.3.w.5",
+        "text": "No change in thrust"
+      },
+      {
+        "id": "AFH.6.6.3.w.6",
+        "text": "Static source pressure remains constant"
+      },
+      {
+        "id": "AFH.6.6.3.w.7",
+        "text": "Decrease in pitch-up tendency"
+      },
+      {
+        "id": "AFH.6.6.3.w.8",
+        "text": "Increase in elevator travel"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 6",
+    "subjects": [
+      "Ground Effect",
+      "Climb Performance"
+    ]
+  },
+  {
+    "questionid": "AFH.6.6.4",
+    "question": "Why is precise control of airspeed important during takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.6.4.c.1",
+        "text": "Deviation affects climb performance"
+      },
+      {
+        "id": "AFH.6.6.4.c.2",
+        "text": "Ensures safe maneuver execution"
+      },
+      {
+        "id": "AFH.6.6.4.c.3",
+        "text": "Prevents significant performance reduction"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.6.4.w.1",
+        "text": "Airspeed has no impact on takeoff"
+      },
+      {
+        "id": "AFH.6.6.4.w.2",
+        "text": "Only affects landing"
+      },
+      {
+        "id": "AFH.6.6.4.w.3",
+        "text": "Ensures faster takeoff"
+      },
+      {
+        "id": "AFH.6.6.4.w.4",
+        "text": "Prevents engine overheating"
+      },
+      {
+        "id": "AFH.6.6.4.w.5",
+        "text": "Reduces fuel consumption"
+      },
+      {
+        "id": "AFH.6.6.4.w.6",
+        "text": "Improves passenger comfort"
+      },
+      {
+        "id": "AFH.6.6.4.w.7",
+        "text": "Increases lift-off speed"
+      },
+      {
+        "id": "AFH.6.6.4.w.8",
+        "text": "Reduces takeoff distance"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 6",
+    "subjects": [
+      "Airspeed Control",
+      "Takeoff Performance"
+    ]
+  },
+  {
+    "questionid": "AFH.6.6.5",
+    "question": "What are the consequences of lifting off below recommended airspeed?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.6.5.c.1",
+        "text": "Reduced climb performance"
+      },
+      {
+        "id": "AFH.6.6.5.c.2",
+        "text": "Increased drag"
+      },
+      {
+        "id": "AFH.6.6.5.c.3",
+        "text": "May not clear obstructions"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.6.5.w.1",
+        "text": "Improved climb performance"
+      },
+      {
+        "id": "AFH.6.6.5.w.2",
+        "text": "Reduced drag"
+      },
+      {
+        "id": "AFH.6.6.5.w.3",
+        "text": "Easier control"
+      },
+      {
+        "id": "AFH.6.6.5.w.4",
+        "text": "Faster climb"
+      },
+      {
+        "id": "AFH.6.6.5.w.5",
+        "text": "No impact on performance"
+      },
+      {
+        "id": "AFH.6.6.5.w.6",
+        "text": "Increased lift"
+      },
+      {
+        "id": "AFH.6.6.5.w.7",
+        "text": "Reduced power requirement"
+      },
+      {
+        "id": "AFH.6.6.5.w.8",
+        "text": "Improved fuel efficiency"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 6",
+    "subjects": [
+      "Takeoff Performance",
+      "Airspeed Management"
+    ]
+  },
+  {
+    "questionid": "AFH.6.7.1",
+    "question": "What should a pilot consult to obtain the power setting, flap setting, airspeed, and procedures for a short-field takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.7.1.c.1",
+        "text": "AFM/POH performance section"
+      },
+      {
+        "id": "AFH.6.7.1.c.2",
+        "text": "Airplane's manufacturer guidelines"
+      },
+      {
+        "id": "AFH.6.7.1.c.3",
+        "text": "Pilot's Operating Handbook"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.7.1.w.1",
+        "text": "Air Traffic Control"
+      },
+      {
+        "id": "AFH.6.7.1.w.2",
+        "text": "Weather report"
+      },
+      {
+        "id": "AFH.6.7.1.w.3",
+        "text": "Flight service station"
+      },
+      {
+        "id": "AFH.6.7.1.w.4",
+        "text": "Runway markings"
+      },
+      {
+        "id": "AFH.6.7.1.w.5",
+        "text": "Aircraft maintenance log"
+      },
+      {
+        "id": "AFH.6.7.1.w.6",
+        "text": "Pilot's logbook"
+      },
+      {
+        "id": "AFH.6.7.1.w.7",
+        "text": "Flight instructor"
+      },
+      {
+        "id": "AFH.6.7.1.w.8",
+        "text": "Passenger briefing"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 7",
+    "subjects": [
+      "Short-Field Takeoff"
+    ]
+  },
+  {
+    "questionid": "AFH.6.7.2",
+    "question": "What is the purpose of using the best angle-of-climb speed (VX) during a short-field takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.7.2.c.1",
+        "text": "Achieve steepest angle of climb"
+      },
+      {
+        "id": "AFH.6.7.2.c.2",
+        "text": "Clear obstacles safely"
+      },
+      {
+        "id": "AFH.6.7.2.c.3",
+        "text": "Minimize ground roll"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.7.2.w.1",
+        "text": "Increase fuel efficiency"
+      },
+      {
+        "id": "AFH.6.7.2.w.2",
+        "text": "Maximize passenger comfort"
+      },
+      {
+        "id": "AFH.6.7.2.w.3",
+        "text": "Reduce engine noise"
+      },
+      {
+        "id": "AFH.6.7.2.w.4",
+        "text": "Enhance visibility"
+      },
+      {
+        "id": "AFH.6.7.2.w.5",
+        "text": "Improve navigation accuracy"
+      },
+      {
+        "id": "AFH.6.7.2.w.6",
+        "text": "Decrease airspeed"
+      },
+      {
+        "id": "AFH.6.7.2.w.7",
+        "text": "Increase descent rate"
+      },
+      {
+        "id": "AFH.6.7.2.w.8",
+        "text": "Enhance communication"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 7",
+    "subjects": [
+      "Short-Field Takeoff"
+    ]
+  },
+  {
+    "questionid": "AFH.6.7.3",
+    "question": "What is the recommended action if the airplane manufacturer suggests using flaps for a short-field takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.7.3.c.1",
+        "text": "Extend flaps the proper amount"
+      },
+      {
+        "id": "AFH.6.7.3.c.2",
+        "text": "Follow manufacturer's flap settings"
+      },
+      {
+        "id": "AFH.6.7.3.c.3",
+        "text": "Prepare flaps before takeoff roll"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.7.3.w.1",
+        "text": "Ignore flap settings"
+      },
+      {
+        "id": "AFH.6.7.3.w.2",
+        "text": "Use full flaps regardless"
+      },
+      {
+        "id": "AFH.6.7.3.w.3",
+        "text": "Retract flaps during takeoff"
+      },
+      {
+        "id": "AFH.6.7.3.w.4",
+        "text": "Adjust flaps after lift-off"
+      },
+      {
+        "id": "AFH.6.7.3.w.5",
+        "text": "Consult air traffic control"
+      },
+      {
+        "id": "AFH.6.7.3.w.6",
+        "text": "Use flaps only in emergencies"
+      },
+      {
+        "id": "AFH.6.7.3.w.7",
+        "text": "Rely on pilot intuition"
+      },
+      {
+        "id": "AFH.6.7.3.w.8",
+        "text": "Adjust flaps based on weather"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 7",
+    "subjects": [
+      "Short-Field Takeoff"
+    ]
+  },
+  {
+    "questionid": "AFH.6.7.4",
+    "question": "What should a pilot do to maintain a constant airspeed after lift-off during a short-field takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.7.4.c.1",
+        "text": "Apply additional back-elevator pressure"
+      },
+      {
+        "id": "AFH.6.7.4.c.2",
+        "text": "Maintain wings-level climb"
+      },
+      {
+        "id": "AFH.6.7.4.c.3",
+        "text": "Hold VX until obstacles are cleared"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.7.4.w.1",
+        "text": "Reduce throttle immediately"
+      },
+      {
+        "id": "AFH.6.7.4.w.2",
+        "text": "Increase pitch attitude sharply"
+      },
+      {
+        "id": "AFH.6.7.4.w.3",
+        "text": "Engage autopilot"
+      },
+      {
+        "id": "AFH.6.7.4.w.4",
+        "text": "Lower flaps"
+      },
+      {
+        "id": "AFH.6.7.4.w.5",
+        "text": "Contact air traffic control"
+      },
+      {
+        "id": "AFH.6.7.4.w.6",
+        "text": "Descend slightly"
+      },
+      {
+        "id": "AFH.6.7.4.w.7",
+        "text": "Turn immediately"
+      },
+      {
+        "id": "AFH.6.7.4.w.8",
+        "text": "Adjust rudder pedals"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 7",
+    "subjects": [
+      "Short-Field Takeoff"
+    ]
+  },
+  {
+    "questionid": "AFH.6.7.5",
+    "question": "What is a potential consequence of pulling the airplane off the ground prematurely during a short-field takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.7.5.c.1",
+        "text": "Airplane may settle back to runway"
+      },
+      {
+        "id": "AFH.6.7.5.c.2",
+        "text": "Contact with obstacles"
+      },
+      {
+        "id": "AFH.6.7.5.c.3",
+        "text": "Flat initial climb"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.7.5.w.1",
+        "text": "Increased fuel efficiency"
+      },
+      {
+        "id": "AFH.6.7.5.w.2",
+        "text": "Enhanced passenger comfort"
+      },
+      {
+        "id": "AFH.6.7.5.w.3",
+        "text": "Improved visibility"
+      },
+      {
+        "id": "AFH.6.7.5.w.4",
+        "text": "Reduced engine wear"
+      },
+      {
+        "id": "AFH.6.7.5.w.5",
+        "text": "Faster climb rate"
+      },
+      {
+        "id": "AFH.6.7.5.w.6",
+        "text": "Better navigation"
+      },
+      {
+        "id": "AFH.6.7.5.w.7",
+        "text": "Smoother takeoff"
+      },
+      {
+        "id": "AFH.6.7.5.w.8",
+        "text": "Lower noise levels"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 7",
+    "subjects": [
+      "Short-Field Takeoff"
+    ]
+  },
+  {
+    "questionid": "AFH.6.7.6",
+    "question": "What should a pilot do after reaching an altitude of at least 50 feet above the takeoff surface in a short-field takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.7.6.c.1",
+        "text": "Lower pitch attitude slightly"
+      },
+      {
+        "id": "AFH.6.7.6.c.2",
+        "text": "Continue climb at VY"
+      },
+      {
+        "id": "AFH.6.7.6.c.3",
+        "text": "Reach safe maneuvering altitude"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.7.6.w.1",
+        "text": "Descend immediately"
+      },
+      {
+        "id": "AFH.6.7.6.w.2",
+        "text": "Engage landing gear"
+      },
+      {
+        "id": "AFH.6.7.6.w.3",
+        "text": "Contact ground control"
+      },
+      {
+        "id": "AFH.6.7.6.w.4",
+        "text": "Perform a steep turn"
+      },
+      {
+        "id": "AFH.6.7.6.w.5",
+        "text": "Reduce engine power"
+      },
+      {
+        "id": "AFH.6.7.6.w.6",
+        "text": "Deploy landing flaps"
+      },
+      {
+        "id": "AFH.6.7.6.w.7",
+        "text": "Initiate descent"
+      },
+      {
+        "id": "AFH.6.7.6.w.8",
+        "text": "Engage autopilot"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 7",
+    "subjects": [
+      "Short-Field Takeoff"
+    ]
+  },
+  {
+    "questionid": "AFH.6.8.1",
+    "question": "What operational techniques are necessary for a soft/rough-field takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.8.1.c.1",
+        "text": "Use ground effect to reduce landing gear drag"
+      },
+      {
+        "id": "AFH.6.8.1.c.2",
+        "text": "Maintain a high AOA or nose-high pitch attitude"
+      },
+      {
+        "id": "AFH.6.8.1.c.3",
+        "text": "Apply takeoff power smoothly and rapidly"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.8.1.w.1",
+        "text": "Use normal takeoff techniques"
+      },
+      {
+        "id": "AFH.6.8.1.w.2",
+        "text": "Apply brakes during takeoff roll"
+      },
+      {
+        "id": "AFH.6.8.1.w.3",
+        "text": "Maintain a low AOA"
+      },
+      {
+        "id": "AFH.6.8.1.w.4",
+        "text": "Use flaps only after takeoff"
+      },
+      {
+        "id": "AFH.6.8.1.w.5",
+        "text": "Stop on soft surfaces if needed"
+      },
+      {
+        "id": "AFH.6.8.1.w.6",
+        "text": "Accelerate to maximum speed before lift-off"
+      },
+      {
+        "id": "AFH.6.8.1.w.7",
+        "text": "Ignore ground effect"
+      },
+      {
+        "id": "AFH.6.8.1.w.8",
+        "text": "Keep nose-wheel pressure high"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 8",
+    "subjects": [
+      "Soft/Rough-Field Takeoff"
+    ]
+  },
+  {
+    "questionid": "AFH.6.8.2",
+    "question": "Why is it important to transfer the airplane's weight from the wheels to the wings during a soft-field takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.8.2.c.1",
+        "text": "To minimize drag caused by surface irregularities"
+      },
+      {
+        "id": "AFH.6.8.2.c.2",
+        "text": "To avoid damaging the landing gear"
+      },
+      {
+        "id": "AFH.6.8.2.c.3",
+        "text": "To accelerate the airplane more effectively"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.8.2.w.1",
+        "text": "To increase the takeoff roll distance"
+      },
+      {
+        "id": "AFH.6.8.2.w.2",
+        "text": "To decrease lift generation"
+      },
+      {
+        "id": "AFH.6.8.2.w.3",
+        "text": "To maintain nose-wheel pressure"
+      },
+      {
+        "id": "AFH.6.8.2.w.4",
+        "text": "To ensure a slower takeoff speed"
+      },
+      {
+        "id": "AFH.6.8.2.w.5",
+        "text": "To reduce engine power requirements"
+      },
+      {
+        "id": "AFH.6.8.2.w.6",
+        "text": "To keep the airplane on the ground longer"
+      },
+      {
+        "id": "AFH.6.8.2.w.7",
+        "text": "To increase drag"
+      },
+      {
+        "id": "AFH.6.8.2.w.8",
+        "text": "To maintain a low AOA"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 8",
+    "subjects": [
+      "Soft/Rough-Field Takeoff"
+    ]
+  },
+  {
+    "questionid": "AFH.6.8.3",
+    "question": "What should a pilot do immediately after becoming airborne on a soft-field takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.8.3.c.1",
+        "text": "Lower the nose gently"
+      },
+      {
+        "id": "AFH.6.8.3.c.2",
+        "text": "Accelerate to a minimum safe climb out speed"
+      },
+      {
+        "id": "AFH.6.8.3.c.3",
+        "text": "Remain in ground effect until reaching VX"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.8.3.w.1",
+        "text": "Climb steeply immediately"
+      },
+      {
+        "id": "AFH.6.8.3.w.2",
+        "text": "Reduce power immediately"
+      },
+      {
+        "id": "AFH.6.8.3.w.3",
+        "text": "Retract flaps immediately"
+      },
+      {
+        "id": "AFH.6.8.3.w.4",
+        "text": "Ignore ground effect"
+      },
+      {
+        "id": "AFH.6.8.3.w.5",
+        "text": "Maintain a high pitch attitude indefinitely"
+      },
+      {
+        "id": "AFH.6.8.3.w.6",
+        "text": "Descend back to the surface"
+      },
+      {
+        "id": "AFH.6.8.3.w.7",
+        "text": "Apply brakes"
+      },
+      {
+        "id": "AFH.6.8.3.w.8",
+        "text": "Turn sharply"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 8",
+    "subjects": [
+      "Soft/Rough-Field Takeoff"
+    ]
+  },
+  {
+    "questionid": "AFH.6.8.4",
+    "question": "How does ground effect assist during a soft-field takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.8.4.c.1",
+        "text": "Reduces landing gear drag"
+      },
+      {
+        "id": "AFH.6.8.4.c.2",
+        "text": "Allows the airplane to become airborne at a slower speed"
+      },
+      {
+        "id": "AFH.6.8.4.c.3",
+        "text": "Helps maintain lift during initial climb"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.8.4.w.1",
+        "text": "Increases drag"
+      },
+      {
+        "id": "AFH.6.8.4.w.2",
+        "text": "Decreases lift"
+      },
+      {
+        "id": "AFH.6.8.4.w.3",
+        "text": "Requires higher takeoff speed"
+      },
+      {
+        "id": "AFH.6.8.4.w.4",
+        "text": "Negates the need for flaps"
+      },
+      {
+        "id": "AFH.6.8.4.w.5",
+        "text": "Increases weight on wheels"
+      },
+      {
+        "id": "AFH.6.8.4.w.6",
+        "text": "Causes the airplane to stall"
+      },
+      {
+        "id": "AFH.6.8.4.w.7",
+        "text": "Reduces engine efficiency"
+      },
+      {
+        "id": "AFH.6.8.4.w.8",
+        "text": "Requires immediate climb"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 8",
+    "subjects": [
+      "Soft/Rough-Field Takeoff"
+    ]
+  },
+  {
+    "questionid": "AFH.6.8.5",
+    "question": "What should a pilot be aware of when transitioning out of ground effect during a soft-field takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.8.5.c.1",
+        "text": "The airplane may settle back onto the surface"
+      },
+      {
+        "id": "AFH.6.8.5.c.2",
+        "text": "Full power is necessary to maintain lift"
+      },
+      {
+        "id": "AFH.6.8.5.c.3",
+        "text": "Control pressures and aircraft responses are critical"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.8.5.w.1",
+        "text": "The airplane will automatically climb"
+      },
+      {
+        "id": "AFH.6.8.5.w.2",
+        "text": "Reduced power is needed"
+      },
+      {
+        "id": "AFH.6.8.5.w.3",
+        "text": "Ground effect has no impact"
+      },
+      {
+        "id": "AFH.6.8.5.w.4",
+        "text": "The airplane will accelerate without input"
+      },
+      {
+        "id": "AFH.6.8.5.w.5",
+        "text": "Flaps should be retracted immediately"
+      },
+      {
+        "id": "AFH.6.8.5.w.6",
+        "text": "Nose should be raised further"
+      },
+      {
+        "id": "AFH.6.8.5.w.7",
+        "text": "The airplane will not settle"
+      },
+      {
+        "id": "AFH.6.8.5.w.8",
+        "text": "Visual clues are unnecessary"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 8",
+    "subjects": [
+      "Soft/Rough-Field Takeoff"
+    ]
+  },
+  {
+    "questionid": "AFH.6.9.1",
+    "question": "What are some reasons a pilot might reject a takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.9.1.c.1",
+        "text": "Malfunctioning powerplant"
+      },
+      {
+        "id": "AFH.6.9.1.c.2",
+        "text": "Inadequate acceleration"
+      },
+      {
+        "id": "AFH.6.9.1.c.3",
+        "text": "Runway incursion"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.9.1.w.1",
+        "text": "Excessive fuel consumption"
+      },
+      {
+        "id": "AFH.6.9.1.w.2",
+        "text": "High altitude"
+      },
+      {
+        "id": "AFH.6.9.1.w.3",
+        "text": "Low visibility"
+      },
+      {
+        "id": "AFH.6.9.1.w.4",
+        "text": "Strong tailwind"
+      },
+      {
+        "id": "AFH.6.9.1.w.5",
+        "text": "Pilot fatigue"
+      },
+      {
+        "id": "AFH.6.9.1.w.6",
+        "text": "Passenger discomfort"
+      },
+      {
+        "id": "AFH.6.9.1.w.7",
+        "text": "Heavy rain"
+      },
+      {
+        "id": "AFH.6.9.1.w.8",
+        "text": "Bird strike"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 9",
+    "subjects": [
+      "Rejected Takeoff",
+      "Emergency Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.6.9.2",
+    "question": "What actions should a pilot take in the event of an engine failure on initial climb-out?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.9.2.c.1",
+        "text": "Maintain aircraft control"
+      },
+      {
+        "id": "AFH.6.9.2.c.2",
+        "text": "Lower the nose to prevent a stall"
+      },
+      {
+        "id": "AFH.6.9.2.c.3",
+        "text": "Establish a controlled glide"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.9.2.w.1",
+        "text": "Increase throttle"
+      },
+      {
+        "id": "AFH.6.9.2.w.2",
+        "text": "Attempt to restart the engine"
+      },
+      {
+        "id": "AFH.6.9.2.w.3",
+        "text": "Turn back to the runway"
+      },
+      {
+        "id": "AFH.6.9.2.w.4",
+        "text": "Climb to a higher altitude"
+      },
+      {
+        "id": "AFH.6.9.2.w.5",
+        "text": "Engage autopilot"
+      },
+      {
+        "id": "AFH.6.9.2.w.6",
+        "text": "Contact air traffic control immediately"
+      },
+      {
+        "id": "AFH.6.9.2.w.7",
+        "text": "Deploy landing gear"
+      },
+      {
+        "id": "AFH.6.9.2.w.8",
+        "text": "Activate emergency beacon"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6, Section 9",
+    "subjects": [
+      "Engine Failure",
+      "Emergency Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.6.10.1",
+    "question": "What are some sources of information for noise abatement procedures at airports?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.10.1.c.1",
+        "text": "Chart Supplements"
+      },
+      {
+        "id": "AFH.6.10.1.c.2",
+        "text": "Local and regional publications"
+      },
+      {
+        "id": "AFH.6.10.1.c.3",
+        "text": "Printed handouts"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.10.1.w.1",
+        "text": "Pilot logbooks"
+      },
+      {
+        "id": "AFH.6.10.1.w.2",
+        "text": "Aircraft maintenance manuals"
+      },
+      {
+        "id": "AFH.6.10.1.w.3",
+        "text": "Weather reports"
+      },
+      {
+        "id": "AFH.6.10.1.w.4",
+        "text": "Flight plans"
+      },
+      {
+        "id": "AFH.6.10.1.w.5",
+        "text": "Passenger briefings"
+      },
+      {
+        "id": "AFH.6.10.1.w.6",
+        "text": "In-flight magazines"
+      },
+      {
+        "id": "AFH.6.10.1.w.7",
+        "text": "Aircraft registration documents"
+      },
+      {
+        "id": "AFH.6.10.1.w.8",
+        "text": "Fuel receipts"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6: Takeoffs and Departure Climbs Introduction, Section: Noise Abatement",
+    "subjects": [
+      "Noise Abatement",
+      "Aviation Procedures",
+      "Pilot Responsibilities"
+    ]
+  },
+  {
+    "questionid": "AFH.6.11.1",
+    "question": "What percentage of accidents occur during the takeoff and initial climb phase?",
+    "correct_answers": [
+      {
+        "id": "AFH.6.11.1.c.1",
+        "text": "20%"
+      },
+      {
+        "id": "AFH.6.11.1.c.2",
+        "text": "1 out of 5"
+      },
+      {
+        "id": "AFH.6.11.1.c.3",
+        "text": "20 percent"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.6.11.1.w.1",
+        "text": "10%"
+      },
+      {
+        "id": "AFH.6.11.1.w.2",
+        "text": "30%"
+      },
+      {
+        "id": "AFH.6.11.1.w.3",
+        "text": "40%"
+      },
+      {
+        "id": "AFH.6.11.1.w.4",
+        "text": "50%"
+      },
+      {
+        "id": "AFH.6.11.1.w.5",
+        "text": "60%"
+      },
+      {
+        "id": "AFH.6.11.1.w.6",
+        "text": "70%"
+      },
+      {
+        "id": "AFH.6.11.1.w.7",
+        "text": "80%"
+      },
+      {
+        "id": "AFH.6.11.1.w.8",
+        "text": "90%"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 6: Takeoffs and Departure Climbs Introduction",
+    "subjects": [
+      "Aviation Safety",
+      "Flight Phases",
+      "Pilot Error"
+    ]
+  }
+]

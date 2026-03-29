@@ -1,0 +1,3083 @@
+[
+  {
+    "questionBank": {
+      "chapterId": "afh.11",
+      "bookId": "AFH",
+      "chapterNumber": 11,
+      "chapterTitle": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction",
+      "totalRequiredQuestions": 50,
+      "metadata": {
+        "generatedAtUtc": "2026-03-29T14:12:53.721Z",
+        "chapterId": "afh.11",
+        "chapterNumber": 11,
+        "totalSections": 23,
+        "totalRequiredQuestions": 50,
+        "providers": [
+          "openai",
+          "anthropic",
+          "gemini"
+        ],
+        "models": [
+          "gpt-4o",
+          "claude-sonnet-4-6",
+          "gemini-2.5-flash"
+        ],
+        "promptTokens": 11424,
+        "completionTokens": 6927,
+        "totalTokens": 18351,
+        "sectionQuestionSummary": [
+          {
+            "sectionId": "afh.11.1",
+            "sectionTitle": "Night Vision",
+            "sectionOrdinal": 1,
+            "sectionWeightPercentage": 0.6,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.11.2",
+            "sectionTitle": "Anatomy of the Eye",
+            "sectionOrdinal": 2,
+            "sectionWeightPercentage": 5.73,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.11.3",
+            "sectionTitle": "Types of Vision",
+            "sectionOrdinal": 3,
+            "sectionWeightPercentage": 2.17,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.11.4",
+            "sectionTitle": "Night Blind Spot",
+            "sectionOrdinal": 4,
+            "sectionWeightPercentage": 1.19,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.11.5",
+            "sectionTitle": "Vision Under Dim and Bright Illumination",
+            "sectionOrdinal": 5,
+            "sectionWeightPercentage": 2.19,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.11.6",
+            "sectionTitle": "Factors Affecting Vision",
+            "sectionOrdinal": 6,
+            "sectionWeightPercentage": 7.68,
+            "questionsGenerated": 4
+          },
+          {
+            "sectionId": "afh.11.7",
+            "sectionTitle": "Night Illusions",
+            "sectionOrdinal": 7,
+            "sectionWeightPercentage": 0.62,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.11.8",
+            "sectionTitle": "False Horizon",
+            "sectionOrdinal": 8,
+            "sectionWeightPercentage": 1.71,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.11.9",
+            "sectionTitle": "Autokinesis",
+            "sectionOrdinal": 9,
+            "sectionWeightPercentage": 0.6,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.11.10",
+            "sectionTitle": "Featureless Terrain Illusion",
+            "sectionOrdinal": 10,
+            "sectionWeightPercentage": 3.4,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.11.11",
+            "sectionTitle": "Ground Lighting Illusions",
+            "sectionOrdinal": 11,
+            "sectionWeightPercentage": 2.48,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.11.12",
+            "sectionTitle": "Pilot Equipment",
+            "sectionOrdinal": 12,
+            "sectionWeightPercentage": 5.41,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.11.13",
+            "sectionTitle": "Airplane Equipment and Lighting",
+            "sectionOrdinal": 13,
+            "sectionWeightPercentage": 5.7,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.11.14",
+            "sectionTitle": "Airport and Navigation Lighting Aids",
+            "sectionOrdinal": 14,
+            "sectionWeightPercentage": 11.76,
+            "questionsGenerated": 6
+          },
+          {
+            "sectionId": "afh.11.15",
+            "sectionTitle": "Training for Night Flight",
+            "sectionOrdinal": 15,
+            "sectionWeightPercentage": 2.05,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.11.16",
+            "sectionTitle": "Preparation and Preflight",
+            "sectionOrdinal": 16,
+            "sectionWeightPercentage": 5.01,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.11.17",
+            "sectionTitle": "Starting, Taxiing, and Run-up",
+            "sectionOrdinal": 17,
+            "sectionWeightPercentage": 10.06,
+            "questionsGenerated": 5
+          },
+          {
+            "sectionId": "afh.11.18",
+            "sectionTitle": "Takeoff and Climb",
+            "sectionOrdinal": 18,
+            "sectionWeightPercentage": 7.33,
+            "questionsGenerated": 4
+          },
+          {
+            "sectionId": "afh.11.19",
+            "sectionTitle": "Orientation and Navigation",
+            "sectionOrdinal": 19,
+            "sectionWeightPercentage": 5.49,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.11.20",
+            "sectionTitle": "Approaches and Landings",
+            "sectionOrdinal": 20,
+            "sectionWeightPercentage": 9.44,
+            "questionsGenerated": 5
+          },
+          {
+            "sectionId": "afh.11.21",
+            "sectionTitle": "How to Prevent Landing Errors Due to Optical Illusions",
+            "sectionOrdinal": 21,
+            "sectionWeightPercentage": 2.28,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.11.22",
+            "sectionTitle": "Night Emergencies",
+            "sectionOrdinal": 22,
+            "sectionWeightPercentage": 4.9,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.11.23",
+            "sectionTitle": "Chapter Summary",
+            "sectionOrdinal": 23,
+            "sectionWeightPercentage": 2.2,
+            "questionsGenerated": 1
+          }
+        ],
+        "buildStatus": "complete",
+        "buildStage": "questions",
+        "completedSections": 23,
+        "incompleteSections": [],
+        "failureReason": ""
+      }
+    }
+  },
+  {
+    "questionid": "AFH.11.1.1",
+    "question": "What factors contribute to improved night vision for pilots?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.1.1.c.1",
+        "text": "Understanding eye function"
+      },
+      {
+        "id": "AFH.11.1.1.c.2",
+        "text": "Pilot behaviors"
+      },
+      {
+        "id": "AFH.11.1.1.c.3",
+        "text": "Eyes and brain working together"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.1.1.w.1",
+        "text": "Use of bright lights"
+      },
+      {
+        "id": "AFH.11.1.1.w.2",
+        "text": "Ignoring eye physiology"
+      },
+      {
+        "id": "AFH.11.1.1.w.3",
+        "text": "Relying solely on instruments"
+      },
+      {
+        "id": "AFH.11.1.1.w.4",
+        "text": "Avoiding eye adaptation techniques"
+      },
+      {
+        "id": "AFH.11.1.1.w.5",
+        "text": "Using sunglasses at night"
+      },
+      {
+        "id": "AFH.11.1.1.w.6",
+        "text": "Focusing on peripheral vision"
+      },
+      {
+        "id": "AFH.11.1.1.w.7",
+        "text": "Staring directly at bright objects"
+      },
+      {
+        "id": "AFH.11.1.1.w.8",
+        "text": "Neglecting eye rest"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction",
+    "subjects": [
+      "Night Vision"
+    ]
+  },
+  {
+    "questionid": "AFH.11.2.1",
+    "question": "Which statements correctly describe the function and location of cones in the human eye?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.2.1.c.1",
+        "text": "Cones are concentrated in the central retinal area called the macula"
+      },
+      {
+        "id": "AFH.11.2.1.c.2",
+        "text": "Cones are used for day or high-intensity light vision"
+      },
+      {
+        "id": "AFH.11.2.1.c.3",
+        "text": "Cones are involved with central vision to detect detail, perceive color, and identify far-away objects"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.2.1.w.1",
+        "text": "Cones are located mainly in the periphery of the retina"
+      },
+      {
+        "id": "AFH.11.2.1.w.2",
+        "text": "Cones are used exclusively for low-light and night vision"
+      },
+      {
+        "id": "AFH.11.2.1.w.3",
+        "text": "Cones cannot be used to detect detail or perceive color"
+      },
+      {
+        "id": "AFH.11.2.1.w.4",
+        "text": "Cones are about 10,000 times more sensitive to light than the fovea"
+      },
+      {
+        "id": "AFH.11.2.1.w.5",
+        "text": "Cones detect objects in shades of gray but not color"
+      },
+      {
+        "id": "AFH.11.2.1.w.6",
+        "text": "Cones are involved with peripheral vision to detect position references"
+      },
+      {
+        "id": "AFH.11.2.1.w.7",
+        "text": "Cones are the primary photoreceptors used in the absence of normal light"
+      },
+      {
+        "id": "AFH.11.2.1.w.8",
+        "text": "Cones are absent from the fovea at the center of the macula"
+      }
+    ],
+    "source": "FAA-H-8083-3C Chapter 11, Section: Anatomy of the Eye",
+    "subjects": [
+      "Eye anatomy",
+      "Cones",
+      "Photoreceptors",
+      "Vision physiology"
+    ]
+  },
+  {
+    "questionid": "AFH.11.2.2",
+    "question": "Which statements accurately describe the role of rods in night vision and peripheral sight?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.2.2.c.1",
+        "text": "Rods are located mainly in the periphery of the retina"
+      },
+      {
+        "id": "AFH.11.2.2.c.2",
+        "text": "Rods are used for low light intensity or night vision"
+      },
+      {
+        "id": "AFH.11.2.2.c.3",
+        "text": "In the absence of normal light, night vision is placed almost entirely on the rods"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.2.2.w.1",
+        "text": "Rods are concentrated in the fovea at the center of the macula"
+      },
+      {
+        "id": "AFH.11.2.2.w.2",
+        "text": "Rods are used for high-intensity daylight vision"
+      },
+      {
+        "id": "AFH.11.2.2.w.3",
+        "text": "Rods can detect fine detail and perceive color"
+      },
+      {
+        "id": "AFH.11.2.2.w.4",
+        "text": "Rods are less sensitive to light than the fovea"
+      },
+      {
+        "id": "AFH.11.2.2.w.5",
+        "text": "Rods are involved with central vision to identify far-away objects"
+      },
+      {
+        "id": "AFH.11.2.2.w.6",
+        "text": "Rods function only in complete darkness and not in moonlight"
+      },
+      {
+        "id": "AFH.11.2.2.w.7",
+        "text": "Rods transmit signals directly to the frontal lobe of the brain"
+      },
+      {
+        "id": "AFH.11.2.2.w.8",
+        "text": "Rods are the only photoreceptors present in the macula"
+      }
+    ],
+    "source": "FAA-H-8083-3C Chapter 11, Section: Anatomy of the Eye",
+    "subjects": [
+      "Rods",
+      "Night vision",
+      "Peripheral vision",
+      "Retina"
+    ]
+  },
+  {
+    "questionid": "AFH.11.2.3",
+    "question": "Which statements correctly describe how light is processed from entry into the eye to the creation of a mental image?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.2.3.c.1",
+        "text": "Light enters the eye through the cornea and then continues through the pupil"
+      },
+      {
+        "id": "AFH.11.2.3.c.2",
+        "text": "The lens focuses light on the surface of the retina"
+      },
+      {
+        "id": "AFH.11.2.3.c.3",
+        "text": "Electrical signals from the rods and cones are carried by the optic nerve to the occipital lobes of the brain"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.2.3.w.1",
+        "text": "Light enters the eye through the pupil before passing through the cornea"
+      },
+      {
+        "id": "AFH.11.2.3.w.2",
+        "text": "The iris focuses light onto the retina"
+      },
+      {
+        "id": "AFH.11.2.3.w.3",
+        "text": "The retina controls the amount of light entering the eye like a camera diaphragm"
+      },
+      {
+        "id": "AFH.11.2.3.w.4",
+        "text": "Electrical signals are interpreted in the frontal lobes of the brain"
+      },
+      {
+        "id": "AFH.11.2.3.w.5",
+        "text": "The pupil focuses light on the surface of the macula directly"
+      },
+      {
+        "id": "AFH.11.2.3.w.6",
+        "text": "The optic nerve carries signals to the temporal lobes for image interpretation"
+      },
+      {
+        "id": "AFH.11.2.3.w.7",
+        "text": "The lens controls the dilation and constriction of the pupil"
+      },
+      {
+        "id": "AFH.11.2.3.w.8",
+        "text": "The cornea records the image like film in a photographic camera"
+      }
+    ],
+    "source": "FAA-H-8083-3C Chapter 11, Section: Anatomy of the Eye",
+    "subjects": [
+      "Eye anatomy",
+      "Visual processing",
+      "Optic nerve",
+      "Retina"
+    ]
+  },
+  {
+    "questionid": "AFH.11.3.1",
+    "question": "Which of the following statements accurately describe scotopic vision?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.3.1.c.1",
+        "text": "Occurs during nighttime, partial moonlight, or low intensity artificial illumination conditions."
+      },
+      {
+        "id": "AFH.11.3.1.c.2",
+        "text": "Central vision (foveal cones) becomes ineffective to maintain visual acuity and color perception."
+      },
+      {
+        "id": "AFH.11.3.1.c.3",
+        "text": "Peripheral vision (off center scanning) provides the only means of seeing very dim objects in the dark."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.3.1.w.1",
+        "text": "Relies on central vision (foveal cones) to perceive and interpret sharp images and color."
+      },
+      {
+        "id": "AFH.11.3.1.w.2",
+        "text": "Occurs during daytime or high-intensity artificial illumination conditions."
+      },
+      {
+        "id": "AFH.11.3.1.w.3",
+        "text": "Occurs at dawn, dusk, or under full moonlight levels."
+      },
+      {
+        "id": "AFH.11.3.1.w.4",
+        "text": "Requires a combination of central (foveal cones) and peripheral (rods) vision."
+      },
+      {
+        "id": "AFH.11.3.1.w.5",
+        "text": "Is characterized by increasing visual acuity in low light."
+      },
+      {
+        "id": "AFH.11.3.1.w.6",
+        "text": "Is primarily responsible for sharp image and color perception."
+      },
+      {
+        "id": "AFH.11.3.1.w.7",
+        "text": "Involves foveal cones becoming more sensitive to light."
+      },
+      {
+        "id": "AFH.11.3.1.w.8",
+        "text": "Is also known as mesopic vision."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction",
+    "subjects": [
+      "Night Operations",
+      "Vision Types",
+      "Scotopic Vision"
+    ]
+  },
+  {
+    "questionid": "AFH.11.4.1",
+    "question": "What causes the 'Night Blind Spot' in pilots during low ambient illumination?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.4.1.c.1",
+        "text": "Absence of rods in the fovea"
+      },
+      {
+        "id": "AFH.11.4.1.c.2",
+        "text": "Affects central 5 to 10 degrees of visual field"
+      },
+      {
+        "id": "AFH.11.4.1.c.3",
+        "text": "Objects may fade after initial detection"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.4.1.w.1",
+        "text": "Presence of cones in the fovea"
+      },
+      {
+        "id": "AFH.11.4.1.w.2",
+        "text": "High ambient illumination"
+      },
+      {
+        "id": "AFH.11.4.1.w.3",
+        "text": "Peripheral vision is unaffected"
+      },
+      {
+        "id": "AFH.11.4.1.w.4",
+        "text": "Improved night vision"
+      },
+      {
+        "id": "AFH.11.4.1.w.5",
+        "text": "Increased rod density"
+      },
+      {
+        "id": "AFH.11.4.1.w.6",
+        "text": "Central vision enhancement"
+      },
+      {
+        "id": "AFH.11.4.1.w.7",
+        "text": "Objects become clearer"
+      },
+      {
+        "id": "AFH.11.4.1.w.8",
+        "text": "Improved detection of small objects"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction, Section: Night Blind Spot",
+    "subjects": [
+      "Night Vision",
+      "Pilot Perception",
+      "Visual Limitations"
+    ]
+  },
+  {
+    "questionid": "AFH.11.5.1",
+    "question": "What are some factors that can impair night vision adaptation for pilots?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.5.1.c.1",
+        "text": "Exposure to bright light sources for 1 second or more"
+      },
+      {
+        "id": "AFH.11.5.1.c.2",
+        "text": "Exposure to searchlights"
+      },
+      {
+        "id": "AFH.11.5.1.c.3",
+        "text": "Exposure to landing lights"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.5.1.w.1",
+        "text": "Intermittent flashes from anti-collision lights"
+      },
+      {
+        "id": "AFH.11.5.1.w.2",
+        "text": "Exposure to dim cockpit lighting"
+      },
+      {
+        "id": "AFH.11.5.1.w.3",
+        "text": "Exposure to starlight"
+      },
+      {
+        "id": "AFH.11.5.1.w.4",
+        "text": "Exposure to moonlight"
+      },
+      {
+        "id": "AFH.11.5.1.w.5",
+        "text": "Exposure to runway edge lights"
+      },
+      {
+        "id": "AFH.11.5.1.w.6",
+        "text": "Exposure to taxiway lights"
+      },
+      {
+        "id": "AFH.11.5.1.w.7",
+        "text": "Exposure to instrument panel lights"
+      },
+      {
+        "id": "AFH.11.5.1.w.8",
+        "text": "Exposure to distant city lights"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction, Section 11.5",
+    "subjects": [
+      "Night Vision",
+      "Pilot Safety",
+      "Vision Adaptation"
+    ]
+  },
+  {
+    "questionid": "AFH.11.6.1",
+    "question": "What factors can obscure surface references or the horizon during night operations?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.6.1.c.1",
+        "text": "Smoke"
+      },
+      {
+        "id": "AFH.11.6.1.c.2",
+        "text": "Fog"
+      },
+      {
+        "id": "AFH.11.6.1.c.3",
+        "text": "Haze"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.6.1.w.1",
+        "text": "Clear skies"
+      },
+      {
+        "id": "AFH.11.6.1.w.2",
+        "text": "Bright sunlight"
+      },
+      {
+        "id": "AFH.11.6.1.w.3",
+        "text": "Heavy rain"
+      },
+      {
+        "id": "AFH.11.6.1.w.4",
+        "text": "Strong winds"
+      },
+      {
+        "id": "AFH.11.6.1.w.5",
+        "text": "High temperatures"
+      },
+      {
+        "id": "AFH.11.6.1.w.6",
+        "text": "Low humidity"
+      },
+      {
+        "id": "AFH.11.6.1.w.7",
+        "text": "Dense forests"
+      },
+      {
+        "id": "AFH.11.6.1.w.8",
+        "text": "Mountain ranges"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction, Section 6",
+    "subjects": [
+      "Night Operations",
+      "Vision Impairment"
+    ]
+  },
+  {
+    "questionid": "AFH.11.6.2",
+    "question": "Which self-imposed stresses can impair a pilot's vision during night operations?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.6.2.c.1",
+        "text": "Alcohol consumption"
+      },
+      {
+        "id": "AFH.11.6.2.c.2",
+        "text": "Sleep deprivation"
+      },
+      {
+        "id": "AFH.11.6.2.c.3",
+        "text": "Tobacco use"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.6.2.w.1",
+        "text": "Regular exercise"
+      },
+      {
+        "id": "AFH.11.6.2.w.2",
+        "text": "Balanced diet"
+      },
+      {
+        "id": "AFH.11.6.2.w.3",
+        "text": "Hydration"
+      },
+      {
+        "id": "AFH.11.6.2.w.4",
+        "text": "Meditation"
+      },
+      {
+        "id": "AFH.11.6.2.w.5",
+        "text": "Proper rest"
+      },
+      {
+        "id": "AFH.11.6.2.w.6",
+        "text": "Healthy relationships"
+      },
+      {
+        "id": "AFH.11.6.2.w.7",
+        "text": "Positive mindset"
+      },
+      {
+        "id": "AFH.11.6.2.w.8",
+        "text": "Routine check-ups"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction, Section 6",
+    "subjects": [
+      "Vision Impairment",
+      "Pilot Health"
+    ]
+  },
+  {
+    "questionid": "AFH.11.6.3",
+    "question": "What are the effects of using red light illumination in the flight deck?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.6.3.c.1",
+        "text": "Distorts colors"
+      },
+      {
+        "id": "AFH.11.6.3.c.2",
+        "text": "Magenta appears red"
+      },
+      {
+        "id": "AFH.11.6.3.c.3",
+        "text": "Cyan appears black"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.6.3.w.1",
+        "text": "Enhances color accuracy"
+      },
+      {
+        "id": "AFH.11.6.3.w.2",
+        "text": "Improves night vision"
+      },
+      {
+        "id": "AFH.11.6.3.w.3",
+        "text": "Increases brightness"
+      },
+      {
+        "id": "AFH.11.6.3.w.4",
+        "text": "Reduces glare"
+      },
+      {
+        "id": "AFH.11.6.3.w.5",
+        "text": "Improves focus"
+      },
+      {
+        "id": "AFH.11.6.3.w.6",
+        "text": "Enhances contrast"
+      },
+      {
+        "id": "AFH.11.6.3.w.7",
+        "text": "Increases visibility"
+      },
+      {
+        "id": "AFH.11.6.3.w.8",
+        "text": "Reduces eye strain"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction, Section 6",
+    "subjects": [
+      "Flight Deck Lighting",
+      "Vision Impairment"
+    ]
+  },
+  {
+    "questionid": "AFH.11.6.4",
+    "question": "What visual impairments can result from using monovision contact lenses while piloting?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.6.4.c.1",
+        "text": "Impaired binocular vision"
+      },
+      {
+        "id": "AFH.11.6.4.c.2",
+        "text": "Impaired depth perception"
+      },
+      {
+        "id": "AFH.11.6.4.c.3",
+        "text": "Alternating vision"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.6.4.w.1",
+        "text": "Improved night vision"
+      },
+      {
+        "id": "AFH.11.6.4.w.2",
+        "text": "Enhanced color perception"
+      },
+      {
+        "id": "AFH.11.6.4.w.3",
+        "text": "Better distance vision"
+      },
+      {
+        "id": "AFH.11.6.4.w.4",
+        "text": "Reduced eye strain"
+      },
+      {
+        "id": "AFH.11.6.4.w.5",
+        "text": "Improved focus"
+      },
+      {
+        "id": "AFH.11.6.4.w.6",
+        "text": "Enhanced peripheral vision"
+      },
+      {
+        "id": "AFH.11.6.4.w.7",
+        "text": "Increased visual acuity"
+      },
+      {
+        "id": "AFH.11.6.4.w.8",
+        "text": "Reduced glare"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction, Section 6",
+    "subjects": [
+      "Vision Impairment",
+      "Contact Lenses"
+    ]
+  },
+  {
+    "questionid": "AFH.11.7.1",
+    "question": "According to the provided text, which of the following statements accurately describe aspects of night illusions or their effects?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.7.1.c.1",
+        "text": "Visual illusions are especially hazardous."
+      },
+      {
+        "id": "AFH.11.7.1.c.2",
+        "text": "False horizon is an illusion that leads to spatial disorientation."
+      },
+      {
+        "id": "AFH.11.7.1.c.3",
+        "text": "Autokinesis is an illusion that leads to spatial disorientation."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.7.1.w.1",
+        "text": "Pilots primarily rely on their vestibular system for correct information."
+      },
+      {
+        "id": "AFH.11.7.1.w.2",
+        "text": "Bright daylight conditions increase pilot susceptibility to error."
+      },
+      {
+        "id": "AFH.11.7.1.w.3",
+        "text": "False horizon primarily concerns the vestibular system."
+      },
+      {
+        "id": "AFH.11.7.1.w.4",
+        "text": "Autokinesis is an illusion related to rapid acceleration."
+      },
+      {
+        "id": "AFH.11.7.1.w.5",
+        "text": "Spatial disorientation is only caused by inner ear issues."
+      },
+      {
+        "id": "AFH.11.7.1.w.6",
+        "text": "Visual illusions are less of a concern during night operations."
+      },
+      {
+        "id": "AFH.11.7.1.w.7",
+        "text": "The text identifies the leans as a common night illusion."
+      },
+      {
+        "id": "AFH.11.7.1.w.8",
+        "text": "Pilots can easily overcome visual illusions with minimal training."
+      }
+    ],
+    "source": "AFH, Chapter 11, Section 7",
+    "subjects": [
+      "Night Operations",
+      "Visual Illusions",
+      "Spatial Disorientation"
+    ]
+  },
+  {
+    "questionid": "AFH.11.8.1",
+    "question": "What factors can create a false horizon during night flying?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.8.1.c.1",
+        "text": "Geometric patterns of ground lights"
+      },
+      {
+        "id": "AFH.11.8.1.c.2",
+        "text": "Aurora borealis display"
+      },
+      {
+        "id": "AFH.11.8.1.c.3",
+        "text": "Visible sloping cloud formation"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.8.1.w.1",
+        "text": "Clear skies without ground lights"
+      },
+      {
+        "id": "AFH.11.8.1.w.2",
+        "text": "Bright moonlight"
+      },
+      {
+        "id": "AFH.11.8.1.w.3",
+        "text": "Dense fog"
+      },
+      {
+        "id": "AFH.11.8.1.w.4",
+        "text": "Heavy rain"
+      },
+      {
+        "id": "AFH.11.8.1.w.5",
+        "text": "Strong wind"
+      },
+      {
+        "id": "AFH.11.8.1.w.6",
+        "text": "Clear water surface"
+      },
+      {
+        "id": "AFH.11.8.1.w.7",
+        "text": "Mountainous terrain"
+      },
+      {
+        "id": "AFH.11.8.1.w.8",
+        "text": "Urban skyline"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction, Section: False Horizon",
+    "subjects": [
+      "Night Flying",
+      "Visual Illusions",
+      "Pilot Perception"
+    ]
+  },
+  {
+    "questionid": "AFH.11.9.1",
+    "question": "Which of the following statements accurately describe the autokinesis phenomenon and its dangers to pilots?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.9.1.c.1",
+        "text": "A stationary light in the dark appears to move when stared at for several seconds"
+      },
+      {
+        "id": "AFH.11.9.1.c.2",
+        "text": "A disoriented pilot may lose aircraft control attempting to align with the light's false movements"
+      },
+      {
+        "id": "AFH.11.9.1.c.3",
+        "text": "Autokinesis is an illusion caused by fixating on a single light source in darkness"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.9.1.w.1",
+        "text": "Autokinesis causes a pilot to perceive the horizon as tilted during night flight"
+      },
+      {
+        "id": "AFH.11.9.1.w.2",
+        "text": "Autokinesis only occurs when multiple light sources are present in the visual field"
+      },
+      {
+        "id": "AFH.11.9.1.w.3",
+        "text": "The illusion of movement from autokinesis is caused by actual atmospheric light refraction"
+      },
+      {
+        "id": "AFH.11.9.1.w.4",
+        "text": "Autokinesis is most dangerous during daylight operations with reduced visibility"
+      },
+      {
+        "id": "AFH.11.9.1.w.5",
+        "text": "A pilot experiencing autokinesis will always correctly identify the light as stationary"
+      },
+      {
+        "id": "AFH.11.9.1.w.6",
+        "text": "Autokinesis results from the inner ear sending false motion signals to the brain"
+      },
+      {
+        "id": "AFH.11.9.1.w.7",
+        "text": "Staring at a moving light source for several seconds causes it to appear stationary"
+      },
+      {
+        "id": "AFH.11.9.1.w.8",
+        "text": "Autokinesis can be prevented by increasing cockpit lighting to maximum brightness"
+      }
+    ],
+    "source": "AFH Chapter 11: Night Operations Introduction, Section: Autokinesis",
+    "subjects": [
+      "Night Operations",
+      "Spatial Disorientation",
+      "Visual Illusions"
+    ]
+  },
+  {
+    "questionid": "AFH.11.10.1",
+    "question": "What are effective strategies to counteract the featureless terrain illusion during a night approach?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.10.1.c.1",
+        "text": "Use electronic glide slope or VASI if available"
+      },
+      {
+        "id": "AFH.11.10.1.c.2",
+        "text": "Rely on flight instruments to maintain orientation"
+      },
+      {
+        "id": "AFH.11.10.1.c.3",
+        "text": "Execute a go-around if position or altitude is in doubt"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.10.1.w.1",
+        "text": "Ignore runway lights and focus on peripheral cues"
+      },
+      {
+        "id": "AFH.11.10.1.w.2",
+        "text": "Rely solely on visual cues without instruments"
+      },
+      {
+        "id": "AFH.11.10.1.w.3",
+        "text": "Descend rapidly to adjust perceived altitude"
+      },
+      {
+        "id": "AFH.11.10.1.w.4",
+        "text": "Trust the appearance of the runway without verification"
+      },
+      {
+        "id": "AFH.11.10.1.w.5",
+        "text": "Avoid using navigation aids"
+      },
+      {
+        "id": "AFH.11.10.1.w.6",
+        "text": "Fly lower when runway appears farther"
+      },
+      {
+        "id": "AFH.11.10.1.w.7",
+        "text": "Depend on city lights for altitude judgment"
+      },
+      {
+        "id": "AFH.11.10.1.w.8",
+        "text": "Disregard airfield layout review"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction, Section 10: Featureless Terrain Illusion",
+    "subjects": [
+      "Night Operations",
+      "Featureless Terrain Illusion",
+      "Approach Techniques"
+    ]
+  },
+  {
+    "questionid": "AFH.11.11.1",
+    "question": "What are some common illusions caused by ground lighting during night operations?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.11.1.c.1",
+        "text": "Lights along a straight path can be mistaken for runway lights"
+      },
+      {
+        "id": "AFH.11.11.1.c.2",
+        "text": "Bright runway lights can create the illusion of less distance to the runway"
+      },
+      {
+        "id": "AFH.11.11.1.c.3",
+        "text": "Approach lights can make the aircraft seem higher in a turn to final"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.11.1.w.1",
+        "text": "Runway lights always make the runway appear further away"
+      },
+      {
+        "id": "AFH.11.11.1.w.2",
+        "text": "Ground lighting has no effect on pilot perception"
+      },
+      {
+        "id": "AFH.11.11.1.w.3",
+        "text": "Approach lights are always easy to distinguish from runway lights"
+      },
+      {
+        "id": "AFH.11.11.1.w.4",
+        "text": "Runway lights never cause confusion during night landings"
+      },
+      {
+        "id": "AFH.11.11.1.w.5",
+        "text": "Bright lights make it easier to judge distance"
+      },
+      {
+        "id": "AFH.11.11.1.w.6",
+        "text": "Bold colors have no impact on runway perception"
+      },
+      {
+        "id": "AFH.11.11.1.w.7",
+        "text": "Approach lights cannot affect altitude perception"
+      },
+      {
+        "id": "AFH.11.11.1.w.8",
+        "text": "Runway lights are always aligned with the aircraft's path"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction",
+    "subjects": [
+      "Night Operations",
+      "Ground Lighting Illusions",
+      "Pilot Perception"
+    ]
+  },
+  {
+    "questionid": "AFH.11.12.1",
+    "question": "What are the recommended characteristics and uses for a flashlight during night operations?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.12.1.c.1",
+        "text": "Should be dimmable and able to produce white/red light."
+      },
+      {
+        "id": "AFH.11.12.1.c.2",
+        "text": "White light is used for preflight visual inspection."
+      },
+      {
+        "id": "AFH.11.12.1.c.3",
+        "text": "Red light is used for flight deck operations and does not impair night vision."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.12.1.w.1",
+        "text": "Green light is preferred for chart reading."
+      },
+      {
+        "id": "AFH.11.12.1.w.2",
+        "text": "The flashlight should be as small as possible for easy storage."
+      },
+      {
+        "id": "AFH.11.12.1.w.3",
+        "text": "Blue light is ideal for preflight inspections."
+      },
+      {
+        "id": "AFH.11.12.1.w.4",
+        "text": "Red light significantly impairs night vision."
+      },
+      {
+        "id": "AFH.11.12.1.w.5",
+        "text": "A single-mode bright white flashlight is sufficient for all night tasks."
+      },
+      {
+        "id": "AFH.11.12.1.w.6",
+        "text": "Spare batteries are only needed for long cross-country flights."
+      },
+      {
+        "id": "AFH.11.12.1.w.7",
+        "text": "Flashlights should be stored in the baggage compartment for safety."
+      },
+      {
+        "id": "AFH.11.12.1.w.8",
+        "text": "Red light enhances the color perception of all pigments on charts."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Flashlight",
+      "Night Operations",
+      "Pilot Equipment"
+    ]
+  },
+  {
+    "questionid": "AFH.11.12.2",
+    "question": "What considerations are important regarding aeronautical charts for night operations?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.12.2.c.1",
+        "text": "Aeronautical charts are essential for night cross-country flights."
+      },
+      {
+        "id": "AFH.11.12.2.c.2",
+        "text": "If the intended course is near a chart's edge, the adjacent chart should be available."
+      },
+      {
+        "id": "AFH.11.12.2.c.3",
+        "text": "EFB brightness should be set not to seriously impair night vision."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.12.2.w.1",
+        "text": "Charts are less important at night due to city lights."
+      },
+      {
+        "id": "AFH.11.12.2.w.2",
+        "text": "Adjacent charts are only needed for VFR flights."
+      },
+      {
+        "id": "AFH.11.12.2.w.3",
+        "text": "EFBs eliminate the need for any brightness considerations."
+      },
+      {
+        "id": "AFH.11.12.2.w.4",
+        "text": "Red light improves the clarity of all chart details."
+      },
+      {
+        "id": "AFH.11.12.2.w.5",
+        "text": "Paper charts are obsolete for night navigation."
+      },
+      {
+        "id": "AFH.11.12.2.w.6",
+        "text": "City lights are only visible from short distances at night."
+      },
+      {
+        "id": "AFH.11.12.2.w.7",
+        "text": "Charts should be organized after taxiing for better access."
+      },
+      {
+        "id": "AFH.11.12.2.w.8",
+        "text": "Night vision is not affected by bright light sources."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Aeronautical Charts",
+      "Night Navigation",
+      "EFB"
+    ]
+  },
+  {
+    "questionid": "AFH.11.12.3",
+    "question": "What categories of procedures should a flight deck checklist contain for night operations, and what general organizational principle is emphasized?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.12.3.c.1",
+        "text": "Procedures for before starting engines and before takeoff."
+      },
+      {
+        "id": "AFH.11.12.3.c.2",
+        "text": "Procedures for cruise, before landing, and after landing."
+      },
+      {
+        "id": "AFH.11.12.3.c.3",
+        "text": "Procedures for stopping engines and emergencies."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.12.3.w.1",
+        "text": "Checklists are optional for experienced pilots at night."
+      },
+      {
+        "id": "AFH.11.12.3.w.2",
+        "text": "Only emergency procedures need to be on the checklist."
+      },
+      {
+        "id": "AFH.11.12.3.w.3",
+        "text": "Checklists should be memorized to avoid fumbling in the dark."
+      },
+      {
+        "id": "AFH.11.12.3.w.4",
+        "text": "Organization of equipment can be done during the flight to save time."
+      },
+      {
+        "id": "AFH.11.12.3.w.5",
+        "text": "Checklists are primarily for day VFR flights."
+      },
+      {
+        "id": "AFH.11.12.3.w.6",
+        "text": "The checklist should only contain procedures for engine-related tasks."
+      },
+      {
+        "id": "AFH.11.12.3.w.7",
+        "text": "Equipment should be placed in overhead bins for safety during turbulence."
+      },
+      {
+        "id": "AFH.11.12.3.w.8",
+        "text": "A separate checklist is required for each phase of flight."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Flight Deck Checklist",
+      "Organization",
+      "Night Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.11.13.1",
+    "question": "What are the basic minimum airplane equipment requirements for VFR flight at night according to 14 CFR part 91, section 91.205(c)?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.13.1.c.1",
+        "text": "Basic instruments"
+      },
+      {
+        "id": "AFH.11.13.1.c.2",
+        "text": "Lights"
+      },
+      {
+        "id": "AFH.11.13.1.c.3",
+        "text": "Electrical energy source"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.13.1.w.1",
+        "text": "Autopilot"
+      },
+      {
+        "id": "AFH.11.13.1.w.2",
+        "text": "Weather radar"
+      },
+      {
+        "id": "AFH.11.13.1.w.3",
+        "text": "GPS navigation"
+      },
+      {
+        "id": "AFH.11.13.1.w.4",
+        "text": "In-flight entertainment system"
+      },
+      {
+        "id": "AFH.11.13.1.w.5",
+        "text": "Pressurization system"
+      },
+      {
+        "id": "AFH.11.13.1.w.6",
+        "text": "De-icing equipment"
+      },
+      {
+        "id": "AFH.11.13.1.w.7",
+        "text": "Oxygen masks"
+      },
+      {
+        "id": "AFH.11.13.1.w.8",
+        "text": "Flight data recorder"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11, Section 13",
+    "subjects": [
+      "Aviation Regulations",
+      "Night Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.11.13.2",
+    "question": "Which lights are required on an aircraft for VFR night operations as per 14 CFR part 91, section 91.205(c)(3)?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.13.2.c.1",
+        "text": "Approved anti-collision light system"
+      },
+      {
+        "id": "AFH.11.13.2.c.2",
+        "text": "Position lights"
+      },
+      {
+        "id": "AFH.11.13.2.c.3",
+        "text": "Landing lights"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.13.2.w.1",
+        "text": "Cabin lights"
+      },
+      {
+        "id": "AFH.11.13.2.w.2",
+        "text": "Runway edge lights"
+      },
+      {
+        "id": "AFH.11.13.2.w.3",
+        "text": "Taxiway lights"
+      },
+      {
+        "id": "AFH.11.13.2.w.4",
+        "text": "Strobe lights"
+      },
+      {
+        "id": "AFH.11.13.2.w.5",
+        "text": "Cockpit lights"
+      },
+      {
+        "id": "AFH.11.13.2.w.6",
+        "text": "Beacon lights"
+      },
+      {
+        "id": "AFH.11.13.2.w.7",
+        "text": "Navigation lights"
+      },
+      {
+        "id": "AFH.11.13.2.w.8",
+        "text": "Instrument panel lights"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11, Section 13",
+    "subjects": [
+      "Aircraft Lighting",
+      "Night Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.11.13.3",
+    "question": "How are airplane position lights arranged to determine the direction of movement?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.13.3.c.1",
+        "text": "Red light on the left wingtip"
+      },
+      {
+        "id": "AFH.11.13.3.c.2",
+        "text": "Green light on the right wingtip"
+      },
+      {
+        "id": "AFH.11.13.3.c.3",
+        "text": "White light on the tail"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.13.3.w.1",
+        "text": "Blue light on the left wingtip"
+      },
+      {
+        "id": "AFH.11.13.3.w.2",
+        "text": "Yellow light on the right wingtip"
+      },
+      {
+        "id": "AFH.11.13.3.w.3",
+        "text": "Orange light on the tail"
+      },
+      {
+        "id": "AFH.11.13.3.w.4",
+        "text": "Purple light on the nose"
+      },
+      {
+        "id": "AFH.11.13.3.w.5",
+        "text": "Pink light on the fuselage"
+      },
+      {
+        "id": "AFH.11.13.3.w.6",
+        "text": "Cyan light on the landing gear"
+      },
+      {
+        "id": "AFH.11.13.3.w.7",
+        "text": "Amber light on the rudder"
+      },
+      {
+        "id": "AFH.11.13.3.w.8",
+        "text": "Violet light on the ailerons"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11, Section 13",
+    "subjects": [
+      "Aircraft Lighting",
+      "Navigation"
+    ]
+  },
+  {
+    "questionid": "AFH.11.14.1",
+    "question": "Which of the following correctly describe the rotating beacon characteristics used to identify a lighted military airport?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.14.1.c.1",
+        "text": "Alternating white and green lights"
+      },
+      {
+        "id": "AFH.11.14.1.c.2",
+        "text": "Dual peaked (two quick) white flashes followed by green"
+      },
+      {
+        "id": "AFH.11.14.1.c.3",
+        "text": "Differentiated from civil airports by two quick white flashes before the green"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.14.1.w.1",
+        "text": "Alternating white and yellow lights"
+      },
+      {
+        "id": "AFH.11.14.1.w.2",
+        "text": "Single white flash followed by green"
+      },
+      {
+        "id": "AFH.11.14.1.w.3",
+        "text": "Steady green light with periodic white flashes"
+      },
+      {
+        "id": "AFH.11.14.1.w.4",
+        "text": "Alternating red and white lights"
+      },
+      {
+        "id": "AFH.11.14.1.w.5",
+        "text": "Three quick white flashes followed by green"
+      },
+      {
+        "id": "AFH.11.14.1.w.6",
+        "text": "Alternating white and blue lights"
+      },
+      {
+        "id": "AFH.11.14.1.w.7",
+        "text": "Continuous white beacon with no color variation"
+      },
+      {
+        "id": "AFH.11.14.1.w.8",
+        "text": "Dual peaked yellow flashes followed by white"
+      }
+    ],
+    "source": "AFH Chapter 11, Section 11.14 – Airport and Navigation Lighting Aids",
+    "subjects": [
+      "Airport Lighting",
+      "Military Airport Beacons",
+      "Night Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.11.14.2",
+    "question": "Which statements accurately describe the use of red lights as aeronautical lighting aids?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.14.2.c.1",
+        "text": "Beacons producing red flashes indicate obstructions or areas hazardous to aerial navigation"
+      },
+      {
+        "id": "AFH.11.14.2.c.2",
+        "text": "Steady-burning red lights are used to mark obstructions on or near airports"
+      },
+      {
+        "id": "AFH.11.14.2.c.3",
+        "text": "Steady-burning red lights sometimes supplement flashing lights on en route obstructions"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.14.2.w.1",
+        "text": "Red lights are used to identify civilian water airports"
+      },
+      {
+        "id": "AFH.11.14.2.w.2",
+        "text": "Flashing red lights mark the runway threshold"
+      },
+      {
+        "id": "AFH.11.14.2.w.3",
+        "text": "Red lights indicate the beginning of a caution zone on the runway"
+      },
+      {
+        "id": "AFH.11.14.2.w.4",
+        "text": "Steady red lights are used to identify military airports"
+      },
+      {
+        "id": "AFH.11.14.2.w.5",
+        "text": "Red rotating beacons identify lighted civilian land airports"
+      },
+      {
+        "id": "AFH.11.14.2.w.6",
+        "text": "Red lights are used to mark overhead transmission line structures"
+      },
+      {
+        "id": "AFH.11.14.2.w.7",
+        "text": "Flashing red lights indicate a runway is closed to all traffic"
+      },
+      {
+        "id": "AFH.11.14.2.w.8",
+        "text": "Red lights are used exclusively for taxiway edge marking"
+      }
+    ],
+    "source": "AFH Chapter 11, Section 11.14 – Airport and Navigation Lighting Aids",
+    "subjects": [
+      "Obstruction Lighting",
+      "Red Light Indicators",
+      "Night Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.11.14.3",
+    "question": "Which of the following are true regarding high-intensity flashing white lights used as aeronautical lighting aids?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.14.3.c.1",
+        "text": "They are used to mark supporting structures of overhead transmission lines across rivers, chasms, and gorges"
+      },
+      {
+        "id": "AFH.11.14.3.c.2",
+        "text": "They are used to identify tall structures such as chimneys and towers"
+      },
+      {
+        "id": "AFH.11.14.3.c.3",
+        "text": "They result from technological advancements in aeronautical lighting"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.14.3.w.1",
+        "text": "They are used to mark runway edge limits"
+      },
+      {
+        "id": "AFH.11.14.3.w.2",
+        "text": "They indicate a lighted civilian water airport"
+      },
+      {
+        "id": "AFH.11.14.3.w.3",
+        "text": "They are used exclusively on military airfields"
+      },
+      {
+        "id": "AFH.11.14.3.w.4",
+        "text": "They replace rotating beacons at congested airports"
+      },
+      {
+        "id": "AFH.11.14.3.w.5",
+        "text": "They mark the caution zone 2,000 feet from the runway end"
+      },
+      {
+        "id": "AFH.11.14.3.w.6",
+        "text": "They are used to identify taxiway centerlines"
+      },
+      {
+        "id": "AFH.11.14.3.w.7",
+        "text": "They indicate areas considered safe for emergency landings"
+      },
+      {
+        "id": "AFH.11.14.3.w.8",
+        "text": "They are activated by radio control from the cockpit"
+      }
+    ],
+    "source": "AFH Chapter 11, Section 11.14 – Airport and Navigation Lighting Aids",
+    "subjects": [
+      "Obstruction Lighting",
+      "High-Intensity White Lights",
+      "Night Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.11.14.4",
+    "question": "Which of the following correctly describe the basic runway edge lighting system for VFR night operations?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.14.4.c.1",
+        "text": "It consists of two straight parallel lines of lights defining the lateral limits of the runway"
+      },
+      {
+        "id": "AFH.11.14.4.c.2",
+        "text": "Runway edge lights are aviation white, with aviation yellow permitted for 2,000 feet from the far end to indicate a caution zone"
+      },
+      {
+        "id": "AFH.11.14.4.c.3",
+        "text": "At some airports, runway edge light intensity can be activated and adjusted by radio control"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.14.4.w.1",
+        "text": "Runway edge lights are always yellow for their entire length"
+      },
+      {
+        "id": "AFH.11.14.4.w.2",
+        "text": "The caution zone begins 1,000 feet from the runway threshold"
+      },
+      {
+        "id": "AFH.11.14.4.w.3",
+        "text": "Runway edge lights are blue to distinguish them from taxiway lights"
+      },
+      {
+        "id": "AFH.11.14.4.w.4",
+        "text": "The radio control system uses a 5-step control responsive to microphone clicks"
+      },
+      {
+        "id": "AFH.11.14.4.w.5",
+        "text": "Runway edge lights define the longitudinal centerline of the runway"
+      },
+      {
+        "id": "AFH.11.14.4.w.6",
+        "text": "The caution zone is marked with red lights near the departure end"
+      },
+      {
+        "id": "AFH.11.14.4.w.7",
+        "text": "Runway edge lights can only be controlled from the airport tower"
+      },
+      {
+        "id": "AFH.11.14.4.w.8",
+        "text": "The basic system includes approach lighting as a required component"
+      }
+    ],
+    "source": "AFH Chapter 11, Section 11.14 – Airport and Navigation Lighting Aids",
+    "subjects": [
+      "Runway Edge Lighting",
+      "VFR Night Operations",
+      "Airport Lighting"
+    ]
+  },
+  {
+    "questionid": "AFH.11.14.5",
+    "question": "Which of the following are recommended pre-flight actions specifically related to lighting systems before a night cross-country flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.14.5.c.1",
+        "text": "Check the availability and status of lighting systems at the destination airport"
+      },
+      {
+        "id": "AFH.11.14.5.c.2",
+        "text": "Review pertinent NOTAMs to determine the status of each lighting facility"
+      },
+      {
+        "id": "AFH.11.14.5.c.3",
+        "text": "Consult aeronautical charts and Chart Supplements for lighting information"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.14.5.w.1",
+        "text": "File a flight plan listing all lighted airports along the route"
+      },
+      {
+        "id": "AFH.11.14.5.w.2",
+        "text": "Contact the destination airport tower to request beacon activation"
+      },
+      {
+        "id": "AFH.11.14.5.w.3",
+        "text": "Verify that the aircraft's landing light is rated for high-intensity use"
+      },
+      {
+        "id": "AFH.11.14.5.w.4",
+        "text": "Obtain a weather briefing focused solely on ceiling and visibility"
+      },
+      {
+        "id": "AFH.11.14.5.w.5",
+        "text": "Check that the aircraft beacon is synchronized with airport beacons"
+      },
+      {
+        "id": "AFH.11.14.5.w.6",
+        "text": "Request a PIREP from pilots who recently landed at the destination"
+      },
+      {
+        "id": "AFH.11.14.5.w.7",
+        "text": "Confirm that runway edge lights are set to maximum intensity before departure"
+      },
+      {
+        "id": "AFH.11.14.5.w.8",
+        "text": "Verify that all en route VORs have associated airport beacons"
+      }
+    ],
+    "source": "AFH Chapter 11, Section 11.14 – Airport and Navigation Lighting Aids",
+    "subjects": [
+      "Pre-Flight Planning",
+      "Night Cross-Country",
+      "NOTAMs"
+    ]
+  },
+  {
+    "questionid": "AFH.11.14.6",
+    "question": "Which of the following statements correctly describe how airports are identified at night using rotating beacons?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.14.6.c.1",
+        "text": "Lighted civilian land airports are identified by alternating white and green beacon flashes"
+      },
+      {
+        "id": "AFH.11.14.6.c.2",
+        "text": "Lighted civilian water airports are identified by alternating white and yellow beacon flashes"
+      },
+      {
+        "id": "AFH.11.14.6.c.3",
+        "text": "Airports near large cities can be difficult to identify because airport lights tend to blend with city lights"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.14.6.w.1",
+        "text": "All airports use the same white-only rotating beacon for identification"
+      },
+      {
+        "id": "AFH.11.14.6.w.2",
+        "text": "Civilian land airports use alternating red and white flashes"
+      },
+      {
+        "id": "AFH.11.14.6.w.3",
+        "text": "Water airports use alternating blue and white beacon flashes"
+      },
+      {
+        "id": "AFH.11.14.6.w.4",
+        "text": "Military airports use a steady green beacon with no white component"
+      },
+      {
+        "id": "AFH.11.14.6.w.5",
+        "text": "Rotating beacons at civilian airports flash at irregular intervals"
+      },
+      {
+        "id": "AFH.11.14.6.w.6",
+        "text": "Airport beacons near cities are required to be brighter than surrounding city lights"
+      },
+      {
+        "id": "AFH.11.14.6.w.7",
+        "text": "Civilian water airports use the same beacon pattern as military airports"
+      },
+      {
+        "id": "AFH.11.14.6.w.8",
+        "text": "Rotating beacons are only required at airports with instrument approaches"
+      }
+    ],
+    "source": "AFH Chapter 11, Section 11.14 – Airport and Navigation Lighting Aids",
+    "subjects": [
+      "Rotating Beacons",
+      "Airport Identification",
+      "Night Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.11.15.1",
+    "question": "What are some recommended practices for training in night flight according to the Airplane Flying Handbook?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.15.1.c.1",
+        "text": "Practice maneuvers with flight deck lights turned off"
+      },
+      {
+        "id": "AFH.11.15.1.c.2",
+        "text": "Use navigation equipment and local NAVAIDs"
+      },
+      {
+        "id": "AFH.11.15.1.c.3",
+        "text": "Practice recovery from unusual attitudes with a flight instructor"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.15.1.w.1",
+        "text": "Avoid using NAVAIDs during night flights"
+      },
+      {
+        "id": "AFH.11.15.1.w.2",
+        "text": "Practice only straight-and-level flight"
+      },
+      {
+        "id": "AFH.11.15.1.w.3",
+        "text": "Do not simulate electrical failures"
+      },
+      {
+        "id": "AFH.11.15.1.w.4",
+        "text": "Rely solely on visual checkpoints"
+      },
+      {
+        "id": "AFH.11.15.1.w.5",
+        "text": "Conduct night flights without pre-planning"
+      },
+      {
+        "id": "AFH.11.15.1.w.6",
+        "text": "Ignore fuel consumption during night flights"
+      },
+      {
+        "id": "AFH.11.15.1.w.7",
+        "text": "Avoid practicing steep turns"
+      },
+      {
+        "id": "AFH.11.15.1.w.8",
+        "text": "Practice maneuvers only with lights on"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction, Section: Training for Night Flight",
+    "subjects": [
+      "Night Flight Training",
+      "Pilot Maneuvers",
+      "Navigation Equipment"
+    ]
+  },
+  {
+    "questionid": "AFH.11.16.1",
+    "question": "What are essential considerations for preflight preparation for night flying?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.16.1.c.1",
+        "text": "Review weather reports with attention to temperature/dew point spread"
+      },
+      {
+        "id": "AFH.11.16.1.c.2",
+        "text": "Check operation of all airplane lights during preflight inspection"
+      },
+      {
+        "id": "AFH.11.16.1.c.3",
+        "text": "Ensure GPS waypoints are loaded and database is accurate"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.16.1.w.1",
+        "text": "Ignore wind direction and speed"
+      },
+      {
+        "id": "AFH.11.16.1.w.2",
+        "text": "Use only daytime aeronautical charts"
+      },
+      {
+        "id": "AFH.11.16.1.w.3",
+        "text": "Rely solely on visual checkpoints without GPS"
+      },
+      {
+        "id": "AFH.11.16.1.w.4",
+        "text": "Skip checking personal equipment"
+      },
+      {
+        "id": "AFH.11.16.1.w.5",
+        "text": "Avoid using radio navigation aids"
+      },
+      {
+        "id": "AFH.11.16.1.w.6",
+        "text": "Neglect checking parking ramps with a flashlight"
+      },
+      {
+        "id": "AFH.11.16.1.w.7",
+        "text": "Draw course lines in bright colors"
+      },
+      {
+        "id": "AFH.11.16.1.w.8",
+        "text": "Assume all equipment functions without testing"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction, Section: Preparation and Preflight",
+    "subjects": [
+      "Night Flying",
+      "Preflight Preparation",
+      "Navigation"
+    ]
+  },
+  {
+    "questionid": "AFH.11.17.1",
+    "question": "What should a pilot do before starting the engine at night?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.17.1.c.1",
+        "text": "Organize and arrange all items"
+      },
+      {
+        "id": "AFH.11.17.1.c.2",
+        "text": "Clear the propeller area"
+      },
+      {
+        "id": "AFH.11.17.1.c.3",
+        "text": "Turn off unnecessary electrical equipment"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.17.1.w.1",
+        "text": "Turn on all lights"
+      },
+      {
+        "id": "AFH.11.17.1.w.2",
+        "text": "Ignore the propeller area"
+      },
+      {
+        "id": "AFH.11.17.1.w.3",
+        "text": "Leave all electrical equipment on"
+      },
+      {
+        "id": "AFH.11.17.1.w.4",
+        "text": "Start the engine immediately"
+      },
+      {
+        "id": "AFH.11.17.1.w.5",
+        "text": "Skip organizing items"
+      },
+      {
+        "id": "AFH.11.17.1.w.6",
+        "text": "Rely solely on beacon lights"
+      },
+      {
+        "id": "AFH.11.17.1.w.7",
+        "text": "Use full electrical power"
+      },
+      {
+        "id": "AFH.11.17.1.w.8",
+        "text": "Disregard nearby persons"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction",
+    "subjects": [
+      "Night Operations",
+      "Pre-flight Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.11.17.2",
+    "question": "What actions help prevent excessive electrical drain during engine start?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.17.2.c.1",
+        "text": "Turn off unnecessary electrical equipment"
+      },
+      {
+        "id": "AFH.11.17.2.c.2",
+        "text": "Use taxi or landing lights only when needed"
+      },
+      {
+        "id": "AFH.11.17.2.c.3",
+        "text": "Avoid continuous use of landing lights"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.17.2.w.1",
+        "text": "Keep all lights on"
+      },
+      {
+        "id": "AFH.11.17.2.w.2",
+        "text": "Use all electrical systems"
+      },
+      {
+        "id": "AFH.11.17.2.w.3",
+        "text": "Ignore electrical drain"
+      },
+      {
+        "id": "AFH.11.17.2.w.4",
+        "text": "Turn on all lights immediately"
+      },
+      {
+        "id": "AFH.11.17.2.w.5",
+        "text": "Use landing lights continuously"
+      },
+      {
+        "id": "AFH.11.17.2.w.6",
+        "text": "Rely on battery power only"
+      },
+      {
+        "id": "AFH.11.17.2.w.7",
+        "text": "Ignore electrical system limits"
+      },
+      {
+        "id": "AFH.11.17.2.w.8",
+        "text": "Use high power settings"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction",
+    "subjects": [
+      "Electrical Systems",
+      "Night Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.11.17.3",
+    "question": "Why should a pilot be cautious with taxi or landing lights at night?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.17.3.c.1",
+        "text": "To avoid overheating"
+      },
+      {
+        "id": "AFH.11.17.3.c.2",
+        "text": "To prevent blinding other pilots"
+      },
+      {
+        "id": "AFH.11.17.3.c.3",
+        "text": "To reduce electrical system load"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.17.3.w.1",
+        "text": "To increase visibility for others"
+      },
+      {
+        "id": "AFH.11.17.3.w.2",
+        "text": "To ensure maximum brightness"
+      },
+      {
+        "id": "AFH.11.17.3.w.3",
+        "text": "To signal ground crew"
+      },
+      {
+        "id": "AFH.11.17.3.w.4",
+        "text": "To maintain full power usage"
+      },
+      {
+        "id": "AFH.11.17.3.w.5",
+        "text": "To keep lights on continuously"
+      },
+      {
+        "id": "AFH.11.17.3.w.6",
+        "text": "To ignore overheating risks"
+      },
+      {
+        "id": "AFH.11.17.3.w.7",
+        "text": "To prioritize light usage"
+      },
+      {
+        "id": "AFH.11.17.3.w.8",
+        "text": "To disregard electrical load"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction",
+    "subjects": [
+      "Lighting Systems",
+      "Night Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.11.17.4",
+    "question": "What should a pilot do while taxiing at night?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.17.4.c.1",
+        "text": "Taxi slowly in congested areas"
+      },
+      {
+        "id": "AFH.11.17.4.c.2",
+        "text": "Follow painted taxi lines"
+      },
+      {
+        "id": "AFH.11.17.4.c.3",
+        "text": "Perform an instrument check"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.17.4.w.1",
+        "text": "Ignore taxi lines"
+      },
+      {
+        "id": "AFH.11.17.4.w.2",
+        "text": "Taxi quickly"
+      },
+      {
+        "id": "AFH.11.17.4.w.3",
+        "text": "Skip instrument checks"
+      },
+      {
+        "id": "AFH.11.17.4.w.4",
+        "text": "Rely on memory for taxi routes"
+      },
+      {
+        "id": "AFH.11.17.4.w.5",
+        "text": "Disregard congestion"
+      },
+      {
+        "id": "AFH.11.17.4.w.6",
+        "text": "Use maximum speed"
+      },
+      {
+        "id": "AFH.11.17.4.w.7",
+        "text": "Avoid checking instruments"
+      },
+      {
+        "id": "AFH.11.17.4.w.8",
+        "text": "Ignore taxiway markings"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction",
+    "subjects": [
+      "Taxiing Procedures",
+      "Night Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.11.17.5",
+    "question": "What considerations should be made when using lights during night taxiing?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.17.5.c.1",
+        "text": "Avoid blinding other pilots"
+      },
+      {
+        "id": "AFH.11.17.5.c.2",
+        "text": "Use lights only when necessary"
+      },
+      {
+        "id": "AFH.11.17.5.c.3",
+        "text": "Consider electrical system limits"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.17.5.w.1",
+        "text": "Maximize light usage"
+      },
+      {
+        "id": "AFH.11.17.5.w.2",
+        "text": "Ignore other pilots"
+      },
+      {
+        "id": "AFH.11.17.5.w.3",
+        "text": "Use lights continuously"
+      },
+      {
+        "id": "AFH.11.17.5.w.4",
+        "text": "Disregard electrical limits"
+      },
+      {
+        "id": "AFH.11.17.5.w.5",
+        "text": "Prioritize brightness"
+      },
+      {
+        "id": "AFH.11.17.5.w.6",
+        "text": "Rely on lights for navigation"
+      },
+      {
+        "id": "AFH.11.17.5.w.7",
+        "text": "Ignore light overheating"
+      },
+      {
+        "id": "AFH.11.17.5.w.8",
+        "text": "Use lights for signaling"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction",
+    "subjects": [
+      "Lighting Systems",
+      "Night Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.11.18.1",
+    "question": "What are key considerations for a pilot when adjusting flight deck lights during night operations?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.18.1.c.1",
+        "text": "Adjust to a minimum brightness that allows for reading instruments."
+      },
+      {
+        "id": "AFH.11.18.1.c.2",
+        "text": "Adjust to a minimum brightness that allows for reading switches."
+      },
+      {
+        "id": "AFH.11.18.1.c.3",
+        "text": "Adjust to a brightness that does not hinder outside vision."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.18.1.w.1",
+        "text": "Maximize brightness to clearly see all controls."
+      },
+      {
+        "id": "AFH.11.18.1.w.2",
+        "text": "Ensure all lights are off to preserve night vision."
+      },
+      {
+        "id": "AFH.11.18.1.w.3",
+        "text": "Adjust to match the brightness of external runway lights."
+      },
+      {
+        "id": "AFH.11.18.1.w.4",
+        "text": "Set to a fixed, pre-determined level for all night flights."
+      },
+      {
+        "id": "AFH.11.18.1.w.5",
+        "text": "Increase brightness during critical phases like takeoff."
+      },
+      {
+        "id": "AFH.11.18.1.w.6",
+        "text": "Use only red light to avoid disturbing night vision."
+      },
+      {
+        "id": "AFH.11.18.1.w.7",
+        "text": "Keep them bright to illuminate the cockpit for passengers."
+      },
+      {
+        "id": "AFH.11.18.1.w.8",
+        "text": "Adjust them to be brighter than the instrument lights."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Night Operations",
+      "Flight Deck Lighting",
+      "Visual References"
+    ]
+  },
+  {
+    "questionid": "AFH.11.18.2",
+    "question": "Which actions are essential for a pilot to perform before initiating a night takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.18.2.c.1",
+        "text": "Turn the landing and taxi lights ON."
+      },
+      {
+        "id": "AFH.11.18.2.c.2",
+        "text": "Line the airplane up with the centerline of the runway."
+      },
+      {
+        "id": "AFH.11.18.2.c.3",
+        "text": "Note and set the heading indicator to the known runway direction."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.18.2.w.1",
+        "text": "Perform a full instrument scan before advancing throttle."
+      },
+      {
+        "id": "AFH.11.18.2.w.2",
+        "text": "Verify all passenger seatbelts are fastened."
+      },
+      {
+        "id": "AFH.11.18.2.w.3",
+        "text": "Confirm the destination airport weather."
+      },
+      {
+        "id": "AFH.11.18.2.w.4",
+        "text": "Increase flight deck light brightness for better visibility."
+      },
+      {
+        "id": "AFH.11.18.2.w.5",
+        "text": "Ensure the landing gear is retracted."
+      },
+      {
+        "id": "AFH.11.18.2.w.6",
+        "text": "Check the fuel quantity for the entire flight."
+      },
+      {
+        "id": "AFH.11.18.2.w.7",
+        "text": "Activate the autopilot for initial climb."
+      },
+      {
+        "id": "AFH.11.18.2.w.8",
+        "text": "Conduct a full engine run-up at the hold short line."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Night Takeoff Procedures",
+      "Pre-Takeoff Checks",
+      "Runway Alignment"
+    ]
+  },
+  {
+    "questionid": "AFH.11.18.3",
+    "question": "Which flight instruments are crucial for confirming a positive climb after a night takeoff?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.18.3.c.1",
+        "text": "Attitude indicator"
+      },
+      {
+        "id": "AFH.11.18.3.c.2",
+        "text": "Vertical speed indicator (VSI)"
+      },
+      {
+        "id": "AFH.11.18.3.c.3",
+        "text": "Altimeter"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.18.3.w.1",
+        "text": "Airspeed indicator"
+      },
+      {
+        "id": "AFH.11.18.3.w.2",
+        "text": "Turn coordinator"
+      },
+      {
+        "id": "AFH.11.18.3.w.3",
+        "text": "Magnetic compass"
+      },
+      {
+        "id": "AFH.11.18.3.w.4",
+        "text": "Engine RPM gauge"
+      },
+      {
+        "id": "AFH.11.18.3.w.5",
+        "text": "Oil pressure gauge"
+      },
+      {
+        "id": "AFH.11.18.3.w.6",
+        "text": "Fuel gauge"
+      },
+      {
+        "id": "AFH.11.18.3.w.7",
+        "text": "Outside air temperature gauge"
+      },
+      {
+        "id": "AFH.11.18.3.w.8",
+        "text": "Clock"
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Night Climb",
+      "Flight Instruments",
+      "Attitude Control"
+    ]
+  },
+  {
+    "questionid": "AFH.11.18.4",
+    "question": "Under what conditions should landing lights be turned off during a night climb?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.18.4.c.1",
+        "text": "After the climb is well established."
+      },
+      {
+        "id": "AFH.11.18.4.c.2",
+        "text": "When the light beam no longer extends to the surface."
+      },
+      {
+        "id": "AFH.11.18.4.c.3",
+        "text": "To prevent distortion when reflected by haze, smoke, or clouds."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.18.4.w.1",
+        "text": "Immediately after lift-off."
+      },
+      {
+        "id": "AFH.11.18.4.w.2",
+        "text": "When reaching cruise altitude."
+      },
+      {
+        "id": "AFH.11.18.4.w.3",
+        "text": "To conserve electrical power."
+      },
+      {
+        "id": "AFH.11.18.4.w.4",
+        "text": "To avoid blinding other aircraft."
+      },
+      {
+        "id": "AFH.11.18.4.w.5",
+        "text": "When the aircraft enters IMC conditions."
+      },
+      {
+        "id": "AFH.11.18.4.w.6",
+        "text": "Only if ATC instructs the pilot to do so."
+      },
+      {
+        "id": "AFH.11.18.4.w.7",
+        "text": "To reduce drag."
+      },
+      {
+        "id": "AFH.11.18.4.w.8",
+        "text": "Before retracting the landing gear."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Night Climb Procedures",
+      "Landing Lights",
+      "Visual Distortion"
+    ]
+  },
+  {
+    "questionid": "AFH.11.19.1",
+    "question": "What is a visual indication of flying into restricted visibility conditions at night?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.19.1.c.1",
+        "text": "Gradual disappearance of lights on the ground"
+      },
+      {
+        "id": "AFH.11.19.1.c.2",
+        "text": "Lights surrounded by a halo or glow"
+      },
+      {
+        "id": "AFH.11.19.1.c.3",
+        "text": "Halo or glow indicates ground fog"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.19.1.w.1",
+        "text": "Sudden appearance of bright stars"
+      },
+      {
+        "id": "AFH.11.19.1.w.2",
+        "text": "Clear view of the horizon"
+      },
+      {
+        "id": "AFH.11.19.1.w.3",
+        "text": "Sharp outlines of clouds"
+      },
+      {
+        "id": "AFH.11.19.1.w.4",
+        "text": "Increased visibility of distant objects"
+      },
+      {
+        "id": "AFH.11.19.1.w.5",
+        "text": "Bright moonlight illuminating the ground"
+      },
+      {
+        "id": "AFH.11.19.1.w.6",
+        "text": "Clear view of water bodies"
+      },
+      {
+        "id": "AFH.11.19.1.w.7",
+        "text": "Sharp shadows on the ground"
+      },
+      {
+        "id": "AFH.11.19.1.w.8",
+        "text": "Brightly lit aircraft instruments"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction",
+    "subjects": [
+      "Night Operations",
+      "Visibility",
+      "Pilot Caution"
+    ]
+  },
+  {
+    "questionid": "AFH.11.19.2",
+    "question": "What challenges might pilots face when flying over water at night?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.19.2.c.1",
+        "text": "Horizon blends with the water"
+      },
+      {
+        "id": "AFH.11.19.2.c.2",
+        "text": "Stars reflected on the water surface"
+      },
+      {
+        "id": "AFH.11.19.2.c.3",
+        "text": "Loss of orientation due to poor visibility"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.19.2.w.1",
+        "text": "Increased visibility of landmasses"
+      },
+      {
+        "id": "AFH.11.19.2.w.2",
+        "text": "Clear distinction between sky and water"
+      },
+      {
+        "id": "AFH.11.19.2.w.3",
+        "text": "Bright reflections from city lights"
+      },
+      {
+        "id": "AFH.11.19.2.w.4",
+        "text": "Enhanced radar functionality"
+      },
+      {
+        "id": "AFH.11.19.2.w.5",
+        "text": "Improved radio communication"
+      },
+      {
+        "id": "AFH.11.19.2.w.6",
+        "text": "Clear view of marine traffic"
+      },
+      {
+        "id": "AFH.11.19.2.w.7",
+        "text": "Bright moonlight guiding the way"
+      },
+      {
+        "id": "AFH.11.19.2.w.8",
+        "text": "Sharp outlines of coastal features"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction",
+    "subjects": [
+      "Night Operations",
+      "Water Navigation",
+      "Orientation Challenges"
+    ]
+  },
+  {
+    "questionid": "AFH.11.19.3",
+    "question": "Why should pilots avoid VFR night flights if expecting conditions below VFR minimums?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.19.3.c.1",
+        "text": "Increased risk of encountering IMC"
+      },
+      {
+        "id": "AFH.11.19.3.c.2",
+        "text": "Need for IFR-equipped aircraft and pilot"
+      },
+      {
+        "id": "AFH.11.19.3.c.3",
+        "text": "Potential hazards without IFR flight plan"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.19.3.w.1",
+        "text": "Improved visibility at higher altitudes"
+      },
+      {
+        "id": "AFH.11.19.3.w.2",
+        "text": "Enhanced ground lighting at night"
+      },
+      {
+        "id": "AFH.11.19.3.w.3",
+        "text": "Better weather conditions at night"
+      },
+      {
+        "id": "AFH.11.19.3.w.4",
+        "text": "Increased air traffic control support"
+      },
+      {
+        "id": "AFH.11.19.3.w.5",
+        "text": "More reliable GPS signals"
+      },
+      {
+        "id": "AFH.11.19.3.w.6",
+        "text": "Reduced air traffic congestion"
+      },
+      {
+        "id": "AFH.11.19.3.w.7",
+        "text": "Improved aircraft performance"
+      },
+      {
+        "id": "AFH.11.19.3.w.8",
+        "text": "Clearer radio communications"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction",
+    "subjects": [
+      "Night Operations",
+      "VFR vs. IFR",
+      "Flight Safety"
+    ]
+  },
+  {
+    "questionid": "AFH.11.20.1",
+    "question": "What should a pilot do to identify the runway lights when approaching an unfamiliar airport at night?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.20.1.c.1",
+        "text": "Fly toward the rotating beacon"
+      },
+      {
+        "id": "AFH.11.20.1.c.2",
+        "text": "Keep airport lights in sight throughout the approach"
+      },
+      {
+        "id": "AFH.11.20.1.c.3",
+        "text": "Identify runway threshold and runway-edge lights"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.20.1.w.1",
+        "text": "Rely solely on GPS"
+      },
+      {
+        "id": "AFH.11.20.1.w.2",
+        "text": "Ignore the rotating beacon"
+      },
+      {
+        "id": "AFH.11.20.1.w.3",
+        "text": "Use only the altimeter"
+      },
+      {
+        "id": "AFH.11.20.1.w.4",
+        "text": "Focus on non-airport lights"
+      },
+      {
+        "id": "AFH.11.20.1.w.5",
+        "text": "Depend on ground references"
+      },
+      {
+        "id": "AFH.11.20.1.w.6",
+        "text": "Use only the airspeed indicator"
+      },
+      {
+        "id": "AFH.11.20.1.w.7",
+        "text": "Ignore the heading indicator"
+      },
+      {
+        "id": "AFH.11.20.1.w.8",
+        "text": "Rely on landing lights alone"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction, Section: Approaches and Landings",
+    "subjects": [
+      "Night Operations",
+      "Approach Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.11.20.2",
+    "question": "Which instruments should a pilot rely on more during night approaches due to limited lighting conditions?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.20.2.c.1",
+        "text": "Altimeter"
+      },
+      {
+        "id": "AFH.11.20.2.c.2",
+        "text": "Airspeed indicator"
+      },
+      {
+        "id": "AFH.11.20.2.c.3",
+        "text": "VSI (Vertical Speed Indicator)"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.20.2.w.1",
+        "text": "GPS"
+      },
+      {
+        "id": "AFH.11.20.2.w.2",
+        "text": "Compass"
+      },
+      {
+        "id": "AFH.11.20.2.w.3",
+        "text": "Fuel gauge"
+      },
+      {
+        "id": "AFH.11.20.2.w.4",
+        "text": "Oil pressure gauge"
+      },
+      {
+        "id": "AFH.11.20.2.w.5",
+        "text": "Temperature gauge"
+      },
+      {
+        "id": "AFH.11.20.2.w.6",
+        "text": "Tachometer"
+      },
+      {
+        "id": "AFH.11.20.2.w.7",
+        "text": "Clock"
+      },
+      {
+        "id": "AFH.11.20.2.w.8",
+        "text": "Radio altimeter"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction, Section: Approaches and Landings",
+    "subjects": [
+      "Instrument Usage",
+      "Night Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.11.20.3",
+    "question": "What is an important visual aid for maintaining a proper glide path during night landings?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.20.3.c.1",
+        "text": "Visual Approach Slope Indicator (VASI)"
+      },
+      {
+        "id": "AFH.11.20.3.c.2",
+        "text": "Runway-edge lights"
+      },
+      {
+        "id": "AFH.11.20.3.c.3",
+        "text": "Runway threshold lights"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.20.3.w.1",
+        "text": "Taxiway lights"
+      },
+      {
+        "id": "AFH.11.20.3.w.2",
+        "text": "Beacon lights"
+      },
+      {
+        "id": "AFH.11.20.3.w.3",
+        "text": "Strobe lights"
+      },
+      {
+        "id": "AFH.11.20.3.w.4",
+        "text": "Landing lights"
+      },
+      {
+        "id": "AFH.11.20.3.w.5",
+        "text": "Wind sock"
+      },
+      {
+        "id": "AFH.11.20.3.w.6",
+        "text": "PAPI (Precision Approach Path Indicator)"
+      },
+      {
+        "id": "AFH.11.20.3.w.7",
+        "text": "ILS (Instrument Landing System)"
+      },
+      {
+        "id": "AFH.11.20.3.w.8",
+        "text": "Approach lighting system"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction, Section: Approaches and Landings",
+    "subjects": [
+      "Visual Aids",
+      "Night Landings"
+    ]
+  },
+  {
+    "questionid": "AFH.11.20.4",
+    "question": "What should a pilot do to maintain a stabilized approach during the final approach at night?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.20.4.c.1",
+        "text": "Use proper pitch and power"
+      },
+      {
+        "id": "AFH.11.20.4.c.2",
+        "text": "Correct for wind drift"
+      },
+      {
+        "id": "AFH.11.20.4.c.3",
+        "text": "Align between runway-edge lights"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.20.4.w.1",
+        "text": "Ignore wind conditions"
+      },
+      {
+        "id": "AFH.11.20.4.w.2",
+        "text": "Rely solely on landing lights"
+      },
+      {
+        "id": "AFH.11.20.4.w.3",
+        "text": "Use only the altimeter"
+      },
+      {
+        "id": "AFH.11.20.4.w.4",
+        "text": "Focus on non-airport lights"
+      },
+      {
+        "id": "AFH.11.20.4.w.5",
+        "text": "Ignore runway alignment"
+      },
+      {
+        "id": "AFH.11.20.4.w.6",
+        "text": "Use only the airspeed indicator"
+      },
+      {
+        "id": "AFH.11.20.4.w.7",
+        "text": "Depend on ground references"
+      },
+      {
+        "id": "AFH.11.20.4.w.8",
+        "text": "Rely on GPS alone"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction, Section: Approaches and Landings",
+    "subjects": [
+      "Approach Techniques",
+      "Night Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.11.20.5",
+    "question": "What challenges might a pilot face during the round out and touchdown at night?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.20.5.c.1",
+        "text": "Impaired judgment of height"
+      },
+      {
+        "id": "AFH.11.20.5.c.2",
+        "text": "Impaired judgment of speed"
+      },
+      {
+        "id": "AFH.11.20.5.c.3",
+        "text": "Impaired judgment of sink rate"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.20.5.w.1",
+        "text": "Excessive runway lighting"
+      },
+      {
+        "id": "AFH.11.20.5.w.2",
+        "text": "Over-reliance on GPS"
+      },
+      {
+        "id": "AFH.11.20.5.w.3",
+        "text": "Too many visual references"
+      },
+      {
+        "id": "AFH.11.20.5.w.4",
+        "text": "Excessive air traffic"
+      },
+      {
+        "id": "AFH.11.20.5.w.5",
+        "text": "Clear visibility"
+      },
+      {
+        "id": "AFH.11.20.5.w.6",
+        "text": "Strong headwinds"
+      },
+      {
+        "id": "AFH.11.20.5.w.7",
+        "text": "High altitude"
+      },
+      {
+        "id": "AFH.11.20.5.w.8",
+        "text": "Excessive noise"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction, Section: Approaches and Landings",
+    "subjects": [
+      "Landing Challenges",
+      "Night Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.11.21.1",
+    "question": "What are some methods to prevent landing errors due to optical illusions during night operations?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.21.1.c.1",
+        "text": "Anticipate visual illusions during approaches to unfamiliar airports."
+      },
+      {
+        "id": "AFH.11.21.1.c.2",
+        "text": "Consult airport diagrams and Chart Supplements for runway information."
+      },
+      {
+        "id": "AFH.11.21.1.c.3",
+        "text": "Use Visual Approach Slope Indicator (VASI) or Precision Approach Path Indicator (PAPI) systems."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.21.1.w.1",
+        "text": "Ignore the altimeter during approaches."
+      },
+      {
+        "id": "AFH.11.21.1.w.2",
+        "text": "Rely solely on visual cues without electronic aids."
+      },
+      {
+        "id": "AFH.11.21.1.w.3",
+        "text": "Avoid consulting airport diagrams."
+      },
+      {
+        "id": "AFH.11.21.1.w.4",
+        "text": "Disregard runway slope and terrain information."
+      },
+      {
+        "id": "AFH.11.21.1.w.5",
+        "text": "Conduct approaches without prior inspection of unfamiliar airports."
+      },
+      {
+        "id": "AFH.11.21.1.w.6",
+        "text": "Neglect the use of visual descent points (VDP)."
+      },
+      {
+        "id": "AFH.11.21.1.w.7",
+        "text": "Assume no increased risk during emergency distractions."
+      },
+      {
+        "id": "AFH.11.21.1.w.8",
+        "text": "Ignore proficiency in landing procedures."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11, Section 21",
+    "subjects": [
+      "Night Operations",
+      "Landing Procedures",
+      "Optical Illusions"
+    ]
+  },
+  {
+    "questionid": "AFH.11.22.1",
+    "question": "In the event of a complete engine failure at night, which of the following are critical procedures to follow?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.22.1.c.1",
+        "text": "Maintain positive control and establish the best glide configuration and airspeed."
+      },
+      {
+        "id": "AFH.11.22.1.c.2",
+        "text": "Announce the emergency situation to air traffic control (ATC) or UNICOM."
+      },
+      {
+        "id": "AFH.11.22.1.c.3",
+        "text": "Complete the before-landing checklist and check landing lights for operation."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.22.1.w.1",
+        "text": "Immediately change radio frequency to 121.5 MHz without instruction."
+      },
+      {
+        "id": "AFH.11.22.1.w.2",
+        "text": "Increase airspeed to reduce time to a potential landing site."
+      },
+      {
+        "id": "AFH.11.22.1.w.3",
+        "text": "Land in a well-lit area to improve visibility for rescue."
+      },
+      {
+        "id": "AFH.11.22.1.w.4",
+        "text": "Prioritize finding a populated area for landing, even if terrain is unknown."
+      },
+      {
+        "id": "AFH.11.22.1.w.5",
+        "text": "Turn off all electrical switches immediately to prevent fire."
+      },
+      {
+        "id": "AFH.11.22.1.w.6",
+        "text": "Attempt to restart the engine only after establishing radio contact."
+      },
+      {
+        "id": "AFH.11.22.1.w.7",
+        "text": "Initiate a steep, power-off spiral descent to conserve altitude."
+      },
+      {
+        "id": "AFH.11.22.1.w.8",
+        "text": "Assume landing lights are unusable and prepare for a completely dark landing."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Night Operations",
+      "Emergencies",
+      "Engine Failure"
+    ]
+  },
+  {
+    "questionid": "AFH.11.23.1",
+    "question": "What conditions should be met for experienced pilots to conduct night VFR operations safely?",
+    "correct_answers": [
+      {
+        "id": "AFH.11.23.1.c.1",
+        "text": "Unrestricted visibility"
+      },
+      {
+        "id": "AFH.11.23.1.c.2",
+        "text": "Favorable winds on the surface"
+      },
+      {
+        "id": "AFH.11.23.1.c.3",
+        "text": "No turbulence"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.11.23.1.w.1",
+        "text": "Limited visibility"
+      },
+      {
+        "id": "AFH.11.23.1.w.2",
+        "text": "Strong surface winds"
+      },
+      {
+        "id": "AFH.11.23.1.w.3",
+        "text": "Turbulent conditions"
+      },
+      {
+        "id": "AFH.11.23.1.w.4",
+        "text": "Unfavorable winds aloft"
+      },
+      {
+        "id": "AFH.11.23.1.w.5",
+        "text": "Cloudy skies"
+      },
+      {
+        "id": "AFH.11.23.1.w.6",
+        "text": "Heavy rain"
+      },
+      {
+        "id": "AFH.11.23.1.w.7",
+        "text": "Foggy conditions"
+      },
+      {
+        "id": "AFH.11.23.1.w.8",
+        "text": "Icy conditions"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 11: Night Operations Introduction",
+    "subjects": [
+      "Night Operations",
+      "Pilot Safety",
+      "VFR Conditions"
+    ]
+  }
+]

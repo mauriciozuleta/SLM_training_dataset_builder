@@ -1,0 +1,2995 @@
+[
+  {
+    "questionBank": {
+      "chapterId": "afh.15",
+      "bookId": "AFH",
+      "chapterNumber": 15,
+      "chapterTitle": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15: Transition to Turbopropeller-Powered Airplanes Introduction",
+      "totalRequiredQuestions": 50,
+      "metadata": {
+        "generatedAtUtc": "2026-03-29T14:31:43.779Z",
+        "chapterId": "afh.15",
+        "chapterNumber": 15,
+        "totalSections": 12,
+        "totalRequiredQuestions": 50,
+        "providers": [
+          "openai",
+          "anthropic",
+          "gemini"
+        ],
+        "models": [
+          "gpt-4o",
+          "claude-sonnet-4-6",
+          "gemini-2.5-flash"
+        ],
+        "promptTokens": 6585,
+        "completionTokens": 6053,
+        "totalTokens": 12638,
+        "sectionQuestionSummary": [
+          {
+            "sectionId": "afh.15.1",
+            "sectionTitle": "Gas Turbine Engine",
+            "sectionOrdinal": 1,
+            "sectionWeightPercentage": 7.32,
+            "questionsGenerated": 3
+          },
+          {
+            "sectionId": "afh.15.2",
+            "sectionTitle": "Turboprop Engines",
+            "sectionOrdinal": 2,
+            "sectionWeightPercentage": 13.16,
+            "questionsGenerated": 7
+          },
+          {
+            "sectionId": "afh.15.3",
+            "sectionTitle": "Turboprop Engine Types",
+            "sectionOrdinal": 3,
+            "sectionWeightPercentage": 17.21,
+            "questionsGenerated": 9
+          },
+          {
+            "sectionId": "afh.15.4",
+            "sectionTitle": "Split-Shaft/Free Turbine Engine",
+            "sectionOrdinal": 4,
+            "sectionWeightPercentage": 14.26,
+            "questionsGenerated": 7
+          },
+          {
+            "sectionId": "afh.15.5",
+            "sectionTitle": "Reverse Thrust and Beta Range Operations",
+            "sectionOrdinal": 5,
+            "sectionWeightPercentage": 10.27,
+            "questionsGenerated": 5
+          },
+          {
+            "sectionId": "afh.15.6",
+            "sectionTitle": "Turboprop Airplane Electrical Systems",
+            "sectionOrdinal": 6,
+            "sectionWeightPercentage": 8.52,
+            "questionsGenerated": 4
+          },
+          {
+            "sectionId": "afh.15.7",
+            "sectionTitle": "Operational Considerations",
+            "sectionOrdinal": 7,
+            "sectionWeightPercentage": 19.67,
+            "questionsGenerated": 10
+          },
+          {
+            "sectionId": "afh.15.8",
+            "sectionTitle": "Training Considerations",
+            "sectionOrdinal": 8,
+            "sectionWeightPercentage": 2.75,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.15.9",
+            "sectionTitle": "Ground Training",
+            "sectionOrdinal": 9,
+            "sectionWeightPercentage": 0.59,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.15.10",
+            "sectionTitle": "Supplemental Oxygen",
+            "sectionOrdinal": 10,
+            "sectionWeightPercentage": 2.75,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.15.11",
+            "sectionTitle": "Flight Training",
+            "sectionOrdinal": 11,
+            "sectionWeightPercentage": 2.1,
+            "questionsGenerated": 1
+          },
+          {
+            "sectionId": "afh.15.12",
+            "sectionTitle": "Chapter Summary",
+            "sectionOrdinal": 12,
+            "sectionWeightPercentage": 1.4,
+            "questionsGenerated": 1
+          }
+        ],
+        "buildStatus": "complete",
+        "buildStage": "questions",
+        "completedSections": 12,
+        "incompleteSections": [],
+        "failureReason": ""
+      }
+    }
+  },
+  {
+    "questionid": "AFH.15.1.1",
+    "question": "What are the four sections of a basic gas turbine engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.1.1.c.1",
+        "text": "Intake"
+      },
+      {
+        "id": "AFH.15.1.1.c.2",
+        "text": "Compression"
+      },
+      {
+        "id": "AFH.15.1.1.c.3",
+        "text": "Combustion"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.1.1.w.1",
+        "text": "Expansion"
+      },
+      {
+        "id": "AFH.15.1.1.w.2",
+        "text": "Ignition"
+      },
+      {
+        "id": "AFH.15.1.1.w.3",
+        "text": "Cooling"
+      },
+      {
+        "id": "AFH.15.1.1.w.4",
+        "text": "Exhaust"
+      },
+      {
+        "id": "AFH.15.1.1.w.5",
+        "text": "Turbine"
+      },
+      {
+        "id": "AFH.15.1.1.w.6",
+        "text": "Fuel Injection"
+      },
+      {
+        "id": "AFH.15.1.1.w.7",
+        "text": "Power"
+      },
+      {
+        "id": "AFH.15.1.1.w.8",
+        "text": "Lubrication"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15: Transition to Turbopropeller-Powered Airplanes Introduction",
+    "subjects": [
+      "Gas Turbine Engine"
+    ]
+  },
+  {
+    "questionid": "AFH.15.1.2",
+    "question": "In a gas turbine engine, what happens to the air after it is compressed?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.1.2.c.1",
+        "text": "Delivered to the combustion section"
+      },
+      {
+        "id": "AFH.15.1.2.c.2",
+        "text": "Used for internal cooling"
+      },
+      {
+        "id": "AFH.15.1.2.c.3",
+        "text": "Bypasses the burner section"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.1.2.w.1",
+        "text": "Directly expelled"
+      },
+      {
+        "id": "AFH.15.1.2.w.2",
+        "text": "Used entirely for combustion"
+      },
+      {
+        "id": "AFH.15.1.2.w.3",
+        "text": "Mixed with fuel immediately"
+      },
+      {
+        "id": "AFH.15.1.2.w.4",
+        "text": "Cooled externally"
+      },
+      {
+        "id": "AFH.15.1.2.w.5",
+        "text": "Stored in a tank"
+      },
+      {
+        "id": "AFH.15.1.2.w.6",
+        "text": "Recycled within the engine"
+      },
+      {
+        "id": "AFH.15.1.2.w.7",
+        "text": "Directed to the exhaust"
+      },
+      {
+        "id": "AFH.15.1.2.w.8",
+        "text": "Used for lubrication"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15: Transition to Turbopropeller-Powered Airplanes Introduction",
+    "subjects": [
+      "Gas Turbine Engine"
+    ]
+  },
+  {
+    "questionid": "AFH.15.1.3",
+    "question": "What is the role of the turbine section in a gas turbine engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.1.3.c.1",
+        "text": "Drives the compressor section"
+      },
+      {
+        "id": "AFH.15.1.3.c.2",
+        "text": "Rotates due to expanding gases"
+      },
+      {
+        "id": "AFH.15.1.3.c.3",
+        "text": "Connected by a shaft to the compressor"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.1.3.w.1",
+        "text": "Initiates combustion"
+      },
+      {
+        "id": "AFH.15.1.3.w.2",
+        "text": "Cools the engine"
+      },
+      {
+        "id": "AFH.15.1.3.w.3",
+        "text": "Mixes fuel and air"
+      },
+      {
+        "id": "AFH.15.1.3.w.4",
+        "text": "Starts the engine"
+      },
+      {
+        "id": "AFH.15.1.3.w.5",
+        "text": "Provides ignition"
+      },
+      {
+        "id": "AFH.15.1.3.w.6",
+        "text": "Controls exhaust flow"
+      },
+      {
+        "id": "AFH.15.1.3.w.7",
+        "text": "Regulates temperature"
+      },
+      {
+        "id": "AFH.15.1.3.w.8",
+        "text": "Stores compressed air"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15: Transition to Turbopropeller-Powered Airplanes Introduction",
+    "subjects": [
+      "Gas Turbine Engine"
+    ]
+  },
+  {
+    "questionid": "AFH.15.2.1",
+    "question": "Which of the following are listed advantages of turboprop engines over other engine types?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.2.1.c.1",
+        "text": "Light weight"
+      },
+      {
+        "id": "AFH.15.2.1.c.2",
+        "text": "Mechanical reliability due to relatively few moving parts"
+      },
+      {
+        "id": "AFH.15.2.1.c.3",
+        "text": "Minimum vibration"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.2.1.w.1",
+        "text": "Maximum efficiency at all altitudes"
+      },
+      {
+        "id": "AFH.15.2.1.w.2",
+        "text": "Superior high-speed performance above 400 mph"
+      },
+      {
+        "id": "AFH.15.2.1.w.3",
+        "text": "No jet thrust component in total power output"
+      },
+      {
+        "id": "AFH.15.2.1.w.4",
+        "text": "Higher power output than turbojet engines of equivalent size"
+      },
+      {
+        "id": "AFH.15.2.1.w.5",
+        "text": "Constant power output regardless of altitude"
+      },
+      {
+        "id": "AFH.15.2.1.w.6",
+        "text": "Greater number of moving parts for redundancy"
+      },
+      {
+        "id": "AFH.15.2.1.w.7",
+        "text": "Fuel efficiency only at low altitudes"
+      },
+      {
+        "id": "AFH.15.2.1.w.8",
+        "text": "Elimination of propeller use during takeoff"
+      }
+    ],
+    "source": "AFH Chapter 15, Section 15.2 – Turboprop Engines",
+    "subjects": [
+      "turboprop advantages",
+      "engine characteristics"
+    ]
+  },
+  {
+    "questionid": "AFH.15.2.2",
+    "question": "At what speed range and altitude range are turboprop engines most efficient?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.2.2.c.1",
+        "text": "Speeds between 250 and 400 mph"
+      },
+      {
+        "id": "AFH.15.2.2.c.2",
+        "text": "Altitudes between 18,000 and 30,000 feet"
+      },
+      {
+        "id": "AFH.15.2.2.c.3",
+        "text": "They also perform well at slow speeds required for takeoff and landing"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.2.2.w.1",
+        "text": "Speeds above 400 mph"
+      },
+      {
+        "id": "AFH.15.2.2.w.2",
+        "text": "Altitudes below 10,000 feet"
+      },
+      {
+        "id": "AFH.15.2.2.w.3",
+        "text": "Speeds between 100 and 200 mph"
+      },
+      {
+        "id": "AFH.15.2.2.w.4",
+        "text": "Altitudes between 30,000 and 40,000 feet"
+      },
+      {
+        "id": "AFH.15.2.2.w.5",
+        "text": "Speeds between 400 and 600 mph"
+      },
+      {
+        "id": "AFH.15.2.2.w.6",
+        "text": "Altitudes between 5,000 and 15,000 feet"
+      },
+      {
+        "id": "AFH.15.2.2.w.7",
+        "text": "Speeds below 100 mph only"
+      },
+      {
+        "id": "AFH.15.2.2.w.8",
+        "text": "Altitudes above 40,000 feet"
+      }
+    ],
+    "source": "AFH Chapter 15, Section 15.2 – Turboprop Engines",
+    "subjects": [
+      "turboprop efficiency",
+      "altitude performance",
+      "speed range"
+    ]
+  },
+  {
+    "questionid": "AFH.15.2.3",
+    "question": "Which statements correctly describe how turboprop engine power is measured and expressed?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.2.3.c.1",
+        "text": "Turboprop power is measured in shaft horsepower (shp)"
+      },
+      {
+        "id": "AFH.15.2.3.c.2",
+        "text": "Shaft horsepower is determined by rpm and the torque applied to the propeller shaft"
+      },
+      {
+        "id": "AFH.15.2.3.c.3",
+        "text": "Total engine power is expressed as equivalent shaft horsepower (eshp), which includes jet thrust"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.2.3.w.1",
+        "text": "Turboprop power is measured in manifold pressure and rpm like a piston engine"
+      },
+      {
+        "id": "AFH.15.2.3.w.2",
+        "text": "Shaft horsepower is determined solely by fuel flow rate"
+      },
+      {
+        "id": "AFH.15.2.3.w.3",
+        "text": "Equivalent shaft horsepower excludes any jet thrust component"
+      },
+      {
+        "id": "AFH.15.2.3.w.4",
+        "text": "Turboprop power output is measured in pounds of thrust only"
+      },
+      {
+        "id": "AFH.15.2.3.w.5",
+        "text": "Torque has no role in determining shaft horsepower"
+      },
+      {
+        "id": "AFH.15.2.3.w.6",
+        "text": "Equivalent shaft horsepower is always less than shaft horsepower"
+      },
+      {
+        "id": "AFH.15.2.3.w.7",
+        "text": "Turboprop power is measured identically to turbojet power"
+      },
+      {
+        "id": "AFH.15.2.3.w.8",
+        "text": "Jet thrust accounts for more than 50 percent of total turboprop engine power"
+      }
+    ],
+    "source": "AFH Chapter 15, Section 15.2 – Turboprop Engines",
+    "subjects": [
+      "power measurement",
+      "shaft horsepower",
+      "equivalent shaft horsepower"
+    ]
+  },
+  {
+    "questionid": "AFH.15.2.4",
+    "question": "Which of the following correctly describe the role of the propeller in a turboprop engine's performance?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.2.4.c.1",
+        "text": "The propeller is responsible for roughly 90 percent of total thrust under sea level conditions on a standard day"
+      },
+      {
+        "id": "AFH.15.2.4.c.2",
+        "text": "The propeller improves takeoff and climb performance"
+      },
+      {
+        "id": "AFH.15.2.4.c.3",
+        "text": "The propeller accelerates a large mass of air while the airplane moves at relatively low ground and flight speed"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.2.4.w.1",
+        "text": "The propeller contributes less than 10 percent of total thrust at sea level"
+      },
+      {
+        "id": "AFH.15.2.4.w.2",
+        "text": "The propeller is only effective at high subsonic airspeeds"
+      },
+      {
+        "id": "AFH.15.2.4.w.3",
+        "text": "The propeller has no effect on climb performance"
+      },
+      {
+        "id": "AFH.15.2.4.w.4",
+        "text": "Propellers are most efficient at speeds above 400 mph"
+      },
+      {
+        "id": "AFH.15.2.4.w.5",
+        "text": "The propeller's contribution to thrust increases as flight speed increases"
+      },
+      {
+        "id": "AFH.15.2.4.w.6",
+        "text": "The propeller is not used during takeoff in turboprop aircraft"
+      },
+      {
+        "id": "AFH.15.2.4.w.7",
+        "text": "Propeller efficiency remains constant regardless of airspeed"
+      },
+      {
+        "id": "AFH.15.2.4.w.8",
+        "text": "The propeller accounts for all thrust with no jet thrust component"
+      }
+    ],
+    "source": "AFH Chapter 15, Section 15.2 – Turboprop Engines",
+    "subjects": [
+      "propeller thrust",
+      "takeoff performance",
+      "climb performance"
+    ]
+  },
+  {
+    "questionid": "AFH.15.2.5",
+    "question": "Which statements accurately compare turboprop engines to turbojet engines?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.2.5.c.1",
+        "text": "Although more complicated and heavier than a turbojet of equivalent size, the turboprop delivers more thrust at low subsonic airspeeds"
+      },
+      {
+        "id": "AFH.15.2.5.c.2",
+        "text": "The advantages of the turboprop over the turbojet decrease as flight speed increases"
+      },
+      {
+        "id": "AFH.15.2.5.c.3",
+        "text": "Turbojet engines are most efficient at high speeds and high altitudes"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.2.5.w.1",
+        "text": "Turboprop engines are lighter than turbojet engines of equivalent power"
+      },
+      {
+        "id": "AFH.15.2.5.w.2",
+        "text": "Turboprop engines outperform turbojet engines at all flight speeds"
+      },
+      {
+        "id": "AFH.15.2.5.w.3",
+        "text": "Turbojet engines excel at takeoff and initial climb performance"
+      },
+      {
+        "id": "AFH.15.2.5.w.4",
+        "text": "The turboprop's advantages over the turbojet increase as speed increases"
+      },
+      {
+        "id": "AFH.15.2.5.w.5",
+        "text": "Turbojet engines are most efficient at slow and medium speeds"
+      },
+      {
+        "id": "AFH.15.2.5.w.6",
+        "text": "Turboprop engines have fewer moving parts than turbojet engines"
+      },
+      {
+        "id": "AFH.15.2.5.w.7",
+        "text": "Turbojet engines produce maximum thrust on takeoff compared to turboprops"
+      },
+      {
+        "id": "AFH.15.2.5.w.8",
+        "text": "Turboprop and turbojet engines have identical propulsive efficiency at all speeds"
+      }
+    ],
+    "source": "AFH Chapter 15, Section 15.2 – Turboprop Engines",
+    "subjects": [
+      "turboprop vs turbojet",
+      "engine comparison",
+      "propulsive efficiency"
+    ]
+  },
+  {
+    "questionid": "AFH.15.2.6",
+    "question": "Which of the following correctly describe the jet thrust component of a turboprop engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.2.6.c.1",
+        "text": "Some jet thrust is produced by exhaust leaving the turboprop engine"
+      },
+      {
+        "id": "AFH.15.2.6.c.2",
+        "text": "Jet thrust is added to shaft horsepower to determine equivalent shaft horsepower (eshp)"
+      },
+      {
+        "id": "AFH.15.2.6.c.3",
+        "text": "Jet thrust usually accounts for less than 10 percent of total turboprop engine power"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.2.6.w.1",
+        "text": "Jet thrust accounts for more than 50 percent of total turboprop power"
+      },
+      {
+        "id": "AFH.15.2.6.w.2",
+        "text": "Turboprop engines produce no jet thrust whatsoever"
+      },
+      {
+        "id": "AFH.15.2.6.w.3",
+        "text": "Jet thrust is subtracted from shaft horsepower to determine eshp"
+      },
+      {
+        "id": "AFH.15.2.6.w.4",
+        "text": "Jet thrust is the primary source of thrust in turboprop engines"
+      },
+      {
+        "id": "AFH.15.2.6.w.5",
+        "text": "Jet thrust in turboprops accounts for approximately 90 percent of total thrust"
+      },
+      {
+        "id": "AFH.15.2.6.w.6",
+        "text": "Jet thrust is only produced during high-altitude cruise in turboprop engines"
+      },
+      {
+        "id": "AFH.15.2.6.w.7",
+        "text": "Equivalent shaft horsepower does not include any jet thrust component"
+      },
+      {
+        "id": "AFH.15.2.6.w.8",
+        "text": "Jet thrust in turboprops is measured separately from eshp"
+      }
+    ],
+    "source": "AFH Chapter 15, Section 15.2 – Turboprop Engines",
+    "subjects": [
+      "jet thrust",
+      "equivalent shaft horsepower",
+      "turboprop power components"
+    ]
+  },
+  {
+    "questionid": "AFH.15.2.7",
+    "question": "Which statements correctly describe the development goals and fuel efficiency characteristics of turboprop engines?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.2.7.c.1",
+        "text": "The turboprop was developed to combine the best characteristics of both the turbojet and propeller-driven reciprocating engine"
+      },
+      {
+        "id": "AFH.15.2.7.c.2",
+        "text": "The minimum specific fuel consumption of the turboprop engine is normally available in the altitude range of 25,000 feet up to the tropopause"
+      },
+      {
+        "id": "AFH.15.2.7.c.3",
+        "text": "Turboprop engines are fuel efficient and perform well at slow speeds required for takeoff and landing"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.2.7.w.1",
+        "text": "The turboprop was developed solely to replace turbojet engines at high altitudes"
+      },
+      {
+        "id": "AFH.15.2.7.w.2",
+        "text": "Minimum specific fuel consumption is achieved below 10,000 feet"
+      },
+      {
+        "id": "AFH.15.2.7.w.3",
+        "text": "Turboprop engines are not fuel efficient at any altitude"
+      },
+      {
+        "id": "AFH.15.2.7.w.4",
+        "text": "The turboprop was designed only to improve high-speed cruise performance"
+      },
+      {
+        "id": "AFH.15.2.7.w.5",
+        "text": "Minimum specific fuel consumption is found above the tropopause"
+      },
+      {
+        "id": "AFH.15.2.7.w.6",
+        "text": "Turboprop engines sacrifice takeoff performance for cruise efficiency"
+      },
+      {
+        "id": "AFH.15.2.7.w.7",
+        "text": "Fuel efficiency of turboprops is identical at all altitudes"
+      },
+      {
+        "id": "AFH.15.2.7.w.8",
+        "text": "The turboprop was developed to eliminate the need for propellers entirely"
+      }
+    ],
+    "source": "AFH Chapter 15, Section 15.2 – Turboprop Engines",
+    "subjects": [
+      "turboprop development",
+      "fuel efficiency",
+      "specific fuel consumption"
+    ]
+  },
+  {
+    "questionid": "AFH.15.3.1",
+    "question": "Which components are part of the primary airflow path in a fixed-shaft constant-speed turboprop engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.3.1.c.1",
+        "text": "Compressor section"
+      },
+      {
+        "id": "AFH.15.3.1.c.2",
+        "text": "Combustor"
+      },
+      {
+        "id": "AFH.15.3.1.c.3",
+        "text": "Turbine"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.3.1.w.1",
+        "text": "Main shaft"
+      },
+      {
+        "id": "AFH.15.3.1.w.2",
+        "text": "Reduction gear"
+      },
+      {
+        "id": "AFH.15.3.1.w.3",
+        "text": "Exhaust pipe"
+      },
+      {
+        "id": "AFH.15.3.1.w.4",
+        "text": "Power lever"
+      },
+      {
+        "id": "AFH.15.3.1.w.5",
+        "text": "Condition lever"
+      },
+      {
+        "id": "AFH.15.3.1.w.6",
+        "text": "Propeller"
+      },
+      {
+        "id": "AFH.15.3.1.w.7",
+        "text": "Igniter plugs"
+      },
+      {
+        "id": "AFH.15.3.1.w.8",
+        "text": "Fuel flow"
+      }
+    ],
+    "source": "AFH 15.3",
+    "subjects": [
+      "Engine Components",
+      "Airflow Path"
+    ]
+  },
+  {
+    "questionid": "AFH.15.3.2",
+    "question": "How are power changes primarily achieved in a fixed-shaft constant-speed turboprop engine during flight?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.3.2.c.1",
+        "text": "Increasing fuel flow"
+      },
+      {
+        "id": "AFH.15.3.2.c.2",
+        "text": "Increasing propeller blade angle"
+      },
+      {
+        "id": "AFH.15.3.2.c.3",
+        "text": "Increasing energy available to the turbine"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.3.2.w.1",
+        "text": "Varying engine rpm"
+      },
+      {
+        "id": "AFH.15.3.2.w.2",
+        "text": "Reducing engine rpm"
+      },
+      {
+        "id": "AFH.15.3.2.w.3",
+        "text": "Adjusting mixture control"
+      },
+      {
+        "id": "AFH.15.3.2.w.4",
+        "text": "Decreasing fuel flow"
+      },
+      {
+        "id": "AFH.15.3.2.w.5",
+        "text": "Decreasing propeller blade angle"
+      },
+      {
+        "id": "AFH.15.3.2.w.6",
+        "text": "Operating at 70% rpm"
+      },
+      {
+        "id": "AFH.15.3.2.w.7",
+        "text": "Adjusting the rpm lever"
+      },
+      {
+        "id": "AFH.15.3.2.w.8",
+        "text": "Changing compressor speed"
+      }
+    ],
+    "source": "AFH 15.3",
+    "subjects": [
+      "Power Control",
+      "Flight Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.15.3.3",
+    "question": "What are the primary functions of the reduction gear in a fixed-shaft constant-speed turboprop engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.3.3.c.1",
+        "text": "Converts high rpm to low rpm"
+      },
+      {
+        "id": "AFH.15.3.3.c.2",
+        "text": "Converts low torque to high torque"
+      },
+      {
+        "id": "AFH.15.3.3.c.3",
+        "text": "Drives accessories and the propeller"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.3.3.w.1",
+        "text": "Increases air pressure"
+      },
+      {
+        "id": "AFH.15.3.3.w.2",
+        "text": "Ignites fuel"
+      },
+      {
+        "id": "AFH.15.3.3.w.3",
+        "text": "Converts gas energy to torque"
+      },
+      {
+        "id": "AFH.15.3.3.w.4",
+        "text": "Directs spent gases to atmosphere"
+      },
+      {
+        "id": "AFH.15.3.3.w.5",
+        "text": "Cools the combustor"
+      },
+      {
+        "id": "AFH.15.3.3.w.6",
+        "text": "Provides cabin pressurization"
+      },
+      {
+        "id": "AFH.15.3.3.w.7",
+        "text": "Controls fuel flow"
+      },
+      {
+        "id": "AFH.15.3.3.w.8",
+        "text": "Maintains constant engine speed"
+      }
+    ],
+    "source": "AFH 15.3",
+    "subjects": [
+      "Reduction Gear Function",
+      "Torque Conversion"
+    ]
+  },
+  {
+    "questionid": "AFH.15.3.4",
+    "question": "Which statements accurately describe the engine RPM operation of a fixed-shaft constant-speed turboprop engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.3.4.c.1",
+        "text": "Operates at a constant speed in flight"
+      },
+      {
+        "id": "AFH.15.3.4.c.2",
+        "text": "Maintained by the propeller's governing section"
+      },
+      {
+        "id": "AFH.15.3.4.c.3",
+        "text": "May be reduced to 70 percent during ground operation"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.3.4.w.1",
+        "text": "Varies widely during flight"
+      },
+      {
+        "id": "AFH.15.3.4.w.2",
+        "text": "Is controlled by an rpm lever"
+      },
+      {
+        "id": "AFH.15.3.4.w.3",
+        "text": "Is typically 100% during ground operation"
+      },
+      {
+        "id": "AFH.15.3.4.w.4",
+        "text": "Is adjusted by mixture control"
+      },
+      {
+        "id": "AFH.15.3.4.w.5",
+        "text": "Is always 96% in flight"
+      },
+      {
+        "id": "AFH.15.3.4.w.6",
+        "text": "Is increased for power changes"
+      },
+      {
+        "id": "AFH.15.3.4.w.7",
+        "text": "Is directly proportional to fuel flow"
+      },
+      {
+        "id": "AFH.15.3.4.w.8",
+        "text": "Is varied within a narrow range of 70-100% in flight"
+      }
+    ],
+    "source": "AFH 15.3",
+    "subjects": [
+      "Engine RPM",
+      "Operating Limitations"
+    ]
+  },
+  {
+    "questionid": "AFH.15.3.5",
+    "question": "What are critical aspects related to turbine temperature in a fixed-shaft constant-speed turboprop engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.3.5.c.1",
+        "text": "Directly related to fuel flow"
+      },
+      {
+        "id": "AFH.15.3.5.c.2",
+        "text": "Directly related to power produced"
+      },
+      {
+        "id": "AFH.15.3.5.c.3",
+        "text": "Needs to be limited due to material strength"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.3.5.w.1",
+        "text": "Is controlled by the rpm lever"
+      },
+      {
+        "id": "AFH.15.3.5.w.2",
+        "text": "Is not a factor in power production"
+      },
+      {
+        "id": "AFH.15.3.5.w.3",
+        "text": "Is primarily for cabin heating"
+      },
+      {
+        "id": "AFH.15.3.5.w.4",
+        "text": "Is independent of fuel flow"
+      },
+      {
+        "id": "AFH.15.3.5.w.5",
+        "text": "Is always kept at maximum"
+      },
+      {
+        "id": "AFH.15.3.5.w.6",
+        "text": "Is used to ignite fuel"
+      },
+      {
+        "id": "AFH.15.3.5.w.7",
+        "text": "Is reduced for power increases"
+      },
+      {
+        "id": "AFH.15.3.5.w.8",
+        "text": "Is only important during ground operations"
+      }
+    ],
+    "source": "AFH 15.3",
+    "subjects": [
+      "Turbine Temperature",
+      "Engine Limitations"
+    ]
+  },
+  {
+    "questionid": "AFH.15.3.6",
+    "question": "How is the compressed air primarily utilized within a fixed-shaft constant-speed turboprop engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.3.6.c.1",
+        "text": "Provides internal cooling"
+      },
+      {
+        "id": "AFH.15.3.6.c.2",
+        "text": "Used in the combustion process"
+      },
+      {
+        "id": "AFH.15.3.6.c.3",
+        "text": "Bled off for pneumatic systems"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.3.6.w.1",
+        "text": "Drives the main shaft directly"
+      },
+      {
+        "id": "AFH.15.3.6.w.2",
+        "text": "Powers the igniter plugs"
+      },
+      {
+        "id": "AFH.15.3.6.w.3",
+        "text": "Is solely for propulsion"
+      },
+      {
+        "id": "AFH.15.3.6.w.4",
+        "text": "Is used to increase engine rpm"
+      },
+      {
+        "id": "AFH.15.3.6.w.5",
+        "text": "Is entirely consumed in combustion"
+      },
+      {
+        "id": "AFH.15.3.6.w.6",
+        "text": "Is directed to the atmosphere before the turbine"
+      },
+      {
+        "id": "AFH.15.3.6.w.7",
+        "text": "Is used to reduce propeller blade angle"
+      },
+      {
+        "id": "AFH.15.3.6.w.8",
+        "text": "Is used to control the power lever"
+      }
+    ],
+    "source": "AFH 15.3",
+    "subjects": [
+      "Air Utilization",
+      "Engine Systems"
+    ]
+  },
+  {
+    "questionid": "AFH.15.3.7",
+    "question": "What are the main components that make up the combustor section of a fixed-shaft constant-speed turboprop engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.3.7.c.1",
+        "text": "Combustion chamber"
+      },
+      {
+        "id": "AFH.15.3.7.c.2",
+        "text": "Transition liner"
+      },
+      {
+        "id": "AFH.15.3.7.c.3",
+        "text": "Turbine plenum"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.3.7.w.1",
+        "text": "Compressor"
+      },
+      {
+        "id": "AFH.15.3.7.w.2",
+        "text": "Turbine"
+      },
+      {
+        "id": "AFH.15.3.7.w.3",
+        "text": "Reduction gear"
+      },
+      {
+        "id": "AFH.15.3.7.w.4",
+        "text": "Main shaft"
+      },
+      {
+        "id": "AFH.15.3.7.w.5",
+        "text": "Exhaust pipe"
+      },
+      {
+        "id": "AFH.15.3.7.w.6",
+        "text": "Igniter plugs"
+      },
+      {
+        "id": "AFH.15.3.7.w.7",
+        "text": "Fuel nozzle"
+      },
+      {
+        "id": "AFH.15.3.7.w.8",
+        "text": "Propeller"
+      }
+    ],
+    "source": "AFH 15.3",
+    "subjects": [
+      "Combustor Components",
+      "Engine Structure"
+    ]
+  },
+  {
+    "questionid": "AFH.15.3.8",
+    "question": "What are the characteristics of the powerplant control system for a fixed-shaft constant-speed turboprop engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.3.8.c.1",
+        "text": "Utilizes a power lever"
+      },
+      {
+        "id": "AFH.15.3.8.c.2",
+        "text": "Utilizes a condition lever"
+      },
+      {
+        "id": "AFH.15.3.8.c.3",
+        "text": "Lacks a mixture control"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.3.8.w.1",
+        "text": "Includes an rpm lever"
+      },
+      {
+        "id": "AFH.15.3.8.w.2",
+        "text": "Is similar to piston-engine controls"
+      },
+      {
+        "id": "AFH.15.3.8.w.3",
+        "text": "Adjusts engine speed for power changes"
+      },
+      {
+        "id": "AFH.15.3.8.w.4",
+        "text": "Has a single control for both power and condition"
+      },
+      {
+        "id": "AFH.15.3.8.w.5",
+        "text": "Primarily controls propeller pitch"
+      },
+      {
+        "id": "AFH.15.3.8.w.6",
+        "text": "Is designed for variable engine speed in flight"
+      },
+      {
+        "id": "AFH.15.3.8.w.7",
+        "text": "Does not have a condition lever"
+      },
+      {
+        "id": "AFH.15.3.8.w.8",
+        "text": "Controls fuel atomization directly"
+      }
+    ],
+    "source": "AFH 15.3",
+    "subjects": [
+      "Powerplant Controls",
+      "Control Levers"
+    ]
+  },
+  {
+    "questionid": "AFH.15.3.9",
+    "question": "What are significant characteristics of the compressor section in a fixed-shaft constant-speed turboprop engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.3.9.c.1",
+        "text": "Is a two-stage compressor"
+      },
+      {
+        "id": "AFH.15.3.9.c.2",
+        "text": "Increases air pressure"
+      },
+      {
+        "id": "AFH.15.3.9.c.3",
+        "text": "Can produce very high drag if windmilling"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.3.9.w.1",
+        "text": "Converts gas energy to torque"
+      },
+      {
+        "id": "AFH.15.3.9.w.2",
+        "text": "Is driven by the propeller"
+      },
+      {
+        "id": "AFH.15.3.9.w.3",
+        "text": "Is primarily for cooling the combustor"
+      },
+      {
+        "id": "AFH.15.3.9.w.4",
+        "text": "Is responsible for igniting fuel"
+      },
+      {
+        "id": "AFH.15.3.9.w.5",
+        "text": "Is a single-stage component"
+      },
+      {
+        "id": "AFH.15.3.9.w.6",
+        "text": "Is not affected by engine failure"
+      },
+      {
+        "id": "AFH.15.3.9.w.7",
+        "text": "Is designed for low rpm operation"
+      },
+      {
+        "id": "AFH.15.3.9.w.8",
+        "text": "Is located after the turbine"
+      }
+    ],
+    "source": "AFH 15.3",
+    "subjects": [
+      "Compressor Characteristics",
+      "Engine Failure"
+    ]
+  },
+  {
+    "questionid": "AFH.15.4.1",
+    "question": "What is a characteristic of a free power-turbine engine like the Pratt & Whitney PT-6?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.4.1.c.1",
+        "text": "The propeller is driven by a separate turbine through reduction gearing."
+      },
+      {
+        "id": "AFH.15.4.1.c.2",
+        "text": "The propeller can be feathered in flight or on the ground."
+      },
+      {
+        "id": "AFH.15.4.1.c.3",
+        "text": "The propeller is not on the same shaft as the basic engine turbine and compressor."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.4.1.w.1",
+        "text": "The propeller is directly connected to the engine turbine."
+      },
+      {
+        "id": "AFH.15.4.1.w.2",
+        "text": "The propeller cannot be feathered in flight."
+      },
+      {
+        "id": "AFH.15.4.1.w.3",
+        "text": "The engine uses a single turbine for both the compressor and propeller."
+      },
+      {
+        "id": "AFH.15.4.1.w.4",
+        "text": "The propeller speed is directly linked to engine rpm."
+      },
+      {
+        "id": "AFH.15.4.1.w.5",
+        "text": "The engine uses only axial flow compressor stages."
+      },
+      {
+        "id": "AFH.15.4.1.w.6",
+        "text": "The engine has a single exhaust port."
+      },
+      {
+        "id": "AFH.15.4.1.w.7",
+        "text": "The propeller lever controls the engine power."
+      },
+      {
+        "id": "AFH.15.4.1.w.8",
+        "text": "The condition lever adjusts the mixture of fuel."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15, Section 4",
+    "subjects": [
+      "Engine Design",
+      "Propeller Operation",
+      "Turboprop Mechanics"
+    ]
+  },
+  {
+    "questionid": "AFH.15.4.2",
+    "question": "How does the free power-turbine design benefit propeller operation?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.4.2.c.1",
+        "text": "Allows selection of desired propeller governing rpm regardless of engine rpm."
+      },
+      {
+        "id": "AFH.15.4.2.c.2",
+        "text": "Enables independent control of propeller and engine speeds."
+      },
+      {
+        "id": "AFH.15.4.2.c.3",
+        "text": "Permits feathering of the propeller while the engine is running."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.4.2.w.1",
+        "text": "Links propeller speed directly to engine speed."
+      },
+      {
+        "id": "AFH.15.4.2.w.2",
+        "text": "Requires the engine to be stopped for propeller feathering."
+      },
+      {
+        "id": "AFH.15.4.2.w.3",
+        "text": "Uses a single turbine for both propeller and compressor."
+      },
+      {
+        "id": "AFH.15.4.2.w.4",
+        "text": "Limits propeller rpm to engine rpm range."
+      },
+      {
+        "id": "AFH.15.4.2.w.5",
+        "text": "Prevents propeller feathering in flight."
+      },
+      {
+        "id": "AFH.15.4.2.w.6",
+        "text": "Uses only centrifugal compressor stages."
+      },
+      {
+        "id": "AFH.15.4.2.w.7",
+        "text": "Requires manual fuel mixture adjustment."
+      },
+      {
+        "id": "AFH.15.4.2.w.8",
+        "text": "Operates without a propeller governor."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15, Section 4",
+    "subjects": [
+      "Propeller Control",
+      "Engine Operation",
+      "Turboprop Benefits"
+    ]
+  },
+  {
+    "questionid": "AFH.15.4.3",
+    "question": "What components are driven by the accessory drive at the aft end of a free power-turbine engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.4.3.c.1",
+        "text": "Fuel pumps"
+      },
+      {
+        "id": "AFH.15.4.3.c.2",
+        "text": "Oil pumps"
+      },
+      {
+        "id": "AFH.15.4.3.c.3",
+        "text": "Starter/generator"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.4.3.w.1",
+        "text": "Propeller"
+      },
+      {
+        "id": "AFH.15.4.3.w.2",
+        "text": "Compressor"
+      },
+      {
+        "id": "AFH.15.4.3.w.3",
+        "text": "Turbine"
+      },
+      {
+        "id": "AFH.15.4.3.w.4",
+        "text": "Exhaust system"
+      },
+      {
+        "id": "AFH.15.4.3.w.5",
+        "text": "Propeller governor"
+      },
+      {
+        "id": "AFH.15.4.3.w.6",
+        "text": "Combustion chamber"
+      },
+      {
+        "id": "AFH.15.4.3.w.7",
+        "text": "Reduction gearbox"
+      },
+      {
+        "id": "AFH.15.4.3.w.8",
+        "text": "Axial compressor stages"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15, Section 4",
+    "subjects": [
+      "Engine Components",
+      "Accessory Drive",
+      "Turboprop Systems"
+    ]
+  },
+  {
+    "questionid": "AFH.15.4.4",
+    "question": "What is the function of the condition lever in a turboprop engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.4.4.c.1",
+        "text": "Controls the flow of fuel to the engine."
+      },
+      {
+        "id": "AFH.15.4.4.c.2",
+        "text": "Acts as an on/off valve for delivering fuel."
+      },
+      {
+        "id": "AFH.15.4.4.c.3",
+        "text": "Has HIGH IDLE and LOW IDLE positions for ground operations."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.4.4.w.1",
+        "text": "Adjusts the mixture of fuel and air."
+      },
+      {
+        "id": "AFH.15.4.4.w.2",
+        "text": "Controls engine power output."
+      },
+      {
+        "id": "AFH.15.4.4.w.3",
+        "text": "Regulates propeller speed."
+      },
+      {
+        "id": "AFH.15.4.4.w.4",
+        "text": "Operates the propeller governor."
+      },
+      {
+        "id": "AFH.15.4.4.w.5",
+        "text": "Functions as a throttle lever."
+      },
+      {
+        "id": "AFH.15.4.4.w.6",
+        "text": "Controls engine rpm directly."
+      },
+      {
+        "id": "AFH.15.4.4.w.7",
+        "text": "Adjusts the compressor speed."
+      },
+      {
+        "id": "AFH.15.4.4.w.8",
+        "text": "Regulates exhaust flow."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15, Section 4",
+    "subjects": [
+      "Engine Control",
+      "Fuel Management",
+      "Turboprop Operation"
+    ]
+  },
+  {
+    "questionid": "AFH.15.4.5",
+    "question": "What stages are included in the compressor of a free power-turbine engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.4.5.c.1",
+        "text": "Three axial flow compressor stages"
+      },
+      {
+        "id": "AFH.15.4.5.c.2",
+        "text": "A single centrifugal compressor stage"
+      },
+      {
+        "id": "AFH.15.4.5.c.3",
+        "text": "Axial and centrifugal stages operate as a single unit"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.4.5.w.1",
+        "text": "Only axial flow compressor stages"
+      },
+      {
+        "id": "AFH.15.4.5.w.2",
+        "text": "Only centrifugal compressor stages"
+      },
+      {
+        "id": "AFH.15.4.5.w.3",
+        "text": "Separate axial and centrifugal units"
+      },
+      {
+        "id": "AFH.15.4.5.w.4",
+        "text": "Two centrifugal compressor stages"
+      },
+      {
+        "id": "AFH.15.4.5.w.5",
+        "text": "Four axial flow compressor stages"
+      },
+      {
+        "id": "AFH.15.4.5.w.6",
+        "text": "No centrifugal stage"
+      },
+      {
+        "id": "AFH.15.4.5.w.7",
+        "text": "Only one compressor stage"
+      },
+      {
+        "id": "AFH.15.4.5.w.8",
+        "text": "Multiple centrifugal stages"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15, Section 4",
+    "subjects": [
+      "Compressor Design",
+      "Engine Mechanics",
+      "Turboprop Components"
+    ]
+  },
+  {
+    "questionid": "AFH.15.4.6",
+    "question": "What is the role of the power lever in a turboprop engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.4.6.c.1",
+        "text": "Controls engine power from idle through takeoff power."
+      },
+      {
+        "id": "AFH.15.4.6.c.2",
+        "text": "Increases or decreases gas generator rpm (N1)."
+      },
+      {
+        "id": "AFH.15.4.6.c.3",
+        "text": "Adjusts engine power by moving forward or aft."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.4.6.w.1",
+        "text": "Regulates propeller speed directly."
+      },
+      {
+        "id": "AFH.15.4.6.w.2",
+        "text": "Controls fuel mixture."
+      },
+      {
+        "id": "AFH.15.4.6.w.3",
+        "text": "Operates the propeller governor."
+      },
+      {
+        "id": "AFH.15.4.6.w.4",
+        "text": "Adjusts compressor stages."
+      },
+      {
+        "id": "AFH.15.4.6.w.5",
+        "text": "Sets exhaust flow rate."
+      },
+      {
+        "id": "AFH.15.4.6.w.6",
+        "text": "Controls accessory drive speed."
+      },
+      {
+        "id": "AFH.15.4.6.w.7",
+        "text": "Regulates condition lever settings."
+      },
+      {
+        "id": "AFH.15.4.6.w.8",
+        "text": "Operates as an on/off switch."
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15, Section 4",
+    "subjects": [
+      "Engine Power Control",
+      "Turboprop Operation",
+      "Pilot Controls"
+    ]
+  },
+  {
+    "questionid": "AFH.15.4.7",
+    "question": "What is the typical propeller rpm range for a free power-turbine engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.4.7.c.1",
+        "text": "1,500 to 1,900 rpm"
+      },
+      {
+        "id": "AFH.15.4.7.c.2",
+        "text": "In a free power-turbine engine, such as the Pratt & Whitney PT-6 engine, the propeller is driven by a separate turbine through reduction gearing."
+      },
+      {
+        "id": "AFH.15.4.7.c.3",
+        "text": "The propeller is not on the same shaft as the basic engine turbine and compressor."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.4.7.w.1",
+        "text": "2,000 to 2,500 rpm"
+      },
+      {
+        "id": "AFH.15.4.7.w.2",
+        "text": "1,000 to 1,200 rpm"
+      },
+      {
+        "id": "AFH.15.4.7.w.3",
+        "text": "2,500 to 3,000 rpm"
+      },
+      {
+        "id": "AFH.15.4.7.w.4",
+        "text": "1,200 to 1,500 rpm"
+      },
+      {
+        "id": "AFH.15.4.7.w.5",
+        "text": "3,000 to 3,500 rpm"
+      },
+      {
+        "id": "AFH.15.4.7.w.6",
+        "text": "800 to 1,000 rpm"
+      },
+      {
+        "id": "AFH.15.4.7.w.7",
+        "text": "2,000 to 2,200 rpm"
+      },
+      {
+        "id": "AFH.15.4.7.w.8",
+        "text": "1,900 to 2,100 rpm"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15, Section 4",
+    "subjects": [
+      "Propeller Specifications",
+      "Engine Performance",
+      "Turboprop Mechanics"
+    ]
+  },
+  {
+    "questionid": "AFH.15.5.1",
+    "question": "What is the function of the propeller's angle of attack (AOA) in turbopropeller-powered airplanes?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.5.1.c.1",
+        "text": "Determines thrust"
+      },
+      {
+        "id": "AFH.15.5.1.c.2",
+        "text": "Varies with pitch angle"
+      },
+      {
+        "id": "AFH.15.5.1.c.3",
+        "text": "Affects airspeed interaction"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.5.1.w.1",
+        "text": "Controls fuel flow"
+      },
+      {
+        "id": "AFH.15.5.1.w.2",
+        "text": "Regulates engine temperature"
+      },
+      {
+        "id": "AFH.15.5.1.w.3",
+        "text": "Adjusts cabin pressure"
+      },
+      {
+        "id": "AFH.15.5.1.w.4",
+        "text": "Changes engine rotation direction"
+      },
+      {
+        "id": "AFH.15.5.1.w.5",
+        "text": "Modifies wing lift"
+      },
+      {
+        "id": "AFH.15.5.1.w.6",
+        "text": "Alters landing gear position"
+      },
+      {
+        "id": "AFH.15.5.1.w.7",
+        "text": "Influences flight altitude"
+      },
+      {
+        "id": "AFH.15.5.1.w.8",
+        "text": "Controls aileron movement"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15, Section 5",
+    "subjects": [
+      "Propeller Mechanics"
+    ]
+  },
+  {
+    "questionid": "AFH.15.5.2",
+    "question": "What is the purpose of the 'feathered' position of a propeller?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.5.2.c.1",
+        "text": "Minimizes drag"
+      },
+      {
+        "id": "AFH.15.5.2.c.2",
+        "text": "Prevents propeller acting as turbine"
+      },
+      {
+        "id": "AFH.15.5.2.c.3",
+        "text": "Used during engine failure"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.5.2.w.1",
+        "text": "Increases forward thrust"
+      },
+      {
+        "id": "AFH.15.5.2.w.2",
+        "text": "Enhances fuel efficiency"
+      },
+      {
+        "id": "AFH.15.5.2.w.3",
+        "text": "Improves cabin comfort"
+      },
+      {
+        "id": "AFH.15.5.2.w.4",
+        "text": "Boosts engine power"
+      },
+      {
+        "id": "AFH.15.5.2.w.5",
+        "text": "Reduces noise levels"
+      },
+      {
+        "id": "AFH.15.5.2.w.6",
+        "text": "Facilitates faster taxiing"
+      },
+      {
+        "id": "AFH.15.5.2.w.7",
+        "text": "Enhances braking action"
+      },
+      {
+        "id": "AFH.15.5.2.w.8",
+        "text": "Increases lift"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15, Section 5",
+    "subjects": [
+      "Propeller Mechanics"
+    ]
+  },
+  {
+    "questionid": "AFH.15.5.3",
+    "question": "How does the reverse pitch position affect a turbopropeller-powered airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.5.3.c.1",
+        "text": "Provides braking action"
+      },
+      {
+        "id": "AFH.15.5.3.c.2",
+        "text": "Pushes air away from airplane"
+      },
+      {
+        "id": "AFH.15.5.3.c.3",
+        "text": "Aids in stopping during landing roll"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.5.3.w.1",
+        "text": "Increases forward thrust"
+      },
+      {
+        "id": "AFH.15.5.3.w.2",
+        "text": "Enhances fuel efficiency"
+      },
+      {
+        "id": "AFH.15.5.3.w.3",
+        "text": "Improves takeoff performance"
+      },
+      {
+        "id": "AFH.15.5.3.w.4",
+        "text": "Reduces engine wear"
+      },
+      {
+        "id": "AFH.15.5.3.w.5",
+        "text": "Increases climb rate"
+      },
+      {
+        "id": "AFH.15.5.3.w.6",
+        "text": "Enhances maneuverability"
+      },
+      {
+        "id": "AFH.15.5.3.w.7",
+        "text": "Improves stability"
+      },
+      {
+        "id": "AFH.15.5.3.w.8",
+        "text": "Increases cruising speed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15, Section 5",
+    "subjects": [
+      "Propeller Mechanics"
+    ]
+  },
+  {
+    "questionid": "AFH.15.5.4",
+    "question": "What is the 'beta' range of operation in turbopropeller-powered airplanes?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.5.4.c.1",
+        "text": "Power lever controls blade angle"
+      },
+      {
+        "id": "AFH.15.5.4.c.2",
+        "text": "Includes positions from flight idle to maximum reverse"
+      },
+      {
+        "id": "AFH.15.5.4.c.3",
+        "text": "Results in reverse thrust"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.5.4.w.1",
+        "text": "Increases forward thrust"
+      },
+      {
+        "id": "AFH.15.5.4.w.2",
+        "text": "Enhances fuel efficiency"
+      },
+      {
+        "id": "AFH.15.5.4.w.3",
+        "text": "Improves takeoff performance"
+      },
+      {
+        "id": "AFH.15.5.4.w.4",
+        "text": "Reduces engine wear"
+      },
+      {
+        "id": "AFH.15.5.4.w.5",
+        "text": "Increases climb rate"
+      },
+      {
+        "id": "AFH.15.5.4.w.6",
+        "text": "Enhances maneuverability"
+      },
+      {
+        "id": "AFH.15.5.4.w.7",
+        "text": "Improves stability"
+      },
+      {
+        "id": "AFH.15.5.4.w.8",
+        "text": "Increases cruising speed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15, Section 5",
+    "subjects": [
+      "Engine Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.15.5.5",
+    "question": "What happens when the power lever is positioned aft of flight idle in a turboprop engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.5.5.c.1",
+        "text": "Controls propeller blade angle"
+      },
+      {
+        "id": "AFH.15.5.5.c.2",
+        "text": "Leads to reverse thrust"
+      },
+      {
+        "id": "AFH.15.5.5.c.3",
+        "text": "Propeller angles become progressively flatter"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.5.5.w.1",
+        "text": "Increases forward thrust"
+      },
+      {
+        "id": "AFH.15.5.5.w.2",
+        "text": "Enhances fuel efficiency"
+      },
+      {
+        "id": "AFH.15.5.5.w.3",
+        "text": "Improves takeoff performance"
+      },
+      {
+        "id": "AFH.15.5.5.w.4",
+        "text": "Reduces engine wear"
+      },
+      {
+        "id": "AFH.15.5.5.w.5",
+        "text": "Increases climb rate"
+      },
+      {
+        "id": "AFH.15.5.5.w.6",
+        "text": "Enhances maneuverability"
+      },
+      {
+        "id": "AFH.15.5.5.w.7",
+        "text": "Improves stability"
+      },
+      {
+        "id": "AFH.15.5.5.w.8",
+        "text": "Increases cruising speed"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15, Section 5",
+    "subjects": [
+      "Engine Operations"
+    ]
+  },
+  {
+    "questionid": "AFH.15.6.1",
+    "question": "What are the fundamental characteristics and primary components of a typical turboprop airplane electrical system?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.6.1.c.1",
+        "text": "It is a 28-volt direct current (DC) system."
+      },
+      {
+        "id": "AFH.15.6.1.c.2",
+        "text": "It receives power from one or more batteries."
+      },
+      {
+        "id": "AFH.15.6.1.c.3",
+        "text": "It receives power from a starter/generator for each engine."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.6.1.w.1",
+        "text": "It is a 115-volt alternating current (AC) system."
+      },
+      {
+        "id": "AFH.15.6.1.w.2",
+        "text": "It primarily uses hydraulic power for electrical generation."
+      },
+      {
+        "id": "AFH.15.6.1.w.3",
+        "text": "It relies solely on engine-driven alternators for power."
+      },
+      {
+        "id": "AFH.15.6.1.w.4",
+        "text": "It converts mechanical torque directly into AC power."
+      },
+      {
+        "id": "AFH.15.6.1.w.5",
+        "text": "It uses only lead-acid batteries."
+      },
+      {
+        "id": "AFH.15.6.1.w.6",
+        "text": "It is a 400-cycle AC system."
+      },
+      {
+        "id": "AFH.15.6.1.w.7",
+        "text": "It is designed to operate at 12 volts DC."
+      },
+      {
+        "id": "AFH.15.6.1.w.8",
+        "text": "It uses separate starter motors and generators."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Electrical System Basics",
+      "Turboprop Systems",
+      "DC Power"
+    ]
+  },
+  {
+    "questionid": "AFH.15.6.2",
+    "question": "How do starter/generators function within a turboprop airplane's electrical system?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.6.2.c.1",
+        "text": "They use electrical power to produce mechanical torque for engine start."
+      },
+      {
+        "id": "AFH.15.6.2.c.2",
+        "text": "They use the engine’s mechanical torque to produce electrical power after the engine is running."
+      },
+      {
+        "id": "AFH.15.6.2.c.3",
+        "text": "They double as both starter motors and generators."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.6.2.w.1",
+        "text": "They convert AC power to DC power for the main bus."
+      },
+      {
+        "id": "AFH.15.6.2.w.2",
+        "text": "They are primarily responsible for regulating system voltage."
+      },
+      {
+        "id": "AFH.15.6.2.w.3",
+        "text": "They only function as generators, with separate starter motors."
+      },
+      {
+        "id": "AFH.15.6.2.w.4",
+        "text": "They store electrical energy for emergency power."
+      },
+      {
+        "id": "AFH.15.6.2.w.5",
+        "text": "They are used to convert DC power to AC power."
+      },
+      {
+        "id": "AFH.15.6.2.w.6",
+        "text": "They provide hydraulic pressure for flight controls."
+      },
+      {
+        "id": "AFH.15.6.2.w.7",
+        "text": "They are only active during engine shutdown procedures."
+      },
+      {
+        "id": "AFH.15.6.2.w.8",
+        "text": "They are exclusively powered by the aircraft's batteries."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Starter/Generators",
+      "Engine Start Systems",
+      "Electrical Generation"
+    ]
+  },
+  {
+    "questionid": "AFH.15.6.3",
+    "question": "For what purposes is 28-volt 400 cycle alternating current (AC) power generated in a turboprop airplane's electrical system?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.6.3.c.1",
+        "text": "For certain avionic functions."
+      },
+      {
+        "id": "AFH.15.6.3.c.2",
+        "text": "For certain lighting functions."
+      },
+      {
+        "id": "AFH.15.6.3.c.3",
+        "text": "For indicator synchronization functions."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.6.3.w.1",
+        "text": "To charge the aircraft's main batteries."
+      },
+      {
+        "id": "AFH.15.6.3.w.2",
+        "text": "To provide primary power for engine starting."
+      },
+      {
+        "id": "AFH.15.6.3.w.3",
+        "text": "To operate the landing gear hydraulic pump."
+      },
+      {
+        "id": "AFH.15.6.3.w.4",
+        "text": "To supply power to the essential DC bus."
+      },
+      {
+        "id": "AFH.15.6.3.w.5",
+        "text": "To regulate the output of the starter/generators."
+      },
+      {
+        "id": "AFH.15.6.3.w.6",
+        "text": "To isolate power sources during a short circuit."
+      },
+      {
+        "id": "AFH.15.6.3.w.7",
+        "text": "To provide backup power to the main buses."
+      },
+      {
+        "id": "AFH.15.6.3.w.8",
+        "text": "To control the engine's fuel flow."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "AC Power",
+      "Inverters",
+      "Avionics"
+    ]
+  },
+  {
+    "questionid": "AFH.15.6.4",
+    "question": "Which statements accurately describe power distribution buses and their protection in a turboprop airplane's electrical system?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.6.4.c.1",
+        "text": "Buses are common terminals from which individual electrical circuits get their power."
+      },
+      {
+        "id": "AFH.15.6.4.c.2",
+        "text": "Essential buses feed power to equipment having top priority."
+      },
+      {
+        "id": "AFH.15.6.4.c.3",
+        "text": "Current limiters protect buses from short circuits and other malfunctions."
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.6.4.w.1",
+        "text": "Buses are primarily responsible for converting DC power to AC power."
+      },
+      {
+        "id": "AFH.15.6.4.w.2",
+        "text": "Buses are always isolated from all other power sources, even in normal operation."
+      },
+      {
+        "id": "AFH.15.6.4.w.3",
+        "text": "Buses store electrical energy for use during engine failure."
+      },
+      {
+        "id": "AFH.15.6.4.w.4",
+        "text": "Buses are typically named after the type of current they carry (e.g., AC bus)."
+      },
+      {
+        "id": "AFH.15.6.4.w.5",
+        "text": "Buses are designed to increase voltage for high-power components."
+      },
+      {
+        "id": "AFH.15.6.4.w.6",
+        "text": "Buses are protected from short circuits by standard circuit breakers."
+      },
+      {
+        "id": "AFH.15.6.4.w.7",
+        "text": "Buses are only found in multiengine turboprop airplanes."
+      },
+      {
+        "id": "AFH.15.6.4.w.8",
+        "text": "Buses regulate the frequency of AC power."
+      }
+    ],
+    "source": "AFH",
+    "subjects": [
+      "Power Distribution",
+      "Electrical Buses",
+      "Circuit Protection"
+    ]
+  },
+  {
+    "questionid": "AFH.15.7.1",
+    "question": "What is a common cause of aircraft damage or loss of control in turboprop airplanes?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.7.1.c.1",
+        "text": "Pilot errors in engine operation"
+      },
+      {
+        "id": "AFH.15.7.1.c.2",
+        "text": "Pilot errors in systems operation"
+      },
+      {
+        "id": "AFH.15.7.1.c.3",
+        "text": "Engine-related issues"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.7.1.w.1",
+        "text": "Weather conditions"
+      },
+      {
+        "id": "AFH.15.7.1.w.2",
+        "text": "Bird strikes"
+      },
+      {
+        "id": "AFH.15.7.1.w.3",
+        "text": "Pilot fatigue"
+      },
+      {
+        "id": "AFH.15.7.1.w.4",
+        "text": "Navigation errors"
+      },
+      {
+        "id": "AFH.15.7.1.w.5",
+        "text": "Fuel mismanagement"
+      },
+      {
+        "id": "AFH.15.7.1.w.6",
+        "text": "Improper landing gear operation"
+      },
+      {
+        "id": "AFH.15.7.1.w.7",
+        "text": "Incorrect flight planning"
+      },
+      {
+        "id": "AFH.15.7.1.w.8",
+        "text": "Inadequate pre-flight inspection"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15, Section 7",
+    "subjects": [
+      "Aircraft Operation",
+      "Pilot Errors",
+      "Turboprop Transition"
+    ]
+  },
+  {
+    "questionid": "AFH.15.7.2",
+    "question": "What is a characteristic of the split-shaft/free turbine engine in turboprop airplanes?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.7.2.c.1",
+        "text": "Power output lags for several seconds"
+      },
+      {
+        "id": "AFH.15.7.2.c.2",
+        "text": "Requires greater physical movement of power levers"
+      },
+      {
+        "id": "AFH.15.7.2.c.3",
+        "text": "Last 30% of engine rpm represents majority of thrust"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.7.2.w.1",
+        "text": "Immediate power response"
+      },
+      {
+        "id": "AFH.15.7.2.w.2",
+        "text": "Minimal power lever movement needed"
+      },
+      {
+        "id": "AFH.15.7.2.w.3",
+        "text": "Constant power output"
+      },
+      {
+        "id": "AFH.15.7.2.w.4",
+        "text": "No lag in power changes"
+      },
+      {
+        "id": "AFH.15.7.2.w.5",
+        "text": "Thrust evenly distributed across rpm range"
+      },
+      {
+        "id": "AFH.15.7.2.w.6",
+        "text": "Power output is instantaneous"
+      },
+      {
+        "id": "AFH.15.7.2.w.7",
+        "text": "Throttle movement similar to piston engines"
+      },
+      {
+        "id": "AFH.15.7.2.w.8",
+        "text": "No need to anticipate power changes"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15, Section 7",
+    "subjects": [
+      "Engine Characteristics",
+      "Turboprop Engines",
+      "Pilot Transition"
+    ]
+  },
+  {
+    "questionid": "AFH.15.7.3",
+    "question": "Why is turbine engine heat sensitivity important during startup?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.7.3.c.1",
+        "text": "Cannot tolerate over temperature for long"
+      },
+      {
+        "id": "AFH.15.7.3.c.2",
+        "text": "Temperatures get hotter during startup"
+      },
+      {
+        "id": "AFH.15.7.3.c.3",
+        "text": "Requires vigilant monitoring of temperature"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.7.3.w.1",
+        "text": "Engine cools down quickly"
+      },
+      {
+        "id": "AFH.15.7.3.w.2",
+        "text": "Heat sensitivity is not a concern"
+      },
+      {
+        "id": "AFH.15.7.3.w.3",
+        "text": "Startup temperatures are always stable"
+      },
+      {
+        "id": "AFH.15.7.3.w.4",
+        "text": "Over temperature conditions are rare"
+      },
+      {
+        "id": "AFH.15.7.3.w.5",
+        "text": "No need for temperature monitoring"
+      },
+      {
+        "id": "AFH.15.7.3.w.6",
+        "text": "Startup is the coolest phase"
+      },
+      {
+        "id": "AFH.15.7.3.w.7",
+        "text": "Heat sensitivity only affects performance"
+      },
+      {
+        "id": "AFH.15.7.3.w.8",
+        "text": "Engine can handle high temperatures indefinitely"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15, Section 7",
+    "subjects": [
+      "Engine Heat Sensitivity",
+      "Startup Procedures",
+      "Turbine Engines"
+    ]
+  },
+  {
+    "questionid": "AFH.15.7.4",
+    "question": "What should a pilot do if a hot start occurs during engine startup?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.7.4.c.1",
+        "text": "Cut off fuel to the engine"
+      },
+      {
+        "id": "AFH.15.7.4.c.2",
+        "text": "Monitor temperature closely"
+      },
+      {
+        "id": "AFH.15.7.4.c.3",
+        "text": "Be prepared for quick action"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.7.4.w.1",
+        "text": "Ignore the temperature rise"
+      },
+      {
+        "id": "AFH.15.7.4.w.2",
+        "text": "Continue with startup"
+      },
+      {
+        "id": "AFH.15.7.4.w.3",
+        "text": "Increase fuel flow"
+      },
+      {
+        "id": "AFH.15.7.4.w.4",
+        "text": "Decrease power lever movement"
+      },
+      {
+        "id": "AFH.15.7.4.w.5",
+        "text": "Wait for temperatures to stabilize"
+      },
+      {
+        "id": "AFH.15.7.4.w.6",
+        "text": "Rely on automatic systems"
+      },
+      {
+        "id": "AFH.15.7.4.w.7",
+        "text": "Perform a full engine shutdown"
+      },
+      {
+        "id": "AFH.15.7.4.w.8",
+        "text": "Restart the engine immediately"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15, Section 7",
+    "subjects": [
+      "Engine Startup",
+      "Hot Start Procedures",
+      "Pilot Actions"
+    ]
+  },
+  {
+    "questionid": "AFH.15.7.5",
+    "question": "What is a hung start or false start in a turbine engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.7.5.c.1",
+        "text": "Engine accelerates more slowly than normal"
+      },
+      {
+        "id": "AFH.15.7.5.c.2",
+        "text": "Engine stabilizes at low rpm"
+      },
+      {
+        "id": "AFH.15.7.5.c.3",
+        "text": "Requires help from the starter"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.7.5.w.1",
+        "text": "Engine accelerates too quickly"
+      },
+      {
+        "id": "AFH.15.7.5.w.2",
+        "text": "Engine stabilizes at high rpm"
+      },
+      {
+        "id": "AFH.15.7.5.w.3",
+        "text": "No starter assistance needed"
+      },
+      {
+        "id": "AFH.15.7.5.w.4",
+        "text": "Engine runs smoothly without issues"
+      },
+      {
+        "id": "AFH.15.7.5.w.5",
+        "text": "Engine starts normally"
+      },
+      {
+        "id": "AFH.15.7.5.w.6",
+        "text": "Immediate engine shutdown required"
+      },
+      {
+        "id": "AFH.15.7.5.w.7",
+        "text": "Engine operates at full power"
+      },
+      {
+        "id": "AFH.15.7.5.w.8",
+        "text": "Engine requires no intervention"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15, Section 7",
+    "subjects": [
+      "Engine Startup Issues",
+      "Hung Start",
+      "Turbine Engines"
+    ]
+  },
+  {
+    "questionid": "AFH.15.7.6",
+    "question": "What is crucial for successful engine starting in turboprop airplanes?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.7.6.c.1",
+        "text": "Correct minimum battery voltage"
+      },
+      {
+        "id": "AFH.15.7.6.c.2",
+        "text": "Adequate ground power unit output"
+      },
+      {
+        "id": "AFH.15.7.6.c.3",
+        "text": "Monitoring temperature and acceleration"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.7.6.w.1",
+        "text": "High fuel flow"
+      },
+      {
+        "id": "AFH.15.7.6.w.2",
+        "text": "Immediate power application"
+      },
+      {
+        "id": "AFH.15.7.6.w.3",
+        "text": "Ignoring temperature limits"
+      },
+      {
+        "id": "AFH.15.7.6.w.4",
+        "text": "Using any available power source"
+      },
+      {
+        "id": "AFH.15.7.6.w.5",
+        "text": "Minimal battery voltage"
+      },
+      {
+        "id": "AFH.15.7.6.w.6",
+        "text": "No need for monitoring"
+      },
+      {
+        "id": "AFH.15.7.6.w.7",
+        "text": "Relying solely on automatic systems"
+      },
+      {
+        "id": "AFH.15.7.6.w.8",
+        "text": "Skipping pre-start checks"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15, Section 7",
+    "subjects": [
+      "Engine Starting Procedures",
+      "Power Requirements",
+      "Pilot Monitoring"
+    ]
+  },
+  {
+    "questionid": "AFH.15.7.7",
+    "question": "What should a pilot anticipate when moving the power lever from flight idle to a high power setting in a turboprop airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.7.7.c.1",
+        "text": "Power output lag"
+      },
+      {
+        "id": "AFH.15.7.7.c.2",
+        "text": "Greater physical movement required"
+      },
+      {
+        "id": "AFH.15.7.7.c.3",
+        "text": "Need to lead power changes"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.7.7.w.1",
+        "text": "Immediate power increase"
+      },
+      {
+        "id": "AFH.15.7.7.w.2",
+        "text": "Minimal movement needed"
+      },
+      {
+        "id": "AFH.15.7.7.w.3",
+        "text": "No need to anticipate changes"
+      },
+      {
+        "id": "AFH.15.7.7.w.4",
+        "text": "Constant power output"
+      },
+      {
+        "id": "AFH.15.7.7.w.5",
+        "text": "Throttle response similar to piston engines"
+      },
+      {
+        "id": "AFH.15.7.7.w.6",
+        "text": "Power increase without delay"
+      },
+      {
+        "id": "AFH.15.7.7.w.7",
+        "text": "No lag in power changes"
+      },
+      {
+        "id": "AFH.15.7.7.w.8",
+        "text": "Automatic power adjustment"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15, Section 7",
+    "subjects": [
+      "Power Management",
+      "Turboprop Transition",
+      "Pilot Anticipation"
+    ]
+  },
+  {
+    "questionid": "AFH.15.7.8",
+    "question": "What indicates a hot start during engine startup?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.7.8.c.1",
+        "text": "Unusually high initial fuel flow"
+      },
+      {
+        "id": "AFH.15.7.8.c.2",
+        "text": "Rapid temperature rise"
+      },
+      {
+        "id": "AFH.15.7.8.c.3",
+        "text": "Temperatures approaching maximum limits"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.7.8.w.1",
+        "text": "Slow temperature increase"
+      },
+      {
+        "id": "AFH.15.7.8.w.2",
+        "text": "Stable temperatures"
+      },
+      {
+        "id": "AFH.15.7.8.w.3",
+        "text": "Low initial fuel flow"
+      },
+      {
+        "id": "AFH.15.7.8.w.4",
+        "text": "Temperatures below normal"
+      },
+      {
+        "id": "AFH.15.7.8.w.5",
+        "text": "Gradual temperature rise"
+      },
+      {
+        "id": "AFH.15.7.8.w.6",
+        "text": "No change in fuel flow"
+      },
+      {
+        "id": "AFH.15.7.8.w.7",
+        "text": "Temperatures decreasing"
+      },
+      {
+        "id": "AFH.15.7.8.w.8",
+        "text": "Fuel flow within normal range"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15, Section 7",
+    "subjects": [
+      "Engine Startup Indicators",
+      "Hot Start Detection",
+      "Pilot Monitoring"
+    ]
+  },
+  {
+    "questionid": "AFH.15.7.9",
+    "question": "What is the effect of the last 30% of engine rpm in a turboprop engine?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.7.9.c.1",
+        "text": "Represents majority of engine thrust"
+      },
+      {
+        "id": "AFH.15.7.9.c.2",
+        "text": "Significant power increase"
+      },
+      {
+        "id": "AFH.15.7.9.c.3",
+        "text": "Critical for power application"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.7.9.w.1",
+        "text": "Minimal thrust contribution"
+      },
+      {
+        "id": "AFH.15.7.9.w.2",
+        "text": "No effect on power"
+      },
+      {
+        "id": "AFH.15.7.9.w.3",
+        "text": "Thrust evenly distributed"
+      },
+      {
+        "id": "AFH.15.7.9.w.4",
+        "text": "Negligible power change"
+      },
+      {
+        "id": "AFH.15.7.9.w.5",
+        "text": "Thrust decreases"
+      },
+      {
+        "id": "AFH.15.7.9.w.6",
+        "text": "Power remains constant"
+      },
+      {
+        "id": "AFH.15.7.9.w.7",
+        "text": "No impact on engine performance"
+      },
+      {
+        "id": "AFH.15.7.9.w.8",
+        "text": "Thrust is minimal"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15, Section 7",
+    "subjects": [
+      "Engine Performance",
+      "Thrust Management",
+      "Turboprop Engines"
+    ]
+  },
+  {
+    "questionid": "AFH.15.7.10",
+    "question": "What should a pilot do if the engine temperature exceeds limitations during startup?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.7.10.c.1",
+        "text": "Cut off fuel to the engine"
+      },
+      {
+        "id": "AFH.15.7.10.c.2",
+        "text": "Monitor for further temperature rise"
+      },
+      {
+        "id": "AFH.15.7.10.c.3",
+        "text": "Prepare for immediate corrective action"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.7.10.w.1",
+        "text": "Ignore the temperature"
+      },
+      {
+        "id": "AFH.15.7.10.w.2",
+        "text": "Continue with startup"
+      },
+      {
+        "id": "AFH.15.7.10.w.3",
+        "text": "Increase power application"
+      },
+      {
+        "id": "AFH.15.7.10.w.4",
+        "text": "Wait for temperatures to stabilize"
+      },
+      {
+        "id": "AFH.15.7.10.w.5",
+        "text": "Rely on automatic systems"
+      },
+      {
+        "id": "AFH.15.7.10.w.6",
+        "text": "Perform a full engine shutdown"
+      },
+      {
+        "id": "AFH.15.7.10.w.7",
+        "text": "Restart the engine immediately"
+      },
+      {
+        "id": "AFH.15.7.10.w.8",
+        "text": "Decrease fuel flow"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15, Section 7",
+    "subjects": [
+      "Engine Temperature Management",
+      "Startup Procedures",
+      "Pilot Actions"
+    ]
+  },
+  {
+    "questionid": "AFH.15.8.1",
+    "question": "When transitioning to turbopropeller-powered airplanes, which of the following topics should be covered during thorough ground training for high/medium altitude operations?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.8.1.c.1",
+        "text": "Physiological aspects of high-altitude flight"
+      },
+      {
+        "id": "AFH.15.8.1.c.2",
+        "text": "Oxygen and pressurization system operation"
+      },
+      {
+        "id": "AFH.15.8.1.c.3",
+        "text": "High-altitude emergencies"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.8.1.w.1",
+        "text": "Low-altitude terrain avoidance procedures"
+      },
+      {
+        "id": "AFH.15.8.1.w.2",
+        "text": "Visual flight rules in Class G airspace"
+      },
+      {
+        "id": "AFH.15.8.1.w.3",
+        "text": "Single-engine piston engine failure drills"
+      },
+      {
+        "id": "AFH.15.8.1.w.4",
+        "text": "Agricultural spray system operation"
+      },
+      {
+        "id": "AFH.15.8.1.w.5",
+        "text": "Seaplane water landing techniques"
+      },
+      {
+        "id": "AFH.15.8.1.w.6",
+        "text": "Glider tow release procedures"
+      },
+      {
+        "id": "AFH.15.8.1.w.7",
+        "text": "Basic ground reference maneuver techniques"
+      },
+      {
+        "id": "AFH.15.8.1.w.8",
+        "text": "Soft-field takeoff and landing procedures"
+      }
+    ],
+    "source": "AFH Chapter 15, Section 15.8 – Training Considerations",
+    "subjects": [
+      "Turboprop Transition Training",
+      "High-Altitude Ground Training",
+      "Physiological Requirements"
+    ]
+  },
+  {
+    "questionid": "AFH.15.9.1",
+    "question": "Which of the following topics are explicitly mentioned as components of the High-Altitude Flight Environment in the provided text?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.9.1.c.1",
+        "text": "Airspace Operations"
+      },
+      {
+        "id": "AFH.15.9.1.c.2",
+        "text": "Reduced Vertical Separation Minimum (RVSM) Operations"
+      },
+      {
+        "id": "AFH.15.9.1.c.3",
+        "text": "Title 14 Code of Federal Regulations (14 CFR) part 91, section 91.211"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.9.1.w.1",
+        "text": "Low-altitude VFR flight operations"
+      },
+      {
+        "id": "AFH.15.9.1.w.2",
+        "text": "Standard instrument departure procedures"
+      },
+      {
+        "id": "AFH.15.9.1.w.3",
+        "text": "Visual flight rules (VFR) navigation"
+      },
+      {
+        "id": "AFH.15.9.1.w.4",
+        "text": "Air traffic control ground clearances"
+      },
+      {
+        "id": "AFH.15.9.1.w.5",
+        "text": "Runway safety area requirements"
+      },
+      {
+        "id": "AFH.15.9.1.w.6",
+        "text": "Preflight weather briefings for short flights"
+      },
+      {
+        "id": "AFH.15.9.1.w.7",
+        "text": "Engine shutdown procedures"
+      },
+      {
+        "id": "AFH.15.9.1.w.8",
+        "text": "Aircraft pre-takeoff checklists"
+      }
+    ],
+    "source": "afh.15.9",
+    "subjects": [
+      "High-Altitude Flight Environment",
+      "Airspace",
+      "RVSM",
+      "14 CFR part 91"
+    ]
+  },
+  {
+    "questionid": "AFH.15.10.1",
+    "question": "What are some key considerations for flight planning and navigation in turbopropeller-powered airplanes?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.10.1.c.1",
+        "text": "Flight planning"
+      },
+      {
+        "id": "AFH.15.10.1.c.2",
+        "text": "Weather charts"
+      },
+      {
+        "id": "AFH.15.10.1.c.3",
+        "text": "Navigation aids (NAVAIDs)"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.10.1.w.1",
+        "text": "Icing"
+      },
+      {
+        "id": "AFH.15.10.1.w.2",
+        "text": "Hypoxia"
+      },
+      {
+        "id": "AFH.15.10.1.w.3",
+        "text": "Decompression sickness"
+      },
+      {
+        "id": "AFH.15.10.1.w.4",
+        "text": "Mach Tuck"
+      },
+      {
+        "id": "AFH.15.10.1.w.5",
+        "text": "Swept-wing concept"
+      },
+      {
+        "id": "AFH.15.10.1.w.6",
+        "text": "Compressor stalls"
+      },
+      {
+        "id": "AFH.15.10.1.w.7",
+        "text": "Donning of oxygen masks"
+      },
+      {
+        "id": "AFH.15.10.1.w.8",
+        "text": "In-flight fire"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15: Transition to Turbopropeller-Powered Airplanes Introduction",
+    "subjects": [
+      "Flight Planning and Navigation"
+    ]
+  },
+  {
+    "questionid": "AFH.15.11.1",
+    "question": "According to the AFH Chapter 15 flight training outline, which of the following are components of the preflight inspection's oxygen system functional test?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.11.1.c.1",
+        "text": "Verification of oxygen supply and pressure"
+      },
+      {
+        "id": "AFH.15.11.1.c.2",
+        "text": "Confirmation of proper mask fit"
+      },
+      {
+        "id": "AFH.15.11.1.c.3",
+        "text": "Testing pilot and ATC communication using mask microphones"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.11.1.w.1",
+        "text": "Verification of emergency descent checklist completion"
+      },
+      {
+        "id": "AFH.15.11.1.w.2",
+        "text": "Confirmation of course plotting accuracy"
+      },
+      {
+        "id": "AFH.15.11.1.w.3",
+        "text": "Review of Airplane Flight Manual limitations"
+      },
+      {
+        "id": "AFH.15.11.1.w.4",
+        "text": "Simulated rapid decompression drill"
+      },
+      {
+        "id": "AFH.15.11.1.w.5",
+        "text": "Functional test of engine run-up procedures"
+      },
+      {
+        "id": "AFH.15.11.1.w.6",
+        "text": "Check of weather briefing documentation"
+      },
+      {
+        "id": "AFH.15.11.1.w.7",
+        "text": "Verification of flight plan filing with ATC"
+      },
+      {
+        "id": "AFH.15.11.1.w.8",
+        "text": "Confirmation of shutdown procedure review"
+      }
+    ],
+    "source": "AFH Chapter 15, Section 15.11 – Flight Training: Preflight Inspection item 3a lists the functional test of the oxygen system as including verification of supply and pressure, regulator operation, oxygen flow, mask fit, and pilot and ATC communication using mask microphones.",
+    "subjects": [
+      "Oxygen System Preflight Inspection",
+      "High-Altitude Operations",
+      "Turbopropeller Flight Training Procedures"
+    ]
+  },
+  {
+    "questionid": "AFH.15.12.1",
+    "question": "What are some key topics covered when transitioning to a turbopropeller-powered airplane?",
+    "correct_answers": [
+      {
+        "id": "AFH.15.12.1.c.1",
+        "text": "Handling differences"
+      },
+      {
+        "id": "AFH.15.12.1.c.2",
+        "text": "Powerplant systems"
+      },
+      {
+        "id": "AFH.15.12.1.c.3",
+        "text": "Training syllabus"
+      }
+    ],
+    "wrong_answers": [
+      {
+        "id": "AFH.15.12.1.w.1",
+        "text": "Aerobatic maneuvers"
+      },
+      {
+        "id": "AFH.15.12.1.w.2",
+        "text": "Glider towing"
+      },
+      {
+        "id": "AFH.15.12.1.w.3",
+        "text": "Parachute deployment"
+      },
+      {
+        "id": "AFH.15.12.1.w.4",
+        "text": "Seaplane operations"
+      },
+      {
+        "id": "AFH.15.12.1.w.5",
+        "text": "Balloon navigation"
+      },
+      {
+        "id": "AFH.15.12.1.w.6",
+        "text": "Helicopter rotor dynamics"
+      },
+      {
+        "id": "AFH.15.12.1.w.7",
+        "text": "Jet engine thrust"
+      },
+      {
+        "id": "AFH.15.12.1.w.8",
+        "text": "Spacecraft re-entry"
+      }
+    ],
+    "source": "Airplane Flying Handbook (FAA-H-8083-3C) Chapter 15: Transition to Turbopropeller-Powered Airplanes",
+    "subjects": [
+      "Turbopropeller transition",
+      "Aircraft systems",
+      "Pilot training"
+    ]
+  }
+]

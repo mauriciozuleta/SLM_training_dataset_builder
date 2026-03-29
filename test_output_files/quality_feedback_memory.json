@@ -1,5 +1,5 @@
 {
-  "updatedAtUtc": "2026-03-29T14:45:05.065Z",
+  "updatedAtUtc": "2026-03-29T22:57:25.026Z",
   "runs": [
     {
       "atUtc": "2026-03-27T16:36:56.944Z",
@@ -204,26 +204,57 @@
       "beforeLevel": "optimum",
       "afterLevel": "optimum",
       "improved": false
+    },
+    {
+      "atUtc": "2026-03-29T22:41:14.287Z",
+      "decision": "close",
+      "totalIssues": 1,
+      "issueCodes": [
+        "REPEATED_SUBJECTS"
+      ],
+      "fatalIssueCodes": [],
+      "fatalIssueCount": 0,
+      "beforeWeightedIssuePercent": 0.067,
+      "afterWeightedIssuePercent": 0.067,
+      "beforeLevel": "optimum",
+      "afterLevel": "optimum",
+      "improved": false
+    },
+    {
+      "atUtc": "2026-03-29T22:57:25.026Z",
+      "decision": "close",
+      "totalIssues": 2,
+      "issueCodes": [
+        "DUPLICATE_CONVERSATIONS",
+        "REPEATED_SUBJECTS"
+      ],
+      "fatalIssueCodes": [],
+      "fatalIssueCount": 0,
+      "beforeWeightedIssuePercent": 0.142,
+      "afterWeightedIssuePercent": 0.142,
+      "beforeLevel": "optimum",
+      "afterLevel": "optimum",
+      "improved": false
     }
   ],
   "issueStats": {
     "DUPLICATE_CONVERSATIONS": {
-      "count": 6,
+      "count": 7,
       "severity": "warning",
       "instruction": "Regenerate only duplicated conversational pairs with variation constraints.",
-      "lastSeenUtc": "2026-03-29T14:28:12.049Z"
+      "lastSeenUtc": "2026-03-29T22:57:25.026Z"
     },
     "REPEATED_SUBJECTS": {
-      "count": 8,
+      "count": 10,
       "severity": "warning",
       "instruction": "Regenerate over-concentrated sections with subject balancing constraints.",
-      "lastSeenUtc": "2026-03-29T14:45:05.065Z"
+      "lastSeenUtc": "2026-03-29T22:57:25.026Z"
     }
   },
   "successfulFixes": {},
   "stability": {
     "isStableOptimum": true,
-    "checkedAtUtc": "2026-03-29T14:45:05.065Z",
+    "checkedAtUtc": "2026-03-29T22:57:25.026Z",
     "rules": {
       "consecutiveOptimumRuns": 3,
       "recurringHighImpactThreshold": 2,
@@ -232,16 +263,17 @@
     "consecutiveOptimumRuns": 3,
     "recurringHighImpact": [],
     "latestRun": {
-      "atUtc": "2026-03-29T14:45:05.065Z",
+      "atUtc": "2026-03-29T22:57:25.026Z",
       "decision": "close",
-      "totalIssues": 1,
+      "totalIssues": 2,
       "issueCodes": [
+        "DUPLICATE_CONVERSATIONS",
         "REPEATED_SUBJECTS"
       ],
       "fatalIssueCodes": [],
       "fatalIssueCount": 0,
-      "beforeWeightedIssuePercent": 0.023,
-      "afterWeightedIssuePercent": 0.023,
+      "beforeWeightedIssuePercent": 0.142,
+      "afterWeightedIssuePercent": 0.142,
       "beforeLevel": "optimum",
       "afterLevel": "optimum",
       "improved": false

@@ -157,12 +157,16 @@ function createPartialArtifactRepairService({ fs, path, common, questionBankGene
         const reason = normalizeText(entry?.reason || entry?.failureReason);
         const plannedQuestions = toPositiveInt(entry?.plannedQuestions, 0);
         const plannedPairs = toPositiveInt(entry?.plannedPairs, 0);
+        const passCap = toPositiveInt(entry?.passCap, 0);
+        const plannedPasses = toPositiveInt(entry?.plannedPasses, 0);
         return {
           sectionId,
           sectionOrdinal,
           reason,
           plannedQuestions,
           plannedPairs,
+          passCap,
+          plannedPasses,
         };
       })
       .filter((entry) => entry.sectionId);
@@ -252,7 +256,7 @@ function createPartialArtifactRepairService({ fs, path, common, questionBankGene
     }
   };
 
-  const buildQuestionRepairResult = async ({ sourceDocument, artifactJson, repairArtifactPath, configuredProviders, generationGuidance, onLog, onProgress, abortSignal }) => {
+  const buildQuestionRepairResult = async ({ sourceDocument, artifactJson, repairArtifactPath, configuredProviders, generationGuidance, repairMode, onLog, onProgress, abortSignal }) => {
     const metadata = extractQuestionMetadata(artifactJson);
     const incompleteSections = getIncompleteSections(metadata);
     if (!incompleteSections.length) {
@@ -267,11 +271,12 @@ function createPartialArtifactRepairService({ fs, path, common, questionBankGene
     const preferredProvider = pickProvider(configuredProviders, ['openai', 'anthropic', 'gemini']);
     const secondaryProvider = pickProvider(configuredProviders, configuredProviders, [preferredProvider]);
     onProgress({ key: 'questions', state: 'running', completed: 0, total: subsetDocument.sections.length, progressText: `0/${subsetDocument.sections.length}` });
-    const repairResult = await questionBankGenerator.buildQuestionBank(subsetDocument, {
+    let repairResult = await questionBankGenerator.buildQuestionBank(subsetDocument, {
       preferredProvider,
       secondaryProvider,
       workerProviders: buildWorkerProviderOrder(preferredProvider, secondaryProvider, configuredProviders),
       generationGuidance,
+      repairRetryMode: repairMode,
       repairSectionPlan: incompleteSections,
       onLog,
       onProgress: (progress) => {
@@ -280,7 +285,30 @@ function createPartialArtifactRepairService({ fs, path, common, questionBankGene
       abortSignal,
     });
 
-    const repairedMetadata = repairResult?.metadata || {};
+    let repairedMetadata = repairResult?.metadata || {};
+    if (repairMode === 'fast' && getIncompleteSections(repairedMetadata).length > 0) {
+      onLog({
+        scope: 'questions',
+        level: 'warning',
+        message: 'Fast repair mode ended incomplete. Escalating to deep retry profile for remaining sections.',
+      });
+      onProgress({ key: 'questions', state: 'running', completed: 0, total: subsetDocument.sections.length, progressText: `0/${subsetDocument.sections.length}` });
+      repairResult = await questionBankGenerator.buildQuestionBank(subsetDocument, {
+        preferredProvider,
+        secondaryProvider,
+        workerProviders: buildWorkerProviderOrder(preferredProvider, secondaryProvider, configuredProviders),
+        generationGuidance,
+        repairRetryMode: 'deep',
+        repairSectionPlan: incompleteSections,
+        onLog,
+        onProgress: (progress) => {
+          onProgress({ key: 'questions', state: 'running', ...progress });
+        },
+        abortSignal,
+      });
+      repairedMetadata = repairResult?.metadata || {};
+    }
+
     const repairedEntries = Array.isArray(repairResult?.questionBank)
       ? repairResult.questionBank.filter((entry) => entry && typeof entry === 'object' && !entry.questionBank)
       : [];
@@ -350,7 +378,7 @@ function createPartialArtifactRepairService({ fs, path, common, questionBankGene
     };
   };
 
-  const buildConversationalRepairResult = async ({ sourceDocument, artifactJson, repairArtifactPath, configuredProviders, generationGuidance, onLog, onProgress, abortSignal }) => {
+  const buildConversationalRepairResult = async ({ sourceDocument, artifactJson, repairArtifactPath, configuredProviders, generationGuidance, repairMode, onLog, onProgress, abortSignal }) => {
     const metadata = extractConversationalMetadata(artifactJson);
     const incompleteSections = getIncompleteSections(metadata);
     if (!incompleteSections.length) {
@@ -365,11 +393,12 @@ function createPartialArtifactRepairService({ fs, path, common, questionBankGene
     const preferredProvider = pickProvider(configuredProviders, ['gemini', 'anthropic', 'openai']);
     const secondaryProvider = pickProvider(configuredProviders, configuredProviders, [preferredProvider]);
     onProgress({ key: 'conversationalPairs', state: 'running', completed: 0, total: subsetDocument.sections.length, progressText: `0/${subsetDocument.sections.length}` });
-    const repairResult = await conversationalPairGenerator.buildConversationalPairSet(subsetDocument, {
+    let repairResult = await conversationalPairGenerator.buildConversationalPairSet(subsetDocument, {
       preferredProvider,
       secondaryProvider,
       workerProviders: buildWorkerProviderOrder(preferredProvider, secondaryProvider, configuredProviders),
       generationGuidance,
+      repairRetryMode: repairMode,
       repairSectionPlan: incompleteSections,
       onLog,
       onProgress: (progress) => {
@@ -378,7 +407,30 @@ function createPartialArtifactRepairService({ fs, path, common, questionBankGene
       abortSignal,
     });
 
-    const repairedMeta = repairResult?.conversationalTrainingPairSet || {};
+    let repairedMeta = repairResult?.conversationalTrainingPairSet || {};
+    if (repairMode === 'fast' && getIncompleteSections(repairedMeta).length > 0) {
+      onLog({
+        scope: 'conversational',
+        level: 'warning',
+        message: 'Fast repair mode ended incomplete. Escalating to deep retry profile for remaining sections.',
+      });
+      onProgress({ key: 'conversationalPairs', state: 'running', completed: 0, total: subsetDocument.sections.length, progressText: `0/${subsetDocument.sections.length}` });
+      repairResult = await conversationalPairGenerator.buildConversationalPairSet(subsetDocument, {
+        preferredProvider,
+        secondaryProvider,
+        workerProviders: buildWorkerProviderOrder(preferredProvider, secondaryProvider, configuredProviders),
+        generationGuidance,
+        repairRetryMode: 'deep',
+        repairSectionPlan: incompleteSections,
+        onLog,
+        onProgress: (progress) => {
+          onProgress({ key: 'conversationalPairs', state: 'running', ...progress });
+        },
+        abortSignal,
+      });
+      repairedMeta = repairResult?.conversationalTrainingPairSet || {};
+    }
+
     const repairedPairs = Array.isArray(repairResult?.pairs) ? repairResult.pairs : [];
     const repairedSectionIds = new Set(incompleteSections.map((entry) => normalizeSectionId(entry?.sectionId)).filter(Boolean));
     const existingPairs = Array.isArray(artifactJson?.pairs) ? artifactJson.pairs : [];
@@ -440,6 +492,7 @@ function createPartialArtifactRepairService({ fs, path, common, questionBankGene
     const sourceDocumentPath = normalizeText(options?.sourceDocumentPath);
     const repairArtifactPath = normalizeText(options?.repairArtifactPath);
     const generationGuidance = normalizeText(options?.generationGuidance);
+    const repairMode = normalizeText(options?.repairMode).toLowerCase() === 'deep' ? 'deep' : 'fast';
     const configuredProviders = normalizeProviderList(options?.apiProviders);
     const onLog = typeof options?.onLog === 'function' ? options.onLog : () => {};
     const onProgress = typeof options?.onProgress === 'function' ? options.onProgress : () => {};
@@ -491,6 +544,7 @@ function createPartialArtifactRepairService({ fs, path, common, questionBankGene
         repairArtifactPath,
         configuredProviders,
         generationGuidance,
+        repairMode,
         onLog,
         onProgress,
         abortSignal,
@@ -504,6 +558,7 @@ function createPartialArtifactRepairService({ fs, path, common, questionBankGene
         repairArtifactPath,
         configuredProviders,
         generationGuidance,
+        repairMode,
         onLog,
         onProgress,
         abortSignal,

@@ -951,6 +951,24 @@ body {
   font-size: 0.88rem;
 }
 
+.repair-mode-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #c8d9fb;
+  font-size: 0.86rem;
+  user-select: none;
+}
+
+.repair-mode-toggle input[type='checkbox'] {
+  accent-color: #4a89ff;
+}
+
+.repair-mode-help {
+  color: #9fb2d4;
+  font-size: 0.8rem;
+}
+
 .export-panel {
   margin-top: 0;
 }
