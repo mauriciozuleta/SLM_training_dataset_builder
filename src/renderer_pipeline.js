@@ -1,86 +1,118 @@
-const card = document.querySelector('[data-file-card]');
-const requiredCards = document.querySelectorAll('[data-file-card][data-required="true"]');
-const generateButton = document.getElementById('generateButton');
-const cancelButton = document.getElementById('cancelButton');
-const repairButton = document.getElementById('repairButton');
-const exportButton = document.getElementById('exportButton');
-const generateHint = document.getElementById('generateHint');
-const repairHint = document.getElementById('repairHint');
-const repairFastModeInput = document.getElementById('repairFastMode');
-const exportHint = document.getElementById('exportHint');
-const sharedOutputSubtitle = document.getElementById('sharedOutputSubtitle');
-const logWindow = document.getElementById('logWindow');
-const clearLogButton = document.getElementById('clearLogButton');
-const modeButtons = document.querySelectorAll('[data-mode-trigger]');
-const modePanels = document.querySelectorAll('[data-mode-panel]');
-const projectCurriculumPanel = document.getElementById('projectCurriculumPanel');
-const projectCurriculumTitle = document.getElementById('projectCurriculumTitle');
-const projectCurriculumSubtitle = document.getElementById('projectCurriculumSubtitle');
-const curriculumFoldersList = document.getElementById('curriculumFoldersList');
-const curriculumDocumentsList = document.getElementById('curriculumDocumentsList');
-
-const outputFolderInput = document.getElementById('outputFolder');
-const outputFolderButton = document.querySelector('[data-select-folder="outputFolder"]');
-const datasetNameInput = document.getElementById('datasetName');
-const outputPrefixInput = document.getElementById('outputPrefix');
-const projectSelect = document.getElementById('projectSelect');
-const projectNameInput = document.getElementById('projectName');
-const projectStatus = document.getElementById('projectStatus');
-const newProjectButton = document.getElementById('newProjectButton');
-const saveProjectButton = document.getElementById('saveProjectButton');
-const deleteProjectButton = document.getElementById('deleteProjectButton');
-const topCreateProjectButton = document.getElementById('topCreateProjectButton');
-const topOpenProjectButton = document.getElementById('topOpenProjectButton');
-const projectCreationPanel = document.getElementById('projectCreationPanel');
-const newProjectName = document.getElementById('newProjectName');
-const newProjectType = document.getElementById('newProjectType');
-const slmFoundationCell = document.getElementById('slmFoundationCell');
-const slmFoundationLabel = document.getElementById('slmFoundationLabel');
-const slmReinforcementCell = document.getElementById('slmReinforcementCell');
-const slmReinforcementLabel = document.getElementById('slmReinforcementLabel');
-const newProjectFolder = document.getElementById('newProjectFolder');
-const selectNewProjectFolderButton = document.getElementById('selectNewProjectFolderButton');
-const generateNewDatasetButton = document.getElementById('generateNewDatasetButton');
-const projectCreationHint = document.getElementById('projectCreationHint');
-const projectCreationFields = document.getElementById('projectCreationFields');
-const projectCreationActionRow = document.getElementById('projectCreationActionRow');
-const sourceDocumentsSlot = document.getElementById('sourceDocumentsSlot');
-const sourceDocumentsCard = document.getElementById('sourceDocumentsCard');
-const targetFoundationCheckbox = document.getElementById('targetFoundationCheckbox');
-const targetReinforcementCheckbox = document.getElementById('targetReinforcementCheckbox');
-const targetStageStatus = document.getElementById('targetStageStatus');
-const applySourceDocumentsButton = document.getElementById('applySourceDocumentsButton');
-const postUploadModal = document.getElementById('postUploadModal');
-const postUploadYesButton = document.getElementById('postUploadYesButton');
-const postUploadNoButton = document.getElementById('postUploadNoButton');
-const postUploadExpanded = document.getElementById('postUploadExpanded');
-const newStageFolderLabel = document.getElementById('newStageFolderLabel');
-const newStageFolderType = document.getElementById('newStageFolderType');
-const createNewStageFolderButton = document.getElementById('createNewStageFolderButton');
-const projectBusyOverlay = document.getElementById('projectBusyOverlay');
-const projectBusyMessage = document.getElementById('projectBusyMessage');
-const uploadedFilesList = document.getElementById('uploadedFilesList');
-const uploadedFileCount = document.getElementById('uploadedFileCount');
-const projectLoaderPanel = document.getElementById('projectLoaderPanel');
-const closeProjectLoaderButton = document.getElementById('closeProjectLoaderButton');
-const cachedProjectsList = document.getElementById('cachedProjectsList');
-const projectDetailsPanel = document.getElementById('projectDetailsPanel');
-const backToCachedListButton = document.getElementById('backToCachedListButton');
-const closeProjectDetailsButton = document.getElementById('closeProjectDetailsButton');
-const projectDetailsTitle = document.getElementById('projectDetailsTitle');
-const projectDetailsType = document.getElementById('projectDetailsType');
-const projectDetailsPath = document.getElementById('projectDetailsPath');
-const projectDetailsCreated = document.getElementById('projectDetailsCreated');
-const projectDocumentsList = document.getElementById('projectDocumentsList');
-const openProjectFolderButton = document.getElementById('openProjectFolderButton');
-const removeProjectCacheButton = document.getElementById('removeProjectCacheButton');
-const datasetNameCell = document.querySelector('[data-dataset-name-cell]');
-const commonPrefixCell = document.querySelector('[data-common-prefix-cell]');
-const exportSourceFolderInput = document.getElementById('exportSourceFolder');
-const exportSourceFolderButton = document.getElementById('exportSourceFolderButton');
-const pdfDropTextEl = document.getElementById('pdfDropText');
-const legacyCard = document.querySelector('[data-legacy-card]');
-const repairCards = document.querySelectorAll('[data-repair-card]');
+const {
+  card,
+  requiredCards = [],
+  generateButton,
+  cancelButton,
+  repairButton,
+  exportButton,
+  generateHint,
+  repairHint,
+  repairFastModeInput,
+  exportHint,
+  sharedOutputSubtitle,
+  logWindow,
+  clearLogButton,
+  modeButtons = [],
+  modePanels = [],
+  projectCurriculumPanel,
+  projectCurriculumTitle,
+  projectCurriculumSubtitle,
+  curriculumFoldersList,
+  curriculumDocumentsList,
+  outputFolderInput,
+  outputFolderButton,
+  datasetNameInput,
+  outputPrefixInput,
+  projectSelect,
+  projectNameInput,
+  projectStatus,
+  newProjectButton,
+  saveProjectButton,
+  deleteProjectButton,
+  topCreateProjectButton,
+  topOpenProjectButton,
+  projectCreationPanel,
+  newProjectName,
+  newProjectType,
+  slmFoundationCell,
+  slmFoundationLabel,
+  slmReinforcementCell,
+  slmReinforcementLabel,
+  newProjectFolder,
+  selectNewProjectFolderButton,
+  generateNewDatasetButton,
+  projectCreationHint,
+  projectCreationFields,
+  projectCreationActionRow,
+  sourceDocumentsSlot,
+  sourceDocumentsCard,
+  targetFoundationCheckbox,
+  targetReinforcementCheckbox,
+  targetStageStatus,
+  applySourceDocumentsButton,
+  postUploadModal,
+  postUploadYesButton,
+  postUploadNoButton,
+  postUploadExpanded,
+  newStageFolderLabel,
+  newStageFolderType,
+  createNewStageFolderButton,
+  projectBusyOverlay,
+  projectBusyMessage,
+  uploadedFilesList,
+  uploadedFileCount,
+  projectLoaderPanel,
+  closeProjectLoaderButton,
+  cachedProjectsList,
+  projectDetailsPanel,
+  backToCachedListButton,
+  closeProjectDetailsButton,
+  projectDetailsTitle,
+  projectDetailsType,
+  projectDetailsPath,
+  projectDetailsCreated,
+  projectDocumentsList,
+  openProjectFolderButton,
+  removeProjectCacheButton,
+  datasetNameCell,
+  commonPrefixCell,
+  exportSourceFolderInput,
+  exportSourceFolderButton,
+  pdfDropTextEl,
+  legacyCard,
+  repairCards = [],
+  qualityResultsModal,
+  qualityRatingDisplay,
+  qualityExplanation,
+  errorCountEl,
+  warningCountEl,
+  weightedPercentEl,
+  issuesSummary,
+  qualityActionsContainer,
+  conversionStatusEl,
+  documentReadyBadge,
+  summaryReadyBadge,
+  questionReadyBadge,
+  deterministicPairsReadyBadge,
+  conversationalPairsReadyBadge,
+  documentOutputCard,
+  repairStatusCard,
+  openAiStatusButton,
+  anthropicStatusButton,
+  geminiStatusButton,
+  summaryProviderIndicators,
+  questionsProviderIndicators,
+  conversationalProviderIndicators,
+  repairQuestionsBadge,
+  repairConversationalBadge,
+  repairQuestionsProviderIndicators,
+  repairConversationalProviderIndicators,
+  repairSourceFileName,
+  repairTargetFileName,
+  repairAnalysis,
+  repairAnalysisSummary,
+  repairAnalysisDetails,
+} = window.rendererDomRefs || {};
 const defaultPdfDropText = 'Drop the source PDF document to extract the structured chapter JSON.';
 
 const checkboxIds = {
@@ -92,38 +124,34 @@ const checkboxIds = {
 };
 
 const apiDependentOutputs = ['docJson', 'summary', 'questions', 'deterministicPairs', 'conversationalPairs'];
-const conversionStatusEl = document.getElementById('conversionStatus');
-const documentReadyBadge = document.getElementById('documentReadyBadge');
-const summaryReadyBadge = document.getElementById('summaryReadyBadge');
-const questionReadyBadge = document.getElementById('questionReadyBadge');
-const deterministicPairsReadyBadge = document.getElementById('deterministicPairsReadyBadge');
-const conversationalPairsReadyBadge = document.getElementById('conversationalPairsReadyBadge');
-const documentOutputCard = document.querySelector('[data-document-card]');
-const repairStatusCard = document.querySelector('[data-repair-status-card]');
-const openAiStatusButton = document.getElementById('openAiStatusButton');
-const anthropicStatusButton = document.getElementById('anthropicStatusButton');
-const geminiStatusButton = document.getElementById('geminiStatusButton');
-const summaryProviderIndicators = document.getElementById('summaryProviderIndicators');
-const questionsProviderIndicators = document.getElementById('questionsProviderIndicators');
-const conversationalProviderIndicators = document.getElementById('conversationalProviderIndicators');
-const repairQuestionsBadge = document.getElementById('repairQuestionsBadge');
-const repairConversationalBadge = document.getElementById('repairConversationalBadge');
-const repairQuestionsProviderIndicators = document.getElementById('repairQuestionsProviderIndicators');
-const repairConversationalProviderIndicators = document.getElementById('repairConversationalProviderIndicators');
-const repairSourceFileName = document.getElementById('repairSourceFileName');
-const repairTargetFileName = document.getElementById('repairTargetFileName');
-const repairAnalysis = document.getElementById('repairAnalysis');
-const repairAnalysisSummary = document.getElementById('repairAnalysisSummary');
-const repairAnalysisDetails = document.getElementById('repairAnalysisDetails');
+const {
+  NO_FOLDER_SELECTED_LABEL,
+  ensureJsonExtension,
+  ensureMarkdownExtension,
+  normalizeDatasetName,
+  normalizePathForCompare,
+  readFolderInputValue,
+  writeFolderInputValue,
+  normalizeProjectName,
+  makeProjectId,
+  isSameOrNestedPath,
+  joinPath,
+  getBaseName,
+  isJsonFileName,
+  parseDroppedPath,
+  inferRepairArtifactTypeFromName,
+  formatRepairSectionList,
+} = window.rendererUtils || {};
 
-const qualityResultsModal = document.getElementById('qualityResultsModal');
-const qualityRatingDisplay = document.getElementById('qualityRatingDisplay');
-const qualityExplanation = document.getElementById('qualityExplanation');
-const errorCountEl = document.getElementById('errorCount');
-const warningCountEl = document.getElementById('warningCount');
-const weightedPercentEl = document.getElementById('weightedPercent');
-const issuesSummary = document.getElementById('issuesSummary');
-const qualityActionsContainer = document.getElementById('qualityActionsContainer');
+const {
+  renderProjectWorkspaceView,
+  renderCurriculumDocumentsView,
+  renderCurriculumFoldersView,
+  renderTaskModeView,
+} = window.rendererRenderers || {};
+
+const { createProjectEnvironmentController } = window.rendererProjectEnvironment || {};
+const { createWorkflowActionsController } = window.rendererWorkflowActions || {};
 
 const outputBadgesByKey = {
   docJson: documentReadyBadge,
@@ -200,6 +228,7 @@ const acceptedDocumentTypes = ['.pdf', '.json', '.md', '.txt', '.doc', '.docx'];
 const topCreateProjectDefaultLabel = topCreateProjectButton?.querySelector('.nav-button-label')?.textContent || 'Create New Project';
 const projectCreationTitleEl = document.querySelector('#projectCreationPanel .project-creation-header h2');
 const defaultProjectCreationTitle = projectCreationTitleEl?.textContent || 'Create New Project';
+let projectEnvironmentController = null;
 
 const getTimeStamp = () => new Date().toLocaleTimeString([], { hour12: false });
 
@@ -227,6 +256,17 @@ const showWarningPopup = async (message, detail = '') => {
   }
 
   addLog(detail ? `${message} ${detail}` : message, 'warning');
+};
+
+const addBootstrapLog = (message) => {
+  if (!logWindow) {
+    return;
+  }
+  const line = document.createElement('div');
+  line.className = 'log-line log-line--warning';
+  line.textContent = `[${getTimeStamp()}] ${message}`;
+  logWindow.appendChild(line);
+  logWindow.scrollTop = logWindow.scrollHeight;
 };
 
 const getQualityExplanation = (level) => {
@@ -852,53 +892,15 @@ const refreshApiAvailability = async () => {
     await applyApiOutputAvailability(status || { available: false, providers: [] });
   } catch (error) {
     addLog(`Could not verify API availability: ${error.message}`, 'error');
-    await applyApiOutputAvailability({ available: false, providers: [] });
+    try {
+      const fallbackStatus = await window.desktopApp.getApiStatus();
+      await applyApiOutputAvailability(fallbackStatus || { available: false, providers: [] });
+      addLog('Fell back to configured API key status. Provider health checks may be stale.', 'warning');
+    } catch {
+      await applyApiOutputAvailability({ available: false, providers: [] });
+    }
   }
 };
-
-const ensureJsonExtension = (fileName, fallback) => {
-  const raw = typeof fileName === 'string' ? fileName.trim() : '';
-  const base = raw || fallback;
-  return base.toLowerCase().endsWith('.json') ? base : `${base}.json`;
-};
-
-const ensureMarkdownExtension = (fileName, fallback) => {
-  const raw = typeof fileName === 'string' ? fileName.trim() : '';
-  const base = raw || fallback;
-  return base.toLowerCase().endsWith('.md') ? base : `${base}.md`;
-};
-
-const normalizeDatasetName = (value) => {
-  const raw = `${value || ''}`.trim();
-  return raw
-    .replace(/[^a-zA-Z0-9]+/g, '_')
-    .replace(/_+/g, '_')
-    .replace(/^_+|_+$/g, '');
-};
-
-const normalizePathForCompare = (value) => `${value || ''}`
-  .trim()
-  .replace(/\\+/g, '/')
-  .replace(/\/+$/g, '')
-  .toLowerCase();
-
-const NO_FOLDER_SELECTED_LABEL = 'No folder selected';
-
-const readFolderInputValue = (input) => {
-  const raw = `${input?.value || ''}`.trim();
-  return raw && raw !== NO_FOLDER_SELECTED_LABEL ? raw : '';
-};
-
-const writeFolderInputValue = (input, value) => {
-  if (!input) {
-    return;
-  }
-  input.value = `${value || ''}`.trim() || NO_FOLDER_SELECTED_LABEL;
-};
-
-const normalizeProjectName = (value) => `${value || ''}`.trim();
-
-const makeProjectId = () => `project_${Date.now()}_${Math.floor(Math.random() * 10000)}`;
 
 const buildProjectSnapshotFromInputs = () => ({
   outputFolder: readFolderInputValue(outputFolderInput),
@@ -934,42 +936,19 @@ const getActiveProject = () => {
 };
 
 const renderProjectWorkspace = () => {
-  if (!projectSelect || !projectNameInput || !projectStatus) {
-    return;
-  }
-
   const previousValue = `${projectSelect.value || ''}`;
-  projectSelect.innerHTML = '';
-
-  const placeholder = document.createElement('option');
-  placeholder.value = '';
-  placeholder.textContent = 'No saved project selected';
-  projectSelect.appendChild(placeholder);
-
-  savedProjects.forEach((project) => {
-    const option = document.createElement('option');
-    option.value = project.id;
-    option.textContent = project.name;
-    projectSelect.appendChild(option);
-  });
-
   const active = getActiveProject();
-  const selectedValue = active?.id || previousValue;
-  projectSelect.value = savedProjects.some((project) => project.id === selectedValue) ? selectedValue : '';
-
-  if (active) {
-    projectNameInput.value = active.name;
-    const folderLabel = getBaseName(active.outputFolder.replace(/[\\/]+$/g, '')) || 'no output folder';
-    projectStatus.textContent = `Active project: ${active.name} (output: ${folderLabel}).`;
-  } else if (savedProjects.length > 0) {
-    projectStatus.textContent = `Saved projects: ${savedProjects.length}. Select one to load its workspace defaults.`;
-  } else {
-    projectStatus.textContent = 'No saved projects yet. Set folders once, then save them as a project.';
-    projectNameInput.value = '';
-  }
-
-  if (deleteProjectButton) {
-    deleteProjectButton.disabled = !active;
+  if (typeof renderProjectWorkspaceView === 'function') {
+    renderProjectWorkspaceView({
+      projectSelect,
+      projectNameInput,
+      projectStatus,
+      deleteProjectButton,
+      savedProjects,
+      activeProject: active,
+      previousValue,
+      getBaseName,
+    });
   }
 };
 
@@ -1019,15 +998,6 @@ const syncActiveProjectFromInputs = () => {
   });
 };
 
-const isSameOrNestedPath = (candidatePath, basePath) => {
-  const candidate = normalizePathForCompare(candidatePath);
-  const base = normalizePathForCompare(basePath);
-  if (!candidate || !base) {
-    return false;
-  }
-  return candidate === base || candidate.startsWith(`${base}/`);
-};
-
 const buildPrefix = () => {
   const raw = (outputPrefixInput?.value || '').trim();
   if (!raw) {
@@ -1064,75 +1034,6 @@ const getInitialDocumentFileName = () => {
 const buildRunOutputFolderName = () => {
   const prefix = buildPrefix();
   return prefix ? `${prefix} output docs` : 'output docs';
-};
-
-const joinPath = (basePath, childName) => {
-  const safeBase = `${basePath || ''}`.trim().replace(/[\\/]+$/g, '');
-  if (!safeBase) {
-    return childName;
-  }
-  return `${safeBase}\\${childName}`;
-};
-
-const getBaseName = (fullPath) => {
-  if (typeof fullPath !== 'string') {
-    return '';
-  }
-  const normalized = fullPath.replace(/\\/g, '/');
-  const parts = normalized.split('/');
-  return parts[parts.length - 1] || fullPath;
-};
-
-const isJsonFileName = (fileName) => `${fileName || ''}`.trim().toLowerCase().endsWith('.json');
-
-const parseDroppedPath = (rawValue) => {
-  const value = `${rawValue || ''}`.trim();
-  if (!value) {
-    return '';
-  }
-
-  const firstLine = value.split(/\r?\n/).map((entry) => entry.trim()).find(Boolean) || '';
-  if (!firstLine) {
-    return '';
-  }
-
-  if (/^file:\/\//i.test(firstLine)) {
-    try {
-      const url = new URL(firstLine);
-      return decodeURIComponent(url.pathname || '').replace(/^\/+([A-Za-z]:)/, '$1');
-    } catch (_) {
-      return firstLine.replace(/^file:\/\//i, '').replace(/^\/+([A-Za-z]:)/, '$1');
-    }
-  }
-
-  return firstLine;
-};
-
-const inferRepairArtifactTypeFromName = (fileName) => {
-  const lowerName = `${fileName || ''}`.trim().toLowerCase();
-  if (!lowerName) {
-    return '';
-  }
-  if (lowerName.includes('conversational') || lowerName.includes('conversation')) {
-    return 'conversationalPairs';
-  }
-  if (lowerName.includes('question')) {
-    return 'questions';
-  }
-  return '';
-};
-
-const formatRepairSectionList = (sections = [], maxItems = 5) => {
-  const list = (Array.isArray(sections) ? sections : [])
-    .map((entry) => `${entry?.sectionId || ''}`.trim())
-    .filter(Boolean);
-  if (!list.length) {
-    return '';
-  }
-  if (list.length <= maxItems) {
-    return list.join(', ');
-  }
-  return `${list.slice(0, maxItems).join(', ')}, +${list.length - maxItems} more`;
 };
 
 const renderRepairAnalysis = () => {
@@ -1341,63 +1242,32 @@ const getActiveProjectEnvironment = () => {
 };
 
 const renderCurriculumDocuments = (folderPath = '') => {
-  if (!curriculumDocumentsList) {
-    return;
-  }
-
   const selectedEntry = projectCurriculumEntries.find((entry) => entry.path === folderPath) || null;
-  if (!selectedEntry) {
-    curriculumDocumentsList.innerHTML = '<p class="curriculum-empty">Select a curriculum folder to view source documents.</p>';
-    return;
+  if (typeof renderCurriculumDocumentsView === 'function') {
+    renderCurriculumDocumentsView({
+      curriculumDocumentsList,
+      selectedEntry,
+    });
   }
-
-  const documents = Array.isArray(selectedEntry.documents) ? selectedEntry.documents : [];
-  if (documents.length === 0) {
-    curriculumDocumentsList.innerHTML = '<p class="curriculum-empty">No supported source documents found in this folder.</p>';
-    return;
-  }
-
-  curriculumDocumentsList.innerHTML = '';
-  documents.forEach((documentEntry) => {
-    const item = document.createElement('div');
-    item.className = 'curriculum-document-item';
-    const extensionLabel = `${documentEntry.extension || ''}`.replace('.', '').toUpperCase() || 'DOC';
-    item.innerHTML = `
-      <span class="curriculum-document-icon">${extensionLabel.slice(0, 3)}</span>
-      <span class="curriculum-document-name">${documentEntry.relativePath || documentEntry.name || 'Document'}</span>
-    `;
-    curriculumDocumentsList.appendChild(item);
-  });
 };
 
 const renderCurriculumFolders = () => {
-  if (!curriculumFoldersList) {
-    return;
-  }
-
   if (projectCurriculumEntries.length === 0) {
-    curriculumFoldersList.innerHTML = '<p class="curriculum-empty">No curriculum folders found for this project.</p>';
     renderCurriculumDocuments('');
-    return;
   }
 
-  curriculumFoldersList.innerHTML = '';
-  projectCurriculumEntries.forEach((entry) => {
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.className = 'curriculum-folder-item';
-    button.dataset.selected = entry.path === selectedCurriculumFolderPath ? 'true' : 'false';
-    button.innerHTML = `
-      <span class="curriculum-folder-title">${entry.name}</span>
-      <span class="curriculum-folder-meta">${Number(entry.documentCount || 0)} source document${Number(entry.documentCount || 0) === 1 ? '' : 's'}</span>
-    `;
-    button.addEventListener('click', () => {
-      selectedCurriculumFolderPath = entry.path;
-      renderCurriculumFolders();
-      renderCurriculumDocuments(selectedCurriculumFolderPath);
+  if (typeof renderCurriculumFoldersView === 'function') {
+    renderCurriculumFoldersView({
+      curriculumFoldersList,
+      entries: projectCurriculumEntries,
+      selectedPath: selectedCurriculumFolderPath,
+      onSelect: (entry) => {
+        selectedCurriculumFolderPath = entry.path;
+        renderCurriculumFolders();
+        renderCurriculumDocuments(selectedCurriculumFolderPath);
+      },
     });
-    curriculumFoldersList.appendChild(button);
-  });
+  }
 
   renderCurriculumDocuments(selectedCurriculumFolderPath);
 };
@@ -1545,40 +1415,20 @@ const getDestinationsReady = () =>
 const hasSelectedOutput = () => Object.values(getSelectedOutputs()).some(Boolean);
 
 const refreshTaskModeState = () => {
-  modeButtons.forEach((button) => {
-    const buttonMode = `${button?.dataset?.modeTrigger || ''}`.trim();
-    button.setAttribute('aria-pressed', currentTaskMode === buttonMode ? 'true' : 'false');
-    button.disabled = generationInProgress || repairInProgress || exportInProgress;
-  });
-
-  modePanels.forEach((panel) => {
-    const panelMode = `${panel?.dataset?.modePanel || ''}`.trim();
-    panel.hidden = currentTaskMode !== panelMode;
-  });
-
-  if (sharedOutputSubtitle) {
-    const subtitles = {
-      generate: 'Generate mode: choose destination folder and set Add output documents prefix for the next dataset run.',
-      repair: 'Repair mode: only the destination folder remains visible here. File naming is ignored and the repaired file is overwritten in place.',
-      export: 'Export mode: choose destination folder and set Name Dataset. Export uses that name for the export folder and bucket folders.',
-      default: 'Choose a task to reveal only the output settings that matter for that workflow.',
-    };
-    sharedOutputSubtitle.textContent = subtitles[currentTaskMode] || subtitles.default;
-  }
-
-  const isGenerateMode = currentTaskMode === 'generate' || currentTaskMode === '';
-  const isExplicitExportMode = currentTaskMode === 'export';
-  if (commonPrefixCell) {
-    commonPrefixCell.hidden = !isGenerateMode;
-  }
-  if (outputPrefixInput) {
-    outputPrefixInput.disabled = !isGenerateMode;
-  }
-  if (datasetNameCell) {
-    datasetNameCell.hidden = !isExplicitExportMode;
-  }
-  if (datasetNameInput) {
-    datasetNameInput.disabled = !isExplicitExportMode;
+  if (typeof renderTaskModeView === 'function') {
+    renderTaskModeView({
+      modeButtons,
+      modePanels,
+      sharedOutputSubtitle,
+      commonPrefixCell,
+      outputPrefixInput,
+      datasetNameCell,
+      datasetNameInput,
+      currentTaskMode,
+      generationInProgress,
+      repairInProgress,
+      exportInProgress,
+    });
   }
 
   refreshProjectCurriculumBrowser();
@@ -2434,6 +2284,66 @@ deleteProjectButton?.addEventListener('click', () => {
   void deleteActiveProject();
 });
 
+if (!projectEnvironmentController && typeof createProjectEnvironmentController === 'function') {
+  projectEnvironmentController = createProjectEnvironmentController({
+    dom: {
+      topCreateProjectButton,
+      projectCreationTitleEl,
+      projectCreationPanel,
+      projectLoaderPanel,
+      projectDetailsPanel,
+      cachedProjectsList,
+      topOpenProjectButton,
+      closeProjectLoaderButton,
+      backToCachedListButton,
+      closeProjectDetailsButton,
+      openProjectFolderButton,
+      removeProjectCacheButton,
+    },
+    state: {
+      getCurrentLoadedProject: () => currentLoadedProject,
+      setCurrentLoadedProject: (value) => {
+        currentLoadedProject = value;
+      },
+      setCurrentCreatedProject: (value) => {
+        currentCreatedProject = value;
+      },
+      setCurrentProjectEnvironment: (value) => {
+        currentProjectEnvironment = value;
+      },
+      resetCurriculumState: () => {
+        lastCurriculumProjectRoot = '';
+        projectCurriculumEntries = [];
+        selectedCurriculumFolderPath = '';
+      },
+    },
+    addLog,
+    refreshProjectCurriculumBrowser,
+    topCreateProjectDefaultLabel,
+    defaultProjectCreationTitle,
+  });
+}
+
+const setTopCreateProjectLabel = (projectName, projectType) => {
+  if (projectEnvironmentController?.setTopCreateProjectLabel) {
+    projectEnvironmentController.setTopCreateProjectLabel(projectName, projectType);
+  }
+};
+
+const openSavedProjectEnvironment = async (project) => {
+  if (projectEnvironmentController?.openSavedProjectEnvironment) {
+    await projectEnvironmentController.openSavedProjectEnvironment(project);
+  }
+};
+
+const loadCachedProjectsList = async () => {
+  if (projectEnvironmentController?.loadCachedProjectsList) {
+    await projectEnvironmentController.loadCachedProjectsList();
+  }
+};
+
+projectEnvironmentController?.bindProjectEnvironmentPanelEvents?.();
+
 // ============================================================================
 // PROJECT CREATION WORKFLOW EVENT HANDLERS
 // ============================================================================
@@ -2443,22 +2353,7 @@ topCreateProjectButton?.addEventListener('click', () => {
   const isEnvironmentMode = activeLabel !== topCreateProjectDefaultLabel;
 
   if (isEnvironmentMode) {
-    if (projectCreationPanel) {
-      projectCreationPanel.setAttribute('hidden', '');
-    }
-    if (projectLoaderPanel) {
-      projectLoaderPanel.setAttribute('hidden', '');
-    }
-    if (projectDetailsPanel) {
-      projectDetailsPanel.setAttribute('hidden', '');
-    }
-    if (cachedProjectsList) {
-      cachedProjectsList.removeAttribute('hidden');
-    }
-
-    const chooseTaskPanel = document.querySelector('.mode-panel');
-    chooseTaskPanel?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    addLog(`Switched to environment: ${activeLabel}`, 'info');
+    projectEnvironmentController?.switchToEnvironmentWorkspace?.(activeLabel);
     return;
   }
 
@@ -2519,195 +2414,6 @@ topCreateProjectButton?.addEventListener('click', () => {
     uploadedSourceDocuments = [];
     refreshUploadedFilesList();
     generateNewDatasetButton.disabled = true;
-  }
-});
-
-const formatProjectEnvironmentLabel = (projectType) => {
-  const value = `${projectType || ''}`.trim();
-  if (value === 'single-dataset') {
-    return 'Single Dataset';
-  }
-  if (value === 'subject-dataset') {
-    return 'Subject Dataset';
-  }
-  if (value === 'slm-training') {
-    return 'SLM Training';
-  }
-  return 'Environment';
-};
-
-const setTopCreateProjectLabel = (projectName, projectType) => {
-  const safeName = `${projectName || ''}`.trim();
-  const projectLabel = safeName
-    ? `${safeName} - ${formatProjectEnvironmentLabel(projectType)}`
-    : topCreateProjectDefaultLabel;
-
-  if (topCreateProjectButton) {
-    const labelEl = topCreateProjectButton.querySelector('.nav-button-label');
-    if (labelEl) {
-      labelEl.textContent = projectLabel;
-    }
-  }
-
-  if (projectCreationTitleEl) {
-    projectCreationTitleEl.textContent = safeName
-      ? projectLabel
-      : defaultProjectCreationTitle;
-  }
-
-  if (!safeName) {
-    return;
-  }
-};
-
-const openSavedProjectEnvironment = async (project) => {
-  if (!project) {
-    return;
-  }
-
-  try {
-    // Update last-access metadata when available.
-    if (window.desktopApp?.loadCachedProject && project.rootPath) {
-      await window.desktopApp.loadCachedProject(project.rootPath);
-    }
-
-    currentLoadedProject = project;
-    currentCreatedProject = {
-      projectName: project.projectName || '',
-      projectType: project.projectType || '',
-      rootPath: project.rootPath || '',
-      foundationSourceDocsPath: project.foundationSourceDocsPath || '',
-      reinforcementSourceDocsPath: project.reinforcementSourceDocsPath || '',
-      sourceDocsPath: project.foundationSourceDocsPath || project.reinforcementSourceDocsPath || '',
-    };
-    currentProjectEnvironment = { ...currentCreatedProject };
-    lastCurriculumProjectRoot = '';
-    projectCurriculumEntries = [];
-    selectedCurriculumFolderPath = '';
-
-    setTopCreateProjectLabel(project.projectName, project.projectType);
-
-    if (projectLoaderPanel) {
-      projectLoaderPanel.setAttribute('hidden', '');
-    }
-    if (projectDetailsPanel) {
-      projectDetailsPanel.setAttribute('hidden', '');
-    }
-    if (cachedProjectsList) {
-      cachedProjectsList.removeAttribute('hidden');
-    }
-    if (projectCreationPanel) {
-      projectCreationPanel.setAttribute('hidden', '');
-    }
-
-    const chooseTaskPanel = document.querySelector('.mode-panel');
-    chooseTaskPanel?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    refreshProjectCurriculumBrowser();
-    addLog(`Opened project environment: ${project.projectName || 'Saved project'}`, 'info');
-  } catch (error) {
-    addLog(`Could not open project environment: ${error.message}`, 'error');
-  }
-};
-
-topOpenProjectButton?.addEventListener('click', () => {
-  if (projectLoaderPanel) {
-    if (projectCreationPanel) {
-      projectCreationPanel.setAttribute('hidden', '');
-    }
-    projectLoaderPanel.removeAttribute('hidden');
-    loadCachedProjectsList();
-    // Hide details panel, show projects list
-    if (projectDetailsPanel) {
-      projectDetailsPanel.setAttribute('hidden', '');
-    }
-    if (cachedProjectsList) {
-      cachedProjectsList.removeAttribute('hidden');
-    }
-    projectLoaderPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-});
-
-closeProjectLoaderButton?.addEventListener('click', () => {
-  if (projectLoaderPanel) {
-    projectLoaderPanel.setAttribute('hidden', '');
-  }
-});
-
-backToCachedListButton?.addEventListener('click', () => {
-  if (projectDetailsPanel) {
-    projectDetailsPanel.setAttribute('hidden', '');
-  }
-  if (cachedProjectsList) {
-    cachedProjectsList.removeAttribute('hidden');
-  }
-  currentLoadedProject = null;
-});
-
-closeProjectDetailsButton?.addEventListener('click', () => {
-  if (projectLoaderPanel) {
-    projectLoaderPanel.setAttribute('hidden', '');
-  }
-  if (projectDetailsPanel) {
-    projectDetailsPanel.setAttribute('hidden', '');
-  }
-  currentLoadedProject = null;
-});
-
-openProjectFolderButton?.addEventListener('click', async () => {
-  if (!currentLoadedProject || !currentLoadedProject.rootPath) {
-    addLog('No project selected', 'warning');
-    return;
-  }
-
-  try {
-    const result = await window.desktopApp.openFolder(currentLoadedProject.rootPath);
-    if (result.success) {
-      addLog(`Opened: ${currentLoadedProject.rootPath}`, 'info');
-    } else {
-      addLog(`Could not open folder: ${result.error}`, 'warning');
-    }
-  } catch (error) {
-    console.error('Failed to open folder:', error);
-    addLog(`Error: ${error.message}`, 'warning');
-  }
-});
-
-removeProjectCacheButton?.addEventListener('click', async () => {
-  if (!currentLoadedProject || !currentLoadedProject.rootPath) {
-    addLog('No project to remove', 'warning');
-    return;
-  }
-
-  try {
-    const projectName = currentLoadedProject.projectName || 'Unnamed Project';
-    const confirmed = await window.desktopApp.showConfirm({
-      title: 'Remove from Cache',
-      message: `Remove "${projectName}" from the project cache?`,
-      detail: 'The project files will not be deleted, only removed from the saved projects list.',
-    });
-
-    if (!confirmed) {
-      return;
-    }
-
-    const result = await window.desktopApp.removeCachedProject(currentLoadedProject.rootPath);
-    if (result.success) {
-      addLog(`Removed from cache: ${projectName}`, 'info');
-      // Go back to projects list
-      if (projectDetailsPanel) {
-        projectDetailsPanel.setAttribute('hidden', '');
-      }
-      if (cachedProjectsList) {
-        cachedProjectsList.removeAttribute('hidden');
-      }
-      currentLoadedProject = null;
-      loadCachedProjectsList();
-    } else {
-      addLog(`Failed to remove project: ${result.error}`, 'warning');
-    }
-  } catch (error) {
-    console.error('Error removing project:', error);
-    addLog(`Error: ${error.message}`, 'warning');
   }
 });
 
@@ -3000,137 +2706,6 @@ const setProjectBusyState = (isBusy, message = 'Generating project structure...'
       projectBusyOverlay.removeAttribute('hidden');
     } else {
       projectBusyOverlay.setAttribute('hidden', '');
-    }
-  }
-};
-
-const loadCachedProjectsList = async () => {
-  try {
-    if (!cachedProjectsList) return;
-
-    cachedProjectsList.innerHTML = '<p class="cached-projects-empty">Loading saved projects...</p>';
-
-    const result = await window.desktopApp.getCachedProjects();
-    if (!result.success) {
-      cachedProjectsList.innerHTML = '<p class="cached-projects-empty">No saved projects found.</p>';
-      addLog(`Saved project lookup failed: ${result.error || 'unknown error'}`, 'warning');
-      return;
-    }
-
-    const diagnostics = result.diagnostics || {};
-    const cacheCount = Number.isFinite(diagnostics.fromCacheCount) ? diagnostics.fromCacheCount : 0;
-    const recoveredCount = Number.isFinite(diagnostics.recoveredCount) ? diagnostics.recoveredCount : 0;
-    if (cacheCount > 0 || recoveredCount > 0) {
-      addLog(`Saved projects loaded: ${cacheCount} indexed, ${recoveredCount} recovered by scan.`, 'info');
-    }
-    if (Array.isArray(diagnostics.searchedPaths) && diagnostics.searchedPaths.length > 0) {
-      addLog(`Project search paths: ${diagnostics.searchedPaths.join(' | ')}`, 'info');
-    }
-
-    const projects = result.projects || [];
-    if (projects.length === 0) {
-      cachedProjectsList.innerHTML = '<p class="cached-projects-empty">No saved projects found. Create one, or check log for scanned paths.</p>';
-      return;
-    }
-
-    cachedProjectsList.innerHTML = '';
-    projects.forEach((project) => {
-      const card = document.createElement('div');
-      card.className = 'project-card';
-      
-      const createdDate = new Date(project.createdAt).toLocaleDateString('en-US', {
-        month: 'short',
-        day: 'numeric',
-        year: 'numeric',
-      });
-
-      card.innerHTML = `
-        <h4 class="project-card-title">${project.projectName || 'Unnamed Project'}</h4>
-        <p class="project-card-type">${project.projectType || 'unknown'}</p>
-        <p class="project-card-path">${project.rootPath}</p>
-        <p class="project-card-date">Created: ${createdDate}</p>
-      `;
-
-      card.addEventListener('click', () => {
-        void openSavedProjectEnvironment(project);
-      });
-
-      cachedProjectsList.appendChild(card);
-    });
-  } catch (error) {
-    console.error('Failed to load cached projects:', error);
-    if (cachedProjectsList) {
-      cachedProjectsList.innerHTML = '<p class="cached-projects-empty">Error loading projects. Try again.</p>';
-    }
-  }
-};
-
-const showProjectDetails = async (project) => {
-  try {
-    // Hide projects list, show details
-    if (cachedProjectsList) {
-      cachedProjectsList.setAttribute('hidden', '');
-    }
-    if (projectDetailsPanel) {
-      projectDetailsPanel.removeAttribute('hidden');
-    }
-
-    currentLoadedProject = project;
-
-    if (projectDetailsTitle) {
-      projectDetailsTitle.textContent = project.projectName || 'Project';
-    }
-
-    if (projectDetailsType) {
-      projectDetailsType.textContent = project.projectType || 'Unknown';
-    }
-
-    if (projectDetailsPath) {
-      projectDetailsPath.textContent = project.rootPath;
-    }
-
-    if (projectDetailsCreated) {
-      const createdDate = new Date(project.createdAt).toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-      });
-      projectDetailsCreated.textContent = createdDate;
-    }
-
-    // Load and display documents
-    if (projectDocumentsList) {
-      projectDocumentsList.innerHTML = '<p class="loading-text">Scanning for documents...</p>';
-
-      const docsResult = await window.desktopApp.listProjectDocuments(project.rootPath);
-      if (docsResult.success) {
-        const documents = docsResult.documents || {};
-        if (Object.keys(documents).length === 0) {
-          projectDocumentsList.innerHTML = '<p class="loading-text">No documents found in this project.</p>';
-        } else {
-          projectDocumentsList.innerHTML = '';
-          Object.entries(documents).forEach(([folder, files]) => {
-            const label = document.createElement('strong');
-            label.className = 'document-folder-label';
-            label.textContent = `📁 ${folder}`;
-            projectDocumentsList.appendChild(label);
-
-            files.forEach((file) => {
-              const item = document.createElement('div');
-              item.className = 'document-item';
-              item.textContent = `📄 ${file.relativePath}`;
-              projectDocumentsList.appendChild(item);
-            });
-          });
-        }
-      } else {
-        projectDocumentsList.innerHTML = '<p class="loading-text">Could not load documents.</p>';
-      }
-    }
-  } catch (error) {
-    console.error('Error showing project details:', error);
-    if (projectDocumentsList) {
-      projectDocumentsList.innerHTML = '<p class="loading-text" style="color: #ff9999;">Error loading project details.</p>';
     }
   }
 };
@@ -3688,803 +3263,112 @@ clearLogButton?.addEventListener('click', () => {
   addLog('Log cleared.');
 });
 
-repairButton?.addEventListener('click', async () => {
-  if (repairButton.disabled) {
-    return;
-  }
+const workflowStateProxy = {
+  get apiAvailable() { return apiAvailable; },
+  get apiProviderCount() { return apiProviderCount; },
+  get apiProviders() { return apiProviders; },
+  get selectedFiles() { return selectedFiles; },
+  get outputBadgesByKey() { return outputBadgesByKey; },
+  get repairInspection() { return repairInspection; },
+  get lastUsedDatasetName() { return lastUsedDatasetName; },
+  get lastUsedOutputFolder() { return lastUsedOutputFolder; },
+  setLastUsedOutputPrefix(value) { lastUsedOutputPrefix = `${value || ''}`; },
+  get generationInProgress() { return generationInProgress; },
+  set generationInProgress(value) { generationInProgress = Boolean(value); },
+  get generationCancelRequested() { return generationCancelRequested; },
+  set generationCancelRequested(value) { generationCancelRequested = Boolean(value); },
+  get repairInProgress() { return repairInProgress; },
+  set repairInProgress(value) { repairInProgress = Boolean(value); },
+  get exportInProgress() { return exportInProgress; },
+  set exportInProgress(value) { exportInProgress = Boolean(value); },
+};
 
-  if (!window.desktopApp?.repairPartialArtifact) {
-    addLog('Required repair API is not available.', 'error');
-    refreshRepairState();
-    return;
-  }
+const workflowActionsController = typeof createWorkflowActionsController === 'function'
+  ? createWorkflowActionsController({
+      dom: {
+        repairButton,
+        exportButton,
+        generateButton,
+        cancelButton,
+        repairFastModeInput,
+        exportSourceFolderInput,
+        outputFolderInput,
+        datasetNameInput,
+        outputPrefixInput,
+      },
+      state: workflowStateProxy,
+      helpers: {
+        addLog,
+        refreshRepairState,
+        refreshGenerateState,
+        showWarningPopup,
+        inspectSelectedRepairArtifact,
+        resetRepairOutputState,
+        setRepairBuildState,
+        applyRepairProgressUpdate,
+        getBaseName,
+        normalizeDatasetName,
+        isSameOrNestedPath,
+        setTaskMode,
+        persistSettings,
+        setConversionStatus,
+        buildRunOutputFolderName,
+        joinPath,
+        buildDocumentIdPrefix,
+        getSelectedOutputs,
+        getOutputFileNames,
+        clearPrimaryPdf,
+        resetDocumentOutputState,
+        setSelectedOutputsRunning,
+        setOutputReadyState,
+        setOutputBuildState,
+        updateOutputProviderIndicators,
+        buildCombinedGuidance,
+        markRunningOutputsAsError,
+        getQualityDecision,
+        buildRedoGuidanceFromAudit,
+        hideQualityResultsModal,
+      },
+    })
+  : null;
 
-  if (!apiAvailable) {
-    await showWarningPopup('API is required.', 'Set a valid API key in .env, restart the app, then run repair.');
-    refreshRepairState();
-    return;
-  }
+workflowActionsController?.bindExecutionHandlers?.();
 
-  const sourceDocumentPath = selectedFiles.sourceDocumentJson?.path;
-  const repairArtifactPath = selectedFiles.repairArtifactJson?.path;
-  if (!sourceDocumentPath || !repairArtifactPath) {
-    refreshRepairState();
-    return;
-  }
-
-  if (!repairInspection || !repairInspection.success || !repairInspection.canRepair) {
-    await inspectSelectedRepairArtifact();
-  }
-
-  if (!repairInspection || !repairInspection.success || !repairInspection.canRepair) {
-    refreshRepairState();
-    return;
-  }
-
-  if (window.desktopApp?.showConfirm) {
-    const confirmed = await window.desktopApp.showConfirm({
-      type: 'question',
-      title: 'Confirm Partial Repair',
-      message: 'Resume incomplete sections and overwrite the selected partial artifact?',
-      detail: `Source document: ${sourceDocumentPath}\nRepair target: ${repairArtifactPath}\n\nSupported targets: partial questions JSON or partial conversational pairs JSON.`,
-      buttons: ['Repair', 'Cancel'],
-    });
-
-    if (!confirmed) {
-      addLog('Repair cancelled by user.', 'info');
-      refreshRepairState();
-      return;
-    }
+const bootstrapRendererApp = async () => {
+  try {
+    refreshGenerateState();
+  } catch (error) {
+    console.error('Startup refreshGenerateState failed:', error);
+    addBootstrapLog(`Startup warning: refresh state failed (${error?.message || 'unknown error'}).`);
   }
 
   try {
-    repairInProgress = true;
-    resetRepairOutputState();
-    if (repairInspection.artifactType === 'questions') {
-      setRepairBuildState('conversationalPairs', 'skipped', 'SKIP');
-      setRepairBuildState('questions', 'running', '0/0');
-    } else if (repairInspection.artifactType === 'conversationalPairs') {
-      setRepairBuildState('questions', 'skipped', 'SKIP');
-      setRepairBuildState('conversationalPairs', 'running', '0/0');
-    }
-    refreshGenerateState();
-    const unsubscribeRepairProgress = window.desktopApp?.onArtifactProgress?.((update) => {
-      applyRepairProgressUpdate(update);
-    }) || (() => {});
-    const guardrailSnapshot = await window.desktopApp?.getQualityGuardrails?.({ maxItems: 8 });
-    const generationGuidance = `${guardrailSnapshot?.guardrails || ''}`.trim();
-    if (generationGuidance) {
-      addLog('Loaded persistent quality guardrails for repair.', 'info');
-    }
-
-    addLog(`Starting partial repair for ${getBaseName(repairArtifactPath)}...`, 'info');
-    let repairResult;
-    try {
-      repairResult = await window.desktopApp.repairPartialArtifact({
-        sourceDocumentPath,
-        repairArtifactPath,
-        generationGuidance,
-        repairMode: repairFastModeInput?.checked ? 'fast' : 'deep',
-      });
-    } finally {
-      unsubscribeRepairProgress();
-    }
-
-    if (`${repairResult?.buildStatus || ''}`.toLowerCase() === 'incomplete') {
-      addLog(
-        `Repair finished with partial output. Remaining incomplete sections: ${Number(repairResult?.remainingIncompleteSections || 0)}.`,
-        'warning'
-      );
-    } else {
-      addLog(`Repair completed successfully for ${getBaseName(repairArtifactPath)}.`, 'success');
-    }
-    await inspectSelectedRepairArtifact();
-    addLog(`Repaired artifact saved in place: ${repairResult?.repairedPath || repairArtifactPath}`, 'info');
+    resetDocumentOutputState();
   } catch (error) {
-    setRepairBuildState('questions', 'error');
-    setRepairBuildState('conversationalPairs', 'error');
-    addLog(`Partial repair failed: ${error?.message || error || 'Unknown error.'}`, 'error');
-  } finally {
-    repairInProgress = false;
-    refreshGenerateState();
-  }
-});
-
-exportButton?.addEventListener('click', async () => {
-  if (exportButton.disabled) {
-    return;
-  }
-
-  if (!window.desktopApp?.exportTrainingFiles) {
-    addLog('Required export API is not available.', 'error');
-    refreshGenerateState();
-    return;
-  }
-
-  const rootFolder = `${exportSourceFolderInput?.value || ''}`.trim();
-  if (!rootFolder || rootFolder === 'No folder selected') {
-    refreshGenerateState();
-    return;
-  }
-
-  if (window.desktopApp?.showConfirm) {
-    const datasetName = normalizeDatasetName(datasetNameInput?.value || lastUsedDatasetName);
-    const confirmed = await window.desktopApp.showConfirm({
-      type: 'question',
-      title: 'Confirm Export',
-      message: 'Create a fresh export folder with documents, questions, and conversational buckets?',
-      detail: `Scan root: ${rootFolder}\n\nThe app will create ${datasetName || '<dataset_name>'}_training_files with:\n- ${datasetName || '<dataset_name>'}_documents\n- ${datasetName || '<dataset_name>'}_questions_training_pairs\n- ${datasetName || '<dataset_name>'}_conversational_training_pairs`,
-      buttons: ['Export', 'Cancel'],
-    });
-
-    if (!confirmed) {
-      addLog('Export cancelled by user.', 'info');
-      refreshGenerateState();
-      return;
-    }
+    console.error('Startup resetDocumentOutputState failed:', error);
+    addBootstrapLog(`Startup warning: reset output state failed (${error?.message || 'unknown error'}).`);
   }
 
   try {
-    exportInProgress = true;
-    refreshGenerateState();
-    const destinationFolder = outputFolderInput?.value || lastUsedOutputFolder;
-    const datasetName = normalizeDatasetName(datasetNameInput?.value || lastUsedDatasetName);
-    if (!destinationFolder || destinationFolder === 'No folder selected') {
-      addLog('Export destination folder is required. Select an output folder first.', 'error');
-      refreshGenerateState();
-      return;
-    }
-    if (!datasetName) {
-      addLog('Name Dataset is required for export. Set it in Output Settings.', 'error');
-      refreshGenerateState();
-      return;
-    }
-
-    if (isSameOrNestedPath(destinationFolder, rootFolder) || isSameOrNestedPath(rootFolder, destinationFolder)) {
-      addLog('Export blocked: destination must not be the same as, inside, or parent of the scan root folder.', 'error');
-      refreshGenerateState();
-      return;
-    }
-
-    addLog(`Scanning ${rootFolder} for training files...`, 'info');
-    const exportResult = await window.desktopApp.exportTrainingFiles({ rootFolder, destinationFolder, datasetName });
-    addLog(
-      `Export complete: ${Number(exportResult?.copiedCount || 0)} files copied (${Number(exportResult?.summary?.questions || 0)} questions, ${Number(exportResult?.summary?.conversationalPairs || 0)} conversational, ${Number(exportResult?.summary?.document || 0)} documents). Totals: ${Number(exportResult?.summary?.totalQuestionPairs || 0)} question pairs, ${Number(exportResult?.summary?.totalConversationalPairs || 0)} conversational pairs.`,
-      'success'
-    );
-    addLog(`Export folder created: ${exportResult?.exportFolder || ''}`, 'info');
-    addLog(`Summary created: ${exportResult?.summaryDocumentPath || ''}`, 'info');
-    setTaskMode('export');
-    await persistSettings();
+    renderProjectWorkspace();
   } catch (error) {
-    addLog(`Export failed: ${error?.message || error || 'Unknown error.'}`, 'error');
-  } finally {
-    exportInProgress = false;
-    refreshGenerateState();
+    console.error('Startup renderProjectWorkspace failed:', error);
+    addBootstrapLog(`Startup warning: project workspace render failed (${error?.message || 'unknown error'}).`);
   }
-});
-
-generateButton?.addEventListener('click', async () => {
-  if (generateButton.disabled) {
-    return;
-  }
-
-  if (!window.desktopApp?.processPdf || !window.desktopApp?.buildArtifacts) {
-    addLog('Required generation APIs are not available.', 'error');
-    setConversionStatus('Generation failed: required local APIs are not available.', 100, 'error');
-    return;
-  }
-
-  const selectedOutputFolder = outputFolderInput?.value;
-  const outputPrefix = (outputPrefixInput?.value || '').trim();
-  const runOutputFolderName = buildRunOutputFolderName();
-  const outputFolder = joinPath(selectedOutputFolder, runOutputFolderName);
-  const documentIdPrefix = buildDocumentIdPrefix();
-  const chapterNumberMatch = outputPrefix.match(/(\d{1,3})/);
-  const chapterNumberOverride = chapterNumberMatch ? Number.parseInt(chapterNumberMatch[1], 10) : 0;
-  const selectedOutputs = getSelectedOutputs();
-  const outputFileNames = getOutputFileNames();
-
-  if (!apiAvailable) {
-    await showWarningPopup('API is required.', 'Set a valid API key in .env, restart the app, then generate.');
-    setConversionStatus('Generation blocked: API is required.', 0, 'error');
-    return;
-  }
-
-  if (!outputPrefix) {
-    await showWarningPopup(
-      'Output document prefix is required.',
-      'Enter a prefix (for example: AFH_2) before running generation.'
-    );
-    addLog('Generation blocked: output document prefix is required.', 'error');
-    setConversionStatus('Generation blocked: output document prefix is required.', 0, 'error');
-    return;
-  }
-
-  if (!selectedFiles.originalPdf?.path) {
-    await showWarningPopup('Source PDF is required.', 'Use Upload to select the source PDF first.');
-    if (selectedFiles.originalPdf?.name && window.desktopApp?.openPdfDialog) {
-      addLog('File path missing — please re-select the PDF using the Upload button.', 'error');
-      setConversionStatus('Re-select PDF using the Upload button.', 0, 'error');
-    } else {
-      addLog('Source PDF is required.', 'error');
-      setConversionStatus('Generation blocked: source PDF is required.', 0, 'error');
-    }
-    return;
-  }
-
-  if (!selectedOutputFolder || selectedOutputFolder === 'No folder selected') {
-    await showWarningPopup('Output folder is required.', 'Select a destination folder before generating files.');
-    addLog('Output folder is required.', 'error');
-    setConversionStatus('Generation blocked: output folder is required.', 0, 'error');
-    return;
-  }
-
-  if (!Object.values(selectedOutputs).some(Boolean)) {
-    await showWarningPopup('Select at least one output artifact.', 'Choose one or more output types, then generate.');
-    addLog('Select at least one output artifact.', 'error');
-    setConversionStatus('Generation blocked: no output type selected.', 0, 'error');
-    return;
-  }
-
-  if (window.desktopApp?.showConfirm) {
-    const chosen = Object.entries(selectedOutputs)
-      .filter(([, enabled]) => enabled)
-      .map(([key]) => `${key} -> ${outputFileNames[key]}`)
-      .join('\n');
-
-    const confirmed = await window.desktopApp.showConfirm({
-      type: 'question',
-      title: 'Confirm Pipeline Run',
-      message: 'Generate selected outputs from the loaded PDF?',
-      detail: `PDF: ${selectedFiles.originalPdf.name}\nSelected destination: ${selectedOutputFolder}\nRun folder: ${runOutputFolderName}\nFinal output path: ${outputFolder}\n\nSelected outputs:\n${chosen}`,
-      buttons: ['Generate', 'Cancel'],
-    });
-
-    if (!confirmed) {
-      addLog('Generation cancelled by user.');
-      setConversionStatus('Generation cancelled.', 0, 'idle');
-      return;
-    }
-
-    // Immediate visual feedback: dialog closed, processing starting
-    addLog('Confirmed. Starting generation pipeline...');
-    setConversionStatus('Starting pipeline...', 5, 'running');
-  }
-
-  let allowOverwrite = false;
-  let completed = false;
-  const sourcePdf = {
-    ...selectedFiles.originalPdf,
-  };
 
   try {
-    generationInProgress = true;
-    generationCancelRequested = false;
-    await clearPrimaryPdf({ resetInputs: false });
-    refreshGenerateState();
-    while (!completed) {
-      try {
-        setConversionStatus('Preparing conversion...', 10, 'running');
-        resetDocumentOutputState();
-        setSelectedOutputsRunning(selectedOutputs, ['docJson']);
-        addLog(`Output folder for this run: ${outputFolder}`, 'info');
-        addLog('Starting local PDF extraction (PDF to RAG, no API calls)...');
-
-        const pdfPayload = {
-          pdfPath: sourcePdf.path,
-          docType: 'auto',
-          outputDir: outputFolder,
-          outputFileName: outputFileNames.docJson,
-          idPrefix: documentIdPrefix,
-          chapterNumberOverride,
-          allowOverwrite,
-        };
-
-        setConversionStatus('Converting PDF to JSON...', 35, 'running');
-        const extracted = await window.desktopApp.processPdf(pdfPayload);
-        addLog(`Initial document JSON / MD created locally: ${extracted.outputPath}`, 'success');
-        if (extracted?.markdownPath) {
-          addLog(`Initial document Markdown created locally: ${extracted.markdownPath}`, 'success');
-        }
-        if (selectedOutputs.docJson) {
-          setOutputReadyState('docJson', true);
-        }
-
-        setConversionStatus('Writing selected output files...', 75, 'running');
-        addLog('Building selected artifacts...');
-        const unsubscribeArtifactProgress = window.desktopApp?.onArtifactProgress?.((update) => {
-          const key = update?.key;
-          const state = `${update?.state || ''}`.trim().toLowerCase();
-          if (!key || !outputBadgesByKey[key]) {
-            return;
-          }
-
-          if (state === 'running') {
-              const progressText = `${update?.progressText || ''}`.trim();
-              setOutputBuildState(key, 'running', progressText);
-              updateOutputProviderIndicators(key, update);
-            return;
-          }
-          if (state === 'completed') {
-            setOutputReadyState(key, true);
-            return;
-          }
-          if (state === 'incomplete') {
-            setOutputBuildState(key, 'incomplete', 'PARTIAL');
-            return;
-          }
-          if (state === 'skipped') {
-            setOutputBuildState(key, 'skipped', 'SKIP');
-            return;
-          }
-          if (state === 'error') {
-            setOutputBuildState(key, 'error');
-          }
-        }) || (() => {});
-
-        let result;
-        try {
-          const guardrailSnapshot = await window.desktopApp?.getQualityGuardrails?.({ maxItems: 8 });
-          const memoryGuardrails = `${guardrailSnapshot?.guardrails || ''}`.trim();
-          if (memoryGuardrails) {
-            addLog('Loaded persistent quality guardrails from previous runs.', 'info');
-          }
-          if (guardrailSnapshot?.stability) {
-            const stability = guardrailSnapshot.stability;
-            addLog(
-              stability.isStableOptimum
-                ? `Stable optimum reached (${Number(stability.consecutiveOptimumRuns || 0)} consecutive optimum run(s)).`
-                : `Stable optimum not yet reached. ${Array.isArray(stability.reasons) && stability.reasons.length > 0 ? stability.reasons[0] : 'More clean runs are required.'}`,
-              stability.isStableOptimum ? 'success' : 'info'
-            );
-          }
-
-          const runBuildArtifacts = ({ allowLocalFallback = false, overwrite = allowOverwrite, generationGuidance = '' } = {}) => window.desktopApp.buildArtifacts({
-            outputDir: outputFolder,
-            selectedOutputs,
-            outputFileNames,
-            documentJson: extracted.data,
-            documentJsonPath: extracted.outputPath,
-            allowOverwrite: overwrite,
-            allowLocalFallback,
-            generationGuidance: buildCombinedGuidance(memoryGuardrails, generationGuidance),
-            idPrefix: documentIdPrefix,
-            apiProviderCount,
-            apiProviders,
-          });
-
-          result = await runBuildArtifacts({ allowLocalFallback: false });
-        } finally {
-          unsubscribeArtifactProgress();
-        }
-
-        const artifactStatuses = result?.summary?.artifactStatuses || {};
-
-        if (Array.isArray(result?.written) && result.written.length > 0) {
-          result.written.forEach((entry) => {
-            if (entry?.key === 'docJson' && entry?.reused) {
-              addLog(`Document JSON / MD already created: ${entry.path}`, 'info');
-              setOutputReadyState('docJson', true);
-              return;
-            }
-            if (entry?.key === 'summary') {
-              if (`${artifactStatuses.summary?.buildStatus || 'complete'}`.toLowerCase() === 'incomplete') {
-                setOutputBuildState('summary', 'incomplete', 'PARTIAL');
-              } else {
-                setOutputReadyState('summary', true);
-              }
-            }
-            if (entry?.key === 'questions') {
-              if (`${artifactStatuses.questions?.buildStatus || 'complete'}`.toLowerCase() === 'incomplete') {
-                setOutputBuildState('questions', 'incomplete', 'PARTIAL');
-              } else {
-                setOutputReadyState('questions', true);
-              }
-            }
-            if (entry?.key === 'deterministicPairs') {
-              setOutputReadyState('deterministicPairs', true);
-            }
-            if (entry?.key === 'conversationalPairs') {
-              if (`${artifactStatuses.conversationalPairs?.buildStatus || 'complete'}`.toLowerCase() === 'incomplete') {
-                setOutputBuildState('conversationalPairs', 'incomplete', 'PARTIAL');
-              } else {
-                setOutputReadyState('conversationalPairs', true);
-              }
-            }
-            addLog(`Saved (${entry.key}): ${entry.path}`, 'success');
-          });
-
-          if (result?.summary?.routingMode) {
-            const configured = Array.isArray(result?.summary?.providersConfigured)
-              ? result.summary.providersConfigured.join(', ')
-              : 'none';
-            const assigned = result?.summary?.providersAssigned || {};
-            const observedProviders = result?.summary?.providersObserved || {};
-            const observedModels = result?.summary?.modelsObserved || {};
-            const providerSummary = (key) => {
-              const list = Array.isArray(observedProviders?.[key]) ? observedProviders[key] : [];
-              return list.length > 0 ? list.join(', ') : 'none';
-            };
-            const modelSummary = (key) => {
-              const list = Array.isArray(observedModels?.[key]) ? observedModels[key] : [];
-              return list.length > 0 ? list.join(', ') : 'none';
-            };
-            addLog(
-              `API routing: ${result.summary.routingMode} | configured: ${configured} | assigned summary/questions/conversational: ${assigned.summary || 'auto'}/${assigned.questions || 'auto'}/${assigned.conversational || 'auto'} | observed providers: ${providerSummary('summary')}/${providerSummary('questions')}/${providerSummary('conversational')} | observed models: ${modelSummary('summary')}/${modelSummary('questions')}/${modelSummary('conversational')}`,
-              'info'
-            );
-          }
-        } else {
-          addLog('No selected artifacts were written.', 'info');
-        }
-
-        Object.entries(artifactStatuses).forEach(([key, status]) => {
-          const buildStatus = `${status?.buildStatus || ''}`.toLowerCase();
-          const failureReason = `${status?.failureReason || ''}`.trim();
-          const incompleteSections = Array.isArray(status?.incompleteSections) ? status.incompleteSections : [];
-
-          if (buildStatus === 'incomplete') {
-            const failedCount = incompleteSections.filter((entry) => `${entry?.status || ''}`.toLowerCase() === 'failed').length;
-            setOutputBuildState(key, 'incomplete', 'PARTIAL');
-            addLog(
-              `${key} saved as partial output. Failed sections: ${failedCount}. ${failureReason || 'Repair can continue from incomplete sections.'}`,
-              'warning'
-            );
-          }
-
-          if (buildStatus === 'skipped') {
-            setOutputBuildState(key, 'skipped', 'SKIP');
-            addLog(`${key} skipped. ${failureReason || 'A required upstream artifact was incomplete.'}`, 'warning');
-          }
-        });
-
-        const auditCandidates = Array.isArray(result?.written)
-          ? result.written
-            .filter((entry) => {
-              const key = `${entry?.key || ''}`;
-              if (!['conversationalPairs', 'deterministicPairs'].includes(key)) {
-                return false;
-              }
-              return `${artifactStatuses?.[key]?.buildStatus || 'complete'}`.toLowerCase() === 'complete';
-            })
-            .map((entry) => `${entry?.path || ''}`)
-            .filter(Boolean)
-          : [];
-
-        if (auditCandidates.length === 0) {
-          const pairArtifactsIncomplete = ['conversationalPairs', 'deterministicPairs'].some((key) => {
-            const status = `${artifactStatuses?.[key]?.buildStatus || ''}`.toLowerCase();
-            return status === 'incomplete' || status === 'skipped';
-          });
-          if (pairArtifactsIncomplete) {
-            addLog('Quality audit skipped because at least one pair artifact is partial or was skipped.', 'warning');
-          }
-        }
-
-        if (auditCandidates.length > 0 && window.desktopApp?.auditPairs) {
-          const qualityReportPath = joinPath(outputFolder, `${documentIdPrefix || 'output'}_quality_report.json`);
-          addLog(`Running quality audit on ${auditCandidates.length} pair artifact(s)...`, 'info');
-          try {
-            const auditResult = await window.desktopApp.auditPairs({
-              files: auditCandidates,
-              reportPath: qualityReportPath,
-            });
-
-            const rating = auditResult?.overallRating || {};
-            const level = `${rating.level || 'unknown'}`.toUpperCase();
-            const weightedPct = Number(rating?.weightedIssuePercent || 0);
-            const errors = Number(rating?.errorCount || 0);
-            const warnings = Number(rating?.warningCount || 0);
-
-            const auditLogLevel = errors > 0 ? 'error' : (warnings > 0 ? 'warning' : 'success');
-            addLog(
-              `Quality audit complete: ${level} (${weightedPct}%). Errors: ${errors}, Warnings: ${warnings}.`,
-              auditLogLevel
-            );
-            addLog(`Quality report saved: ${qualityReportPath}`, 'info');
-
-            // Show quality results modal and wait for user decision
-            const userDecision = await getQualityDecision(auditResult);
-            addLog(`User action selected: ${userDecision}`, 'info');
-
-            // Handle user decision
-            if (userDecision === 'repair') {
-              addLog('Repair action selected. Regenerating affected pairs...', 'info');
-
-              // Extract pair file paths from result
-              const pairFilePaths = {};
-              if (Array.isArray(result?.written)) {
-                result.written.forEach((entry) => {
-                  if (entry?.key === 'deterministicPairs' && entry?.path) {
-                    pairFilePaths.deterministic = entry.path;
-                  }
-                  if (entry?.key === 'conversationalPairs' && entry?.path) {
-                    pairFilePaths.conversational = entry.path;
-                  }
-                });
-              }
-
-              try {
-                const repairResult = await window.desktopApp?.repairPairs?.({
-                  auditResult,
-                  deterministicPairPath: pairFilePaths.deterministic,
-                  conversationalPairPath: pairFilePaths.conversational,
-                  outputFolder,
-                });
-
-                if (repairResult?.success) {
-                  const totalRepaired = (repairResult?.repairs?.deterministic?.merged || 0) +
-                                       (repairResult?.repairs?.conversational?.merged || 0);
-                  addLog(`Repair complete: ${totalRepaired} pairs regenerated.`, 'success');
-
-                  // Re-run audit after repair
-                  addLog('Running quality audit after repair...', 'info');
-                  const postRepairAudit = await window.desktopApp.auditPairs({
-                    files: auditCandidates,
-                    reportPath: qualityReportPath,
-                  });
-
-                  addLog('Post-repair audit complete. Displaying updated results...', 'info');
-                  const newDecision = await getQualityDecision(postRepairAudit);
-
-                  const memoryUpdate = await window.desktopApp?.updateQualityMemoryFromAudit?.({
-                    decision: 'repair',
-                    auditResult,
-                    postAuditResult: postRepairAudit,
-                    maxGuardrails: 8,
-                  });
-                  if (memoryUpdate?.stability) {
-                    addLog(
-                      memoryUpdate.stability.isStableOptimum
-                        ? 'Stable optimum criteria satisfied after repair.'
-                        : `Stability check after repair: ${memoryUpdate.stability.reasons?.[0] || 'not yet stable.'}`,
-                      memoryUpdate.stability.isStableOptimum ? 'success' : 'info'
-                    );
-                  }
-
-                  if (newDecision !== 'close') {
-                    addLog(`Follow-up action selected: ${newDecision}`, 'info');
-                  } else {
-                    addLog('Updated quality results reviewed.', 'info');
-                  }
-                } else {
-                  addLog(`Repair encountered issues: ${repairResult?.message || 'Unknown error'}`, 'warning');
-                }
-              } catch (repairError) {
-                const message = `${repairError?.message || repairError || 'Unknown repair error.'}`;
-                addLog(`Pair repair failed: ${message}`, 'error');
-              }
-            } else if (userDecision === 'defer-log') {
-              const deferredLogPath = joinPath(outputFolder, `${documentIdPrefix || 'output'}_pending_repairs.json`);
-              addLog('Defer-log selected. Recording unresolved issues for later repair...', 'warning');
-
-              try {
-                const deferResult = await window.desktopApp?.deferQualityLog?.({
-                  auditResult,
-                  files: auditCandidates,
-                  deferredLogPath,
-                });
-
-                if (deferResult?.ok) {
-                  const memoryUpdate = await window.desktopApp?.updateQualityMemoryFromAudit?.({
-                    decision: 'defer-log',
-                    auditResult,
-                    maxGuardrails: 8,
-                  });
-                  if (memoryUpdate?.stability) {
-                    addLog(`Stability check after defer-log: ${memoryUpdate.stability.reasons?.[0] || 'not yet stable.'}`, 'info');
-                  }
-
-                  addLog(
-                    `Deferred quality log saved. Pending issues: ${deferResult.totalPendingIssues}. Files flagged: ${deferResult.filesAnnotated}.`,
-                    'warning'
-                  );
-                  addLog(`Deferred log path: ${deferredLogPath}`, 'info');
-                } else {
-                  addLog('Deferred quality log completed with some file annotation errors.', 'warning');
-                }
-              } catch (deferError) {
-                const message = `${deferError?.message || deferError || 'Unknown defer-log error.'}`;
-                addLog(`Deferred log failed: ${message}`, 'error');
-              }
-            } else if (userDecision === 'redo') {
-              addLog('Regeneration selected. Rebuilding artifacts with audit-informed guidance...', 'warning');
-              const redoGuidance = buildRedoGuidanceFromAudit(auditResult);
-              if (redoGuidance) {
-                addLog('Applying previous audit findings as regeneration guidance.', 'info');
-              }
-
-              try {
-                const redoResult = await runBuildArtifacts({
-                  allowLocalFallback: true,
-                  overwrite: true,
-                  generationGuidance: redoGuidance,
-                });
-
-                if (Array.isArray(redoResult?.written) && redoResult.written.length > 0) {
-                  redoResult.written.forEach((entry) => {
-                    addLog(`Redo saved (${entry.key}): ${entry.path}`, 'success');
-                  });
-                }
-
-                const redoAuditCandidates = Array.isArray(redoResult?.written)
-                  ? redoResult.written
-                    .filter((entry) => ['conversationalPairs', 'deterministicPairs'].includes(`${entry?.key || ''}`))
-                    .map((entry) => `${entry?.path || ''}`)
-                    .filter(Boolean)
-                  : [];
-
-                const postRedoCandidates = redoAuditCandidates.length > 0 ? redoAuditCandidates : auditCandidates;
-                if (postRedoCandidates.length > 0) {
-                  addLog('Running quality audit after redo...', 'info');
-                  const postRedoAudit = await window.desktopApp.auditPairs({
-                    files: postRedoCandidates,
-                    reportPath: qualityReportPath,
-                  });
-
-                  const memoryUpdate = await window.desktopApp?.updateQualityMemoryFromAudit?.({
-                    decision: 'redo',
-                    auditResult,
-                    postAuditResult: postRedoAudit,
-                    maxGuardrails: 8,
-                  });
-                  if (memoryUpdate?.stability) {
-                    addLog(
-                      memoryUpdate.stability.isStableOptimum
-                        ? 'Stable optimum criteria satisfied after redo.'
-                        : `Stability check after redo: ${memoryUpdate.stability.reasons?.[0] || 'not yet stable.'}`,
-                      memoryUpdate.stability.isStableOptimum ? 'success' : 'info'
-                    );
-                  }
-
-                  const postRedoRating = postRedoAudit?.overallRating || {};
-                  addLog(
-                    `Post-redo quality: ${`${postRedoRating?.level || 'unknown'}`.toUpperCase()} (${Number(postRedoRating?.weightedIssuePercent || 0)}%).`,
-                    'info'
-                  );
-
-                  const followUpDecision = await getQualityDecision(postRedoAudit);
-                  addLog(`Post-redo action selected: ${followUpDecision}`, 'info');
-                }
-              } catch (redoError) {
-                const message = `${redoError?.message || redoError || 'Unknown redo error.'}`;
-                addLog(`Redo failed: ${message}`, 'error');
-              }
-            } else if (userDecision === 'close') {
-              const memoryUpdate = await window.desktopApp?.updateQualityMemoryFromAudit?.({
-                decision: 'close',
-                auditResult,
-                maxGuardrails: 8,
-              });
-              if (memoryUpdate?.stability) {
-                addLog(
-                  memoryUpdate.stability.isStableOptimum
-                    ? 'Stable optimum criteria satisfied.'
-                    : `Stability check: ${memoryUpdate.stability.reasons?.[0] || 'not yet stable.'}`,
-                  memoryUpdate.stability.isStableOptimum ? 'success' : 'info'
-                );
-              }
-              addLog('Audit results reviewed.', 'info');
-            }
-          } catch (auditError) {
-            const message = `${auditError?.message || auditError || 'Unknown audit error.'}`;
-            addLog(`Quality audit failed: ${message}`, 'warning');
-            hideQualityResultsModal();
-          }
-        }
-
-        const finalArtifactStatuses = result?.summary?.artifactStatuses || {};
-        const hasPartialArtifacts = Object.values(finalArtifactStatuses).some((status) => {
-          const buildStatus = `${status?.buildStatus || ''}`.toLowerCase();
-          return buildStatus === 'incomplete' || buildStatus === 'skipped';
-        });
-
-        if (hasPartialArtifacts) {
-          setConversionStatus('Conversion completed with partial artifacts.', 100, 'warning');
-          addLog('Pipeline completed with partial artifacts. Review incomplete sections before final use.', 'warning');
-        } else {
-          setConversionStatus('Conversion completed successfully.', 100, 'success');
-          addLog('Pipeline completed successfully.', 'success');
-        }
-        if (outputPrefixInput) {
-          outputPrefixInput.value = '';
-          lastUsedOutputPrefix = '';
-        }
-        await persistSettings();
-        completed = true;
-      } catch (error) {
-        const message = error?.message || 'Unknown generation error.';
-        const isCollision = /already exist/i.test(message);
-
-        if (isCollision && !allowOverwrite && window.desktopApp?.showConfirm) {
-          const continueOverwrite = await window.desktopApp.showConfirm({
-            type: 'warning',
-            title: 'File Already Exists',
-            message: 'A file already exists with that name. Do you want to overwrite?',
-            detail: '',
-            buttons: ['Confirm', 'Cancel'],
-          });
-
-          if (continueOverwrite) {
-            allowOverwrite = true;
-            setConversionStatus('Continuing with overwrite...', 20, 'running');
-            markRunningOutputsAsError();
-            addLog('User chose to continue and overwrite existing files.', 'info');
-            continue;
-          }
-
-          await showWarningPopup(
-            'Generation cancelled.',
-            'The existing file was not overwritten.'
-          );
-          setConversionStatus('Generation cancelled: existing file kept.', 0, 'idle');
-          return;
-        }
-
-        if (isCollision && allowOverwrite) {
-          await showWarningPopup(
-            'Could not overwrite the existing file.',
-            'Try again after restarting the app, or change the output prefix.'
-          );
-          setConversionStatus('Generation stopped: file name conflict remains.', 0, 'error');
-          return;
-        }
-
-        if (/generation cancelled by user/i.test(message)) {
-          throw new Error('Generation cancelled by user.');
-        }
-
-        const apiFailed = /api is required|api analysis failed/i.test(message);
-        if (apiFailed) {
-          markRunningOutputsAsError();
-          await showWarningPopup('API generation failed.', 'No files were generated. Check API key and try again.');
-          setConversionStatus('Generation failed: API unavailable or analysis failed.', 0, 'error');
-          return;
-        }
-
-        await window.desktopApp?.showAlert?.({
-          type: 'error',
-          title: 'Generation Failed',
-          message: 'The pipeline could not complete.',
-          detail: message,
-        });
-        throw error;
-      }
-    }
+    await refreshApiAvailability();
   } catch (error) {
-    const message = `${error?.message || error || 'Unknown generation error.'}`;
-    if (/generation cancelled by user/i.test(message)) {
-      setConversionStatus('Generation cancelled by user.', 0, 'idle');
-      addLog('Pipeline cancelled by user.', 'warning');
-    } else {
-      markRunningOutputsAsError();
-      setConversionStatus(`Conversion failed: ${message}`, 100, 'error');
-      addLog(`Pipeline failed: ${message}`, 'error');
-    }
-  } finally {
-    generationInProgress = false;
-    generationCancelRequested = false;
-    refreshGenerateState();
+    console.error('Startup refreshApiAvailability failed:', error);
+    addBootstrapLog(`Startup warning: provider connection check failed (${error?.message || 'unknown error'}).`);
   }
-});
-  cancelButton?.addEventListener('click', async () => {
-    if (!generationInProgress || generationCancelRequested) {
-      return;
-    }
 
-    generationCancelRequested = true;
-    refreshGenerateState();
-    addLog('Cancellation requested by user...', 'warning');
+  try {
+    await loadSavedSettings();
+  } catch (error) {
+    console.error('Startup loadSavedSettings failed:', error);
+    addBootstrapLog(`Startup warning: settings load failed (${error?.message || 'unknown error'}).`);
+  }
+};
 
-    try {
-      await window.desktopApp?.cancelGeneration?.();
-    } catch (error) {
-      addLog(`Cancellation request failed: ${error.message}`, 'error');
-    }
-  });
-
-refreshGenerateState();
-resetDocumentOutputState();
-renderProjectWorkspace();
-void loadSavedSettings().then(() => refreshApiAvailability());
+void bootstrapRendererApp();
