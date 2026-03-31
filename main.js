@@ -94,6 +94,155 @@ async function saveAppSettings(settings) {
   return next;
 }
 
+function normalizeProjectCacheEntry(projectData) {
+  const rootPath = `${projectData?.rootPath || ''}`.trim();
+  if (!rootPath) {
+    return null;
+  }
+
+  return {
+    projectName: `${projectData?.projectName || ''}`.trim() || path.basename(rootPath),
+    projectType: `${projectData?.projectType || 'single-dataset'}`.trim(),
+    rootPath,
+    foundationSourceDocsPath: `${projectData?.foundationSourceDocsPath || ''}`.trim(),
+    reinforcementSourceDocsPath: `${projectData?.reinforcementSourceDocsPath || ''}`.trim(),
+    createdAt: `${projectData?.createdAt || new Date().toISOString()}`,
+    lastAccessedAt: `${projectData?.lastAccessedAt || new Date().toISOString()}`,
+  };
+}
+
+async function updateProjectIndex(settings, projectData) {
+  const nextSettings = settings && typeof settings === 'object' ? settings : {};
+  const entry = normalizeProjectCacheEntry(projectData);
+  if (!entry) {
+    return { settings: nextSettings, entry: null };
+  }
+
+  const normalizedRoot = path.resolve(entry.rootPath);
+  const cachedProjects = Array.isArray(nextSettings.cachedProjects) ? nextSettings.cachedProjects : [];
+  nextSettings.cachedProjects = cachedProjects.filter((proj) => {
+    const existingRoot = `${proj?.rootPath || ''}`.trim();
+    return existingRoot && path.resolve(existingRoot) !== normalizedRoot;
+  });
+  nextSettings.cachedProjects.unshift(entry);
+  if (nextSettings.cachedProjects.length > 50) {
+    nextSettings.cachedProjects = nextSettings.cachedProjects.slice(0, 50);
+  }
+
+  const searchRoots = Array.isArray(nextSettings.projectSearchRoots) ? nextSettings.projectSearchRoots : [];
+  const candidateRoots = [path.dirname(entry.rootPath), entry.rootPath];
+  for (const candidate of candidateRoots) {
+    const raw = `${candidate || ''}`.trim();
+    if (!raw) {
+      continue;
+    }
+    const normalizedCandidate = path.resolve(raw);
+    if (!searchRoots.some((existing) => {
+      const existingRaw = `${existing || ''}`.trim();
+      return existingRaw && path.resolve(existingRaw) === normalizedCandidate;
+    })) {
+      searchRoots.unshift(normalizedCandidate);
+    }
+  }
+  nextSettings.projectSearchRoots = searchRoots.slice(0, 25);
+
+  return { settings: nextSettings, entry };
+}
+
+async function discoverProjectsInRoots(searchRoots) {
+  const roots = Array.isArray(searchRoots) ? searchRoots : [];
+  const found = [];
+  const seenRoots = new Set();
+  const searchedPaths = [];
+
+  for (const root of roots) {
+    const rawRoot = `${root || ''}`.trim();
+    if (!rawRoot) {
+      continue;
+    }
+    const normalizedRoot = path.resolve(rawRoot);
+    if (seenRoots.has(normalizedRoot)) {
+      continue;
+    }
+    seenRoots.add(normalizedRoot);
+    searchedPaths.push(normalizedRoot);
+
+    try {
+      await fs.access(normalizedRoot);
+    } catch {
+      continue;
+    }
+
+    const queue = [{ dirPath: normalizedRoot, depth: 0 }];
+    let visitedCount = 0;
+    const maxDepth = 3;
+    const maxVisitedDirs = 1200;
+
+    while (queue.length > 0 && visitedCount < maxVisitedDirs) {
+      const current = queue.shift();
+      if (!current) {
+        break;
+      }
+      visitedCount += 1;
+
+      const manifestPath = path.join(current.dirPath, 'project_manifest.json');
+      try {
+        const manifestRaw = await fs.readFile(manifestPath, 'utf8');
+        const manifest = JSON.parse(manifestRaw);
+        const normalizedEntry = normalizeProjectCacheEntry({
+          projectName: manifest?.projectName || path.basename(current.dirPath),
+          projectType: manifest?.projectType || 'single-dataset',
+          rootPath: current.dirPath,
+          createdAt: manifest?.createdAt,
+          foundationSourceDocsPath: manifest?.projectType === 'slm-training' ? '' : '',
+          reinforcementSourceDocsPath: manifest?.projectType === 'slm-training' ? '' : '',
+        });
+        if (normalizedEntry) {
+          found.push(normalizedEntry);
+        }
+        continue;
+      } catch {
+        // Not a project root; continue traversal.
+      }
+
+      if (current.depth >= maxDepth) {
+        continue;
+      }
+
+      let children = [];
+      try {
+        children = await fs.readdir(current.dirPath, { withFileTypes: true });
+      } catch {
+        continue;
+      }
+
+      for (const child of children) {
+        if (!child.isDirectory()) {
+          continue;
+        }
+        queue.push({ dirPath: path.join(current.dirPath, child.name), depth: current.depth + 1 });
+      }
+    }
+  }
+
+  const deduped = [];
+  const seenProjectPaths = new Set();
+  for (const project of found) {
+    const rootPath = `${project?.rootPath || ''}`.trim();
+    if (!rootPath) {
+      continue;
+    }
+    const normalized = path.resolve(rootPath);
+    if (seenProjectPaths.has(normalized)) {
+      continue;
+    }
+    seenProjectPaths.add(normalized);
+    deduped.push(project);
+  }
+
+  return { projects: deduped, searchedPaths };
+}
+
 function getPythonLaunchers() {
   const launchers = [];
   const pushLauncher = (command, args = []) => {
@@ -377,12 +526,705 @@ app.whenReady().then(() => {
     return result.filePaths[0];
   });
 
+  ipcMain.handle('dialog:selectSourceEntries', async () => {
+    const result = await dialog.showOpenDialog({
+      title: 'Select Source Files Or Folder',
+      properties: ['openFile', 'openDirectory', 'multiSelections', 'createDirectory'],
+      filters: [
+        {
+          name: 'Supported Documents',
+          extensions: ['pdf', 'json', 'md', 'txt', 'doc', 'docx'],
+        },
+      ],
+    });
+
+    if (result.canceled || result.filePaths.length === 0) {
+      return [];
+    }
+
+    return result.filePaths;
+  });
+
+  ipcMain.handle('project:createFolders', async (_event, projectName, destinationFolder, projectType, foundationLabel, reinforcementLabel) => {
+    try {
+      if (!projectName || typeof projectName !== 'string') {
+        return { success: false, error: 'Invalid project name' };
+      }
+
+      if (!destinationFolder || typeof destinationFolder !== 'string') {
+        return { success: false, error: 'Invalid destination folder' };
+      }
+
+      const validProjectTypes = new Set(['single-dataset', 'subject-dataset', 'slm-training']);
+      const normalizedType = validProjectTypes.has(projectType) ? projectType : 'single-dataset';
+
+      const normalizedName = projectName.trim().replace(/[/\\?%*:|"<>]/g, '_');
+      const projectSlug = normalizedName
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '_')
+        .replace(/^_+|_+$/g, '') || 'project';
+      const projectRoot = path.join(destinationFolder, normalizedName);
+      await fs.mkdir(projectRoot, { recursive: true });
+
+      let relativeFolders = [];
+      let sourceDocsPath = '';
+      let foundationSourceDocsPath = '';
+      let reinforcementSourceDocsPath = '';
+
+      if (normalizedType === 'single-dataset') {
+        relativeFolders = [
+          'source_documents/input',
+          'source_documents/archived',
+          'dataset/outputs',
+          'dataset/quality_reports',
+          'dataset/exports',
+          'logs',
+        ];
+        sourceDocsPath = path.join(projectRoot, 'source_documents', 'input');
+        foundationSourceDocsPath = sourceDocsPath;
+        reinforcementSourceDocsPath = sourceDocsPath;
+      } else if (normalizedType === 'subject-dataset') {
+        relativeFolders = [
+          'source_documents/chapters',
+          'source_documents/shared_resources',
+          'dataset/chapter_outputs',
+          'dataset/merged_subject_dataset',
+          'dataset/quality_reports',
+          'dataset/exports',
+          'indexes',
+          'logs',
+        ];
+        sourceDocsPath = path.join(projectRoot, 'source_documents', 'chapters');
+        foundationSourceDocsPath = sourceDocsPath;
+        reinforcementSourceDocsPath = sourceDocsPath;
+      } else {
+        const foundationSlug = `${foundationLabel || ''}`
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, '_')
+          .replace(/^_+|_+$/g, '') || projectSlug;
+        const reinforcementSlug = `${reinforcementLabel || ''}`
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, '_')
+          .replace(/^_+|_+$/g, '') || `${projectSlug}_phase_2`;
+        const foundationStageFolder = `01_foundation_${foundationSlug}`;
+        const reinforcementStageFolder = `02_reinforcement_${reinforcementSlug}`;
+
+        relativeFolders = [
+          `curriculum/${foundationStageFolder}/source_documents`,
+          `curriculum/${foundationStageFolder}/dataset`,
+          `curriculum/${foundationStageFolder}/quality_reports`,
+          `curriculum/${foundationStageFolder}/exports`,
+          `curriculum/${reinforcementStageFolder}/source_documents`,
+          `curriculum/${reinforcementStageFolder}/dataset`,
+          `curriculum/${reinforcementStageFolder}/quality_reports`,
+          `curriculum/${reinforcementStageFolder}/exports`,
+          'training_packs/pack_v1/train',
+          'training_packs/pack_v1/validation',
+          'training_packs/pack_v1/test',
+          'training_packs/pack_v1/metadata',
+          'evaluations/benchmark_runs',
+          'evaluations/scorecards',
+          'models/checkpoints',
+          'models/final',
+          'registry',
+          'logs',
+        ];
+        sourceDocsPath = path.join(projectRoot, 'curriculum', foundationStageFolder, 'source_documents');
+        foundationSourceDocsPath = path.join(projectRoot, 'curriculum', foundationStageFolder, 'source_documents');
+        reinforcementSourceDocsPath = path.join(projectRoot, 'curriculum', reinforcementStageFolder, 'source_documents');
+      }
+
+      await Promise.all(relativeFolders.map((folder) => fs.mkdir(path.join(projectRoot, folder), { recursive: true })));
+
+      const manifestPath = path.join(projectRoot, 'project_manifest.json');
+      const manifestPayload = {
+        projectName: normalizedName,
+        projectType: normalizedType,
+        foundationLabel: `${foundationLabel || ''}`.trim(),
+        reinforcementLabel: `${reinforcementLabel || ''}`.trim(),
+        createdAt: new Date().toISOString(),
+        rootPath: projectRoot,
+      };
+      await fs.writeFile(manifestPath, `${JSON.stringify(manifestPayload, null, 2)}\n`, 'utf8');
+
+      const existingSettings = await loadAppSettings();
+      const indexed = await updateProjectIndex(existingSettings, {
+        projectName: normalizedName,
+        projectType: normalizedType,
+        rootPath: projectRoot,
+        foundationSourceDocsPath,
+        reinforcementSourceDocsPath,
+        createdAt: manifestPayload.createdAt,
+      });
+      await saveAppSettings(indexed.settings);
+
+      return {
+        success: true,
+        projectName: normalizedName,
+        projectType: normalizedType,
+        rootPath: projectRoot,
+        sourceDocsPath,
+        foundationSourceDocsPath,
+        reinforcementSourceDocsPath,
+        createdFolders: relativeFolders,
+        manifestPath,
+      };
+    } catch (error) {
+      return {
+        success: false,
+        error: error.message || 'Failed to create project folders',
+      };
+    }
+  });
+
   ipcMain.handle('settings:get', async () => {
     return loadAppSettings();
   });
 
+  ipcMain.handle('project:inspectSourceEntries', async (_event, payload) => {
+    try {
+      const entryPaths = Array.isArray(payload?.entryPaths)
+        ? payload.entryPaths.filter((entry) => typeof entry === 'string' && entry.trim() !== '')
+        : [];
+      const acceptedExtensions = new Set(['.pdf', '.json', '.md', '.txt', '.doc', '.docx']);
+
+      const collectFileEntries = async (entryPath) => {
+        const stats = await fs.stat(entryPath);
+        if (stats.isFile()) {
+          return [entryPath];
+        }
+        if (!stats.isDirectory()) {
+          return [];
+        }
+
+        const children = await fs.readdir(entryPath, { withFileTypes: true });
+        const nested = await Promise.all(
+          children.map((child) => collectFileEntries(path.join(entryPath, child.name)))
+        );
+        return nested.flat();
+      };
+
+      const entries = [];
+      for (const rawEntryPath of entryPaths) {
+        const entryPath = path.resolve(rawEntryPath);
+        const stats = await fs.stat(entryPath);
+        const fileEntries = await collectFileEntries(entryPath);
+        const acceptedDocuments = fileEntries
+          .filter((sourcePath) => acceptedExtensions.has(path.extname(sourcePath).toLowerCase()))
+          .map((sourcePath) => ({
+            path: sourcePath,
+            name: path.basename(sourcePath),
+            relativePath: stats.isDirectory() ? path.relative(entryPath, sourcePath) : path.basename(sourcePath),
+          }));
+
+        entries.push({
+          path: entryPath,
+          name: path.basename(entryPath),
+          isDirectory: stats.isDirectory(),
+          documents: acceptedDocuments,
+        });
+      }
+
+      return { success: true, entries };
+    } catch (error) {
+      return {
+        success: false,
+        error: error.message || 'Failed to inspect source entries',
+      };
+    }
+  });
+
+  ipcMain.handle('project:createSourceSubfolder', async (_event, payload) => {
+    try {
+      const stage = `${payload?.stage || ''}`.trim().toLowerCase();
+      const label = `${payload?.label || ''}`.trim();
+      const foundationPath = `${payload?.foundationSourceDocsPath || ''}`.trim();
+      const reinforcementPath = `${payload?.reinforcementSourceDocsPath || ''}`.trim();
+      if (!label) {
+        return { success: false, error: 'Folder label is required' };
+      }
+      if (!stage || !['foundation', 'reinforcement'].includes(stage)) {
+        return { success: false, error: 'Valid stage is required' };
+      }
+
+      const basePath = stage === 'foundation' ? foundationPath : reinforcementPath;
+      if (!basePath) {
+        return { success: false, error: `Source path is not available for ${stage}` };
+      }
+
+      const sanitizedLabel = label
+        .replace(/[/\\?%*:|"<>]/g, '_')
+        .replace(/\s+/g, '_')
+        .replace(/_+/g, '_')
+        .replace(/^_+|_+$/g, '');
+      if (!sanitizedLabel) {
+        return { success: false, error: 'Folder label is not valid' };
+      }
+
+      const stageRootPath = path.dirname(basePath);
+      const curriculumRootPath = path.dirname(stageRootPath);
+
+      const existingStageFolders = await fs.readdir(curriculumRootPath, { withFileTypes: true });
+      const stageNumbers = existingStageFolders
+        .filter((entry) => entry.isDirectory())
+        .map((entry) => {
+          const match = entry.name.match(/^(\d+)_/);
+          return match ? Number.parseInt(match[1], 10) : 0;
+        })
+        .filter((value) => Number.isFinite(value) && value > 0);
+      const nextStageNumber = (stageNumbers.length > 0 ? Math.max(...stageNumbers) : 0) + 1;
+      const stagePrefix = `${nextStageNumber}`.padStart(2, '0');
+
+      let folderName = `${stagePrefix}_${stage}_${sanitizedLabel}`;
+      let stageFolderPath = path.join(curriculumRootPath, folderName);
+      let counter = 1;
+      while (true) {
+        try {
+          await fs.access(stageFolderPath);
+          counter += 1;
+          folderName = `${stagePrefix}_${stage}_${sanitizedLabel}_${counter}`;
+          stageFolderPath = path.join(curriculumRootPath, folderName);
+        } catch {
+          break;
+        }
+      }
+
+      const sourceDocumentsPath = path.join(stageFolderPath, 'source_documents');
+      await Promise.all([
+        fs.mkdir(sourceDocumentsPath, { recursive: true }),
+        fs.mkdir(path.join(stageFolderPath, 'dataset'), { recursive: true }),
+        fs.mkdir(path.join(stageFolderPath, 'quality_reports'), { recursive: true }),
+        fs.mkdir(path.join(stageFolderPath, 'exports'), { recursive: true }),
+      ]);
+
+      return {
+        success: true,
+        stage,
+        folderName,
+        folderPath: sourceDocumentsPath,
+        stageFolderPath,
+      };
+    } catch (error) {
+      return {
+        success: false,
+        error: error.message || 'Failed to create source subfolder',
+      };
+    }
+  });
+
+  ipcMain.handle('project:addSourceDocuments', async (_event, payload) => {
+    try {
+      const filePaths = Array.isArray(payload?.filePaths) ? payload.filePaths.filter((entry) => typeof entry === 'string' && entry.trim() !== '') : [];
+      const targetFolder = typeof payload?.targetFolder === 'string' ? payload.targetFolder.trim() : '';
+      if (filePaths.length === 0) {
+        return { success: false, error: 'No source files provided' };
+      }
+      if (!targetFolder) {
+        return { success: false, error: 'Target folder is required' };
+      }
+
+      const acceptedExtensions = new Set(['.pdf', '.json', '.md', '.txt', '.doc', '.docx']);
+      const uniqueInputPaths = [...new Set(filePaths.map((entry) => path.resolve(entry)))];
+      const copied = [];
+
+      const collectFileEntries = async (entryPath) => {
+        const stats = await fs.stat(entryPath);
+        if (stats.isFile()) {
+          return [entryPath];
+        }
+        if (!stats.isDirectory()) {
+          return [];
+        }
+
+        const children = await fs.readdir(entryPath, { withFileTypes: true });
+        const nested = await Promise.all(
+          children.map((child) => collectFileEntries(path.join(entryPath, child.name)))
+        );
+        return nested.flat();
+      };
+
+      const ensureUniqueDestination = async (baseDestination) => {
+        const extension = path.extname(baseDestination);
+        const stem = extension ? baseDestination.slice(0, -extension.length) : baseDestination;
+        let candidate = baseDestination;
+        let counter = 1;
+        while (true) {
+          try {
+            await fs.access(candidate);
+            counter += 1;
+            candidate = `${stem}_${counter}${extension}`;
+          } catch {
+            return candidate;
+          }
+        }
+      };
+
+      await fs.mkdir(targetFolder, { recursive: true });
+
+      for (const entryPath of uniqueInputPaths) {
+        const allFiles = await collectFileEntries(entryPath);
+        for (const sourcePath of allFiles) {
+          const extension = path.extname(sourcePath).toLowerCase();
+          if (!acceptedExtensions.has(extension)) {
+            continue;
+          }
+
+          const destinationBase = path.join(targetFolder, path.basename(sourcePath));
+          const destinationPath = await ensureUniqueDestination(destinationBase);
+          await fs.copyFile(sourcePath, destinationPath);
+          copied.push({ source: sourcePath, destination: destinationPath });
+        }
+      }
+
+      return {
+        success: true,
+        copied,
+      };
+    } catch (error) {
+      return {
+        success: false,
+        error: error.message || 'Failed to add project source documents',
+      };
+    }
+  });
+
   ipcMain.handle('settings:save', async (_event, payload) => {
     return saveAppSettings(payload);
+  });
+
+  ipcMain.handle('project:cacheProject', async (_event, projectData) => {
+    try {
+      const settings = await loadAppSettings();
+      const indexed = await updateProjectIndex(settings, projectData || {});
+      if (!indexed.entry) {
+        return { success: false, error: 'Missing rootPath for cache entry' };
+      }
+      await saveAppSettings(indexed.settings);
+      return { success: true, cachedProjects: indexed.settings.cachedProjects || [] };
+    } catch (error) {
+      return { success: false, error: error.message || 'Failed to cache project' };
+    }
+  });
+
+  ipcMain.handle('project:getCachedProjects', async () => {
+    try {
+      const settings = await loadAppSettings();
+      const cachedProjects = Array.isArray(settings.cachedProjects) ? settings.cachedProjects : [];
+      const diagnostics = {
+        fromCacheCount: 0,
+        recoveredCount: 0,
+        searchedPaths: [],
+      };
+
+      // Filter out projects whose root paths no longer exist
+      const validProjects = [];
+      for (const project of cachedProjects) {
+        const rootPath = `${project?.rootPath || ''}`.trim();
+        if (!rootPath) {
+          continue;
+        }
+        try {
+          await fs.access(rootPath);
+          validProjects.push(project);
+        } catch {
+          // Project path no longer exists, skip it
+        }
+      }
+      diagnostics.fromCacheCount = validProjects.length;
+
+      let mergedProjects = [...validProjects];
+      const needsRecoveryScan = mergedProjects.length === 0;
+      if (needsRecoveryScan) {
+        const searchRoots = Array.isArray(settings.projectSearchRoots) ? [...settings.projectSearchRoots] : [];
+        searchRoots.push(process.cwd());
+        searchRoots.push(path.dirname(process.cwd()));
+        const discovered = await discoverProjectsInRoots(searchRoots);
+        diagnostics.searchedPaths = discovered.searchedPaths;
+        diagnostics.recoveredCount = discovered.projects.length;
+        if (discovered.projects.length > 0) {
+          const byRoot = new Map();
+          for (const project of [...mergedProjects, ...discovered.projects]) {
+            const rootPath = `${project?.rootPath || ''}`.trim();
+            if (!rootPath) {
+              continue;
+            }
+            byRoot.set(path.resolve(rootPath), project);
+          }
+          mergedProjects = Array.from(byRoot.values());
+        }
+      }
+
+      // Update cache to remove stale entries
+      if (mergedProjects.length !== cachedProjects.length || diagnostics.recoveredCount > 0) {
+        const updatedSettings = settings;
+        updatedSettings.cachedProjects = mergedProjects;
+        if (!Array.isArray(updatedSettings.projectSearchRoots)) {
+          updatedSettings.projectSearchRoots = [];
+        }
+        for (const project of mergedProjects) {
+          const rootPath = `${project?.rootPath || ''}`.trim();
+          if (!rootPath) {
+            continue;
+          }
+          const parentPath = path.dirname(rootPath);
+          if (!updatedSettings.projectSearchRoots.some((entry) => path.resolve(`${entry || ''}`) === path.resolve(parentPath))) {
+            updatedSettings.projectSearchRoots.unshift(parentPath);
+          }
+        }
+        updatedSettings.projectSearchRoots = updatedSettings.projectSearchRoots.slice(0, 25);
+        await saveAppSettings(updatedSettings);
+      }
+
+      return { success: true, projects: mergedProjects, diagnostics };
+    } catch (error) {
+      return { success: false, error: error.message || 'Failed to retrieve cached projects' };
+    }
+  });
+
+  ipcMain.handle('project:removeCachedProject', async (_event, projectRootPath) => {
+    try {
+      if (!projectRootPath || typeof projectRootPath !== 'string') {
+        return { success: false, error: 'Invalid project path' };
+      }
+
+      const settings = await loadAppSettings();
+      const cachedProjects = Array.isArray(settings.cachedProjects) ? settings.cachedProjects : [];
+
+      const filtered = cachedProjects.filter(
+        (proj) => path.resolve(proj.rootPath) !== path.resolve(projectRootPath)
+      );
+
+      settings.cachedProjects = filtered;
+      await saveAppSettings(settings);
+      return { success: true, cachedProjects: filtered };
+    } catch (error) {
+      return { success: false, error: error.message || 'Failed to remove cached project' };
+    }
+  });
+
+  ipcMain.handle('project:listProjectDocuments', async (_event, projectRootPath) => {
+    try {
+      if (!projectRootPath || typeof projectRootPath !== 'string') {
+        return { success: false, error: 'Invalid project path' };
+      }
+
+      await fs.access(projectRootPath);
+
+      const documents = {};
+      const acceptedExtensions = new Set(['.pdf', '.json', '.md', '.txt', '.doc', '.docx']);
+
+      const collectFiles = async (dirPath, maxDepth = 3, currentDepth = 0) => {
+        if (currentDepth > maxDepth) return [];
+
+        const files = [];
+        try {
+          const entries = await fs.readdir(dirPath, { withFileTypes: true });
+          for (const entry of entries) {
+            const fullPath = path.join(dirPath, entry.name);
+            if (entry.isDirectory()) {
+              const nested = await collectFiles(fullPath, maxDepth, currentDepth + 1);
+              files.push(...nested);
+            } else if (entry.isFile()) {
+              const ext = path.extname(entry.name).toLowerCase();
+              if (acceptedExtensions.has(ext)) {
+                files.push({
+                  path: fullPath,
+                  name: entry.name,
+                  relativePath: path.relative(projectRootPath, fullPath),
+                  extension: ext,
+                });
+              }
+            }
+          }
+        } catch {
+          // Skip directories we can't read
+        }
+        return files;
+      };
+
+      // Scan common source directories
+      const sourceSearchPaths = [
+        'source_documents',
+        'curriculum',
+      ];
+
+      for (const searchPath of sourceSearchPaths) {
+        const fullPath = path.join(projectRootPath, searchPath);
+        try {
+          const files = await collectFiles(fullPath);
+          if (files.length > 0) {
+            documents[searchPath] = files;
+          }
+        } catch {
+          // Directory doesn't exist or can't be read
+        }
+      }
+
+      return { success: true, projectPath: projectRootPath, documents };
+    } catch (error) {
+      return { success: false, error: error.message || 'Failed to list project documents' };
+    }
+  });
+
+  ipcMain.handle('project:getCurriculumOverview', async (_event, projectRootPath) => {
+    try {
+      const rootPath = `${projectRootPath || ''}`.trim();
+      if (!rootPath) {
+        return { success: false, error: 'Invalid project path' };
+      }
+
+      await fs.access(rootPath);
+
+      const acceptedExtensions = new Set(['.pdf', '.json', '.md', '.txt', '.doc', '.docx']);
+      const collectDocuments = async (basePath) => {
+        const docs = [];
+        const walk = async (entryPath) => {
+          const stats = await fs.stat(entryPath);
+          if (stats.isFile()) {
+            const ext = path.extname(entryPath).toLowerCase();
+            if (acceptedExtensions.has(ext)) {
+              docs.push({
+                name: path.basename(entryPath),
+                path: entryPath,
+                relativePath: path.relative(basePath, entryPath),
+                extension: ext,
+              });
+            }
+            return;
+          }
+          if (!stats.isDirectory()) {
+            return;
+          }
+          const children = await fs.readdir(entryPath, { withFileTypes: true });
+          for (const child of children) {
+            await walk(path.join(entryPath, child.name));
+          }
+        };
+
+        try {
+          await walk(basePath);
+        } catch {
+          return [];
+        }
+
+        return docs.sort((a, b) => a.relativePath.localeCompare(b.relativePath));
+      };
+
+      const entries = [];
+      const curriculumRoot = path.join(rootPath, 'curriculum');
+      try {
+        const stageDirs = await fs.readdir(curriculumRoot, { withFileTypes: true });
+        for (const stageDir of stageDirs) {
+          if (!stageDir.isDirectory()) {
+            continue;
+          }
+          const stagePath = path.join(curriculumRoot, stageDir.name);
+          const sourceDocumentsPath = path.join(stagePath, 'source_documents');
+          let documents = [];
+          try {
+            await fs.access(sourceDocumentsPath);
+            documents = await collectDocuments(sourceDocumentsPath);
+          } catch {
+            documents = [];
+          }
+
+          entries.push({
+            name: stageDir.name,
+            path: stagePath,
+            sourceDocumentsPath,
+            documentCount: documents.length,
+            documents,
+          });
+        }
+      } catch {
+        const sourceRoot = path.join(rootPath, 'source_documents');
+        try {
+          await fs.access(sourceRoot);
+          const documents = await collectDocuments(sourceRoot);
+          entries.push({
+            name: 'source_documents',
+            path: sourceRoot,
+            sourceDocumentsPath: sourceRoot,
+            documentCount: documents.length,
+            documents,
+          });
+        } catch {
+          // No curriculum/source_documents available.
+        }
+      }
+
+      entries.sort((a, b) => a.name.localeCompare(b.name));
+      return { success: true, entries };
+    } catch (error) {
+      return { success: false, error: error.message || 'Failed to load curriculum overview' };
+    }
+  });
+
+  ipcMain.handle('project:loadCachedProject', async (_event, projectRootPath) => {
+    try {
+      if (!projectRootPath || typeof projectRootPath !== 'string') {
+        return { success: false, error: 'Invalid project path' };
+      }
+
+      await fs.access(projectRootPath);
+
+      const manifestPath = path.join(projectRootPath, 'project_manifest.json');
+      let manifest = {};
+      try {
+        const manifestContent = await fs.readFile(manifestPath, 'utf8');
+        manifest = JSON.parse(manifestContent);
+      } catch {
+        // Manifest doesn't exist or can't be parsed
+      }
+
+      const settings = await loadAppSettings();
+      const cachedProjects = Array.isArray(settings.cachedProjects) ? settings.cachedProjects : [];
+
+      const projectEntry = cachedProjects.find(
+        (proj) => path.resolve(proj.rootPath) === path.resolve(projectRootPath)
+      );
+
+      if (projectEntry) {
+        projectEntry.lastAccessedAt = new Date().toISOString();
+        settings.cachedProjects = cachedProjects;
+        await saveAppSettings(settings);
+      }
+
+      return {
+        success: true,
+        projectPath: projectRootPath,
+        manifest,
+        projectEntry: projectEntry || {},
+      };
+    } catch (error) {
+      return { success: false, error: error.message || 'Failed to load cached project' };
+    }
+  });
+
+  ipcMain.handle('system:openFolder', async (_event, folderPath) => {
+    try {
+      if (!folderPath || typeof folderPath !== 'string') {
+        return { success: false, error: 'Invalid folder path' };
+      }
+
+      await fs.access(folderPath);
+
+      const normalizedPath = path.resolve(folderPath);
+      
+      if (process.platform === 'win32') {
+        spawn('explorer.exe', [normalizedPath]);
+      } else if (process.platform === 'darwin') {
+        spawn('open', [normalizedPath]);
+      } else if (process.platform === 'linux') {
+        spawn('xdg-open', [normalizedPath]);
+      } else {
+        return { success: false, error: `Unsupported platform: ${process.platform}` };
+      }
+
+      return { success: true };
+    } catch (error) {
+      return { success: false, error: error.message || 'Failed to open folder' };
+    }
   });
 
   ipcMain.handle('api:status', async () => {

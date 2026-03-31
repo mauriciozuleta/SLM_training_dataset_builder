@@ -13,11 +13,67 @@ const logWindow = document.getElementById('logWindow');
 const clearLogButton = document.getElementById('clearLogButton');
 const modeButtons = document.querySelectorAll('[data-mode-trigger]');
 const modePanels = document.querySelectorAll('[data-mode-panel]');
+const projectCurriculumPanel = document.getElementById('projectCurriculumPanel');
+const projectCurriculumTitle = document.getElementById('projectCurriculumTitle');
+const projectCurriculumSubtitle = document.getElementById('projectCurriculumSubtitle');
+const curriculumFoldersList = document.getElementById('curriculumFoldersList');
+const curriculumDocumentsList = document.getElementById('curriculumDocumentsList');
 
 const outputFolderInput = document.getElementById('outputFolder');
 const outputFolderButton = document.querySelector('[data-select-folder="outputFolder"]');
 const datasetNameInput = document.getElementById('datasetName');
 const outputPrefixInput = document.getElementById('outputPrefix');
+const projectSelect = document.getElementById('projectSelect');
+const projectNameInput = document.getElementById('projectName');
+const projectStatus = document.getElementById('projectStatus');
+const newProjectButton = document.getElementById('newProjectButton');
+const saveProjectButton = document.getElementById('saveProjectButton');
+const deleteProjectButton = document.getElementById('deleteProjectButton');
+const topCreateProjectButton = document.getElementById('topCreateProjectButton');
+const topOpenProjectButton = document.getElementById('topOpenProjectButton');
+const projectCreationPanel = document.getElementById('projectCreationPanel');
+const newProjectName = document.getElementById('newProjectName');
+const newProjectType = document.getElementById('newProjectType');
+const slmFoundationCell = document.getElementById('slmFoundationCell');
+const slmFoundationLabel = document.getElementById('slmFoundationLabel');
+const slmReinforcementCell = document.getElementById('slmReinforcementCell');
+const slmReinforcementLabel = document.getElementById('slmReinforcementLabel');
+const newProjectFolder = document.getElementById('newProjectFolder');
+const selectNewProjectFolderButton = document.getElementById('selectNewProjectFolderButton');
+const generateNewDatasetButton = document.getElementById('generateNewDatasetButton');
+const projectCreationHint = document.getElementById('projectCreationHint');
+const projectCreationFields = document.getElementById('projectCreationFields');
+const projectCreationActionRow = document.getElementById('projectCreationActionRow');
+const sourceDocumentsSlot = document.getElementById('sourceDocumentsSlot');
+const sourceDocumentsCard = document.getElementById('sourceDocumentsCard');
+const targetFoundationCheckbox = document.getElementById('targetFoundationCheckbox');
+const targetReinforcementCheckbox = document.getElementById('targetReinforcementCheckbox');
+const targetStageStatus = document.getElementById('targetStageStatus');
+const applySourceDocumentsButton = document.getElementById('applySourceDocumentsButton');
+const postUploadModal = document.getElementById('postUploadModal');
+const postUploadYesButton = document.getElementById('postUploadYesButton');
+const postUploadNoButton = document.getElementById('postUploadNoButton');
+const postUploadExpanded = document.getElementById('postUploadExpanded');
+const newStageFolderLabel = document.getElementById('newStageFolderLabel');
+const newStageFolderType = document.getElementById('newStageFolderType');
+const createNewStageFolderButton = document.getElementById('createNewStageFolderButton');
+const projectBusyOverlay = document.getElementById('projectBusyOverlay');
+const projectBusyMessage = document.getElementById('projectBusyMessage');
+const uploadedFilesList = document.getElementById('uploadedFilesList');
+const uploadedFileCount = document.getElementById('uploadedFileCount');
+const projectLoaderPanel = document.getElementById('projectLoaderPanel');
+const closeProjectLoaderButton = document.getElementById('closeProjectLoaderButton');
+const cachedProjectsList = document.getElementById('cachedProjectsList');
+const projectDetailsPanel = document.getElementById('projectDetailsPanel');
+const backToCachedListButton = document.getElementById('backToCachedListButton');
+const closeProjectDetailsButton = document.getElementById('closeProjectDetailsButton');
+const projectDetailsTitle = document.getElementById('projectDetailsTitle');
+const projectDetailsType = document.getElementById('projectDetailsType');
+const projectDetailsPath = document.getElementById('projectDetailsPath');
+const projectDetailsCreated = document.getElementById('projectDetailsCreated');
+const projectDocumentsList = document.getElementById('projectDocumentsList');
+const openProjectFolderButton = document.getElementById('openProjectFolderButton');
+const removeProjectCacheButton = document.getElementById('removeProjectCacheButton');
 const datasetNameCell = document.querySelector('[data-dataset-name-cell]');
 const commonPrefixCell = document.querySelector('[data-common-prefix-cell]');
 const exportSourceFolderInput = document.getElementById('exportSourceFolder');
@@ -118,11 +174,32 @@ let generationCancelRequested = false;
 let repairInProgress = false;
 let exportInProgress = false;
 let currentTaskMode = '';
+let savedProjects = [];
+let activeProjectId = '';
 let repairInspection = null;
 let repairInspectionLoading = false;
 let repairInspectionRequestId = 0;
 let lastUsedRepairFastMode = true;
 let clearPrimaryPdf = async () => {};
+
+// Project creation workflow state
+let projectCreationInProgress = false;
+let currentProjectCreationDestination = '';
+let uploadedSourceDocuments = [];
+let currentCreatedProject = null;
+let lockedUploadStage = '';
+let lockedUploadTargetFolder = '';
+let projectWriteInProgress = false;
+let currentLoadedProject = null;
+let cachedProjectData = null;
+let currentProjectEnvironment = null;
+let projectCurriculumEntries = [];
+let selectedCurriculumFolderPath = '';
+let lastCurriculumProjectRoot = '';
+const acceptedDocumentTypes = ['.pdf', '.json', '.md', '.txt', '.doc', '.docx'];
+const topCreateProjectDefaultLabel = topCreateProjectButton?.querySelector('.nav-button-label')?.textContent || 'Create New Project';
+const projectCreationTitleEl = document.querySelector('#projectCreationPanel .project-creation-header h2');
+const defaultProjectCreationTitle = projectCreationTitleEl?.textContent || 'Create New Project';
 
 const getTimeStamp = () => new Date().toLocaleTimeString([], { hour12: false });
 
@@ -130,31 +207,26 @@ const addLog = (message, level = 'info') => {
   if (!logWindow) {
     return;
   }
-  const line = document.createElement('p');
-  line.className = `log-line log-${level}`;
+
+  const line = document.createElement('div');
+  line.className = `log-line log-line--${level}`;
   line.textContent = `[${getTimeStamp()}] ${message}`;
   logWindow.appendChild(line);
   logWindow.scrollTop = logWindow.scrollHeight;
 };
 
-const unsubscribeGenerationLog = window.desktopApp?.onGenerationLog?.((entry) => {
-  const message = `${entry?.message || ''}`.trim();
-  if (!message) {
-    return;
-  }
-  addLog(message, `${entry?.level || 'info'}`.toLowerCase());
-}) || (() => {});
-
 const showWarningPopup = async (message, detail = '') => {
-  if (!window.desktopApp?.showAlert) {
+  if (window.desktopApp?.showAlert) {
+    await window.desktopApp.showAlert({
+      type: 'warning',
+      title: 'Warning',
+      message,
+      detail,
+    });
     return;
   }
-  await window.desktopApp.showAlert({
-    type: 'warning',
-    title: 'Attention Required',
-    message,
-    detail,
-  });
+
+  addLog(detail ? `${message} ${detail}` : message, 'warning');
 };
 
 const getQualityExplanation = (level) => {
@@ -810,6 +882,143 @@ const normalizePathForCompare = (value) => `${value || ''}`
   .replace(/\/+$/g, '')
   .toLowerCase();
 
+const NO_FOLDER_SELECTED_LABEL = 'No folder selected';
+
+const readFolderInputValue = (input) => {
+  const raw = `${input?.value || ''}`.trim();
+  return raw && raw !== NO_FOLDER_SELECTED_LABEL ? raw : '';
+};
+
+const writeFolderInputValue = (input, value) => {
+  if (!input) {
+    return;
+  }
+  input.value = `${value || ''}`.trim() || NO_FOLDER_SELECTED_LABEL;
+};
+
+const normalizeProjectName = (value) => `${value || ''}`.trim();
+
+const makeProjectId = () => `project_${Date.now()}_${Math.floor(Math.random() * 10000)}`;
+
+const buildProjectSnapshotFromInputs = () => ({
+  outputFolder: readFolderInputValue(outputFolderInput),
+  exportSourceFolder: readFolderInputValue(exportSourceFolderInput),
+  datasetName: `${datasetNameInput?.value || ''}`.trim(),
+  outputPrefix: `${outputPrefixInput?.value || ''}`.trim(),
+});
+
+const normalizeProjectRecord = (project, index = 0) => {
+  const safe = project && typeof project === 'object' ? project : {};
+  const id = `${safe.id || ''}`.trim() || `project_legacy_${index}`;
+  const name = normalizeProjectName(safe.name);
+  if (!name) {
+    return null;
+  }
+
+  return {
+    id,
+    name,
+    outputFolder: `${safe.outputFolder || ''}`.trim(),
+    exportSourceFolder: `${safe.exportSourceFolder || ''}`.trim(),
+    datasetName: `${safe.datasetName || ''}`.trim(),
+    outputPrefix: `${safe.outputPrefix || ''}`.trim(),
+    updatedAt: `${safe.updatedAt || ''}`.trim() || new Date().toISOString(),
+  };
+};
+
+const getActiveProject = () => {
+  if (!activeProjectId) {
+    return null;
+  }
+  return savedProjects.find((project) => project.id === activeProjectId) || null;
+};
+
+const renderProjectWorkspace = () => {
+  if (!projectSelect || !projectNameInput || !projectStatus) {
+    return;
+  }
+
+  const previousValue = `${projectSelect.value || ''}`;
+  projectSelect.innerHTML = '';
+
+  const placeholder = document.createElement('option');
+  placeholder.value = '';
+  placeholder.textContent = 'No saved project selected';
+  projectSelect.appendChild(placeholder);
+
+  savedProjects.forEach((project) => {
+    const option = document.createElement('option');
+    option.value = project.id;
+    option.textContent = project.name;
+    projectSelect.appendChild(option);
+  });
+
+  const active = getActiveProject();
+  const selectedValue = active?.id || previousValue;
+  projectSelect.value = savedProjects.some((project) => project.id === selectedValue) ? selectedValue : '';
+
+  if (active) {
+    projectNameInput.value = active.name;
+    const folderLabel = getBaseName(active.outputFolder.replace(/[\\/]+$/g, '')) || 'no output folder';
+    projectStatus.textContent = `Active project: ${active.name} (output: ${folderLabel}).`;
+  } else if (savedProjects.length > 0) {
+    projectStatus.textContent = `Saved projects: ${savedProjects.length}. Select one to load its workspace defaults.`;
+  } else {
+    projectStatus.textContent = 'No saved projects yet. Set folders once, then save them as a project.';
+    projectNameInput.value = '';
+  }
+
+  if (deleteProjectButton) {
+    deleteProjectButton.disabled = !active;
+  }
+};
+
+const applyProjectToInputs = (project) => {
+  if (!project) {
+    return;
+  }
+
+  writeFolderInputValue(outputFolderInput, project.outputFolder);
+  writeFolderInputValue(exportSourceFolderInput, project.exportSourceFolder);
+  if (datasetNameInput) {
+    datasetNameInput.value = project.datasetName || '';
+  }
+  if (outputPrefixInput) {
+    outputPrefixInput.value = project.outputPrefix || '';
+  }
+
+  if (project.outputFolder) {
+    lastUsedOutputFolder = project.outputFolder;
+  }
+  if (project.outputPrefix) {
+    lastUsedOutputPrefix = project.outputPrefix;
+  }
+  if (project.datasetName) {
+    lastUsedDatasetName = project.datasetName;
+  }
+};
+
+const syncActiveProjectFromInputs = () => {
+  const active = getActiveProject();
+  if (!active) {
+    return;
+  }
+
+  const snapshot = buildProjectSnapshotFromInputs();
+  const nextName = normalizeProjectName(projectNameInput?.value || active.name) || active.name;
+  savedProjects = savedProjects.map((project) => {
+    if (project.id !== active.id) {
+      return project;
+    }
+    return {
+      ...project,
+      ...snapshot,
+      name: nextName,
+      updatedAt: new Date().toISOString(),
+    };
+  });
+};
+
 const isSameOrNestedPath = (candidatePath, basePath) => {
   const candidate = normalizePathForCompare(candidatePath);
   const base = normalizePathForCompare(basePath);
@@ -1118,6 +1327,153 @@ const setPdfDropText = (text, isLoaded = false) => {
   pdfDropTextEl.classList.toggle('loaded-doc', Boolean(isLoaded));
 };
 
+const getActiveProjectEnvironment = () => {
+  if (currentProjectEnvironment?.rootPath) {
+    return currentProjectEnvironment;
+  }
+  if (currentCreatedProject?.rootPath) {
+    return currentCreatedProject;
+  }
+  if (currentLoadedProject?.rootPath) {
+    return currentLoadedProject;
+  }
+  return null;
+};
+
+const renderCurriculumDocuments = (folderPath = '') => {
+  if (!curriculumDocumentsList) {
+    return;
+  }
+
+  const selectedEntry = projectCurriculumEntries.find((entry) => entry.path === folderPath) || null;
+  if (!selectedEntry) {
+    curriculumDocumentsList.innerHTML = '<p class="curriculum-empty">Select a curriculum folder to view source documents.</p>';
+    return;
+  }
+
+  const documents = Array.isArray(selectedEntry.documents) ? selectedEntry.documents : [];
+  if (documents.length === 0) {
+    curriculumDocumentsList.innerHTML = '<p class="curriculum-empty">No supported source documents found in this folder.</p>';
+    return;
+  }
+
+  curriculumDocumentsList.innerHTML = '';
+  documents.forEach((documentEntry) => {
+    const item = document.createElement('div');
+    item.className = 'curriculum-document-item';
+    const extensionLabel = `${documentEntry.extension || ''}`.replace('.', '').toUpperCase() || 'DOC';
+    item.innerHTML = `
+      <span class="curriculum-document-icon">${extensionLabel.slice(0, 3)}</span>
+      <span class="curriculum-document-name">${documentEntry.relativePath || documentEntry.name || 'Document'}</span>
+    `;
+    curriculumDocumentsList.appendChild(item);
+  });
+};
+
+const renderCurriculumFolders = () => {
+  if (!curriculumFoldersList) {
+    return;
+  }
+
+  if (projectCurriculumEntries.length === 0) {
+    curriculumFoldersList.innerHTML = '<p class="curriculum-empty">No curriculum folders found for this project.</p>';
+    renderCurriculumDocuments('');
+    return;
+  }
+
+  curriculumFoldersList.innerHTML = '';
+  projectCurriculumEntries.forEach((entry) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'curriculum-folder-item';
+    button.dataset.selected = entry.path === selectedCurriculumFolderPath ? 'true' : 'false';
+    button.innerHTML = `
+      <span class="curriculum-folder-title">${entry.name}</span>
+      <span class="curriculum-folder-meta">${Number(entry.documentCount || 0)} source document${Number(entry.documentCount || 0) === 1 ? '' : 's'}</span>
+    `;
+    button.addEventListener('click', () => {
+      selectedCurriculumFolderPath = entry.path;
+      renderCurriculumFolders();
+      renderCurriculumDocuments(selectedCurriculumFolderPath);
+    });
+    curriculumFoldersList.appendChild(button);
+  });
+
+  renderCurriculumDocuments(selectedCurriculumFolderPath);
+};
+
+const loadProjectCurriculumOverview = async (forceRefresh = false) => {
+  const activeProjectEnvironment = getActiveProjectEnvironment();
+  const projectRoot = `${activeProjectEnvironment?.rootPath || ''}`.trim();
+  if (!projectRoot || !window.desktopApp?.getProjectCurriculumOverview) {
+    projectCurriculumEntries = [];
+    selectedCurriculumFolderPath = '';
+    renderCurriculumFolders();
+    return;
+  }
+
+  if (!forceRefresh && projectRoot === lastCurriculumProjectRoot && projectCurriculumEntries.length > 0) {
+    renderCurriculumFolders();
+    return;
+  }
+
+  if (curriculumFoldersList) {
+    curriculumFoldersList.innerHTML = '<p class="curriculum-empty">Loading curriculum folders...</p>';
+  }
+  if (curriculumDocumentsList) {
+    curriculumDocumentsList.innerHTML = '<p class="curriculum-empty">Select a curriculum folder to view source documents.</p>';
+  }
+
+  try {
+    const result = await window.desktopApp.getProjectCurriculumOverview(projectRoot);
+    if (!result?.success) {
+      throw new Error(result?.error || 'Failed to load curriculum folders');
+    }
+    projectCurriculumEntries = Array.isArray(result.entries) ? result.entries : [];
+    selectedCurriculumFolderPath = projectCurriculumEntries[0]?.path || '';
+    lastCurriculumProjectRoot = projectRoot;
+
+    const projectName = activeProjectEnvironment?.projectName || 'Project';
+    if (projectCurriculumTitle) {
+      projectCurriculumTitle.textContent = `${projectName} curriculum`;
+    }
+    if (projectCurriculumSubtitle) {
+      projectCurriculumSubtitle.textContent = 'Select a curriculum folder to inspect its source documents.';
+    }
+
+    renderCurriculumFolders();
+  } catch (error) {
+    projectCurriculumEntries = [];
+    selectedCurriculumFolderPath = '';
+    lastCurriculumProjectRoot = projectRoot;
+    if (curriculumFoldersList) {
+      curriculumFoldersList.innerHTML = '<p class="curriculum-empty">Could not load curriculum folders for this project.</p>';
+    }
+    if (curriculumDocumentsList) {
+      curriculumDocumentsList.innerHTML = '<p class="curriculum-empty">No source documents available.</p>';
+    }
+    addLog(`Curriculum browser error: ${error.message}`, 'warning');
+  }
+};
+
+const refreshProjectCurriculumBrowser = () => {
+  const activeProjectEnvironment = getActiveProjectEnvironment();
+  const shouldShow = currentTaskMode === 'generate' && Boolean(activeProjectEnvironment?.rootPath);
+  if (projectCurriculumPanel) {
+    if (shouldShow) {
+      projectCurriculumPanel.removeAttribute('hidden');
+    } else {
+      projectCurriculumPanel.setAttribute('hidden', '');
+    }
+  }
+
+  if (!shouldShow) {
+    return;
+  }
+
+  void loadProjectCurriculumOverview(false);
+};
+
 const getSelectedOutputs = () => {
   const result = {};
   Object.entries(checkboxIds).forEach(([key, id]) => {
@@ -1224,6 +1580,8 @@ const refreshTaskModeState = () => {
   if (datasetNameInput) {
     datasetNameInput.disabled = !isExplicitExportMode;
   }
+
+  refreshProjectCurriculumBrowser();
 };
 
 const setTaskMode = (mode) => {
@@ -1395,11 +1753,13 @@ const refreshGenerateState = () => {
 };
 
 const collectSettings = () => ({
-  outputFolder: outputFolderInput?.value || '',
+  outputFolder: readFolderInputValue(outputFolderInput),
   datasetName: datasetNameInput?.value || '',
   outputPrefix: outputPrefixInput?.value || '',
   repairFastMode: Boolean(repairFastModeInput?.checked ?? lastUsedRepairFastMode),
-  exportSourceFolder: exportSourceFolderInput?.value || '',
+  exportSourceFolder: readFolderInputValue(exportSourceFolderInput),
+  savedProjects,
+  activeProjectId,
   currentTaskMode,
   selectedOutputs: getSelectedOutputs(),
   lastLoadedPdfName,
@@ -1416,6 +1776,8 @@ const persistSettings = async () => {
     return;
   }
   try {
+    syncActiveProjectFromInputs();
+    renderProjectWorkspace();
     await window.desktopApp.saveSettings(collectSettings());
   } catch (error) {
     addLog(`Could not save app settings: ${error.message}`, 'error');
@@ -1427,8 +1789,27 @@ const applySettings = (settings) => {
     return;
   }
 
-  if (outputFolderInput && typeof settings.outputFolder === 'string' && settings.outputFolder.trim() !== '') {
-    outputFolderInput.value = settings.outputFolder;
+  const incomingProjects = Array.isArray(settings.savedProjects)
+    ? settings.savedProjects
+    : (Array.isArray(settings.projects) ? settings.projects : []);
+  const normalizedProjects = incomingProjects
+    .map((project, index) => normalizeProjectRecord(project, index))
+    .filter(Boolean);
+  const dedupedById = new Map();
+  normalizedProjects.forEach((project) => {
+    if (!dedupedById.has(project.id)) {
+      dedupedById.set(project.id, project);
+    }
+  });
+  savedProjects = Array.from(dedupedById.values());
+
+  const incomingActiveProjectId = `${settings.activeProjectId || ''}`.trim();
+  activeProjectId = savedProjects.some((project) => project.id === incomingActiveProjectId)
+    ? incomingActiveProjectId
+    : '';
+
+  if (outputFolderInput && typeof settings.outputFolder === 'string') {
+    writeFolderInputValue(outputFolderInput, settings.outputFolder);
   }
 
   if (outputPrefixInput && typeof settings.outputPrefix === 'string') {
@@ -1439,8 +1820,8 @@ const applySettings = (settings) => {
     datasetNameInput.value = settings.datasetName;
   }
 
-  if (exportSourceFolderInput && typeof settings.exportSourceFolder === 'string' && settings.exportSourceFolder.trim() !== '') {
-    exportSourceFolderInput.value = settings.exportSourceFolder;
+  if (exportSourceFolderInput && typeof settings.exportSourceFolder === 'string') {
+    writeFolderInputValue(exportSourceFolderInput, settings.exportSourceFolder);
   }
 
   if (repairFastModeInput && typeof settings.repairFastMode === 'boolean') {
@@ -1466,8 +1847,8 @@ const applySettings = (settings) => {
     }
   }
 
-  if (outputFolderInput && (outputFolderInput.value === '' || outputFolderInput.value === 'No folder selected') && lastUsedOutputFolder) {
-    outputFolderInput.value = lastUsedOutputFolder;
+  if (outputFolderInput && (outputFolderInput.value === '' || outputFolderInput.value === NO_FOLDER_SELECTED_LABEL) && lastUsedOutputFolder) {
+    writeFolderInputValue(outputFolderInput, lastUsedOutputFolder);
   }
 
   if (outputPrefixInput && outputPrefixInput.value.trim() === '' && lastUsedOutputPrefix) {
@@ -1503,6 +1884,11 @@ const applySettings = (settings) => {
 
   refreshTaskModeState();
 
+  if (activeProjectId) {
+    applyProjectToInputs(getActiveProject());
+  }
+  renderProjectWorkspace();
+
 };
 
 const loadSavedSettings = async () => {
@@ -1528,6 +1914,98 @@ const setDefaultPrefixFromPdf = () => {
   if (pdfBase) {
     outputPrefixInput.value = pdfBase;
   }
+};
+
+const startNewProjectDraft = () => {
+  activeProjectId = '';
+  if (projectSelect) {
+    projectSelect.value = '';
+  }
+  if (projectNameInput) {
+    projectNameInput.value = '';
+    projectNameInput.focus();
+  }
+  renderProjectWorkspace();
+};
+
+const saveProjectFromCurrentInputs = async () => {
+  const name = normalizeProjectName(projectNameInput?.value || '');
+  if (!name) {
+    addLog('Project name is required before saving.', 'warning');
+    return;
+  }
+
+  const snapshot = buildProjectSnapshotFromInputs();
+  const active = getActiveProject();
+
+  if (active) {
+    savedProjects = savedProjects.map((project) => {
+      if (project.id !== active.id) {
+        return project;
+      }
+      return {
+        ...project,
+        ...snapshot,
+        name,
+        updatedAt: new Date().toISOString(),
+      };
+    });
+    addLog(`Project updated: ${name}`, 'success');
+  } else {
+    let id = makeProjectId();
+    while (savedProjects.some((project) => project.id === id)) {
+      id = makeProjectId();
+    }
+    savedProjects = [
+      ...savedProjects,
+      {
+        id,
+        name,
+        ...snapshot,
+        updatedAt: new Date().toISOString(),
+      },
+    ];
+    activeProjectId = id;
+    addLog(`Project saved: ${name}`, 'success');
+  }
+
+  renderProjectWorkspace();
+  await persistSettings();
+  refreshGenerateState();
+};
+
+const deleteActiveProject = async () => {
+  const active = getActiveProject();
+  if (!active) {
+    return;
+  }
+
+  let confirmed = true;
+  if (window.desktopApp?.showConfirm) {
+    confirmed = await window.desktopApp.showConfirm({
+      type: 'warning',
+      title: 'Delete Project',
+      message: `Delete project "${active.name}"?`,
+      detail: 'This only removes the saved workspace profile. It does not delete any files or folders.',
+      buttons: ['Delete', 'Cancel'],
+    });
+  }
+  if (!confirmed) {
+    return;
+  }
+
+  savedProjects = savedProjects.filter((project) => project.id !== active.id);
+  activeProjectId = '';
+  if (projectSelect) {
+    projectSelect.value = '';
+  }
+  if (projectNameInput) {
+    projectNameInput.value = '';
+  }
+  renderProjectWorkspace();
+  await persistSettings();
+  refreshGenerateState();
+  addLog(`Project deleted: ${active.name}`, 'info');
 };
 
 if (card) {
@@ -1928,6 +2406,1185 @@ modeButtons.forEach((button) => {
   });
 });
 
+projectSelect?.addEventListener('change', async () => {
+  const nextProjectId = `${projectSelect.value || ''}`.trim();
+  activeProjectId = savedProjects.some((project) => project.id === nextProjectId)
+    ? nextProjectId
+    : '';
+  const active = getActiveProject();
+  if (active) {
+    applyProjectToInputs(active);
+    addLog(`Project loaded: ${active.name}`, 'info');
+  }
+  renderProjectWorkspace();
+  await persistSettings();
+  refreshGenerateState();
+});
+
+newProjectButton?.addEventListener('click', () => {
+  startNewProjectDraft();
+  void persistSettings();
+});
+
+saveProjectButton?.addEventListener('click', () => {
+  void saveProjectFromCurrentInputs();
+});
+
+deleteProjectButton?.addEventListener('click', () => {
+  void deleteActiveProject();
+});
+
+// ============================================================================
+// PROJECT CREATION WORKFLOW EVENT HANDLERS
+// ============================================================================
+
+topCreateProjectButton?.addEventListener('click', () => {
+  const activeLabel = `${topCreateProjectButton.querySelector('.nav-button-label')?.textContent || ''}`.trim();
+  const isEnvironmentMode = activeLabel !== topCreateProjectDefaultLabel;
+
+  if (isEnvironmentMode) {
+    if (projectCreationPanel) {
+      projectCreationPanel.setAttribute('hidden', '');
+    }
+    if (projectLoaderPanel) {
+      projectLoaderPanel.setAttribute('hidden', '');
+    }
+    if (projectDetailsPanel) {
+      projectDetailsPanel.setAttribute('hidden', '');
+    }
+    if (cachedProjectsList) {
+      cachedProjectsList.removeAttribute('hidden');
+    }
+
+    const chooseTaskPanel = document.querySelector('.mode-panel');
+    chooseTaskPanel?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    addLog(`Switched to environment: ${activeLabel}`, 'info');
+    return;
+  }
+
+  if (projectCreationPanel) {
+    if (projectLoaderPanel) {
+      projectLoaderPanel.setAttribute('hidden', '');
+    }
+    if (projectDetailsPanel) {
+      projectDetailsPanel.setAttribute('hidden', '');
+    }
+    if (cachedProjectsList) {
+      cachedProjectsList.removeAttribute('hidden');
+    }
+
+    projectCreationPanel.removeAttribute('hidden');
+    newProjectName?.focus();
+    // Reset form
+    newProjectName.value = '';
+    if (newProjectType) {
+      newProjectType.value = 'single-dataset';
+    }
+    if (slmFoundationLabel) {
+      slmFoundationLabel.value = '';
+    }
+    if (slmReinforcementLabel) {
+      slmReinforcementLabel.value = '';
+    }
+    if (slmFoundationCell) {
+      slmFoundationCell.setAttribute('hidden', '');
+    }
+    if (slmReinforcementCell) {
+      slmReinforcementCell.setAttribute('hidden', '');
+    }
+    newProjectFolder.value = '';
+    currentProjectCreationDestination = '';
+    projectCreationHint.textContent = 'Select project name, type, and destination folder to continue.';
+    projectCreationHint.style.color = '#9ec0ff';
+    if (projectCreationFields) {
+      projectCreationFields.style.display = '';
+    }
+    if (projectCreationActionRow) {
+      projectCreationActionRow.style.display = '';
+    }
+    if (sourceDocumentsSlot) {
+      sourceDocumentsSlot.style.display = 'none';
+    }
+    if (targetFoundationCheckbox) {
+      targetFoundationCheckbox.checked = false;
+      targetFoundationCheckbox.disabled = false;
+    }
+    if (targetReinforcementCheckbox) {
+      targetReinforcementCheckbox.checked = false;
+      targetReinforcementCheckbox.disabled = false;
+    }
+    closePostUploadModal();
+    unlockStageSelection();
+    currentCreatedProject = null;
+    uploadedSourceDocuments = [];
+    refreshUploadedFilesList();
+    generateNewDatasetButton.disabled = true;
+  }
+});
+
+const formatProjectEnvironmentLabel = (projectType) => {
+  const value = `${projectType || ''}`.trim();
+  if (value === 'single-dataset') {
+    return 'Single Dataset';
+  }
+  if (value === 'subject-dataset') {
+    return 'Subject Dataset';
+  }
+  if (value === 'slm-training') {
+    return 'SLM Training';
+  }
+  return 'Environment';
+};
+
+const setTopCreateProjectLabel = (projectName, projectType) => {
+  const safeName = `${projectName || ''}`.trim();
+  const projectLabel = safeName
+    ? `${safeName} - ${formatProjectEnvironmentLabel(projectType)}`
+    : topCreateProjectDefaultLabel;
+
+  if (topCreateProjectButton) {
+    const labelEl = topCreateProjectButton.querySelector('.nav-button-label');
+    if (labelEl) {
+      labelEl.textContent = projectLabel;
+    }
+  }
+
+  if (projectCreationTitleEl) {
+    projectCreationTitleEl.textContent = safeName
+      ? projectLabel
+      : defaultProjectCreationTitle;
+  }
+
+  if (!safeName) {
+    return;
+  }
+};
+
+const openSavedProjectEnvironment = async (project) => {
+  if (!project) {
+    return;
+  }
+
+  try {
+    // Update last-access metadata when available.
+    if (window.desktopApp?.loadCachedProject && project.rootPath) {
+      await window.desktopApp.loadCachedProject(project.rootPath);
+    }
+
+    currentLoadedProject = project;
+    currentCreatedProject = {
+      projectName: project.projectName || '',
+      projectType: project.projectType || '',
+      rootPath: project.rootPath || '',
+      foundationSourceDocsPath: project.foundationSourceDocsPath || '',
+      reinforcementSourceDocsPath: project.reinforcementSourceDocsPath || '',
+      sourceDocsPath: project.foundationSourceDocsPath || project.reinforcementSourceDocsPath || '',
+    };
+    currentProjectEnvironment = { ...currentCreatedProject };
+    lastCurriculumProjectRoot = '';
+    projectCurriculumEntries = [];
+    selectedCurriculumFolderPath = '';
+
+    setTopCreateProjectLabel(project.projectName, project.projectType);
+
+    if (projectLoaderPanel) {
+      projectLoaderPanel.setAttribute('hidden', '');
+    }
+    if (projectDetailsPanel) {
+      projectDetailsPanel.setAttribute('hidden', '');
+    }
+    if (cachedProjectsList) {
+      cachedProjectsList.removeAttribute('hidden');
+    }
+    if (projectCreationPanel) {
+      projectCreationPanel.setAttribute('hidden', '');
+    }
+
+    const chooseTaskPanel = document.querySelector('.mode-panel');
+    chooseTaskPanel?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    refreshProjectCurriculumBrowser();
+    addLog(`Opened project environment: ${project.projectName || 'Saved project'}`, 'info');
+  } catch (error) {
+    addLog(`Could not open project environment: ${error.message}`, 'error');
+  }
+};
+
+topOpenProjectButton?.addEventListener('click', () => {
+  if (projectLoaderPanel) {
+    if (projectCreationPanel) {
+      projectCreationPanel.setAttribute('hidden', '');
+    }
+    projectLoaderPanel.removeAttribute('hidden');
+    loadCachedProjectsList();
+    // Hide details panel, show projects list
+    if (projectDetailsPanel) {
+      projectDetailsPanel.setAttribute('hidden', '');
+    }
+    if (cachedProjectsList) {
+      cachedProjectsList.removeAttribute('hidden');
+    }
+    projectLoaderPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+});
+
+closeProjectLoaderButton?.addEventListener('click', () => {
+  if (projectLoaderPanel) {
+    projectLoaderPanel.setAttribute('hidden', '');
+  }
+});
+
+backToCachedListButton?.addEventListener('click', () => {
+  if (projectDetailsPanel) {
+    projectDetailsPanel.setAttribute('hidden', '');
+  }
+  if (cachedProjectsList) {
+    cachedProjectsList.removeAttribute('hidden');
+  }
+  currentLoadedProject = null;
+});
+
+closeProjectDetailsButton?.addEventListener('click', () => {
+  if (projectLoaderPanel) {
+    projectLoaderPanel.setAttribute('hidden', '');
+  }
+  if (projectDetailsPanel) {
+    projectDetailsPanel.setAttribute('hidden', '');
+  }
+  currentLoadedProject = null;
+});
+
+openProjectFolderButton?.addEventListener('click', async () => {
+  if (!currentLoadedProject || !currentLoadedProject.rootPath) {
+    addLog('No project selected', 'warning');
+    return;
+  }
+
+  try {
+    const result = await window.desktopApp.openFolder(currentLoadedProject.rootPath);
+    if (result.success) {
+      addLog(`Opened: ${currentLoadedProject.rootPath}`, 'info');
+    } else {
+      addLog(`Could not open folder: ${result.error}`, 'warning');
+    }
+  } catch (error) {
+    console.error('Failed to open folder:', error);
+    addLog(`Error: ${error.message}`, 'warning');
+  }
+});
+
+removeProjectCacheButton?.addEventListener('click', async () => {
+  if (!currentLoadedProject || !currentLoadedProject.rootPath) {
+    addLog('No project to remove', 'warning');
+    return;
+  }
+
+  try {
+    const projectName = currentLoadedProject.projectName || 'Unnamed Project';
+    const confirmed = await window.desktopApp.showConfirm({
+      title: 'Remove from Cache',
+      message: `Remove "${projectName}" from the project cache?`,
+      detail: 'The project files will not be deleted, only removed from the saved projects list.',
+    });
+
+    if (!confirmed) {
+      return;
+    }
+
+    const result = await window.desktopApp.removeCachedProject(currentLoadedProject.rootPath);
+    if (result.success) {
+      addLog(`Removed from cache: ${projectName}`, 'info');
+      // Go back to projects list
+      if (projectDetailsPanel) {
+        projectDetailsPanel.setAttribute('hidden', '');
+      }
+      if (cachedProjectsList) {
+        cachedProjectsList.removeAttribute('hidden');
+      }
+      currentLoadedProject = null;
+      loadCachedProjectsList();
+    } else {
+      addLog(`Failed to remove project: ${result.error}`, 'warning');
+    }
+  } catch (error) {
+    console.error('Error removing project:', error);
+    addLog(`Error: ${error.message}`, 'warning');
+  }
+});
+
+// Helper function to update Create Project button enabled state
+const updateCreateProjectButtonState = () => {
+  const hasName = (newProjectName?.value?.trim() || '') !== '';
+  const hasFolder = (currentProjectCreationDestination?.trim() || '') !== '';
+  const hasType = (newProjectType?.value || '').trim() !== '';
+  const requiresReinforcementLabel = `${newProjectType?.value || ''}`.trim() === 'slm-training';
+  const hasReinforcementLabel = (slmReinforcementLabel?.value?.trim() || '') !== '';
+  generateNewDatasetButton.disabled = !(hasName && hasFolder && hasType && (!requiresReinforcementLabel || hasReinforcementLabel));
+};
+
+const updateProjectTypeSpecificFields = () => {
+  const isSlmTraining = `${newProjectType?.value || ''}`.trim() === 'slm-training';
+  if (!slmFoundationCell || !slmReinforcementCell) {
+    return;
+  }
+
+  if (isSlmTraining) {
+    slmFoundationCell.removeAttribute('hidden');
+    slmReinforcementCell.removeAttribute('hidden');
+  } else {
+    slmFoundationCell.setAttribute('hidden', '');
+    slmReinforcementCell.setAttribute('hidden', '');
+    if (slmFoundationLabel) {
+      slmFoundationLabel.value = '';
+    }
+    if (slmReinforcementLabel) {
+      slmReinforcementLabel.value = '';
+    }
+  }
+};
+
+newProjectName?.addEventListener('input', () => {
+  updateCreateProjectButtonState();
+});
+
+newProjectType?.addEventListener('change', () => {
+  updateProjectTypeSpecificFields();
+  updateCreateProjectButtonState();
+});
+
+slmReinforcementLabel?.addEventListener('input', () => {
+  updateCreateProjectButtonState();
+});
+
+slmFoundationLabel?.addEventListener('input', () => {
+  updateCreateProjectButtonState();
+});
+
+selectNewProjectFolderButton?.addEventListener('click', async () => {
+  if (!window.desktopApp?.selectFolder) {
+    addLog('Folder selection is not available', 'error');
+    return;
+  }
+
+  const selectedPath = await window.desktopApp.selectFolder();
+  if (selectedPath) {
+    currentProjectCreationDestination = selectedPath;
+    newProjectFolder.value = selectedPath;
+    addLog(`Project folder selected: ${selectedPath}`, 'info');
+    updateCreateProjectButtonState();
+  }
+});
+
+generateNewDatasetButton?.addEventListener('click', async () => {
+  if (projectWriteInProgress) {
+    return;
+  }
+  const projectName = newProjectName?.value?.trim();
+  const projectType = `${newProjectType?.value || ''}`.trim();
+  const foundationLabel = `${slmFoundationLabel?.value || ''}`.trim();
+  const reinforcementLabel = `${slmReinforcementLabel?.value || ''}`.trim();
+  const destinationFolder = currentProjectCreationDestination?.trim();
+
+  if (!projectName) {
+    projectCreationHint.textContent = 'Project name is required';
+    projectCreationHint.style.color = '#ffaaaa';
+    return;
+  }
+
+  if (!destinationFolder) {
+    projectCreationHint.textContent = 'Destination folder is required';
+    projectCreationHint.style.color = '#ffaaaa';
+    return;
+  }
+
+  if (!projectType) {
+    projectCreationHint.textContent = 'Project type is required';
+    projectCreationHint.style.color = '#ffaaaa';
+    return;
+  }
+
+  if (projectType === 'slm-training' && !reinforcementLabel) {
+    projectCreationHint.textContent = 'SLM reinforcement label is required';
+    projectCreationHint.style.color = '#ffaaaa';
+    return;
+  }
+
+  projectCreationInProgress = true;
+  generateNewDatasetButton.disabled = true;
+  projectCreationHint.textContent = 'Creating project folders...';
+  projectCreationHint.style.color = '#9ec0ff';
+  setProjectBusyState(true, 'Generating project structure...');
+
+  try {
+    if (!window.desktopApp?.createProjectFolders) {
+      throw new Error('Create project folders API is not available');
+    }
+
+    const result = await window.desktopApp.createProjectFolders(projectName, destinationFolder, projectType, foundationLabel, reinforcementLabel);
+    
+    if (result?.success) {
+      addLog(`Project folders created successfully for "${projectName}"`, 'info');
+      currentCreatedProject = {
+        projectName: projectName,
+        projectType: result.projectType,
+        sourceDocsPath: result.sourceDocsPath,
+        foundationSourceDocsPath: result.foundationSourceDocsPath,
+        reinforcementSourceDocsPath: result.reinforcementSourceDocsPath,
+        rootPath: result.rootPath,
+      };
+      currentProjectEnvironment = { ...currentCreatedProject };
+      lastCurriculumProjectRoot = '';
+      projectCurriculumEntries = [];
+      selectedCurriculumFolderPath = '';
+
+      setTopCreateProjectLabel(projectName, result.projectType);
+
+      // Cache the project for quick access
+      await cacheProjectAfterCreation(currentCreatedProject);
+
+      if (window.desktopApp?.showAlert) {
+        await window.desktopApp.showAlert({
+          type: 'info',
+          title: 'Project Created',
+          message: `Project structure created for "${projectName}".`,
+          detail: 'You can now drag and drop source files below.',
+        });
+      }
+
+      if (projectCreationFields) {
+        projectCreationFields.style.display = 'none';
+      }
+      if (projectCreationActionRow) {
+        projectCreationActionRow.style.display = 'none';
+      }
+
+      // Show source documents upload slot
+      if (sourceDocumentsSlot) {
+        sourceDocumentsSlot.style.display = 'grid';
+      }
+
+      // Reset file list
+      uploadedSourceDocuments = [];
+      refreshUploadedFilesList();
+      refreshProjectCurriculumBrowser();
+    } else {
+      throw new Error(result?.error || 'Failed to create project folders');
+    }
+  } catch (error) {
+    projectCreationHint.textContent = `Error: ${error.message}`;
+    projectCreationHint.style.color = '#ffaaaa';
+    addLog(`Project creation error: ${error.message}`, 'error');
+  } finally {
+    projectCreationInProgress = false;
+    generateNewDatasetButton.disabled = false;
+    setProjectBusyState(false);
+  }
+});
+
+// File handling functions for source documents
+const validateDocumentFile = (file) => {
+  const fileName = file.name.toLowerCase();
+  return acceptedDocumentTypes.some(type => fileName.endsWith(type));
+};
+
+const getSelectedUploadStage = () => {
+  if (lockedUploadStage) {
+    return lockedUploadStage;
+  }
+  if (targetFoundationCheckbox?.checked) {
+    return 'foundation';
+  }
+  if (targetReinforcementCheckbox?.checked) {
+    return 'reinforcement';
+  }
+  return '';
+};
+
+const updateApplySourceDocumentsButtonState = () => {
+  const loadedDocuments = uploadedSourceDocuments.flatMap((entry) => Array.isArray(entry.documents) ? entry.documents : []);
+  const hasFiles = loadedDocuments.length > 0;
+  const selectedStage = getSelectedUploadStage();
+  const hasStage = selectedStage !== '';
+
+  if (targetStageStatus) {
+    if (!hasFiles) {
+      targetStageStatus.textContent = 'Target stage: load documents first';
+    } else if (!hasStage) {
+      targetStageStatus.textContent = 'Target stage: select Foundation or Reinforcement to continue';
+    } else if (selectedStage === 'foundation') {
+      targetStageStatus.textContent = lockedUploadStage ? 'Target stage: Foundation (locked)' : 'Target stage: Foundation (ready)';
+    } else {
+      targetStageStatus.textContent = lockedUploadStage ? 'Target stage: Reinforcement (locked)' : 'Target stage: Reinforcement (ready)';
+    }
+  }
+
+  if (applySourceDocumentsButton) {
+    applySourceDocumentsButton.disabled = !(hasFiles && hasStage);
+    applySourceDocumentsButton.hidden = !hasFiles;
+  }
+};
+
+const updateCreateSubfolderButtonState = () => {
+  const label = (newStageFolderLabel?.value?.trim() || '');
+  const hasLabel = label !== '';
+  const hasStage = (newStageFolderType?.value || '').trim() !== '';
+  if (createNewStageFolderButton) {
+    createNewStageFolderButton.textContent = hasLabel ? `Create New "${label}" Folder` : 'Create New Folder';
+    createNewStageFolderButton.disabled = !(hasLabel && hasStage);
+  }
+};
+
+const resetPostUploadModal = () => {
+  if (postUploadExpanded) {
+    postUploadExpanded.setAttribute('hidden', '');
+  }
+  if (newStageFolderLabel) {
+    newStageFolderLabel.value = '';
+  }
+  if (newStageFolderType) {
+    newStageFolderType.value = '';
+  }
+  updateCreateSubfolderButtonState();
+};
+
+const openPostUploadModal = () => {
+  if (!postUploadModal) {
+    return;
+  }
+  postUploadModal.removeAttribute('hidden');
+  resetPostUploadModal();
+};
+
+const closePostUploadModal = () => {
+  if (!postUploadModal) {
+    return;
+  }
+  postUploadModal.setAttribute('hidden', '');
+  resetPostUploadModal();
+};
+
+const setLockedStageSelection = (stage, targetFolder = '') => {
+  lockedUploadStage = stage || '';
+  lockedUploadTargetFolder = targetFolder || '';
+  if (targetFoundationCheckbox) {
+    targetFoundationCheckbox.checked = stage === 'foundation';
+    targetFoundationCheckbox.disabled = Boolean(stage);
+  }
+  if (targetReinforcementCheckbox) {
+    targetReinforcementCheckbox.checked = stage === 'reinforcement';
+    targetReinforcementCheckbox.disabled = Boolean(stage);
+  }
+  updateApplySourceDocumentsButtonState();
+};
+
+const unlockStageSelection = () => {
+  lockedUploadStage = '';
+  lockedUploadTargetFolder = '';
+  if (targetFoundationCheckbox) {
+    targetFoundationCheckbox.checked = false;
+    targetFoundationCheckbox.disabled = false;
+  }
+  if (targetReinforcementCheckbox) {
+    targetReinforcementCheckbox.checked = false;
+    targetReinforcementCheckbox.disabled = false;
+  }
+  updateApplySourceDocumentsButtonState();
+};
+
+const setProjectBusyState = (isBusy, message = 'Generating project structure...') => {
+  projectWriteInProgress = Boolean(isBusy);
+  if (projectBusyMessage) {
+    projectBusyMessage.textContent = message;
+  }
+  if (projectBusyOverlay) {
+    if (projectWriteInProgress) {
+      projectBusyOverlay.removeAttribute('hidden');
+    } else {
+      projectBusyOverlay.setAttribute('hidden', '');
+    }
+  }
+};
+
+const loadCachedProjectsList = async () => {
+  try {
+    if (!cachedProjectsList) return;
+
+    cachedProjectsList.innerHTML = '<p class="cached-projects-empty">Loading saved projects...</p>';
+
+    const result = await window.desktopApp.getCachedProjects();
+    if (!result.success) {
+      cachedProjectsList.innerHTML = '<p class="cached-projects-empty">No saved projects found.</p>';
+      addLog(`Saved project lookup failed: ${result.error || 'unknown error'}`, 'warning');
+      return;
+    }
+
+    const diagnostics = result.diagnostics || {};
+    const cacheCount = Number.isFinite(diagnostics.fromCacheCount) ? diagnostics.fromCacheCount : 0;
+    const recoveredCount = Number.isFinite(diagnostics.recoveredCount) ? diagnostics.recoveredCount : 0;
+    if (cacheCount > 0 || recoveredCount > 0) {
+      addLog(`Saved projects loaded: ${cacheCount} indexed, ${recoveredCount} recovered by scan.`, 'info');
+    }
+    if (Array.isArray(diagnostics.searchedPaths) && diagnostics.searchedPaths.length > 0) {
+      addLog(`Project search paths: ${diagnostics.searchedPaths.join(' | ')}`, 'info');
+    }
+
+    const projects = result.projects || [];
+    if (projects.length === 0) {
+      cachedProjectsList.innerHTML = '<p class="cached-projects-empty">No saved projects found. Create one, or check log for scanned paths.</p>';
+      return;
+    }
+
+    cachedProjectsList.innerHTML = '';
+    projects.forEach((project) => {
+      const card = document.createElement('div');
+      card.className = 'project-card';
+      
+      const createdDate = new Date(project.createdAt).toLocaleDateString('en-US', {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric',
+      });
+
+      card.innerHTML = `
+        <h4 class="project-card-title">${project.projectName || 'Unnamed Project'}</h4>
+        <p class="project-card-type">${project.projectType || 'unknown'}</p>
+        <p class="project-card-path">${project.rootPath}</p>
+        <p class="project-card-date">Created: ${createdDate}</p>
+      `;
+
+      card.addEventListener('click', () => {
+        void openSavedProjectEnvironment(project);
+      });
+
+      cachedProjectsList.appendChild(card);
+    });
+  } catch (error) {
+    console.error('Failed to load cached projects:', error);
+    if (cachedProjectsList) {
+      cachedProjectsList.innerHTML = '<p class="cached-projects-empty">Error loading projects. Try again.</p>';
+    }
+  }
+};
+
+const showProjectDetails = async (project) => {
+  try {
+    // Hide projects list, show details
+    if (cachedProjectsList) {
+      cachedProjectsList.setAttribute('hidden', '');
+    }
+    if (projectDetailsPanel) {
+      projectDetailsPanel.removeAttribute('hidden');
+    }
+
+    currentLoadedProject = project;
+
+    if (projectDetailsTitle) {
+      projectDetailsTitle.textContent = project.projectName || 'Project';
+    }
+
+    if (projectDetailsType) {
+      projectDetailsType.textContent = project.projectType || 'Unknown';
+    }
+
+    if (projectDetailsPath) {
+      projectDetailsPath.textContent = project.rootPath;
+    }
+
+    if (projectDetailsCreated) {
+      const createdDate = new Date(project.createdAt).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      });
+      projectDetailsCreated.textContent = createdDate;
+    }
+
+    // Load and display documents
+    if (projectDocumentsList) {
+      projectDocumentsList.innerHTML = '<p class="loading-text">Scanning for documents...</p>';
+
+      const docsResult = await window.desktopApp.listProjectDocuments(project.rootPath);
+      if (docsResult.success) {
+        const documents = docsResult.documents || {};
+        if (Object.keys(documents).length === 0) {
+          projectDocumentsList.innerHTML = '<p class="loading-text">No documents found in this project.</p>';
+        } else {
+          projectDocumentsList.innerHTML = '';
+          Object.entries(documents).forEach(([folder, files]) => {
+            const label = document.createElement('strong');
+            label.className = 'document-folder-label';
+            label.textContent = `📁 ${folder}`;
+            projectDocumentsList.appendChild(label);
+
+            files.forEach((file) => {
+              const item = document.createElement('div');
+              item.className = 'document-item';
+              item.textContent = `📄 ${file.relativePath}`;
+              projectDocumentsList.appendChild(item);
+            });
+          });
+        }
+      } else {
+        projectDocumentsList.innerHTML = '<p class="loading-text">Could not load documents.</p>';
+      }
+    }
+  } catch (error) {
+    console.error('Error showing project details:', error);
+    if (projectDocumentsList) {
+      projectDocumentsList.innerHTML = '<p class="loading-text" style="color: #ff9999;">Error loading project details.</p>';
+    }
+  }
+};
+
+const cacheProjectAfterCreation = async (projectData) => {
+  try {
+    if (!projectData || !projectData.rootPath) {
+      console.warn('Invalid project data for caching');
+      return;
+    }
+
+    const result = await window.desktopApp.cacheProject({
+      projectName: projectData.projectName,
+      projectType: projectData.projectType,
+      rootPath: projectData.rootPath,
+      foundationSourceDocsPath: projectData.foundationSourceDocsPath,
+      reinforcementSourceDocsPath: projectData.reinforcementSourceDocsPath,
+      createdAt: new Date().toISOString(),
+    });
+
+    if (result.success) {
+      addLog(`Project cached: ${projectData.projectName}`, 'info');
+    } else {
+      console.warn('Failed to cache project:', result.error);
+    }
+  } catch (error) {
+    console.error('Error caching project:', error);
+  }
+};
+
+const resolveNativeFilePath = (file) => {
+  if (!file) {
+    return '';
+  }
+  if (window.desktopApp?.getPathForFile) {
+    const pathValue = window.desktopApp.getPathForFile(file);
+    if (typeof pathValue === 'string' && pathValue.trim() !== '') {
+      return pathValue;
+    }
+  }
+  if (typeof file.path === 'string' && file.path.trim() !== '') {
+    return file.path;
+  }
+  return '';
+};
+
+const getSourcePathTailName = (inputPath) => {
+  if (typeof inputPath !== 'string' || inputPath.trim() === '') {
+    return 'folder';
+  }
+  const normalized = inputPath.replace(/\\/g, '/');
+  const chunks = normalized.split('/').filter(Boolean);
+  return chunks[chunks.length - 1] || 'folder';
+};
+
+const addUploadedSourcePath = (entryPath, displayName, isDirectory = false) => {
+  if (typeof entryPath !== 'string' || entryPath.trim() === '') {
+    return Promise.resolve(false);
+  }
+
+  const normalizedPath = entryPath.trim();
+  const isDuplicate = uploadedSourceDocuments.some((f) => f.path === normalizedPath);
+  if (isDuplicate) {
+    addLog(`Source already added: ${displayName || normalizedPath}`, 'info');
+    return Promise.resolve(false);
+  }
+
+  const resolvedDisplayName = displayName || getSourcePathTailName(normalizedPath);
+  return (async () => {
+    if (!window.desktopApp?.inspectProjectSourceEntries) {
+      addLog('Source inspection API is not available.', 'error');
+      return false;
+    }
+
+    const result = await window.desktopApp.inspectProjectSourceEntries({ entryPaths: [normalizedPath] });
+    if (!result?.success) {
+      addLog(`Could not inspect source: ${resolvedDisplayName}`, 'warning');
+      return false;
+    }
+
+    const inspectedEntry = Array.isArray(result.entries) ? result.entries[0] : null;
+    if (!inspectedEntry) {
+      addLog(`Could not inspect source: ${resolvedDisplayName}`, 'warning');
+      return false;
+    }
+
+    uploadedSourceDocuments.push({
+      name: resolvedDisplayName,
+      path: normalizedPath,
+      isDirectory: Boolean(isDirectory || inspectedEntry.isDirectory),
+      documents: Array.isArray(inspectedEntry.documents) ? inspectedEntry.documents : [],
+    });
+    refreshUploadedFilesList();
+    addLog(`${isDirectory || inspectedEntry.isDirectory ? 'Folder' : 'File'} added: ${resolvedDisplayName}`, 'info');
+    return true;
+  })();
+};
+
+const addUploadedFile = (file) => {
+  if (!validateDocumentFile(file)) {
+    addLog(`File type not accepted: ${file.name}. Accepted: PDF, JSON, MD, TXT, DOC, DOCX`, 'warning');
+    return false;
+  }
+
+  const nativePath = resolveNativeFilePath(file);
+  if (!nativePath) {
+    addLog(`Could not resolve native path for: ${file.name}`, 'warning');
+    return false;
+  }
+
+  const isDuplicate = uploadedSourceDocuments.some((f) => f.path === nativePath);
+  if (isDuplicate) {
+    addLog(`File already added: ${file.name}`, 'info');
+    return false;
+  }
+
+  return addUploadedSourcePath(nativePath, file.name, false);
+};
+
+const addDroppedSourceEntry = (file) => {
+  if (!file) {
+    return;
+  }
+
+  if (validateDocumentFile(file)) {
+    void addUploadedFile(file);
+    return;
+  }
+
+  const nativePath = resolveNativeFilePath(file);
+  if (!nativePath) {
+    addLog(`Unsupported drop item: ${file.name || 'Unknown entry'}`, 'warning');
+    return;
+  }
+
+  // When a folder is dropped on Electron, the path resolves but extension checks fail.
+  void addUploadedSourcePath(nativePath, `[Folder] ${getSourcePathTailName(nativePath)}`, true);
+};
+
+const refreshUploadedFilesList = () => {
+  if (!uploadedFilesList) return;
+
+  uploadedFilesList.innerHTML = '';
+  const iconMap = {
+    '.pdf': '📄',
+    '.json': '{ }',
+    '.md': '📝',
+    '.txt': '📋',
+    '.doc': '📑',
+    '.docx': '📑'
+  };
+
+  uploadedSourceDocuments.forEach((entry) => {
+    const group = document.createElement('div');
+    group.className = 'uploaded-source-group';
+
+    const title = document.createElement('div');
+    title.className = 'uploaded-source-title';
+    title.textContent = `${entry.isDirectory ? 'Folder' : 'Source'}: ${entry.name}`;
+    group.appendChild(title);
+
+    const docs = document.createElement('div');
+    docs.className = 'uploaded-source-docs';
+
+    const documentEntries = Array.isArray(entry.documents) ? entry.documents : [];
+    if (documentEntries.length === 0) {
+      const emptyItem = document.createElement('div');
+      emptyItem.className = 'uploaded-file-item';
+      emptyItem.innerHTML = '<span class="uploaded-file-icon">!</span><span>No supported documents found.</span>';
+      docs.appendChild(emptyItem);
+    } else {
+      documentEntries.forEach((file) => {
+        const item = document.createElement('div');
+        item.className = 'uploaded-file-item';
+        const ext = `${file.name || ''}`.split('.').pop().toLowerCase();
+        const icon = iconMap[`.${ext}`] || '📎';
+        item.innerHTML = `
+          <span class="uploaded-file-icon">${icon}</span>
+          <span>${file.relativePath || file.name}</span>
+        `;
+        docs.appendChild(item);
+      });
+    }
+
+    group.appendChild(docs);
+    uploadedFilesList.appendChild(group);
+  });
+
+  const loadedDocuments = uploadedSourceDocuments.flatMap((entry) => Array.isArray(entry.documents) ? entry.documents : []);
+  if (uploadedFileCount) {
+    uploadedFileCount.textContent = `${loadedDocuments.length} file${loadedDocuments.length !== 1 ? 's' : ''}`;
+  }
+  updateApplySourceDocumentsButtonState();
+};
+
+targetFoundationCheckbox?.addEventListener('change', () => {
+  if (targetFoundationCheckbox.checked && targetReinforcementCheckbox) {
+    targetReinforcementCheckbox.checked = false;
+  }
+  updateApplySourceDocumentsButtonState();
+});
+
+targetReinforcementCheckbox?.addEventListener('change', () => {
+  if (targetReinforcementCheckbox.checked && targetFoundationCheckbox) {
+    targetFoundationCheckbox.checked = false;
+  }
+  updateApplySourceDocumentsButtonState();
+});
+
+sourceDocumentsCard?.addEventListener('dragover', (event) => {
+  if (projectWriteInProgress) {
+    return;
+  }
+  event.preventDefault();
+  sourceDocumentsCard.style.opacity = '0.7';
+});
+
+sourceDocumentsCard?.addEventListener('dragleave', () => {
+  sourceDocumentsCard.style.opacity = '1';
+});
+
+sourceDocumentsCard?.addEventListener('drop', (event) => {
+  if (projectWriteInProgress) {
+    return;
+  }
+  event.preventDefault();
+  sourceDocumentsCard.style.opacity = '1';
+  
+  const files = event.dataTransfer.files;
+  Array.from(files).forEach((file) => {
+    void addDroppedSourceEntry(file);
+  });
+});
+
+const uploadSourceDocumentsButton = document.querySelector('[data-upload-source-documents]');
+uploadSourceDocumentsButton?.addEventListener('click', async () => {
+  if (projectWriteInProgress) {
+    return;
+  }
+  if (!window.desktopApp?.selectSourceEntries) {
+    addLog('Source selection dialog is not available.', 'error');
+    return;
+  }
+
+  const selectedEntries = await window.desktopApp.selectSourceEntries();
+  if (!Array.isArray(selectedEntries) || selectedEntries.length === 0) {
+    return;
+  }
+
+  selectedEntries.forEach((entryPath) => {
+    void addUploadedSourcePath(entryPath, getSourcePathTailName(entryPath));
+  });
+});
+
+applySourceDocumentsButton?.addEventListener('click', async () => {
+  if (projectWriteInProgress) {
+    return;
+  }
+  const stage = getSelectedUploadStage();
+  if (!stage) {
+    addLog('Select Foundation or Reinforcement before adding files.', 'warning');
+    return;
+  }
+
+  if (!currentCreatedProject) {
+    addLog('Create a project first before adding files.', 'warning');
+    return;
+  }
+
+  if (!window.desktopApp?.addProjectSourceDocuments) {
+    addLog('Add project source documents API is not available.', 'error');
+    return;
+  }
+
+  const filePaths = uploadedSourceDocuments.map((entry) => entry.path).filter(Boolean);
+  if (filePaths.length === 0) {
+    addLog('Load at least one file or folder before continuing.', 'warning');
+    return;
+  }
+
+  let targetFolder = '';
+  if (lockedUploadTargetFolder) {
+    targetFolder = lockedUploadTargetFolder;
+  } else if (stage === 'foundation') {
+    targetFolder = currentCreatedProject.foundationSourceDocsPath || currentCreatedProject.sourceDocsPath || '';
+  } else if (stage === 'reinforcement') {
+    targetFolder = currentCreatedProject.reinforcementSourceDocsPath || currentCreatedProject.sourceDocsPath || '';
+  }
+
+  if (!targetFolder) {
+    addLog(`Target folder is not available for ${stage}.`, 'error');
+    return;
+  }
+
+  const applyButtonLabel = applySourceDocumentsButton.textContent;
+  applySourceDocumentsButton.disabled = true;
+  applySourceDocumentsButton.textContent = 'Adding...';
+  setProjectBusyState(true, 'Writing files...');
+  try {
+    const result = await window.desktopApp.addProjectSourceDocuments({ filePaths, targetFolder });
+    if (!result?.success) {
+      throw new Error(result?.error || 'Failed to add source documents');
+    }
+    const copiedCount = Array.isArray(result.copied) ? result.copied.length : 0;
+    if (copiedCount === 0) {
+      addLog(`No supported files were added to ${stage} folder.`, 'warning');
+      if (window.desktopApp?.showAlert) {
+        await window.desktopApp.showAlert({
+          type: 'warning',
+          title: 'No Files Added',
+          message: 'No supported documents were found in the loaded entries.',
+          detail: 'Supported types: PDF, JSON, MD, TXT, DOC, DOCX',
+        });
+      }
+    } else {
+      addLog(`Added ${copiedCount} source file(s) to ${stage} folder.`, 'info');
+      if (window.desktopApp?.showAlert) {
+        await window.desktopApp.showAlert({
+          type: 'info',
+          title: 'Files Added',
+          message: `Added ${copiedCount} file(s) to ${stage}.`,
+          detail: `Target folder: ${targetFolder}`,
+        });
+      }
+      uploadedSourceDocuments = [];
+      refreshUploadedFilesList();
+      openPostUploadModal();
+    }
+  } catch (error) {
+    addLog(`Add source documents failed: ${error.message}`, 'error');
+    if (window.desktopApp?.showAlert) {
+      await window.desktopApp.showAlert({
+        type: 'error',
+        title: 'Add Files Failed',
+        message: 'Could not add files to the selected stage folder.',
+        detail: `${error.message}`,
+      });
+    }
+  } finally {
+    applySourceDocumentsButton.textContent = applyButtonLabel || 'Add Loaded Files To Selected Stage';
+    setProjectBusyState(false);
+    updateApplySourceDocumentsButtonState();
+  }
+});
+
+postUploadYesButton?.addEventListener('click', () => {
+  if (projectWriteInProgress) {
+    return;
+  }
+  if (postUploadExpanded) {
+    postUploadExpanded.removeAttribute('hidden');
+  }
+  updateCreateSubfolderButtonState();
+});
+
+postUploadNoButton?.addEventListener('click', () => {
+  if (projectWriteInProgress) {
+    return;
+  }
+  closePostUploadModal();
+  if (projectCreationPanel) {
+    projectCreationPanel.setAttribute('hidden', '');
+  }
+  if (sourceDocumentsSlot) {
+    sourceDocumentsSlot.style.display = 'none';
+  }
+  unlockStageSelection();
+});
+
+newStageFolderLabel?.addEventListener('input', () => {
+  updateCreateSubfolderButtonState();
+});
+
+newStageFolderType?.addEventListener('change', () => {
+  updateCreateSubfolderButtonState();
+});
+
+createNewStageFolderButton?.addEventListener('click', async () => {
+  if (projectWriteInProgress) {
+    return;
+  }
+  const label = `${newStageFolderLabel?.value || ''}`.trim();
+  const stage = `${newStageFolderType?.value || ''}`.trim();
+  if (!label || !stage) {
+    updateCreateSubfolderButtonState();
+    return;
+  }
+  if (!currentCreatedProject) {
+    addLog('Create a project first before creating source folders.', 'warning');
+    return;
+  }
+  if (!window.desktopApp?.createProjectSourceSubfolder) {
+    addLog('Create source subfolder API is not available.', 'error');
+    return;
+  }
+
+  createNewStageFolderButton.disabled = true;
+  setProjectBusyState(true, 'Generating project structure...');
+  try {
+    const result = await window.desktopApp.createProjectSourceSubfolder({
+      label,
+      stage,
+      foundationSourceDocsPath: currentCreatedProject.foundationSourceDocsPath || currentCreatedProject.sourceDocsPath,
+      reinforcementSourceDocsPath: currentCreatedProject.reinforcementSourceDocsPath || currentCreatedProject.sourceDocsPath,
+    });
+    if (!result?.success) {
+      throw new Error(result?.error || 'Failed to create new source folder');
+    }
+
+    setLockedStageSelection(stage, result.folderPath);
+    addLog(`Created ${stage} source folder: ${result.folderName}`, 'info');
+    resetPostUploadModal();
+  } catch (error) {
+    addLog(`Create source folder failed: ${error.message}`, 'error');
+    updateCreateSubfolderButtonState();
+  } finally {
+    setProjectBusyState(false);
+  }
+});
+
+// Close button handlers
+const closeProjectCreationButton = document.getElementById('closeProjectCreationButton');
+closeProjectCreationButton?.addEventListener('click', () => {
+  const createdProjectSnapshot = currentCreatedProject ? {
+    projectName: currentCreatedProject.projectName,
+    projectType: currentCreatedProject.projectType,
+  } : null;
+
+  if (projectCreationPanel) {
+    projectCreationPanel.setAttribute('hidden', '');
+  }
+  // Hide source documents slot when closing creation panel
+  if (sourceDocumentsSlot) {
+    sourceDocumentsSlot.style.display = 'none';
+  }
+  if (targetFoundationCheckbox) {
+    targetFoundationCheckbox.checked = false;
+    targetFoundationCheckbox.disabled = false;
+  }
+  if (targetReinforcementCheckbox) {
+    targetReinforcementCheckbox.checked = false;
+    targetReinforcementCheckbox.disabled = false;
+  }
+  closePostUploadModal();
+  unlockStageSelection();
+  currentCreatedProject = null;
+  uploadedSourceDocuments = [];
+  refreshUploadedFilesList();
+
+  if (createdProjectSnapshot?.projectName) {
+    setTopCreateProjectLabel(createdProjectSnapshot.projectName, createdProjectSnapshot.projectType);
+  }
+});
+
 outputFolderButton?.addEventListener('click', async () => {
   if (!window.desktopApp?.selectFolder || !outputFolderInput) {
     return;
@@ -1942,6 +3599,7 @@ outputFolderButton?.addEventListener('click', async () => {
   lastUsedOutputFolder = selectedPath;
   addLog(`Output folder selected: ${selectedPath}`);
   await persistSettings();
+  renderProjectWorkspace();
   refreshGenerateState();
 });
 
@@ -1958,6 +3616,7 @@ exportSourceFolderButton?.addEventListener('click', async () => {
   exportSourceFolderInput.value = selectedPath;
   addLog(`Export scan folder selected: ${selectedPath}`, 'info');
   await persistSettings();
+  renderProjectWorkspace();
   refreshGenerateState();
 });
 
@@ -1966,6 +3625,8 @@ outputPrefixInput?.addEventListener('change', () => {
     lastUsedOutputPrefix = outputPrefixInput.value.trim();
   }
   void persistSettings();
+  renderProjectWorkspace();
+  refreshGenerateState();
 });
 
 outputPrefixInput?.addEventListener('blur', () => {
@@ -1973,17 +3634,31 @@ outputPrefixInput?.addEventListener('blur', () => {
     lastUsedOutputPrefix = outputPrefixInput.value.trim();
   }
   void persistSettings();
+  renderProjectWorkspace();
+  refreshGenerateState();
+});
+
+projectNameInput?.addEventListener('change', () => {
+  void persistSettings();
+  renderProjectWorkspace();
+});
+
+projectNameInput?.addEventListener('blur', () => {
+  void persistSettings();
+  renderProjectWorkspace();
 });
 
 datasetNameInput?.addEventListener('change', () => {
   lastUsedDatasetName = datasetNameInput.value.trim();
   void persistSettings();
+  renderProjectWorkspace();
   refreshGenerateState();
 });
 
 datasetNameInput?.addEventListener('blur', () => {
   lastUsedDatasetName = datasetNameInput.value.trim();
   void persistSettings();
+  renderProjectWorkspace();
   refreshGenerateState();
 });
 
@@ -2811,4 +4486,5 @@ generateButton?.addEventListener('click', async () => {
 
 refreshGenerateState();
 resetDocumentOutputState();
+renderProjectWorkspace();
 void loadSavedSettings().then(() => refreshApiAvailability());

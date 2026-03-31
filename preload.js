@@ -6,6 +6,11 @@ contextBridge.exposeInMainWorld('desktopApp', {
   getSettings: () => ipcRenderer.invoke('settings:get'),
   saveSettings: (payload) => ipcRenderer.invoke('settings:save', payload),
   selectFolder: () => ipcRenderer.invoke('dialog:selectFolder'),
+  selectSourceEntries: () => ipcRenderer.invoke('dialog:selectSourceEntries'),
+  createProjectFolders: (projectName, destinationFolder, projectType, foundationLabel, reinforcementLabel) => ipcRenderer.invoke('project:createFolders', projectName, destinationFolder, projectType, foundationLabel, reinforcementLabel),
+  createProjectSourceSubfolder: (payload) => ipcRenderer.invoke('project:createSourceSubfolder', payload),
+  inspectProjectSourceEntries: (payload) => ipcRenderer.invoke('project:inspectSourceEntries', payload),
+  addProjectSourceDocuments: (payload) => ipcRenderer.invoke('project:addSourceDocuments', payload),
   openPdfDialog: () => ipcRenderer.invoke('dialog:openPdf'),
   openJsonDialog: (payload) => ipcRenderer.invoke('dialog:openJson', payload),
   getApiStatus: () => ipcRenderer.invoke('api:status'),
@@ -22,6 +27,13 @@ contextBridge.exposeInMainWorld('desktopApp', {
   processPdf: (payload) => ipcRenderer.invoke('rag:processPdf', payload),
   buildArtifacts: (payload) => ipcRenderer.invoke('generation:buildArtifacts', payload),
   cancelGeneration: () => ipcRenderer.invoke('generation:cancel'),
+  cacheProject: (projectData) => ipcRenderer.invoke('project:cacheProject', projectData),
+  getCachedProjects: () => ipcRenderer.invoke('project:getCachedProjects'),
+  removeCachedProject: (projectRootPath) => ipcRenderer.invoke('project:removeCachedProject', projectRootPath),
+  listProjectDocuments: (projectRootPath) => ipcRenderer.invoke('project:listProjectDocuments', projectRootPath),
+  getProjectCurriculumOverview: (projectRootPath) => ipcRenderer.invoke('project:getCurriculumOverview', projectRootPath),
+  loadCachedProject: (projectRootPath) => ipcRenderer.invoke('project:loadCachedProject', projectRootPath),
+  openFolder: (folderPath) => ipcRenderer.invoke('system:openFolder', folderPath),
   onArtifactProgress: (callback) => {
     if (typeof callback !== 'function') {
       return () => {};

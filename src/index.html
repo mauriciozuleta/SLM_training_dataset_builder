@@ -16,6 +16,164 @@
         </p>
       </section>
 
+      <nav class="project-top-nav" aria-label="Project management">
+        <div class="project-nav-buttons">
+          <button id="topCreateProjectButton" class="project-nav-button project-nav-button--create" type="button">
+            <span class="nav-button-icon">+</span>
+            <span class="nav-button-label">Create New Project</span>
+          </button>
+          <button id="topOpenProjectButton" class="project-nav-button project-nav-button--open" type="button">
+            <span class="nav-button-icon">⬇</span>
+            <span class="nav-button-label">Open Saved Project</span>
+          </button>
+        </div>
+      </nav>
+
+      <section class="project-creation-panel" id="projectCreationPanel" aria-label="Create new project" hidden>
+        <div class="project-creation-header">
+          <h2>Create New Project</h2>
+          <button id="closeProjectCreationButton" class="close-button" type="button" aria-label="Close">×</button>
+        </div>
+        <div class="project-creation-content">
+          <div id="projectCreationFields" class="destination-grid">
+            <article class="destination-cell" data-destination-cell>
+              <label for="newProjectName">Project Name</label>
+              <input id="newProjectName" class="filename-input" type="text" value="" placeholder="Example: AFH Chapter 5 Pack" spellcheck="false" />
+              <p class="prefix-hint">This will be used to name your project folders and files.</p>
+            </article>
+            <article class="destination-cell" data-destination-cell>
+              <label for="newProjectType">Project Type</label>
+              <select id="newProjectType" class="destination-input project-select">
+                <option value="single-dataset">Single Dataset (1 document)</option>
+                <option value="subject-dataset">Subject Dataset (multiple chapters)</option>
+                <option value="slm-training">SLM Training Full Structure</option>
+              </select>
+              <p class="prefix-hint">Choose the folder structure template for this project.</p>
+            </article>
+            <article class="destination-cell" data-destination-cell id="slmFoundationCell" hidden>
+              <label for="slmFoundationLabel">SLM Foundation Label</label>
+              <input id="slmFoundationLabel" class="filename-input" type="text" value="" placeholder="Example: afh" spellcheck="false" />
+              <p class="prefix-hint">Optional override for stage 1 folder naming (defaults to project name).</p>
+            </article>
+            <article class="destination-cell" data-destination-cell id="slmReinforcementCell" hidden>
+              <label for="slmReinforcementLabel">SLM Reinforcement Label</label>
+              <input id="slmReinforcementLabel" class="filename-input" type="text" value="" placeholder="Example: phak" spellcheck="false" />
+              <p class="prefix-hint">Used for stage 2 folder naming (for example: 02_reinforcement_phak).</p>
+            </article>
+            <article class="destination-cell" data-destination-cell>
+              <label for="newProjectFolder">Project Destination Folder</label>
+              <div class="destination-input-wrap">
+                <input id="newProjectFolder" class="destination-input" type="text" readonly value="No folder selected" />
+                <button id="selectNewProjectFolderButton" class="destination-button" type="button">Browse</button>
+              </div>
+              <p class="prefix-hint">Where to create the new project folders.</p>
+            </article>
+          </div>
+          <div id="projectCreationActionRow" class="action-row">
+            <button id="generateNewDatasetButton" class="generate-button" type="button" disabled>Create Project</button>
+            <span id="projectCreationHint" class="generate-hint">Select project name, type, and destination folder to continue.</span>
+          </div>
+          <div class="source-upload-row" id="sourceDocumentsSlot" style="display: none;">
+            <article class="upload-card" id="sourceDocumentsCard" data-required="false">
+              <div class="drop-zone" tabindex="0">
+                <span class="drop-icon">📄</span>
+                <h3>Drag & drop source documents</h3>
+                <p>Drop PDF, JSON, MD, TXT, or DOC files here.</p>
+                <button class="clear-card-button" type="button" aria-label="Clear files">×</button>
+              </div>
+              <div class="stage-selector-row" aria-label="Select target stage">
+                <label class="stage-option">
+                  <input id="targetFoundationCheckbox" type="checkbox" />
+                  <span>Foundation</span>
+                </label>
+                <label class="stage-option">
+                  <input id="targetReinforcementCheckbox" type="checkbox" />
+                  <span>Reinforcement</span>
+                </label>
+              </div>
+              <p id="targetStageStatus" class="stage-status-text">Target stage: none selected</p>
+              <button class="upload-button" type="button" data-upload-source-documents>Upload Files or Folder</button>
+            </article>
+            <article class="uploaded-files-card" id="uploadedFilesCard">
+              <div class="uploaded-files-header">
+                <h3>Uploaded Files</h3>
+                <span id="uploadedFileCount" class="file-count">0 files</span>
+              </div>
+              <div id="uploadedFilesList" class="uploaded-files-list"></div>
+              <button class="upload-button" id="applySourceDocumentsButton" type="button" disabled hidden>Add Loaded Files To Selected Stage</button>
+            </article>
+          </div>
+          <div id="postUploadModal" class="post-upload-modal" hidden>
+            <div class="post-upload-modal-card">
+              <h3>Add more files?</h3>
+              <p class="post-upload-copy">Do you want to create another source folder before loading more documents?</p>
+              <div class="post-upload-actions">
+                <button id="postUploadYesButton" class="upload-button" type="button">Yes</button>
+                <button id="postUploadNoButton" class="upload-button" type="button">No</button>
+              </div>
+              <div id="postUploadExpanded" class="post-upload-expanded" hidden>
+                <label for="newStageFolderLabel">New folder label</label>
+                <input id="newStageFolderLabel" class="filename-input" type="text" value="" placeholder="Example: afh_chapters_batch_2" spellcheck="false" />
+                <label for="newStageFolderType">Place under</label>
+                <select id="newStageFolderType" class="destination-input project-select">
+                  <option value="">Select target stage</option>
+                  <option value="foundation">Foundation</option>
+                  <option value="reinforcement">Reinforcement</option>
+                </select>
+                <button id="createNewStageFolderButton" class="upload-button" type="button" disabled>Create New Folder</button>
+              </div>
+            </div>
+          </div>
+          <div id="projectBusyOverlay" class="project-busy-overlay" hidden>
+            <div class="project-busy-card">
+              <p id="projectBusyMessage">Generating project structure...</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project-loader-panel" id="projectLoaderPanel" aria-label="Open saved project" hidden>
+        <div class="project-loader-header">
+          <h2>Open Saved Project</h2>
+          <button id="closeProjectLoaderButton" class="close-button" type="button" aria-label="Close">×</button>
+        </div>
+        <div class="project-loader-content">
+          <div id="cachedProjectsList" class="cached-projects-list">
+            <p class="cached-projects-empty">Loading saved projects...</p>
+          </div>
+          <div id="projectDetailsPanel" class="project-details-panel" hidden>
+            <div class="project-details-header">
+              <button id="backToCachedListButton" class="back-button" type="button">← Back to Projects</button>
+              <h3 id="projectDetailsTitle">Project Name</h3>
+              <button id="closeProjectDetailsButton" class="close-button" type="button" aria-label="Close">×</button>
+            </div>
+            <div class="project-details-content">
+              <div class="project-info-section">
+                <h4>Project Information</h4>
+                <dl class="project-info-list">
+                  <dt>Type:</dt>
+                  <dd id="projectDetailsType">-</dd>
+                  <dt>Location:</dt>
+                  <dd id="projectDetailsPath">-</dd>
+                  <dt>Created:</dt>
+                  <dd id="projectDetailsCreated">-</dd>
+                </dl>
+              </div>
+              <div class="project-documents-section">
+                <h4>Existing Documents</h4>
+                <div id="projectDocumentsList" class="project-documents-list">
+                  <p class="loading-text">Loading documents...</p>
+                </div>
+              </div>
+              <div class="project-actions-row">
+                <button id="openProjectFolderButton" class="project-action-button" type="button">Open Folder in Explorer</button>
+                <button id="removeProjectCacheButton" class="project-action-button project-action--delete" type="button">Remove from Cache</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="mode-panel" aria-label="Choose today task">
         <div class="mode-panel-header">
           <p class="mode-kicker">What Are We Going To Do Today?</p>
@@ -35,6 +193,30 @@
             <span class="mode-button-label">Export dataset</span>
             <span class="mode-button-copy">Scan a folder tree and copy only questions and conversational training files.</span>
           </button>
+        </div>
+      </section>
+
+      <section class="project-curriculum-panel" id="projectCurriculumPanel" aria-label="Project curriculum browser" hidden>
+        <div class="project-curriculum-header">
+          <div>
+            <p class="mode-kicker">Project Environment</p>
+            <h3 id="projectCurriculumTitle">Curriculum folders</h3>
+          </div>
+          <p id="projectCurriculumSubtitle" class="project-curriculum-subtitle">Select a curriculum folder to inspect its source documents.</p>
+        </div>
+        <div class="project-curriculum-grid">
+          <section class="curriculum-pane" aria-label="Curriculum folders">
+            <h4>Curriculum folders</h4>
+            <div id="curriculumFoldersList" class="curriculum-folder-list">
+              <p class="curriculum-empty">No curriculum folders loaded.</p>
+            </div>
+          </section>
+          <section class="curriculum-pane" aria-label="Source documents">
+            <h4>Source documents</h4>
+            <div id="curriculumDocumentsList" class="curriculum-document-list">
+              <p class="curriculum-empty">Select a curriculum folder to view source documents.</p>
+            </div>
+          </section>
         </div>
       </section>
 
