@@ -731,6 +731,7 @@ function parseArgs(argv) {
     file: '',
     reportPath: '',
     failOnWarning: false,
+    includeMarkdownReport: false,
   };
 
   for (let i = 0; i < argv.length; i += 1) {
@@ -754,6 +755,10 @@ function parseArgs(argv) {
       args.failOnWarning = true;
       continue;
     }
+    if (token === '--with-markdown') {
+      args.includeMarkdownReport = true;
+      continue;
+    }
   }
 
   return args;
@@ -770,6 +775,7 @@ function resolveAuditTargets(options = {}) {
     files,
     reportPath: options.reportPath ? path.resolve(options.reportPath) : '',
     failOnWarning: Boolean(options.failOnWarning),
+    includeMarkdownReport: Boolean(options.includeMarkdownReport),
   };
 }
 
@@ -960,11 +966,13 @@ function performAudit(options = {}) {
   if (resolved.reportPath) {
     fs.writeFileSync(resolved.reportPath, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
 
-    const markdownPath = resolved.reportPath.toLowerCase().endsWith('.json')
-      ? resolved.reportPath.replace(/\.json$/i, '.md')
-      : `${resolved.reportPath}.md`;
-    const markdownReport = buildMarkdownReport(payload, previousPayload);
-    fs.writeFileSync(markdownPath, markdownReport, 'utf8');
+    if (resolved.includeMarkdownReport) {
+      const markdownPath = resolved.reportPath.toLowerCase().endsWith('.json')
+        ? resolved.reportPath.replace(/\.json$/i, '.md')
+        : `${resolved.reportPath}.md`;
+      const markdownReport = buildMarkdownReport(payload, previousPayload);
+      fs.writeFileSync(markdownPath, markdownReport, 'utf8');
+    }
   }
 
   return {
@@ -976,7 +984,7 @@ function performAudit(options = {}) {
     overallRating,
     results,
     reportPath: resolved.reportPath || '',
-    markdownReportPath: resolved.reportPath
+    markdownReportPath: resolved.reportPath && resolved.includeMarkdownReport
       ? (resolved.reportPath.toLowerCase().endsWith('.json')
         ? resolved.reportPath.replace(/\.json$/i, '.md')
         : `${resolved.reportPath}.md`)

@@ -23,11 +23,9 @@
       return 'Environment';
     };
 
-    const setTopCreateProjectLabel = (projectName, projectType) => {
+    const setTopCreateProjectLabel = (projectName) => {
       const safeName = `${projectName || ''}`.trim();
-      const projectLabel = safeName
-        ? `${safeName} - ${formatProjectEnvironmentLabel(projectType)}`
-        : topCreateProjectDefaultLabel;
+      const projectLabel = safeName || topCreateProjectDefaultLabel;
 
       if (dom.topCreateProjectButton) {
         const labelEl = dom.topCreateProjectButton.querySelector('.nav-button-label');
@@ -79,14 +77,16 @@
           rootPath: project.rootPath || '',
           foundationSourceDocsPath: project.foundationSourceDocsPath || '',
           reinforcementSourceDocsPath: project.reinforcementSourceDocsPath || '',
+          exportFilesPath: project.exportFilesPath || '',
           sourceDocsPath: project.foundationSourceDocsPath || project.reinforcementSourceDocsPath || '',
         };
         state.setCurrentCreatedProject?.(createdProject);
         state.setCurrentProjectEnvironment?.({ ...createdProject });
         state.resetCurriculumState?.();
 
-        setTopCreateProjectLabel(project.projectName, project.projectType);
+        setTopCreateProjectLabel(project.projectName);
         switchToEnvironmentWorkspace();
+        state.setCurrentTaskMode?.('generate');
         refreshProjectCurriculumBrowser();
         addLog(`Opened project environment: ${project.projectName || 'Saved project'}`, 'info');
       } catch (error) {
@@ -109,19 +109,12 @@
           return;
         }
 
-        const diagnostics = result.diagnostics || {};
-        const cacheCount = Number.isFinite(diagnostics.fromCacheCount) ? diagnostics.fromCacheCount : 0;
-        const recoveredCount = Number.isFinite(diagnostics.recoveredCount) ? diagnostics.recoveredCount : 0;
-        if (cacheCount > 0 || recoveredCount > 0) {
-          addLog(`Saved projects loaded: ${cacheCount} indexed, ${recoveredCount} recovered by scan.`, 'info');
-        }
-        if (Array.isArray(diagnostics.searchedPaths) && diagnostics.searchedPaths.length > 0) {
-          addLog(`Project search paths: ${diagnostics.searchedPaths.join(' | ')}`, 'info');
-        }
-
         const projects = result.projects || [];
+        if (projects.length > 0) {
+          addLog(`Loaded ${projects.length} project${projects.length === 1 ? '' : 's'} from managed workspace.`, 'info');
+        }
         if (projects.length === 0) {
-          dom.cachedProjectsList.innerHTML = '<p class="cached-projects-empty">No saved projects found. Create one, or check log for scanned paths.</p>';
+          dom.cachedProjectsList.innerHTML = '<p class="cached-projects-empty">No projects yet. Use \'Create New Project\' to get started.</p>';
           return;
         }
 

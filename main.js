@@ -8,6 +8,8 @@ const { repairAffectedPairs } = require('./src/main/services/documentGeneration/
 const { persistDeferredQualityLog } = require('./src/main/services/documentGeneration/deferredQualityLogService');
 const { getQualityGuardrails, getQualityStabilityStatus, updateQualityMemoryFromAudit } = require('./src/main/services/documentGeneration/qualityMemoryService');
 const { createExportDatasetService } = require('./src/main/services/exportDatasetService');
+const { createProjectStructureService } = require('./src/main/services/projectStructureService');
+const { ingestDroppedEntries } = require('./src/main/folder-builder');
 const packageMetadata = require('./package.json');
 
 require('dotenv').config({ path: path.join(__dirname, '.env') });
@@ -35,6 +37,7 @@ const documentGenerationService = createDocumentGenerationService({
   maxQuestionTarget: MAX_QUESTION_TARGET,
 });
 const exportDatasetService = createExportDatasetService({ fs, path });
+const projectStructureService = createProjectStructureService({ fs, path });
 
 let activeGenerationAbortController = null;
 
@@ -73,6 +76,10 @@ function normalizeDocumentIdPrefix(prefix) {
 
 function getSettingsFilePath() {
   return path.join(app.getPath('userData'), 'app-settings.json');
+}
+
+function getManagedProjectsRoot() {
+  return path.join(app.getPath('userData'), 'projects');
 }
 
 async function loadAppSettings() {
@@ -463,6 +470,7 @@ async function runPairAudit(payload = {}) {
     files: payload?.files,
     reportPath: payload?.reportPath,
     failOnWarning: Boolean(payload?.failOnWarning),
+    includeMarkdownReport: Boolean(payload?.includeMarkdownReport),
   });
 
   if (!result.ok && result.exitCode === 2) {
@@ -470,6 +478,111 @@ async function runPairAudit(payload = {}) {
   }
 
   return result;
+}
+
+function normalizePathKey(value) {
+  return `${value || ''}`.trim().replace(/\\+/g, '/').toLowerCase();
+}
+
+async function annotateArtifactQualityMetadata(payload = {}) {
+  const artifactPaths = Array.isArray(payload?.artifactPaths)
+    ? payload.artifactPaths.map((entry) => `${entry || ''}`.trim()).filter(Boolean)
+    : [];
+  const auditResult = payload?.auditResult && typeof payload.auditResult === 'object'
+    ? payload.auditResult
+    : {};
+  const qualityReportPath = `${payload?.qualityReportPath || ''}`.trim();
+  const generatedAtUtc = `${auditResult?.generatedAtUtc || new Date().toISOString()}`;
+  const overallRating = auditResult?.overallRating && typeof auditResult.overallRating === 'object'
+    ? auditResult.overallRating
+    : {};
+
+  const perFileResults = Array.isArray(auditResult?.results) ? auditResult.results : [];
+  const perFileMap = new Map();
+  perFileResults.forEach((entry) => {
+    const key = normalizePathKey(entry?.filePath);
+    if (key) {
+      perFileMap.set(key, entry);
+    }
+  });
+
+  const uniquePaths = Array.from(new Set(artifactPaths));
+  let updatedFiles = 0;
+  let skippedFiles = 0;
+  const errors = [];
+
+  for (const filePath of uniquePaths) {
+    const ext = path.extname(filePath).toLowerCase();
+    if (ext !== '.json') {
+      skippedFiles += 1;
+      continue;
+    }
+
+    try {
+      const content = await fs.readFile(filePath, 'utf8');
+      const parsed = JSON.parse(content);
+      const fileAudit = perFileMap.get(normalizePathKey(filePath));
+      const fileIssues = Array.isArray(fileAudit?.issues) ? fileAudit.issues : [];
+      const fileErrors = fileIssues.filter((issue) => `${issue?.severity || ''}`.toLowerCase() === 'error').length;
+      const fileWarnings = fileIssues.filter((issue) => `${issue?.severity || ''}`.toLowerCase() === 'warning').length;
+      const qualityStatus = {
+        auditedAtUtc: generatedAtUtc,
+        qualityReportPath,
+        overallLevel: `${overallRating?.level || 'unknown'}`.toLowerCase(),
+        overallWeightedIssuePercent: Number(overallRating?.weightedIssuePercent || 0),
+        overallErrorCount: Number(overallRating?.errorCount || 0),
+        overallWarningCount: Number(overallRating?.warningCount || 0),
+        fileType: `${fileAudit?.type || ''}`.trim(),
+        fileIssueCount: fileIssues.length,
+        fileErrorCount: fileErrors,
+        fileWarningCount: fileWarnings,
+      };
+
+      let updated = false;
+      if (Array.isArray(parsed) && parsed[0] && typeof parsed[0] === 'object' && parsed[0].questionBank) {
+        const qb = parsed[0].questionBank;
+        qb.metadata = qb.metadata && typeof qb.metadata === 'object' ? qb.metadata : {};
+        qb.metadata.qualityStatus = qualityStatus;
+        updated = true;
+      } else if (parsed && typeof parsed === 'object') {
+        if (parsed.questionBank && typeof parsed.questionBank === 'object') {
+          parsed.questionBank.metadata = parsed.questionBank.metadata && typeof parsed.questionBank.metadata === 'object'
+            ? parsed.questionBank.metadata
+            : {};
+          parsed.questionBank.metadata.qualityStatus = qualityStatus;
+          updated = true;
+        }
+        if (parsed.deterministicTrainingPairSet && typeof parsed.deterministicTrainingPairSet === 'object') {
+          parsed.deterministicTrainingPairSet.qualityStatus = qualityStatus;
+          updated = true;
+        }
+        if (parsed.conversationalTrainingPairSet && typeof parsed.conversationalTrainingPairSet === 'object') {
+          parsed.conversationalTrainingPairSet.qualityStatus = qualityStatus;
+          updated = true;
+        }
+        if (!updated) {
+          parsed.qualityStatus = qualityStatus;
+          updated = true;
+        }
+      }
+
+      if (updated) {
+        await fs.writeFile(filePath, `${JSON.stringify(parsed, null, 2)}\n`, 'utf8');
+        updatedFiles += 1;
+      } else {
+        skippedFiles += 1;
+      }
+    } catch (error) {
+      errors.push({ filePath, message: `${error?.message || error || 'Unknown error.'}` });
+    }
+  }
+
+  return {
+    ok: errors.length === 0,
+    updatedFiles,
+    skippedFiles,
+    errors,
+  };
 }
 
 function createWindow() {
@@ -545,118 +658,37 @@ app.whenReady().then(() => {
     return result.filePaths;
   });
 
-  ipcMain.handle('project:createFolders', async (_event, projectName, destinationFolder, projectType, foundationLabel, reinforcementLabel) => {
+  ipcMain.handle('project:createFolders', async (_event, projectName) => {
     try {
       if (!projectName || typeof projectName !== 'string') {
         return { success: false, error: 'Invalid project name' };
       }
 
-      if (!destinationFolder || typeof destinationFolder !== 'string') {
-        return { success: false, error: 'Invalid destination folder' };
-      }
+      const destinationFolder = getManagedProjectsRoot();
+      await fs.mkdir(destinationFolder, { recursive: true });
+      const normalizedType = 'single-dataset';
 
-      const validProjectTypes = new Set(['single-dataset', 'subject-dataset', 'slm-training']);
-      const normalizedType = validProjectTypes.has(projectType) ? projectType : 'single-dataset';
+      const structure = await projectStructureService.createInitialProjectStructure({
+        projectName,
+        destinationFolder,
+      });
 
-      const normalizedName = projectName.trim().replace(/[/\\?%*:|"<>]/g, '_');
-      const projectSlug = normalizedName
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, '_')
-        .replace(/^_+|_+$/g, '') || 'project';
-      const projectRoot = path.join(destinationFolder, normalizedName);
-      await fs.mkdir(projectRoot, { recursive: true });
-
-      let relativeFolders = [];
-      let sourceDocsPath = '';
-      let foundationSourceDocsPath = '';
-      let reinforcementSourceDocsPath = '';
-
-      if (normalizedType === 'single-dataset') {
-        relativeFolders = [
-          'source_documents/input',
-          'source_documents/archived',
-          'dataset/outputs',
-          'dataset/quality_reports',
-          'dataset/exports',
-          'logs',
-        ];
-        sourceDocsPath = path.join(projectRoot, 'source_documents', 'input');
-        foundationSourceDocsPath = sourceDocsPath;
-        reinforcementSourceDocsPath = sourceDocsPath;
-      } else if (normalizedType === 'subject-dataset') {
-        relativeFolders = [
-          'source_documents/chapters',
-          'source_documents/shared_resources',
-          'dataset/chapter_outputs',
-          'dataset/merged_subject_dataset',
-          'dataset/quality_reports',
-          'dataset/exports',
-          'indexes',
-          'logs',
-        ];
-        sourceDocsPath = path.join(projectRoot, 'source_documents', 'chapters');
-        foundationSourceDocsPath = sourceDocsPath;
-        reinforcementSourceDocsPath = sourceDocsPath;
-      } else {
-        const foundationSlug = `${foundationLabel || ''}`
-          .toLowerCase()
-          .replace(/[^a-z0-9]+/g, '_')
-          .replace(/^_+|_+$/g, '') || projectSlug;
-        const reinforcementSlug = `${reinforcementLabel || ''}`
-          .toLowerCase()
-          .replace(/[^a-z0-9]+/g, '_')
-          .replace(/^_+|_+$/g, '') || `${projectSlug}_phase_2`;
-        const foundationStageFolder = `01_foundation_${foundationSlug}`;
-        const reinforcementStageFolder = `02_reinforcement_${reinforcementSlug}`;
-
-        relativeFolders = [
-          `curriculum/${foundationStageFolder}/source_documents`,
-          `curriculum/${foundationStageFolder}/dataset`,
-          `curriculum/${foundationStageFolder}/quality_reports`,
-          `curriculum/${foundationStageFolder}/exports`,
-          `curriculum/${reinforcementStageFolder}/source_documents`,
-          `curriculum/${reinforcementStageFolder}/dataset`,
-          `curriculum/${reinforcementStageFolder}/quality_reports`,
-          `curriculum/${reinforcementStageFolder}/exports`,
-          'training_packs/pack_v1/train',
-          'training_packs/pack_v1/validation',
-          'training_packs/pack_v1/test',
-          'training_packs/pack_v1/metadata',
-          'evaluations/benchmark_runs',
-          'evaluations/scorecards',
-          'models/checkpoints',
-          'models/final',
-          'registry',
-          'logs',
-        ];
-        sourceDocsPath = path.join(projectRoot, 'curriculum', foundationStageFolder, 'source_documents');
-        foundationSourceDocsPath = path.join(projectRoot, 'curriculum', foundationStageFolder, 'source_documents');
-        reinforcementSourceDocsPath = path.join(projectRoot, 'curriculum', reinforcementStageFolder, 'source_documents');
-      }
-
-      await Promise.all(relativeFolders.map((folder) => fs.mkdir(path.join(projectRoot, folder), { recursive: true })));
+      const normalizedName = structure.normalizedName;
+      const projectRoot = structure.projectRoot;
+      const sourceDocsPath = structure.sourceDocsPath;
+      const foundationSourceDocsPath = structure.foundationSourceDocsPath;
+      const reinforcementSourceDocsPath = structure.reinforcementSourceDocsPath;
+      const relativeFolders = structure.createdFolders;
 
       const manifestPath = path.join(projectRoot, 'project_manifest.json');
       const manifestPayload = {
         projectName: normalizedName,
         projectType: normalizedType,
-        foundationLabel: `${foundationLabel || ''}`.trim(),
-        reinforcementLabel: `${reinforcementLabel || ''}`.trim(),
+        storageMode: 'app-managed',
         createdAt: new Date().toISOString(),
         rootPath: projectRoot,
       };
       await fs.writeFile(manifestPath, `${JSON.stringify(manifestPayload, null, 2)}\n`, 'utf8');
-
-      const existingSettings = await loadAppSettings();
-      const indexed = await updateProjectIndex(existingSettings, {
-        projectName: normalizedName,
-        projectType: normalizedType,
-        rootPath: projectRoot,
-        foundationSourceDocsPath,
-        reinforcementSourceDocsPath,
-        createdAt: manifestPayload.createdAt,
-      });
-      await saveAppSettings(indexed.settings);
 
       return {
         success: true,
@@ -666,6 +698,7 @@ app.whenReady().then(() => {
         sourceDocsPath,
         foundationSourceDocsPath,
         reinforcementSourceDocsPath,
+        exportFilesPath: structure.exportFilesPath,
         createdFolders: relativeFolders,
         manifestPath,
       };
@@ -734,20 +767,36 @@ app.whenReady().then(() => {
     }
   });
 
+  ipcMain.handle('project:ingestDroppedEntries', async (_event, payload) => {
+    try {
+      const entryPaths = Array.isArray(payload?.entryPaths) ? payload.entryPaths : [];
+      const targetFolder = typeof payload?.targetFolder === 'string' ? payload.targetFolder.trim() : '';
+      const subfolderName = typeof payload?.subfolderName === 'string' ? payload.subfolderName.trim() : '';
+
+      return await ingestDroppedEntries({ entryPaths, targetFolder, subfolderName });
+    } catch (error) {
+      return {
+        success: false,
+        error: error.message || 'Failed to ingest dropped entries',
+      };
+    }
+  });
+
   ipcMain.handle('project:createSourceSubfolder', async (_event, payload) => {
     try {
       const stage = `${payload?.stage || ''}`.trim().toLowerCase();
       const label = `${payload?.label || ''}`.trim();
       const foundationPath = `${payload?.foundationSourceDocsPath || ''}`.trim();
       const reinforcementPath = `${payload?.reinforcementSourceDocsPath || ''}`.trim();
+      const exportPath = `${payload?.exportFilesPath || ''}`.trim();
       if (!label) {
         return { success: false, error: 'Folder label is required' };
       }
-      if (!stage || !['foundation', 'reinforcement'].includes(stage)) {
+      if (!stage || !['foundation', 'reinforcement', 'export'].includes(stage)) {
         return { success: false, error: 'Valid stage is required' };
       }
 
-      const basePath = stage === 'foundation' ? foundationPath : reinforcementPath;
+      const basePath = stage === 'export' ? exportPath : (stage === 'foundation' ? foundationPath : reinforcementPath);
       if (!basePath) {
         return { success: false, error: `Source path is not available for ${stage}` };
       }
@@ -761,47 +810,27 @@ app.whenReady().then(() => {
         return { success: false, error: 'Folder label is not valid' };
       }
 
-      const stageRootPath = path.dirname(basePath);
-      const curriculumRootPath = path.dirname(stageRootPath);
-
-      const existingStageFolders = await fs.readdir(curriculumRootPath, { withFileTypes: true });
-      const stageNumbers = existingStageFolders
-        .filter((entry) => entry.isDirectory())
-        .map((entry) => {
-          const match = entry.name.match(/^(\d+)_/);
-          return match ? Number.parseInt(match[1], 10) : 0;
-        })
-        .filter((value) => Number.isFinite(value) && value > 0);
-      const nextStageNumber = (stageNumbers.length > 0 ? Math.max(...stageNumbers) : 0) + 1;
-      const stagePrefix = `${nextStageNumber}`.padStart(2, '0');
-
-      let folderName = `${stagePrefix}_${stage}_${sanitizedLabel}`;
-      let stageFolderPath = path.join(curriculumRootPath, folderName);
+      let folderName = sanitizedLabel;
+      let stageFolderPath = path.join(basePath, folderName);
       let counter = 1;
       while (true) {
         try {
           await fs.access(stageFolderPath);
           counter += 1;
-          folderName = `${stagePrefix}_${stage}_${sanitizedLabel}_${counter}`;
-          stageFolderPath = path.join(curriculumRootPath, folderName);
+          folderName = `${sanitizedLabel}_${counter}`;
+          stageFolderPath = path.join(basePath, folderName);
         } catch {
           break;
         }
       }
 
-      const sourceDocumentsPath = path.join(stageFolderPath, 'source_documents');
-      await Promise.all([
-        fs.mkdir(sourceDocumentsPath, { recursive: true }),
-        fs.mkdir(path.join(stageFolderPath, 'dataset'), { recursive: true }),
-        fs.mkdir(path.join(stageFolderPath, 'quality_reports'), { recursive: true }),
-        fs.mkdir(path.join(stageFolderPath, 'exports'), { recursive: true }),
-      ]);
+      await fs.mkdir(stageFolderPath, { recursive: true });
 
       return {
         success: true,
         stage,
         folderName,
-        folderPath: sourceDocumentsPath,
+        folderPath: stageFolderPath,
         stageFolderPath,
       };
     } catch (error) {
@@ -827,20 +856,109 @@ app.whenReady().then(() => {
       const uniqueInputPaths = [...new Set(filePaths.map((entry) => path.resolve(entry)))];
       const copied = [];
 
-      const collectFileEntries = async (entryPath) => {
-        const stats = await fs.stat(entryPath);
-        if (stats.isFile()) {
-          return [entryPath];
-        }
-        if (!stats.isDirectory()) {
-          return [];
+      const isPathInside = (childPath, parentPath) => {
+        const relative = path.relative(parentPath, childPath);
+        return relative && !relative.startsWith('..') && !path.isAbsolute(relative);
+      };
+
+      const collapseNestedInputPaths = async (inputPaths) => {
+        const resolvedEntries = [];
+        for (const inputPath of inputPaths) {
+          try {
+            const stats = await fs.stat(inputPath);
+            if (!stats.isDirectory() && !stats.isFile()) {
+              continue;
+            }
+            resolvedEntries.push({ inputPath, stats });
+          } catch {
+            // Ignore paths that no longer exist by the time copy starts.
+          }
         }
 
-        const children = await fs.readdir(entryPath, { withFileTypes: true });
-        const nested = await Promise.all(
-          children.map((child) => collectFileEntries(path.join(entryPath, child.name)))
-        );
-        return nested.flat();
+        resolvedEntries.sort((left, right) => left.inputPath.length - right.inputPath.length);
+        const collapsed = [];
+        resolvedEntries.forEach((entry) => {
+          const nestedUnderExisting = collapsed.some((kept) => isPathInside(entry.inputPath, kept.inputPath));
+          if (!nestedUnderExisting) {
+            collapsed.push(entry);
+          }
+        });
+
+        return collapsed;
+      };
+
+      const getCommonAncestorDirectory = (paths) => {
+        if (!Array.isArray(paths) || paths.length === 0) {
+          return '';
+        }
+
+        const normalizedParts = paths
+          .map((entryPath) => path.resolve(entryPath))
+          .map((entryPath) => entryPath.split(path.sep).filter((part) => part !== ''));
+
+        if (normalizedParts.length === 0) {
+          return '';
+        }
+
+        const minLength = Math.min(...normalizedParts.map((parts) => parts.length));
+        const shared = [];
+        for (let index = 0; index < minLength; index += 1) {
+          const token = normalizedParts[0][index];
+          const sameToken = normalizedParts.every((parts) => `${parts[index]}`.toLowerCase() === `${token}`.toLowerCase());
+          if (!sameToken) {
+            break;
+          }
+          shared.push(token);
+        }
+
+        if (shared.length === 0) {
+          return '';
+        }
+
+        const firstPath = path.resolve(paths[0]);
+        const firstRoot = path.parse(firstPath).root;
+        return path.join(firstRoot, ...shared);
+      };
+
+      const copyFilesFromCommonRoot = async (sourceFilePaths, destinationFolder) => {
+        if (!Array.isArray(sourceFilePaths) || sourceFilePaths.length === 0) {
+          return;
+        }
+
+        const normalizedFiles = sourceFilePaths.map((entry) => path.resolve(entry));
+        const commonRoot = getCommonAncestorDirectory(normalizedFiles);
+        if (!commonRoot) {
+          for (const sourcePath of normalizedFiles) {
+            const extension = path.extname(sourcePath).toLowerCase();
+            if (!acceptedExtensions.has(extension)) {
+              continue;
+            }
+            const destinationBase = path.join(destinationFolder, path.basename(sourcePath));
+            const destinationPath = await ensureUniqueDestination(destinationBase);
+            await fs.copyFile(sourcePath, destinationPath);
+            copied.push({ source: sourcePath, destination: destinationPath });
+          }
+          return;
+        }
+
+        const rootLabel = path.basename(commonRoot) || 'dropped_folder';
+        const rootDestinationBase = path.join(destinationFolder, rootLabel);
+        const rootDestination = await ensureUniqueDestination(rootDestinationBase);
+        await fs.mkdir(rootDestination, { recursive: true });
+
+        for (const sourcePath of normalizedFiles) {
+          const extension = path.extname(sourcePath).toLowerCase();
+          if (!acceptedExtensions.has(extension)) {
+            continue;
+          }
+
+          const relativePath = path.relative(commonRoot, sourcePath);
+          const destinationBase = path.join(rootDestination, relativePath);
+          await fs.mkdir(path.dirname(destinationBase), { recursive: true });
+          const destinationPath = await ensureUniqueDestination(destinationBase);
+          await fs.copyFile(sourcePath, destinationPath);
+          copied.push({ source: sourcePath, destination: destinationPath });
+        }
       };
 
       const ensureUniqueDestination = async (baseDestination) => {
@@ -859,21 +977,56 @@ app.whenReady().then(() => {
         }
       };
 
-      await fs.mkdir(targetFolder, { recursive: true });
+      const copyDirectoryPreservingStructure = async (sourceRoot, destinationRoot) => {
+        const children = await fs.readdir(sourceRoot, { withFileTypes: true });
+        for (const child of children) {
+          const sourcePath = path.join(sourceRoot, child.name);
+          const destinationPath = path.join(destinationRoot, child.name);
+          if (child.isDirectory()) {
+            await fs.mkdir(destinationPath, { recursive: true });
+            await copyDirectoryPreservingStructure(sourcePath, destinationPath);
+            continue;
+          }
+          if (!child.isFile()) {
+            continue;
+          }
 
-      for (const entryPath of uniqueInputPaths) {
-        const allFiles = await collectFileEntries(entryPath);
-        for (const sourcePath of allFiles) {
           const extension = path.extname(sourcePath).toLowerCase();
           if (!acceptedExtensions.has(extension)) {
             continue;
           }
 
-          const destinationBase = path.join(targetFolder, path.basename(sourcePath));
-          const destinationPath = await ensureUniqueDestination(destinationBase);
-          await fs.copyFile(sourcePath, destinationPath);
-          copied.push({ source: sourcePath, destination: destinationPath });
+          await fs.mkdir(path.dirname(destinationPath), { recursive: true });
+          const finalDestination = await ensureUniqueDestination(destinationPath);
+          await fs.copyFile(sourcePath, finalDestination);
+          copied.push({ source: sourcePath, destination: finalDestination });
         }
+      };
+
+      await fs.mkdir(targetFolder, { recursive: true });
+
+      const collapsedEntries = await collapseNestedInputPaths(uniqueInputPaths);
+      const standaloneFiles = [];
+
+      for (const entry of collapsedEntries) {
+        const entryPath = entry.inputPath;
+        const stats = entry.stats;
+        if (stats.isDirectory()) {
+          const folderDestination = await ensureUniqueDestination(path.join(targetFolder, path.basename(entryPath)));
+          await fs.mkdir(folderDestination, { recursive: true });
+          await copyDirectoryPreservingStructure(entryPath, folderDestination);
+          continue;
+        }
+
+        if (!stats.isFile()) {
+          continue;
+        }
+
+        standaloneFiles.push(entryPath);
+      }
+
+      if (standaloneFiles.length > 0) {
+        await copyFilesFromCommonRoot(standaloneFiles, targetFolder);
       }
 
       return {
@@ -908,76 +1061,45 @@ app.whenReady().then(() => {
 
   ipcMain.handle('project:getCachedProjects', async () => {
     try {
-      const settings = await loadAppSettings();
-      const cachedProjects = Array.isArray(settings.cachedProjects) ? settings.cachedProjects : [];
-      const diagnostics = {
-        fromCacheCount: 0,
-        recoveredCount: 0,
-        searchedPaths: [],
-      };
+      const managedRoot = getManagedProjectsRoot();
+      const projects = [];
 
-      // Filter out projects whose root paths no longer exist
-      const validProjects = [];
-      for (const project of cachedProjects) {
-        const rootPath = `${project?.rootPath || ''}`.trim();
-        if (!rootPath) {
-          continue;
-        }
+      let entries = [];
+      try {
+        entries = await fs.readdir(managedRoot, { withFileTypes: true });
+      } catch {
+        // Managed projects folder doesn't exist yet — return empty list.
+        return { success: true, projects: [] };
+      }
+
+      for (const entry of entries) {
+        if (!entry.isDirectory()) continue;
+        const projectRoot = path.join(managedRoot, entry.name);
+        const manifestPath = path.join(projectRoot, 'project_manifest.json');
         try {
-          await fs.access(rootPath);
-          validProjects.push(project);
+          const raw = await fs.readFile(manifestPath, 'utf8');
+          const manifest = JSON.parse(raw);
+          const structure = projectStructureService.buildProjectPaths(projectRoot);
+          projects.push({
+            projectName: manifest.projectName || entry.name,
+            projectType: manifest.projectType || 'single-dataset',
+            rootPath: projectRoot,
+            foundationSourceDocsPath: structure.foundationSourceDocsPath,
+            reinforcementSourceDocsPath: structure.reinforcementSourceDocsPath,
+            exportFilesPath: structure.exportFilesPath,
+            createdAt: manifest.createdAt || '',
+          });
         } catch {
-          // Project path no longer exists, skip it
-        }
-      }
-      diagnostics.fromCacheCount = validProjects.length;
-
-      let mergedProjects = [...validProjects];
-      const needsRecoveryScan = mergedProjects.length === 0;
-      if (needsRecoveryScan) {
-        const searchRoots = Array.isArray(settings.projectSearchRoots) ? [...settings.projectSearchRoots] : [];
-        searchRoots.push(process.cwd());
-        searchRoots.push(path.dirname(process.cwd()));
-        const discovered = await discoverProjectsInRoots(searchRoots);
-        diagnostics.searchedPaths = discovered.searchedPaths;
-        diagnostics.recoveredCount = discovered.projects.length;
-        if (discovered.projects.length > 0) {
-          const byRoot = new Map();
-          for (const project of [...mergedProjects, ...discovered.projects]) {
-            const rootPath = `${project?.rootPath || ''}`.trim();
-            if (!rootPath) {
-              continue;
-            }
-            byRoot.set(path.resolve(rootPath), project);
-          }
-          mergedProjects = Array.from(byRoot.values());
+          // Skip directories without a valid manifest.
         }
       }
 
-      // Update cache to remove stale entries
-      if (mergedProjects.length !== cachedProjects.length || diagnostics.recoveredCount > 0) {
-        const updatedSettings = settings;
-        updatedSettings.cachedProjects = mergedProjects;
-        if (!Array.isArray(updatedSettings.projectSearchRoots)) {
-          updatedSettings.projectSearchRoots = [];
-        }
-        for (const project of mergedProjects) {
-          const rootPath = `${project?.rootPath || ''}`.trim();
-          if (!rootPath) {
-            continue;
-          }
-          const parentPath = path.dirname(rootPath);
-          if (!updatedSettings.projectSearchRoots.some((entry) => path.resolve(`${entry || ''}`) === path.resolve(parentPath))) {
-            updatedSettings.projectSearchRoots.unshift(parentPath);
-          }
-        }
-        updatedSettings.projectSearchRoots = updatedSettings.projectSearchRoots.slice(0, 25);
-        await saveAppSettings(updatedSettings);
-      }
+      // Sort newest first.
+      projects.sort((a, b) => (b.createdAt > a.createdAt ? 1 : -1));
 
-      return { success: true, projects: mergedProjects, diagnostics };
+      return { success: true, projects };
     } catch (error) {
-      return { success: false, error: error.message || 'Failed to retrieve cached projects' };
+      return { success: false, error: error.message || 'Failed to retrieve projects' };
     }
   });
 
@@ -1043,10 +1165,7 @@ app.whenReady().then(() => {
       };
 
       // Scan common source directories
-      const sourceSearchPaths = [
-        'source_documents',
-        'curriculum',
-      ];
+      const sourceSearchPaths = projectStructureService.getSourceSearchFolders();
 
       for (const searchPath of sourceSearchPaths) {
         const fullPath = path.join(projectRootPath, searchPath);
@@ -1111,45 +1230,67 @@ app.whenReady().then(() => {
       };
 
       const entries = [];
-      const curriculumRoot = path.join(rootPath, 'curriculum');
-      try {
-        const stageDirs = await fs.readdir(curriculumRoot, { withFileTypes: true });
-        for (const stageDir of stageDirs) {
-          if (!stageDir.isDirectory()) {
-            continue;
-          }
-          const stagePath = path.join(curriculumRoot, stageDir.name);
-          const sourceDocumentsPath = path.join(stagePath, 'source_documents');
-          let documents = [];
-          try {
-            await fs.access(sourceDocumentsPath);
-            documents = await collectDocuments(sourceDocumentsPath);
-          } catch {
-            documents = [];
-          }
 
-          entries.push({
-            name: stageDir.name,
-            path: stagePath,
-            sourceDocumentsPath,
-            documentCount: documents.length,
-            documents,
-          });
-        }
-      } catch {
-        const sourceRoot = path.join(rootPath, 'source_documents');
+      const preferredRoots = projectStructureService.getPrimarySourceFolderEntries();
+
+      for (const preferred of preferredRoots) {
+        const preferredPath = path.join(rootPath, preferred.folder);
         try {
-          await fs.access(sourceRoot);
-          const documents = await collectDocuments(sourceRoot);
+          await fs.access(preferredPath);
+          const documents = await collectDocuments(preferredPath);
           entries.push({
-            name: 'source_documents',
-            path: sourceRoot,
-            sourceDocumentsPath: sourceRoot,
+            name: preferred.name,
+            path: preferredPath,
+            sourceDocumentsPath: preferredPath,
             documentCount: documents.length,
             documents,
           });
         } catch {
-          // No curriculum/source_documents available.
+          // Preferred folder not available.
+        }
+      }
+
+      if (entries.length === 0) {
+        const curriculumRoot = path.join(rootPath, 'curriculum');
+        try {
+          const stageDirs = await fs.readdir(curriculumRoot, { withFileTypes: true });
+          for (const stageDir of stageDirs) {
+            if (!stageDir.isDirectory()) {
+              continue;
+            }
+            const stagePath = path.join(curriculumRoot, stageDir.name);
+            const sourceDocumentsPath = path.join(stagePath, 'source_documents');
+            let documents = [];
+            try {
+              await fs.access(sourceDocumentsPath);
+              documents = await collectDocuments(sourceDocumentsPath);
+            } catch {
+              documents = [];
+            }
+
+            entries.push({
+              name: stageDir.name,
+              path: stagePath,
+              sourceDocumentsPath,
+              documentCount: documents.length,
+              documents,
+            });
+          }
+        } catch {
+          const sourceRoot = path.join(rootPath, 'source_documents');
+          try {
+            await fs.access(sourceRoot);
+            const documents = await collectDocuments(sourceRoot);
+            entries.push({
+              name: 'source_documents',
+              path: sourceRoot,
+              sourceDocumentsPath: sourceRoot,
+              documentCount: documents.length,
+              documents,
+            });
+          } catch {
+            // No supported source structure available.
+          }
         }
       }
 
@@ -1237,6 +1378,10 @@ app.whenReady().then(() => {
 
   ipcMain.handle('audit:pairs', async (_event, payload) => {
     return runPairAudit(payload);
+  });
+
+  ipcMain.handle('quality:annotateArtifacts', async (_event, payload) => {
+    return annotateArtifactQualityMetadata(payload || {});
   });
 
   ipcMain.handle('pairs:repair', async (_event, payload) => {

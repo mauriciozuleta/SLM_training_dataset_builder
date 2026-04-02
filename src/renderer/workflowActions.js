@@ -412,6 +412,39 @@
                 apiProviders: state.apiProviders,
               });
 
+              const annotateArtifactsFromAudit = async (auditResult, qualityReportPath, writtenEntries = []) => {
+                if (!window.desktopApp?.annotateArtifactQualityMetadata) {
+                  return;
+                }
+
+                const artifactPaths = Array.isArray(writtenEntries)
+                  ? writtenEntries
+                    .map((entry) => `${entry?.path || ''}`.trim())
+                    .filter((filePath) => filePath.toLowerCase().endsWith('.json'))
+                  : [];
+
+                if (artifactPaths.length === 0) {
+                  return;
+                }
+
+                try {
+                  const annotationResult = await window.desktopApp.annotateArtifactQualityMetadata({
+                    artifactPaths,
+                    qualityReportPath,
+                    auditResult,
+                  });
+
+                  if (annotationResult?.updatedFiles > 0) {
+                    addLog(`Embedded quality metadata into ${annotationResult.updatedFiles} JSON artifact(s).`, 'info');
+                  }
+                  if (Array.isArray(annotationResult?.errors) && annotationResult.errors.length > 0) {
+                    addLog(`Quality metadata annotation completed with ${annotationResult.errors.length} warning(s).`, 'warning');
+                  }
+                } catch (error) {
+                  addLog(`Could not embed quality metadata: ${error?.message || error}`, 'warning');
+                }
+              };
+
               try {
                 result = await runBuildArtifacts({ allowLocalFallback: false });
               } finally {
@@ -542,6 +575,7 @@
                     auditLogLevel
                   );
                   addLog(`Quality report saved: ${qualityReportPath}`, 'info');
+                  await annotateArtifactsFromAudit(auditResult, qualityReportPath, result?.written || []);
 
                   const userDecision = await getQualityDecision(auditResult);
                   addLog(`User action selected: ${userDecision}`, 'info');
@@ -579,6 +613,8 @@
                           files: auditCandidates,
                           reportPath: qualityReportPath,
                         });
+
+                        await annotateArtifactsFromAudit(postRepairAudit, qualityReportPath, result?.written || []);
 
                         addLog('Post-repair audit complete. Displaying updated results...', 'info');
                         const newDecision = await getQualityDecision(postRepairAudit);
@@ -677,6 +713,14 @@
                           files: postRedoCandidates,
                           reportPath: qualityReportPath,
                         });
+
+                        await annotateArtifactsFromAudit(
+                          postRedoAudit,
+                          qualityReportPath,
+                          Array.isArray(redoResult?.written) && redoResult.written.length > 0
+                            ? redoResult.written
+                            : (result?.written || [])
+                        );
 
                         const memoryUpdate = await window.desktopApp?.updateQualityMemoryFromAudit?.({
                           decision: 'redo',

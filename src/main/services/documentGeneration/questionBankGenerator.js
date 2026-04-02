@@ -7,6 +7,60 @@ function createQuestionBankGenerator({ api, common }) {
   const MIN_QUESTIONS_PER_PASS = 4;
 
   const cleanText = (value) => `${value || ''}`.replace(/\s+/g, ' ').trim();
+  const MULTI_ANSWER_CUE_PATTERN = /(select all that apply|one of|among others|which of the following are|which statements|all applicable|multiple answers)/i;
+  const MULTI_ANSWER_SUFFIXES = [
+    'Consider one correct answer among others.',
+    'Choose one valid answer among others.',
+    'This prompt expects one correct option among others.',
+    'Treat this as a multi-valid-item prompt (one of several valid answers).',
+    'One valid response can be selected among others.',
+  ];
+
+  const pickStemSuffix = (seedText = '') => {
+    const normalized = cleanText(seedText).toLowerCase();
+    if (!normalized) {
+      return MULTI_ANSWER_SUFFIXES[0];
+    }
+    let hash = 0;
+    for (let index = 0; index < normalized.length; index += 1) {
+      hash = ((hash * 31) + normalized.charCodeAt(index)) >>> 0;
+    }
+    return MULTI_ANSWER_SUFFIXES[hash % MULTI_ANSWER_SUFFIXES.length];
+  };
+
+  const ensureMultiAnswerStem = (questionText, sectionTitle, seedText = '') => {
+    const normalized = cleanText(questionText);
+    const fallback = `Which statements accurately reflect the key guidance in ${sectionTitle}? ${pickStemSuffix(seedText || sectionTitle)}`;
+    if (!normalized) {
+      return fallback;
+    }
+    if (MULTI_ANSWER_CUE_PATTERN.test(normalized)) {
+      return normalized;
+    }
+    return `${normalized} ${pickStemSuffix(seedText || normalized)}`;
+  };
+
+  const collectStemClarityFindings = (questions = []) => {
+    const findings = [];
+    (Array.isArray(questions) ? questions : []).forEach((question) => {
+      const questionText = cleanText(question?.question);
+      if (!questionText) {
+        return;
+      }
+      if (MULTI_ANSWER_CUE_PATTERN.test(questionText)) {
+        return;
+      }
+      if (!/\?$/.test(questionText)) {
+        return;
+      }
+      findings.push({
+        questionId: `${question?.questionid || ''}`.trim(),
+        question: questionText,
+        issue: 'missing_multi_answer_cue',
+      });
+    });
+    return findings;
+  };
 
   const truncateForPrompt = (text, maxChars = MAX_SECTION_CONTENT_CHARS) => {
     const normalized = cleanText(text);
@@ -106,8 +160,12 @@ function createQuestionBankGenerator({ api, common }) {
     sectionOrdinal,
     questionOrdinal,
   }) => {
-    const safeQuestion = cleanText(raw?.question)
-      || `Which statement best reflects the key guidance in ${sectionTitle}?`;
+    const safeQuestion = ensureMultiAnswerStem(
+      cleanText(raw?.question)
+        || `Which statements best reflect the key guidance in ${sectionTitle}?`,
+      sectionTitle,
+      questionId
+    );
 
     const correctCandidates = Array.isArray(raw?.correct_answers)
       ? raw.correct_answers.map((entry) => (typeof entry === 'string' ? entry : entry?.text))
@@ -199,6 +257,8 @@ function createQuestionBankGenerator({ api, common }) {
         '{"questions":[{"question":string,"correct_answers":[string,string,string],"wrong_answers":[string,string,string,string,string,string,string,string],"source":string,"subjects":[string]}]}',
         `Generate exactly ${passTarget} questions.`,
         `Each question MUST have exactly ${REQUIRED_CORRECT_ANSWERS} correct answers and ${REQUIRED_WRONG_ANSWERS} wrong answers.`,
+        'Each question stem should clearly indicate multi-answer intent using natural variants such as "one of", "among others", or "which statements".',
+        'Avoid singular-only stems such as "What is the primary..." unless rewritten to convey that multiple responses may be valid.',
         `This is pass ${passIndex + 1} of ${passCount} for this section; avoid repeating earlier prompts and distractors.`,
         'All answers must be concise, factual, and non-duplicated.',
         'Use only the provided section content; do not invent outside facts.',
@@ -543,6 +603,14 @@ function createQuestionBankGenerator({ api, common }) {
         completedSections: completedResults.length,
         incompleteSections,
         failureReason: buildStatus === 'incomplete' ? `${failureReason || 'One or more sections failed across all providers.'}` : '',
+      };
+
+      const stemClarityFindings = collectStemClarityFindings(builtQuestions);
+      metadata.questionStemAudit = {
+        checked: builtQuestions.length,
+        missingCueCount: stemClarityFindings.length,
+        status: stemClarityFindings.length > 0 ? 'warning' : 'pass',
+        findings: stemClarityFindings.slice(0, 25),
       };
 
       const payload = [
